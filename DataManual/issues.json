@@ -1,0 +1,171 @@
+{
+  "issues": [
+    {
+      "include": true,
+      "type": "newspaper",
+      "uuid": "5abfd8d0-b9f1-11e9-8fdf-005056827e52",
+      "ocr_text_word_cnt": 5572009,
+      "title": "Národní nowiny",
+      "date_span": "1848-1850",
+      "id_wikidata": "Q12041637",
+      "url_wiki": "https://cs.wikipedia.org/wiki/N%C3%A1rodn%C3%AD_noviny",
+      "url_mzk": "https://www.digitalniknihovna.cz/mzk/periodical/uuid:5abfd8d0-b9f1-11e9-8fdf-005056827e52"
+    },
+    {
+      "type": "magazine",
+      "uuid": "c40178b0-56de-11e9-936e-005056827e52",
+      "title": "Čas",
+      "date_span": "1899-1924",
+      "url_wiki": "https://cs.wikipedia.org/wiki/%C4%8Cas_(%C4%8Dasopis)",
+      "url_mzk": "https://www.digitalniknihovna.cz/mzk/periodical/uuid:c40178b0-56de-11e9-936e-005056827e52"
+    },
+    {
+      "include": true,
+      "type": "newspaper",
+      "uuid": "b138db20-a5e4-11e8-99aa-005056827e51",
+      "ocr_text_word_cnt": 39991207,
+      "title": "Katolické listy",
+      "date_span": "1897-1903",
+      "url_wiki": "https://cs.wikipedia.org/wiki/Katolick%C3%BD_t%C3%BDden%C3%ADk",
+      "url_mzk": "https://www.digitalniknihovna.cz/mzk/periodical/uuid:b138db20-a5e4-11e8-99aa-005056827e51"
+    },
+    {
+      "type": "newspaper",
+      "uuid": "27eb8ea0-3d5a-11e8-baa7-5ef3fc9bb22f",
+      "title": "Fremdenblatt",
+      "date_span": "1850-1851",
+      "url_wiki": "",
+      "url_mzk": "https://www.digitalniknihovna.cz/mzk/periodical/uuid:27eb8ea0-3d5a-11e8-baa7-5ef3fc9bb22f"
+    },
+    {
+      "type": "??",
+      "uuid": "bf99cbc0-04d6-11e8-9854-5ef3fc9ae867",
+      "title": "Neuigkeiten: zugleich Fremdenblatt für alllgemeiner Anzeiger für Mähren",
+      "date_span": "1851-1867",
+      "url_wiki": "",
+      "url_mzk": "https://www.digitalniknihovna.cz/mzk/periodical/uuid:bf99cbc0-04d6-11e8-9854-5ef3fc9ae867"
+    },
+    {
+      "type": "newspaper",
+      "uuid": "8902207d-d541-480a-803e-bab992996510",
+      "title": "Volksfreund",
+      "date_span": "1881-1938",
+      "url_wiki": "",
+      "url_mzk": "https://www.digitalniknihovna.cz/mzk/periodical/uuid:8902207d-d541-480a-803e-bab992996510"
+    },
+    {
+      "include": true,
+      "type": "newspaper",
+      "uuid": "ae876087-435d-11dd-b505-00145e5790ea",
+      "ocr_text_word_cnt": 681495914,
+      "title": "Národní listy",
+      "date_span": "1861-1941",
+      "id_wikidata": "Q2006306",
+      "url_wiki": "https://cs.wikipedia.org/wiki/N%C3%A1rodn%C3%AD_listy",
+      "url_mzk": "https://www.digitalniknihovna.cz/mzk/periodical/uuid:ae876087-435d-11dd-b505-00145e5790ea"
+    },
+    {
+      "type": "newspaper",
+      "uuid": "e75c0530-19fc-11e7-981b-005056825209",
+      "title": "Venkov: orgán České strany agrární",
+      "date_span": "1906-1945",
+      "id_wikidata": "Q17541796",
+      "url_wiki": "https://cs.wikipedia.org/wiki/Venkov_(den%C3%ADk)",
+      "url_mzk": "https://www.digitalniknihovna.cz/mzk/periodical/uuid:e75c0530-19fc-11e7-981b-005056825209"
+    },
+    {
+      "type": "newspaper",
+      "uuid": "de8e18f0-de3b-11e6-8a71-005056827e52",
+      "title": "Práce: český deník v českých rukou. [Praha]",
+      "date_span": "1945-1997",
+      "url_wiki": "https://cs.wikipedia.org/wiki/Pr%C3%A1ce_(noviny)",
+      "url_mzk": "https://www.digitalniknihovna.cz/mzk/periodical/uuid:de8e18f0-de3b-11e6-8a71-005056827e52"
+    },
+    {
+      "type": "magazine",
+      "uuid": "eb3adc60-dd58-11e2-9923-005056827e52",
+      "title": "Brünner Zeitung",
+      "date_span": "1848-1921",
+      "url_wiki": "",
+      "url_mzk": "https://www.digitalniknihovna.cz/mzk/periodical/uuid:eb3adc60-dd58-11e2-9923-005056827e52"
+    },
+    {
+      "type": "magazine",
+      "uuid": "ae864f11-435d-11dd-b505-00145e5790ea",
+      "title": "Právo lidu",
+      "date_span": "1892-1948",
+      "url_wiki": "https://cs.wikipedia.org/wiki/Pr%C3%A1vo_lidu",
+      "url_mzk": "https://www.digitalniknihovna.cz/mzk/periodical/uuid:ae864f11-435d-11dd-b505-00145e5790ea"
+    },
+    {
+      "uuid": "a61884f0-8cbb-11dc-a584-000d606f5dc6",
+      "title": "Národní politika",
+      "date_span": "null-null",
+      "url_wiki": "",
+      "url_mzk": "https://www.digitalniknihovna.cz/mzk/periodical/uuid:a61884f0-8cbb-11dc-a584-000d606f5dc6"
+    },
+    {
+      "type": "newspaper",
+      "uuid": "f1c7c08d-8f64-4b66-be28-5f209c2c7021",
+      "title": "Rovnost: list sociálních demokratů českých",
+      "date_span": "1885-2001",
+      "id_wikidata": "Q11343659",
+      "url_wiki": "https://cs.wikipedia.org/wiki/Brn%C4%9Bnsk%C3%BD_den%C3%ADk",
+      "url_mzk": "https://www.digitalniknihovna.cz/mzk/periodical/uuid:f1c7c08d-8f64-4b66-be28-5f209c2c7021"
+    },
+    {
+      "include": true,
+      "type": "newspaper",
+      "uuid": "bdc405b0-e5f9-11dc-bfb2-000d606f5dc6",
+      "ocr_text_word_cnt": 166269510,
+      "title": "Lidové noviny",
+      "date_span": "1893-1945",
+      "id_wikidata": "https://www.wikidata.org/wiki/Q1197747",
+      "url_wiki": "https://cs.wikipedia.org/wiki/Lidov%C3%A9_noviny",
+      "url_mzk": "https://www.digitalniknihovna.cz/mzk/periodical/uuid:bdc405b0-e5f9-11dc-bfb2-000d606f5dc6"
+    },
+    {
+      "include": true,
+      "type": "newspaper",
+      "uuid": "5c259210-2182-11e6-918e-5ef3fc9ae867",
+      "ocr_text_word_cnt": 146554617,
+      "title": "Čech",
+      "date_span": "1870-1935",
+      "id_wikidata": "Q67185238",
+      "url_wiki": "https://cs.wikipedia.org/wiki/%C4%8Cech_(noviny)",
+      "url_mzk": "https://www.digitalniknihovna.cz/mzk/periodical/uuid:5c259210-2182-11e6-918e-5ef3fc9ae867"
+    },
+    {
+      "type": "newspaper",
+      "uuid": "1585c940-8080-11ea-a276-5ef3fc9bb22f",
+      "ocr_text_word_cnt": 23591037,
+      "title": "České slovo",
+      "date_span": "1907-1945",
+      "id_wikidata": "",
+      "url_wiki": "https://cs.wikipedia.org/wiki/Svobodn%C3%A9_slovo",
+      "url_mzk": "https://www.digitalniknihovna.cz/mzk/periodical/uuid:1585c940-8080-11ea-a276-5ef3fc9bb22f"
+    },
+    {
+      "include": true,
+      "type": "newspaper",
+      "uuid": "02203ad6-32f0-11de-992b-00145e5790ea",
+      "ocr_text_word_cnt": 205364497,
+      "title": "Moravská orlice",
+      "date_span": "1863-1943",
+      "id_wikidata": "",
+      "url_wiki": "",
+      "url_mzk": "https://www.digitalniknihovna.cz/mzk/periodical/uuid:02203ad6-32f0-11de-992b-00145e5790ea",
+      "note": "regional"
+    },
+    {
+      "type": "newspaper",
+      "uuid": "",
+      "title": "",
+      "date_span": "",
+      "id_wikidata": "",
+      "url_wiki": "",
+      "url_mzk": "https://www.digitalniknihovna.cz/mzk/periodical/uuid:"
+    }
+    
+  ]
+}
