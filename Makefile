@@ -95,3 +95,21 @@ $(get-periodicalitems-UUID): get-periodicalitems-%: Data/periodical/$(periodical
 	make get-page-ocr-texts periodical=$(periodical) periodicalvolume=$(periodicalvolume) periodicalitem_uuid=Data/periodical/$(periodical)/$(periodicalvolume)/$*.uuid
 
 
+# loop pages to get ocr text
+
+periodicalitem_uuid := 
+pages := $(shell test -f "$(periodicalitem_uuid)" && cat $(periodicalitem_uuid) | tr "\n" " ")
+periodicalitem := $(basename $(notdir $(periodicalitem_uuid)))
+
+Data/periodical/$(periodical)/$(periodicalvolume)/$(periodicalitem):
+	mkdir -p $@
+get-page-ocr-texts-UUID = $(addprefix get-page-ocr-texts-, $(pages))
+get-page-ocr-texts: $(get-page-ocr-texts-UUID)
+$(get-page-ocr-texts-UUID): get-page-ocr-texts-%: Data/periodical/$(periodical)/$(periodicalvolume)/$(periodicalitem)
+	test -f Data/periodical/$(periodical)/$(periodicalvolume)/$(periodicalitem)/$*.txt \
+	|| curl 'https://api.kramerius.mzk.cz/search/api/client/v7.0/items/uuid:$*/ocr/text' -H 'accept: application/json, text/plain, */*' \
+	> Data/periodical/$(periodical)/$(periodicalvolume)/$(periodicalitem)/$*.txt
+
+
+# loop pages to get metadata
+# loop pages to get fascimiles
