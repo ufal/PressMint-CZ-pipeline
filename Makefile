@@ -134,5 +134,11 @@ stats-copies:
 	>> DataStats/stats-copies.tsv
 
 stats-periodicalvolumesQ:
-	cat DataStats/stats-copies.tsv | awk -F'\t' 'BEGIN { OFS = FS } NR==1{print; next} { split($$5,d,"-"); $$5=d[1]"Q"int((d[2]-1)/3+1); print }' | cut -f1,2,4,5,7,8 | { read -r header; echo "$$header"; cat | datamash -t$$'\t' -g 1,2,3,4 sum 5 sum 6; } \
+	@TAB=$$(printf '\t'); \
+	cat DataStats/stats-copies.tsv | awk -F"$$TAB" 'BEGIN { OFS = FS } NR==1{print; next} { split($$5,d,"-"); $$5=d[1]"Q"int((d[2]-1)/3+1); print }' | cut -f1,2,4,5,7,8 | { read -r header; echo "$$header"; cat | datamash -t"$$TAB" -g 1,2,3,4 sum 5 sum 6; } \
 	> DataStats/stats-periodicalvolumesQ.tsv
+
+stats-periodicalvolumes:
+	@TAB=$$(printf '\t'); \
+	cat DataStats/stats-copies.tsv | awk -F"$$TAB" 'BEGIN { OFS = FS } NR==1{print; next} { split($$5,d,"-"); $$5=d[1]; print }' | cut -f1,2,4,5,7,8 | { read -r header; echo "$$header"; cat | datamash -t"$$TAB" -g 1,2,3,4 sum 5 sum 6; } \
+	> DataStats/stats-periodicalvolumes.tsv
