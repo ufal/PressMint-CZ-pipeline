@@ -113,3 +113,26 @@ $(get-page-ocr-texts-UUID): get-page-ocr-texts-%: Data/periodical/$(periodical)/
 
 # loop pages to get metadata
 # loop pages to get fascimiles
+
+#
+uuid2url:
+	echo "TODO: not implemented $@"
+
+
+
+stats-copies:
+	@echo -e "id_issue\tid_volume\tid_copy\ttitle\tdate\tlanguages\tpages\twords" \
+	> DataStats/stats-copies.tsv
+	@for file in `find Data/periodical  -mindepth 2 -maxdepth 2 -type f -name "*.json"`; do \
+	jq -r '.response.docs[]|"\(.own_pid_path)\t\(.["root.title"])\t\(.["date.min"] | split("T")[0])\t\(.["languages.facet"])\t\(.["count_page"])\t"' $${file}\
+	  | sed "s@/uuid:@\t@g;s/^uuid://" \
+	  | while IFS= read -r line; do \
+		  words=$$(cat $$(echo "$${line}"|cut -f1,2,3|tr "\t" "/"|sed 's@^@Data/periodical/@;s@$$@/*.txt@')| wc -w);\
+			echo "$${line}$${words}"| tr -d '"[]';\
+		done;\
+	done \
+	>> DataStats/stats-copies.tsv
+
+stats-periodicalvolumesQ:
+	cat DataStats/stats-copies.tsv | awk -F'\t' 'BEGIN { OFS = FS } NR==1{print; next} { split($$5,d,"-"); $$5=d[1]"Q"int((d[2]-1)/3+1); print }' | cut -f1,2,4,5,7,8 | { read -r header; echo "$$header"; cat | datamash -t$$'\t' -g 1,2,3,4 sum 5 sum 6; } \
+	> DataStats/stats-periodicalvolumesQ.tsv
