@@ -142,3 +142,6 @@ stats-periodicalvolumes:
 	@TAB=$$(printf '\t'); \
 	cat DataStats/stats-copies.tsv | awk -F"$$TAB" 'BEGIN { OFS = FS } NR==1{print; next} { split($$5,d,"-"); $$5=d[1]; print }' | cut -f1,2,4,5,7,8 | { read -r header; echo "$$header"; cat | datamash -t"$$TAB" -g 1,2,3,4 sum 5 sum 6; } \
 	> DataStats/stats-periodicalvolumes.tsv
+
+chart-periodicalvolumes:
+	bash ./Scripts/plot-stackedbar.sh -i DataStats/stats-periodicalvolumes.tsv -o DataStats/chart-year-word-issue.png -m words
