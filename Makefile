@@ -121,7 +121,7 @@ uuid2url:
 
 
 stats-copies:
-	@echo -e "id_issue\tid_volume\tid_copy\ttitle\tdate\tlanguages\tpages\twords" \
+	@echo "id_issue\tid_volume\tid_copy\ttitle\tdate\tlanguages\tpages\twords" \
 	> DataStats/stats-copies.tsv
 	@for file in `find Data/periodical  -mindepth 2 -maxdepth 2 -type f -name "*.json"`; do \
 	jq -r '.response.docs[]|"\(.own_pid_path)\t\(.["root.title"])\t\(.["date.min"] | split("T")[0])\t\(.["languages.facet"])\t\(.["count_page"])\t"' $${file}\
