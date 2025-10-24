@@ -46,13 +46,15 @@ ifeq ($(SAMPLE),1)
 	for p in `cat $(SAMPLE_UUIDs_FILE)`; \
 	do \
 	  mkdir -p $(IN)/periodical/$$p; \
-	  cp -r $(SAMPLE_SOURCE_SOURCE)/periodical/$$p $(IN)/periodical/$$p; \
+	  cp -r $(SAMPLE_SOURCE_SOURCE)/periodical/$$p/* $(IN)/periodical/$$p/; \
 		path=""; \
 		for uuid in `echo "$$p" | tr '/' ' '` ; \
 		do \
 		  path="$${path:+$$path/}$$uuid"; \
 		  jq . $(SAMPLE_SOURCE_SOURCE)/periodical/$$path.json > $(IN)/periodical/$$path.json ; \
 		done; \
+		find $(IN)/periodical/$$p -type f -name "*.txt" \
+		  | sed 's@^.*periodical/\(.*\)/\(.*\)/\(.*\)/\(.*\).txt$$@make SAMPLE=1 get-page-image-\4 periodical=\1 periodicalvolume=\2 periodicalitem=\3 pages=\4@'| sh ; \
 	done
 else	
 	@echo "Available only in SAMPLE mode."
@@ -133,6 +135,12 @@ $(get-page-ocr-texts-UUID): get-page-ocr-texts-%: $(IN)/periodical/$(periodical)
 
 # loop pages to get metadata
 # loop pages to get fascimiles
+get-page-image-UUID = $(addprefix get-page-image-, $(pages))
+get-page-image: $(get-page-image-UUID)
+$(get-page-image-UUID): get-page-image-%: $(IN)/periodical/$(periodical)/$(periodicalvolume)/$(periodicalitem)
+	test -f $(IN)/periodical/$(periodical)/$(periodicalvolume)/$(periodicalitem)/$*.jpg \
+	|| curl 'https://api.kramerius.mzk.cz/search/iiif/uuid:$*/full/max/0/default.jpg' \
+	> $(IN)/periodical/$(periodical)/$(periodicalvolume)/$(periodicalitem)/$*.jpg
 
 #
 uuid2url:
