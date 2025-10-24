@@ -1,0 +1,27 @@
+collection_dailyPressCollection := e8f61172-5e38-43bc-88ed-8737fc210bfc
+collection_localPressCollection := 9df7d62c-b572-4338-a0d1-b9c63e07a26e
+collections := $(collection_dailyPressCollection) $(collection_localPressCollection)
+
+get-collections-UUID = $(addprefix get-collections-, $(collections))
+get-collections: $(get-collections-UUID)
+$(get-collections-UUID): get-collections-%: $(IN)/collection
+	curl 'https://api.kramerius.mzk.cz/search/api/client/v7.0/search?q=*:*&fq=(model:periodical)%20AND%20(in_collections.direct:%22uuid:$*%22)%20AND%20(accessibility:public)&fl=*&sort=created%20desc&rows=999&start=0' -H 'accept: application/json, text/plain, */*' \
+	  > $(IN)/collection/$*.json
+		cat $(IN)/collection/$*.json|jq -r '.response.docs[]|."root.pid"| sub("^uuid:"; "")' \
+		> $(IN)/collection/$*.uuid
+		make get-periodicals collection_uuid=$(IN)/collection/$*.uuid
+
+$(IN)/collection $(IN)/periodical $(DATA) $(IN) $(WORK) $(DIST):
+	mkdir -p $@
+
+# create collection containing dailyPress, but not localPress
+$(IN)/collection/PressMint-CZ-collection.json:
+	jq -R -s 'split("\n") | map(select(. != ""))' $(IN)/collection/9df7d62c-b572-4338-a0d1-b9c63e07a26e.uuid > /tmp/excluded.json && \
+	jq --slurpfile excluded  /tmp/excluded.json  \
+		  '.response.docs |= map(select((.["root.pid"]| sub("^uuid:"; "")) as $$id | $$excluded[0] | index($$id) | not))' \
+			$(IN)/collection/$(collection_dailyPressCollection).json \
+			> $@
+
+create-custom-collection: $(IN)/collection/PressMint-CZ-collection.json
+		cat $<|jq -r '.response.docs[]|."root.pid"| sub("^uuid:"; "")' \
+		> $(IN)/collection/PressMint-CZ-collection.uuid
