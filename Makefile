@@ -13,6 +13,35 @@ IN := ${DATA}source
 WORK := ${DATA}work
 DIST := ${DATA}dist
 
+ifdef UUID_PATH
+
+periodical := $(shell echo "$(UUID_PATH)"| cut -d '/' -f 1)
+periodicalvolume := $(shell echo "$(UUID_PATH)"| cut -d '/' -f 2)
+periodicalitem := $(shell echo "$(UUID_PATH)"| cut -d '/' -f 3)
+page := $(shell echo "$(UUID_PATH)"| cut -d '/' -f 4)
+
+periodicals := $(periodical)
+periodicalvolumes := $(periodicalvolume)
+periodicalitems := $(periodicalitem)
+pages := $(page)
+
+else
+collection_uuid := 
+periodicals := $(shell test -f "$(collection_uuid)" && cat $(collection_uuid) | tr "\n" " ")
+collection := $(basename $(notdir $(collection_uuid)))
+
+periodical_uuid := 
+periodicalvolumes := $(shell test -f "$(periodical_uuid)" && cat $(periodical_uuid) | tr "\n" " ")
+periodical := $(basename $(notdir $(periodical_uuid)))
+
+periodicalvolume_uuid := 
+periodicalitems := $(shell test -f "$(periodicalvolume_uuid)" && cat $(periodicalvolume_uuid) | tr "\n" " ")
+periodicalvolume := $(basename $(notdir $(periodicalvolume_uuid)))
+
+periodicalitem_uuid := 
+pages := $(shell test -f "$(periodicalitem_uuid)" && cat $(periodicalitem_uuid) | tr "\n" " ")
+periodicalitem := $(basename $(notdir $(periodicalitem_uuid)))
+endif
 
 .PHONY: help
 ## help ## print this help
@@ -54,15 +83,13 @@ ifeq ($(SAMPLE),1)
 		  jq . $(SAMPLE_SOURCE_SOURCE)/periodical/$$path.json > $(IN)/periodical/$$path.json ; \
 		done; \
 		find $(IN)/periodical/$$p -type f -name "*.txt" \
-		  | sed 's@^.*periodical/\(.*\)/\(.*\)/\(.*\)/\(.*\).txt$$@make SAMPLE=1 get-page-image-\4 periodical=\1 periodicalvolume=\2 periodicalitem=\3 pages=\4@'| sh ; \
+		  | sed 's@^.*periodical/\(.*\).txt$$@make SAMPLE=1 get-page-image UUID_PATH=\1@'| sh ; \
 	done
 else	
 	@echo "Available only in SAMPLE mode."
 endif
 
-collection_uuid := 
-periodicals := $(shell test -f "$(collection_uuid)" && cat $(collection_uuid) | tr "\n" " ")
-collection := $(basename $(notdir $(collection_uuid)))
+
 # loop periodical(issues) to get volumes
 get-periodicals-UUID = $(addprefix get-periodicals-, $(periodicals))
 get-periodicals: $(get-periodicals-UUID)
@@ -79,9 +106,6 @@ else
 endif
 
 
-periodical_uuid := 
-periodicalvolumes := $(shell test -f "$(periodical_uuid)" && cat $(periodical_uuid) | tr "\n" " ")
-periodical := $(basename $(notdir $(periodical_uuid)))
 
 $(IN)/periodical/$(periodical):
 	mkdir -p $@
@@ -99,10 +123,6 @@ $(get-periodicalvolumes-UUID): get-periodicalvolumes-%: $(IN)/periodical/$(perio
 
 
 
-periodicalvolume_uuid := 
-periodicalitems := $(shell test -f "$(periodicalvolume_uuid)" && cat $(periodicalvolume_uuid) | tr "\n" " ")
-periodicalvolume := $(basename $(notdir $(periodicalvolume_uuid)))
-
 $(IN)/periodical/$(periodical)/$(periodicalvolume):
 	mkdir -p $@
 # loop items(copies) to get pages
@@ -118,11 +138,6 @@ $(get-periodicalitems-UUID): get-periodicalitems-%: $(IN)/periodical/$(periodica
 
 
 # loop pages to get ocr text
-
-periodicalitem_uuid := 
-pages := $(shell test -f "$(periodicalitem_uuid)" && cat $(periodicalitem_uuid) | tr "\n" " ")
-periodicalitem := $(basename $(notdir $(periodicalitem_uuid)))
-
 $(IN)/periodical/$(periodical)/$(periodicalvolume)/$(periodicalitem):
 	mkdir -p $@
 get-page-ocr-texts-UUID = $(addprefix get-page-ocr-texts-, $(pages))
