@@ -1,7 +1,14 @@
 .DEFAULT_GOAL := help
 
 
-DATA := $(shell pwd)/Data/
+SAMPLE ?= 0
+DATA ?= $(shell pwd)/Data/
+SAMPLE_SOURCE_SOURCE = $(shell pwd)/Data/source
+SAMPLE_UUIDs_FILE = $(shell pwd)/DataManual/sample-issues.paths.uuid
+ifeq ($(SAMPLE),1)
+DATA := $(shell pwd)/Sample/
+endif
+
 IN := ${DATA}source
 WORK := ${DATA}work
 DIST := ${DATA}dist
@@ -15,15 +22,41 @@ help:
 -include Makefile.dev
 -include Makefile.deprecated
 
+ifneq ($(SAMPLE),1)
 $(IN)/PressMint-CZ-issues.json: $(IN)
 	cat DataManual/issues.json |jq '.issues |= map(select(.include == true))' > $@
+
 $(IN)/PressMint-CZ-issues.uuid: $(IN)/PressMint-CZ-issues.json
 	jq -r '.issues[]|.uuid' $< > $@
 filter-issues: $(IN)/PressMint-CZ-issues.uuid
+endif
+
 
 # PressMint data gathering starting point
 get-PressMint-CZ-periodicals: $(IN)/PressMint-CZ-issues.uuid
+ifeq ($(SAMPLE),1)
+	@echo "Skipping data downloading: SAMPLE mode active."
+	make get-PressMint-CZ-sample-periodicals
+else	
 	make get-periodicals collection_uuid=$<
+endif
+
+get-PressMint-CZ-sample-periodicals:
+ifeq ($(SAMPLE),1)
+	for p in `cat $(SAMPLE_UUIDs_FILE)`; \
+	do \
+	  mkdir -p $(IN)/periodical/$$p; \
+	  cp -r $(SAMPLE_SOURCE_SOURCE)/periodical/$$p $(IN)/periodical/$$p; \
+		path=""; \
+		for uuid in `echo "$$p" | tr '/' ' '` ; \
+		do \
+		  path="$${path:+$$path/}$$uuid"; \
+		  jq . $(SAMPLE_SOURCE_SOURCE)/periodical/$$path.json > $(IN)/periodical/$$path.json ; \
+		done; \
+	done
+else	
+	@echo "Available only in SAMPLE mode."
+endif
 
 collection_uuid := 
 periodicals := $(shell test -f "$(collection_uuid)" && cat $(collection_uuid) | tr "\n" " ")
@@ -32,12 +65,16 @@ collection := $(basename $(notdir $(collection_uuid)))
 get-periodicals-UUID = $(addprefix get-periodicals-, $(periodicals))
 get-periodicals: $(get-periodicals-UUID)
 $(get-periodicals-UUID): get-periodicals-%: $(IN)/periodical
+ifeq ($(SAMPLE),1)
+	@echo "Skipping data downloading: SAMPLE mode active."
+else	
 	test -f $(IN)/periodical/$*.json \
 	|| curl 'https://api.kramerius.mzk.cz/search/api/client/v7.0/search?q=(model:periodicalvolume)%20AND%20(own_parent.pid:uuid%5C:$*)%20AND%20(licenses:public)&fl=*&sort=date.min%20asc&rows=999&start=0' -H 'accept: application/json, text/plain, */*' \
 	> $(IN)/periodical/$*.json \
 	&& cat $(IN)/periodical/$*.json|jq -r '.response.docs[]|.pid| sub("^uuid:"; "")' \
 	> $(IN)/periodical/$*.uuid \
 	&& make get-periodicalvolumes periodical_uuid=$(IN)/periodical/$*.uuid
+endif
 
 
 periodical_uuid := 
