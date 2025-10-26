@@ -1,0 +1,55 @@
+#!/usr/bin/env perl
+use strict;
+use warnings;
+use utf8;
+use open qw(:std :utf8);
+use File::Spec;
+use XML::LibXML;
+
+use PressMintCZ;
+
+
+my $args = PressMintCZ::parse_args(\@ARGV, []);
+
+PressMintCZ::process_issues(
+  \&convert2header,
+  %$args
+);
+
+
+sub convert2header{
+  my $json = shift;
+  my %opts = @_;
+  print STDERR "INFO: processing $opts{'input-uuid-path'}\n";
+  $opts{id} = PressMintCZ::create_comp_id($json);;
+  $opts{date} = PressMintCZ::get_comp_date($json);;
+  $opts{year} = PressMintCZ::get_comp_year($json);;
+  my $xml = do { local $/; <DATA> };
+  my $parser = XML::LibXML->new();
+  my $dom = $parser->parse_string($xml);
+  my $xpc = XML::LibXML::XPathContext->new($dom);
+  $xpc->registerNs('tei', 'http://www.tei-c.org/ns/1.0');
+  my ($tei) = $xpc->findnodes('/tei:TEI');
+  $tei->setAttribute('xml:id',$opts{id});
+  my ($titleStmt) = $xpc->findnodes('//tei:titleStmt');
+  my ($bibl) = $xpc->findnodes('//tei:bibl');
+
+
+
+  PressMintCZ::save_xml($dom,%opts);
+}
+
+
+__DATA__
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xml:lang="cs">
+   <teiHeader>
+     <fileDesc>
+       <titleStmt/>
+       <sourceDesc>
+         <bibl/>
+       </sourceDesc>
+     </fileDesc>
+   </teiHeader>
+</TEI>

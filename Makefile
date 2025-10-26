@@ -1,5 +1,7 @@
 .DEFAULT_GOAL := help
 
+PERLBREW_ROOT=~/perl5/perlbrew
+PERL := $(shell test -n "$(USE_PERL)" && echo -n "$(PERLBREW_ROOT)/perls/$(USE_PERL)/bin/perl" || echo -n "perl")
 
 SAMPLE ?= 0
 DATA ?= $(shell pwd)/Data/
@@ -13,6 +15,19 @@ IN := ${DATA}source
 WORK := ${DATA}work
 DIST := ${DATA}dist
 
+JSONissues := ${WORK}/json-issues
+TEIheader := ${WORK}/tei-header
+TEItext := ${WORK}/tei-text
+TEIANAtext := ${WORK}/tei-ana-text
+TEI := ${DIST}/tei
+TEIANA := ${DIST}/tei-ana
+UDPIPE := ${WORK}/udpipe
+NAMETAG := ${WORK}/nametag
+
+LOGDIR := $(shell pwd)/Logs/
+
+
+
 ifdef UUID_PATH
 
 periodical := $(shell echo "$(UUID_PATH)"| cut -d '/' -f 1)
@@ -24,6 +39,8 @@ periodicals := $(periodical)
 periodicalvolumes := $(periodicalvolume)
 periodicalitems := $(periodicalitem)
 pages := $(page)
+
+UUID_PATH_LEVEL := $(shell echo "$(UUID_PATH)"|tr -cd '/' | wc -c)
 
 else
 collection_uuid := 
@@ -193,3 +210,83 @@ stats-periodicalvolumes:
 
 chart-periodicalvolumes:
 	bash ./Scripts/plot-stackedbar.sh -i DataStats/stats-periodicalvolumes.tsv -o DataStats/chart-year-word-issue.png -m words
+
+
+
+### process data
+
+$(JSONissues) $(TEI) $(TEIANA) $(TEItext) $(TEIheader) $(TEIANAtext) $(UDPIPE) $(NAMETAG) $(LOGDIR):
+	mkdir -p $@
+# merge isses and page json files
+
+inputJsonMerge: $(IN)/periodical/$(UUID_PATH).json $(JSONissues)
+ifeq ($(UUID_PATH_LEVEL),1)
+	mkdir -p $(JSONissues)/$(UUID_PATH)
+	jq -c '.response.docs[]' $< | while read -r obj; \
+	do \
+	  pid=$$(echo "$$obj" | jq -r '.pid'| sed "s/^uuid://") ;\
+	  pages_file="$(IN)/periodical/$(UUID_PATH)/$${pid}.json" ;\
+	  if [ -f "$$pages_file" ]; \
+		then \
+	    obj=$$(echo "$$obj" | jq --slurpfile pages "$$pages_file" '.pages = $$pages[0].response.docs') ;\
+	    echo "$$obj" | jq '.' > "$(JSONissues)/$(UUID_PATH)/$${pid}.json" ;\
+		  echo "INFO: saving $(JSONissues)/$(UUID_PATH)/$${pid}.json" ;\
+	  fi ;\
+	done
+else
+	@echo "ERROR: invalid UUID_PATH level\n"
+endif
+
+
+
+
+
+
+# original text to TEI/text
+inputTxt2teiText: $(IN)/periodical/$(UUID_PATH).json $(TEItext)
+	$(PERL) -I Scripts/lib Scripts/text2teiText.pl \
+										 --input-format "txt" \
+										 --input-file-suffix ".txt" \
+										 --input-text-dir $(IN)/periodical \
+										 --input-base-dir $(JSONissues) \
+										 --input-uuid-path "$(UUID_PATH)" \
+										 --output-dir $(TEItext)
+
+
+
+# json metadata to TEI/teiHeader
+inputJson2teiHeader: $(IN)/periodical/$(UUID_PATH).json $(TEIheader)
+	$(PERL) -I Scripts/lib Scripts/json2teiHeader.pl \
+										 --input-base-dir $(JSONissues) \
+										 --input-uuid-path "$(UUID_PATH)" \
+										 --output-dir $(TEIheader)
+
+
+### annotate TEI/text
+teiText2teiTextAnaUD: $(UDPIPE)
+	find $(TEItext) -type f -printf "%P\n" |sort > $(UDPIPE).fl
+	$(PERL) -I Scripts/resources/lib Scripts/resources/udpipe2/udpipe2.pl --colon2underscore \
+	                               $(TOKEN) \
+	                               --model "cs:czech-pdt-ud-2.15-241121" \
+	                               --elements "p,head" \
+	                               --debug \
+																 --use-xpos \
+	                               --no-space-in-punct \
+	                               --try2continue-on-error \
+	                               --filelist $(UDPIPE).fl \
+	                               --input-dir $(TEItext) \
+	                               --output-dir $(UDPIPE)
+
+teiText2teiTextAnaNER: $(NAMETAG)
+	find $(UDPIPE) -type f -printf "%P\n" |sort > $(NAMETAG).fl
+	$(PERL) -I Scripts/resources/lib Scripts/resources/nametag2/nametag2.pl \
+	                                 $(TOKEN) \
+																	 --debug \
+	                                 --model "cs:nametag3-czech-cnec2.0-240830" \
+																	 --cnec2conll2003 \
+	                                 --filelist $(NAMETAG).fl \
+	                                 --input-dir $(UDPIPE) \
+	                                 --output-dir $(NAMETAG)
+
+
+### merge data to TEI and teiCorpus
