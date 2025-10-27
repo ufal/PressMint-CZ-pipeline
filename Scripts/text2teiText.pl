@@ -52,19 +52,28 @@ sub convert2text {
     $surf->setAttribute('xml:id',"$opts{id}.facs$pb_n");
     my $graphic = $surf->addNewChild(undef,'graphic');
     $graphic->setAttribute('url',PressMintCZ::get_facs_url($page));
-
-    my $text = PressMintCZ::read_text_file(File::Spec->catfile($opts{'input-text-dir'},$opts{'input-uuid-path'},"$page_uuid$opts{'input-file-suffix'}"));
-    my $lb_n = 0;
-    for my $line (split /\n/, $text) {
-      $lb_n++;
-      my $lb = $body->addNewChild(undef, 'lb');
-      $lb->setAttribute('n',"$lb_n");
-      $body->appendText($line);
+    if($opts{'input-format'} eq 'txt') {
+      my $text = PressMintCZ::read_text_file(File::Spec->catfile($opts{'input-text-dir'},$opts{'input-uuid-path'},"$page_uuid$opts{'input-file-suffix'}"));
+      convertTxtPage($body,$text);
+    } else {
+      print STDERR "ERROR: unsuported input format $opts{'input-format'}\n";
     }
+
   }
   PressMintCZ::save_xml($dom,%opts);
 }
 
+
+sub convertTxtPage {
+  my ($body,$text) = @_;
+  my $lb_n = 0;
+  for my $line (split /\n/, $text) {
+    $lb_n++;
+    my $lb = $body->addNewChild(undef, 'lb');
+    $lb->setAttribute('n',"$lb_n");
+    $body->appendText($line);
+  }
+}
 
 
 __DATA__
