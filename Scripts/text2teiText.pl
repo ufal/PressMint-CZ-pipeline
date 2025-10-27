@@ -2,6 +2,7 @@
 use strict;
 use warnings;
 use utf8;
+use feature 'unicode_strings';
 use open qw(:std :utf8);
 use File::Spec;
 use XML::LibXML;
@@ -40,6 +41,13 @@ sub convert2text {
   my ($body) = $xpc->findnodes('//tei:body');
   my ($facs) = $xpc->findnodes('//tei:facsimile');
   my $pb_n=0;
+  my $result = {
+    body => $body,
+    doc_id => $opts{id},
+    p => undef,
+    p_n => 0,
+    last_line => ''
+  };
   for my $page (@pages) {
     $pb_n++;
     my $page_uuid = PressMintCZ::get_page_uuid($page);
@@ -54,7 +62,7 @@ sub convert2text {
     $graphic->setAttribute('url',PressMintCZ::get_facs_url($page));
     if($opts{'input-format'} eq 'txt') {
       my $text = PressMintCZ::read_text_file(File::Spec->catfile($opts{'input-text-dir'},$opts{'input-uuid-path'},"$page_uuid$opts{'input-file-suffix'}"));
-      convertTxtPage($body,$text);
+      convertTxtPage($text,$result);
     } else {
       print STDERR "ERROR: unsuported input format $opts{'input-format'}\n";
     }
@@ -65,16 +73,35 @@ sub convert2text {
 
 
 sub convertTxtPage {
-  my ($body,$text) = @_;
+  my ($text, $result) = @_;
   my $lb_n = 0;
-  for my $line (split /\n/, $text) {
+  my @lines = split /\n/, $text;
+  my $total_len = 0;
+  $total_len += length($_) for @lines;
+  my $avg_len = @lines ? $total_len / @lines : 0;
+
+  for my $line (@lines) {
+    if( not($result->{p}) || is_new_par($line,$result->{last_line},$avg_len)){
+      $result->{p_n}++;
+      $result->{p} = $result->{body}->addNewChild(undef, 'p');
+      $result->{p}->setAttribute('xml:id',$result->{doc_id}.".p".$result->{p_n});
+    }
     $lb_n++;
-    my $lb = $body->addNewChild(undef, 'lb');
+    my $lb = $result->{p}->addNewChild(undef, 'lb');
     $lb->setAttribute('n',"$lb_n");
-    $body->appendText($line);
+    $result->{p}->appendText($line);
+
+    $result->{last_line} = $line;
   }
 }
 
+sub is_new_par {
+  my ($line,$last_line,$avg_len) = @_;
+  return 1 if length($last_line) < $avg_len * 0.5;
+  return 0 if $last_line =~ m/\p{Dash}\s*$/ && $line =~ m/^\s*\p{Ll}/;
+  return 1 if $last_line =~ m/\p{P}\s*$/ && $line =~ m/^\s*\p{Lu}/ && length($line) < $avg_len * 0.95;
+  return 0; 
+}
 
 __DATA__
 <?xml version="1.0" encoding="UTF-8"?>

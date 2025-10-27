@@ -6,11 +6,23 @@ use JSON;
 use File::Spec;
 use File::Path qw(make_path);
 use Encode qw(decode);
+use XML::LibXML;
+use XML::LibXML::PrettyPrint;
 
 
 
 # periodical/periodicalvolume/periodicalitem/page
 my %known_types = map { $_ => 1 } qw/periodical periodicalvolume periodicalitem page/;
+
+my $pp = XML::LibXML::PrettyPrint->new(
+  indent_string => "  ",
+  element => {
+    inline   => [qw//],
+    #block    => [qw//],
+    #compact  => [qw//],
+    preserves_whitespace => [qw/p/],
+  }
+);
 
 sub parse_args {
   my ($argv_ref, $extra_opts) = @_;
@@ -105,6 +117,7 @@ sub save_xml {
   # Write XML to file (UTF-8, pretty print)
   open my $fh, '>:raw', $file_path
     or die "ERROR: Cannot open $file_path for writing: $!";
+  $pp->pretty_print($dom);
   print $fh $dom->toString(1);
   close $fh;
 
