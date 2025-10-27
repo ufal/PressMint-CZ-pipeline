@@ -13,6 +13,10 @@
          <editionStmt>
             <edition>1.0</edition>
          </editionStmt>
+         <extent>
+            <measure unit="words" quantity="10062" xml:lang="en">10062 words</measure>
+            <measure unit="words" quantity="10062" xml:lang="cs">10062 slov</measure>
+         </extent>
          <publicationStmt>
             <publisher/>
             <idno/>
