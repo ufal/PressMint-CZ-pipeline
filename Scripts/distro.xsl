@@ -211,10 +211,36 @@
   </xsl:template>
 
   <!-- root -->
-  <xsl:template mode="root" match="tei:teiCorpus">
-    <xsl:copy-of select="."/>
+  <xsl:template mode="root" match="*">
+    <xsl:copy>
+      <xsl:apply-templates mode="root" select="@*" />
+      <xsl:apply-templates mode="root"/>
+    </xsl:copy>
   </xsl:template> 
 
+  <xsl:template mode="root" match="@*">
+    <xsl:copy />
+  </xsl:template>
+
+  <xsl:template mode="root" match="tei:extent">
+    <xsl:copy>
+      <xsl:call-template name="add-measure-words">
+        <xsl:with-param name="quantity" select="sum($words/tei:item)" />
+      </xsl:call-template>
+    </xsl:copy>
+  </xsl:template>
+
+  <xsl:template mode="root" match="tei:tagsDecl">
+    <xsl:call-template name="add-tagsDecl">
+      <xsl:with-param name="tagUsages">
+        <xsl:for-each select="distinct-values($tagUsages//@gi)">
+          <xsl:sort select="."/>
+          <xsl:variable name="elem-name" select="."/>
+          <tagUsage gi="{$elem-name}" occurs="{mk:number(sum($tagUsages//*[@gi=$elem-name]/@occurs))}"/>
+        </xsl:for-each>
+      </xsl:with-param>
+    </xsl:call-template>
+  </xsl:template>
 
   <!-- component -->
   <xsl:template mode="comp" match="*">
