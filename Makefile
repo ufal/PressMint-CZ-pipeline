@@ -18,6 +18,7 @@ DIST := ${DATA}dist
 JSONissues := ${WORK}/json-issues
 TEIheader := ${WORK}/tei-header
 TEItext := ${WORK}/tei-text
+TEItext_cleaned := ${WORK}/tei-text-cleaned
 TEIANAtext := ${WORK}/tei-ana-text
 TEI := ${DIST}/tei
 TEIANA := ${DIST}/tei-ana
@@ -26,6 +27,10 @@ NAMETAG := ${WORK}/nametag
 
 LOGDIR := $(shell pwd)/Logs/
 
+JAVA-MEMORY =
+JM := $(shell test -n "$(JAVA-MEMORY)" && echo -n "-Xmx$(JAVA-MEMORY)g")
+JAVA-MEMORY-GB = $(shell java $(JM) -XX:+PrintFlagsFinal -version 2>&1| grep " MaxHeapSize"|sed "s/^.*= *//;s/ .*$$//"|awk '{print "\t" $$1/1024/1024/1024}')
+SAXON := java $(JM) -jar Scripts/bin/saxon.jar
 
 
 ifdef UUID_PATH
@@ -215,7 +220,7 @@ chart-periodicalvolumes:
 
 ### process data
 
-$(JSONissues) $(TEI) $(TEIANA) $(TEItext) $(TEIheader) $(TEIANAtext) $(UDPIPE) $(NAMETAG) $(LOGDIR):
+$(JSONissues) $(TEI) $(TEIANA) $(TEItext) $(TEItext_cleaned) $(TEIheader) $(TEIANAtext) $(UDPIPE) $(NAMETAG) $(LOGDIR):
 	mkdir -p $@
 # merge isses and page json files
 
@@ -262,9 +267,13 @@ inputJson2teiHeader: $(IN)/periodical/$(UUID_PATH).json $(TEIheader)
 										 --output-dir $(TEIheader)
 
 
+teiText2teiTextCleaned: $(TEItext_cleaned)
+	find $(TEItext) -type f -name "*.xml"  -printf "%P\n" | xargs -I {} $(SAXON) outFile=$</{} -xsl:Scripts/remove-lb.xsl $(TEItext)/{}
+
+
 ### annotate TEI/text
 teiText2teiTextAnaUD: $(UDPIPE)
-	find $(TEItext) -type f -printf "%P\n" |sort > $(UDPIPE).fl
+	find $(TEItext_cleaned) -type f -printf "%P\n" |sort > $(UDPIPE).fl
 	$(PERL) -I Scripts/resources/lib Scripts/resources/udpipe2/udpipe2.pl --colon2underscore \
 	                               $(TOKEN) \
 	                               --model "cs:czech-pdt-ud-2.15-241121" \
@@ -274,7 +283,7 @@ teiText2teiTextAnaUD: $(UDPIPE)
 	                               --no-space-in-punct \
 	                               --try2continue-on-error \
 	                               --filelist $(UDPIPE).fl \
-	                               --input-dir $(TEItext) \
+	                               --input-dir $(TEItext_cleaned) \
 	                               --output-dir $(UDPIPE)
 
 teiText2teiTextAnaNER: $(NAMETAG)
@@ -290,3 +299,23 @@ teiText2teiTextAnaNER: $(NAMETAG)
 
 
 ### merge data to TEI and teiCorpus
+
+
+####
+prereq: parczech
+
+parczech: Scripts/resources
+	git clone https://github.com/ufal/ParCzech.git --no-checkout $</ParCzech --depth 10 -b master ;\
+	cd $</ParCzech ;\
+	git sparse-checkout init --cone  ;\
+	git sparse-checkout set src/udpipe2 src/nametag2 src/lib || echo "directory exists"
+	ln -s ParCzech/src/lib $</lib || : 
+	ln -s ParCzech/src/udpipe2 $</udpipe2 || :
+	ln -s ParCzech/src/nametag2 $</nametag2 || :
+	### 
+	cd $</ParCzech ;\
+  git checkout ;\
+  git pull
+
+Scripts/resources:
+	mkdir $@
