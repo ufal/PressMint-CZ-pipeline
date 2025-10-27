@@ -11,6 +11,8 @@ ifeq ($(SAMPLE),1)
 DATA := $(shell pwd)/Sample/
 endif
 
+CONFIG := $(shell pwd)/DataManual/config_PressMint-CZ.xml
+
 IN := ${DATA}source
 WORK := ${DATA}work
 DIST := ${DATA}dist
@@ -24,6 +26,7 @@ TEI := ${DIST}/tei
 TEIANA := ${DIST}/tei-ana
 UDPIPE := ${WORK}/udpipe
 NAMETAG := ${WORK}/nametag
+CORPUS_TEMPLATE := $(WORK)/PressMint-CZ.xml
 
 LOGDIR := $(shell pwd)/Logs/
 
@@ -300,6 +303,35 @@ teiText2teiTextAnaNER: $(NAMETAG)
 
 ### merge data to TEI and teiCorpus
 
+
+corpus-template:
+	echo '<?xml version="1.0" encoding="UTF-8"?>' > $(CORPUS_TEMPLATE)
+	echo '<teiCorpus xmlns="http://www.tei-c.org/ns/1.0"' >> $(CORPUS_TEMPLATE)
+	echo '     xml:id="PressMint-CZ"' >> $(CORPUS_TEMPLATE)
+	echo '     xml:lang="cs">' >> $(CORPUS_TEMPLATE)
+	find $(TEIheader) -type f -name "*.xml" -printf "%P\n"| xargs -I {} echo '  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="'{}'"/>' >> $(CORPUS_TEMPLATE)
+	echo '</teiCorpus>' >> $(CORPUS_TEMPLATE)
+
+dist-tei: $(TEI)
+	$(SAXON) -xsl:Scripts/distro.xsl \
+	    outDir=$< \
+	    inComponentDir=$(TEItext) \
+	    inHeaderDir=$(TEIheader) \
+	    anaDir=$(TEIANA) \
+	    inTaxonomiesDir=$(TAXONOMIES) \
+	    type=TEI \
+	    projectConfig=$(CONFIG) \
+	    $(CORPUS_TEMPLATE)
+
+dist-tei-ana: $(TEIANA)
+	$(SAXON) -xsl:Scripts/distro.xsl \
+	    outDir=$< \
+	    inComponentDir=$(NAMETAG) \
+	    inHeaderDir=$(TEIheader) \
+	    inTaxonomiesDir=$(TAXONOMIES) \
+	    type=TEI.ana \
+	    projectConfig=$(CONFIG) \
+	    $(CORPUS_TEMPLATE)
 
 ####
 prereq: parczech

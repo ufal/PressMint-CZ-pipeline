@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<teiCorpus xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="PressMint-CZ"
+     xml:lang="cs">
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1848/PressMint-CZ_1848-04-05-f2413420-c8eb-11e9-bfd1-5ef3fc9bb22f.xml"/>
+</teiCorpus>

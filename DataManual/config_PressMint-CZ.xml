@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns="http://www.tei-c.org/ns/1.0"
+  xml:id="config_PressMint-CZ"
+  xml:lang="cs">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title condition="root.TEI">Český korpus historických novin PressMint-CZ [PressMint]</title>
+        <title condition="root.TEI" lang="en">Czech historical newspaper corpus PressMint-CZ [PressMint]</title>
+        <title condition="root.TEI.ana">Český korpus historických novin PressMint-CZ.ana [PressMint.ana]</title>
+        <title condition="root.TEI.ana" lang="en">Czech historical newspaper corpus PressMint-CZ.ana [PressMint.ana]</title>
+        <title placeholder="*" condition="comp"/>
+        <respStmt>
+          <persName ref="https://orcid.org/0000-0001-7953-8783">Matyáš Kopp</persName>
+          <resp xml:lang="en">TEI XML corpus encoding</resp>
+          <resp xml:lang="en" condition="TEI.ana">Linguistic annotation</resp>
+        </respStmt>
+      </titleStmt>
+      <editionStmt>
+        <edition>1.0</edition>
+      </editionStmt>
+      <extent placeholder="1" />
+      <publicationStmt>
+        <publisher />
+        <idno></idno>
+        <!--handle-->
+        <availability status="free">
+          <licence>http://creativecommons.org/licenses/by/4.0/</licence>
+          <p xml:lang="en">This work is licensed under the
+            <ref
+              target="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0
+            International License</ref>.
+          </p>
+          <p xml:lang="cs">Toto dílo je licencováno
+            <ref
+              target="http://creativecommons.org/licenses/by/4.0/">Creative Commons Uveďte původ 4.0
+            Mezinárodní Veřejná licence</ref>.
+          </p>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl placeholder="*"/>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <!--<projectDesc />-->
+      <tagsDecl>
+        <namespace name="http://www.tei-c.org/ns/1.0" />
+      </tagsDecl>
+    </encodingDesc>
+  </teiHeader>
+</config>
