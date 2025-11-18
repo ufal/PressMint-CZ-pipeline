@@ -21,9 +21,9 @@ sub convert2header{
   my $json = shift;
   my %opts = @_;
   print STDERR "INFO: processing $opts{'input-uuid-path'}\n";
-  $opts{id} = PressMintCZ::create_comp_id($json);;
-  $opts{date} = PressMintCZ::get_comp_date($json);;
-  $opts{year} = PressMintCZ::get_comp_year($json);;
+  $opts{id} = PressMintCZ::create_comp_id($json);
+  $opts{date} = PressMintCZ::get_comp_date($json);
+  $opts{year} = PressMintCZ::get_comp_year($json);
   my $xml = do { local $/; <DATA> };
   my $parser = XML::LibXML->new();
   my $dom = $parser->parse_string($xml);
@@ -33,8 +33,30 @@ sub convert2header{
   $tei->setAttribute('xml:id',$opts{id});
   my ($titleStmt) = $xpc->findnodes('//tei:titleStmt');
   my ($bibl) = $xpc->findnodes('//tei:bibl');
+  my $jtitle = $bibl->addNewChild(undef,'title');
+  $jtitle->setAttribute('level', 'a');
+  $jtitle->appendText(PressMintCZ::get_journal_name($json));
+  $bibl->addNewChild(undef,'date')->setAttribute('when', $opts{date});
 
+  for my $idno (PressMintCZ::get_all_ids($json)){
+    print STDERR "IDNO:\t",join(' ',%$idno),"\n";
+    my $node_idno = $bibl->addNewChild(undef,'idno');
+    $node_idno->setAttribute('type',$idno->{type});
+    $node_idno->setAttribute('subtype',$idno->{subtype}) if exists $idno->{subtype};
+    $node_idno->appendText($idno->{value})
+  }
 
+  my $physicalLocation = PressMintCZ::get_physical_location($json);
+  if($physicalLocation) {
+    my $msIdentifier = $bibl->addNewChild(undef,'msIdentifier');
+    $msIdentifier->addNewChild(undef, 'settlement')->appendText($physicalLocation->{settlement});
+    $msIdentifier->addNewChild(undef, 'repository')->appendText($physicalLocation->{repository});
+    for my $shelf (@{$physicalLocation->{shelfmark}}) {
+      my $idno = $msIdentifier->addNewChild(undef, 'idno');
+      $idno->setAttribute('type','shelfmark');
+      $idno->appendText($shelf);
+    }
+  }
 
   PressMintCZ::save_xml($dom,%opts);
 }

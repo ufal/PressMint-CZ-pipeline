@@ -29,6 +29,7 @@ NAMETAG := ${WORK}/nametag
 CORPUS_TEMPLATE := $(WORK)/PressMint-CZ.xml
 
 LOGDIR := $(shell pwd)/Logs/
+TAXONOMIES :=$(shell pwd)/DataManual/Taxonomies/
 
 JAVA-MEMORY =
 JM := $(shell test -n "$(JAVA-MEMORY)" && echo -n "-Xmx$(JAVA-MEMORY)g")

@@ -191,6 +191,51 @@ sub get_page_uuid {
   return $id;
 }
 
+sub get_journal_name {
+  my $metadata = shift;
+  return $metadata->{'root.title'};
+}
+
+
+my %id2type = (
+  id_ccnb => 'čČNB',
+  id_urnnbn => 'URN',
+  id_uuid => 'UUID',
+);
+
+sub get_all_ids {
+  my $metadata = shift;
+  return (
+    (map {my $type = $id2type{$_}; map { {type => $type,value => $_}} @{$metadata->{$_}}} sort keys %id2type),
+    (map { {
+            type => 'URI',
+            subtype => 'URL',
+            value => "https://www.digitalniknihovna.cz/mzk/view/uuid:$_"
+          } } @{$metadata->{id_uuid}}),
+
+  );
+}
+
+my %location = (
+  ABA001 => {
+    settlement => 'Praha',
+    repository => 'Národní knihovna České republiky - Knihovní fondy a služby',
+  },
+  BOA001 => {
+    settlement => 'Brno',
+    repository => 'Moravská zemská knihovna v Brně',
+  },
+);
+sub get_physical_location {
+  my $metadata = shift;
+  my ($loc) = grep {$_} map {$location{$_}} @{$metadata->{'physical_locations.facet'}};
+  return unless $loc;
+  return {
+    %$loc,
+    shelfmark => $metadata->{"shelf_locators"}//[],
+  };
+}
+
 sub get_comp_date {
   my $metadata = shift;
   my $date = $metadata->{'date.min'} // $metadata->{response}->{docs}->[0]->{'date.min'};

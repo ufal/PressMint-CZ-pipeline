@@ -6,9 +6,9 @@
     <fileDesc>
       <titleStmt>
         <title condition="root.TEI">Český korpus historických novin PressMint-CZ [PressMint]</title>
-        <title condition="root.TEI" lang="en">Czech historical newspaper corpus PressMint-CZ [PressMint]</title>
+        <title condition="root.TEI" xml:lang="en">Czech historical newspaper corpus PressMint-CZ [PressMint]</title>
         <title condition="root.TEI.ana">Český korpus historických novin PressMint-CZ.ana [PressMint.ana]</title>
-        <title condition="root.TEI.ana" lang="en">Czech historical newspaper corpus PressMint-CZ.ana [PressMint.ana]</title>
+        <title condition="root.TEI.ana" xml:lang="en">Czech historical newspaper corpus PressMint-CZ.ana [PressMint.ana]</title>
         <title placeholder="*" condition="comp"/>
         <respStmt>
           <persName ref="https://orcid.org/0000-0001-7953-8783">Matyáš Kopp</persName>
@@ -59,6 +59,13 @@
       <tagsDecl>
         <namespace name="http://www.tei-c.org/ns/1.0" />
       </tagsDecl>
+      <classDecl condition="root.TEI.ana">
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="PressMint-taxonomy-NER.ana.xml"/>
+      </classDecl>
+      <appInfo condition="root.TEI.ana">
+        <application ident="UDPipe" version="2"/>
+        <application ident="NameTag" version="3"/>
+      </appInfo>
     </encodingDesc>
   </teiHeader>
 </config>

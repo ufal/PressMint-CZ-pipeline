@@ -230,6 +230,19 @@
     </xsl:copy>
   </xsl:template>
 
+  <xsl:template mode="root" match="xi:include[parent::tei:classDecl]">
+    <xsl:variable name="taxonomy" select="document(concat($inTaxonomiesDir, '/', @href))"/>
+    <xsl:copy>
+      <xsl:apply-templates select="@*" mode="root"/>
+    </xsl:copy>
+    <xsl:variable name="outTaxonomy" select="concat($outDir,'/',@href)"/>
+    <xsl:result-document href="{$outTaxonomy}">
+      <xsl:copy-of select="$taxonomy"/>
+    </xsl:result-document>
+
+  </xsl:template>
+
+
   <xsl:template mode="root" match="tei:tagsDecl">
     <xsl:call-template name="add-tagsDecl">
       <xsl:with-param name="tagUsages">
@@ -324,7 +337,7 @@
     </xsl:copy>
   </xsl:template>
 
-  <xsl:template match="tei:*" mode="insertConfig">
+  <xsl:template match="tei:*|xi:include" mode="insertConfig">
     <xsl:param name="elem"/>
     <xsl:param name="fileType"/>
     <xsl:variable name="name" select="local-name()" />

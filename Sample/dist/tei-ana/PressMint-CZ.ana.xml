@@ -4,7 +4,7 @@
       <fileDesc>
          <titleStmt>
             <title>Český korpus historických novin PressMint-CZ.ana [PressMint.ana]</title>
-            <title lang="en">Czech historical newspaper corpus PressMint-CZ.ana [PressMint.ana]</title>
+            <title xml:lang="en">Czech historical newspaper corpus PressMint-CZ.ana [PressMint.ana]</title>
             <respStmt>
                <persName ref="https://orcid.org/0000-0001-7953-8783">Matyáš Kopp</persName>
                <resp xml:lang="en">TEI XML corpus encoding</resp>
@@ -64,6 +64,14 @@
                <tagUsage gi="w" occurs="10208"/>
             </namespace>
          </tagsDecl>
+         <classDecl>
+            <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                        href="PressMint-taxonomy-NER.ana.xml"/>
+         </classDecl>
+         <appInfo>
+            <application ident="UDPipe" version="2"/>
+            <application ident="NameTag" version="3"/>
+         </appInfo>
       </encodingDesc>
    </teiHeader>
    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
