@@ -379,7 +379,6 @@
                         or concat($fileType,'.',$type) = @condition
                         )">
         <!-- does not meet the condition -->
-         <xsl:message select="concat('info:','does not meet condition')"/>
       </xsl:when>
       <xsl:when test="$elem and $elem/*[local-name() = $name]">
         <xsl:choose>
