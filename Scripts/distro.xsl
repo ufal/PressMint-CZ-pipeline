@@ -142,7 +142,7 @@
   <xsl:variable name="dates">
     <xsl:for-each select="$docs/tei:item">
       <item n="{tei:xi-orig}">
-        <xsl:value-of select="tei:doc/tei:TEI/tei:teiHeader//tei:settingDesc/tei:setting/tei:date/@when" />
+        <xsl:value-of select="tei:doc/tei:TEI/tei:teiHeader//tei:sourceDesc/tei:bibl/tei:date/@when" />
       </item>
     </xsl:for-each>
   </xsl:variable>
@@ -150,6 +150,15 @@
     select="replace(min($dates/tei:item/translate(.,'-','')),'(....)(..)(..)','$1-$2-$3')" />
   <xsl:variable name="corpusTo"
     select="replace(max($dates/tei:item/translate(.,'-','')),'(....)(..)(..)','$1-$2-$3')" />
+
+  <!-- -->
+  <xsl:variable name="titles">
+    <xsl:for-each select="$docs/tei:item">
+      <item n="{tei:xi-orig}">
+        <xsl:value-of select="normalize-space(tei:doc/tei:TEI/tei:teiHeader//tei:sourceDesc/tei:bibl/tei:title/text())" />
+      </item>
+    </xsl:for-each>
+  </xsl:variable>
 
   <!-- calculate tagUsages in component files -->
   <xsl:variable name="tagUsages">
@@ -192,6 +201,7 @@
           <xsl:with-param name="words" select="$words/tei:item[@n = $this]" />
           <xsl:with-param name="tagUsages" select="$tagUsages/tei:item[@n = $this]" />
           <xsl:with-param name="date" select="$dates/tei:item[@n = $this]/text()" />
+          <xsl:with-param name="title" select="$titles/tei:item[@n = $this]" />
         </xsl:apply-templates>
       </xsl:result-document>
       <xsl:message
@@ -217,6 +227,8 @@
       <xsl:apply-templates mode="root"/>
     </xsl:copy>
   </xsl:template> 
+
+  <xsl:template mode="root" match="tei:TITLE_PLACEHOLDER"/>
 
   <xsl:template mode="root" match="@*">
     <xsl:copy />
@@ -260,14 +272,27 @@
     <xsl:param name="words" />
     <xsl:param name="tagUsages" />
     <xsl:param name="date" />
+    <xsl:param name="title" />
     <xsl:copy>
       <xsl:apply-templates mode="comp" select="@*" />
       <xsl:apply-templates mode="comp">
         <xsl:with-param name="words" select="$words" />
         <xsl:with-param name="tagUsages" select="$tagUsages" />
         <xsl:with-param name="date" select="$date" />
+        <xsl:with-param name="title" select="$title" />
       </xsl:apply-templates>
     </xsl:copy>
+  </xsl:template>
+
+  <xsl:template mode="comp" match="tei:TITLE_PLACEHOLDER">
+    <xsl:param name="words" />
+    <xsl:param name="tagUsages" />
+    <xsl:param name="date" />
+    <xsl:param name="title" />
+    <xsl:text>, </xsl:text>
+    <xsl:value-of select="$title"/>
+    <xsl:text>, </xsl:text>
+    <xsl:value-of select="$date"/>
   </xsl:template>
 
   <xsl:template mode="comp" match="@*">

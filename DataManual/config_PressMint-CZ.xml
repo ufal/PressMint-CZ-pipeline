@@ -5,11 +5,10 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title condition="root.TEI">Český korpus historických novin PressMint-CZ [PressMint]</title>
-        <title condition="root.TEI" xml:lang="en">Czech historical newspaper corpus PressMint-CZ [PressMint]</title>
-        <title condition="root.TEI.ana">Český korpus historických novin PressMint-CZ.ana [PressMint.ana]</title>
-        <title condition="root.TEI.ana" xml:lang="en">Czech historical newspaper corpus PressMint-CZ.ana [PressMint.ana]</title>
-        <title placeholder="*" condition="comp"/>
+        <title condition="TEI">Český korpus historických novin PressMint-CZ<TITLE_PLACEHOLDER xml:lang="cs"/> [PressMint]</title>
+        <title condition="TEI" xml:lang="en">Czech historical newspaper corpus PressMint-CZ<TITLE_PLACEHOLDER xml:lang="en"/> [PressMint]</title>
+        <title condition="TEI.ana">Český korpus historických novin PressMint-CZ.ana<TITLE_PLACEHOLDER xml:lang="cs"/> [PressMint.ana]</title>
+        <title condition="TEI.ana" xml:lang="en">Czech historical newspaper corpus PressMint-CZ.ana<TITLE_PLACEHOLDER xml:lang="en"/> [PressMint.ana]</title>
         <respStmt>
           <persName ref="https://orcid.org/0000-0001-7953-8783">Matyáš Kopp</persName>
           <resp xml:lang="en">TEI XML corpus encoding</resp>
@@ -51,7 +50,12 @@
         </availability>
       </publicationStmt>
       <sourceDesc>
-        <bibl placeholder="*"/>
+        <bibl placeholder="*" condition="comp"/>
+        <bibl condition="root">
+           <title type="main" xml:lang="cs">Národní knihovna České republiky</title>
+           <title type="main" xml:lang="en">National Library of the Czech Republic</title>
+           <idno type="URI" subtype="URL">https://www.nkp.cz</idno>
+        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -63,8 +67,14 @@
         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="PressMint-taxonomy-NER.ana.xml"/>
       </classDecl>
       <appInfo condition="root.TEI.ana">
-        <application ident="UDPipe" version="2"/>
-        <application ident="NameTag" version="3"/>
+        <application ident="UDPipe" version="2">
+          <label>UDPipe 2 (czech-pdt-ud-2.15-241121 model)</label>
+          <desc xml:lang="en">POS tagging and lemmatization done with UDPipe 2 (<ref target="http://ufal.mff.cuni.cz/udpipe/2">http://ufal.mff.cuni.cz/udpipe/2</ref>) with czech-pdt-ud-2.15-241121 model</desc>
+        </application>
+        <application ident="NameTag" version="3">
+          <label>NameTag 3 (nametag3-czech-cnec2.0-240830 model)</label>
+          <desc xml:lang="en">Name entity recognition done with NameTag 3 (<ref target="http://ufal.mff.cuni.cz/nametag/3">http://ufal.mff.cuni.cz/nametag/3</ref>) with czech-cnec2.0-200831 model (<ref target="http://hdl.handle.net/11234/1-3443">http://hdl.handle.net/11234/1-3443</ref>). Posprocessing: nested named entities have been merged into four categories (PER, LOC, ORG, MISC).</desc>
+        </application>
       </appInfo>
     </encodingDesc>
   </teiHeader>
