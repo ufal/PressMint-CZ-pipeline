@@ -118,7 +118,10 @@ sub save_xml {
   open my $fh, '>:raw', $file_path
     or die "ERROR: Cannot open $file_path for writing: $!";
   $pp->pretty_print($dom);
-  print $fh $dom->toString(1);
+  my $raw = $dom->toString(1);
+  $raw =~ s/( *<msIdentifier)/<!-- NOT SUPPORTED ELEMENT\n\1/;
+  $raw =~ s/(<\/msIdentifier>)/\1\nNOT SUPPORTED ELEMENT -->/;
+  print $fh $raw;
   close $fh;
 
   print "INFO: Saved XML to $file_path\n";

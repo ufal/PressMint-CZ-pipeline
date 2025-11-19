@@ -34,7 +34,7 @@ sub convert2header{
   my ($titleStmt) = $xpc->findnodes('//tei:titleStmt');
   my ($bibl) = $xpc->findnodes('//tei:bibl');
   my $jtitle = $bibl->addNewChild(undef,'title');
-  $jtitle->setAttribute('level', 'a');
+  $jtitle->setAttribute('level', 'j');
   $jtitle->appendText(PressMintCZ::get_journal_name($json));
   $bibl->addNewChild(undef,'date')->setAttribute('when', $opts{date});
 

@@ -315,6 +315,10 @@
     </xsl:call-template>
   </xsl:template>
 
+  <xsl:template match="comment()"  mode="comp">
+    <xsl:copy/>
+  </xsl:template>
+
   <!-- merge header and text content -->
   <xsl:template mode="insertHeader" match="tei:TEI | tei:teiCorpus">
     <xsl:param name="teiHeader" />
@@ -336,7 +340,7 @@
       <xsl:copy-of select="./*" />
     </xsl:copy>
   </xsl:template>
-
+  
   <xsl:template match="tei:*|xi:include" mode="insertConfig">
     <xsl:param name="elem"/>
     <xsl:param name="fileType"/>
@@ -366,7 +370,7 @@
               <xsl:apply-templates
                 select="$elem/*[local-name() = $name]/@*" mode="insertConfig" />
               <xsl:apply-templates
-                select="*" mode="insertConfig">
+                select="* | comment() | text()" mode="insertConfig">
                 <xsl:with-param name="elem" select="$elem/*[local-name() = $name][1]" /> <!-- only one element is expected-->
                 <xsl:with-param name="fileType" select="$fileType" />
               </xsl:apply-templates>
@@ -403,6 +407,8 @@
   <xsl:template match="text()" mode="insertConfig">
     <xsl:copy />
   </xsl:template>
+
+  
 
   <xsl:template name="add-tagsDecl">
     <xsl:param name="tagUsages" />
