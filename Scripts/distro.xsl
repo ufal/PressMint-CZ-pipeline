@@ -370,7 +370,6 @@
     <xsl:param name="elem"/>
     <xsl:param name="fileType"/>
     <xsl:variable name="name" select="local-name()" />
-    <xsl:message><xsl:value-of select="$fileType"/>: <xsl:copy-of select="$elem"/><xsl:text> </xsl:text><xsl:value-of select="$name"/></xsl:message>
     <xsl:choose>
       <xsl:when test="@condition
                       and
@@ -382,9 +381,7 @@
         <!-- does not meet the condition -->
          <xsl:message select="concat('info:','does not meet condition')"/>
       </xsl:when>
-<!-- deprecated: -->
       <xsl:when test="$elem and $elem/*[local-name() = $name]">
-        <xsl:message>DEPRECATED ???</xsl:message>
         <xsl:choose>
           <xsl:when test="@placeholder"> <!-- config contains only placeholder -->
             <xsl:copy-of select="$elem/*[local-name() = $name]" />
@@ -413,7 +410,6 @@
                            or $fileType = @condition
                            or concat($fileType,'.',$type) = @condition
                            )">
-          <xsl:message>only in config ???</xsl:message>
           <xsl:copy>
             <xsl:apply-templates select="@*" mode="insertConfig" />
             <xsl:apply-templates select="* | comment() | text()" mode="insertConfig">
