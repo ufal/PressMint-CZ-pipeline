@@ -251,7 +251,22 @@
     <xsl:result-document href="{$outTaxonomy}">
       <xsl:copy-of select="$taxonomy"/>
     </xsl:result-document>
+  </xsl:template>
 
+  <xsl:template mode="root" match="tei:teiCorpus">
+    <xsl:copy>
+      <xsl:apply-templates select="@*" mode="root"/>
+      <xsl:apply-templates select="tei:*" mode="root"/>
+      <xsl:for-each select="xi:include">
+        <xsl:sort select="@href"/>
+        <xsl:variable name="href" select="@href"/>
+        <xsl:variable name="new-href" select="$docs/tei:item[./tei:xi-orig/text() = $href]/tei:xi-new/text()"/>
+        <xsl:message select="concat('INFO: Fixing xi:include: ',$href,' ',$new-href)"/>
+        <xsl:copy>
+          <xsl:attribute name="href" select="$new-href"/>
+        </xsl:copy>
+      </xsl:for-each>
+    </xsl:copy>
   </xsl:template>
 
 
