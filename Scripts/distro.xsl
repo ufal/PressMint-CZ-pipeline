@@ -282,7 +282,21 @@
     </xsl:call-template>
   </xsl:template>
 
+  <!-- REMOVE CONTENT from comp-->
+  <xsl:template mode="comp" match="tei:linkGrp[parent::tei:s]"/> <!-- removing syntax -->
+  <xsl:template mode="comp" match="@ana[parent::tei:w or parent::tei:pc]"/> <!-- pdt tagset -->
+  <!-- removing cnec: -->
+  <xsl:template mode="comp" match="tei:name[@type]">
+    <xsl:copy>
+      <xsl:apply-templates mode="comp" select="@*[local-name() != 'ana']"/>
+      <xsl:apply-templates mode="comp"/>
+    </xsl:copy>
+  </xsl:template>
+  <xsl:template mode="comp" match="tei:name[not(@type) and @ana] | tei:date[@ana] | tei:email[@ana] | tei:num[@ana] | tei:ref[@ana] | tei:time[@ana] | tei:unit[@ana] ">
+    <xsl:apply-templates mode="comp"/>
+  </xsl:template>
   <!-- component -->
+
   <xsl:template mode="comp" match="*">
     <xsl:param name="words" />
     <xsl:param name="tagUsages" />
