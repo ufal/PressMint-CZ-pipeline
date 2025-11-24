@@ -77,5 +77,13 @@
         </application>
       </appInfo>
     </encodingDesc>
+    <profileDesc condition="root">
+      <langUsage>
+        <language ident="cs" xml:lang="cs">čeština</language>
+        <language ident="en" xml:lang="cs">angličtina</language>
+        <language ident="cs" xml:lang="en">Czech</language>
+        <language ident="en" xml:lang="en">English</language>
+      </langUsage>
+    </profileDesc>
   </teiHeader>
 </config>
