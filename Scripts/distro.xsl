@@ -64,12 +64,15 @@
           <xsl:value-of select="concat($inComponentDir, '/', @href)" />
         </url-orig>
         <doc>
-          <xsl:apply-templates select="document(concat($inComponentDir, '/', @href))"
-            mode="insertHeader">
-            <xsl:with-param name="teiHeader"
-              select="document(concat($inHeaderDir, '/', @href))/tei:TEI/tei:teiHeader" />
-            <xsl:with-param name="fileType">comp</xsl:with-param>
-          </xsl:apply-templates>
+          <xsl:variable name="docWithHeader">
+            <xsl:apply-templates select="document(concat($inComponentDir, '/', @href))"
+              mode="insertHeader">
+              <xsl:with-param name="teiHeader"
+                select="document(concat($inHeaderDir, '/', @href))/tei:TEI/tei:teiHeader" />
+              <xsl:with-param name="fileType">comp</xsl:with-param>
+            </xsl:apply-templates>
+          </xsl:variable>
+          <xsl:apply-templates mode="compCleanup" select="$docWithHeader"/>
         </doc>
         <url-new>
           <xsl:value-of select="concat($outDir, '/')" />
@@ -283,17 +286,29 @@
   </xsl:template>
 
   <!-- REMOVE CONTENT from comp-->
-  <xsl:template mode="comp" match="tei:linkGrp[parent::tei:s]"/> <!-- removing syntax -->
-  <xsl:template mode="comp" match="@ana[parent::tei:w or parent::tei:pc]"/> <!-- pdt tagset -->
+  <xsl:template mode="compCleanup" match="tei:linkGrp[parent::tei:s]"/> <!-- removing syntax -->
+  <xsl:template mode="compCleanup" match="@ana[parent::tei:w or parent::tei:pc]"/> <!-- pdt tagset -->
   <!-- removing cnec: -->
-  <xsl:template mode="comp" match="tei:name[@type]">
+  <xsl:template mode="compCleanup" match="tei:name[@type]">
     <xsl:copy>
-      <xsl:apply-templates mode="comp" select="@*[local-name() != 'ana']"/>
-      <xsl:apply-templates mode="comp"/>
+      <xsl:apply-templates mode="compCleanup" select="@*[local-name() != 'ana']"/>
+      <xsl:apply-templates mode="compCleanup"/>
     </xsl:copy>
   </xsl:template>
-  <xsl:template mode="comp" match="tei:name[not(@type) and @ana] | tei:date[@ana] | tei:email[@ana] | tei:num[@ana] | tei:ref[@ana] | tei:time[@ana] | tei:unit[@ana] ">
-    <xsl:apply-templates mode="comp"/>
+  <xsl:template mode="compCleanup" match="tei:name[not(@type) and @ana] | tei:date[@ana] | tei:email[@ana] | tei:num[@ana] | tei:ref[@ana] | tei:time[@ana] | tei:unit[@ana] ">
+    <xsl:apply-templates mode="compCleanup"/>
+  </xsl:template>
+  <xsl:template mode="compCleanup" match="*">
+    <xsl:copy>
+      <xsl:apply-templates mode="compCleanup" select="@*" />
+      <xsl:apply-templates mode="compCleanup"/>
+    </xsl:copy>
+  </xsl:template>
+  <xsl:template mode="compCleanup" match="@*">
+    <xsl:copy />
+  </xsl:template>
+  <xsl:template match="comment()"  mode="compCleanup">
+    <xsl:copy/>
   </xsl:template>
   <!-- component -->
 
