@@ -233,6 +233,12 @@
 
   <xsl:template mode="root" match="tei:TITLE_PLACEHOLDER"/>
 
+  <xsl:template mode="root" match="tei:teiCorpus/@xml:id">
+    <xsl:attribute name="xml:id">
+      <xsl:value-of select="concat(.,$suff)" />
+    </xsl:attribute>
+  </xsl:template>
+
   <xsl:template mode="root" match="@*">
     <xsl:copy />
   </xsl:template>

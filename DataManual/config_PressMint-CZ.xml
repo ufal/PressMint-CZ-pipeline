@@ -7,8 +7,8 @@
       <titleStmt>
         <title condition="TEI">Český korpus historických novin PressMint-CZ<TITLE_PLACEHOLDER xml:lang="cs"/> [PressMint]</title>
         <title condition="TEI" xml:lang="en">Czech historical newspaper corpus PressMint-CZ<TITLE_PLACEHOLDER xml:lang="en"/> [PressMint]</title>
-        <title condition="TEI.ana">Český korpus historických novin PressMint-CZ.ana<TITLE_PLACEHOLDER xml:lang="cs"/> [PressMint.ana]</title>
-        <title condition="TEI.ana" xml:lang="en">Czech historical newspaper corpus PressMint-CZ.ana<TITLE_PLACEHOLDER xml:lang="en"/> [PressMint.ana]</title>
+        <title condition="TEI.ana">Český korpus historických novin PressMint-CZ<TITLE_PLACEHOLDER xml:lang="cs"/> [PressMint.ana]</title>
+        <title condition="TEI.ana" xml:lang="en">Czech historical newspaper corpus PressMint-CZ<TITLE_PLACEHOLDER xml:lang="en"/> [PressMint.ana]</title>
         <respStmt>
           <persName ref="https://orcid.org/0000-0001-7953-8783">Matyáš Kopp</persName>
           <resp xml:lang="en">TEI XML corpus encoding</resp>
