@@ -68,7 +68,7 @@
       </classDecl>
       <appInfo condition="root.TEI.ana">
         <application ident="UDPipe" version="2">
-          <label>UDPipe 2 (czech-pdt-ud-2.15-241121 model)</label>
+          <label>UDPipe 2 (czech-pdtc-ud-2.17-251125 model)</label>
           <desc xml:lang="en">POS tagging and lemmatization done with UDPipe 2 (<ref target="http://ufal.mff.cuni.cz/udpipe/2">http://ufal.mff.cuni.cz/udpipe/2</ref>) with czech-pdt-ud-2.15-241121 model</desc>
         </application>
         <application ident="NameTag" version="3">

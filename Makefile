@@ -280,7 +280,7 @@ teiText2teiTextAnaUD: $(UDPIPE)
 	find $(TEItext_cleaned) -type f -printf "%P\n" |sort > $(UDPIPE).fl
 	$(PERL) -I Scripts/resources/lib Scripts/resources/udpipe2/udpipe2.pl --colon2underscore \
 	                               $(TOKEN) \
-	                               --model "cs:czech-pdt-ud-2.15-241121" \
+	                               --model "cs:czech-pdtc-ud-2.17-251125" \
 	                               --elements "p,head" \
 	                               --debug \
 																 --use-xpos \

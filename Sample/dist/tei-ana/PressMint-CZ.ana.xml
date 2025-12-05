@@ -62,8 +62,8 @@
                <tagUsage gi="name" occurs="431"/>
                <tagUsage gi="p" occurs="118"/>
                <tagUsage gi="pb" occurs="4"/>
-               <tagUsage gi="pc" occurs="2417"/>
-               <tagUsage gi="s" occurs="659"/>
+               <tagUsage gi="pc" occurs="2425"/>
+               <tagUsage gi="s" occurs="613"/>
                <tagUsage gi="text" occurs="1"/>
                <tagUsage gi="w" occurs="10208"/>
             </namespace>
@@ -74,7 +74,7 @@
          </classDecl>
          <appInfo>
             <application ident="UDPipe" version="2">
-               <label>UDPipe 2 (czech-pdt-ud-2.15-241121 model)</label>
+               <label>UDPipe 2 (czech-pdtc-ud-2.17-251125 model)</label>
                <desc xml:lang="en">POS tagging and lemmatization done with UDPipe 2 (<ref target="http://ufal.mff.cuni.cz/udpipe/2">http://ufal.mff.cuni.cz/udpipe/2</ref>) with czech-pdt-ud-2.15-241121 model</desc>
             </application>
             <application ident="NameTag" version="3">
