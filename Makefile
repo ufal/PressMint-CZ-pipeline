@@ -1,5 +1,12 @@
 .DEFAULT_GOAL := help
 
+VENV_DIR=env
+export PATH := $(abspath $(VENV_DIR)/bin):$(PATH)
+
+-include .env
+export
+
+
 PERLBREW_ROOT=~/perl5/perlbrew
 PERL := $(shell test -n "$(USE_PERL)" && echo -n "$(PERLBREW_ROOT)/perls/$(USE_PERL)/bin/perl" || echo -n "perl")
 
@@ -19,6 +26,7 @@ DIST := ${DATA}dist
 
 JSONissues := ${WORK}/json-issues
 TEIheader := ${WORK}/tei-header
+OCR := ${WORK}/OCR
 TEItext := ${WORK}/tei-text
 TEItext_cleaned := ${WORK}/tei-text-cleaned
 TEIANAtext := ${WORK}/tei-ana-text
@@ -224,9 +232,9 @@ chart-periodicalvolumes:
 
 ### process data
 
-$(JSONissues) $(TEI) $(TEIANA) $(TEItext) $(TEItext_cleaned) $(TEIheader) $(TEIANAtext) $(UDPIPE) $(NAMETAG) $(LOGDIR):
+$(JSONissues) $(OCR) $(TEI) $(TEIANA) $(TEItext) $(TEItext_cleaned) $(TEIheader) $(TEIANAtext) $(UDPIPE) $(NAMETAG) $(LOGDIR):
 	mkdir -p $@
-# merge isses and page json files
+# merge issues and page json files
 
 inputJsonMerge: $(IN)/periodical/$(UUID_PATH).json $(JSONissues)
 ifeq ($(UUID_PATH_LEVEL),1)
@@ -243,15 +251,37 @@ ifeq ($(UUID_PATH_LEVEL),1)
 	  fi ;\
 	done
 else
-	@echo "ERROR: invalid UUID_PATH level\n"
+	@echo "ERROR: invalid UUID_PATH level - expecting volume level: periodical-uuid/volume-uuid\n"
 endif
 
 
+# original images to pageXML
+
+inputImg2pageXML: $(IN)/periodical/$(UUID_PATH).json $(OCR)
+	$(PERL) -I Scripts/lib Scripts/runOCR.pl \
+										 --input-file-suffix ".jpg" \
+										 --input-img-dir $(IN)/periodical \
+										 --input-base-dir $(JSONissues) \
+										 --input-uuid-path "$(UUID_PATH)" \
+										 --output-dir $(OCR)
+# REMOVE:
+	@echo $(IN)/periodical/$(UUID_PATH).json
+	@echo $(JSONissues)
+	@echo
+	@echo ./env/bin/python3 ./pero-ocr/user_scripts/parse_folder.py \
+	    --config Models/pero_eu_cz_print_newspapers_2022-09-26/config_cpu.ini \
+	    --device cpu \
+			--output-render-order \
+	    --input-image-path $(IN)/periodical/$(UUID_PATH)/ \
+	    --output-xml-path $(OCR)/OUTPUT_XML \
+	    --output-render-path $(OCR)/OUTPUT_RENDER \
+	    --output-line-path $(OCR)/OUTPUT_LINE \
+	    --output-logit-path $(OCR)/OUTPUT_LOGIT \
+	    --output-alto-path $(OCR)/OUTPUT_ALTO \
+	    --output-transcriptions-file-path $(OCR)/OUTPUT_TRANSCRIPTIONS_FILE
 
 
-
-
-# original text to TEI/text
+# [DEPRECATED] original text to TEI/text (expecting UUID_PATH_LEVEL>0)
 inputTxt2teiText: $(IN)/periodical/$(UUID_PATH).json $(TEItext)
 	$(PERL) -I Scripts/lib Scripts/text2teiText.pl \
 										 --input-format "txt" \
@@ -263,7 +293,7 @@ inputTxt2teiText: $(IN)/periodical/$(UUID_PATH).json $(TEItext)
 
 
 
-# json metadata to TEI/teiHeader
+# json metadata to TEI/teiHeader (expecting UUID_PATH_LEVEL>0)
 inputJson2teiHeader: $(IN)/periodical/$(UUID_PATH).json $(TEIheader)
 	$(PERL) -I Scripts/lib Scripts/json2teiHeader.pl \
 										 --input-base-dir $(JSONissues) \
