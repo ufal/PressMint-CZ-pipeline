@@ -33,16 +33,26 @@ sub runOCR {
   my $outDir = File::Spec->catdir($opts{"output-dir"},$opts{year},$opts{id});
   print "ID=$opts{id}\n";
   print "OUTPUT DIR=".File::Spec->catdir($opts{"output-dir"},$opts{year},$opts{id})."\n";
-  my $cmd = "./env/bin/python3 ./pero-ocr/user_scripts/parse_folder.py \\
+  my $cmd = "python3 -m pero_ocr.user_scripts.parse_folder \\
 	    --config Models/pero_eu_cz_print_newspapers_2022-09-26/config_cpu.ini \\
 	    --device cpu \\
 			--output-render-order \\
 	    --input-image-path ".File::Spec->catfile($opts{'input-img-dir'},$opts{'input-uuid-path'})." \\
 	    --output-xml-path $outDir/XML \\
-	    --output-render-path $outDir/RENDER \\
-	    --output-line-path $outDir/LINE \\
-	    --output-logit-path $outDir/LOGIT \\
-	    --output-alto-path $outDir/ALTO \\
-	    --output-transcriptions-file-path $outDir/TRANSCRIPTIONS_FILE";
+	    --output-alto-path $outDir/ALTO";
+  # 	--output-render-path $outDir/RENDER \\
+	#   --output-line-path $outDir/LINE \\
+	#   --output-logit-path $outDir/LOGIT \\
+  #   --output-transcriptions-file-path $outDir/TRANSCRIPTIONS_FILE
   `$cmd`;
+  my $pb_n = 0;
+  `echo "n\tuuid\tuuid_path\tteiid\turl" > $outDir/pages.tsv`;
+  for my $page (@pages) {
+    $pb_n++;
+    my $page_uuid = PressMintCZ::get_page_uuid($page);
+    my $pid = "$opts{id}.facs$pb_n";
+    my $purl = PressMintCZ::get_facs_url($page);
+    `echo "$pb_n\t$page_uuid\t$opts{'input-uuid-path'}/$page_uuid\t$pid\t$purl" >> $outDir/pages.tsv`;
+  }
+
 }

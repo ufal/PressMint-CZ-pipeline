@@ -6,6 +6,8 @@ export PATH := $(abspath $(VENV_DIR)/bin):$(PATH)
 -include .env
 export
 
+PERO_OCR_COMMIT := b5ced044e7f6e44f34b257ed75a527f01f91b482
+PERO_OCR_STAMP = $(VENV_DIR)/.pero-ocr-$(PERO_OCR_COMMIT)
 
 PERLBREW_ROOT=~/perl5/perlbrew
 PERL := $(shell test -n "$(USE_PERL)" && echo -n "$(PERLBREW_ROOT)/perls/$(USE_PERL)/bin/perl" || echo -n "perl")
@@ -27,6 +29,7 @@ DIST := ${DATA}dist
 JSONissues := ${WORK}/json-issues
 TEIheader := ${WORK}/tei-header
 OCR := ${WORK}/OCR
+OCRvis := ${WORK}/OCR-vis
 TEItext := ${WORK}/tei-text
 TEItext_cleaned := ${WORK}/tei-text-cleaned
 TEIANAtext := ${WORK}/tei-ana-text
@@ -257,28 +260,25 @@ endif
 
 # original images to pageXML
 
-inputImg2pageXML: $(IN)/periodical/$(UUID_PATH).json $(OCR)
+inputImg2pageXML: $(IN)/periodical/$(UUID_PATH).json $(OCR) setup-pero-ocr
 	$(PERL) -I Scripts/lib Scripts/runOCR.pl \
 										 --input-file-suffix ".jpg" \
 										 --input-img-dir $(IN)/periodical \
 										 --input-base-dir $(JSONissues) \
 										 --input-uuid-path "$(UUID_PATH)" \
 										 --output-dir $(OCR)
-# REMOVE:
-	@echo $(IN)/periodical/$(UUID_PATH).json
-	@echo $(JSONissues)
-	@echo
-	@echo ./env/bin/python3 ./pero-ocr/user_scripts/parse_folder.py \
-	    --config Models/pero_eu_cz_print_newspapers_2022-09-26/config_cpu.ini \
-	    --device cpu \
-			--output-render-order \
-	    --input-image-path $(IN)/periodical/$(UUID_PATH)/ \
-	    --output-xml-path $(OCR)/OUTPUT_XML \
-	    --output-render-path $(OCR)/OUTPUT_RENDER \
-	    --output-line-path $(OCR)/OUTPUT_LINE \
-	    --output-logit-path $(OCR)/OUTPUT_LOGIT \
-	    --output-alto-path $(OCR)/OUTPUT_ALTO \
-	    --output-transcriptions-file-path $(OCR)/OUTPUT_TRANSCRIPTIONS_FILE
+visualize-pageXML: 
+	find $(OCR) -type f -name "pages.tsv" -printf "%P\n" |sort > $(OCRvis).fl
+	for TSV in `cat $(OCRvis).fl`;\
+	do \
+		output=`echo $$TSV| sed "s/\/pages.tsv/.pdf/"`;\
+		echo "creating pdf: $(OCRvis)/$$output";\
+		python Scripts/pageXML2pdf.py \
+		  --images $(IN)/periodical \
+			--xml $$(dirname $(OCR)/$${TSV})/XML/ \
+			--tsv $(OCR)/$${TSV} \
+			--output $(OCRvis)/$$output;\
+	done
 
 
 # [DEPRECATED] original text to TEI/text (expecting UUID_PATH_LEVEL>0)
@@ -382,3 +382,16 @@ parczech: Scripts/resources
 
 Scripts/resources:
 	mkdir $@
+
+setup-python: $(VENV_DIR)
+
+$(VENV_DIR):
+	python3 -m venv $(VENV_DIR)
+	. $(VENV_DIR)/bin/activate
+
+setup-pero-ocr: setup-python $(PERO_OCR_STAMP)
+
+$(PERO_OCR_STAMP):
+	. $(VENV_DIR)/bin/activate;\
+	pip install git+https://github.com/DCGM/pero-ocr.git@$(PERO_OCR_COMMIT)
+	touch $@
