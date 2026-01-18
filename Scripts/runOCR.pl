@@ -13,6 +13,8 @@ use PressMintCZ;
 my $args = PressMintCZ::parse_args(\@ARGV, [
     'input-img-dir=s',
     'input-file-suffix=s',
+    'model=s',
+    'device=s',
 ]);
 
 
@@ -34,12 +36,12 @@ sub runOCR {
   print "ID=$opts{id}\n";
   print "OUTPUT DIR=".File::Spec->catdir($opts{"output-dir"},$opts{year},$opts{id})."\n";
   my $cmd = "python3 -m pero_ocr.user_scripts.parse_folder \\
-	    --config Models/pero_eu_cz_print_newspapers_2022-09-26/config_cpu.ini \\
-	    --device cpu \\
-			--output-render-order \\
+	    --config ".$opts{model}." \\
+	    --device ".$opts{device}." \\
 	    --input-image-path ".File::Spec->catfile($opts{'input-img-dir'},$opts{'input-uuid-path'})." \\
 	    --output-xml-path $outDir/XML \\
 	    --output-alto-path $outDir/ALTO";
+	#		--output-render-order \\
   # 	--output-render-path $outDir/RENDER \\
 	#   --output-line-path $outDir/LINE \\
 	#   --output-logit-path $outDir/LOGIT \\

@@ -6,8 +6,17 @@ export PATH := $(abspath $(VENV_DIR)/bin):$(PATH)
 -include .env
 export
 
+DEVICE = cpu
+
 PERO_OCR_COMMIT := b5ced044e7f6e44f34b257ed75a527f01f91b482
 PERO_OCR_STAMP = $(VENV_DIR)/.pero-ocr-$(PERO_OCR_COMMIT)
+
+PERO_OCR_DEVICE := $(DEVICE)
+PERO_OCR_MODEL_URL := https://nextcloud.fit.vutbr.cz/public.php/dav/files/NtAbHTNkZFpapdJ
+PERO_OCR_MODEL_NAME := pero_eu_cz_print_newspapers_2022-09-26
+PERO_OCR_MODEL_ARCHEXT := zip
+PERO_OCR_MODEL_CONFIG := Models/$(PERO_OCR_MODEL_NAME)/config_cpu.ini
+
 
 PERLBREW_ROOT=~/perl5/perlbrew
 PERL := $(shell test -n "$(USE_PERL)" && echo -n "$(PERLBREW_ROOT)/perls/$(USE_PERL)/bin/perl" || echo -n "perl")
@@ -260,12 +269,14 @@ endif
 
 # original images to pageXML
 
-inputImg2pageXML: $(IN)/periodical/$(UUID_PATH).json $(OCR) setup-pero-ocr
+inputImg2pageXML: $(IN)/periodical/$(UUID_PATH).json $(OCR) setup-pero-ocr $(PERO_OCR_MODEL_CONFIG)
 	$(PERL) -I Scripts/lib Scripts/runOCR.pl \
 										 --input-file-suffix ".jpg" \
 										 --input-img-dir $(IN)/periodical \
 										 --input-base-dir $(JSONissues) \
 										 --input-uuid-path "$(UUID_PATH)" \
+										 --model $(PERO_OCR_MODEL_CONFIG) \
+										 --device $(PERO_OCR_DEVICE) \
 										 --output-dir $(OCR)
 visualize-pageXML: 
 	find $(OCR) -type f -name "pages.tsv" -printf "%P\n" |sort > $(OCRvis).fl
@@ -395,3 +406,9 @@ $(PERO_OCR_STAMP):
 	. $(VENV_DIR)/bin/activate;\
 	pip install git+https://github.com/DCGM/pero-ocr.git@$(PERO_OCR_COMMIT)
 	touch $@
+
+
+$(PERO_OCR_MODEL_CONFIG):
+	cd Models;\
+	wget $(PERO_OCR_MODEL_URL) -O $(PERO_OCR_MODEL_NAME).$(PERO_OCR_MODEL_ARCHEXT);\
+	unzip $(PERO_OCR_MODEL_NAME).$(PERO_OCR_MODEL_ARCHEXT)
