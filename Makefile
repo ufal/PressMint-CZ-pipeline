@@ -33,12 +33,13 @@ CONFIG := $(shell pwd)/DataManual/config_PressMint-CZ.xml
 
 IN := ${DATA}source
 WORK := ${DATA}work
+VIZ := ${DATA}viz
 DIST := ${DATA}dist
 
 JSONissues := ${WORK}/json-issues
 TEIheader := ${WORK}/tei-header
 OCR := ${WORK}/OCR
-OCRvis := ${WORK}/OCR-vis
+vizOCR := ${VIZ}/ocr
 TEItext := ${WORK}/tei-text
 TEItext_cleaned := ${WORK}/tei-text-cleaned
 TEIANAtext := ${WORK}/tei-ana-text
@@ -244,7 +245,7 @@ chart-periodicalvolumes:
 
 ### process data
 
-$(JSONissues) $(OCR) $(TEI) $(TEIANA) $(TEItext) $(TEItext_cleaned) $(TEIheader) $(TEIANAtext) $(UDPIPE) $(NAMETAG) $(LOGDIR):
+$(JSONissues) $(OCR) $(vizOCR) $(TEI) $(TEIANA) $(TEItext) $(TEItext_cleaned) $(TEIheader) $(TEIANAtext) $(UDPIPE) $(NAMETAG) $(LOGDIR):
 	mkdir -p $@
 # merge issues and page json files
 
@@ -278,17 +279,17 @@ inputImg2pageXML: $(IN)/periodical/$(UUID_PATH).json $(OCR) setup-pero-ocr $(PER
 										 --model $(PERO_OCR_MODEL_CONFIG) \
 										 --device $(PERO_OCR_DEVICE) \
 										 --output-dir $(OCR)
-visualize-pageXML: 
-	find $(OCR) -type f -name "pages.tsv" -printf "%P\n" |sort > $(OCRvis).fl
-	for TSV in `cat $(OCRvis).fl`;\
+visualize-pageXML: $(vizOCR)
+	find $(OCR) -type f -name "pages.tsv" -printf "%P\n" |sort > $(vizOCR).fl
+	for TSV in `cat $(vizOCR).fl`;\
 	do \
 		output=`echo $$TSV| sed "s/\/pages.tsv/.pdf/"`;\
-		echo "creating pdf: $(OCRvis)/$$output";\
+		echo "creating pdf: $(vizOCR)/$$output";\
 		python Scripts/pageXML2pdf.py \
 		  --images $(IN)/periodical \
 			--xml $$(dirname $(OCR)/$${TSV})/XML/ \
 			--tsv $(OCR)/$${TSV} \
-			--output $(OCRvis)/$$output;\
+			--output $(vizOCR)/$$output;\
 	done
 
 
@@ -395,6 +396,8 @@ Scripts/resources:
 	mkdir $@
 
 setup-python: $(VENV_DIR)
+	. $(VENV_DIR)/bin/activate;\
+	pip install -r Scripts/requirements.txt
 
 $(VENV_DIR):
 	python3 -m venv $(VENV_DIR)
