@@ -2,8 +2,8 @@
 <PcGts xmlns="http://schema.primaresearch.org/PAGE/gts/pagecontent/2019-07-15" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schema.primaresearch.org/PAGE/gts/pagecontent/2019-07-15/pagecontent.xsd">
   <Metadata>
     <Creator>Pero OCR</Creator>
-    <Created>2026-01-16T15:09:24.121544+00:00</Created>
-    <LastChange>2026-01-16T15:09:24.121544+00:00</LastChange>
+    <Created>2026-01-18T09:45:34.287415+00:00</Created>
+    <LastChange>2026-01-18T09:45:34.287415+00:00</LastChange>
   </Metadata>
   <Page imageFilename="95c25c74-3392-4025-9cfa-10ec83f82ad4" imageWidth="3261" imageHeight="4705">
     <TextRegion id="r010" custom="{&quot;category&quot;: &quot;text&quot;}">
@@ -659,14 +659,14 @@
           <Unicode>spoň swůj wlastní parlament mělo? — To, co se dopo-</Unicode>
         </TextEquiv>
       </TextLine>
-      <TextLine id="r000-l196" index="39" custom="{&quot;heights&quot;: [32.9, 14.8], &quot;category&quot;: &quot;text&quot;}">
+      <TextLine id="r000-l195" index="39" custom="{&quot;heights&quot;: [32.9, 14.8], &quot;category&quot;: &quot;text&quot;}">
         <Coords points="1099,3642 979,3639 866,3636 751,3639 638,3639 525,3639 411,3642 299,3642 187,3639 68,3639 68,3687 186,3687 299,3689 413,3689 525,3687 638,3687 752,3687 864,3684 978,3687 1099,3689 1099,3642"/>
         <Baseline points="68,3672 186,3672 299,3675 412,3675 525,3672 638,3672 752,3672 865,3669 978,3672 1099,3675"/>
         <TextEquiv conf="1.000">
           <Unicode>sud zemským sněmem w Čechách nazýwá, jest od roku</Unicode>
         </TextEquiv>
       </TextLine>
-      <TextLine id="r000-l199" index="40" custom="{&quot;heights&quot;: [33.4, 14.9], &quot;category&quot;: &quot;text&quot;}">
+      <TextLine id="r000-l198" index="40" custom="{&quot;heights&quot;: [33.4, 14.9], &quot;category&quot;: &quot;text&quot;}">
         <Coords points="67,3741 186,3741 299,3741 412,3741 526,3741 638,3738 752,3738 865,3738 978,3738 1096,3738 1096,3690 978,3690 865,3690 752,3690 638,3690 525,3692 412,3692 299,3692 186,3692 68,3692 67,3741"/>
         <Baseline points="67,3726 186,3726 299,3726 412,3726 525,3726 638,3723 752,3723 865,3723 978,3723 1096,3723"/>
         <TextEquiv conf="1.000">
@@ -1151,7 +1151,7 @@
           <Unicode>obležení. 5 osob nesmí pohromadě státi, zatýká se na</Unicode>
         </TextEquiv>
       </TextLine>
-      <TextLine id="r005-l190" index="5" custom="{&quot;heights&quot;: [34.5, 15.5], &quot;category&quot;: &quot;text&quot;}">
+      <TextLine id="r005-l189" index="5" custom="{&quot;heights&quot;: [34.5, 15.5], &quot;category&quot;: &quot;text&quot;}">
         <Coords points="1123,3585 1242,3585 1355,3585 1468,3585 1581,3585 1697,3588 1810,3588 1924,3590 2037,3588 2158,3585 2157,3535 2036,3538 1923,3540 1811,3538 1697,3538 1582,3535 1468,3535 1355,3535 1242,3535 1123,3535 1123,3585"/>
         <Baseline points="1123,3570 1242,3570 1355,3570 1468,3570 1581,3570 1697,3572 1810,3572 1923,3575 2037,3572 2158,3570"/>
         <TextEquiv conf="1.000">
@@ -1619,7 +1619,7 @@
           <Unicode>Národy ewropejské probudili a ozwali se o ústawy</Unicode>
         </TextEquiv>
       </TextLine>
-      <TextLine id="r013-l189" index="51" custom="{&quot;heights&quot;: [34.2, 15.2], &quot;category&quot;: &quot;text&quot;}">
+      <TextLine id="r013-l190" index="51" custom="{&quot;heights&quot;: [34.2, 15.2], &quot;category&quot;: &quot;text&quot;}">
         <Coords points="2180,3585 2293,3585 2406,3585 2519,3585 2632,3582 2745,3582 2858,3582 2971,3585 3085,3587 3203,3585 3202,3535 3084,3538 2972,3535 2859,3533 2745,3533 2632,3533 2518,3535 2406,3535 2293,3535 2180,3535 2180,3585"/>
         <Baseline points="2180,3570 2293,3570 2406,3570 2519,3570 2632,3567 2745,3567 2858,3567 2971,3570 3085,3572 3203,3570"/>
         <TextEquiv conf="1.000">
@@ -1633,14 +1633,14 @@
           <Unicode>cegowině a w Bulharsku? Po čtyrech i wíce stoletích</Unicode>
         </TextEquiv>
       </TextLine>
-      <TextLine id="r013-l195" index="53" custom="{&quot;heights&quot;: [33.5, 15.3], &quot;category&quot;: &quot;text&quot;}">
+      <TextLine id="r013-l196" index="53" custom="{&quot;heights&quot;: [33.5, 15.3], &quot;category&quot;: &quot;text&quot;}">
         <Coords points="3204,3638 3087,3638 2973,3641 2860,3644 2748,3644 2636,3638 2522,3638 2408,3638 2295,3638 2179,3638 2179,3687 2295,3687 2408,3687 2522,3687 2634,3687 2748,3693 2861,3693 2975,3690 3087,3687 3204,3687 3204,3638"/>
         <Baseline points="2179,3672 2295,3672 2408,3672 2522,3672 2635,3672 2748,3677 2861,3677 2974,3675 3087,3672 3204,3672"/>
         <TextEquiv conf="1.000">
           <Unicode>zdali swrhne těžké jarmo turecké? Jako že tento národ</Unicode>
         </TextEquiv>
       </TextLine>
-      <TextLine id="r013-l198" index="54" custom="{&quot;heights&quot;: [32.9, 15.3], &quot;category&quot;: &quot;text&quot;}">
+      <TextLine id="r013-l199" index="54" custom="{&quot;heights&quot;: [32.9, 15.3], &quot;category&quot;: &quot;text&quot;}">
         <Coords points="2177,3741 2293,3741 2406,3741 2518,3738 2632,3741 2745,3738 2858,3738 2971,3741 3084,3744 3203,3746 3204,3698 3085,3696 2972,3693 2859,3690 2745,3690 2631,3693 2520,3690 2405,3693 2293,3693 2178,3693 2177,3741"/>
         <Baseline points="2177,3726 2293,3726 2406,3726 2519,3723 2632,3726 2745,3723 2858,3723 2971,3726 3085,3728 3203,3731"/>
         <TextEquiv conf="1.000">
