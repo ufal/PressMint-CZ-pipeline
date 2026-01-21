@@ -17,6 +17,8 @@ PERO_OCR_MODEL_NAME := pero_eu_cz_print_newspapers_2022-09-26
 PERO_OCR_MODEL_ARCHEXT := zip
 PERO_OCR_MODEL_CONFIG := Models/$(PERO_OCR_MODEL_NAME)/config_cpu.ini
 
+YOLO_MODEL := Models/textbite/yolo-m-1200.pt
+
 
 PERLBREW_ROOT=~/perl5/perlbrew
 PERL := $(shell test -n "$(USE_PERL)" && echo -n "$(PERLBREW_ROOT)/perls/$(USE_PERL)/bin/perl" || echo -n "perl")
@@ -40,6 +42,7 @@ JSONissues := ${WORK}/json-issues
 TEIheader := ${WORK}/tei-header
 OCR := ${WORK}/OCR
 vizOCR := ${VIZ}/ocr
+imageRegions := ${WORK}/imageRegions
 TEItext := ${WORK}/tei-text
 TEItext_cleaned := ${WORK}/tei-text-cleaned
 TEIANAtext := ${WORK}/tei-ana-text
@@ -245,7 +248,7 @@ chart-periodicalvolumes:
 
 ### process data
 
-$(JSONissues) $(OCR) $(vizOCR) $(TEI) $(TEIANA) $(TEItext) $(TEItext_cleaned) $(TEIheader) $(TEIANAtext) $(UDPIPE) $(NAMETAG) $(LOGDIR):
+$(JSONissues) $(OCR) $(vizOCR) $(imageRegions) $(TEI) $(TEIANA) $(TEItext) $(TEItext_cleaned) $(TEIheader) $(TEIANAtext) $(UDPIPE) $(NAMETAG) $(LOGDIR):
 	mkdir -p $@
 # merge issues and page json files
 
@@ -292,6 +295,14 @@ visualize-pageXML: $(vizOCR)
 			--output $(vizOCR)/$$output;\
 	done
 
+inputImg2imageRegions: $(IN)/periodical/$(UUID_PATH).json $(imageRegions) $(YOLO_MODEL)
+	$(PERL) -I Scripts/lib Scripts/runImageRegionsDetection.pl \
+										 --input-img-dir $(IN)/periodical \
+										 --input-base-dir $(JSONissues) \
+										 --input-uuid-path "$(UUID_PATH)" \
+										 --model $(YOLO_MODEL) \
+										 --device $(DEVICE) \
+										 --output-dir $(imageRegions)
 
 # [DEPRECATED] original text to TEI/text (expecting UUID_PATH_LEVEL>0)
 inputTxt2teiText: $(IN)/periodical/$(UUID_PATH).json $(TEItext)
