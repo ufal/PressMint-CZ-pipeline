@@ -2,6 +2,7 @@ import argparse
 import xml.etree.ElementTree as ET
 from PIL import Image, ImageDraw
 from pathlib import Path
+import json
 
 
 
@@ -18,14 +19,18 @@ PAGE_NS = {
 STROKE_WIDTH = 3
 
 COLORS = {
-    "TextRegion": (255, 0, 0, 180),   # PAGE
+    # PAGE
+    "TextRegion": (255, 0, 0, 180),   
     "TextLine": (0, 255, 0, 180),
-
-    "TextBlock": (0, 0, 255, 180),    # ALTO
+    # ALTO
+    "TextBlock": (0, 0, 255, 180),    
     "AltoTextLine": (255, 165, 0, 180),
     "AltoString": (255, 165, 0, 100),
     "AltoSP": (165, 0, 255, 255),
-
+    # JSONL (by class_name)
+    "title": (255, 0, 255, 100),
+    "text": (0, 255, 255, 100),
+    "default": (255, 255, 0, 100),
 }
 
 # --------------------
@@ -34,6 +39,15 @@ def parse_points_page(points_str):
     """PAGE: 'x,y x,y ...'"""
     return [tuple(map(int, p.split(","))) for p in points_str.split()]
 
+
+def rect_to_poly(x1, y1, x2, y2):
+    return [
+        (x1, y1),
+        (x2, y1),
+        (x2, y2),
+        (x1, y2),
+        (x1, y1),
+    ]
 
 def get_points_alto(elem, default=0):
     hpos = int(elem.attrib.get("HPOS", default))
@@ -134,7 +148,28 @@ def draw_alto(xml_path, output_png):
                 draw.rectangle(get_bbox_alto(sp,line.attrib.get("HEIGHT",0)), fill=COLORS["AltoSP"], width=0)
     img.save(output_png)
 
+# ---------- JSONL ----------
+def draw_jsonl(jsonl_path, output_png):
+    records = []
+    with open(jsonl_path, "r", encoding="utf8") as f:
+        for line in f:
+            records.append(json.loads(line))
 
+    img_info = records[0]["image"]
+    w, h = img_info["width"], img_info["height"]
+
+    img = Image.new("RGBA", (w, h), (0, 0, 0, 0))
+    draw = ImageDraw.Draw(img)
+
+    for r in records:
+        x1, y1, x2, y2 = map(int, r["bbox_xyxy"])
+        cls = r.get("class_name", "default")
+        color = COLORS.get(cls, COLORS["default"])
+
+        #draw.line(rect_to_poly(x1, y1, x2, y2), fill=color, width=STROKE_WIDTH)
+        draw.rectangle((x1, y1, x2, y2), fill=color, width=0)
+
+    img.save(output_png)
 
 # --------------------
 # ARGPARSE
@@ -153,9 +188,14 @@ def parse_args():
     parser.add_argument(
         "-a", "--alto",
         type=Path,
-        help="PageXML file to convert"
+        help="ALTO XML file to convert"
     )
 
+    parser.add_argument(
+        "-j", "--jsonl",
+        type=Path,
+        help="JSONL file to convert"
+    )
 
     parser.add_argument(
         "-o", "--output",
@@ -165,8 +205,12 @@ def parse_args():
     )
 
     args = parser.parse_args()
-    if args.xml and args.alto:
-        parser.error("Use only one of --xml or --alto")
+    provided = [arg for arg in [args.xml, args.alto, args.jsonl] if arg is not None]
+
+    if len(provided) == 0:
+        parser.error("You must provide exactly one of --xml, --alto, or --jsonl.")
+    elif len(provided) > 1:
+        parser.error("Only one of --xml, --alto, or --jsonl can be provided at a time.")
 
     return args
 
@@ -181,6 +225,8 @@ def main():
         draw_page(args.xml, args.output)
     elif args.alto:
         draw_alto(args.alto, args.output)
+    elif args.jsonl:
+        draw_jsonl(args.jsonl, args.output)
 
     print(f"Saved visualization to {args.output}")
 

@@ -332,6 +332,24 @@ visualize-layout-alto: $(vizLAYOUTalto)
 
 visualize-layout-regions: $(vizLAYOUTregions)
 	echo "TODO $@"
+	for COMP in `find $(imageRegions) -type f -name "*.jsonl" -printf "%P\n" | sed 's/.jsonl$$//'| sort`;\
+	do \
+		echo "INFO: $$COMP";\
+		mkdir -p $(vizLAYOUTregions)/$$COMP;\
+		rm $(vizLAYOUTregions)/$$COMP/*;\
+		jq -c 'select(.image.uuid != null) | [.image.uuid, @json] | @tsv' $(imageRegions)/$$COMP.jsonl \
+			| sed 's/\\t/\;/;s/^"//;s/"$$//;s/\\"/"/g' | while IFS=';' read -r uuid json; \
+			do \
+			  echo "$$json" >> "$(vizLAYOUTregions)/$$COMP/$${uuid}.jsonl";\
+			done;\
+		for PAGE in `find $(vizLAYOUTregions)/$$COMP/ -type f -name "*.jsonl" -printf "%P\n"| sed 's/.jsonl$$//'| sort`;\
+		do \
+		  python Scripts/vizRegions.py \
+		    --jsonl $(vizLAYOUTregions)/$$COMP/$${PAGE}.jsonl \
+			  --output "$^/$${COMP}/$${PAGE}.png";\
+			rm $(vizLAYOUTregions)/$$COMP/$${PAGE}.jsonl;\
+		done;\
+	done
 
 
 visualize-layout-merge: $(vizLAYOUTmerge)
@@ -339,8 +357,6 @@ visualize-layout-merge: $(vizLAYOUTmerge)
 	do \
 		echo "INFO: $^/$$COMP";\
 		mkdir -p $^/$$COMP;\
-		echo "$(OCR)/$${COMP}/pages.tsv";\
-		echo "=============";\
 		tail -n +2 "$(OCR)/$${COMP}/pages.tsv"| tr "\t" "," | while IFS=',' read -r n UUID UUID_PATH teiid url; \
 	  do\
 			echo "UUID=$${UUID}";\
@@ -348,6 +364,7 @@ visualize-layout-merge: $(vizLAYOUTmerge)
 			python Scripts/vizMerge.py \
 		    --background $(IN)/periodical/$${UUID_PATH}.jpg \
 			  --output "$^/$${COMP}/$${UUID}.jpg" \
+				$(vizLAYOUTregions)/$${COMP}/$${UUID}.png \
 				$(vizLAYOUTxml)/$${COMP}/$${UUID}.png \
 				$(vizLAYOUTalto)/$${COMP}/$${UUID}.png;\
 			done;\
