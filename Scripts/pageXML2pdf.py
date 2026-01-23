@@ -6,7 +6,7 @@ from reportlab.pdfgen import canvas
 from PIL import Image
 import xml.etree.ElementTree as ET
 from pathlib import Path
-import csv
+import json
 
 
 
@@ -45,10 +45,10 @@ def parse_args():
     )
 
     parser.add_argument(
-        "-t", "--tsv",
+        "-j", "--jsonl",
         required=True,
         type=Path,
-        help="Tsv file with page order (using uuid column to determine filename)"
+        help="JSONL file with page order (using uuid column to determine filename)"
     )
 
     parser.add_argument(
@@ -68,9 +68,9 @@ def main():
 
     Path(args.output).parent.mkdir(parents=True, exist_ok=True)
     c = canvas.Canvas(str(args.output))
-    with open(str(args.tsv), newline="", encoding="utf-8") as f:
-      reader = csv.DictReader(f, delimiter="\t")
-      for row in reader:
+    with open(str(args.jsonl), newline="", encoding="utf-8") as f:
+      for line in f:
+        row = json.loads(line)
         img_path= args.images / f"{row['uuid_path']}.jpg"
         if not img_path.exists():
             print(f"Missing IMG for "+row["uuid"]+", skipping")

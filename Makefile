@@ -297,18 +297,18 @@ inputImg2pageXML: $(IN)/periodical/$(UUID_PATH).json $(OCR) setup-pero-ocr $(PER
 										 --output-dir $(OCR)
 
 visualize-pageXML: $(vizOCR)
-	for COMP in `find $(idMapping) -type f -name "*.tsv" -printf "%P\n" | sed 's/.tsv$$//'| sort`;\
+	for COMP in `find $(idMapping) -type f -name "*.jsonl" -printf "%P\n" | sed 's/.jsonl$$//'| sort`;\
 	do \
 		echo "creating pdf: $(vizOCR)/$$output";\
 		python Scripts/pageXML2pdf.py \
 		  --images $(IN)/periodical \
 			--xml $(OCR)/$${COMP}/XML/ \
-			--tsv $(idMapping)/$${COMP}.tsv \
+			--jsonl $(idMapping)/$${COMP}.jsonl \
 			--output $(vizOCR)/$${COMP}.pdf;\
 	done
 
 visualize-layout-pageXML: $(vizLAYOUTxml)
-	for COMP in `find $(idMapping) -type f -name "*.tsv" -printf "%P\n" | sed 's/.tsv$$//'| sort`;\
+	for COMP in `find $(idMapping) -type f -name "*.jsonl" -printf "%P\n" | sed 's/.jsonl$$//'| sort`;\
 	do \
 		echo "INFO: $^/$$COMP";\
 		for PAGE in `find $(OCR)/$${COMP}/XML -type f -name "*.xml" -printf "%P\n"| sed 's/.xml$$//'| sort`;\
@@ -321,7 +321,7 @@ visualize-layout-pageXML: $(vizLAYOUTxml)
 
 
 visualize-layout-alto: $(vizLAYOUTalto) 
-	for COMP in `find $(idMapping) -type f -name "*.tsv" -printf "%P\n" | sed 's/.tsv$$//'| sort`;\
+	for COMP in `find $(idMapping) -type f -name "*.jsonl" -printf "%P\n" | sed 's/.jsonl$$//'| sort`;\
 	do \
 		echo "INFO: $^/$$COMP";\
 		for PAGE in `find $(OCR)/$${COMP}/ALTO -type f -name "*.xml" -printf "%P\n"| sed 's/.xml$$//'| sort`;\
@@ -356,11 +356,13 @@ visualize-layout-regions: $(vizLAYOUTregions)
 
 
 visualize-layout-merge: $(vizLAYOUTmerge)
-	for COMP in `find $(idMapping) -type f -name "*.tsv" -printf "%P\n" | sed 's/.tsv$$//'| sort`;\
+	for COMP in `find $(idMapping) -type f -name "*.jsonl" -printf "%P\n" | sed 's/.jsonl$$//'| sort`;\
 	do \
 		echo "INFO: $^/$$COMP";\
 		mkdir -p $^/$$COMP;\
-		tail -n +2 "$(idMapping)/$${COMP}.tsv"| tr "\t" "," | while IFS=',' read -r n UUID UUID_PATH teiid url; \
+		jq -cr 'select(.uuid != null) | [.uuid, .uuid_path] | @tsv' "$(idMapping)/$${COMP}.jsonl" \
+		  | tr "\t" ","\
+			| while IFS=',' read -r UUID UUID_PATH; \
 	  do\
 			echo "UUID=$${UUID}";\
 			echo "UUID_PATH=$${UUID_PATH}";\
@@ -386,7 +388,7 @@ inputImg2imageRegions: $(IN)/periodical/$(UUID_PATH).json $(imageRegions) $(YOLO
 
 # merge region detection and ocr output
 readingOrder:
-	find $(idMapping) -type f -name "*.tsv" -printf "%P\n" | sed 's/.tsv$$//'|sort > $(readingOrder).list
+	find $(idMapping) -type f -name "*.jsonl" -printf "%P\n" | sed 's/.jsonl$$//'|sort > $(readingOrder).list
 	cat $(readingOrder).list \
 	  | python Scripts/readingOrder.py \
 		    --ocr-dir "$(OCR)" \
