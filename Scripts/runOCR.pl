@@ -47,14 +47,4 @@ sub runOCR {
 	#   --output-logit-path $outDir/LOGIT \\
   #   --output-transcriptions-file-path $outDir/TRANSCRIPTIONS_FILE
   `$cmd`;
-  my $pb_n = 0;
-  `echo "n\tuuid\tuuid_path\tteiid\turl" > $outDir/pages.tsv`;
-  for my $page (@pages) {
-    $pb_n++;
-    my $page_uuid = PressMintCZ::get_page_uuid($page);
-    my $pid = "$opts{id}.facs$pb_n";
-    my $purl = PressMintCZ::get_facs_url($page);
-    `echo "$pb_n\t$page_uuid\t$opts{'input-uuid-path'}/$page_uuid\t$pid\t$purl" >> $outDir/pages.tsv`;
-  }
-
 }

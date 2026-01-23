@@ -39,6 +39,7 @@ VIZ := ${DATA}viz
 DIST := ${DATA}dist
 
 JSONissues := ${WORK}/json-issues
+idMapping := ${WORK}/idMapping
 TEIheader := ${WORK}/tei-header
 OCR := ${WORK}/OCR
 vizOCR := ${VIZ}/ocr
@@ -256,7 +257,7 @@ chart-periodicalvolumes:
 
 ### process data
 
-$(JSONissues) $(OCR) $(vizOCRpageXMLpdf) $(vizLAYOUTxml) $(vizLAYOUTalto) $(vizLAYOUTregions) $(vizLAYOUTmerge) $(imageRegions) $(TEI) $(TEIANA) $(TEItext) $(TEItext_cleaned) $(TEIheader) $(TEIANAtext) $(UDPIPE) $(NAMETAG) $(LOGDIR):
+$(JSONissues) $(idMapping) $(OCR) $(vizOCRpageXMLpdf) $(vizLAYOUTxml) $(vizLAYOUTalto) $(vizLAYOUTregions) $(vizLAYOUTmerge) $(imageRegions) $(TEI) $(TEIANA) $(TEItext) $(TEItext_cleaned) $(TEIheader) $(TEIANAtext) $(UDPIPE) $(NAMETAG) $(LOGDIR):
 	mkdir -p $@
 # merge issues and page json files
 
@@ -278,7 +279,11 @@ else
 	@echo "ERROR: invalid UUID_PATH level - expecting volume level: periodical-uuid/volume-uuid\n"
 endif
 
-
+input2outputMapping: $(IN)/periodical/$(UUID_PATH).json $(idMapping)
+	$(PERL) -I Scripts/lib Scripts/idMapping.pl \
+										 --input-base-dir $(JSONissues) \
+										 --input-uuid-path "$(UUID_PATH)" \
+										 --output-dir $(idMapping)
 # original images to pageXML
 
 inputImg2pageXML: $(IN)/periodical/$(UUID_PATH).json $(OCR) setup-pero-ocr $(PERO_OCR_MODEL_CONFIG)
@@ -292,20 +297,18 @@ inputImg2pageXML: $(IN)/periodical/$(UUID_PATH).json $(OCR) setup-pero-ocr $(PER
 										 --output-dir $(OCR)
 
 visualize-pageXML: $(vizOCR)
-	find $(OCR) -type f -name "pages.tsv" -printf "%P\n" |sort > $(vizOCR).fl
-	for TSV in `cat $(vizOCR).fl`;\
+	for COMP in `find $(idMapping) -type f -name "*.tsv" -printf "%P\n" | sed 's/.tsv$$//'| sort`;\
 	do \
-		output=`echo $$TSV| sed "s/\/pages.tsv/.pdf/"`;\
 		echo "creating pdf: $(vizOCR)/$$output";\
 		python Scripts/pageXML2pdf.py \
 		  --images $(IN)/periodical \
-			--xml $$(dirname $(OCR)/$${TSV})/XML/ \
-			--tsv $(OCR)/$${TSV} \
-			--output $(vizOCR)/$$output;\
+			--xml $(OCR)/$${COMP}/XML/ \
+			--tsv $(idMapping)/$${COMP}.tsv \
+			--output $(vizOCR)/$${COMP}.pdf;\
 	done
 
 visualize-layout-pageXML: $(vizLAYOUTxml)
-	for COMP in `find $(OCR) -type f -name "pages.tsv" -printf "%P\n" | sed 's/\/pages.tsv$$//'| sort`;\
+	for COMP in `find $(idMapping) -type f -name "*.tsv" -printf "%P\n" | sed 's/.tsv$$//'| sort`;\
 	do \
 		echo "INFO: $^/$$COMP";\
 		for PAGE in `find $(OCR)/$${COMP}/XML -type f -name "*.xml" -printf "%P\n"| sed 's/.xml$$//'| sort`;\
@@ -318,7 +321,7 @@ visualize-layout-pageXML: $(vizLAYOUTxml)
 
 
 visualize-layout-alto: $(vizLAYOUTalto) 
-	for COMP in `find $(OCR) -type f -name "pages.tsv" -printf "%P\n" | sed 's/\/pages.tsv$$//'| sort`;\
+	for COMP in `find $(idMapping) -type f -name "*.tsv" -printf "%P\n" | sed 's/.tsv$$//'| sort`;\
 	do \
 		echo "INFO: $^/$$COMP";\
 		for PAGE in `find $(OCR)/$${COMP}/ALTO -type f -name "*.xml" -printf "%P\n"| sed 's/.xml$$//'| sort`;\
@@ -353,11 +356,11 @@ visualize-layout-regions: $(vizLAYOUTregions)
 
 
 visualize-layout-merge: $(vizLAYOUTmerge)
-	for COMP in `find $(OCR) -type f -name "pages.tsv" -printf "%P\n" | sed 's/\/pages.tsv$$//'| sort`;\
+	for COMP in `find $(idMapping) -type f -name "*.tsv" -printf "%P\n" | sed 's/.tsv$$//'| sort`;\
 	do \
 		echo "INFO: $^/$$COMP";\
 		mkdir -p $^/$$COMP;\
-		tail -n +2 "$(OCR)/$${COMP}/pages.tsv"| tr "\t" "," | while IFS=',' read -r n UUID UUID_PATH teiid url; \
+		tail -n +2 "$(idMapping)/$${COMP}.tsv"| tr "\t" "," | while IFS=',' read -r n UUID UUID_PATH teiid url; \
 	  do\
 			echo "UUID=$${UUID}";\
 			echo "UUID_PATH=$${UUID_PATH}";\
@@ -383,7 +386,7 @@ inputImg2imageRegions: $(IN)/periodical/$(UUID_PATH).json $(imageRegions) $(YOLO
 
 # merge region detection and ocr output
 readingOrder:
-	find $(OCR) -type f -name "pages.tsv" -printf "%P\n" | sed 's/\/pages.tsv$$//'|sort > $(readingOrder).list
+	find $(idMapping) -type f -name "*.tsv" -printf "%P\n" | sed 's/.tsv$$//'|sort > $(readingOrder).list
 	cat $(readingOrder).list \
 	  | python Scripts/readingOrder.py \
 		    --ocr-dir "$(OCR)" \

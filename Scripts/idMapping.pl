@@ -1,0 +1,44 @@
+#!/usr/bin/env perl
+use strict;
+use warnings;
+use utf8;
+use feature 'unicode_strings';
+use open qw(:std :utf8);
+use File::Spec;
+use XML::LibXML;
+
+use PressMintCZ;
+
+
+my $args = PressMintCZ::parse_args(\@ARGV, [
+]);
+
+
+PressMintCZ::process_issues(
+  \&idMapping,
+  %$args
+);
+
+
+sub idMapping {
+  my $json = shift;
+  my %opts = @_;
+  print STDERR "INFO: Running ocr on $opts{'input-uuid-path'}\n";
+  my @pages = PressMintCZ::get_page($json);
+  $opts{id} = PressMintCZ::create_comp_id($json);
+  $opts{date} = PressMintCZ::get_comp_date($json);
+  $opts{year} = PressMintCZ::get_comp_year($json);
+  my $outDir = File::Spec->catdir($opts{"output-dir"},$opts{year});
+  my $outTSV = File::Spec->catfile($outDir,$opts{id}.".tsv");
+  my $pb_n = 0;
+  `mkdir -p $outDir`;
+  `echo "n\tuuid\tuuid_path\tteiid\turl" > $outTSV`;
+  for my $page (@pages) {
+    $pb_n++;
+    my $page_uuid = PressMintCZ::get_page_uuid($page);
+    my $pid = "$opts{id}.facs$pb_n";
+    my $purl = PressMintCZ::get_facs_url($page);
+    `echo "$pb_n\t$page_uuid\t$opts{'input-uuid-path'}/$page_uuid\t$pid\t$purl" >> $outTSV`;
+  }
+
+}
