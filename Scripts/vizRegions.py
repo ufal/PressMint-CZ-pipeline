@@ -30,7 +30,7 @@ COLORS = {
     # JSONL (by class_name)
     "title": (255, 0, 255, 100),
     "text": (0, 255, 255, 100),
-    "default": (255, 255, 0, 100),
+    "page": (255, 255, 255, 255),
 }
 
 # --------------------
@@ -158,13 +158,13 @@ def draw_jsonl(jsonl_path, output_png):
     img_info = records[0]["image"]
     w, h = img_info["width"], img_info["height"]
 
-    img = Image.new("RGBA", (w, h), (0, 0, 0, 0))
+    img = Image.new("RGBA", (w, h), COLORS["page"])
     draw = ImageDraw.Draw(img)
 
     for r in records:
         x1, y1, x2, y2 = map(int, r["bbox_xyxy"])
         cls = r.get("class_name", "default")
-        color = COLORS.get(cls, COLORS["default"])
+        color = COLORS.get(cls, (0,0,0,0))
 
         #draw.line(rect_to_poly(x1, y1, x2, y2), fill=color, width=STROKE_WIDTH)
         draw.rectangle((x1, y1, x2, y2), fill=color, width=0)
