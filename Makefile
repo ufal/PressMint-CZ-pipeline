@@ -41,7 +41,8 @@ DIST := ${DATA}dist
 JSONissues := ${WORK}/json-issues
 idMapping := ${WORK}/idMapping
 TEIheader := ${WORK}/tei-header
-OCR := ${WORK}/OCR
+xmlOCR := ${WORK}/ocrXML
+altoOCR := ${WORK}/ocrALTO
 vizOCR := ${VIZ}/ocr
 vizOCRpageXMLpdf := $(vizOCR)/pageXMLpdf
 vizLAYOUT := ${VIZ}/layout
@@ -257,7 +258,7 @@ chart-periodicalvolumes:
 
 ### process data
 
-$(JSONissues) $(idMapping) $(OCR) $(vizOCRpageXMLpdf) $(vizLAYOUTxml) $(vizLAYOUTalto) $(vizLAYOUTregions) $(vizLAYOUTmerge) $(imageRegions) $(TEI) $(TEIANA) $(TEItext) $(TEItext_cleaned) $(TEIheader) $(TEIANAtext) $(UDPIPE) $(NAMETAG) $(LOGDIR):
+$(JSONissues) $(idMapping) $(xmlOCR) $(altoOCR) $(vizOCRpageXMLpdf) $(vizLAYOUTxml) $(vizLAYOUTalto) $(vizLAYOUTregions) $(vizLAYOUTmerge) $(imageRegions) $(TEI) $(TEIANA) $(TEItext) $(TEItext_cleaned) $(TEIheader) $(TEIANAtext) $(UDPIPE) $(NAMETAG) $(LOGDIR):
 	mkdir -p $@
 # merge issues and page json files
 
@@ -286,7 +287,7 @@ input2outputMapping: $(IN)/periodical/$(UUID_PATH).json $(idMapping)
 										 --output-dir $(idMapping)
 # original images to pageXML
 
-inputImg2pageXML: $(IN)/periodical/$(UUID_PATH).json $(OCR) setup-pero-ocr $(PERO_OCR_MODEL_CONFIG)
+inputImg2pageXML: $(IN)/periodical/$(UUID_PATH).json $(xmlOCR) setup-pero-ocr $(PERO_OCR_MODEL_CONFIG)
 	$(PERL) -I Scripts/lib Scripts/runOCR.pl \
 										 --input-file-suffix ".jpg" \
 										 --input-img-dir $(IN)/periodical \
@@ -294,7 +295,8 @@ inputImg2pageXML: $(IN)/periodical/$(UUID_PATH).json $(OCR) setup-pero-ocr $(PER
 										 --input-uuid-path "$(UUID_PATH)" \
 										 --model $(PERO_OCR_MODEL_CONFIG) \
 										 --device $(PERO_OCR_DEVICE) \
-										 --output-dir $(OCR)
+										 --output-xml-dir $(xmlOCR) \
+										 --output-alto-dir $(altoOCR) \
 
 visualize-pageXML: $(vizOCR)
 	for COMP in `find $(idMapping) -type f -name "*.jsonl" -printf "%P\n" | sed 's/.jsonl$$//'| sort`;\
@@ -302,7 +304,7 @@ visualize-pageXML: $(vizOCR)
 		echo "creating pdf: $(vizOCR)/$$output";\
 		python Scripts/pageXML2pdf.py \
 		  --images $(IN)/periodical \
-			--xml $(OCR)/$${COMP}/XML/ \
+			--xml $(xmlOCR)/$${COMP}/ \
 			--jsonl $(idMapping)/$${COMP}.jsonl \
 			--output $(vizOCR)/$${COMP}.pdf;\
 	done
@@ -311,10 +313,10 @@ visualize-layout-pageXML: $(vizLAYOUTxml)
 	for COMP in `find $(idMapping) -type f -name "*.jsonl" -printf "%P\n" | sed 's/.jsonl$$//'| sort`;\
 	do \
 		echo "INFO: $^/$$COMP";\
-		for PAGE in `find $(OCR)/$${COMP}/XML -type f -name "*.xml" -printf "%P\n"| sed 's/.xml$$//'| sort`;\
+		for PAGE in `find $(xmlOCR)/$${COMP} -type f -name "*.xml" -printf "%P\n"| sed 's/.xml$$//'| sort`;\
 		do \
 		  python Scripts/vizRegions.py \
-		    --xml $(OCR)/$${COMP}/XML/$${PAGE}.xml \
+		    --xml $(xmlOCR)/$${COMP}/$${PAGE}.xml \
 			  --output "$^/$${COMP}/$${PAGE}.png";\
 			done;\
 	done
@@ -324,10 +326,10 @@ visualize-layout-alto: $(vizLAYOUTalto)
 	for COMP in `find $(idMapping) -type f -name "*.jsonl" -printf "%P\n" | sed 's/.jsonl$$//'| sort`;\
 	do \
 		echo "INFO: $^/$$COMP";\
-		for PAGE in `find $(OCR)/$${COMP}/ALTO -type f -name "*.xml" -printf "%P\n"| sed 's/.xml$$//'| sort`;\
+		for PAGE in `find $(altoOCR)/$${COMP} -type f -name "*.xml" -printf "%P\n"| sed 's/.xml$$//'| sort`;\
 		do \
 		  python Scripts/vizRegions.py \
-		    --alto $(OCR)/$${COMP}/ALTO/$${PAGE}.xml \
+		    --alto $(altoOCR)/$${COMP}/$${PAGE}.xml \
 			  --output "$^/$${COMP}/$${PAGE}.png";\
 			done;\
 	done
@@ -391,8 +393,7 @@ readingOrder:
 	find $(idMapping) -type f -name "*.jsonl" -printf "%P\n" | sed 's/.jsonl$$//'|sort > $(readingOrder).list
 	cat $(readingOrder).list \
 	  | python Scripts/readingOrder.py \
-		    --ocr-dir "$(OCR)" \
-				--ocr-xml-dir "XML" \
+		    --ocr-xml-dir "$(xmlOCR)" \
 				--regions-dir "$(imageRegions)" \
 				--output-dir "$(readingOrder)"
 

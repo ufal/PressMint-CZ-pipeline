@@ -15,6 +15,8 @@ my $args = PressMintCZ::parse_args(\@ARGV, [
     'input-file-suffix=s',
     'model=s',
     'device=s',
+    'output-xml-dir=s',
+    'output-alto-dir=s',
 ]);
 
 
@@ -32,15 +34,17 @@ sub runOCR {
   $opts{id} = PressMintCZ::create_comp_id($json);
   $opts{date} = PressMintCZ::get_comp_date($json);
   $opts{year} = PressMintCZ::get_comp_year($json);
-  my $outDir = File::Spec->catdir($opts{"output-dir"},$opts{year},$opts{id});
+  my $outXmlDir = File::Spec->catdir($opts{"output-xml-dir"},$opts{year},$opts{id});
+  my $outAltoDir = File::Spec->catdir($opts{"output-alto-dir"},$opts{year},$opts{id});
   print "ID=$opts{id}\n";
-  print "OUTPUT DIR=".File::Spec->catdir($opts{"output-dir"},$opts{year},$opts{id})."\n";
+  print "OUTPUT XML DIR=$outXmlDir\n";
+  print "OUTPUT Alto DIR=$outAltoDir\n";
   my $cmd = "python3 -m pero_ocr.user_scripts.parse_folder \\
 	    --config ".$opts{model}." \\
 	    --device ".$opts{device}." \\
 	    --input-image-path ".File::Spec->catfile($opts{'input-img-dir'},$opts{'input-uuid-path'})." \\
-	    --output-xml-path $outDir/XML \\
-	    --output-alto-path $outDir/ALTO";
+	    --output-xml-path $outXmlDir \\
+	    --output-alto-path $outAltoDir";
 	#		--output-render-order \\
   # 	--output-render-path $outDir/RENDER \\
 	#   --output-line-path $outDir/LINE \\
