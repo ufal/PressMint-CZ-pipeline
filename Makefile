@@ -395,6 +395,7 @@ readingOrder:
 	  | python Scripts/readingOrder.py \
 		    --ocr-xml-dir "$(xmlOCR)" \
 				--regions-dir "$(imageRegions)" \
+				--page-order-dir "$(idMapping)" \
 				--output-dir "$(readingOrder)"
 
 # [DEPRECATED] original text to TEI/text (expecting UUID_PATH_LEVEL>0)
