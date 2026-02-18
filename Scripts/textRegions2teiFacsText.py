@@ -42,7 +42,6 @@ def _tri(v):
     return TriState.UNKNOWN
 
 
-
 class LineAna(NamedTuple):
     parStart: TriState = TriState.UNKNOWN
     parEnd: TriState = TriState.UNKNOWN
@@ -96,7 +95,6 @@ class LineAna(NamedTuple):
           ana = LineEndCat.END
         elif nextCh.get("upper",False) and nextLine.parStart == Y:
           ana = LineEndCat.END
-        print(f"{ana}")
         return self.with_lineEnd(ana)
 
 
@@ -108,7 +106,6 @@ def get_name(el):
 def ns(r,t):
   NS=get_ns(r)
   return f"{{{NS}}}{t}"
-
 
 def parse_points_page(points_str):
     """PAGE: 'x,y x,y ...'"""
@@ -171,11 +168,13 @@ def process_task(pagesFile, pagexmlDir, regionsFile, outFile, tei_id):
 
   pages = []
   for i, meta in enumerate(pages_meta):
-    print(f"{meta}")
     pagexmlFile = pagexmlDir / f"{meta['uuid']}.xml"
     tree = ET.parse(pagexmlFile)
     pageXMLroot = tree.getroot()
+    page = pageXMLroot.find(ns(pageXMLroot,"Page"))
     pageLines = get_page_lines(pageXMLroot)
+    page_width = int(page.get("imageWidth", 0))
+    page_height = int(page.get("imageHeight", 0))
     pageRegions = [item for item in regions if item.get("image",{}).get("uuid") == meta['uuid']]
     mergedRegions, notmergedLines = merge_lines_and_regions(pageLines,pageRegions)
     for region in mergedRegions:
@@ -183,19 +182,22 @@ def process_task(pagesFile, pagexmlDir, regionsFile, outFile, tei_id):
     pages.append({
       "n" : i,
       "regions" : mergedRegions,
-      "page_meta" : meta,
+      "page_meta" : {**meta, "width": page_width, "height": page_height},
       "outlayer_lines": notmergedLines,
     })
 
-  determine_reading_order(pages)
-  tei = convert2TEI(pages, tei_id)
-  Path(outFile).parent.mkdir(parents=True, exist_ok=True)
-  tei.write(
-        outFile, 
-        encoding="utf-8", 
-        xml_declaration=True,
-        pretty_print=True
-      )
+  sorted_regions = determine_reading_order(pages)
+  tei = TEIOutput(tei_id)
+  for region in sorted_regions:
+    if not region.get("region_content", None):
+      print(f"WARN: region without content, skipping: {region['page_meta']['uuid']} {region.get('class_name','unknown')}")
+      print(dev_short(region))
+    else:
+      print(f"INFO: adding region to TEI: {region}")
+      tei.add_region(region)
+  tei.write(outFile)
+  # 
+
 
 
 def best_iou_match(textline, regions, min_iou=0.0):
@@ -269,6 +271,8 @@ def merge_lines_and_regions(pageLines,pageRegions):
       region["lines"] = []
     line["intersection_score"] = score
     region["lines"].append(line)
+    print(f"INFO matched line to region: (text conf={str(line['confidence'])}) {line['text']}")
+      
   return pageRegions, no_match
 
 
@@ -358,20 +362,104 @@ def annotate_lines_in_region(region):
     next_ch = lines_chars[i + 1] if  i + 1 < len(lines_chars) else {}
     lines[i]["ana"] = lines[i]["ana"].annotate_line_start(lch,prev_ana, prev_ch)
     lines[i]["ana"] = lines[i]["ana"].annotate_line_end(lch, next_ana, next_ch)
-    print(f"LINE: ##{lines[i]['text']}##\n\t{lch}\n\t{lines[i]['ana']}")
+    #print(f"LINE: ##{lines[i]['text']}##\n\t{lch}\n\t{lines[i]['ana']}")
 
 
+##################################
+
+
+def x_center(b):
+  return (b[0] + b[2]) / 2
+
+def y_top(b):
+  return b[1]
+
+def x_overlap(b1, b2):
+    return max(0, min(b1[2], b2[2]) - max(b1[0], b2[0]))
+
+def group_into_columns(items, min_overlap_ratio=0.3):
+  columns = []
+  for item in sorted(items, key=lambda i: i["all_bbox_xyxy"][0]):
+    x1, _, x2, _ = item["all_bbox_xyxy"]
+    w = x2 - x1
+
+    placed = False
+    for col in columns:
+        cx1, cx2 = col["x_span"]
+        overlap = max(0, min(x2, cx2) - max(x1, cx1))
+
+        if overlap / w >= min_overlap_ratio:
+          col["items"].append(item)
+          # expand column span
+          col["x_span"] = (min(cx1, x1), max(cx2, x2))
+          placed = True
+          break
+
+    if not placed:
+        columns.append({
+          "x_span": (x1, x2),
+          "items": [item],
+        })
+  return columns
 
 def determine_reading_order(pages):
   """
   Transforms pages with regions to list of regions in right order, 
   that contains information on page and column start and proper link to facimiles
 
-  ??? implement as a class ???
+  output structure:
+  [
+    {
+      "page_n": int,
+      "is_page_start": bool,
+      "page_meta": { ... page meta ... },
+      "col_n": int,
+      "is_column_start": bool,
+      "column_meta": { ... column meta ... },
+      "region_content": { ... region data ... }
+    },
+    ...
+  ]
   """
-    
+  
+  x_shift = 0
+  all_regions = []
+  for page in pages:
+    for region in page["regions"]:
+      all_regions.append({
+        "page_n": page["n"],
+        "all_bbox_xyxy": tuple(x + y for x, y in zip((x_shift, 0, x_shift, 0),tuple(region.get("bbox_xyxy", (0,0,0,0))))),
+        "is_page_start": None,
+        "page_meta": page["page_meta"],
+        "is_column_start": None,
+        "col_n": None,
+        "col_x_span": None,
+        "column_meta": None,
+        "region_content": region
+      })
+    x_shift += page["page_meta"]["width"]
 
-  print("TODO: determine_reading_order")
+  
+    #prev_region_end_pos -= (prev_page_width, 0)
+    #
+    #print(f"{page['n']}: {page['width']}x{page['height']} {page['page_meta']}\n")  
+  columns = group_into_columns(all_regions)
+  sorted_columns = sorted(columns, key=lambda c: c["x_span"][0])
+  print("============ SORTED COLUMNS ============")
+  print(dev_short(sorted_columns))
+  sorted_regions = []
+  for i, col in enumerate(sorted_columns):
+    col["items"].sort(key=lambda i: i["all_bbox_xyxy"][1])
+    for j, item in enumerate(col["items"]):
+      item["is_page_start"] = (j == 0) or (item["page_n"] != col["items"][j-1]["page_n"])
+      item["is_column_start"] = (j == 0)
+      item["col_n"] = i
+      item["col_x_span"] = col["x_span"]
+      sorted_regions.append(item)
+  print("============ SORTED REGIONS ============")
+  print(dev_short(sorted_regions))
+  
+  return sorted_regions
   
 
 # --------------------
@@ -384,9 +472,40 @@ XML_NS = "http://www.w3.org/XML/1998/namespace"
 NSMAP = {None: TEI_NS, "xml": XML_NS}
 
 
-def convert2TEI(regions, tei_id):
 
-  TEI = etree.Element(
+class TEIOutput:
+  tei_id: str
+  TEI: etree
+  texts: list = [] # nested list with pb/cb/lb
+  paragraphs: list = [] # list with paragraphs
+  surfaces: list = [] # list with surfaces 
+  surfaces_url_to_index: dict = {}
+  zones: list = [] # nested list with zones area/col/line
+  
+  paragraphs_i: int = 0
+
+  texts_pb_i: int = 0
+  texts_cb_i: int
+  texts_lb_i: int
+
+  zones_pb_i: int # area
+  zones_cb_i: int # col
+  zones_lb_i: int # line
+
+  box2attrib = staticmethod(lambda b: {
+    "ulx": str(b[0]),
+    "uly": str(b[1]),
+    "lrx": str(b[2]),
+    "lry": str(b[3]),
+  }) 
+  
+  break_no = staticmethod(lambda endType: 
+    {"break": "no"} if endType == LineEndCat.HYPHEN else {}
+  )
+
+  def __init__(self, tei_id):
+    self.tei_id = tei_id
+    self.TEI = etree.Element(
       "{%s}TEI" % TEI_NS,
       nsmap=NSMAP,
       attrib={
@@ -394,14 +513,236 @@ def convert2TEI(regions, tei_id):
         "{%s}id" % XML_NS: tei_id,
       }
     )
-  # facsimile
-  facsimile = etree.SubElement(TEI, "{%s}facsimile" % TEI_NS)
-  # text/body
-  text = etree.SubElement(TEI, "{%s}text" % TEI_NS)
-  body = etree.SubElement(text, "{%s}body" % TEI_NS)
+    # facsimile
+    self.facsimile = etree.SubElement(self.TEI, "{%s}facsimile" % TEI_NS)
+    # text/body
+    self.text = etree.SubElement(self.TEI, "{%s}text" % TEI_NS)
+    self.body = etree.SubElement(self.text, "{%s}body" % TEI_NS)
+
+    self.el_ptr = self.body
+    self.parent_el_ptr = self.body
+    self.prev_line_end_type = LineEndCat.UNKNOWN
+  
+  def add_region(self, region):
+    if region.get("is_page_start"):
+      pb = self.start_new_page(region["page_n"], region["page_meta"], self.prev_line_end_type)
+      self.el_ptr = pb
+    if region.get("is_column_start"):
+      cb = self.start_new_column(region["col_n"], self.prev_line_end_type)
+      self.lines_in_column = 0
+      self.el_ptr = cb
+    for line in region['region_content'].get('lines', []):
+      if not line.get("text", None):
+        # print(f"WARN: line without text, skipping: {line}")
+        continue
+      # insert paragraph if not present or if it begins
+      self.lines_in_column += 1
+      if self.prev_line_end_type != LineEndCat.HYPHEN:
+        if not self.el_ptr.tail:
+          self.el_ptr.tail = ""
+        self.el_ptr.tail += "\n"
+      lb = self.start_new_line(line, self.prev_line_end_type)
+      self.el_ptr = lb
+      self.insert_line_text(line)
 
 
-  return etree.ElementTree(TEI)
+
+  def start_new_page(self, page_n, page_meta, prevLineEndType=LineEndCat.UNKNOWN):
+    print(f"INFO: start page {page_n} with meta {page_meta}")
+    # whole page corresponds to a surface
+    if not page_meta.get("url","") in self.surfaces_url_to_index:
+      self.surfaces_url_to_index[page_meta["url"]] = len(self.surfaces)
+      f_pg_id = f"{self.tei_id}.f.pg{page_n}"
+      f_pg = etree.SubElement(
+        self.facsimile,
+        "{%s}surface" % TEI_NS, 
+        attrib={
+          "{%s}id" % XML_NS: f_pg_id,
+          "n": str(page_n),
+          "ulx": "0",
+          "uly": "0",
+          "lrx": str(page_meta.get("width",0)), 
+          "lry": str(page_meta.get("height",0))
+          }
+        )
+      etree.SubElement(
+        f_pg,
+        "{%s}graphic" % TEI_NS, 
+        attrib={
+          "url": page_meta["url"]
+          }
+        )
+      self.surfaces.append({
+        "element": f_pg,
+        "id": f_pg_id,
+        "areas_cnt": 0,
+        "url": page_meta["url"],
+        "width": page_meta.get("width",0),
+        "height": page_meta.get("height",0),
+      })
+
+    pb_id = f"{self.tei_id}.pb{page_n}"
+    surface = self.surfaces[self.surfaces_url_to_index[page_meta["url"]]]
+    surface["areas_cnt"] += 1
+    # create zone for area
+    f_area_id = f"{surface['id']}.a{surface['areas_cnt']}"
+    pb = etree.SubElement(
+      self.body, 
+      "{%s}pb" % TEI_NS, 
+      attrib={
+        "{%s}id" % XML_NS: pb_id,
+        **TEIOutput.break_no(prevLineEndType),
+        "n": str(page_n),
+        "facs": f"#{f_area_id}"
+        }
+      )
+    self.texts.append({
+      "element": pb,
+      "id": pb_id,
+      "childs": [],
+    })
+    self.texts_cb_i = 0
+    f_area = etree.SubElement(
+      surface["element"], 
+      "{%s}zone" % TEI_NS, 
+      attrib={
+        "{%s}id" % XML_NS: f_area_id,
+        "start": f"#{pb_id}",
+        "type": "page",
+        }
+      )
+    self.zones_pb_i = len(self.zones)
+    self.zones.append({
+      "element": f_area,
+      "id": f_area_id,
+      "cols_cnt": 0,
+      "childs": [],
+    })
+    self.zones_cb_i = 0
+    return pb
+  
+  def start_new_column(self, col_n, prevLineEndType=LineEndCat.UNKNOWN):
+    txt = self.texts[self.texts_pb_i]
+    cnt= len(txt.get("childs", []))
+    cb_id = f"{txt['id']}.cb{cnt+1}"
+    zone = self.zones[self.zones_pb_i]
+    zone["cols_cnt"] += 1
+    f_col_id = f"{zone['id']}.c{zone['cols_cnt']}"
+    cb = etree.SubElement(
+      self.parent_el_ptr, 
+      "{%s}cb" % TEI_NS, 
+      attrib={
+        "{%s}id" % XML_NS: cb_id,
+        **TEIOutput.break_no(prevLineEndType),
+        "start":"",
+        }
+      )
+    txt["childs"].append({
+      "element": cb,
+      "id": cb_id,
+      "childs": [],
+    })
+    self.texts_lb_i = 0
+    f_col = etree.SubElement(
+      zone["element"], 
+      "{%s}zone" % TEI_NS, 
+      attrib={
+        "{%s}id" % XML_NS: f_col_id,
+        "start": f"#{cb_id}",
+        "type": "column",
+        }
+      )
+    self.zones_cb_i = len(zone["childs"])
+    zone["childs"].append({
+      "element": f_col,
+      "id": f_col_id,
+      "lines_cnt": 0,
+      "childs": [],
+    })
+    self.zones_lb_i = 0
+    return cb
+  
+  def start_new_line(self, line, prevLineEndType=LineEndCat.UNKNOWN):
+    txt = self.texts[self.texts_pb_i]["childs"][self.texts_cb_i]
+    cnt = len(txt.get("childs", []))
+    lb_id = f"{txt['id']}.lb{cnt+1}"
+    zone = self.zones[self.zones_pb_i]["childs"][self.zones_cb_i]
+    zone["lines_cnt"] += 1
+    f_line_id = f"{zone['id']}.l{zone['lines_cnt']}"
+
+    lb = etree.SubElement(
+      self.parent_el_ptr, 
+      "{%s}lb" % TEI_NS, 
+      attrib={
+        "{%s}id" % XML_NS: lb_id, 
+        **TEIOutput.break_no(prevLineEndType),
+        "facs": f"#{f_line_id}",
+        }
+      )
+    self.texts_lb_i = len(txt["childs"])
+    txt["childs"].append({
+      "element": lb,
+      "id": lb_id,
+    })
+    f_line = etree.SubElement(
+      zone["element"], 
+      "{%s}zone" % TEI_NS, 
+      attrib={
+        "{%s}id" % XML_NS: f_line_id,
+        "start": f"#{lb_id}",
+        "type": "line",
+        **TEIOutput.box2attrib(line.get("bbox_xyxy", (0,0,0,0))),
+        }
+      )
+    self.zones_lb_i = len(zone["childs"])
+    zone["childs"].append({
+      "element": f_line,
+      "id": f_line_id,
+    })
+    return lb
+  
+  def insert_line_text(self, line):
+      text = line.get('text','')
+      pc_hyphen= ''
+      if line.get('ana', LineAna).lineEnd == LineEndCat.HYPHEN:
+        text = line.get('text',' ')[:-1]
+        pc_hyphen = line.get('text',' ')[-1]
+      if etree.QName(self.parent_el_ptr).localname != 'p':
+        self.p_id = f"{self.tei_id}.p{len(self.paragraphs)+1}"
+        p = etree.SubElement(self.parent_el_ptr, "{%s}p" % TEI_NS, attrib={"{%s}id" % XML_NS: self.p_id})
+        self.paragraphs.append({
+          "element": p,
+          "id": self.p_id,
+        })
+        self.parent_el_ptr = p
+        # inserting first text in paragraph
+        p.text = text
+      else:
+        # appending
+        self.el_ptr.tail = text
+      if line.get('ana', LineAna).lineEnd == LineEndCat.HYPHEN:
+        pc = etree.SubElement(self.parent_el_ptr, "{%s}pc" % TEI_NS, attrib={"force": "weak"})
+        pc.text = pc_hyphen
+        self.el_ptr = pc
+      # print(f"INFO: line text {line.get('text','')}")
+      if line.get('ana', LineAna).parEnd == Y: # paragraph end -> close paragraph
+        self.parent_el_ptr = self.parent_el_ptr.getparent()
+      self.prev_line_end_type = line.get('ana', LineAna).lineEnd
+  
+  def write(self, outFile):
+    Path(outFile).parent.mkdir(parents=True, exist_ok=True)
+    etree.ElementTree(self.TEI).write(
+        outFile, 
+        encoding="utf-8", 
+        xml_declaration=True,
+        pretty_print=True
+      )
+    print(f"INFO: output written to {outFile}")
+
+  
+
+
+
 
 # --------------------
 # DEBUG
@@ -414,6 +755,17 @@ def print_page_regions(regions):
     print(f"line cnt {len(region.get('text',[]))}")
     for line in region.get('text',[]):
       print(f"\t{line.get('text','')}")
+
+def dev_short(obj, n=1):
+    if isinstance(obj, dict):
+        return {k: dev_short(v, n) for k, v in obj.items()}
+
+    if isinstance(obj, (list, tuple)):
+        if len(obj) > n:
+            return [dev_short(v, n) for v in obj[:n]] + [f"{len(obj)-n} more..."]
+        return [dev_short(v, n) for v in obj]
+
+    return obj
 
 # --------------------
 # ARGPARSE

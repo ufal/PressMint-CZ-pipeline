@@ -52,7 +52,7 @@ vizLAYOUTregions := $(vizLAYOUT)/regions
 vizLAYOUTmerge := $(vizLAYOUT)/merged
 
 imageRegions := ${WORK}/imageRegions
-readingOrder := ${WORK}/readingOrder
+TEIFacsText := ${WORK}/teiFacsText
 TEItext := ${WORK}/tei-text
 TEItext_cleaned := ${WORK}/tei-text-cleaned
 TEIANAtext := ${WORK}/tei-ana-text
@@ -285,8 +285,8 @@ input2outputMapping: $(IN)/periodical/$(UUID_PATH).json $(idMapping)
 										 --input-base-dir $(JSONissues) \
 										 --input-uuid-path "$(UUID_PATH)" \
 										 --output-dir $(idMapping)
-# original images to pageXML
 
+# original images to pageXML
 inputImg2pageXML: $(IN)/periodical/$(UUID_PATH).json $(xmlOCR) setup-pero-ocr $(PERO_OCR_MODEL_CONFIG)
 	$(PERL) -I Scripts/lib Scripts/runOCR.pl \
 										 --input-file-suffix ".jpg" \
@@ -296,8 +296,10 @@ inputImg2pageXML: $(IN)/periodical/$(UUID_PATH).json $(xmlOCR) setup-pero-ocr $(
 										 --model $(PERO_OCR_MODEL_CONFIG) \
 										 --device $(PERO_OCR_DEVICE) \
 										 --output-xml-dir $(xmlOCR) \
-										 --output-alto-dir $(altoOCR) \
+										 --output-alto-dir $(altoOCR)
 
+
+# visualizations
 visualize-pageXML: $(vizOCR)
 	for COMP in `find $(idMapping) -type f -name "*.jsonl" -printf "%P\n" | sed 's/.jsonl$$//'| sort`;\
 	do \
@@ -377,7 +379,7 @@ visualize-layout-merge: $(vizLAYOUTmerge)
 			done;\
 	done
 
-
+# detect and clasify regions
 inputImg2imageRegions: $(IN)/periodical/$(UUID_PATH).json $(imageRegions) $(YOLO_MODEL)
 	$(PERL) -I Scripts/lib Scripts/runImageRegionsDetection.pl \
 										 --input-img-dir $(IN)/periodical \
@@ -388,15 +390,15 @@ inputImg2imageRegions: $(IN)/periodical/$(UUID_PATH).json $(imageRegions) $(YOLO
 										 --output-dir $(imageRegions)
 
 
-# merge region detection and ocr output
-readingOrder:
-	find $(idMapping) -type f -name "*.jsonl" -printf "%P\n" | sed 's/.jsonl$$//'|sort > $(readingOrder).list
-	cat $(readingOrder).list \
-	  | python Scripts/readingOrder.py \
+# merge region detection and ocr output to TEI documents
+textRegions2teiFacsText:
+	find $(idMapping) -type f -name "*.jsonl" -printf "%P\n" | sed 's/.jsonl$$//'|sort > $(TEIFacsText).list
+	cat $(TEIFacsText).list \
+	  | python Scripts/textRegions2teiFacsText.py \
 		    --ocr-xml-dir "$(xmlOCR)" \
 				--regions-dir "$(imageRegions)" \
 				--page-order-dir "$(idMapping)" \
-				--output-dir "$(readingOrder)"
+				--output-dir "$(TEIFacsText)"
 
 # [DEPRECATED] original text to TEI/text (expecting UUID_PATH_LEVEL>0)
 inputTxt2teiText: $(IN)/periodical/$(UUID_PATH).json $(TEItext)
@@ -418,6 +420,7 @@ inputJson2teiHeader: $(IN)/periodical/$(UUID_PATH).json $(TEIheader)
 										 --output-dir $(TEIheader)
 
 
+# this target should be deprecated because it removes linking between lines in text and facs
 teiText2teiTextCleaned: $(TEItext_cleaned)
 	find $(TEItext) -type f -name "*.xml"  -printf "%P\n" | xargs -I {} $(SAXON) outFile=$</{} -xsl:Scripts/remove-lb.xsl $(TEItext)/{}
 
@@ -463,7 +466,7 @@ corpus-template:
 dist-tei: $(TEI)
 	$(SAXON) -xsl:Scripts/distro.xsl \
 	    outDir=$< \
-	    inComponentDir=$(TEItext) \
+	    inComponentDir=$(TEIFacsText) \
 	    inHeaderDir=$(TEIheader) \
 	    anaDir=$(TEIANA) \
 	    inTaxonomiesDir=$(TAXONOMIES) \
