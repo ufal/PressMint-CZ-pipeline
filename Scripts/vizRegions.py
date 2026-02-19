@@ -16,7 +16,7 @@ PAGE_NS = {
     "p": "http://schema.primaresearch.org/PAGE/gts/pagecontent/2019-07-15"
 }
 
-STROKE_WIDTH = 3
+STROKE_WIDTH = 1
 
 COLORS = {
     # PAGE
@@ -49,12 +49,12 @@ def rect_to_poly(x1, y1, x2, y2):
         (x1, y1),
     ]
 
-def get_points_alto(elem, default=0):
+def get_points_alto(elem, ratio, default=0):
     hpos = int(elem.attrib.get("HPOS", default))
     vpos = int(elem.attrib.get("VPOS", default))
     width = int(elem.attrib.get("WIDTH", default))
     height = int(elem.attrib.get("HEIGHT",default))
-    return parse_points_alto(hpos, vpos, width, height)
+    return parse_points_alto(hpos * ratio, vpos * ratio, width * ratio, height * ratio)
 
 def parse_points_alto(hpos, vpos, width, height):
     """ALTO: rectangle → polygon"""
