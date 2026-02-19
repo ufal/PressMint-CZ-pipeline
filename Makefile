@@ -17,6 +17,9 @@ PERO_OCR_MODEL_NAME := pero_eu_cz_print_newspapers_2022-09-26
 PERO_OCR_MODEL_ARCHEXT := zip
 PERO_OCR_MODEL_CONFIG := Models/$(PERO_OCR_MODEL_NAME)/config_cpu.ini
 
+
+# https://nextcloud.fit.vutbr.cz/s/6jNgze6fLYXQBgq?dir=/textbite/models
+# https://nextcloud.fit.vutbr.cz/public.php/dav/files/6jNgze6fLYXQBgq/textbite/models/yolo-m-1200.pt
 YOLO_MODEL := Models/textbite/yolo-m-1200.pt
 
 
