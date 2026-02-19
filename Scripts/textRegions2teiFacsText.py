@@ -634,7 +634,7 @@ class TEIOutput:
       attrib={
         "{%s}id" % XML_NS: cb_id,
         **TEIOutput.break_no(prevLineEndType),
-        "start":"",
+        "facs": f"#{f_col_id}",
         }
       )
     txt["childs"].append({
