@@ -47,7 +47,7 @@ def main():
     ratio = min(max_dim / background.width, max_dim / background.height, 1)
     new_size = (int(background.width * ratio), int(background.height * ratio))
     background = background.resize(new_size, Image.LANCZOS)
-    background = background.convert("L")  # grayscale
+    #background = background.convert("L")  # grayscale
         
 
 
