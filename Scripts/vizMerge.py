@@ -43,6 +43,13 @@ def main():
         parser.error("--default-opacity must be between 0 and 100")
 
     background = Image.open(args.background).convert("RGBA")
+    max_dim = 1000  # downscale constant
+    ratio = min(max_dim / background.width, max_dim / background.height, 1)
+    new_size = (int(background.width * ratio), int(background.height * ratio))
+    background = background.resize(new_size, Image.LANCZOS)
+    background = background.convert("L")  # grayscale
+        
+
 
     for layer_arg in args.layers:
         try:

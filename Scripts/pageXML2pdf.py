@@ -2,11 +2,13 @@ import argparse
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.pdfbase.pdfmetrics import stringWidth
+from reportlab.lib.utils import ImageReader
 from reportlab.pdfgen import canvas
 from PIL import Image
 import xml.etree.ElementTree as ET
 from pathlib import Path
 import json
+import io
 
 
 
@@ -84,10 +86,26 @@ def main():
         # Load image
         img = Image.open(img_path)
         w, h = img.size
-
         c.setPageSize((w, h))
-        c.drawImage(str(img_path), 0, 0, w, h)
 
+        if img.mode in ("RGBA", "P"):
+          img = img.convert("RGB")
+        # Save to in-memory buffer with compression
+        max_dim = 1000  # downscale constant
+        ratio = min(max_dim / img.width, max_dim / img.height, 1)
+        new_size = (int(img.width * ratio), int(img.height * ratio))
+        img = img.resize(new_size, Image.LANCZOS)
+        img = img.convert("L")  # grayscale
+        buffer = io.BytesIO()
+        img.save(buffer, format="JPEG", quality=50, optimize=True, progressive=True)
+        buffer.seek(0)
+        img_reader = ImageReader(buffer)
+        c.drawImage(img_reader, 0, 0, w, h)
+        warning_text = "WARNING: Image downscaled to {}x{}, JPEG quality=50, grayscale".format(*new_size)
+        c.setFillColorRGB(1, 0, 0)  # red text
+        c.setFont("Helvetica", 30)
+        c.drawString(5, h-50, warning_text)
+        
         # Parse PAGE XML
         with open(xml_path, encoding="utf-8") as f:
           tree = ET.parse(f)

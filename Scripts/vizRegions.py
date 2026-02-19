@@ -68,7 +68,7 @@ def parse_points_alto(hpos, vpos, width, height):
         (x, y),
     ]
 
-def get_bbox_alto(elem,default=0):
+def get_bbox_alto(elem,ratio,default=0):
     """
     Given an ALTO element (TextLine, String, SP, etc.),
     return a bounding box suitable for PIL: (x0, y0, x1, y1)
@@ -78,10 +78,10 @@ def get_bbox_alto(elem,default=0):
     width = int(elem.attrib.get("WIDTH", default))
     height = int(elem.attrib.get("HEIGHT",default))
 
-    x0 = hpos
-    y0 = vpos
-    x1 = hpos + width
-    y1 = vpos + height
+    x0 = hpos * ratio
+    y0 = vpos * ratio
+    x1 = (hpos + width) * ratio
+    y1 = (vpos + height) * ratio
 
     return (x0, y0, x1, y1)
 
@@ -99,8 +99,11 @@ def draw_page(xml_path, output_png):
     page = root.find(f".//{ns('Page')}")
     width = int(page.attrib["imageWidth"])
     height = int(page.attrib["imageHeight"])
-
-    img = Image.new("RGBA", (width, height), (0, 0, 0, 0))
+    max_dim = 1000  # downscale constant
+    ratio = min(max_dim / width, max_dim / height, 1)
+    new_size = (int(width * ratio), int(height * ratio))
+        
+    img = Image.new("RGBA", new_size, (0, 0, 0, 0))
     draw = ImageDraw.Draw(img)
 
     for region in root.iter(ns("TextRegion")):
@@ -108,6 +111,8 @@ def draw_page(xml_path, output_png):
         if coords is None:
             continue
         pts = parse_points_page(coords.attrib["points"])
+        # Scale points to new image size
+        pts = [(int(x * ratio), int(y * ratio)) for x, y in pts]
         draw.line(pts + [pts[0]], fill=COLORS["TextRegion"], width=STROKE_WIDTH)
 
     for line in root.iter(ns("TextLine")):
@@ -115,6 +120,8 @@ def draw_page(xml_path, output_png):
         if coords is None:
             continue
         pts = parse_points_page(coords.attrib["points"])
+        # Scale points to new image size
+        pts = [(int(x * ratio), int(y * ratio)) for x, y in pts]
         draw.line(pts + [pts[0]], fill=COLORS["TextLine"], width=STROKE_WIDTH)
 
     img.save(output_png)
@@ -131,21 +138,24 @@ def draw_alto(xml_path, output_png):
     page = root.find(f".//{ns('Page')}")
     width = int(page.attrib["WIDTH"])
     height = int(page.attrib["HEIGHT"])
+    max_dim = 1000  # downscale constant
+    ratio = min(max_dim / width, max_dim / height, 1)
+    new_size = (int(width * ratio), int(height * ratio))
 
-    img = Image.new("RGBA", (width, height), (0, 0, 0, 0))
+    img = Image.new("RGBA", new_size, (0, 0, 0, 0))
     draw = ImageDraw.Draw(img)
 
     for block in root.iter(ns("TextBlock")):
-        draw.line(get_points_alto(block), fill=COLORS["TextBlock"], width=STROKE_WIDTH)
+        draw.line(get_points_alto(block,ratio), fill=COLORS["TextBlock"], width=STROKE_WIDTH)
 
         for line in block.iter(ns("TextLine")):
-            draw.line(get_points_alto(line), fill=COLORS["AltoTextLine"], width=STROKE_WIDTH)
+            draw.line(get_points_alto(line,ratio), fill=COLORS["AltoTextLine"], width=STROKE_WIDTH)
 
             for string in line.iter(ns("String")):
-                draw.rectangle(get_bbox_alto(string), fill=COLORS["AltoString"], width=0)
+                draw.rectangle(get_bbox_alto(string,ratio), fill=COLORS["AltoString"], width=0)
 
             for sp in line.iter(ns("SP")):
-                draw.rectangle(get_bbox_alto(sp,line.attrib.get("HEIGHT",0)), fill=COLORS["AltoSP"], width=0)
+                draw.rectangle(get_bbox_alto(sp,ratio,line.attrib.get("HEIGHT",0)), fill=COLORS["AltoSP"], width=0)
     img.save(output_png)
 
 # ---------- JSONL ----------
@@ -156,9 +166,11 @@ def draw_jsonl(jsonl_path, output_png):
             records.append(json.loads(line))
 
     img_info = records[0]["image"]
-    w, h = img_info["width"], img_info["height"]
-
-    img = Image.new("RGBA", (w, h), COLORS["page"])
+    width, height = img_info["width"], img_info["height"]
+    max_dim = 1000  # downscale constant
+    ratio = min(max_dim / width, max_dim / height, 1)
+    new_size = (int(width * ratio), int(height * ratio))
+    img = Image.new("RGBA", new_size, COLORS["page"])
     draw = ImageDraw.Draw(img)
 
     for r in records:
@@ -167,7 +179,7 @@ def draw_jsonl(jsonl_path, output_png):
         color = COLORS.get(cls, (0,0,0,0))
 
         #draw.line(rect_to_poly(x1, y1, x2, y2), fill=color, width=STROKE_WIDTH)
-        draw.rectangle((x1, y1, x2, y2), fill=color, width=0)
+        draw.rectangle((x1 * ratio, y1 * ratio, x2 * ratio, y2 * ratio), fill=color, width=0)
 
     img.save(output_png)
 
