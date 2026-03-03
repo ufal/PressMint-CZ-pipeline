@@ -187,8 +187,8 @@ def process_task(pagesFile, pagexmlDir, regionsFile, outFile, tei_id):
       "outlayer_lines": notmergedLines,
     })
 
-  ##sorted_regions = determine_reading_order(pages)
-  sorted_regions = use_initial_reading_order(pages)
+  sorted_regions = determine_reading_order(pages)
+  ##sorted_regions = use_initial_reading_order(pages)
   tei = TEIOutput(tei_id)
   for region in sorted_regions:
     if not region.get("region_content", None):
