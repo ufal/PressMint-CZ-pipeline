@@ -5,6 +5,7 @@ from pathlib import Path
 import json
 import xml.etree.ElementTree as ET
 from decimal import Decimal
+from scipy.spatial import ConvexHull
 import numpy as np
 from numpy.lib.stride_tricks import sliding_window_view
 
@@ -143,8 +144,8 @@ def convert_to_region_like_format(line):
   result['baseline'] = parse_points_page(line.get('Baseline',[]).get('points',""))
   polygon = parse_points_page(line.get('Coords',[]).get('points',""))
   if polygon:
-    result['bounding_polygon'] = polygon
-    result['bbox_xyxy'] = bbox_xyxy_from_points(result['bounding_polygon'])
+    result['bounding_polygon_points'] = polygon
+    result['bbox_xyxy'] = bbox_xyxy_from_points(result['bounding_polygon_points'])
   result['text'] = line.get('TextEquiv',{}).get('Unicode',"")
   result['confidence'] = Decimal(line.get('TextEquiv',{}).get('conf',0))
   return result
@@ -186,15 +187,18 @@ def process_task(pagesFile, pagexmlDir, regionsFile, outFile, tei_id):
       "outlayer_lines": notmergedLines,
     })
 
-  sorted_regions = determine_reading_order(pages)
+  ##sorted_regions = determine_reading_order(pages)
+  sorted_regions = use_initial_reading_order(pages)
   tei = TEIOutput(tei_id)
   for region in sorted_regions:
     if not region.get("region_content", None):
       print(f"WARN: region without content, skipping: {region['page_meta']['uuid']} {region.get('class_name','unknown')}")
       print(dev_short(region))
     else:
-      print(f"INFO: adding region to TEI: {region}")
+      #print(f"INFO: adding region to TEI: {region}")
+      print(f"INFO: adding region to TEI: BBOX:{region['all_pages_bbox_xyxy']} XSPAN:{region['all_pages_col_x_span']} PAGE:{region['page_n']} COL:{region['col_n']} STARTPAGE:{region['is_page_start']} STARTCOL:{region['is_column_start']} {region.get('class_name','unknown')}")
       tei.add_region(region)
+  tei.close_current_page() # important, it calculates page hull from regions, so it has to be called after all regions are added
   tei.write(outFile)
   # 
 
@@ -259,7 +263,6 @@ def horizontal_iou(a, b):
 # --------------------------
 
 def merge_lines_and_regions(pageLines,pageRegions):
-  print("====== TODO: consider reimplementation with sweeping line like algorithm  ======")
   no_match = []
   for line in pageLines:
     region, score = best_iou_match(line, pageRegions, min_iou=0.0)
@@ -377,10 +380,10 @@ def y_top(b):
 def x_overlap(b1, b2):
     return max(0, min(b1[2], b2[2]) - max(b1[0], b2[0]))
 
-def group_into_columns(items, min_overlap_ratio=0.3):
+def group_into_columns(items, min_overlap_ratio=0.1):
   columns = []
-  for item in sorted(items, key=lambda i: i["all_bbox_xyxy"][0]):
-    x1, _, x2, _ = item["all_bbox_xyxy"]
+  for item in sorted(items, key=lambda i: i["all_pages_bbox_xyxy"][0]):
+    x1, _, x2, _ = item["all_pages_bbox_xyxy"]
     w = x2 - x1
 
     placed = False
@@ -402,6 +405,25 @@ def group_into_columns(items, min_overlap_ratio=0.3):
         })
   return columns
 
+def calculate_regions_positions_in_whole_document(pages):
+  x_shift = 0
+  all_regions = []
+  for page in pages:
+    for region in page["regions"]:
+      all_regions.append({
+        "page_n": page["n"],
+        "all_pages_bbox_xyxy": tuple(x + y for x, y in zip((x_shift, 0, x_shift, 0),tuple(region.get("bbox_xyxy", (0,0,0,0))))),
+        "is_page_start": None,
+        "page_meta": page["page_meta"],
+        "is_column_start": None,
+        "col_n": None,
+        "all_pages_col_x_span": None,
+        "column_meta": None,
+        "region_content": region
+      })
+    x_shift += page["page_meta"]["width"]
+  return all_regions
+
 def determine_reading_order(pages):
   """
   Transforms pages with regions to list of regions in right order, 
@@ -421,23 +443,7 @@ def determine_reading_order(pages):
     ...
   ]
   """
-  
-  x_shift = 0
-  all_regions = []
-  for page in pages:
-    for region in page["regions"]:
-      all_regions.append({
-        "page_n": page["n"],
-        "all_bbox_xyxy": tuple(x + y for x, y in zip((x_shift, 0, x_shift, 0),tuple(region.get("bbox_xyxy", (0,0,0,0))))),
-        "is_page_start": None,
-        "page_meta": page["page_meta"],
-        "is_column_start": None,
-        "col_n": None,
-        "col_x_span": None,
-        "column_meta": None,
-        "region_content": region
-      })
-    x_shift += page["page_meta"]["width"]
+  all_regions = calculate_regions_positions_in_whole_document(pages)
 
   
     #prev_region_end_pos -= (prev_page_width, 0)
@@ -449,12 +455,12 @@ def determine_reading_order(pages):
   print(dev_short(sorted_columns))
   sorted_regions = []
   for i, col in enumerate(sorted_columns):
-    col["items"].sort(key=lambda i: i["all_bbox_xyxy"][1])
+    col["items"].sort(key=lambda i: i["all_pages_bbox_xyxy"][1])
     for j, item in enumerate(col["items"]):
       item["is_page_start"] = (j == 0) or (item["page_n"] != col["items"][j-1]["page_n"])
       item["is_column_start"] = (j == 0)
       item["col_n"] = i
-      item["col_x_span"] = col["x_span"]
+      item["all_pages_col_x_span"] = col["x_span"]
       sorted_regions.append(item)
   print("============ SORTED REGIONS ============")
   print(dev_short(sorted_regions))
@@ -462,6 +468,11 @@ def determine_reading_order(pages):
   return sorted_regions
   
 
+def use_initial_reading_order(pages):
+  sorted_regions = []
+  all_regions = calculate_regions_positions_in_whole_document(pages)
+  print("============ INITIAL REGIONS - TODO============")
+  return sorted_regions
 # --------------------
 # TEI-part output
 # --------------------
@@ -492,13 +503,70 @@ class TEIOutput:
   zones_cb_i: int # col
   zones_lb_i: int # line
 
+  zone_pb: dict = None
+  zone_cb: dict = None
+  zone_lb: dict = None
+
   box2attrib = staticmethod(lambda b: {
     "ulx": str(b[0]),
     "uly": str(b[1]),
     "lrx": str(b[2]),
     "lry": str(b[3]),
   }) 
+
+  points2attrib = staticmethod(lambda points: {
+    "points": " ".join(f"{x},{y}" for x, y in points)
+  })
+
+  merge_boxes = staticmethod(lambda childs: (
+    min(c.get("bbox_xyxy", (0,0,0,0))[0] for c in childs),
+    min(c.get("bbox_xyxy", (0,0,0,0))[1] for c in childs),
+    max(c.get("bbox_xyxy", (0,0,0,0))[2] for c in childs),
+    max(c.get("bbox_xyxy", (0,0,0,0))[3] for c in childs),
+   ))
+
   
+  hull_from_boxes = staticmethod(lambda boxes: 
+     TEIOutput.hull_from_points(np.array(
+        [ (b[0], b[1]) for b in boxes ] 
+        + [ (b[0], b[3]) for b in boxes ]
+        + [ (b[2], b[1]) for b in boxes ]
+        + [ (b[2], b[3]) for b in boxes ]
+     )) 
+   ) 
+  hull_from_points = staticmethod(lambda points:
+     points[ConvexHull(points).vertices]
+   )
+  
+  @staticmethod
+  def hull_from_zones(zones):
+    """
+    zones: list of dict
+        zone["bounding_polygon_points"] -> [(x,y), ...]  (preferred)
+        zone["bbox_xyxy"] -> [x1,y1,x2,y2]  (fallback)
+
+    returns: list of (x,y) forming convex hull (CCW order)
+    """
+    all_points = []
+
+    for z in zones:
+        if "bounding_polygon_points" in z:
+            all_points.extend(tuple(p) for p in z["bounding_polygon_points"])
+            print(f"INFO: using bounding_polygon_points for zone {z.get('id','unknown')}, points: {z['bounding_polygon_points']}")    
+        elif "bbox_xyxy" in z and z["bbox_xyxy"]:
+            x1, y1, x2, y2 = z["bbox_xyxy"]
+            all_points.extend([
+                (x1, y1),
+                (x2, y1),
+                (x2, y2),
+                (x1, y2),
+            ])
+
+    if not all_points:
+        return []
+
+    return TEIOutput.hull_from_points(np.array(all_points))
+
   break_no = staticmethod(lambda endType: 
     {"break": "no"} if endType == LineEndCat.HYPHEN else {}
   )
@@ -525,9 +593,11 @@ class TEIOutput:
   
   def add_region(self, region):
     if region.get("is_page_start"):
+      self.close_current_page()
       pb = self.start_new_page(region["page_n"], region["page_meta"], self.prev_line_end_type)
       self.el_ptr = pb
     if region.get("is_column_start"):
+      self.close_current_column()
       cb = self.start_new_column(region["col_n"], self.prev_line_end_type)
       self.lines_in_column = 0
       self.el_ptr = cb
@@ -612,15 +682,34 @@ class TEIOutput:
         }
       )
     self.zones_pb_i = len(self.zones)
-    self.zones.append({
+    self.zone_pb = {
       "element": f_area,
       "id": f_area_id,
       "cols_cnt": 0,
       "childs": [],
-    })
+    }
+    self.zones.append(self.zone_pb)
     self.zones_cb_i = 0
     return pb
-  
+
+  def close_current_page(self):
+    if not self.zone_pb:
+      return
+    self.close_current_column()
+    
+    points = TEIOutput.hull_from_zones(self.zone_pb["childs"])
+    self.zone_pb["bounding_polygon_points"] = points
+    print (f"INFO: page {self.zone_pb['id']} hull points: {points}")
+    print (f"INFO: page childs {[c.get('bbox_xyxy', (0,0,0,0)) for c in self.zone_pb['childs']]}")
+    self.zone_pb["element"].attrib.update(TEIOutput.points2attrib(points))
+
+    bbox_xyxy = TEIOutput.merge_boxes(self.zone_pb["childs"])
+    self.zone_pb["bbox_xyxy"] = bbox_xyxy
+    self.zone_pb["element"].attrib.update(TEIOutput.box2attrib(bbox_xyxy))
+    
+    self.zone_pb = None
+
+
   def start_new_column(self, col_n, prevLineEndType=LineEndCat.UNKNOWN):
     txt = self.texts[self.texts_pb_i]
     cnt= len(txt.get("childs", []))
@@ -653,15 +742,30 @@ class TEIOutput:
         }
       )
     self.zones_cb_i = len(zone["childs"])
-    zone["childs"].append({
+    self.zone_cb = {
       "element": f_col,
       "id": f_col_id,
       "lines_cnt": 0,
       "childs": [],
-    })
+    }
+    zone["childs"].append(self.zone_cb)
     self.zones_lb_i = 0
     return cb
-  
+
+  def close_current_column(self):
+    if not self.zone_cb:
+      return
+    
+    points = TEIOutput.hull_from_zones(self.zone_cb["childs"])
+    self.zone_cb["bounding_polygon_points"] = points
+    self.zone_cb["element"].attrib.update(TEIOutput.points2attrib(points))
+
+    
+    bbox_xyxy = TEIOutput.merge_boxes(self.zone_cb["childs"])
+    self.zone_cb["bbox_xyxy"] = bbox_xyxy
+    self.zone_cb["element"].attrib.update(TEIOutput.box2attrib(bbox_xyxy))
+    self.zone_cb = None  
+
   def start_new_line(self, line, prevLineEndType=LineEndCat.UNKNOWN):
     txt = self.texts[self.texts_pb_i]["childs"][self.texts_cb_i]
     cnt = len(txt.get("childs", []))
@@ -691,14 +795,18 @@ class TEIOutput:
         "{%s}id" % XML_NS: f_line_id,
         "start": f"#{lb_id}",
         "type": "line",
+        **TEIOutput.points2attrib(line.get("bounding_polygon_points", [])),
         **TEIOutput.box2attrib(line.get("bbox_xyxy", (0,0,0,0))),
         }
       )
     self.zones_lb_i = len(zone["childs"])
-    zone["childs"].append({
+    self.zone_lb = {
       "element": f_line,
       "id": f_line_id,
-    })
+      "bbox_xyxy": line.get("bbox_xyxy", (0,0,0,0)),
+      "bounding_polygon_points": line.get("bounding_polygon_points", None),
+    }
+    zone["childs"].append(self.zone_lb)
     return lb
   
   def insert_line_text(self, line):
