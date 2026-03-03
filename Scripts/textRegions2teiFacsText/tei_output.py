@@ -1,0 +1,374 @@
+import xml.etree.ElementTree as ET
+from lxml import etree
+from pathlib import Path
+import numpy as np
+from scipy.spatial import ConvexHull
+
+from .line_ana import LineAna, LineEndCat, Y
+
+TEI_NS = "http://www.tei-c.org/ns/1.0"
+XML_NS = "http://www.w3.org/XML/1998/namespace"
+NSMAP = {None: TEI_NS, "xml": XML_NS}
+
+class TEIOutput:
+  tei_id: str
+  TEI: etree
+  texts: list = [] # nested list with pb/cb/lb
+  paragraphs: list = [] # list with paragraphs
+  surfaces: list = [] # list with surfaces 
+  surfaces_url_to_index: dict = {}
+  zones: list = [] # nested list with zones area/col/line
+  
+  paragraphs_i: int = 0
+
+  texts_pb_i: int = 0
+  texts_cb_i: int
+  texts_lb_i: int
+
+  zones_pb_i: int # area
+  zones_cb_i: int # col
+  zones_lb_i: int # line
+
+  zone_pb: dict = None
+  zone_cb: dict = None
+  zone_lb: dict = None
+
+  box2attrib = staticmethod(lambda b: {
+    "ulx": str(b[0]),
+    "uly": str(b[1]),
+    "lrx": str(b[2]),
+    "lry": str(b[3]),
+  }) 
+
+  points2attrib = staticmethod(lambda points: {
+    "points": " ".join(f"{x},{y}" for x, y in points)
+  })
+
+  merge_boxes = staticmethod(lambda childs: (
+    min(c.get("bbox_xyxy", (0,0,0,0))[0] for c in childs),
+    min(c.get("bbox_xyxy", (0,0,0,0))[1] for c in childs),
+    max(c.get("bbox_xyxy", (0,0,0,0))[2] for c in childs),
+    max(c.get("bbox_xyxy", (0,0,0,0))[3] for c in childs),
+   ))
+
+  
+  hull_from_boxes = staticmethod(lambda boxes: 
+     TEIOutput.hull_from_points(np.array(
+        [ (b[0], b[1]) for b in boxes ] 
+        + [ (b[0], b[3]) for b in boxes ]
+        + [ (b[2], b[1]) for b in boxes ]
+        + [ (b[2], b[3]) for b in boxes ]
+     )) 
+   ) 
+  hull_from_points = staticmethod(lambda points:
+     points[ConvexHull(points).vertices]
+   )
+  
+  @staticmethod
+  def hull_from_zones(zones):
+    """
+    zones: list of dict
+        zone["bounding_polygon_points"] -> [(x,y), ...]  (preferred)
+        zone["bbox_xyxy"] -> [x1,y1,x2,y2]  (fallback)
+
+    returns: list of (x,y) forming convex hull (CCW order)
+    """
+    all_points = []
+
+    for z in zones:
+        if "bounding_polygon_points" in z:
+            all_points.extend(tuple(p) for p in z["bounding_polygon_points"])
+            print(f"INFO: using bounding_polygon_points for zone {z.get('id','unknown')}, points: {z['bounding_polygon_points']}")    
+        elif "bbox_xyxy" in z and z["bbox_xyxy"]:
+            x1, y1, x2, y2 = z["bbox_xyxy"]
+            all_points.extend([
+                (x1, y1),
+                (x2, y1),
+                (x2, y2),
+                (x1, y2),
+            ])
+
+    if not all_points:
+        return []
+
+    return TEIOutput.hull_from_points(np.array(all_points))
+
+  break_no = staticmethod(lambda endType: 
+    {"break": "no"} if endType == LineEndCat.HYPHEN else {}
+  )
+
+  def __init__(self, tei_id):
+    self.tei_id = tei_id
+    self.TEI = etree.Element(
+      "{%s}TEI" % TEI_NS,
+      nsmap=NSMAP,
+      attrib={
+        "{%s}lang" % XML_NS: "cs",
+        "{%s}id" % XML_NS: tei_id,
+      }
+    )
+    # facsimile
+    self.facsimile = etree.SubElement(self.TEI, "{%s}facsimile" % TEI_NS)
+    # text/body
+    self.text = etree.SubElement(self.TEI, "{%s}text" % TEI_NS)
+    self.body = etree.SubElement(self.text, "{%s}body" % TEI_NS)
+
+    self.el_ptr = self.body
+    self.parent_el_ptr = self.body
+    self.prev_line_end_type = LineEndCat.UNKNOWN
+  
+  def add_region(self, region):
+    if region.get("is_page_start"):
+      self.close_current_page()
+      pb = self.start_new_page(region["page_n"], region["page_meta"], self.prev_line_end_type)
+      self.el_ptr = pb
+    if region.get("is_column_start"):
+      self.close_current_column()
+      cb = self.start_new_column(region["col_n"], self.prev_line_end_type)
+      self.lines_in_column = 0
+      self.el_ptr = cb
+    for line in region['region_content'].get('lines', []):
+      if not line.get("text", None):
+        # print(f"WARN: line without text, skipping: {line}")
+        continue
+      # insert paragraph if not present or if it begins
+      self.lines_in_column += 1
+      if self.prev_line_end_type != LineEndCat.HYPHEN:
+        if not self.el_ptr.tail:
+          self.el_ptr.tail = ""
+        self.el_ptr.tail += "\n"
+      lb = self.start_new_line(line, self.prev_line_end_type)
+      self.el_ptr = lb
+      self.insert_line_text(line)
+
+
+
+  def start_new_page(self, page_n, page_meta, prevLineEndType=LineEndCat.UNKNOWN):
+    print(f"INFO: start page {page_n} with meta {page_meta}")
+    # whole page corresponds to a surface
+    if not page_meta.get("url","") in self.surfaces_url_to_index:
+      self.surfaces_url_to_index[page_meta["url"]] = len(self.surfaces)
+      f_pg_id = f"{self.tei_id}.f.pg{page_n}"
+      f_pg = etree.SubElement(
+        self.facsimile,
+        "{%s}surface" % TEI_NS, 
+        attrib={
+          "{%s}id" % XML_NS: f_pg_id,
+          "n": str(page_n),
+          "ulx": "0",
+          "uly": "0",
+          "lrx": str(page_meta.get("width",0)), 
+          "lry": str(page_meta.get("height",0))
+          }
+        )
+      etree.SubElement(
+        f_pg,
+        "{%s}graphic" % TEI_NS, 
+        attrib={
+          "url": page_meta["url"]
+          }
+        )
+      self.surfaces.append({
+        "element": f_pg,
+        "id": f_pg_id,
+        "areas_cnt": 0,
+        "url": page_meta["url"],
+        "width": page_meta.get("width",0),
+        "height": page_meta.get("height",0),
+      })
+
+    pb_id = f"{self.tei_id}.pb{page_n}"
+    surface = self.surfaces[self.surfaces_url_to_index[page_meta["url"]]]
+    surface["areas_cnt"] += 1
+    # create zone for area
+    f_area_id = f"{surface['id']}.a{surface['areas_cnt']}"
+    pb = etree.SubElement(
+      self.body, 
+      "{%s}pb" % TEI_NS, 
+      attrib={
+        "{%s}id" % XML_NS: pb_id,
+        **TEIOutput.break_no(prevLineEndType),
+        "n": str(page_n),
+        "facs": f"#{f_area_id}"
+        }
+      )
+    self.texts.append({
+      "element": pb,
+      "id": pb_id,
+      "childs": [],
+    })
+    self.texts_cb_i = 0
+    f_area = etree.SubElement(
+      surface["element"], 
+      "{%s}zone" % TEI_NS, 
+      attrib={
+        "{%s}id" % XML_NS: f_area_id,
+        "start": f"#{pb_id}",
+        "type": "page",
+        }
+      )
+    self.zones_pb_i = len(self.zones)
+    self.zone_pb = {
+      "element": f_area,
+      "id": f_area_id,
+      "cols_cnt": 0,
+      "childs": [],
+    }
+    self.zones.append(self.zone_pb)
+    self.zones_cb_i = 0
+    return pb
+
+  def close_current_page(self):
+    if not self.zone_pb:
+      return
+    self.close_current_column()
+    
+    points = TEIOutput.hull_from_zones(self.zone_pb["childs"])
+    self.zone_pb["bounding_polygon_points"] = points
+    print (f"INFO: page {self.zone_pb['id']} hull points: {points}")
+    print (f"INFO: page childs {[c.get('bbox_xyxy', (0,0,0,0)) for c in self.zone_pb['childs']]}")
+    self.zone_pb["element"].attrib.update(TEIOutput.points2attrib(points))
+
+    bbox_xyxy = TEIOutput.merge_boxes(self.zone_pb["childs"])
+    self.zone_pb["bbox_xyxy"] = bbox_xyxy
+    self.zone_pb["element"].attrib.update(TEIOutput.box2attrib(bbox_xyxy))
+    
+    self.zone_pb = None
+
+
+  def start_new_column(self, col_n, prevLineEndType=LineEndCat.UNKNOWN):
+    txt = self.texts[self.texts_pb_i]
+    cnt= len(txt.get("childs", []))
+    cb_id = f"{txt['id']}.cb{cnt+1}"
+    zone = self.zones[self.zones_pb_i]
+    zone["cols_cnt"] += 1
+    f_col_id = f"{zone['id']}.c{zone['cols_cnt']}"
+    cb = etree.SubElement(
+      self.parent_el_ptr, 
+      "{%s}cb" % TEI_NS, 
+      attrib={
+        "{%s}id" % XML_NS: cb_id,
+        **TEIOutput.break_no(prevLineEndType),
+        "facs": f"#{f_col_id}",
+        }
+      )
+    txt["childs"].append({
+      "element": cb,
+      "id": cb_id,
+      "childs": [],
+    })
+    self.texts_lb_i = 0
+    f_col = etree.SubElement(
+      zone["element"], 
+      "{%s}zone" % TEI_NS, 
+      attrib={
+        "{%s}id" % XML_NS: f_col_id,
+        "start": f"#{cb_id}",
+        "type": "column",
+        }
+      )
+    self.zones_cb_i = len(zone["childs"])
+    self.zone_cb = {
+      "element": f_col,
+      "id": f_col_id,
+      "lines_cnt": 0,
+      "childs": [],
+    }
+    zone["childs"].append(self.zone_cb)
+    self.zones_lb_i = 0
+    return cb
+
+  def close_current_column(self):
+    if not self.zone_cb:
+      return
+    
+    points = TEIOutput.hull_from_zones(self.zone_cb["childs"])
+    self.zone_cb["bounding_polygon_points"] = points
+    self.zone_cb["element"].attrib.update(TEIOutput.points2attrib(points))
+
+    
+    bbox_xyxy = TEIOutput.merge_boxes(self.zone_cb["childs"])
+    self.zone_cb["bbox_xyxy"] = bbox_xyxy
+    self.zone_cb["element"].attrib.update(TEIOutput.box2attrib(bbox_xyxy))
+    self.zone_cb = None  
+
+  def start_new_line(self, line, prevLineEndType=LineEndCat.UNKNOWN):
+    txt = self.texts[self.texts_pb_i]["childs"][self.texts_cb_i]
+    cnt = len(txt.get("childs", []))
+    lb_id = f"{txt['id']}.lb{cnt+1}"
+    zone = self.zones[self.zones_pb_i]["childs"][self.zones_cb_i]
+    zone["lines_cnt"] += 1
+    f_line_id = f"{zone['id']}.l{zone['lines_cnt']}"
+
+    lb = etree.SubElement(
+      self.parent_el_ptr, 
+      "{%s}lb" % TEI_NS, 
+      attrib={
+        "{%s}id" % XML_NS: lb_id, 
+        **TEIOutput.break_no(prevLineEndType),
+        "facs": f"#{f_line_id}",
+        }
+      )
+    self.texts_lb_i = len(txt["childs"])
+    txt["childs"].append({
+      "element": lb,
+      "id": lb_id,
+    })
+    f_line = etree.SubElement(
+      zone["element"], 
+      "{%s}zone" % TEI_NS, 
+      attrib={
+        "{%s}id" % XML_NS: f_line_id,
+        "start": f"#{lb_id}",
+        "type": "line",
+        **TEIOutput.points2attrib(line.get("bounding_polygon_points", [])),
+        **TEIOutput.box2attrib(line.get("bbox_xyxy", (0,0,0,0))),
+        }
+      )
+    self.zones_lb_i = len(zone["childs"])
+    self.zone_lb = {
+      "element": f_line,
+      "id": f_line_id,
+      "bbox_xyxy": line.get("bbox_xyxy", (0,0,0,0)),
+      "bounding_polygon_points": line.get("bounding_polygon_points", None),
+    }
+    zone["childs"].append(self.zone_lb)
+    return lb
+  
+  def insert_line_text(self, line):
+      text = line.get('text','')
+      pc_hyphen= ''
+      if line.get('ana', LineAna).lineEnd == LineEndCat.HYPHEN:
+        text = line.get('text',' ')[:-1]
+        pc_hyphen = line.get('text',' ')[-1]
+      if etree.QName(self.parent_el_ptr).localname != 'p':
+        self.p_id = f"{self.tei_id}.p{len(self.paragraphs)+1}"
+        p = etree.SubElement(self.parent_el_ptr, "{%s}p" % TEI_NS, attrib={"{%s}id" % XML_NS: self.p_id})
+        self.paragraphs.append({
+          "element": p,
+          "id": self.p_id,
+        })
+        self.parent_el_ptr = p
+        # inserting first text in paragraph
+        p.text = text
+      else:
+        # appending
+        self.el_ptr.tail = text
+      if line.get('ana', LineAna).lineEnd == LineEndCat.HYPHEN:
+        pc = etree.SubElement(self.parent_el_ptr, "{%s}pc" % TEI_NS, attrib={"force": "weak"})
+        pc.text = pc_hyphen
+        self.el_ptr = pc
+      # print(f"INFO: line text {line.get('text','')}")
+      if line.get('ana', LineAna).parEnd == Y: # paragraph end -> close paragraph
+        self.parent_el_ptr = self.parent_el_ptr.getparent()
+      self.prev_line_end_type = line.get('ana', LineAna).lineEnd
+  
+  def write(self, outFile):
+    Path(outFile).parent.mkdir(parents=True, exist_ok=True)
+    etree.ElementTree(self.TEI).write(
+        outFile, 
+        encoding="utf-8", 
+        xml_declaration=True,
+        pretty_print=True
+      )
+    print(f"INFO: output written to {outFile}")
