@@ -119,12 +119,10 @@ class TEIOutput:
   
   def add_region(self, region):
     if region.get("is_page_start"):
-      self.close_current_page()
-      pb = self.start_new_page(region["page_n"], region["page_meta"], self.prev_line_end_type)
+      pb = self.start_new_page(region["page_n"], region["page_meta"])
       self.el_ptr = pb
     if region.get("is_column_start"):
-      self.close_current_column()
-      cb = self.start_new_column(region["col_n"], self.prev_line_end_type)
+      cb = self.start_new_column(region["col_n"])
       self.lines_in_column = 0
       self.el_ptr = cb
     for line in region['region_content'].get('lines', []):
@@ -137,13 +135,14 @@ class TEIOutput:
         if not self.el_ptr.tail:
           self.el_ptr.tail = ""
         self.el_ptr.tail += "\n"
-      lb = self.start_new_line(line, self.prev_line_end_type)
+      lb = self.start_new_line(line)
       self.el_ptr = lb
       self.insert_line_text(line)
 
 
 
-  def start_new_page(self, page_n, page_meta, prevLineEndType=LineEndCat.UNKNOWN):
+  def start_new_page(self, page_n, page_meta):
+    self.close_current_page()
     print(f"INFO: start page {page_n} with meta {page_meta}")
     # whole page corresponds to a surface
     if not page_meta.get("url","") in self.surfaces_url_to_index:
@@ -187,7 +186,7 @@ class TEIOutput:
       "{%s}pb" % TEI_NS, 
       attrib={
         "{%s}id" % XML_NS: pb_id,
-        **TEIOutput.break_no(prevLineEndType),
+        **TEIOutput.break_no(self.prev_line_end_type),
         "n": str(page_n),
         "facs": f"#{f_area_id}"
         }
@@ -236,7 +235,8 @@ class TEIOutput:
     self.zone_pb = None
 
 
-  def start_new_column(self, col_n, prevLineEndType=LineEndCat.UNKNOWN):
+  def start_new_column(self, col_n):
+    self.close_current_column()
     txt = self.texts[self.texts_pb_i]
     cnt= len(txt.get("childs", []))
     cb_id = f"{txt['id']}.cb{cnt+1}"
@@ -248,7 +248,7 @@ class TEIOutput:
       "{%s}cb" % TEI_NS, 
       attrib={
         "{%s}id" % XML_NS: cb_id,
-        **TEIOutput.break_no(prevLineEndType),
+        **TEIOutput.break_no(self.prev_line_end_type),
         "facs": f"#{f_col_id}",
         }
       )
@@ -292,7 +292,7 @@ class TEIOutput:
     self.zone_cb["element"].attrib.update(TEIOutput.box2attrib(bbox_xyxy))
     self.zone_cb = None  
 
-  def start_new_line(self, line, prevLineEndType=LineEndCat.UNKNOWN):
+  def start_new_line(self, line):
     txt = self.texts[self.texts_pb_i]["childs"][self.texts_cb_i]
     cnt = len(txt.get("childs", []))
     lb_id = f"{txt['id']}.lb{cnt+1}"
@@ -305,7 +305,7 @@ class TEIOutput:
       "{%s}lb" % TEI_NS, 
       attrib={
         "{%s}id" % XML_NS: lb_id, 
-        **TEIOutput.break_no(prevLineEndType),
+        **TEIOutput.break_no(self.prev_line_end_type),
         "facs": f"#{f_line_id}",
         }
       )
