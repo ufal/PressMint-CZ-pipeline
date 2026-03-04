@@ -1,0 +1,2833 @@
+{
+  "response": {
+    "docs": [
+      {
+        "root.pid": "uuid:02203ad6-32f0-11de-992b-00145e5790ea",
+        "accessibility": "public",
+        "date_range_start.year": 1863,
+        "own_parent.title": "Moravská orlice",
+        "in_collections": [
+          "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc",
+          "uuid:0be90938-b8af-4b93-b11a-b131de360017",
+          "uuid:9df7d62c-b572-4338-a0d1-b9c63e07a26e",
+          "uuid:71174c16-98ca-4d39-8893-543b6fd2af74"
+        ],
+        "pid": "uuid:0224a7ab-32f0-11de-992b-00145e5790ea",
+        "licenses.facet": [
+          "public"
+        ],
+        "rels_ext_index.sort": 0,
+        "id_other": [
+          "urn:0224a7ab-32f0-11de-992b-00145e5790ea"
+        ],
+        "pid_paths": [
+          "uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:0224a7ab-32f0-11de-992b-00145e5790ea",
+          "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:0224a7ab-32f0-11de-992b-00145e5790ea",
+          "uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:0224a7ab-32f0-11de-992b-00145e5790ea",
+          "uuid:71174c16-98ca-4d39-8893-543b6fd2af74/uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:0224a7ab-32f0-11de-992b-00145e5790ea",
+          "uuid:9df7d62c-b572-4338-a0d1-b9c63e07a26e/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:0224a7ab-32f0-11de-992b-00145e5790ea"
+        ],
+        "root.model": "periodical",
+        "modified": "2023-03-17T13:04:11.434Z",
+        "model": "periodicalvolume",
+        "date.min": "1863-01-01T00:00:00.001Z",
+        "has_tiles": false,
+        "root.title.sort": "MORAVSKA| ORLICE",
+        "part.number.str": "1",
+        "part.number.sort": 1,
+        "indexer_version": 18,
+        "root.title": "Moravská orlice",
+        "indexed": "2023-10-03T15:11:55.515Z",
+        "level": 1,
+        "created": "2014-08-07T08:20:41.969Z",
+        "own_model_path": "periodical/periodicalvolume",
+        "languages.facet": [
+          "cze"
+        ],
+        "date.max": "1863-12-31T23:59:59.999Z",
+        "date_range_end.year": 1863,
+        "licenses": [
+          "public"
+        ],
+        "_version_": 1778747614709153800,
+        "own_parent.model": "periodical",
+        "date.str": "1863",
+        "own_pid_path": "uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:0224a7ab-32f0-11de-992b-00145e5790ea",
+        "own_parent.pid": "uuid:02203ad6-32f0-11de-992b-00145e5790ea"
+      },
+      {
+        "root.pid": "uuid:02203ad6-32f0-11de-992b-00145e5790ea",
+        "accessibility": "public",
+        "date_range_start.year": 1864,
+        "own_parent.title": "Moravská orlice",
+        "in_collections": [
+          "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc",
+          "uuid:0be90938-b8af-4b93-b11a-b131de360017",
+          "uuid:9df7d62c-b572-4338-a0d1-b9c63e07a26e",
+          "uuid:71174c16-98ca-4d39-8893-543b6fd2af74"
+        ],
+        "pid": "uuid:02256aff-32f0-11de-992b-00145e5790ea",
+        "licenses.facet": [
+          "public"
+        ],
+        "rels_ext_index.sort": 1,
+        "id_other": [
+          "urn:02256aff-32f0-11de-992b-00145e5790ea"
+        ],
+        "pid_paths": [
+          "uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02256aff-32f0-11de-992b-00145e5790ea",
+          "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02256aff-32f0-11de-992b-00145e5790ea",
+          "uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02256aff-32f0-11de-992b-00145e5790ea",
+          "uuid:71174c16-98ca-4d39-8893-543b6fd2af74/uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02256aff-32f0-11de-992b-00145e5790ea",
+          "uuid:9df7d62c-b572-4338-a0d1-b9c63e07a26e/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02256aff-32f0-11de-992b-00145e5790ea"
+        ],
+        "root.model": "periodical",
+        "modified": "2023-03-17T13:03:30.809Z",
+        "model": "periodicalvolume",
+        "date.min": "1864-01-01T00:00:00.001Z",
+        "has_tiles": false,
+        "root.title.sort": "MORAVSKA| ORLICE",
+        "part.number.str": "2",
+        "part.number.sort": 2,
+        "indexer_version": 18,
+        "root.title": "Moravská orlice",
+        "indexed": "2023-10-03T15:13:17.694Z",
+        "level": 1,
+        "created": "2014-08-07T19:18:55.071Z",
+        "own_model_path": "periodical/periodicalvolume",
+        "languages.facet": [
+          "cze"
+        ],
+        "date.max": "1864-12-31T23:59:59.999Z",
+        "date_range_end.year": 1864,
+        "licenses": [
+          "public"
+        ],
+        "_version_": 1778747700880081000,
+        "own_parent.model": "periodical",
+        "date.str": "1864",
+        "own_pid_path": "uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02256aff-32f0-11de-992b-00145e5790ea",
+        "own_parent.pid": "uuid:02203ad6-32f0-11de-992b-00145e5790ea"
+      },
+      {
+        "root.pid": "uuid:02203ad6-32f0-11de-992b-00145e5790ea",
+        "accessibility": "public",
+        "date_range_start.year": 1865,
+        "own_parent.title": "Moravská orlice",
+        "in_collections": [
+          "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc",
+          "uuid:0be90938-b8af-4b93-b11a-b131de360017",
+          "uuid:9df7d62c-b572-4338-a0d1-b9c63e07a26e",
+          "uuid:71174c16-98ca-4d39-8893-543b6fd2af74"
+        ],
+        "pid": "uuid:02256b00-32f0-11de-992b-00145e5790ea",
+        "licenses.facet": [
+          "public"
+        ],
+        "rels_ext_index.sort": 2,
+        "id_other": [
+          "urn:02256b00-32f0-11de-992b-00145e5790ea"
+        ],
+        "pid_paths": [
+          "uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02256b00-32f0-11de-992b-00145e5790ea",
+          "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02256b00-32f0-11de-992b-00145e5790ea",
+          "uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02256b00-32f0-11de-992b-00145e5790ea",
+          "uuid:71174c16-98ca-4d39-8893-543b6fd2af74/uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02256b00-32f0-11de-992b-00145e5790ea",
+          "uuid:9df7d62c-b572-4338-a0d1-b9c63e07a26e/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02256b00-32f0-11de-992b-00145e5790ea"
+        ],
+        "root.model": "periodical",
+        "modified": "2023-03-17T13:02:49.957Z",
+        "model": "periodicalvolume",
+        "date.min": "1865-01-01T00:00:00.001Z",
+        "has_tiles": false,
+        "root.title.sort": "MORAVSKA| ORLICE",
+        "part.number.str": "3",
+        "part.number.sort": 3,
+        "indexer_version": 18,
+        "root.title": "Moravská orlice",
+        "indexed": "2023-10-03T15:15:01.455Z",
+        "level": 1,
+        "created": "2014-08-07T06:26:49.383Z",
+        "own_model_path": "periodical/periodicalvolume",
+        "languages.facet": [
+          "cze"
+        ],
+        "date.max": "1865-12-31T23:59:59.999Z",
+        "date_range_end.year": 1865,
+        "licenses": [
+          "public"
+        ],
+        "_version_": 1778747809681375200,
+        "own_parent.model": "periodical",
+        "date.str": "1865",
+        "own_pid_path": "uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02256b00-32f0-11de-992b-00145e5790ea",
+        "own_parent.pid": "uuid:02203ad6-32f0-11de-992b-00145e5790ea"
+      },
+      {
+        "root.pid": "uuid:02203ad6-32f0-11de-992b-00145e5790ea",
+        "accessibility": "public",
+        "date_range_start.year": 1866,
+        "own_parent.title": "Moravská orlice",
+        "in_collections": [
+          "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc",
+          "uuid:0be90938-b8af-4b93-b11a-b131de360017",
+          "uuid:9df7d62c-b572-4338-a0d1-b9c63e07a26e",
+          "uuid:71174c16-98ca-4d39-8893-543b6fd2af74"
+        ],
+        "pid": "uuid:02259211-32f0-11de-992b-00145e5790ea",
+        "licenses.facet": [
+          "public"
+        ],
+        "rels_ext_index.sort": 3,
+        "id_other": [
+          "urn:02259211-32f0-11de-992b-00145e5790ea"
+        ],
+        "pid_paths": [
+          "uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02259211-32f0-11de-992b-00145e5790ea",
+          "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02259211-32f0-11de-992b-00145e5790ea",
+          "uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02259211-32f0-11de-992b-00145e5790ea",
+          "uuid:71174c16-98ca-4d39-8893-543b6fd2af74/uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02259211-32f0-11de-992b-00145e5790ea",
+          "uuid:9df7d62c-b572-4338-a0d1-b9c63e07a26e/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02259211-32f0-11de-992b-00145e5790ea"
+        ],
+        "root.model": "periodical",
+        "modified": "2023-03-17T13:03:51.067Z",
+        "model": "periodicalvolume",
+        "date.min": "1866-01-01T00:00:00.001Z",
+        "has_tiles": false,
+        "root.title.sort": "MORAVSKA| ORLICE",
+        "part.number.str": "4",
+        "part.number.sort": 4,
+        "indexer_version": 18,
+        "root.title": "Moravská orlice",
+        "indexed": "2025-02-07T01:15:42.777Z",
+        "level": 1,
+        "created": "2014-08-06T20:01:51.110Z",
+        "own_model_path": "periodical/periodicalvolume",
+        "languages.facet": [
+          "cze"
+        ],
+        "date.max": "1866-12-31T23:59:59.999Z",
+        "date_range_end.year": 1866,
+        "licenses": [
+          "public"
+        ],
+        "_version_": 1823359309216481300,
+        "own_parent.model": "periodical",
+        "date.str": "1866",
+        "own_pid_path": "uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02259211-32f0-11de-992b-00145e5790ea",
+        "own_parent.pid": "uuid:02203ad6-32f0-11de-992b-00145e5790ea"
+      },
+      {
+        "root.pid": "uuid:02203ad6-32f0-11de-992b-00145e5790ea",
+        "accessibility": "public",
+        "date_range_start.year": 1867,
+        "own_parent.title": "Moravská orlice",
+        "in_collections": [
+          "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc",
+          "uuid:0be90938-b8af-4b93-b11a-b131de360017",
+          "uuid:9df7d62c-b572-4338-a0d1-b9c63e07a26e",
+          "uuid:71174c16-98ca-4d39-8893-543b6fd2af74"
+        ],
+        "pid": "uuid:02259212-32f0-11de-992b-00145e5790ea",
+        "licenses.facet": [
+          "public"
+        ],
+        "rels_ext_index.sort": 4,
+        "id_other": [
+          "urn:02259212-32f0-11de-992b-00145e5790ea"
+        ],
+        "pid_paths": [
+          "uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02259212-32f0-11de-992b-00145e5790ea",
+          "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02259212-32f0-11de-992b-00145e5790ea",
+          "uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02259212-32f0-11de-992b-00145e5790ea",
+          "uuid:71174c16-98ca-4d39-8893-543b6fd2af74/uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02259212-32f0-11de-992b-00145e5790ea",
+          "uuid:9df7d62c-b572-4338-a0d1-b9c63e07a26e/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02259212-32f0-11de-992b-00145e5790ea"
+        ],
+        "root.model": "periodical",
+        "modified": "2023-03-17T12:55:16.059Z",
+        "model": "periodicalvolume",
+        "date.min": "1867-01-01T00:00:00.001Z",
+        "has_tiles": false,
+        "root.title.sort": "MORAVSKA| ORLICE",
+        "part.number.str": "5",
+        "part.number.sort": 5,
+        "indexer_version": 18,
+        "root.title": "Moravská orlice",
+        "indexed": "2023-10-03T15:18:36.888Z",
+        "level": 1,
+        "created": "2014-08-06T15:27:01.045Z",
+        "own_model_path": "periodical/periodicalvolume",
+        "languages.facet": [
+          "cze"
+        ],
+        "date.max": "1867-12-31T23:59:59.999Z",
+        "date_range_end.year": 1867,
+        "licenses": [
+          "public"
+        ],
+        "_version_": 1778748035579248600,
+        "own_parent.model": "periodical",
+        "date.str": "1867",
+        "own_pid_path": "uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02259212-32f0-11de-992b-00145e5790ea",
+        "own_parent.pid": "uuid:02203ad6-32f0-11de-992b-00145e5790ea"
+      },
+      {
+        "root.pid": "uuid:02203ad6-32f0-11de-992b-00145e5790ea",
+        "accessibility": "public",
+        "date_range_start.year": 1868,
+        "own_parent.title": "Moravská orlice",
+        "in_collections": [
+          "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc",
+          "uuid:0be90938-b8af-4b93-b11a-b131de360017",
+          "uuid:9df7d62c-b572-4338-a0d1-b9c63e07a26e",
+          "uuid:71174c16-98ca-4d39-8893-543b6fd2af74"
+        ],
+        "pid": "uuid:02259213-32f0-11de-992b-00145e5790ea",
+        "licenses.facet": [
+          "public"
+        ],
+        "rels_ext_index.sort": 5,
+        "id_other": [
+          "urn:02259213-32f0-11de-992b-00145e5790ea"
+        ],
+        "pid_paths": [
+          "uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02259213-32f0-11de-992b-00145e5790ea",
+          "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02259213-32f0-11de-992b-00145e5790ea",
+          "uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02259213-32f0-11de-992b-00145e5790ea",
+          "uuid:71174c16-98ca-4d39-8893-543b6fd2af74/uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02259213-32f0-11de-992b-00145e5790ea",
+          "uuid:9df7d62c-b572-4338-a0d1-b9c63e07a26e/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02259213-32f0-11de-992b-00145e5790ea"
+        ],
+        "root.model": "periodical",
+        "modified": "2023-03-17T12:55:18.760Z",
+        "model": "periodicalvolume",
+        "date.min": "1868-01-01T00:00:00.001Z",
+        "has_tiles": false,
+        "root.title.sort": "MORAVSKA| ORLICE",
+        "part.number.str": "6",
+        "part.number.sort": 6,
+        "indexer_version": 18,
+        "root.title": "Moravská orlice",
+        "indexed": "2023-10-03T15:20:05.728Z",
+        "level": 1,
+        "created": "2014-08-06T14:21:21.535Z",
+        "own_model_path": "periodical/periodicalvolume",
+        "languages.facet": [
+          "cze"
+        ],
+        "date.max": "1868-12-31T23:59:59.999Z",
+        "date_range_end.year": 1868,
+        "licenses": [
+          "public"
+        ],
+        "_version_": 1778748128734740500,
+        "own_parent.model": "periodical",
+        "date.str": "1868",
+        "own_pid_path": "uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02259213-32f0-11de-992b-00145e5790ea",
+        "own_parent.pid": "uuid:02203ad6-32f0-11de-992b-00145e5790ea"
+      },
+      {
+        "root.pid": "uuid:02203ad6-32f0-11de-992b-00145e5790ea",
+        "accessibility": "public",
+        "date_range_start.year": 1869,
+        "own_parent.title": "Moravská orlice",
+        "in_collections": [
+          "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc",
+          "uuid:0be90938-b8af-4b93-b11a-b131de360017",
+          "uuid:9df7d62c-b572-4338-a0d1-b9c63e07a26e",
+          "uuid:71174c16-98ca-4d39-8893-543b6fd2af74"
+        ],
+        "pid": "uuid:02259214-32f0-11de-992b-00145e5790ea",
+        "licenses.facet": [
+          "public"
+        ],
+        "rels_ext_index.sort": 6,
+        "id_other": [
+          "urn:02259214-32f0-11de-992b-00145e5790ea"
+        ],
+        "pid_paths": [
+          "uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02259214-32f0-11de-992b-00145e5790ea",
+          "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02259214-32f0-11de-992b-00145e5790ea",
+          "uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02259214-32f0-11de-992b-00145e5790ea",
+          "uuid:71174c16-98ca-4d39-8893-543b6fd2af74/uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02259214-32f0-11de-992b-00145e5790ea",
+          "uuid:9df7d62c-b572-4338-a0d1-b9c63e07a26e/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02259214-32f0-11de-992b-00145e5790ea"
+        ],
+        "root.model": "periodical",
+        "modified": "2023-03-17T13:01:21.801Z",
+        "model": "periodicalvolume",
+        "date.min": "1869-01-01T00:00:00.001Z",
+        "has_tiles": false,
+        "root.title.sort": "MORAVSKA| ORLICE",
+        "part.number.str": "7",
+        "part.number.sort": 7,
+        "indexer_version": 18,
+        "root.title": "Moravská orlice",
+        "indexed": "2023-10-03T15:21:49.091Z",
+        "level": 1,
+        "created": "2014-08-09T21:42:13.640Z",
+        "own_model_path": "periodical/periodicalvolume",
+        "languages.facet": [
+          "cze"
+        ],
+        "date.max": "1869-12-31T23:59:59.999Z",
+        "date_range_end.year": 1869,
+        "licenses": [
+          "public"
+        ],
+        "_version_": 1778748237118701600,
+        "own_parent.model": "periodical",
+        "date.str": "1869",
+        "own_pid_path": "uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02259214-32f0-11de-992b-00145e5790ea",
+        "own_parent.pid": "uuid:02203ad6-32f0-11de-992b-00145e5790ea"
+      },
+      {
+        "root.pid": "uuid:02203ad6-32f0-11de-992b-00145e5790ea",
+        "accessibility": "public",
+        "date_range_start.year": 1870,
+        "own_parent.title": "Moravská orlice",
+        "in_collections": [
+          "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc",
+          "uuid:0be90938-b8af-4b93-b11a-b131de360017",
+          "uuid:9df7d62c-b572-4338-a0d1-b9c63e07a26e",
+          "uuid:71174c16-98ca-4d39-8893-543b6fd2af74"
+        ],
+        "pid": "uuid:02259215-32f0-11de-992b-00145e5790ea",
+        "licenses.facet": [
+          "public"
+        ],
+        "rels_ext_index.sort": 7,
+        "id_other": [
+          "urn:02259215-32f0-11de-992b-00145e5790ea"
+        ],
+        "pid_paths": [
+          "uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02259215-32f0-11de-992b-00145e5790ea",
+          "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02259215-32f0-11de-992b-00145e5790ea",
+          "uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02259215-32f0-11de-992b-00145e5790ea",
+          "uuid:71174c16-98ca-4d39-8893-543b6fd2af74/uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02259215-32f0-11de-992b-00145e5790ea",
+          "uuid:9df7d62c-b572-4338-a0d1-b9c63e07a26e/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02259215-32f0-11de-992b-00145e5790ea"
+        ],
+        "root.model": "periodical",
+        "modified": "2023-03-17T12:54:51.620Z",
+        "model": "periodicalvolume",
+        "date.min": "1870-01-01T00:00:00.001Z",
+        "has_tiles": false,
+        "root.title.sort": "MORAVSKA| ORLICE",
+        "part.number.str": "8",
+        "part.number.sort": 8,
+        "indexer_version": 18,
+        "root.title": "Moravská orlice",
+        "indexed": "2023-10-03T15:23:28.775Z",
+        "level": 1,
+        "created": "2014-08-09T19:06:29.829Z",
+        "own_model_path": "periodical/periodicalvolume",
+        "languages.facet": [
+          "cze"
+        ],
+        "date.max": "1870-12-31T23:59:59.999Z",
+        "date_range_end.year": 1870,
+        "licenses": [
+          "public"
+        ],
+        "_version_": 1778748341644951600,
+        "own_parent.model": "periodical",
+        "date.str": "1870",
+        "own_pid_path": "uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02259215-32f0-11de-992b-00145e5790ea",
+        "own_parent.pid": "uuid:02203ad6-32f0-11de-992b-00145e5790ea"
+      },
+      {
+        "root.pid": "uuid:02203ad6-32f0-11de-992b-00145e5790ea",
+        "accessibility": "public",
+        "date_range_start.year": 1871,
+        "own_parent.title": "Moravská orlice",
+        "in_collections": [
+          "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc",
+          "uuid:0be90938-b8af-4b93-b11a-b131de360017",
+          "uuid:9df7d62c-b572-4338-a0d1-b9c63e07a26e",
+          "uuid:71174c16-98ca-4d39-8893-543b6fd2af74"
+        ],
+        "pid": "uuid:02256afe-32f0-11de-992b-00145e5790ea",
+        "licenses.facet": [
+          "public"
+        ],
+        "rels_ext_index.sort": 8,
+        "id_other": [
+          "urn:02256afe-32f0-11de-992b-00145e5790ea"
+        ],
+        "pid_paths": [
+          "uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02256afe-32f0-11de-992b-00145e5790ea",
+          "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02256afe-32f0-11de-992b-00145e5790ea",
+          "uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02256afe-32f0-11de-992b-00145e5790ea",
+          "uuid:71174c16-98ca-4d39-8893-543b6fd2af74/uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02256afe-32f0-11de-992b-00145e5790ea",
+          "uuid:9df7d62c-b572-4338-a0d1-b9c63e07a26e/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02256afe-32f0-11de-992b-00145e5790ea"
+        ],
+        "root.model": "periodical",
+        "modified": "2023-03-17T13:00:21.058Z",
+        "model": "periodicalvolume",
+        "date.min": "1871-01-01T00:00:00.001Z",
+        "has_tiles": false,
+        "root.title.sort": "MORAVSKA| ORLICE",
+        "part.number.str": "9",
+        "part.number.sort": 9,
+        "indexer_version": 18,
+        "root.title": "Moravská orlice",
+        "indexed": "2023-10-03T15:24:46.044Z",
+        "level": 1,
+        "created": "2014-08-08T17:29:38.644Z",
+        "own_model_path": "periodical/periodicalvolume",
+        "languages.facet": [
+          "cze"
+        ],
+        "date.max": "1871-12-31T23:59:59.999Z",
+        "date_range_end.year": 1871,
+        "licenses": [
+          "public"
+        ],
+        "_version_": 1778748422667370500,
+        "own_parent.model": "periodical",
+        "date.str": "1871",
+        "own_pid_path": "uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02256afe-32f0-11de-992b-00145e5790ea",
+        "own_parent.pid": "uuid:02203ad6-32f0-11de-992b-00145e5790ea"
+      },
+      {
+        "root.pid": "uuid:02203ad6-32f0-11de-992b-00145e5790ea",
+        "accessibility": "public",
+        "date_range_start.year": 1872,
+        "own_parent.title": "Moravská orlice",
+        "in_collections": [
+          "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc",
+          "uuid:0be90938-b8af-4b93-b11a-b131de360017",
+          "uuid:9df7d62c-b572-4338-a0d1-b9c63e07a26e",
+          "uuid:71174c16-98ca-4d39-8893-543b6fd2af74"
+        ],
+        "pid": "uuid:02259216-32f0-11de-992b-00145e5790ea",
+        "licenses.facet": [
+          "public"
+        ],
+        "rels_ext_index.sort": 9,
+        "id_other": [
+          "urn:02259216-32f0-11de-992b-00145e5790ea"
+        ],
+        "pid_paths": [
+          "uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02259216-32f0-11de-992b-00145e5790ea",
+          "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02259216-32f0-11de-992b-00145e5790ea",
+          "uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02259216-32f0-11de-992b-00145e5790ea",
+          "uuid:71174c16-98ca-4d39-8893-543b6fd2af74/uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02259216-32f0-11de-992b-00145e5790ea",
+          "uuid:9df7d62c-b572-4338-a0d1-b9c63e07a26e/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02259216-32f0-11de-992b-00145e5790ea"
+        ],
+        "root.model": "periodical",
+        "modified": "2023-03-17T13:02:12.023Z",
+        "model": "periodicalvolume",
+        "date.min": "1872-01-01T00:00:00.001Z",
+        "has_tiles": false,
+        "root.title.sort": "MORAVSKA| ORLICE",
+        "part.number.str": "10",
+        "part.number.sort": 10,
+        "indexer_version": 18,
+        "root.title": "Moravská orlice",
+        "indexed": "2023-10-03T15:26:05.291Z",
+        "level": 1,
+        "created": "2014-08-07T16:40:28.335Z",
+        "own_model_path": "periodical/periodicalvolume",
+        "languages.facet": [
+          "cze"
+        ],
+        "date.max": "1872-12-31T23:59:59.999Z",
+        "date_range_end.year": 1872,
+        "licenses": [
+          "public"
+        ],
+        "_version_": 1778748505763872800,
+        "own_parent.model": "periodical",
+        "date.str": "1872",
+        "own_pid_path": "uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02259216-32f0-11de-992b-00145e5790ea",
+        "own_parent.pid": "uuid:02203ad6-32f0-11de-992b-00145e5790ea"
+      },
+      {
+        "root.pid": "uuid:02203ad6-32f0-11de-992b-00145e5790ea",
+        "accessibility": "public",
+        "date_range_start.year": 1873,
+        "own_parent.title": "Moravská orlice",
+        "in_collections": [
+          "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc",
+          "uuid:0be90938-b8af-4b93-b11a-b131de360017",
+          "uuid:9df7d62c-b572-4338-a0d1-b9c63e07a26e",
+          "uuid:71174c16-98ca-4d39-8893-543b6fd2af74"
+        ],
+        "pid": "uuid:0225b927-32f0-11de-992b-00145e5790ea",
+        "licenses.facet": [
+          "public"
+        ],
+        "rels_ext_index.sort": 10,
+        "id_other": [
+          "urn:0225b927-32f0-11de-992b-00145e5790ea"
+        ],
+        "pid_paths": [
+          "uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:0225b927-32f0-11de-992b-00145e5790ea",
+          "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:0225b927-32f0-11de-992b-00145e5790ea",
+          "uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:0225b927-32f0-11de-992b-00145e5790ea",
+          "uuid:71174c16-98ca-4d39-8893-543b6fd2af74/uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:0225b927-32f0-11de-992b-00145e5790ea",
+          "uuid:9df7d62c-b572-4338-a0d1-b9c63e07a26e/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:0225b927-32f0-11de-992b-00145e5790ea"
+        ],
+        "root.model": "periodical",
+        "modified": "2023-03-17T13:01:31.970Z",
+        "model": "periodicalvolume",
+        "date.min": "1873-01-01T00:00:00.001Z",
+        "has_tiles": false,
+        "root.title.sort": "MORAVSKA| ORLICE",
+        "part.number.str": "11",
+        "part.number.sort": 11,
+        "indexer_version": 18,
+        "root.title": "Moravská orlice",
+        "indexed": "2023-10-03T15:27:13.367Z",
+        "level": 1,
+        "created": "2014-08-06T16:26:59.578Z",
+        "own_model_path": "periodical/periodicalvolume",
+        "languages.facet": [
+          "cze"
+        ],
+        "date.max": "1873-12-31T23:59:59.999Z",
+        "date_range_end.year": 1873,
+        "licenses": [
+          "public"
+        ],
+        "_version_": 1778748577146732500,
+        "own_parent.model": "periodical",
+        "date.str": "1873",
+        "own_pid_path": "uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:0225b927-32f0-11de-992b-00145e5790ea",
+        "own_parent.pid": "uuid:02203ad6-32f0-11de-992b-00145e5790ea"
+      },
+      {
+        "root.pid": "uuid:02203ad6-32f0-11de-992b-00145e5790ea",
+        "accessibility": "public",
+        "date_range_start.year": 1874,
+        "own_parent.title": "Moravská orlice",
+        "in_collections": [
+          "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc",
+          "uuid:0be90938-b8af-4b93-b11a-b131de360017",
+          "uuid:9df7d62c-b572-4338-a0d1-b9c63e07a26e",
+          "uuid:71174c16-98ca-4d39-8893-543b6fd2af74"
+        ],
+        "pid": "uuid:0225b928-32f0-11de-992b-00145e5790ea",
+        "licenses.facet": [
+          "public"
+        ],
+        "rels_ext_index.sort": 11,
+        "id_other": [
+          "urn:0225b928-32f0-11de-992b-00145e5790ea"
+        ],
+        "pid_paths": [
+          "uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:0225b928-32f0-11de-992b-00145e5790ea",
+          "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:0225b928-32f0-11de-992b-00145e5790ea",
+          "uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:0225b928-32f0-11de-992b-00145e5790ea",
+          "uuid:71174c16-98ca-4d39-8893-543b6fd2af74/uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:0225b928-32f0-11de-992b-00145e5790ea",
+          "uuid:9df7d62c-b572-4338-a0d1-b9c63e07a26e/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:0225b928-32f0-11de-992b-00145e5790ea"
+        ],
+        "root.model": "periodical",
+        "modified": "2023-03-17T12:56:44.194Z",
+        "model": "periodicalvolume",
+        "date.min": "1874-01-01T00:00:00.001Z",
+        "has_tiles": false,
+        "root.title.sort": "MORAVSKA| ORLICE",
+        "part.number.str": "12",
+        "part.number.sort": 12,
+        "indexer_version": 18,
+        "root.title": "Moravská orlice",
+        "indexed": "2023-10-03T15:28:26.176Z",
+        "level": 1,
+        "created": "2014-08-07T17:39:17.531Z",
+        "own_model_path": "periodical/periodicalvolume",
+        "languages.facet": [
+          "cze"
+        ],
+        "date.max": "1874-12-31T23:59:59.999Z",
+        "date_range_end.year": 1874,
+        "licenses": [
+          "public"
+        ],
+        "_version_": 1778748653493551000,
+        "own_parent.model": "periodical",
+        "date.str": "1874",
+        "own_pid_path": "uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:0225b928-32f0-11de-992b-00145e5790ea",
+        "own_parent.pid": "uuid:02203ad6-32f0-11de-992b-00145e5790ea"
+      },
+      {
+        "root.pid": "uuid:02203ad6-32f0-11de-992b-00145e5790ea",
+        "accessibility": "public",
+        "date_range_start.year": 1875,
+        "own_parent.title": "Moravská orlice",
+        "in_collections": [
+          "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc",
+          "uuid:0be90938-b8af-4b93-b11a-b131de360017",
+          "uuid:9df7d62c-b572-4338-a0d1-b9c63e07a26e",
+          "uuid:71174c16-98ca-4d39-8893-543b6fd2af74"
+        ],
+        "pid": "uuid:0225b929-32f0-11de-992b-00145e5790ea",
+        "licenses.facet": [
+          "public"
+        ],
+        "rels_ext_index.sort": 12,
+        "id_other": [
+          "urn:0225b929-32f0-11de-992b-00145e5790ea"
+        ],
+        "pid_paths": [
+          "uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:0225b929-32f0-11de-992b-00145e5790ea",
+          "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:0225b929-32f0-11de-992b-00145e5790ea",
+          "uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:0225b929-32f0-11de-992b-00145e5790ea",
+          "uuid:71174c16-98ca-4d39-8893-543b6fd2af74/uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:0225b929-32f0-11de-992b-00145e5790ea",
+          "uuid:9df7d62c-b572-4338-a0d1-b9c63e07a26e/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:0225b929-32f0-11de-992b-00145e5790ea"
+        ],
+        "root.model": "periodical",
+        "modified": "2023-03-17T12:56:40.380Z",
+        "model": "periodicalvolume",
+        "date.min": "1875-01-01T00:00:00.001Z",
+        "has_tiles": false,
+        "root.title.sort": "MORAVSKA| ORLICE",
+        "part.number.str": "13",
+        "part.number.sort": 13,
+        "indexer_version": 18,
+        "root.title": "Moravská orlice",
+        "indexed": "2023-10-03T15:29:41.448Z",
+        "level": 1,
+        "created": "2014-08-07T15:57:29.043Z",
+        "own_model_path": "periodical/periodicalvolume",
+        "languages.facet": [
+          "cze"
+        ],
+        "date.max": "1875-12-31T23:59:59.999Z",
+        "date_range_end.year": 1875,
+        "licenses": [
+          "public"
+        ],
+        "_version_": 1778748732419866600,
+        "own_parent.model": "periodical",
+        "date.str": "1875",
+        "own_pid_path": "uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:0225b929-32f0-11de-992b-00145e5790ea",
+        "own_parent.pid": "uuid:02203ad6-32f0-11de-992b-00145e5790ea"
+      },
+      {
+        "root.pid": "uuid:02203ad6-32f0-11de-992b-00145e5790ea",
+        "accessibility": "public",
+        "date_range_start.year": 1876,
+        "own_parent.title": "Moravská orlice",
+        "in_collections": [
+          "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc",
+          "uuid:0be90938-b8af-4b93-b11a-b131de360017",
+          "uuid:9df7d62c-b572-4338-a0d1-b9c63e07a26e",
+          "uuid:71174c16-98ca-4d39-8893-543b6fd2af74"
+        ],
+        "pid": "uuid:0225b92a-32f0-11de-992b-00145e5790ea",
+        "licenses.facet": [
+          "public"
+        ],
+        "rels_ext_index.sort": 13,
+        "id_other": [
+          "urn:0225b92a-32f0-11de-992b-00145e5790ea"
+        ],
+        "pid_paths": [
+          "uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:0225b92a-32f0-11de-992b-00145e5790ea",
+          "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:0225b92a-32f0-11de-992b-00145e5790ea",
+          "uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:0225b92a-32f0-11de-992b-00145e5790ea",
+          "uuid:71174c16-98ca-4d39-8893-543b6fd2af74/uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:0225b92a-32f0-11de-992b-00145e5790ea",
+          "uuid:9df7d62c-b572-4338-a0d1-b9c63e07a26e/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:0225b92a-32f0-11de-992b-00145e5790ea"
+        ],
+        "root.model": "periodical",
+        "modified": "2023-03-17T12:57:17.815Z",
+        "model": "periodicalvolume",
+        "date.min": "1876-01-01T00:00:00.001Z",
+        "has_tiles": false,
+        "root.title.sort": "MORAVSKA| ORLICE",
+        "part.number.str": "14",
+        "part.number.sort": 14,
+        "indexer_version": 18,
+        "root.title": "Moravská orlice",
+        "indexed": "2023-10-03T15:30:57.307Z",
+        "level": 1,
+        "created": "2014-08-08T01:19:05.661Z",
+        "own_model_path": "periodical/periodicalvolume",
+        "languages.facet": [
+          "cze"
+        ],
+        "date.max": "1876-12-31T23:59:59.999Z",
+        "date_range_end.year": 1876,
+        "licenses": [
+          "public"
+        ],
+        "_version_": 1778748811964842000,
+        "own_parent.model": "periodical",
+        "date.str": "1876",
+        "own_pid_path": "uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:0225b92a-32f0-11de-992b-00145e5790ea",
+        "own_parent.pid": "uuid:02203ad6-32f0-11de-992b-00145e5790ea"
+      },
+      {
+        "root.pid": "uuid:02203ad6-32f0-11de-992b-00145e5790ea",
+        "accessibility": "public",
+        "date_range_start.year": 1877,
+        "own_parent.title": "Moravská orlice",
+        "in_collections": [
+          "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc",
+          "uuid:0be90938-b8af-4b93-b11a-b131de360017",
+          "uuid:9df7d62c-b572-4338-a0d1-b9c63e07a26e",
+          "uuid:71174c16-98ca-4d39-8893-543b6fd2af74"
+        ],
+        "pid": "uuid:0225b92b-32f0-11de-992b-00145e5790ea",
+        "licenses.facet": [
+          "public"
+        ],
+        "rels_ext_index.sort": 14,
+        "id_other": [
+          "urn:0225b92b-32f0-11de-992b-00145e5790ea"
+        ],
+        "pid_paths": [
+          "uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:0225b92b-32f0-11de-992b-00145e5790ea",
+          "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:0225b92b-32f0-11de-992b-00145e5790ea",
+          "uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:0225b92b-32f0-11de-992b-00145e5790ea",
+          "uuid:71174c16-98ca-4d39-8893-543b6fd2af74/uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:0225b92b-32f0-11de-992b-00145e5790ea",
+          "uuid:9df7d62c-b572-4338-a0d1-b9c63e07a26e/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:0225b92b-32f0-11de-992b-00145e5790ea"
+        ],
+        "root.model": "periodical",
+        "modified": "2023-03-17T12:57:38.801Z",
+        "model": "periodicalvolume",
+        "date.min": "1877-01-01T00:00:00.001Z",
+        "has_tiles": false,
+        "root.title.sort": "MORAVSKA| ORLICE",
+        "part.number.str": "15",
+        "part.number.sort": 15,
+        "indexer_version": 18,
+        "root.title": "Moravská orlice",
+        "indexed": "2023-10-03T15:32:11.236Z",
+        "level": 1,
+        "created": "2014-08-09T22:24:20.718Z",
+        "own_model_path": "periodical/periodicalvolume",
+        "languages.facet": [
+          "cze"
+        ],
+        "date.max": "1877-12-31T23:59:59.999Z",
+        "date_range_end.year": 1877,
+        "licenses": [
+          "public"
+        ],
+        "_version_": 1778748889485017000,
+        "own_parent.model": "periodical",
+        "date.str": "1877",
+        "own_pid_path": "uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:0225b92b-32f0-11de-992b-00145e5790ea",
+        "own_parent.pid": "uuid:02203ad6-32f0-11de-992b-00145e5790ea"
+      },
+      {
+        "root.pid": "uuid:02203ad6-32f0-11de-992b-00145e5790ea",
+        "accessibility": "public",
+        "date_range_start.year": 1878,
+        "own_parent.title": "Moravská orlice",
+        "in_collections": [
+          "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc",
+          "uuid:0be90938-b8af-4b93-b11a-b131de360017",
+          "uuid:9df7d62c-b572-4338-a0d1-b9c63e07a26e",
+          "uuid:71174c16-98ca-4d39-8893-543b6fd2af74"
+        ],
+        "pid": "uuid:0225e03c-32f0-11de-992b-00145e5790ea",
+        "licenses.facet": [
+          "public"
+        ],
+        "rels_ext_index.sort": 15,
+        "id_other": [
+          "urn:0225e03c-32f0-11de-992b-00145e5790ea"
+        ],
+        "pid_paths": [
+          "uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:0225e03c-32f0-11de-992b-00145e5790ea",
+          "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:0225e03c-32f0-11de-992b-00145e5790ea",
+          "uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:0225e03c-32f0-11de-992b-00145e5790ea",
+          "uuid:71174c16-98ca-4d39-8893-543b6fd2af74/uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:0225e03c-32f0-11de-992b-00145e5790ea",
+          "uuid:9df7d62c-b572-4338-a0d1-b9c63e07a26e/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:0225e03c-32f0-11de-992b-00145e5790ea"
+        ],
+        "root.model": "periodical",
+        "modified": "2023-03-17T12:54:28.224Z",
+        "model": "periodicalvolume",
+        "date.min": "1878-01-01T00:00:00.001Z",
+        "has_tiles": false,
+        "root.title.sort": "MORAVSKA| ORLICE",
+        "part.number.str": "16",
+        "part.number.sort": 16,
+        "indexer_version": 18,
+        "root.title": "Moravská orlice",
+        "indexed": "2023-10-03T15:33:20.271Z",
+        "level": 1,
+        "created": "2014-08-08T08:45:47.834Z",
+        "own_model_path": "periodical/periodicalvolume",
+        "languages.facet": [
+          "cze"
+        ],
+        "date.max": "1878-12-31T23:59:59.999Z",
+        "date_range_end.year": 1878,
+        "licenses": [
+          "public"
+        ],
+        "_version_": 1778748961873461200,
+        "own_parent.model": "periodical",
+        "date.str": "1878",
+        "own_pid_path": "uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:0225e03c-32f0-11de-992b-00145e5790ea",
+        "own_parent.pid": "uuid:02203ad6-32f0-11de-992b-00145e5790ea"
+      },
+      {
+        "root.pid": "uuid:02203ad6-32f0-11de-992b-00145e5790ea",
+        "accessibility": "public",
+        "date_range_start.year": 1879,
+        "own_parent.title": "Moravská orlice",
+        "in_collections": [
+          "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc",
+          "uuid:0be90938-b8af-4b93-b11a-b131de360017",
+          "uuid:9df7d62c-b572-4338-a0d1-b9c63e07a26e",
+          "uuid:71174c16-98ca-4d39-8893-543b6fd2af74"
+        ],
+        "pid": "uuid:0225e03d-32f0-11de-992b-00145e5790ea",
+        "licenses.facet": [
+          "public"
+        ],
+        "rels_ext_index.sort": 16,
+        "id_other": [
+          "urn:0225e03d-32f0-11de-992b-00145e5790ea"
+        ],
+        "pid_paths": [
+          "uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:0225e03d-32f0-11de-992b-00145e5790ea",
+          "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:0225e03d-32f0-11de-992b-00145e5790ea",
+          "uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:0225e03d-32f0-11de-992b-00145e5790ea",
+          "uuid:71174c16-98ca-4d39-8893-543b6fd2af74/uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:0225e03d-32f0-11de-992b-00145e5790ea",
+          "uuid:9df7d62c-b572-4338-a0d1-b9c63e07a26e/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:0225e03d-32f0-11de-992b-00145e5790ea"
+        ],
+        "root.model": "periodical",
+        "modified": "2023-03-17T12:57:11.730Z",
+        "model": "periodicalvolume",
+        "date.min": "1879-01-01T00:00:00.001Z",
+        "has_tiles": false,
+        "root.title.sort": "MORAVSKA| ORLICE",
+        "part.number.str": "17",
+        "part.number.sort": 17,
+        "indexer_version": 18,
+        "root.title": "Moravská orlice",
+        "indexed": "2023-10-03T15:34:32.519Z",
+        "level": 1,
+        "created": "2014-08-09T08:38:26.102Z",
+        "own_model_path": "periodical/periodicalvolume",
+        "languages.facet": [
+          "cze"
+        ],
+        "date.max": "1879-12-31T23:59:59.999Z",
+        "date_range_end.year": 1879,
+        "licenses": [
+          "public"
+        ],
+        "_version_": 1778749037630980000,
+        "own_parent.model": "periodical",
+        "date.str": "1879",
+        "own_pid_path": "uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:0225e03d-32f0-11de-992b-00145e5790ea",
+        "own_parent.pid": "uuid:02203ad6-32f0-11de-992b-00145e5790ea"
+      },
+      {
+        "root.pid": "uuid:02203ad6-32f0-11de-992b-00145e5790ea",
+        "accessibility": "public",
+        "date_range_start.year": 1880,
+        "own_parent.title": "Moravská orlice",
+        "in_collections": [
+          "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc",
+          "uuid:0be90938-b8af-4b93-b11a-b131de360017",
+          "uuid:9df7d62c-b572-4338-a0d1-b9c63e07a26e",
+          "uuid:71174c16-98ca-4d39-8893-543b6fd2af74"
+        ],
+        "pid": "uuid:0225e03e-32f0-11de-992b-00145e5790ea",
+        "licenses.facet": [
+          "public"
+        ],
+        "rels_ext_index.sort": 17,
+        "id_other": [
+          "urn:0225e03e-32f0-11de-992b-00145e5790ea"
+        ],
+        "pid_paths": [
+          "uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:0225e03e-32f0-11de-992b-00145e5790ea",
+          "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:0225e03e-32f0-11de-992b-00145e5790ea",
+          "uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:0225e03e-32f0-11de-992b-00145e5790ea",
+          "uuid:71174c16-98ca-4d39-8893-543b6fd2af74/uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:0225e03e-32f0-11de-992b-00145e5790ea",
+          "uuid:9df7d62c-b572-4338-a0d1-b9c63e07a26e/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:0225e03e-32f0-11de-992b-00145e5790ea"
+        ],
+        "root.model": "periodical",
+        "modified": "2023-03-17T12:50:12.435Z",
+        "model": "periodicalvolume",
+        "date.min": "1880-01-01T00:00:00.001Z",
+        "has_tiles": false,
+        "root.title.sort": "MORAVSKA| ORLICE",
+        "part.number.str": "18",
+        "part.number.sort": 18,
+        "indexer_version": 18,
+        "root.title": "Moravská orlice",
+        "indexed": "2023-10-03T15:35:53.344Z",
+        "level": 1,
+        "created": "2014-08-07T04:44:52.477Z",
+        "own_model_path": "periodical/periodicalvolume",
+        "languages.facet": [
+          "cze"
+        ],
+        "date.max": "1880-12-31T23:59:59.999Z",
+        "date_range_end.year": 1880,
+        "licenses": [
+          "public"
+        ],
+        "_version_": 1778749122382135300,
+        "own_parent.model": "periodical",
+        "date.str": "1880",
+        "own_pid_path": "uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:0225e03e-32f0-11de-992b-00145e5790ea",
+        "own_parent.pid": "uuid:02203ad6-32f0-11de-992b-00145e5790ea"
+      },
+      {
+        "root.pid": "uuid:02203ad6-32f0-11de-992b-00145e5790ea",
+        "accessibility": "public",
+        "date_range_start.year": 1881,
+        "own_parent.title": "Moravská orlice",
+        "in_collections": [
+          "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc",
+          "uuid:0be90938-b8af-4b93-b11a-b131de360017",
+          "uuid:9df7d62c-b572-4338-a0d1-b9c63e07a26e",
+          "uuid:71174c16-98ca-4d39-8893-543b6fd2af74"
+        ],
+        "pid": "uuid:0225e03f-32f0-11de-992b-00145e5790ea",
+        "licenses.facet": [
+          "public"
+        ],
+        "rels_ext_index.sort": 18,
+        "id_other": [
+          "urn:0225e03f-32f0-11de-992b-00145e5790ea"
+        ],
+        "pid_paths": [
+          "uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:0225e03f-32f0-11de-992b-00145e5790ea",
+          "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:0225e03f-32f0-11de-992b-00145e5790ea",
+          "uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:0225e03f-32f0-11de-992b-00145e5790ea",
+          "uuid:71174c16-98ca-4d39-8893-543b6fd2af74/uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:0225e03f-32f0-11de-992b-00145e5790ea",
+          "uuid:9df7d62c-b572-4338-a0d1-b9c63e07a26e/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:0225e03f-32f0-11de-992b-00145e5790ea"
+        ],
+        "root.model": "periodical",
+        "modified": "2023-03-06T22:43:33.021Z",
+        "model": "periodicalvolume",
+        "date.min": "1881-01-01T00:00:00.001Z",
+        "has_tiles": false,
+        "root.title.sort": "MORAVSKA| ORLICE",
+        "part.number.str": "19",
+        "part.number.sort": 19,
+        "indexer_version": 18,
+        "root.title": "Moravská orlice",
+        "indexed": "2023-10-03T15:37:23.887Z",
+        "level": 1,
+        "created": "2014-08-07T00:41:59.999Z",
+        "own_model_path": "periodical/periodicalvolume",
+        "languages.facet": [
+          "cze"
+        ],
+        "date.max": "1881-12-31T23:59:59.999Z",
+        "date_range_end.year": 1881,
+        "licenses": [
+          "public"
+        ],
+        "_version_": 1778749217323352000,
+        "own_parent.model": "periodical",
+        "date.str": "1881",
+        "own_pid_path": "uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:0225e03f-32f0-11de-992b-00145e5790ea",
+        "own_parent.pid": "uuid:02203ad6-32f0-11de-992b-00145e5790ea"
+      },
+      {
+        "root.pid": "uuid:02203ad6-32f0-11de-992b-00145e5790ea",
+        "accessibility": "public",
+        "date_range_start.year": 1882,
+        "own_parent.title": "Moravská orlice",
+        "in_collections": [
+          "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc",
+          "uuid:0be90938-b8af-4b93-b11a-b131de360017",
+          "uuid:9df7d62c-b572-4338-a0d1-b9c63e07a26e",
+          "uuid:71174c16-98ca-4d39-8893-543b6fd2af74"
+        ],
+        "pid": "uuid:0225e040-32f0-11de-992b-00145e5790ea",
+        "licenses.facet": [
+          "public"
+        ],
+        "rels_ext_index.sort": 19,
+        "id_other": [
+          "urn:0225e040-32f0-11de-992b-00145e5790ea"
+        ],
+        "pid_paths": [
+          "uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:0225e040-32f0-11de-992b-00145e5790ea",
+          "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:0225e040-32f0-11de-992b-00145e5790ea",
+          "uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:0225e040-32f0-11de-992b-00145e5790ea",
+          "uuid:71174c16-98ca-4d39-8893-543b6fd2af74/uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:0225e040-32f0-11de-992b-00145e5790ea",
+          "uuid:9df7d62c-b572-4338-a0d1-b9c63e07a26e/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:0225e040-32f0-11de-992b-00145e5790ea"
+        ],
+        "root.model": "periodical",
+        "modified": "2023-03-17T12:50:26.541Z",
+        "model": "periodicalvolume",
+        "date.min": "1882-01-01T00:00:00.001Z",
+        "has_tiles": false,
+        "root.title.sort": "MORAVSKA| ORLICE",
+        "part.number.str": "20",
+        "part.number.sort": 20,
+        "indexer_version": 18,
+        "root.title": "Moravská orlice",
+        "indexed": "2023-10-03T15:38:57.162Z",
+        "level": 1,
+        "created": "2014-08-07T03:21:44.759Z",
+        "own_model_path": "periodical/periodicalvolume",
+        "languages.facet": [
+          "cze"
+        ],
+        "date.max": "1882-12-31T23:59:59.999Z",
+        "date_range_end.year": 1882,
+        "licenses": [
+          "public"
+        ],
+        "_version_": 1778749315129278500,
+        "own_parent.model": "periodical",
+        "date.str": "1882",
+        "own_pid_path": "uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:0225e040-32f0-11de-992b-00145e5790ea",
+        "own_parent.pid": "uuid:02203ad6-32f0-11de-992b-00145e5790ea"
+      },
+      {
+        "root.pid": "uuid:02203ad6-32f0-11de-992b-00145e5790ea",
+        "accessibility": "public",
+        "date_range_start.year": 1883,
+        "own_parent.title": "Moravská orlice",
+        "in_collections": [
+          "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc",
+          "uuid:0be90938-b8af-4b93-b11a-b131de360017",
+          "uuid:9df7d62c-b572-4338-a0d1-b9c63e07a26e",
+          "uuid:71174c16-98ca-4d39-8893-543b6fd2af74"
+        ],
+        "pid": "uuid:0225e041-32f0-11de-992b-00145e5790ea",
+        "licenses.facet": [
+          "public"
+        ],
+        "rels_ext_index.sort": 20,
+        "id_other": [
+          "urn:0225e041-32f0-11de-992b-00145e5790ea"
+        ],
+        "pid_paths": [
+          "uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:0225e041-32f0-11de-992b-00145e5790ea",
+          "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:0225e041-32f0-11de-992b-00145e5790ea",
+          "uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:0225e041-32f0-11de-992b-00145e5790ea",
+          "uuid:71174c16-98ca-4d39-8893-543b6fd2af74/uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:0225e041-32f0-11de-992b-00145e5790ea",
+          "uuid:9df7d62c-b572-4338-a0d1-b9c63e07a26e/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:0225e041-32f0-11de-992b-00145e5790ea"
+        ],
+        "root.model": "periodical",
+        "modified": "2023-03-17T12:48:44.781Z",
+        "model": "periodicalvolume",
+        "date.min": "1883-01-01T00:00:00.001Z",
+        "has_tiles": false,
+        "root.title.sort": "MORAVSKA| ORLICE",
+        "part.number.str": "21",
+        "part.number.sort": 21,
+        "indexer_version": 18,
+        "root.title": "Moravská orlice",
+        "indexed": "2023-10-03T15:40:45.958Z",
+        "level": 1,
+        "created": "2014-08-09T20:57:42.096Z",
+        "own_model_path": "periodical/periodicalvolume",
+        "languages.facet": [
+          "cze"
+        ],
+        "date.max": "1883-12-31T23:59:59.999Z",
+        "date_range_end.year": 1883,
+        "licenses": [
+          "public"
+        ],
+        "_version_": 1778749429210153000,
+        "own_parent.model": "periodical",
+        "date.str": "1883",
+        "own_pid_path": "uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:0225e041-32f0-11de-992b-00145e5790ea",
+        "own_parent.pid": "uuid:02203ad6-32f0-11de-992b-00145e5790ea"
+      },
+      {
+        "root.pid": "uuid:02203ad6-32f0-11de-992b-00145e5790ea",
+        "accessibility": "public",
+        "date_range_start.year": 1884,
+        "own_parent.title": "Moravská orlice",
+        "in_collections": [
+          "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc",
+          "uuid:0be90938-b8af-4b93-b11a-b131de360017",
+          "uuid:9df7d62c-b572-4338-a0d1-b9c63e07a26e",
+          "uuid:71174c16-98ca-4d39-8893-543b6fd2af74"
+        ],
+        "pid": "uuid:02260752-32f0-11de-992b-00145e5790ea",
+        "licenses.facet": [
+          "public"
+        ],
+        "rels_ext_index.sort": 21,
+        "id_other": [
+          "urn:02260752-32f0-11de-992b-00145e5790ea"
+        ],
+        "pid_paths": [
+          "uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02260752-32f0-11de-992b-00145e5790ea",
+          "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02260752-32f0-11de-992b-00145e5790ea",
+          "uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02260752-32f0-11de-992b-00145e5790ea",
+          "uuid:71174c16-98ca-4d39-8893-543b6fd2af74/uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02260752-32f0-11de-992b-00145e5790ea",
+          "uuid:9df7d62c-b572-4338-a0d1-b9c63e07a26e/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02260752-32f0-11de-992b-00145e5790ea"
+        ],
+        "root.model": "periodical",
+        "modified": "2023-03-17T12:50:09.249Z",
+        "model": "periodicalvolume",
+        "date.min": "1884-01-01T00:00:00.001Z",
+        "has_tiles": false,
+        "root.title.sort": "MORAVSKA| ORLICE",
+        "part.number.str": "22",
+        "part.number.sort": 22,
+        "indexer_version": 18,
+        "root.title": "Moravská orlice",
+        "indexed": "2023-10-03T15:42:20.604Z",
+        "level": 1,
+        "created": "2014-08-08T09:44:56.143Z",
+        "own_model_path": "periodical/periodicalvolume",
+        "languages.facet": [
+          "cze"
+        ],
+        "date.max": "1884-12-31T23:59:59.999Z",
+        "date_range_end.year": 1884,
+        "licenses": [
+          "public"
+        ],
+        "_version_": 1778749528454725600,
+        "own_parent.model": "periodical",
+        "date.str": "1884",
+        "own_pid_path": "uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02260752-32f0-11de-992b-00145e5790ea",
+        "own_parent.pid": "uuid:02203ad6-32f0-11de-992b-00145e5790ea"
+      },
+      {
+        "root.pid": "uuid:02203ad6-32f0-11de-992b-00145e5790ea",
+        "accessibility": "public",
+        "date_range_start.year": 1885,
+        "own_parent.title": "Moravská orlice",
+        "in_collections": [
+          "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc",
+          "uuid:0be90938-b8af-4b93-b11a-b131de360017",
+          "uuid:9df7d62c-b572-4338-a0d1-b9c63e07a26e",
+          "uuid:71174c16-98ca-4d39-8893-543b6fd2af74"
+        ],
+        "pid": "uuid:02260753-32f0-11de-992b-00145e5790ea",
+        "licenses.facet": [
+          "public"
+        ],
+        "rels_ext_index.sort": 22,
+        "id_other": [
+          "urn:02260753-32f0-11de-992b-00145e5790ea"
+        ],
+        "pid_paths": [
+          "uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02260753-32f0-11de-992b-00145e5790ea",
+          "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02260753-32f0-11de-992b-00145e5790ea",
+          "uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02260753-32f0-11de-992b-00145e5790ea",
+          "uuid:71174c16-98ca-4d39-8893-543b6fd2af74/uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02260753-32f0-11de-992b-00145e5790ea",
+          "uuid:9df7d62c-b572-4338-a0d1-b9c63e07a26e/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02260753-32f0-11de-992b-00145e5790ea"
+        ],
+        "root.model": "periodical",
+        "modified": "2023-03-17T12:47:23.754Z",
+        "model": "periodicalvolume",
+        "date.min": "1885-01-01T00:00:00.001Z",
+        "has_tiles": false,
+        "root.title.sort": "MORAVSKA| ORLICE",
+        "part.number.str": "23",
+        "part.number.sort": 23,
+        "indexer_version": 18,
+        "root.title": "Moravská orlice",
+        "indexed": "2023-10-03T15:44:09.454Z",
+        "level": 1,
+        "created": "2014-08-06T23:56:15.684Z",
+        "own_model_path": "periodical/periodicalvolume",
+        "languages.facet": [
+          "cze"
+        ],
+        "date.max": "1885-12-31T23:59:59.999Z",
+        "date_range_end.year": 1885,
+        "licenses": [
+          "public"
+        ],
+        "_version_": 1778749642592223200,
+        "own_parent.model": "periodical",
+        "date.str": "1885",
+        "own_pid_path": "uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02260753-32f0-11de-992b-00145e5790ea",
+        "own_parent.pid": "uuid:02203ad6-32f0-11de-992b-00145e5790ea"
+      },
+      {
+        "root.pid": "uuid:02203ad6-32f0-11de-992b-00145e5790ea",
+        "accessibility": "public",
+        "date_range_start.year": 1886,
+        "own_parent.title": "Moravská orlice",
+        "in_collections": [
+          "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc",
+          "uuid:0be90938-b8af-4b93-b11a-b131de360017",
+          "uuid:9df7d62c-b572-4338-a0d1-b9c63e07a26e",
+          "uuid:71174c16-98ca-4d39-8893-543b6fd2af74"
+        ],
+        "pid": "uuid:02260754-32f0-11de-992b-00145e5790ea",
+        "licenses.facet": [
+          "public"
+        ],
+        "rels_ext_index.sort": 23,
+        "id_other": [
+          "urn:02260754-32f0-11de-992b-00145e5790ea"
+        ],
+        "pid_paths": [
+          "uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02260754-32f0-11de-992b-00145e5790ea",
+          "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02260754-32f0-11de-992b-00145e5790ea",
+          "uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02260754-32f0-11de-992b-00145e5790ea",
+          "uuid:71174c16-98ca-4d39-8893-543b6fd2af74/uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02260754-32f0-11de-992b-00145e5790ea",
+          "uuid:9df7d62c-b572-4338-a0d1-b9c63e07a26e/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02260754-32f0-11de-992b-00145e5790ea"
+        ],
+        "root.model": "periodical",
+        "modified": "2023-03-17T12:50:02.883Z",
+        "model": "periodicalvolume",
+        "date.min": "1886-01-01T00:00:00.001Z",
+        "has_tiles": false,
+        "root.title.sort": "MORAVSKA| ORLICE",
+        "part.number.str": "24",
+        "part.number.sort": 24,
+        "indexer_version": 18,
+        "root.title": "Moravská orlice",
+        "indexed": "2023-10-03T15:45:53.812Z",
+        "level": 1,
+        "created": "2014-08-07T12:55:44.643Z",
+        "own_model_path": "periodical/periodicalvolume",
+        "languages.facet": [
+          "cze"
+        ],
+        "date.max": "1886-12-31T23:59:59.999Z",
+        "date_range_end.year": 1886,
+        "licenses": [
+          "public"
+        ],
+        "_version_": 1778749752019517400,
+        "own_parent.model": "periodical",
+        "date.str": "1886",
+        "own_pid_path": "uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02260754-32f0-11de-992b-00145e5790ea",
+        "own_parent.pid": "uuid:02203ad6-32f0-11de-992b-00145e5790ea"
+      },
+      {
+        "root.pid": "uuid:02203ad6-32f0-11de-992b-00145e5790ea",
+        "accessibility": "public",
+        "date_range_start.year": 1887,
+        "own_parent.title": "Moravská orlice",
+        "in_collections": [
+          "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc",
+          "uuid:0be90938-b8af-4b93-b11a-b131de360017",
+          "uuid:9df7d62c-b572-4338-a0d1-b9c63e07a26e",
+          "uuid:71174c16-98ca-4d39-8893-543b6fd2af74"
+        ],
+        "pid": "uuid:02260755-32f0-11de-992b-00145e5790ea",
+        "licenses.facet": [
+          "public"
+        ],
+        "rels_ext_index.sort": 24,
+        "id_other": [
+          "urn:02260755-32f0-11de-992b-00145e5790ea"
+        ],
+        "pid_paths": [
+          "uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02260755-32f0-11de-992b-00145e5790ea",
+          "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02260755-32f0-11de-992b-00145e5790ea",
+          "uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02260755-32f0-11de-992b-00145e5790ea",
+          "uuid:71174c16-98ca-4d39-8893-543b6fd2af74/uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02260755-32f0-11de-992b-00145e5790ea",
+          "uuid:9df7d62c-b572-4338-a0d1-b9c63e07a26e/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02260755-32f0-11de-992b-00145e5790ea"
+        ],
+        "root.model": "periodical",
+        "modified": "2023-03-17T12:47:34.622Z",
+        "model": "periodicalvolume",
+        "date.min": "1887-01-01T00:00:00.001Z",
+        "has_tiles": false,
+        "root.title.sort": "MORAVSKA| ORLICE",
+        "part.number.str": "25",
+        "part.number.sort": 25,
+        "indexer_version": 18,
+        "root.title": "Moravská orlice",
+        "indexed": "2023-10-03T15:47:37.490Z",
+        "level": 1,
+        "created": "2014-08-09T13:44:34.290Z",
+        "own_model_path": "periodical/periodicalvolume",
+        "languages.facet": [
+          "cze"
+        ],
+        "date.max": "1887-12-31T23:59:59.999Z",
+        "date_range_end.year": 1887,
+        "licenses": [
+          "public"
+        ],
+        "_version_": 1778749860732731400,
+        "own_parent.model": "periodical",
+        "date.str": "1887",
+        "own_pid_path": "uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02260755-32f0-11de-992b-00145e5790ea",
+        "own_parent.pid": "uuid:02203ad6-32f0-11de-992b-00145e5790ea"
+      },
+      {
+        "root.pid": "uuid:02203ad6-32f0-11de-992b-00145e5790ea",
+        "accessibility": "public",
+        "date_range_start.year": 1888,
+        "own_parent.title": "Moravská orlice",
+        "in_collections": [
+          "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc",
+          "uuid:0be90938-b8af-4b93-b11a-b131de360017",
+          "uuid:9df7d62c-b572-4338-a0d1-b9c63e07a26e",
+          "uuid:71174c16-98ca-4d39-8893-543b6fd2af74"
+        ],
+        "pid": "uuid:02260756-32f0-11de-992b-00145e5790ea",
+        "licenses.facet": [
+          "public"
+        ],
+        "rels_ext_index.sort": 25,
+        "id_other": [
+          "urn:02260756-32f0-11de-992b-00145e5790ea"
+        ],
+        "pid_paths": [
+          "uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02260756-32f0-11de-992b-00145e5790ea",
+          "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02260756-32f0-11de-992b-00145e5790ea",
+          "uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02260756-32f0-11de-992b-00145e5790ea",
+          "uuid:71174c16-98ca-4d39-8893-543b6fd2af74/uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02260756-32f0-11de-992b-00145e5790ea",
+          "uuid:9df7d62c-b572-4338-a0d1-b9c63e07a26e/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02260756-32f0-11de-992b-00145e5790ea"
+        ],
+        "root.model": "periodical",
+        "modified": "2023-03-17T12:48:51.618Z",
+        "model": "periodicalvolume",
+        "date.min": "1888-01-01T00:00:00.001Z",
+        "has_tiles": false,
+        "root.title.sort": "MORAVSKA| ORLICE",
+        "part.number.str": "26",
+        "part.number.sort": 26,
+        "indexer_version": 18,
+        "root.title": "Moravská orlice",
+        "indexed": "2023-10-03T15:48:52.145Z",
+        "level": 1,
+        "created": "2014-08-09T01:33:17.182Z",
+        "own_model_path": "periodical/periodicalvolume",
+        "languages.facet": [
+          "cze"
+        ],
+        "date.max": "1888-12-31T23:59:59.999Z",
+        "date_range_end.year": 1888,
+        "licenses": [
+          "public"
+        ],
+        "_version_": 1778749939014172700,
+        "own_parent.model": "periodical",
+        "date.str": "1888",
+        "own_pid_path": "uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02260756-32f0-11de-992b-00145e5790ea",
+        "own_parent.pid": "uuid:02203ad6-32f0-11de-992b-00145e5790ea"
+      },
+      {
+        "root.pid": "uuid:02203ad6-32f0-11de-992b-00145e5790ea",
+        "accessibility": "public",
+        "date_range_start.year": 1889,
+        "own_parent.title": "Moravská orlice",
+        "in_collections": [
+          "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc",
+          "uuid:0be90938-b8af-4b93-b11a-b131de360017",
+          "uuid:9df7d62c-b572-4338-a0d1-b9c63e07a26e",
+          "uuid:71174c16-98ca-4d39-8893-543b6fd2af74"
+        ],
+        "pid": "uuid:02260757-32f0-11de-992b-00145e5790ea",
+        "licenses.facet": [
+          "public"
+        ],
+        "rels_ext_index.sort": 26,
+        "id_other": [
+          "urn:02260757-32f0-11de-992b-00145e5790ea"
+        ],
+        "pid_paths": [
+          "uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02260757-32f0-11de-992b-00145e5790ea",
+          "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02260757-32f0-11de-992b-00145e5790ea",
+          "uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02260757-32f0-11de-992b-00145e5790ea",
+          "uuid:71174c16-98ca-4d39-8893-543b6fd2af74/uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02260757-32f0-11de-992b-00145e5790ea",
+          "uuid:9df7d62c-b572-4338-a0d1-b9c63e07a26e/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02260757-32f0-11de-992b-00145e5790ea"
+        ],
+        "root.model": "periodical",
+        "modified": "2023-03-17T12:51:35.182Z",
+        "model": "periodicalvolume",
+        "date.min": "1889-01-01T00:00:00.001Z",
+        "has_tiles": false,
+        "root.title.sort": "MORAVSKA| ORLICE",
+        "part.number.str": "27",
+        "part.number.sort": 27,
+        "indexer_version": 18,
+        "root.title": "Moravská orlice",
+        "indexed": "2023-10-03T15:50:08.376Z",
+        "level": 1,
+        "created": "2014-08-09T02:34:06.476Z",
+        "own_model_path": "periodical/periodicalvolume",
+        "languages.facet": [
+          "cze"
+        ],
+        "date.max": "1889-12-31T23:59:59.999Z",
+        "date_range_end.year": 1889,
+        "licenses": [
+          "public"
+        ],
+        "_version_": 1778750018948169700,
+        "own_parent.model": "periodical",
+        "date.str": "1889",
+        "own_pid_path": "uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02260757-32f0-11de-992b-00145e5790ea",
+        "own_parent.pid": "uuid:02203ad6-32f0-11de-992b-00145e5790ea"
+      },
+      {
+        "root.pid": "uuid:02203ad6-32f0-11de-992b-00145e5790ea",
+        "accessibility": "public",
+        "date_range_start.year": 1890,
+        "own_parent.title": "Moravská orlice",
+        "in_collections": [
+          "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc",
+          "uuid:0be90938-b8af-4b93-b11a-b131de360017",
+          "uuid:9df7d62c-b572-4338-a0d1-b9c63e07a26e",
+          "uuid:71174c16-98ca-4d39-8893-543b6fd2af74"
+        ],
+        "pid": "uuid:02262e68-32f0-11de-992b-00145e5790ea",
+        "licenses.facet": [
+          "public"
+        ],
+        "rels_ext_index.sort": 27,
+        "id_other": [
+          "urn:02262e68-32f0-11de-992b-00145e5790ea"
+        ],
+        "pid_paths": [
+          "uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02262e68-32f0-11de-992b-00145e5790ea",
+          "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02262e68-32f0-11de-992b-00145e5790ea",
+          "uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02262e68-32f0-11de-992b-00145e5790ea",
+          "uuid:71174c16-98ca-4d39-8893-543b6fd2af74/uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02262e68-32f0-11de-992b-00145e5790ea",
+          "uuid:9df7d62c-b572-4338-a0d1-b9c63e07a26e/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02262e68-32f0-11de-992b-00145e5790ea"
+        ],
+        "root.model": "periodical",
+        "modified": "2023-03-17T12:50:29.787Z",
+        "model": "periodicalvolume",
+        "date.min": "1890-01-01T00:00:00.001Z",
+        "has_tiles": false,
+        "root.title.sort": "MORAVSKA| ORLICE",
+        "part.number.str": "28",
+        "part.number.sort": 28,
+        "indexer_version": 18,
+        "root.title": "Moravská orlice",
+        "indexed": "2023-10-03T15:51:57.862Z",
+        "level": 1,
+        "created": "2014-08-09T17:22:16.343Z",
+        "own_model_path": "periodical/periodicalvolume",
+        "languages.facet": [
+          "cze"
+        ],
+        "date.max": "1890-12-31T23:59:59.999Z",
+        "date_range_end.year": 1890,
+        "licenses": [
+          "public"
+        ],
+        "_version_": 1778750133753610200,
+        "own_parent.model": "periodical",
+        "date.str": "1890",
+        "own_pid_path": "uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02262e68-32f0-11de-992b-00145e5790ea",
+        "own_parent.pid": "uuid:02203ad6-32f0-11de-992b-00145e5790ea"
+      },
+      {
+        "root.pid": "uuid:02203ad6-32f0-11de-992b-00145e5790ea",
+        "accessibility": "public",
+        "date_range_start.year": 1891,
+        "own_parent.title": "Moravská orlice",
+        "in_collections": [
+          "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc",
+          "uuid:0be90938-b8af-4b93-b11a-b131de360017",
+          "uuid:9df7d62c-b572-4338-a0d1-b9c63e07a26e",
+          "uuid:71174c16-98ca-4d39-8893-543b6fd2af74"
+        ],
+        "pid": "uuid:02262e69-32f0-11de-992b-00145e5790ea",
+        "licenses.facet": [
+          "public"
+        ],
+        "rels_ext_index.sort": 28,
+        "id_other": [
+          "urn:02262e69-32f0-11de-992b-00145e5790ea"
+        ],
+        "pid_paths": [
+          "uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02262e69-32f0-11de-992b-00145e5790ea",
+          "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02262e69-32f0-11de-992b-00145e5790ea",
+          "uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02262e69-32f0-11de-992b-00145e5790ea",
+          "uuid:71174c16-98ca-4d39-8893-543b6fd2af74/uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02262e69-32f0-11de-992b-00145e5790ea",
+          "uuid:9df7d62c-b572-4338-a0d1-b9c63e07a26e/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02262e69-32f0-11de-992b-00145e5790ea"
+        ],
+        "root.model": "periodical",
+        "modified": "2023-03-17T12:51:38.704Z",
+        "model": "periodicalvolume",
+        "date.min": "1891-01-01T00:00:00.001Z",
+        "has_tiles": false,
+        "root.title.sort": "MORAVSKA| ORLICE",
+        "part.number.str": "29",
+        "part.number.sort": 29,
+        "indexer_version": 18,
+        "root.title": "Moravská orlice",
+        "indexed": "2023-10-03T15:53:51.316Z",
+        "level": 1,
+        "created": "2014-08-08T04:50:11.176Z",
+        "own_model_path": "periodical/periodicalvolume",
+        "languages.facet": [
+          "cze"
+        ],
+        "date.max": "1891-12-31T23:59:59.999Z",
+        "date_range_end.year": 1891,
+        "licenses": [
+          "public"
+        ],
+        "_version_": 1778750252718751700,
+        "own_parent.model": "periodical",
+        "date.str": "1891",
+        "own_pid_path": "uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02262e69-32f0-11de-992b-00145e5790ea",
+        "own_parent.pid": "uuid:02203ad6-32f0-11de-992b-00145e5790ea"
+      },
+      {
+        "root.pid": "uuid:02203ad6-32f0-11de-992b-00145e5790ea",
+        "accessibility": "public",
+        "date_range_start.year": 1892,
+        "own_parent.title": "Moravská orlice",
+        "in_collections": [
+          "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc",
+          "uuid:0be90938-b8af-4b93-b11a-b131de360017",
+          "uuid:9df7d62c-b572-4338-a0d1-b9c63e07a26e",
+          "uuid:71174c16-98ca-4d39-8893-543b6fd2af74"
+        ],
+        "pid": "uuid:02262e6a-32f0-11de-992b-00145e5790ea",
+        "licenses.facet": [
+          "public"
+        ],
+        "rels_ext_index.sort": 29,
+        "id_other": [
+          "urn:02262e6a-32f0-11de-992b-00145e5790ea"
+        ],
+        "pid_paths": [
+          "uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02262e6a-32f0-11de-992b-00145e5790ea",
+          "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02262e6a-32f0-11de-992b-00145e5790ea",
+          "uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02262e6a-32f0-11de-992b-00145e5790ea",
+          "uuid:71174c16-98ca-4d39-8893-543b6fd2af74/uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02262e6a-32f0-11de-992b-00145e5790ea",
+          "uuid:9df7d62c-b572-4338-a0d1-b9c63e07a26e/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02262e6a-32f0-11de-992b-00145e5790ea"
+        ],
+        "root.model": "periodical",
+        "modified": "2023-03-17T12:51:48.935Z",
+        "model": "periodicalvolume",
+        "date.min": "1892-01-01T00:00:00.001Z",
+        "has_tiles": false,
+        "root.title.sort": "MORAVSKA| ORLICE",
+        "part.number.str": "30",
+        "part.number.sort": 30,
+        "indexer_version": 18,
+        "root.title": "Moravská orlice",
+        "indexed": "2023-10-03T15:55:08.448Z",
+        "level": 1,
+        "created": "2014-08-07T05:46:48.408Z",
+        "own_model_path": "periodical/periodicalvolume",
+        "languages.facet": [
+          "cze"
+        ],
+        "date.max": "1892-12-31T23:59:59.999Z",
+        "date_range_end.year": 1892,
+        "licenses": [
+          "public"
+        ],
+        "_version_": 1778750333598564400,
+        "own_parent.model": "periodical",
+        "date.str": "1892",
+        "own_pid_path": "uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02262e6a-32f0-11de-992b-00145e5790ea",
+        "own_parent.pid": "uuid:02203ad6-32f0-11de-992b-00145e5790ea"
+      },
+      {
+        "root.pid": "uuid:02203ad6-32f0-11de-992b-00145e5790ea",
+        "accessibility": "public",
+        "date_range_start.year": 1893,
+        "own_parent.title": "Moravská orlice",
+        "in_collections": [
+          "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc",
+          "uuid:0be90938-b8af-4b93-b11a-b131de360017",
+          "uuid:9df7d62c-b572-4338-a0d1-b9c63e07a26e",
+          "uuid:71174c16-98ca-4d39-8893-543b6fd2af74"
+        ],
+        "pid": "uuid:02262e6b-32f0-11de-992b-00145e5790ea",
+        "licenses.facet": [
+          "public"
+        ],
+        "rels_ext_index.sort": 30,
+        "id_other": [
+          "urn:02262e6b-32f0-11de-992b-00145e5790ea"
+        ],
+        "pid_paths": [
+          "uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02262e6b-32f0-11de-992b-00145e5790ea",
+          "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02262e6b-32f0-11de-992b-00145e5790ea",
+          "uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02262e6b-32f0-11de-992b-00145e5790ea",
+          "uuid:71174c16-98ca-4d39-8893-543b6fd2af74/uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02262e6b-32f0-11de-992b-00145e5790ea",
+          "uuid:9df7d62c-b572-4338-a0d1-b9c63e07a26e/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02262e6b-32f0-11de-992b-00145e5790ea"
+        ],
+        "root.model": "periodical",
+        "modified": "2023-03-17T12:51:41.714Z",
+        "model": "periodicalvolume",
+        "date.min": "1893-01-01T00:00:00.001Z",
+        "has_tiles": false,
+        "root.title.sort": "MORAVSKA| ORLICE",
+        "part.number.str": "31",
+        "part.number.sort": 31,
+        "indexer_version": 18,
+        "root.title": "Moravská orlice",
+        "indexed": "2023-10-03T15:56:32.693Z",
+        "level": 1,
+        "created": "2014-08-08T08:02:49.933Z",
+        "own_model_path": "periodical/periodicalvolume",
+        "languages.facet": [
+          "cze"
+        ],
+        "date.max": "1893-12-31T23:59:59.999Z",
+        "date_range_end.year": 1893,
+        "licenses": [
+          "public"
+        ],
+        "_version_": 1778750421934801000,
+        "own_parent.model": "periodical",
+        "date.str": "1893",
+        "own_pid_path": "uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02262e6b-32f0-11de-992b-00145e5790ea",
+        "own_parent.pid": "uuid:02203ad6-32f0-11de-992b-00145e5790ea"
+      },
+      {
+        "root.pid": "uuid:02203ad6-32f0-11de-992b-00145e5790ea",
+        "accessibility": "public",
+        "date_range_start.year": 1894,
+        "own_parent.title": "Moravská orlice",
+        "in_collections": [
+          "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc",
+          "uuid:0be90938-b8af-4b93-b11a-b131de360017",
+          "uuid:9df7d62c-b572-4338-a0d1-b9c63e07a26e",
+          "uuid:71174c16-98ca-4d39-8893-543b6fd2af74"
+        ],
+        "pid": "uuid:02262e6c-32f0-11de-992b-00145e5790ea",
+        "licenses.facet": [
+          "public"
+        ],
+        "rels_ext_index.sort": 31,
+        "id_other": [
+          "urn:02262e6c-32f0-11de-992b-00145e5790ea"
+        ],
+        "pid_paths": [
+          "uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02262e6c-32f0-11de-992b-00145e5790ea",
+          "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02262e6c-32f0-11de-992b-00145e5790ea",
+          "uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02262e6c-32f0-11de-992b-00145e5790ea",
+          "uuid:71174c16-98ca-4d39-8893-543b6fd2af74/uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02262e6c-32f0-11de-992b-00145e5790ea",
+          "uuid:9df7d62c-b572-4338-a0d1-b9c63e07a26e/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02262e6c-32f0-11de-992b-00145e5790ea"
+        ],
+        "root.model": "periodical",
+        "modified": "2023-03-17T12:53:30.798Z",
+        "model": "periodicalvolume",
+        "date.min": "1894-01-01T00:00:00.001Z",
+        "has_tiles": false,
+        "root.title.sort": "MORAVSKA| ORLICE",
+        "part.number.str": "32",
+        "part.number.sort": 32,
+        "indexer_version": 18,
+        "root.title": "Moravská orlice",
+        "indexed": "2023-10-03T15:57:58.935Z",
+        "level": 1,
+        "created": "2014-08-07T11:56:31.243Z",
+        "own_model_path": "periodical/periodicalvolume",
+        "languages.facet": [
+          "cze"
+        ],
+        "date.max": "1894-12-31T23:59:59.999Z",
+        "date_range_end.year": 1894,
+        "licenses": [
+          "public"
+        ],
+        "_version_": 1778750512366092300,
+        "own_parent.model": "periodical",
+        "date.str": "1894",
+        "own_pid_path": "uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02262e6c-32f0-11de-992b-00145e5790ea",
+        "own_parent.pid": "uuid:02203ad6-32f0-11de-992b-00145e5790ea"
+      },
+      {
+        "root.pid": "uuid:02203ad6-32f0-11de-992b-00145e5790ea",
+        "accessibility": "public",
+        "date_range_start.year": 1895,
+        "own_parent.title": "Moravská orlice",
+        "in_collections": [
+          "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc",
+          "uuid:0be90938-b8af-4b93-b11a-b131de360017",
+          "uuid:9df7d62c-b572-4338-a0d1-b9c63e07a26e",
+          "uuid:71174c16-98ca-4d39-8893-543b6fd2af74"
+        ],
+        "pid": "uuid:0226557d-32f0-11de-992b-00145e5790ea",
+        "licenses.facet": [
+          "public"
+        ],
+        "rels_ext_index.sort": 32,
+        "id_other": [
+          "urn:0226557d-32f0-11de-992b-00145e5790ea"
+        ],
+        "pid_paths": [
+          "uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:0226557d-32f0-11de-992b-00145e5790ea",
+          "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:0226557d-32f0-11de-992b-00145e5790ea",
+          "uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:0226557d-32f0-11de-992b-00145e5790ea",
+          "uuid:71174c16-98ca-4d39-8893-543b6fd2af74/uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:0226557d-32f0-11de-992b-00145e5790ea",
+          "uuid:9df7d62c-b572-4338-a0d1-b9c63e07a26e/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:0226557d-32f0-11de-992b-00145e5790ea"
+        ],
+        "root.model": "periodical",
+        "modified": "2023-03-17T12:53:10.380Z",
+        "model": "periodicalvolume",
+        "date.min": "1895-01-01T00:00:00.001Z",
+        "has_tiles": false,
+        "root.title.sort": "MORAVSKA| ORLICE",
+        "part.number.str": "33",
+        "part.number.sort": 33,
+        "indexer_version": 18,
+        "root.title": "Moravská orlice",
+        "indexed": "2023-10-03T15:59:21.550Z",
+        "level": 1,
+        "created": "2014-08-08T10:43:56.371Z",
+        "own_model_path": "periodical/periodicalvolume",
+        "languages.facet": [
+          "cze"
+        ],
+        "date.max": "1895-12-31T23:59:59.999Z",
+        "date_range_end.year": 1895,
+        "licenses": [
+          "public"
+        ],
+        "_version_": 1778750598994198500,
+        "own_parent.model": "periodical",
+        "date.str": "1895",
+        "own_pid_path": "uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:0226557d-32f0-11de-992b-00145e5790ea",
+        "own_parent.pid": "uuid:02203ad6-32f0-11de-992b-00145e5790ea"
+      },
+      {
+        "root.pid": "uuid:02203ad6-32f0-11de-992b-00145e5790ea",
+        "accessibility": "public",
+        "date_range_start.year": 1896,
+        "own_parent.title": "Moravská orlice",
+        "in_collections": [
+          "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc",
+          "uuid:0be90938-b8af-4b93-b11a-b131de360017",
+          "uuid:9df7d62c-b572-4338-a0d1-b9c63e07a26e",
+          "uuid:71174c16-98ca-4d39-8893-543b6fd2af74"
+        ],
+        "pid": "uuid:0226557e-32f0-11de-992b-00145e5790ea",
+        "licenses.facet": [
+          "public"
+        ],
+        "rels_ext_index.sort": 33,
+        "id_other": [
+          "urn:0226557e-32f0-11de-992b-00145e5790ea"
+        ],
+        "pid_paths": [
+          "uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:0226557e-32f0-11de-992b-00145e5790ea",
+          "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:0226557e-32f0-11de-992b-00145e5790ea",
+          "uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:0226557e-32f0-11de-992b-00145e5790ea",
+          "uuid:71174c16-98ca-4d39-8893-543b6fd2af74/uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:0226557e-32f0-11de-992b-00145e5790ea",
+          "uuid:9df7d62c-b572-4338-a0d1-b9c63e07a26e/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:0226557e-32f0-11de-992b-00145e5790ea"
+        ],
+        "root.model": "periodical",
+        "modified": "2023-03-17T12:53:07.101Z",
+        "model": "periodicalvolume",
+        "date.min": "1896-01-01T00:00:00.001Z",
+        "has_tiles": false,
+        "root.title.sort": "MORAVSKA| ORLICE",
+        "part.number.str": "34",
+        "part.number.sort": 34,
+        "indexer_version": 18,
+        "root.title": "Moravská orlice",
+        "indexed": "2025-02-06T23:13:24.408Z",
+        "level": 1,
+        "created": "2014-08-09T09:47:20.030Z",
+        "own_model_path": "periodical/periodicalvolume",
+        "languages.facet": [
+          "cze"
+        ],
+        "date.max": "1896-12-31T23:59:59.999Z",
+        "date_range_end.year": 1896,
+        "licenses": [
+          "public"
+        ],
+        "_version_": 1823351614378868700,
+        "own_parent.model": "periodical",
+        "date.str": "1896",
+        "own_pid_path": "uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:0226557e-32f0-11de-992b-00145e5790ea",
+        "own_parent.pid": "uuid:02203ad6-32f0-11de-992b-00145e5790ea"
+      },
+      {
+        "root.pid": "uuid:02203ad6-32f0-11de-992b-00145e5790ea",
+        "accessibility": "public",
+        "date_range_start.year": 1897,
+        "own_parent.title": "Moravská orlice",
+        "in_collections": [
+          "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc",
+          "uuid:0be90938-b8af-4b93-b11a-b131de360017",
+          "uuid:9df7d62c-b572-4338-a0d1-b9c63e07a26e",
+          "uuid:71174c16-98ca-4d39-8893-543b6fd2af74"
+        ],
+        "pid": "uuid:0226557f-32f0-11de-992b-00145e5790ea",
+        "licenses.facet": [
+          "public"
+        ],
+        "rels_ext_index.sort": 34,
+        "id_other": [
+          "urn:0226557f-32f0-11de-992b-00145e5790ea"
+        ],
+        "pid_paths": [
+          "uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:0226557f-32f0-11de-992b-00145e5790ea",
+          "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:0226557f-32f0-11de-992b-00145e5790ea",
+          "uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:0226557f-32f0-11de-992b-00145e5790ea",
+          "uuid:71174c16-98ca-4d39-8893-543b6fd2af74/uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:0226557f-32f0-11de-992b-00145e5790ea",
+          "uuid:9df7d62c-b572-4338-a0d1-b9c63e07a26e/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:0226557f-32f0-11de-992b-00145e5790ea"
+        ],
+        "root.model": "periodical",
+        "modified": "2023-03-17T12:52:32.924Z",
+        "model": "periodicalvolume",
+        "date.min": "1897-01-01T00:00:00.001Z",
+        "has_tiles": false,
+        "root.title.sort": "MORAVSKA| ORLICE",
+        "part.number.str": "35",
+        "part.number.sort": 35,
+        "indexer_version": 18,
+        "root.title": "Moravská orlice",
+        "indexed": "2023-10-03T16:02:53.483Z",
+        "level": 1,
+        "created": "2014-08-09T16:19:50.382Z",
+        "own_model_path": "periodical/periodicalvolume",
+        "languages.facet": [
+          "cze"
+        ],
+        "date.max": "1897-12-31T23:59:59.999Z",
+        "date_range_end.year": 1897,
+        "licenses": [
+          "public"
+        ],
+        "_version_": 1778750821221007400,
+        "own_parent.model": "periodical",
+        "date.str": "1897",
+        "own_pid_path": "uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:0226557f-32f0-11de-992b-00145e5790ea",
+        "own_parent.pid": "uuid:02203ad6-32f0-11de-992b-00145e5790ea"
+      },
+      {
+        "root.pid": "uuid:02203ad6-32f0-11de-992b-00145e5790ea",
+        "accessibility": "public",
+        "date_range_start.year": 1898,
+        "own_parent.title": "Moravská orlice",
+        "in_collections": [
+          "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc",
+          "uuid:0be90938-b8af-4b93-b11a-b131de360017",
+          "uuid:9df7d62c-b572-4338-a0d1-b9c63e07a26e",
+          "uuid:71174c16-98ca-4d39-8893-543b6fd2af74"
+        ],
+        "pid": "uuid:02265580-32f0-11de-992b-00145e5790ea",
+        "licenses.facet": [
+          "public"
+        ],
+        "rels_ext_index.sort": 35,
+        "id_other": [
+          "urn:02265580-32f0-11de-992b-00145e5790ea"
+        ],
+        "pid_paths": [
+          "uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02265580-32f0-11de-992b-00145e5790ea",
+          "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02265580-32f0-11de-992b-00145e5790ea",
+          "uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02265580-32f0-11de-992b-00145e5790ea",
+          "uuid:71174c16-98ca-4d39-8893-543b6fd2af74/uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02265580-32f0-11de-992b-00145e5790ea",
+          "uuid:9df7d62c-b572-4338-a0d1-b9c63e07a26e/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02265580-32f0-11de-992b-00145e5790ea"
+        ],
+        "root.model": "periodical",
+        "modified": "2023-03-17T12:53:00.507Z",
+        "model": "periodicalvolume",
+        "date.min": "1898-01-01T00:00:00.001Z",
+        "has_tiles": false,
+        "root.title.sort": "MORAVSKA| ORLICE",
+        "part.number.str": "36",
+        "part.number.sort": 36,
+        "indexer_version": 18,
+        "root.title": "Moravská orlice",
+        "indexed": "2023-10-03T16:04:51.102Z",
+        "level": 1,
+        "created": "2014-08-07T20:26:47.016Z",
+        "own_model_path": "periodical/periodicalvolume",
+        "languages.facet": [
+          "cze"
+        ],
+        "date.max": "1898-12-31T23:59:59.999Z",
+        "date_range_end.year": 1898,
+        "licenses": [
+          "public"
+        ],
+        "_version_": 1778750944555565000,
+        "own_parent.model": "periodical",
+        "date.str": "1898",
+        "own_pid_path": "uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02265580-32f0-11de-992b-00145e5790ea",
+        "own_parent.pid": "uuid:02203ad6-32f0-11de-992b-00145e5790ea"
+      },
+      {
+        "root.pid": "uuid:02203ad6-32f0-11de-992b-00145e5790ea",
+        "accessibility": "public",
+        "date_range_start.year": 1899,
+        "own_parent.title": "Moravská orlice",
+        "in_collections": [
+          "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc",
+          "uuid:0be90938-b8af-4b93-b11a-b131de360017",
+          "uuid:9df7d62c-b572-4338-a0d1-b9c63e07a26e",
+          "uuid:71174c16-98ca-4d39-8893-543b6fd2af74"
+        ],
+        "pid": "uuid:02265581-32f0-11de-992b-00145e5790ea",
+        "licenses.facet": [
+          "public"
+        ],
+        "rels_ext_index.sort": 36,
+        "id_other": [
+          "urn:02265581-32f0-11de-992b-00145e5790ea"
+        ],
+        "pid_paths": [
+          "uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02265581-32f0-11de-992b-00145e5790ea",
+          "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02265581-32f0-11de-992b-00145e5790ea",
+          "uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02265581-32f0-11de-992b-00145e5790ea",
+          "uuid:71174c16-98ca-4d39-8893-543b6fd2af74/uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02265581-32f0-11de-992b-00145e5790ea",
+          "uuid:9df7d62c-b572-4338-a0d1-b9c63e07a26e/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02265581-32f0-11de-992b-00145e5790ea"
+        ],
+        "root.model": "periodical",
+        "modified": "2023-03-17T12:53:54.207Z",
+        "model": "periodicalvolume",
+        "date.min": "1899-01-01T00:00:00.001Z",
+        "has_tiles": false,
+        "root.title.sort": "MORAVSKA| ORLICE",
+        "part.number.str": "37",
+        "part.number.sort": 37,
+        "indexer_version": 18,
+        "root.title": "Moravská orlice",
+        "indexed": "2023-10-03T16:07:02.147Z",
+        "level": 1,
+        "created": "2014-08-23T01:34:31.191Z",
+        "own_model_path": "periodical/periodicalvolume",
+        "languages.facet": [
+          "cze"
+        ],
+        "date.max": "1899-12-31T23:59:59.999Z",
+        "date_range_end.year": 1899,
+        "licenses": [
+          "public"
+        ],
+        "_version_": 1778751081966207000,
+        "own_parent.model": "periodical",
+        "date.str": "1899",
+        "own_pid_path": "uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02265581-32f0-11de-992b-00145e5790ea",
+        "own_parent.pid": "uuid:02203ad6-32f0-11de-992b-00145e5790ea"
+      },
+      {
+        "root.pid": "uuid:02203ad6-32f0-11de-992b-00145e5790ea",
+        "accessibility": "public",
+        "date_range_start.year": 1900,
+        "own_parent.title": "Moravská orlice",
+        "in_collections": [
+          "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc",
+          "uuid:0be90938-b8af-4b93-b11a-b131de360017",
+          "uuid:9df7d62c-b572-4338-a0d1-b9c63e07a26e",
+          "uuid:71174c16-98ca-4d39-8893-543b6fd2af74"
+        ],
+        "pid": "uuid:02265582-32f0-11de-992b-00145e5790ea",
+        "licenses.facet": [
+          "public"
+        ],
+        "rels_ext_index.sort": 37,
+        "id_other": [
+          "urn:02265582-32f0-11de-992b-00145e5790ea"
+        ],
+        "pid_paths": [
+          "uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02265582-32f0-11de-992b-00145e5790ea",
+          "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02265582-32f0-11de-992b-00145e5790ea",
+          "uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02265582-32f0-11de-992b-00145e5790ea",
+          "uuid:71174c16-98ca-4d39-8893-543b6fd2af74/uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02265582-32f0-11de-992b-00145e5790ea",
+          "uuid:9df7d62c-b572-4338-a0d1-b9c63e07a26e/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02265582-32f0-11de-992b-00145e5790ea"
+        ],
+        "root.model": "periodical",
+        "modified": "2023-03-06T22:43:55.424Z",
+        "model": "periodicalvolume",
+        "date.min": "1900-01-01T00:00:00.001Z",
+        "has_tiles": false,
+        "root.title.sort": "MORAVSKA| ORLICE",
+        "part.number.str": "38",
+        "part.number.sort": 38,
+        "indexer_version": 18,
+        "root.title": "Moravská orlice",
+        "indexed": "2023-10-03T16:09:12.731Z",
+        "level": 1,
+        "created": "2014-08-21T16:36:11.495Z",
+        "own_model_path": "periodical/periodicalvolume",
+        "languages.facet": [
+          "cze"
+        ],
+        "date.max": "1900-12-31T23:59:59.999Z",
+        "date_range_end.year": 1900,
+        "licenses": [
+          "public"
+        ],
+        "_version_": 1778751218892406800,
+        "own_parent.model": "periodical",
+        "date.str": "1900",
+        "own_pid_path": "uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02265582-32f0-11de-992b-00145e5790ea",
+        "own_parent.pid": "uuid:02203ad6-32f0-11de-992b-00145e5790ea"
+      },
+      {
+        "root.pid": "uuid:02203ad6-32f0-11de-992b-00145e5790ea",
+        "accessibility": "public",
+        "date_range_start.year": 1901,
+        "own_parent.title": "Moravská orlice",
+        "in_collections": [
+          "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc",
+          "uuid:0be90938-b8af-4b93-b11a-b131de360017",
+          "uuid:9df7d62c-b572-4338-a0d1-b9c63e07a26e",
+          "uuid:71174c16-98ca-4d39-8893-543b6fd2af74"
+        ],
+        "pid": "uuid:02267c93-32f0-11de-992b-00145e5790ea",
+        "licenses.facet": [
+          "public"
+        ],
+        "rels_ext_index.sort": 38,
+        "id_other": [
+          "urn:02267c93-32f0-11de-992b-00145e5790ea"
+        ],
+        "pid_paths": [
+          "uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02267c93-32f0-11de-992b-00145e5790ea",
+          "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02267c93-32f0-11de-992b-00145e5790ea",
+          "uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02267c93-32f0-11de-992b-00145e5790ea",
+          "uuid:71174c16-98ca-4d39-8893-543b6fd2af74/uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02267c93-32f0-11de-992b-00145e5790ea",
+          "uuid:9df7d62c-b572-4338-a0d1-b9c63e07a26e/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02267c93-32f0-11de-992b-00145e5790ea"
+        ],
+        "root.model": "periodical",
+        "modified": "2023-03-06T22:41:00.778Z",
+        "model": "periodicalvolume",
+        "date.min": "1901-01-01T00:00:00.001Z",
+        "has_tiles": false,
+        "root.title.sort": "MORAVSKA| ORLICE",
+        "part.number.str": "39",
+        "part.number.sort": 39,
+        "indexer_version": 18,
+        "root.title": "Moravská orlice",
+        "indexed": "2023-10-03T16:11:46.308Z",
+        "level": 1,
+        "created": "2014-08-22T10:40:57.923Z",
+        "own_model_path": "periodical/periodicalvolume",
+        "languages.facet": [
+          "cze"
+        ],
+        "date.max": "1901-12-31T23:59:59.999Z",
+        "date_range_end.year": 1901,
+        "licenses": [
+          "public"
+        ],
+        "_version_": 1778751379931660300,
+        "own_parent.model": "periodical",
+        "date.str": "1901",
+        "own_pid_path": "uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02267c93-32f0-11de-992b-00145e5790ea",
+        "own_parent.pid": "uuid:02203ad6-32f0-11de-992b-00145e5790ea"
+      },
+      {
+        "root.pid": "uuid:02203ad6-32f0-11de-992b-00145e5790ea",
+        "accessibility": "public",
+        "date_range_start.year": 1902,
+        "own_parent.title": "Moravská orlice",
+        "in_collections": [
+          "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc",
+          "uuid:0be90938-b8af-4b93-b11a-b131de360017",
+          "uuid:9df7d62c-b572-4338-a0d1-b9c63e07a26e",
+          "uuid:71174c16-98ca-4d39-8893-543b6fd2af74"
+        ],
+        "pid": "uuid:02267c94-32f0-11de-992b-00145e5790ea",
+        "licenses.facet": [
+          "public"
+        ],
+        "rels_ext_index.sort": 39,
+        "id_other": [
+          "urn:02267c94-32f0-11de-992b-00145e5790ea"
+        ],
+        "pid_paths": [
+          "uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02267c94-32f0-11de-992b-00145e5790ea",
+          "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02267c94-32f0-11de-992b-00145e5790ea",
+          "uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02267c94-32f0-11de-992b-00145e5790ea",
+          "uuid:71174c16-98ca-4d39-8893-543b6fd2af74/uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02267c94-32f0-11de-992b-00145e5790ea",
+          "uuid:9df7d62c-b572-4338-a0d1-b9c63e07a26e/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02267c94-32f0-11de-992b-00145e5790ea"
+        ],
+        "root.model": "periodical",
+        "modified": "2023-03-06T21:23:15.629Z",
+        "model": "periodicalvolume",
+        "date.min": "1902-01-01T00:00:00.001Z",
+        "has_tiles": false,
+        "root.title.sort": "MORAVSKA| ORLICE",
+        "part.number.str": "40",
+        "part.number.sort": 40,
+        "indexer_version": 18,
+        "root.title": "Moravská orlice",
+        "indexed": "2023-10-03T16:13:46.637Z",
+        "level": 1,
+        "created": "2014-08-22T06:13:42.403Z",
+        "own_model_path": "periodical/periodicalvolume",
+        "languages.facet": [
+          "cze"
+        ],
+        "date.max": "1902-12-31T23:59:59.999Z",
+        "date_range_end.year": 1902,
+        "licenses": [
+          "public"
+        ],
+        "_version_": 1778751506103664600,
+        "own_parent.model": "periodical",
+        "date.str": "1902",
+        "own_pid_path": "uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:02267c94-32f0-11de-992b-00145e5790ea",
+        "own_parent.pid": "uuid:02203ad6-32f0-11de-992b-00145e5790ea"
+      },
+      {
+        "root.pid": "uuid:02203ad6-32f0-11de-992b-00145e5790ea",
+        "accessibility": "public",
+        "date_range_start.year": 1903,
+        "own_parent.title": "Moravská orlice",
+        "in_collections": [
+          "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc",
+          "uuid:0be90938-b8af-4b93-b11a-b131de360017",
+          "uuid:9df7d62c-b572-4338-a0d1-b9c63e07a26e",
+          "uuid:71174c16-98ca-4d39-8893-543b6fd2af74"
+        ],
+        "pid": "uuid:90797ab0-04e0-11df-b129-000d606f5dc6",
+        "licenses.facet": [
+          "public"
+        ],
+        "rels_ext_index.sort": 40,
+        "id_other": [
+          "urn:90797ab0-04e0-11df-b129-000d606f5dc6"
+        ],
+        "pid_paths": [
+          "uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:90797ab0-04e0-11df-b129-000d606f5dc6",
+          "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:90797ab0-04e0-11df-b129-000d606f5dc6",
+          "uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:90797ab0-04e0-11df-b129-000d606f5dc6",
+          "uuid:71174c16-98ca-4d39-8893-543b6fd2af74/uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:90797ab0-04e0-11df-b129-000d606f5dc6",
+          "uuid:9df7d62c-b572-4338-a0d1-b9c63e07a26e/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:90797ab0-04e0-11df-b129-000d606f5dc6"
+        ],
+        "root.model": "periodical",
+        "modified": "2023-03-06T22:41:13.933Z",
+        "model": "periodicalvolume",
+        "date.min": "1903-01-01T00:00:00.001Z",
+        "has_tiles": false,
+        "root.title.sort": "MORAVSKA| ORLICE",
+        "part.number.str": "41",
+        "part.number.sort": 41,
+        "indexer_version": 18,
+        "root.title": "Moravská orlice",
+        "indexed": "2023-10-03T16:15:32.010Z",
+        "level": 1,
+        "created": "2014-08-22T07:32:42.420Z",
+        "own_model_path": "periodical/periodicalvolume",
+        "languages.facet": [
+          "cze"
+        ],
+        "date.max": "1903-12-31T23:59:59.999Z",
+        "date_range_end.year": 1903,
+        "licenses": [
+          "public"
+        ],
+        "_version_": 1778751616595263500,
+        "own_parent.model": "periodical",
+        "date.str": "1903",
+        "own_pid_path": "uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:90797ab0-04e0-11df-b129-000d606f5dc6",
+        "own_parent.pid": "uuid:02203ad6-32f0-11de-992b-00145e5790ea"
+      },
+      {
+        "root.pid": "uuid:02203ad6-32f0-11de-992b-00145e5790ea",
+        "accessibility": "public",
+        "date_range_start.year": 1904,
+        "own_parent.title": "Moravská orlice",
+        "in_collections": [
+          "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc",
+          "uuid:0be90938-b8af-4b93-b11a-b131de360017",
+          "uuid:9df7d62c-b572-4338-a0d1-b9c63e07a26e",
+          "uuid:71174c16-98ca-4d39-8893-543b6fd2af74"
+        ],
+        "pid": "uuid:f30edb50-05b9-11df-8f87-000d606f5dc6",
+        "licenses.facet": [
+          "public"
+        ],
+        "rels_ext_index.sort": 41,
+        "id_other": [
+          "urn:f30edb50-05b9-11df-8f87-000d606f5dc6"
+        ],
+        "pid_paths": [
+          "uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:f30edb50-05b9-11df-8f87-000d606f5dc6",
+          "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:f30edb50-05b9-11df-8f87-000d606f5dc6",
+          "uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:f30edb50-05b9-11df-8f87-000d606f5dc6",
+          "uuid:71174c16-98ca-4d39-8893-543b6fd2af74/uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:f30edb50-05b9-11df-8f87-000d606f5dc6",
+          "uuid:9df7d62c-b572-4338-a0d1-b9c63e07a26e/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:f30edb50-05b9-11df-8f87-000d606f5dc6"
+        ],
+        "root.model": "periodical",
+        "modified": "2023-03-06T22:41:04.145Z",
+        "model": "periodicalvolume",
+        "date.min": "1904-01-01T00:00:00.001Z",
+        "has_tiles": false,
+        "root.title.sort": "MORAVSKA| ORLICE",
+        "part.number.str": "42",
+        "part.number.sort": 42,
+        "indexer_version": 18,
+        "root.title": "Moravská orlice",
+        "indexed": "2023-10-03T16:17:46.071Z",
+        "level": 1,
+        "created": "2014-08-21T01:33:02.347Z",
+        "own_model_path": "periodical/periodicalvolume",
+        "languages.facet": [
+          "cze"
+        ],
+        "date.max": "1904-12-31T23:59:59.999Z",
+        "date_range_end.year": 1904,
+        "licenses": [
+          "public"
+        ],
+        "_version_": 1778751757168410600,
+        "own_parent.model": "periodical",
+        "date.str": "1904",
+        "own_pid_path": "uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:f30edb50-05b9-11df-8f87-000d606f5dc6",
+        "own_parent.pid": "uuid:02203ad6-32f0-11de-992b-00145e5790ea"
+      },
+      {
+        "root.pid": "uuid:02203ad6-32f0-11de-992b-00145e5790ea",
+        "accessibility": "public",
+        "date_range_start.year": 1905,
+        "own_parent.title": "Moravská orlice",
+        "in_collections": [
+          "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc",
+          "uuid:0be90938-b8af-4b93-b11a-b131de360017",
+          "uuid:9df7d62c-b572-4338-a0d1-b9c63e07a26e",
+          "uuid:71174c16-98ca-4d39-8893-543b6fd2af74"
+        ],
+        "pid": "uuid:8139e2c0-0430-11df-95d1-000d606f5dc6",
+        "licenses.facet": [
+          "public"
+        ],
+        "rels_ext_index.sort": 42,
+        "id_other": [
+          "urn:8139e2c0-0430-11df-95d1-000d606f5dc6"
+        ],
+        "pid_paths": [
+          "uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:8139e2c0-0430-11df-95d1-000d606f5dc6",
+          "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:8139e2c0-0430-11df-95d1-000d606f5dc6",
+          "uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:8139e2c0-0430-11df-95d1-000d606f5dc6",
+          "uuid:71174c16-98ca-4d39-8893-543b6fd2af74/uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:8139e2c0-0430-11df-95d1-000d606f5dc6",
+          "uuid:9df7d62c-b572-4338-a0d1-b9c63e07a26e/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:8139e2c0-0430-11df-95d1-000d606f5dc6"
+        ],
+        "root.model": "periodical",
+        "modified": "2023-03-06T21:23:11.588Z",
+        "model": "periodicalvolume",
+        "date.min": "1905-01-01T00:00:00.001Z",
+        "has_tiles": false,
+        "root.title.sort": "MORAVSKA| ORLICE",
+        "part.number.str": "43",
+        "part.number.sort": 43,
+        "indexer_version": 18,
+        "root.title": "Moravská orlice",
+        "indexed": "2023-10-03T16:19:52.194Z",
+        "level": 1,
+        "created": "2014-08-20T12:51:19.939Z",
+        "own_model_path": "periodical/periodicalvolume",
+        "languages.facet": [
+          "cze"
+        ],
+        "date.max": "1905-12-31T23:59:59.999Z",
+        "date_range_end.year": 1905,
+        "licenses": [
+          "public"
+        ],
+        "_version_": 1778751889417961500,
+        "own_parent.model": "periodical",
+        "date.str": "1905",
+        "own_pid_path": "uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:8139e2c0-0430-11df-95d1-000d606f5dc6",
+        "own_parent.pid": "uuid:02203ad6-32f0-11de-992b-00145e5790ea"
+      },
+      {
+        "root.pid": "uuid:02203ad6-32f0-11de-992b-00145e5790ea",
+        "accessibility": "public",
+        "date_range_start.year": 1906,
+        "own_parent.title": "Moravská orlice",
+        "in_collections": [
+          "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc",
+          "uuid:0be90938-b8af-4b93-b11a-b131de360017",
+          "uuid:9df7d62c-b572-4338-a0d1-b9c63e07a26e",
+          "uuid:71174c16-98ca-4d39-8893-543b6fd2af74"
+        ],
+        "pid": "uuid:279ea050-0766-11df-9170-000d606f5dc6",
+        "licenses.facet": [
+          "public"
+        ],
+        "rels_ext_index.sort": 43,
+        "id_other": [
+          "urn:279ea050-0766-11df-9170-000d606f5dc6"
+        ],
+        "pid_paths": [
+          "uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:279ea050-0766-11df-9170-000d606f5dc6",
+          "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:279ea050-0766-11df-9170-000d606f5dc6",
+          "uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:279ea050-0766-11df-9170-000d606f5dc6",
+          "uuid:71174c16-98ca-4d39-8893-543b6fd2af74/uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:279ea050-0766-11df-9170-000d606f5dc6",
+          "uuid:9df7d62c-b572-4338-a0d1-b9c63e07a26e/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:279ea050-0766-11df-9170-000d606f5dc6"
+        ],
+        "root.model": "periodical",
+        "modified": "2023-03-17T12:58:36.012Z",
+        "model": "periodicalvolume",
+        "date.min": "1906-01-01T00:00:00.001Z",
+        "has_tiles": false,
+        "root.title.sort": "MORAVSKA| ORLICE",
+        "part.number.str": "44",
+        "part.number.sort": 44,
+        "indexer_version": 18,
+        "root.title": "Moravská orlice",
+        "indexed": "2023-10-03T16:22:23.807Z",
+        "level": 1,
+        "created": "2014-08-22T13:49:11.584Z",
+        "own_model_path": "periodical/periodicalvolume",
+        "languages.facet": [
+          "cze"
+        ],
+        "date.max": "1906-12-31T23:59:59.999Z",
+        "date_range_end.year": 1906,
+        "licenses": [
+          "public"
+        ],
+        "_version_": 1778752048396763100,
+        "own_parent.model": "periodical",
+        "date.str": "1906",
+        "own_pid_path": "uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:279ea050-0766-11df-9170-000d606f5dc6",
+        "own_parent.pid": "uuid:02203ad6-32f0-11de-992b-00145e5790ea"
+      },
+      {
+        "root.pid": "uuid:02203ad6-32f0-11de-992b-00145e5790ea",
+        "accessibility": "public",
+        "date_range_start.year": 1907,
+        "own_parent.title": "Moravská orlice",
+        "in_collections": [
+          "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc",
+          "uuid:0be90938-b8af-4b93-b11a-b131de360017",
+          "uuid:9df7d62c-b572-4338-a0d1-b9c63e07a26e",
+          "uuid:71174c16-98ca-4d39-8893-543b6fd2af74"
+        ],
+        "pid": "uuid:826697b0-b728-11de-b564-000d606f5dc6",
+        "licenses.facet": [
+          "public"
+        ],
+        "rels_ext_index.sort": 44,
+        "id_other": [
+          "urn:826697b0-b728-11de-b564-000d606f5dc6"
+        ],
+        "pid_paths": [
+          "uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:826697b0-b728-11de-b564-000d606f5dc6",
+          "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:826697b0-b728-11de-b564-000d606f5dc6",
+          "uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:826697b0-b728-11de-b564-000d606f5dc6",
+          "uuid:71174c16-98ca-4d39-8893-543b6fd2af74/uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:826697b0-b728-11de-b564-000d606f5dc6",
+          "uuid:9df7d62c-b572-4338-a0d1-b9c63e07a26e/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:826697b0-b728-11de-b564-000d606f5dc6"
+        ],
+        "root.model": "periodical",
+        "modified": "2023-03-17T12:58:49.488Z",
+        "model": "periodicalvolume",
+        "date.min": "1907-01-01T00:00:00.001Z",
+        "has_tiles": false,
+        "root.title.sort": "MORAVSKA| ORLICE",
+        "part.number.str": "45",
+        "part.number.sort": 45,
+        "indexer_version": 18,
+        "root.title": "Moravská orlice",
+        "indexed": "2023-10-03T16:24:48.015Z",
+        "level": 1,
+        "created": "2014-08-23T05:03:58.698Z",
+        "own_model_path": "periodical/periodicalvolume",
+        "languages.facet": [
+          "cze"
+        ],
+        "date.max": "1907-12-31T23:59:59.999Z",
+        "date_range_end.year": 1907,
+        "licenses": [
+          "public"
+        ],
+        "_version_": 1778752199609811000,
+        "own_parent.model": "periodical",
+        "date.str": "1907",
+        "own_pid_path": "uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:826697b0-b728-11de-b564-000d606f5dc6",
+        "own_parent.pid": "uuid:02203ad6-32f0-11de-992b-00145e5790ea"
+      },
+      {
+        "root.pid": "uuid:02203ad6-32f0-11de-992b-00145e5790ea",
+        "accessibility": "public",
+        "date_range_start.year": 1908,
+        "own_parent.title": "Moravská orlice",
+        "in_collections": [
+          "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc",
+          "uuid:0be90938-b8af-4b93-b11a-b131de360017",
+          "uuid:9df7d62c-b572-4338-a0d1-b9c63e07a26e",
+          "uuid:71174c16-98ca-4d39-8893-543b6fd2af74"
+        ],
+        "pid": "uuid:c0791ed0-b730-11de-bade-000d606f5dc6",
+        "licenses.facet": [
+          "public"
+        ],
+        "rels_ext_index.sort": 45,
+        "id_other": [
+          "urn:c0791ed0-b730-11de-bade-000d606f5dc6"
+        ],
+        "pid_paths": [
+          "uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:c0791ed0-b730-11de-bade-000d606f5dc6",
+          "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:c0791ed0-b730-11de-bade-000d606f5dc6",
+          "uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:c0791ed0-b730-11de-bade-000d606f5dc6",
+          "uuid:71174c16-98ca-4d39-8893-543b6fd2af74/uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:c0791ed0-b730-11de-bade-000d606f5dc6",
+          "uuid:9df7d62c-b572-4338-a0d1-b9c63e07a26e/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:c0791ed0-b730-11de-bade-000d606f5dc6"
+        ],
+        "root.model": "periodical",
+        "modified": "2023-03-17T12:58:29.739Z",
+        "model": "periodicalvolume",
+        "date.min": "1908-01-01T00:00:00.001Z",
+        "has_tiles": false,
+        "root.title.sort": "MORAVSKA| ORLICE",
+        "part.number.str": "46",
+        "part.number.sort": 46,
+        "indexer_version": 18,
+        "root.title": "Moravská orlice",
+        "indexed": "2023-10-03T16:27:09.917Z",
+        "level": 1,
+        "created": "2014-08-21T22:56:38.385Z",
+        "own_model_path": "periodical/periodicalvolume",
+        "languages.facet": [
+          "cze"
+        ],
+        "date.max": "1908-12-31T23:59:59.999Z",
+        "date_range_end.year": 1908,
+        "licenses": [
+          "public"
+        ],
+        "_version_": 1778752348404842500,
+        "own_parent.model": "periodical",
+        "date.str": "1908",
+        "own_pid_path": "uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:c0791ed0-b730-11de-bade-000d606f5dc6",
+        "own_parent.pid": "uuid:02203ad6-32f0-11de-992b-00145e5790ea"
+      },
+      {
+        "root.pid": "uuid:02203ad6-32f0-11de-992b-00145e5790ea",
+        "accessibility": "public",
+        "date_range_start.year": 1909,
+        "own_parent.title": "Moravská orlice",
+        "in_collections": [
+          "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc",
+          "uuid:0be90938-b8af-4b93-b11a-b131de360017",
+          "uuid:9df7d62c-b572-4338-a0d1-b9c63e07a26e",
+          "uuid:71174c16-98ca-4d39-8893-543b6fd2af74"
+        ],
+        "pid": "uuid:7b6228b0-b72f-11de-b416-000d606f5dc6",
+        "licenses.facet": [
+          "public"
+        ],
+        "rels_ext_index.sort": 46,
+        "id_other": [
+          "urn:7b6228b0-b72f-11de-b416-000d606f5dc6"
+        ],
+        "pid_paths": [
+          "uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:7b6228b0-b72f-11de-b416-000d606f5dc6",
+          "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:7b6228b0-b72f-11de-b416-000d606f5dc6",
+          "uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:7b6228b0-b72f-11de-b416-000d606f5dc6",
+          "uuid:71174c16-98ca-4d39-8893-543b6fd2af74/uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:7b6228b0-b72f-11de-b416-000d606f5dc6",
+          "uuid:9df7d62c-b572-4338-a0d1-b9c63e07a26e/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:7b6228b0-b72f-11de-b416-000d606f5dc6"
+        ],
+        "root.model": "periodical",
+        "modified": "2023-03-17T12:58:09.268Z",
+        "model": "periodicalvolume",
+        "date.min": "1909-01-01T00:00:00.001Z",
+        "has_tiles": false,
+        "root.title.sort": "MORAVSKA| ORLICE",
+        "part.number.str": "47",
+        "part.number.sort": 47,
+        "indexer_version": 18,
+        "root.title": "Moravská orlice",
+        "indexed": "2023-10-03T16:29:12.216Z",
+        "level": 1,
+        "created": "2014-08-20T17:26:10.152Z",
+        "own_model_path": "periodical/periodicalvolume",
+        "languages.facet": [
+          "cze"
+        ],
+        "date.max": "1909-12-31T23:59:59.999Z",
+        "date_range_end.year": 1909,
+        "licenses": [
+          "public"
+        ],
+        "_version_": 1778752476643590100,
+        "own_parent.model": "periodical",
+        "date.str": "1909",
+        "own_pid_path": "uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:7b6228b0-b72f-11de-b416-000d606f5dc6",
+        "own_parent.pid": "uuid:02203ad6-32f0-11de-992b-00145e5790ea"
+      },
+      {
+        "root.pid": "uuid:02203ad6-32f0-11de-992b-00145e5790ea",
+        "accessibility": "public",
+        "date_range_start.year": 1910,
+        "own_parent.title": "Moravská orlice",
+        "in_collections": [
+          "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc",
+          "uuid:0be90938-b8af-4b93-b11a-b131de360017",
+          "uuid:9df7d62c-b572-4338-a0d1-b9c63e07a26e",
+          "uuid:71174c16-98ca-4d39-8893-543b6fd2af74"
+        ],
+        "pid": "uuid:76c9b590-b7c3-11de-acaa-000d606f5dc6",
+        "licenses.facet": [
+          "public"
+        ],
+        "rels_ext_index.sort": 47,
+        "id_other": [
+          "urn:76c9b590-b7c3-11de-acaa-000d606f5dc6"
+        ],
+        "pid_paths": [
+          "uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:76c9b590-b7c3-11de-acaa-000d606f5dc6",
+          "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:76c9b590-b7c3-11de-acaa-000d606f5dc6",
+          "uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:76c9b590-b7c3-11de-acaa-000d606f5dc6",
+          "uuid:71174c16-98ca-4d39-8893-543b6fd2af74/uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:76c9b590-b7c3-11de-acaa-000d606f5dc6",
+          "uuid:9df7d62c-b572-4338-a0d1-b9c63e07a26e/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:76c9b590-b7c3-11de-acaa-000d606f5dc6"
+        ],
+        "root.model": "periodical",
+        "modified": "2023-03-17T12:58:32.746Z",
+        "model": "periodicalvolume",
+        "date.min": "1910-01-01T00:00:00.001Z",
+        "has_tiles": false,
+        "root.title.sort": "MORAVSKA| ORLICE",
+        "part.number.str": "48",
+        "part.number.sort": 48,
+        "indexer_version": 18,
+        "root.title": "Moravská orlice",
+        "indexed": "2023-10-03T16:31:03.884Z",
+        "level": 1,
+        "created": "2014-08-21T14:36:45.621Z",
+        "own_model_path": "periodical/periodicalvolume",
+        "languages.facet": [
+          "cze"
+        ],
+        "date.max": "1910-12-31T23:59:59.999Z",
+        "date_range_end.year": 1910,
+        "licenses": [
+          "public"
+        ],
+        "_version_": 1778752593735975000,
+        "own_parent.model": "periodical",
+        "date.str": "1910",
+        "own_pid_path": "uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:76c9b590-b7c3-11de-acaa-000d606f5dc6",
+        "own_parent.pid": "uuid:02203ad6-32f0-11de-992b-00145e5790ea"
+      },
+      {
+        "root.pid": "uuid:02203ad6-32f0-11de-992b-00145e5790ea",
+        "accessibility": "public",
+        "date_range_start.year": 1911,
+        "own_parent.title": "Moravská orlice",
+        "in_collections": [
+          "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc",
+          "uuid:0be90938-b8af-4b93-b11a-b131de360017",
+          "uuid:9df7d62c-b572-4338-a0d1-b9c63e07a26e",
+          "uuid:71174c16-98ca-4d39-8893-543b6fd2af74"
+        ],
+        "pid": "uuid:c473feb0-b726-11de-8fe6-000d606f5dc6",
+        "licenses.facet": [
+          "public"
+        ],
+        "rels_ext_index.sort": 48,
+        "id_other": [
+          "urn:c473feb0-b726-11de-8fe6-000d606f5dc6"
+        ],
+        "pid_paths": [
+          "uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:c473feb0-b726-11de-8fe6-000d606f5dc6",
+          "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:c473feb0-b726-11de-8fe6-000d606f5dc6",
+          "uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:c473feb0-b726-11de-8fe6-000d606f5dc6",
+          "uuid:71174c16-98ca-4d39-8893-543b6fd2af74/uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:c473feb0-b726-11de-8fe6-000d606f5dc6",
+          "uuid:9df7d62c-b572-4338-a0d1-b9c63e07a26e/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:c473feb0-b726-11de-8fe6-000d606f5dc6"
+        ],
+        "root.model": "periodical",
+        "modified": "2023-05-13T06:30:23.141Z",
+        "model": "periodicalvolume",
+        "date.min": "1911-01-01T00:00:00.001Z",
+        "has_tiles": false,
+        "root.title.sort": "MORAVSKA| ORLICE",
+        "part.number.str": "49",
+        "part.number.sort": 49,
+        "indexer_version": 18,
+        "root.title": "Moravská orlice",
+        "indexed": "2023-10-03T16:33:32.069Z",
+        "level": 1,
+        "created": "2014-08-22T15:14:50.879Z",
+        "own_model_path": "periodical/periodicalvolume",
+        "languages.facet": [
+          "cze"
+        ],
+        "date.max": "1911-12-31T23:59:59.999Z",
+        "date_range_end.year": 1911,
+        "licenses": [
+          "public"
+        ],
+        "_version_": 1778752749119209500,
+        "own_parent.model": "periodical",
+        "date.str": "1911",
+        "own_pid_path": "uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:c473feb0-b726-11de-8fe6-000d606f5dc6",
+        "own_parent.pid": "uuid:02203ad6-32f0-11de-992b-00145e5790ea"
+      },
+      {
+        "root.pid": "uuid:02203ad6-32f0-11de-992b-00145e5790ea",
+        "accessibility": "public",
+        "date_range_start.year": 1912,
+        "own_parent.title": "Moravská orlice",
+        "in_collections": [
+          "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc",
+          "uuid:0be90938-b8af-4b93-b11a-b131de360017",
+          "uuid:9df7d62c-b572-4338-a0d1-b9c63e07a26e",
+          "uuid:71174c16-98ca-4d39-8893-543b6fd2af74"
+        ],
+        "pid": "uuid:522bacb0-b7d3-11de-ba2e-000d606f5dc6",
+        "licenses.facet": [
+          "public"
+        ],
+        "rels_ext_index.sort": 49,
+        "pid_paths": [
+          "uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:522bacb0-b7d3-11de-ba2e-000d606f5dc6",
+          "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:522bacb0-b7d3-11de-ba2e-000d606f5dc6",
+          "uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:522bacb0-b7d3-11de-ba2e-000d606f5dc6",
+          "uuid:71174c16-98ca-4d39-8893-543b6fd2af74/uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:522bacb0-b7d3-11de-ba2e-000d606f5dc6",
+          "uuid:9df7d62c-b572-4338-a0d1-b9c63e07a26e/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:522bacb0-b7d3-11de-ba2e-000d606f5dc6"
+        ],
+        "root.model": "periodical",
+        "modified": "2023-09-14T09:39:50.221Z",
+        "model": "periodicalvolume",
+        "date.min": "1912-01-01T00:00:00.001Z",
+        "id_uuid": [
+          "522bacb0-b7d3-11de-ba2e-000d606f5dc6"
+        ],
+        "has_tiles": false,
+        "root.title.sort": "MORAVSKA| ORLICE",
+        "part.number.str": "50",
+        "part.number.sort": 50,
+        "indexer_version": 18,
+        "root.title": "Moravská orlice",
+        "indexed": "2023-10-03T16:36:13.631Z",
+        "level": 1,
+        "created": "2014-08-22T22:08:41.697Z",
+        "own_model_path": "periodical/periodicalvolume",
+        "languages.facet": [
+          "cze"
+        ],
+        "date.max": "1912-12-31T23:59:59.999Z",
+        "date_range_end.year": 1912,
+        "licenses": [
+          "public"
+        ],
+        "_version_": 1778752918531342300,
+        "own_parent.model": "periodical",
+        "date.str": "1912",
+        "own_pid_path": "uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:522bacb0-b7d3-11de-ba2e-000d606f5dc6",
+        "own_parent.pid": "uuid:02203ad6-32f0-11de-992b-00145e5790ea"
+      },
+      {
+        "root.pid": "uuid:02203ad6-32f0-11de-992b-00145e5790ea",
+        "accessibility": "public",
+        "date_range_start.year": 1913,
+        "own_parent.title": "Moravská orlice",
+        "in_collections": [
+          "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc",
+          "uuid:0be90938-b8af-4b93-b11a-b131de360017",
+          "uuid:9df7d62c-b572-4338-a0d1-b9c63e07a26e",
+          "uuid:71174c16-98ca-4d39-8893-543b6fd2af74"
+        ],
+        "pid": "uuid:4ace04b0-b7db-11de-b01f-000d606f5dc6",
+        "licenses.facet": [
+          "public"
+        ],
+        "rels_ext_index.sort": 50,
+        "id_other": [
+          "urn:4ace04b0-b7db-11de-b01f-000d606f5dc6"
+        ],
+        "pid_paths": [
+          "uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:4ace04b0-b7db-11de-b01f-000d606f5dc6",
+          "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:4ace04b0-b7db-11de-b01f-000d606f5dc6",
+          "uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:4ace04b0-b7db-11de-b01f-000d606f5dc6",
+          "uuid:71174c16-98ca-4d39-8893-543b6fd2af74/uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:4ace04b0-b7db-11de-b01f-000d606f5dc6",
+          "uuid:9df7d62c-b572-4338-a0d1-b9c63e07a26e/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:4ace04b0-b7db-11de-b01f-000d606f5dc6"
+        ],
+        "root.model": "periodical",
+        "modified": "2024-04-29T10:04:17.857Z",
+        "model": "periodicalvolume",
+        "date.min": "1913-01-01T00:00:00.001Z",
+        "has_tiles": false,
+        "root.title.sort": "MORAVSKA| ORLICE",
+        "part.number.str": "51",
+        "part.number.sort": 51,
+        "indexer_version": 19,
+        "root.title": "Moravská orlice",
+        "indexed": "2024-04-29T10:53:13.582Z",
+        "level": 1,
+        "created": "2014-08-21T19:10:58.740Z",
+        "own_model_path": "periodical/periodicalvolume",
+        "languages.facet": [
+          "cze"
+        ],
+        "date.max": "1913-12-31T23:59:59.999Z",
+        "date_range_end.year": 1913,
+        "licenses": [
+          "public"
+        ],
+        "_version_": 1797666253815414800,
+        "own_parent.model": "periodical",
+        "date.str": "1913",
+        "own_pid_path": "uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:4ace04b0-b7db-11de-b01f-000d606f5dc6",
+        "own_parent.pid": "uuid:02203ad6-32f0-11de-992b-00145e5790ea"
+      },
+      {
+        "root.pid": "uuid:02203ad6-32f0-11de-992b-00145e5790ea",
+        "accessibility": "private",
+        "date_range_start.year": 1914,
+        "own_parent.title": "Moravská orlice",
+        "in_collections": [
+          "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc",
+          "uuid:0be90938-b8af-4b93-b11a-b131de360017",
+          "uuid:9df7d62c-b572-4338-a0d1-b9c63e07a26e",
+          "uuid:71174c16-98ca-4d39-8893-543b6fd2af74"
+        ],
+        "pid": "uuid:0bc23eb0-b8be-11de-83d1-000d606f5dc6",
+        "licenses.facet": [
+          "public",
+          "public"
+        ],
+        "rels_ext_index.sort": 51,
+        "id_other": [
+          "urn:0bc23eb0-b8be-11de-83d1-000d606f5dc6"
+        ],
+        "pid_paths": [
+          "uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:0bc23eb0-b8be-11de-83d1-000d606f5dc6",
+          "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:0bc23eb0-b8be-11de-83d1-000d606f5dc6",
+          "uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:0bc23eb0-b8be-11de-83d1-000d606f5dc6",
+          "uuid:71174c16-98ca-4d39-8893-543b6fd2af74/uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:0bc23eb0-b8be-11de-83d1-000d606f5dc6",
+          "uuid:9df7d62c-b572-4338-a0d1-b9c63e07a26e/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:0bc23eb0-b8be-11de-83d1-000d606f5dc6"
+        ],
+        "root.model": "periodical",
+        "modified": "2022-03-19T07:09:52.704Z",
+        "model": "periodicalvolume",
+        "date.min": "1914-01-01T00:00:00.001Z",
+        "has_tiles": false,
+        "root.title.sort": "MORAVSKA| ORLICE",
+        "part.number.str": "52",
+        "part.number.sort": 52,
+        "indexer_version": 18,
+        "root.title": "Moravská orlice",
+        "indexed": "2025-01-14T15:15:05.246Z",
+        "level": 1,
+        "created": "2014-08-21T11:32:58.387Z",
+        "own_model_path": "periodical/periodicalvolume",
+        "languages.facet": [
+          "cze"
+        ],
+        "date.max": "1914-12-31T23:59:59.999Z",
+        "date_range_end.year": 1914,
+        "licenses": [
+          "public"
+        ],
+        "contains_licenses": [
+          "public"
+        ],
+        "_version_": 1821237790906515500,
+        "own_parent.model": "periodical",
+        "date.str": "1914",
+        "own_pid_path": "uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:0bc23eb0-b8be-11de-83d1-000d606f5dc6",
+        "own_parent.pid": "uuid:02203ad6-32f0-11de-992b-00145e5790ea"
+      }
+    ],
+    "numFound": 52,
+    "start": 0,
+    "numFoundExact": true
+  },
+  "responseHeader": {
+    "QTime": 0,
+    "params": {
+      "q": "(model:periodicalvolume) AND (own_parent.pid:uuid\\:02203ad6-32f0-11de-992b-00145e5790ea) AND (licenses:public)",
+      "fl": "*",
+      "start": "0",
+      "sort": "date.min asc",
+      "rows": "999",
+      "wt": "json"
+    },
+    "status": 0
+  }
+}

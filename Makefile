@@ -47,12 +47,15 @@ TEIheader := ${WORK}/tei-header
 xmlOCR := ${WORK}/ocrXML
 altoOCR := ${WORK}/ocrALTO
 vizOCR := ${VIZ}/ocr
-vizOCRpageXMLpdf := $(vizOCR)/pageXMLpdf
+vizOCRxml := $(vizOCR)-xml
 vizLAYOUT := ${VIZ}/layout
-vizLAYOUTxml := $(vizLAYOUT)/xml
-vizLAYOUTalto := $(vizLAYOUT)/alto
-vizLAYOUTregions := $(vizLAYOUT)/regions
-vizLAYOUTmerge := $(vizLAYOUT)/merged
+vizLAYOUTxml := $(vizLAYOUT)-xml
+vizLAYOUTalto := $(vizLAYOUT)-alto
+vizLAYOUTregions := $(vizLAYOUT)-regions
+vizLAYOUTmerge := $(vizLAYOUT)-all
+vizTEI := ${VIZ}/tei
+
+CACHE := ${WORK}/cache
 
 imageRegions := ${WORK}/imageRegions
 TEIFacsText := ${WORK}/teiFacsText
@@ -261,7 +264,7 @@ chart-periodicalvolumes:
 
 ### process data
 
-$(JSONissues) $(idMapping) $(xmlOCR) $(altoOCR) $(vizOCRpageXMLpdf) $(vizLAYOUTxml) $(vizLAYOUTalto) $(vizLAYOUTregions) $(vizLAYOUTmerge) $(imageRegions) $(TEI) $(TEIANA) $(TEItext) $(TEItext_cleaned) $(TEIheader) $(TEIANAtext) $(UDPIPE) $(NAMETAG) $(LOGDIR):
+$(JSONissues) $(idMapping) $(xmlOCR) $(altoOCR) $(vizOCRxml) $(vizLAYOUTxml) $(vizLAYOUTalto) $(vizLAYOUTregions) $(vizLAYOUTmerge) $(vizTEI) $(imageRegions) $(TEI) $(TEIANA) $(TEItext) $(TEItext_cleaned) $(TEIheader) $(TEIANAtext) $(UDPIPE) $(NAMETAG) $(LOGDIR):
 	mkdir -p $@
 # merge issues and page json files
 
@@ -303,15 +306,15 @@ inputImg2pageXML: $(IN)/periodical/$(UUID_PATH).json $(xmlOCR) setup-pero-ocr $(
 
 
 # visualizations
-visualize-pageXML: $(vizOCR)
+visualize-pageXML: $(vizOCRxml)
 	for COMP in `find $(idMapping) -type f -name "*.jsonl" -printf "%P\n" | sed 's/.jsonl$$//'| sort`;\
 	do \
-		echo "creating pdf: $(vizOCR)/$$output";\
+		echo "creating pdf: $(vizOCRxml)/$$output";\
 		python Scripts/pageXML2pdf.py \
 		  --images $(IN)/periodical \
 			--xml $(xmlOCR)/$${COMP}/ \
 			--jsonl $(idMapping)/$${COMP}.jsonl \
-			--output $(vizOCR)/$${COMP}.pdf;\
+			--output $(vizOCRxml)/$${COMP}.pdf;\
 	done
 
 visualize-layout-pageXML: $(vizLAYOUTxml)
@@ -382,6 +385,18 @@ visualize-layout-merge: $(vizLAYOUTmerge)
 			done;\
 	done
 
+visualize-tei: $(vizTEI)
+	echo "TODO $@"	
+	for COMP in `find $(TEI) -type f -name "*.xml" -printf "%P\n" | sed 's/.xml$$//'| sort`;\
+	do \
+		echo "creating pdf: $(vizTEI)/$$COMP";\
+		python Scripts/tei2pdf.py \
+		  --tei $(TEI)/$${COMP}.xml \
+			--output $(vizTEI)/$${COMP}.pdf\
+			--cache $(CACHE)/tei2pdf/$${COMP};\
+	done
+
+
 # detect and clasify regions
 inputImg2imageRegions: $(IN)/periodical/$(UUID_PATH).json $(imageRegions) $(YOLO_MODEL)
 	$(PERL) -I Scripts/lib Scripts/runImageRegionsDetection.pl \
@@ -397,7 +412,7 @@ inputImg2imageRegions: $(IN)/periodical/$(UUID_PATH).json $(imageRegions) $(YOLO
 textRegions2teiFacsText:
 	find $(idMapping) -type f -name "*.jsonl" -printf "%P\n" | sed 's/.jsonl$$//'|sort > $(TEIFacsText).list
 	cat $(TEIFacsText).list \
-	  | python Scripts/textRegions2teiFacsText.py \
+	  | PYTHONPATH=Scripts python -m textRegions2teiFacsText.main \
 		    --ocr-xml-dir "$(xmlOCR)" \
 				--regions-dir "$(imageRegions)" \
 				--page-order-dir "$(idMapping)" \

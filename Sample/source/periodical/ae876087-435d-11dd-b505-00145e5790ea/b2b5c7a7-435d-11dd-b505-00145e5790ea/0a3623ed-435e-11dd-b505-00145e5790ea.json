@@ -1,0 +1,393 @@
+{
+  "response": {
+    "docs": [
+      {
+        "root.pid": "uuid:ae876087-435d-11dd-b505-00145e5790ea",
+        "titles.search": [
+          "(1)"
+        ],
+        "accessibility": "public",
+        "page.type": "TitlePage",
+        "date_range_start.year": 1886,
+        "date_range_end.day": 20,
+        "date_range_start.month": 7,
+        "in_collections": [
+          "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc",
+          "uuid:0be90938-b8af-4b93-b11a-b131de360017",
+          "uuid:71174c16-98ca-4d39-8893-543b6fd2af74"
+        ],
+        "pid": "uuid:99907c97-435f-11dd-b505-00145e5790ea",
+        "page.index": 0,
+        "licenses.facet": [
+          "public"
+        ],
+        "licenses_of_ancestors": [
+          "public"
+        ],
+        "rels_ext_index.sort": 0,
+        "id_other": [
+          "urn:99907c97-435f-11dd-b505-00145e5790ea"
+        ],
+        "pid_paths": [
+          "uuid:ae876087-435d-11dd-b505-00145e5790ea/uuid:b2b5c7a7-435d-11dd-b505-00145e5790ea/uuid:0a3623ed-435e-11dd-b505-00145e5790ea/uuid:99907c97-435f-11dd-b505-00145e5790ea",
+          "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc/uuid:ae876087-435d-11dd-b505-00145e5790ea/uuid:b2b5c7a7-435d-11dd-b505-00145e5790ea/uuid:0a3623ed-435e-11dd-b505-00145e5790ea/uuid:99907c97-435f-11dd-b505-00145e5790ea",
+          "uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:ae876087-435d-11dd-b505-00145e5790ea/uuid:b2b5c7a7-435d-11dd-b505-00145e5790ea/uuid:0a3623ed-435e-11dd-b505-00145e5790ea/uuid:99907c97-435f-11dd-b505-00145e5790ea",
+          "uuid:71174c16-98ca-4d39-8893-543b6fd2af74/uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:ae876087-435d-11dd-b505-00145e5790ea/uuid:b2b5c7a7-435d-11dd-b505-00145e5790ea/uuid:0a3623ed-435e-11dd-b505-00145e5790ea/uuid:99907c97-435f-11dd-b505-00145e5790ea"
+        ],
+        "root.model": "periodical",
+        "modified": "2020-03-22T21:24:30.615Z",
+        "model": "page",
+        "date.min": "1886-07-20T00:00:00.001Z",
+        "has_tiles": true,
+        "title.search": "(1)",
+        "root.title.sort": "NA|RODNI| LISTY",
+        "indexer_version": 18,
+        "root.title": "Národní listy",
+        "indexed": "2024-04-25T22:48:11.445Z",
+        "level": 3,
+        "created": "2017-05-05T16:48:56.641Z",
+        "own_model_path": "periodical/periodicalvolume/periodicalitem/page",
+        "languages.facet": [
+          "cze"
+        ],
+        "date.max": "1886-07-20T23:59:59.999Z",
+        "title.sort": "1",
+        "date_range_end.month": 7,
+        "page.number": "(1)",
+        "date_range_end.year": 1886,
+        "_version_": 1797348699753414700,
+        "date_range_start.day": 20,
+        "ds.img_full.mime": "image/jpeg",
+        "own_parent.model": "periodicalitem",
+        "date.str": "20.7.1886",
+        "own_pid_path": "uuid:ae876087-435d-11dd-b505-00145e5790ea/uuid:b2b5c7a7-435d-11dd-b505-00145e5790ea/uuid:0a3623ed-435e-11dd-b505-00145e5790ea/uuid:99907c97-435f-11dd-b505-00145e5790ea",
+        "own_parent.pid": "uuid:0a3623ed-435e-11dd-b505-00145e5790ea"
+      },
+      {
+        "root.pid": "uuid:ae876087-435d-11dd-b505-00145e5790ea",
+        "titles.search": [
+          "(2)"
+        ],
+        "accessibility": "public",
+        "page.type": "NormalPage",
+        "date_range_start.year": 1886,
+        "date_range_end.day": 20,
+        "date_range_start.month": 7,
+        "in_collections": [
+          "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc",
+          "uuid:0be90938-b8af-4b93-b11a-b131de360017",
+          "uuid:71174c16-98ca-4d39-8893-543b6fd2af74"
+        ],
+        "pid": "uuid:99907c98-435f-11dd-b505-00145e5790ea",
+        "page.index": 1,
+        "licenses.facet": [
+          "public"
+        ],
+        "licenses_of_ancestors": [
+          "public"
+        ],
+        "rels_ext_index.sort": 1,
+        "id_other": [
+          "urn:99907c98-435f-11dd-b505-00145e5790ea"
+        ],
+        "pid_paths": [
+          "uuid:ae876087-435d-11dd-b505-00145e5790ea/uuid:b2b5c7a7-435d-11dd-b505-00145e5790ea/uuid:0a3623ed-435e-11dd-b505-00145e5790ea/uuid:99907c98-435f-11dd-b505-00145e5790ea",
+          "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc/uuid:ae876087-435d-11dd-b505-00145e5790ea/uuid:b2b5c7a7-435d-11dd-b505-00145e5790ea/uuid:0a3623ed-435e-11dd-b505-00145e5790ea/uuid:99907c98-435f-11dd-b505-00145e5790ea",
+          "uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:ae876087-435d-11dd-b505-00145e5790ea/uuid:b2b5c7a7-435d-11dd-b505-00145e5790ea/uuid:0a3623ed-435e-11dd-b505-00145e5790ea/uuid:99907c98-435f-11dd-b505-00145e5790ea",
+          "uuid:71174c16-98ca-4d39-8893-543b6fd2af74/uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:ae876087-435d-11dd-b505-00145e5790ea/uuid:b2b5c7a7-435d-11dd-b505-00145e5790ea/uuid:0a3623ed-435e-11dd-b505-00145e5790ea/uuid:99907c98-435f-11dd-b505-00145e5790ea"
+        ],
+        "root.model": "periodical",
+        "modified": "2020-03-22T21:24:30.663Z",
+        "model": "page",
+        "date.min": "1886-07-20T00:00:00.001Z",
+        "has_tiles": true,
+        "title.search": "(2)",
+        "root.title.sort": "NA|RODNI| LISTY",
+        "indexer_version": 18,
+        "root.title": "Národní listy",
+        "indexed": "2024-04-25T22:48:11.445Z",
+        "level": 3,
+        "created": "2017-05-05T16:48:56.799Z",
+        "own_model_path": "periodical/periodicalvolume/periodicalitem/page",
+        "languages.facet": [
+          "cze"
+        ],
+        "date.max": "1886-07-20T23:59:59.999Z",
+        "title.sort": "2",
+        "date_range_end.month": 7,
+        "page.number": "(2)",
+        "date_range_end.year": 1886,
+        "_version_": 1797348699760754700,
+        "date_range_start.day": 20,
+        "ds.img_full.mime": "image/jpeg",
+        "own_parent.model": "periodicalitem",
+        "date.str": "20.7.1886",
+        "own_pid_path": "uuid:ae876087-435d-11dd-b505-00145e5790ea/uuid:b2b5c7a7-435d-11dd-b505-00145e5790ea/uuid:0a3623ed-435e-11dd-b505-00145e5790ea/uuid:99907c98-435f-11dd-b505-00145e5790ea",
+        "own_parent.pid": "uuid:0a3623ed-435e-11dd-b505-00145e5790ea"
+      },
+      {
+        "root.pid": "uuid:ae876087-435d-11dd-b505-00145e5790ea",
+        "titles.search": [
+          "(3)"
+        ],
+        "accessibility": "public",
+        "page.type": "NormalPage",
+        "date_range_start.year": 1886,
+        "date_range_end.day": 20,
+        "date_range_start.month": 7,
+        "in_collections": [
+          "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc",
+          "uuid:0be90938-b8af-4b93-b11a-b131de360017",
+          "uuid:71174c16-98ca-4d39-8893-543b6fd2af74"
+        ],
+        "pid": "uuid:99907c99-435f-11dd-b505-00145e5790ea",
+        "page.index": 2,
+        "licenses.facet": [
+          "public"
+        ],
+        "licenses_of_ancestors": [
+          "public"
+        ],
+        "rels_ext_index.sort": 2,
+        "id_other": [
+          "urn:99907c99-435f-11dd-b505-00145e5790ea"
+        ],
+        "pid_paths": [
+          "uuid:ae876087-435d-11dd-b505-00145e5790ea/uuid:b2b5c7a7-435d-11dd-b505-00145e5790ea/uuid:0a3623ed-435e-11dd-b505-00145e5790ea/uuid:99907c99-435f-11dd-b505-00145e5790ea",
+          "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc/uuid:ae876087-435d-11dd-b505-00145e5790ea/uuid:b2b5c7a7-435d-11dd-b505-00145e5790ea/uuid:0a3623ed-435e-11dd-b505-00145e5790ea/uuid:99907c99-435f-11dd-b505-00145e5790ea",
+          "uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:ae876087-435d-11dd-b505-00145e5790ea/uuid:b2b5c7a7-435d-11dd-b505-00145e5790ea/uuid:0a3623ed-435e-11dd-b505-00145e5790ea/uuid:99907c99-435f-11dd-b505-00145e5790ea",
+          "uuid:71174c16-98ca-4d39-8893-543b6fd2af74/uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:ae876087-435d-11dd-b505-00145e5790ea/uuid:b2b5c7a7-435d-11dd-b505-00145e5790ea/uuid:0a3623ed-435e-11dd-b505-00145e5790ea/uuid:99907c99-435f-11dd-b505-00145e5790ea"
+        ],
+        "root.model": "periodical",
+        "modified": "2020-03-22T21:24:30.763Z",
+        "model": "page",
+        "date.min": "1886-07-20T00:00:00.001Z",
+        "has_tiles": true,
+        "title.search": "(3)",
+        "root.title.sort": "NA|RODNI| LISTY",
+        "indexer_version": 18,
+        "root.title": "Národní listy",
+        "indexed": "2024-04-25T22:48:11.445Z",
+        "level": 3,
+        "created": "2017-05-05T16:48:56.946Z",
+        "own_model_path": "periodical/periodicalvolume/periodicalitem/page",
+        "languages.facet": [
+          "cze"
+        ],
+        "date.max": "1886-07-20T23:59:59.999Z",
+        "title.sort": "3",
+        "date_range_end.month": 7,
+        "page.number": "(3)",
+        "date_range_end.year": 1886,
+        "_version_": 1797348699769143300,
+        "date_range_start.day": 20,
+        "ds.img_full.mime": "image/jpeg",
+        "own_parent.model": "periodicalitem",
+        "date.str": "20.7.1886",
+        "own_pid_path": "uuid:ae876087-435d-11dd-b505-00145e5790ea/uuid:b2b5c7a7-435d-11dd-b505-00145e5790ea/uuid:0a3623ed-435e-11dd-b505-00145e5790ea/uuid:99907c99-435f-11dd-b505-00145e5790ea",
+        "own_parent.pid": "uuid:0a3623ed-435e-11dd-b505-00145e5790ea"
+      },
+      {
+        "root.pid": "uuid:ae876087-435d-11dd-b505-00145e5790ea",
+        "titles.search": [
+          "(4)"
+        ],
+        "accessibility": "public",
+        "page.type": "NormalPage",
+        "date_range_start.year": 1886,
+        "date_range_end.day": 20,
+        "date_range_start.month": 7,
+        "in_collections": [
+          "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc",
+          "uuid:0be90938-b8af-4b93-b11a-b131de360017",
+          "uuid:71174c16-98ca-4d39-8893-543b6fd2af74"
+        ],
+        "pid": "uuid:99907c9a-435f-11dd-b505-00145e5790ea",
+        "page.index": 3,
+        "licenses.facet": [
+          "public"
+        ],
+        "licenses_of_ancestors": [
+          "public"
+        ],
+        "rels_ext_index.sort": 3,
+        "id_other": [
+          "urn:99907c9a-435f-11dd-b505-00145e5790ea"
+        ],
+        "pid_paths": [
+          "uuid:ae876087-435d-11dd-b505-00145e5790ea/uuid:b2b5c7a7-435d-11dd-b505-00145e5790ea/uuid:0a3623ed-435e-11dd-b505-00145e5790ea/uuid:99907c9a-435f-11dd-b505-00145e5790ea",
+          "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc/uuid:ae876087-435d-11dd-b505-00145e5790ea/uuid:b2b5c7a7-435d-11dd-b505-00145e5790ea/uuid:0a3623ed-435e-11dd-b505-00145e5790ea/uuid:99907c9a-435f-11dd-b505-00145e5790ea",
+          "uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:ae876087-435d-11dd-b505-00145e5790ea/uuid:b2b5c7a7-435d-11dd-b505-00145e5790ea/uuid:0a3623ed-435e-11dd-b505-00145e5790ea/uuid:99907c9a-435f-11dd-b505-00145e5790ea",
+          "uuid:71174c16-98ca-4d39-8893-543b6fd2af74/uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:ae876087-435d-11dd-b505-00145e5790ea/uuid:b2b5c7a7-435d-11dd-b505-00145e5790ea/uuid:0a3623ed-435e-11dd-b505-00145e5790ea/uuid:99907c9a-435f-11dd-b505-00145e5790ea"
+        ],
+        "root.model": "periodical",
+        "modified": "2020-03-22T21:24:30.812Z",
+        "model": "page",
+        "date.min": "1886-07-20T00:00:00.001Z",
+        "has_tiles": true,
+        "title.search": "(4)",
+        "root.title.sort": "NA|RODNI| LISTY",
+        "indexer_version": 18,
+        "root.title": "Národní listy",
+        "indexed": "2024-04-25T22:48:11.445Z",
+        "level": 3,
+        "created": "2017-05-05T16:48:57.091Z",
+        "own_model_path": "periodical/periodicalvolume/periodicalitem/page",
+        "languages.facet": [
+          "cze"
+        ],
+        "date.max": "1886-07-20T23:59:59.999Z",
+        "title.sort": "4",
+        "date_range_end.month": 7,
+        "page.number": "(4)",
+        "date_range_end.year": 1886,
+        "_version_": 1797348699776483300,
+        "date_range_start.day": 20,
+        "ds.img_full.mime": "image/jpeg",
+        "own_parent.model": "periodicalitem",
+        "date.str": "20.7.1886",
+        "own_pid_path": "uuid:ae876087-435d-11dd-b505-00145e5790ea/uuid:b2b5c7a7-435d-11dd-b505-00145e5790ea/uuid:0a3623ed-435e-11dd-b505-00145e5790ea/uuid:99907c9a-435f-11dd-b505-00145e5790ea",
+        "own_parent.pid": "uuid:0a3623ed-435e-11dd-b505-00145e5790ea"
+      },
+      {
+        "root.pid": "uuid:ae876087-435d-11dd-b505-00145e5790ea",
+        "titles.search": [
+          "(5)"
+        ],
+        "accessibility": "public",
+        "page.type": "NormalPage",
+        "date_range_start.year": 1886,
+        "date_range_end.day": 20,
+        "date_range_start.month": 7,
+        "in_collections": [
+          "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc",
+          "uuid:0be90938-b8af-4b93-b11a-b131de360017",
+          "uuid:71174c16-98ca-4d39-8893-543b6fd2af74"
+        ],
+        "pid": "uuid:9990a3ab-435f-11dd-b505-00145e5790ea",
+        "page.index": 4,
+        "licenses.facet": [
+          "public"
+        ],
+        "licenses_of_ancestors": [
+          "public"
+        ],
+        "rels_ext_index.sort": 4,
+        "id_other": [
+          "urn:9990a3ab-435f-11dd-b505-00145e5790ea"
+        ],
+        "pid_paths": [
+          "uuid:ae876087-435d-11dd-b505-00145e5790ea/uuid:b2b5c7a7-435d-11dd-b505-00145e5790ea/uuid:0a3623ed-435e-11dd-b505-00145e5790ea/uuid:9990a3ab-435f-11dd-b505-00145e5790ea",
+          "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc/uuid:ae876087-435d-11dd-b505-00145e5790ea/uuid:b2b5c7a7-435d-11dd-b505-00145e5790ea/uuid:0a3623ed-435e-11dd-b505-00145e5790ea/uuid:9990a3ab-435f-11dd-b505-00145e5790ea",
+          "uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:ae876087-435d-11dd-b505-00145e5790ea/uuid:b2b5c7a7-435d-11dd-b505-00145e5790ea/uuid:0a3623ed-435e-11dd-b505-00145e5790ea/uuid:9990a3ab-435f-11dd-b505-00145e5790ea",
+          "uuid:71174c16-98ca-4d39-8893-543b6fd2af74/uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:ae876087-435d-11dd-b505-00145e5790ea/uuid:b2b5c7a7-435d-11dd-b505-00145e5790ea/uuid:0a3623ed-435e-11dd-b505-00145e5790ea/uuid:9990a3ab-435f-11dd-b505-00145e5790ea"
+        ],
+        "root.model": "periodical",
+        "modified": "2020-03-22T21:24:30.862Z",
+        "model": "page",
+        "date.min": "1886-07-20T00:00:00.001Z",
+        "has_tiles": true,
+        "title.search": "(5)",
+        "root.title.sort": "NA|RODNI| LISTY",
+        "indexer_version": 18,
+        "root.title": "Národní listy",
+        "indexed": "2024-04-25T22:48:11.445Z",
+        "level": 3,
+        "created": "2017-05-05T16:48:57.238Z",
+        "own_model_path": "periodical/periodicalvolume/periodicalitem/page",
+        "languages.facet": [
+          "cze"
+        ],
+        "date.max": "1886-07-20T23:59:59.999Z",
+        "title.sort": "5",
+        "date_range_end.month": 7,
+        "page.number": "(5)",
+        "date_range_end.year": 1886,
+        "_version_": 1797348699781726200,
+        "date_range_start.day": 20,
+        "ds.img_full.mime": "image/jpeg",
+        "own_parent.model": "periodicalitem",
+        "date.str": "20.7.1886",
+        "own_pid_path": "uuid:ae876087-435d-11dd-b505-00145e5790ea/uuid:b2b5c7a7-435d-11dd-b505-00145e5790ea/uuid:0a3623ed-435e-11dd-b505-00145e5790ea/uuid:9990a3ab-435f-11dd-b505-00145e5790ea",
+        "own_parent.pid": "uuid:0a3623ed-435e-11dd-b505-00145e5790ea"
+      },
+      {
+        "root.pid": "uuid:ae876087-435d-11dd-b505-00145e5790ea",
+        "titles.search": [
+          "(6)"
+        ],
+        "accessibility": "public",
+        "page.type": "NormalPage",
+        "date_range_start.year": 1886,
+        "date_range_end.day": 20,
+        "date_range_start.month": 7,
+        "in_collections": [
+          "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc",
+          "uuid:0be90938-b8af-4b93-b11a-b131de360017",
+          "uuid:71174c16-98ca-4d39-8893-543b6fd2af74"
+        ],
+        "pid": "uuid:994653f2-435f-11dd-b505-00145e5790ea",
+        "page.index": 5,
+        "licenses.facet": [
+          "public"
+        ],
+        "licenses_of_ancestors": [
+          "public"
+        ],
+        "rels_ext_index.sort": 5,
+        "id_other": [
+          "urn:994653f2-435f-11dd-b505-00145e5790ea"
+        ],
+        "pid_paths": [
+          "uuid:ae876087-435d-11dd-b505-00145e5790ea/uuid:b2b5c7a7-435d-11dd-b505-00145e5790ea/uuid:0a3623ed-435e-11dd-b505-00145e5790ea/uuid:994653f2-435f-11dd-b505-00145e5790ea",
+          "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc/uuid:ae876087-435d-11dd-b505-00145e5790ea/uuid:b2b5c7a7-435d-11dd-b505-00145e5790ea/uuid:0a3623ed-435e-11dd-b505-00145e5790ea/uuid:994653f2-435f-11dd-b505-00145e5790ea",
+          "uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:ae876087-435d-11dd-b505-00145e5790ea/uuid:b2b5c7a7-435d-11dd-b505-00145e5790ea/uuid:0a3623ed-435e-11dd-b505-00145e5790ea/uuid:994653f2-435f-11dd-b505-00145e5790ea",
+          "uuid:71174c16-98ca-4d39-8893-543b6fd2af74/uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:ae876087-435d-11dd-b505-00145e5790ea/uuid:b2b5c7a7-435d-11dd-b505-00145e5790ea/uuid:0a3623ed-435e-11dd-b505-00145e5790ea/uuid:994653f2-435f-11dd-b505-00145e5790ea"
+        ],
+        "root.model": "periodical",
+        "modified": "2020-03-22T21:24:30.909Z",
+        "model": "page",
+        "date.min": "1886-07-20T00:00:00.001Z",
+        "has_tiles": true,
+        "title.search": "(6)",
+        "root.title.sort": "NA|RODNI| LISTY",
+        "indexer_version": 18,
+        "root.title": "Národní listy",
+        "indexed": "2024-04-25T22:45:59.726Z",
+        "level": 3,
+        "created": "2017-05-05T16:48:57.386Z",
+        "own_model_path": "periodical/periodicalvolume/periodicalitem/page",
+        "languages.facet": [
+          "cze"
+        ],
+        "date.max": "1886-07-20T23:59:59.999Z",
+        "title.sort": "6",
+        "date_range_end.month": 7,
+        "page.number": "(6)",
+        "date_range_end.year": 1886,
+        "_version_": 1797348564078166000,
+        "date_range_start.day": 20,
+        "ds.img_full.mime": "image/jpeg",
+        "own_parent.model": "periodicalitem",
+        "date.str": "20.7.1886",
+        "own_pid_path": "uuid:ae876087-435d-11dd-b505-00145e5790ea/uuid:b2b5c7a7-435d-11dd-b505-00145e5790ea/uuid:0a3623ed-435e-11dd-b505-00145e5790ea/uuid:994653f2-435f-11dd-b505-00145e5790ea",
+        "own_parent.pid": "uuid:0a3623ed-435e-11dd-b505-00145e5790ea"
+      }
+    ],
+    "numFound": 6,
+    "start": 0,
+    "numFoundExact": true
+  },
+  "responseHeader": {
+    "QTime": 2,
+    "params": {
+      "q": "(own_parent.pid:uuid\\:0a3623ed-435e-11dd-b505-00145e5790ea)",
+      "fl": "*",
+      "start": "0",
+      "sort": "rels_ext_index.sort asc",
+      "rows": "999",
+      "wt": "json"
+    },
+    "status": 0
+  }
+}
