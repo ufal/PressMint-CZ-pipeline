@@ -390,7 +390,7 @@ visualize-tei: $(vizTEI)
 	for COMP in `find $(TEI) -type f -name "*.xml" -printf "%P\n" | sed 's/.xml$$//'| sort`;\
 	do \
 		echo "creating pdf: $(vizTEI)/$$COMP";\
-		python Scripts/tei2pdf.py \
+		PYTHONPATH=Scripts python -m tei2pdf.main \
 		  --tei $(TEI)/$${COMP}.xml \
 			--output $(vizTEI)/$${COMP}.pdf\
 			--cache $(CACHE)/tei2pdf/$${COMP};\
