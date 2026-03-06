@@ -1,4 +1,3 @@
-import argparse
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.pdfbase.pdfmetrics import stringWidth
@@ -10,10 +9,9 @@ from lxml import etree as ET
 
 from pathlib import Path
 import io
-import requests
-from io import BytesIO
 from reportlab.lib import colors
 
+from tei2pdf.image import get_cached_image
 
 
 ZONE_COLORS = {
@@ -56,42 +54,6 @@ ns = {"tei": "http://www.tei-c.org/ns/1.0"}
 
 IMAGE_EXTENSIONS = {".jpg", ".jpeg", ".png", ".tif", ".tiff"}
 
-def get_cached_image(url: str,
-                     cache_root: Path | None,
-                     tei_id: str,
-                     surface_id: str) -> Path | BytesIO:
-    """
-    Cache IIIF image using:
-        cache_root / tei_xml_id / surface_xml_id + extension
-    """
-
-    if cache_root is None:
-        response = requests.get(url, timeout=30)
-        response.raise_for_status()
-        return BytesIO(response.content)
-
-    # Extract extension safely
-    ext = Path(url.split("?")[0]).suffix.lower()
-    if not ext:
-        ext = ".jpg"
-
-    # Create directory: cache/<tei_xml_id>/
-    target_dir = cache_root / tei_id
-    target_dir.mkdir(parents=True, exist_ok=True)
-
-    # Filename: surface_xml_id + extension
-    filename = surface_id + ext
-    cached_path = target_dir / filename
-
-    if not cached_path.exists():
-        print(f"Downloading: {url}")
-        response = requests.get(url, timeout=30)
-        response.raise_for_status()
-        cached_path.write_bytes(response.content)
-    else:
-        print(f"Using cached: {cached_path}")
-
-    return cached_path
 
 def get_lb_text(lb):
     """
@@ -175,45 +137,19 @@ def draw_arrow(c, x1, y1, x2, y2, head_len=20, head_angle=30):
     c.line(x2, y2, x3, y3)
     c.line(x2, y2, x4, y4)
 
-# --------------------
-# ARGPARSE
-# --------------------
-def parse_args():
-    parser = argparse.ArgumentParser(
-        description="Convert TEI XML to a multipage searchable PDF"
-    )
 
-    parser.add_argument(
-        "-t", "--tei",
-        required=True,
-        type=Path,
-        help="TEI XML file"
-    )
 
-    parser.add_argument(
-      "-o", "--output",
-      required=True,
-      type=Path,
-      help="Output PDF file"
-    )
 
-    parser.add_argument(
-      "-c", "--cache",
-      type=Path,
-      help="Directory to cache downloaded images (optional)"
-    )
-    return parser.parse_args()
+class PDFBuilder:
+  def __init__(self, tei_path: str, cache_dir: str | None):
+    self.tei_path = tei_path
+    self.cache_dir = Path(cache_dir) if cache_dir else None
 
-# --------------------
-# MAIN
-# --------------------
-def main():
-    args = parse_args()
-
-    Path(args.output).parent.mkdir(parents=True, exist_ok=True)
-    c = canvas.Canvas(str(args.output))
+  def build_pdf(self, output_path: str):
+    Path(output_path).parent.mkdir(parents=True, exist_ok=True)
+    c = canvas.Canvas(str(output_path))
     parser = ET.XMLParser(remove_blank_text=True, no_network=True, recover=True)
-    tree = ET.parse(str(args.tei), parser)
+    tree = ET.parse(str(self.tei_path), parser)
     root = tree.getroot()
     tei_id = root.attrib.get("{http://www.w3.org/XML/1998/namespace}id")
     # loop over facsimiles/surface elements and add each image to the PDF
@@ -224,7 +160,7 @@ def main():
         if graphic is not None:
             url = graphic.get("url")
             if url and Path(url).suffix.lower() in IMAGE_EXTENSIONS:
-                cached_image = get_cached_image(url, args.cache, tei_id, surface_id)
+                cached_image = get_cached_image(url, self.cache_dir, tei_id, surface_id)
                 img = Image.open(cached_image)
                 page_width, page_height = img.size
 
@@ -423,8 +359,4 @@ def main():
             
     c.save()
 
-# --------------------
-# ENTRY POINT
-# --------------------
-if __name__ == "__main__":
-    main()
+
