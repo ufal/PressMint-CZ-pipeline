@@ -8,7 +8,7 @@ from numpy.lib.stride_tricks import sliding_window_view
 from textRegions2teiFacsText.line_ana import LineAna, LineEndCat, Y, tri
 from textRegions2teiFacsText.reading_order import determine_reading_order
 from textRegions2teiFacsText.tei_output import TEIOutput
-
+from textRegions2teiFacsText.separators import detect_separators
 
 
 def get_ns(el):
@@ -220,12 +220,12 @@ def merge_lines_and_regions(pageLines,pageRegions):
 
 def convert_to_region_like_format(line):
   result = {}
-  result['baseline'] = parse_points_page(line.get('Baseline',[]).get('points',""))
-  polygon = parse_points_page(line.get('Coords',[]).get('points',""))
+  result['baseline'] = parse_points_page(line.get('Baseline', {}).get('points',""))
+  polygon = parse_points_page(line.get('Coords', {}).get('points',""))
   if polygon:
     result['bounding_polygon_points'] = polygon
     result['bbox_xyxy'] = bbox_xyxy_from_points(result['bounding_polygon_points'])
-  result['text'] = line.get('TextEquiv',{}).get('Unicode',"")
+  result['text'] = line.get('TextEquiv', {}).get('Unicode',"")
   result['confidence'] = Decimal(line.get('TextEquiv',{}).get('conf',0))
   return result
 
@@ -233,6 +233,9 @@ def get_page_lines(pageXMLroot):
   lines_dicts = [ element_to_dict(tl) for tl in pageXMLroot.iter(ns(pageXMLroot,"TextLine")) ]
   return [convert_to_region_like_format(pgLine) for pgLine in lines_dicts]
 
+def get_page_text_regions(pageXMLroot):
+  text_region_dicts = [ element_to_dict(tr) for tr in pageXMLroot.iter(ns(pageXMLroot,"TextRegion")) ]
+  return [convert_to_region_like_format(pgRegion) for pgRegion in text_region_dicts]
 
 def process_task(pagesFile, pagexmlDir, regionsFile, outFile, tei_id):
   print(f"{outFile}")
@@ -258,6 +261,7 @@ def process_task(pagesFile, pagexmlDir, regionsFile, outFile, tei_id):
     page_height = int(page.get("imageHeight", 0))
     pageRegions = [item for item in regions if item.get("image",{}).get("uuid") == meta['uuid']]
     mergedRegions, notmergedLines = merge_lines_and_regions(pageLines,pageRegions)
+    textRegions = get_page_text_regions(pageXMLroot)
     for region in mergedRegions:
       annotate_lines_in_region(region)
     pages.append({
@@ -265,6 +269,7 @@ def process_task(pagesFile, pagexmlDir, regionsFile, outFile, tei_id):
       "regions" : mergedRegions,
       "page_meta" : {**meta, "width": page_width, "height": page_height},
       "outlayer_lines": notmergedLines,
+      "text_regions": textRegions, # these are the text regions from pagexml, they are added as zones to TEI
     })
 
   sorted_regions = determine_reading_order(pages)
@@ -278,5 +283,14 @@ def process_task(pagesFile, pagexmlDir, regionsFile, outFile, tei_id):
       #print(f"INFO: adding region to TEI: {region}")
       print(f"INFO: adding region to TEI: BBOX:{region['all_pages_bbox_xyxy']} XSPAN:{region['all_pages_col_x_span']} PAGE:{region['page_n']} COL:{region['col_n']} STARTPAGE:{region['is_page_start']} STARTCOL:{region['is_column_start']} {region.get('class_name','unknown')}")
       tei.add_region(region)
+    tei.add_zone(region['region_content'], "imageRegion", region['page_meta']['url'])
+  for page in pages:
+    for line in page["outlayer_lines"]:
+      print(f"WARN: line without region, adding as outlayer: (text conf={str(line['confidence'])}) {line['text']}")
+      tei.add_zone(line, "outlayerLine", page["page_meta"]["url"])
+    for text_region in page["text_regions"]:
+      tei.add_zone(text_region, "textRegion", page["page_meta"]["url"])
+    for separator in detect_separators([region['bounding_polygon_points'] for region in page["text_regions"]]):
+      tei.add_path(separator.get("path", []), separator.get("orientation", "unknown"),separator.get("thickness", 1), page["page_meta"]["url"])
   tei.close_current_page() # important, it calculates page hull from regions, so it has to be called after all regions are added
   tei.write(outFile)

@@ -42,7 +42,7 @@ class TEIOutput:
 
   points2attrib = staticmethod(lambda points: {
     "points": " ".join(f"{x},{y}" for x, y in points)
-  })
+  } if len(points) > 0 else {})
 
   merge_boxes = staticmethod(lambda childs: (
     min(c.get("bbox_xyxy", (0,0,0,0))[0] for c in childs),
@@ -117,6 +117,32 @@ class TEIOutput:
     self.parent_el_ptr = self.body
     self.prev_line_end_type = LineEndCat.UNKNOWN
   
+  def add_path(self, points, orientation, thickness, surface_url):
+    surface = self.surfaces[self.surfaces_url_to_index[surface_url]]
+    path_el = etree.SubElement(
+      surface["element"], 
+      "{%s}path" % TEI_NS, 
+      attrib={
+        "points": " ".join(f"{x},{y}" for x, y in points),
+        "type": orientation,
+        "n": str(thickness),
+      }
+    )
+  def add_zone(self, zone, zone_type, surface_url):
+    if not surface_url in self.surfaces_url_to_index:
+      print(f"WARN: surface url {surface_url} not found for zone {zone.get('id','unknown')}, skipping zone")
+      return
+    surface = self.surfaces[self.surfaces_url_to_index[surface_url]]
+    f_area = etree.SubElement(
+      surface["element"], 
+      "{%s}zone" % TEI_NS, 
+      attrib={
+        "type": zone_type,
+        **TEIOutput.points2attrib(zone.get("bounding_polygon_points", [])),
+        **TEIOutput.box2attrib(zone.get("bbox_xyxy", (0,0,0,0))),
+        }
+      )
+
   def add_region(self, region):
     if region.get("is_page_start"):
       pb = self.start_new_page(region["page_n"], region["page_meta"])
