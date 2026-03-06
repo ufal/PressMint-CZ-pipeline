@@ -20,19 +20,34 @@ ZONE_COLORS = {
     "page": colors.red,
     "column": colors.blue,
     "line": colors.green,
-    None: colors.black
+    "": colors.black,
+    "imageRegion": colors.orange,
+    "outlayerLine": colors.purple,
+    "textRegion": colors.brown
 }
 ZONE_LINE_WIDTH = {
     "page": 4,
     "column": 2,
     "line": 1,
-    None: 1
+    "": 1,
+    "imageRegion": 3,
+    "outlayerLine": 1,
+    "textRegion": 2
 }
 ZONE_LINE_DASH = {
     "page": [],
     "column": [10, 5],
     "line": [8, 2],
-    None: []
+    "": [],
+    "imageRegion": [5, 5],
+    "outlayerLine": [2, 2],
+    "textRegion": []
+}
+
+PATH_COLORS = {
+    "vertical": colors.darkcyan,
+    "horizontal": colors.darkmagenta,
+    "unknown": colors.gray
 }
 
 pdfmetrics.registerFont(TTFont("DejaVu", "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"))
@@ -222,7 +237,7 @@ def main():
                 img.save(buffer, format="JPEG", quality=80, optimize=True, progressive=True)
                 buffer.seek(0)       
 
-                c.setPageSize((2*page_width, page_height)) # prevous size of image - before scaling
+                c.setPageSize((3*page_width, page_height)) # prevous size of image - before scaling
                 c.drawImage(ImageReader(buffer), 0, 0, width=page_width, height=page_height)
         for zone in surface.findall(".//{http://www.tei-c.org/ns/1.0}zone"):
           ztype = zone.get("type")
@@ -233,8 +248,8 @@ def main():
 
           #Draw polygon if available
           points_attr = zone.get("points")
-
-          if points_attr:
+          for x_shift in (0, page_width): # draw each zone twice - on the image and on the right side for better visibility
+            if points_attr:
               # Parse TEI points string → [(x, y), ...]
               pts = []
               for pair in points_attr.strip().split():
@@ -244,7 +259,7 @@ def main():
           
                   # Convert TEI top-left → PDF bottom-left
                   pdf_y = page_height - y
-                  pts.append((x, pdf_y))
+                  pts.append((x + x_shift, pdf_y))
           
               if len(pts) >= 2:
                   path = c.beginPath()
@@ -256,9 +271,9 @@ def main():
                   path.close()
                   c.setStrokeColor(ZONE_COLORS.get(ztype, colors.black))
                   c.setLineWidth(ZONE_LINE_WIDTH.get(ztype, 1))
-                  c.setDash(ZONE_LINE_DASH.get(ztype, None))
+                  c.setDash(ZONE_LINE_DASH.get(ztype, []))
                   c.drawPath(path, stroke=1, fill=0)
-          elif not None in (ulx, uly, lrx, lry):
+            elif not None in (ulx, uly, lrx, lry):
               ulx = float(ulx)
               uly = float(uly)
               lrx = float(lrx)
@@ -271,12 +286,34 @@ def main():
               pdf_y = page_height - lry
     
               # Set color by type
-              c.setStrokeColor(ZONE_COLORS.get(ztype, colors.black))
-              c.setLineWidth(ZONE_LINE_WIDTH.get(ztype, 1))
-              c.setDash(ZONE_LINE_DASH.get(ztype, None))
+              c.setStrokeColor(ZONE_COLORS.get(ztype, colors.blue))
+              c.setLineWidth(ZONE_LINE_WIDTH.get(ztype, 10))
+              c.setDash(ZONE_LINE_DASH.get(ztype, []))
               # Draw rectangle
-              c.rect(ulx, pdf_y, width, height, fill=0)        
-
+              c.rect(ulx + x_shift, pdf_y, width, height, fill=0)        
+        for path in surface.findall(".//{http://www.tei-c.org/ns/1.0}path"):
+          ptype = path.get("type", "unknown")
+          points_attr = path.get("points")
+          thickness = max(1, int(float(path.get("n", 1))))
+          if points_attr:
+              pts = []
+              for pair in points_attr.strip().split():
+                  x_str, y_str = pair.split(",")
+                  x = float(x_str)
+                  y = float(y_str)
+          
+                  # Convert TEI top-left → PDF bottom-left
+                  pdf_y = page_height - y
+                  pts.append((x, pdf_y))
+              if len(pts) >= 2:
+                  c.setStrokeColor(PATH_COLORS.get(ptype, colors.gray))
+                  c.setLineWidth(thickness)
+                  path_obj = c.beginPath()
+                  path_obj.moveTo(*pts[0])
+                  for p in pts[1:]:
+                      path_obj.lineTo(*p)
+                  c.drawPath(path_obj, stroke=1, fill=0)
+        
         c.setDash() # reset to solid
         zone_lookup = {}
         for zone in surface.findall(".//{http://www.tei-c.org/ns/1.0}zone"):
