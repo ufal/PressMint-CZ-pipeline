@@ -15,19 +15,13 @@ class TEIOutput:
   TEI: etree
   texts: list = [] # nested list with pb/cb/lb
   paragraphs: list = [] # list with paragraphs
-  surfaces: list = [] # list with surfaces 
+  surfaces: list = [] # list with surfaces that contains zones in childs
   surfaces_url_to_index: dict = {}
-  zones: list = [] # nested list with zones area/col/line
   
   paragraphs_i: int = 0
-
-  texts_pb_n: int = 0
-  texts_cb_n: int = 0
-  texts_lb_n: int = 0
-
-  zones_pb_n: int = 0 # area
-  zones_cb_n: int = 0 # col
-  zones_lb_n: int = 0 # line
+  
+  texts_ptr: list = [0, 0, 0]  # ( pb, cb, lb)
+  zones_ptr: list = [0, 0, 0, 0]  # ( surface, area, col, line)
 
   zone_pb: dict = None
   zone_cb: dict = None
@@ -129,6 +123,10 @@ class TEIOutput:
       }
     )
   def add_zone(self, zone, zone_type, surface_url):
+    """
+      add general zone as a direct child of surface, without reference from text (pb/cb/lb)
+       - useful for zones that are not directly connected to text (e.g. decorations, marginal 
+    """
     if not surface_url in self.surfaces_url_to_index:
       print(f"WARN: surface url {surface_url} not found for zone {zone.get('id','unknown')}, skipping zone")
       return
@@ -200,8 +198,11 @@ class TEIOutput:
         "url": page_meta["url"],
         "width": page_meta.get("width",0),
         "height": page_meta.get("height",0),
+        "childs": [],
       })
-    pb_id = f"{self.tei_id}.pb{self.texts_pb_n + 1}"
+      self.zones_ptr = [len(self.surfaces), 0, 0, 0]
+
+    pb_id = f"{self.tei_id}.pb{self.texts_ptr[0] + 1}"
     surface = self.surfaces[self.surfaces_url_to_index[page_meta["url"]]]
     surface["areas_cnt"] += 1
     # create zone for area
@@ -221,9 +222,7 @@ class TEIOutput:
       "id": pb_id,
       "childs": [],
     })
-    self.texts_pb_n = len(self.texts)
-    self.texts_cb_n = 0
-    self.texts_lb_n = 0
+    self.texts_ptr = [len(self.texts), 0, 0]
 
     f_area = etree.SubElement(
       surface["element"], 
@@ -240,10 +239,8 @@ class TEIOutput:
       "cols_cnt": 0,
       "childs": [],
     }
-    self.zones.append(self.zone_pb)
-    self.zones_pb_n = len(self.zones)
-    self.zones_cb_n = 0
-    self.zones_lb_n = 0 
+    surface["childs"].append(self.zone_pb)
+    self.zones_ptr = [self.zones_ptr[0], len(surface["childs"]), 0, 0]
     return pb
 
   def close_current_page(self):
@@ -266,12 +263,13 @@ class TEIOutput:
 
   def start_new_column(self, col_n):
     self.close_current_column()
-    txt = self.texts[self.texts_pb_n - 1]
-    self.texts_cb_n += 1
-    cb_id = f"{txt['id']}.cb{self.texts_cb_n}"
-    zone = self.zones[self.zones_pb_n - 1]
-    zone["cols_cnt"] += 1
-    f_col_id = f"{zone['id']}.c{zone['cols_cnt']}"
+    txt = self.texts[self.texts_ptr[0] - 1]
+    self.texts_ptr[1] += 1
+    cb_id = f"{txt['id']}.cb{self.texts_ptr[1]}"
+    zone = self.surfaces[self.zones_ptr[0] - 1]["childs"][self.zones_ptr[1] - 1]
+    ### zone["cols_cnt"] += 1
+    self.zones_ptr[2] += 1
+    f_col_id = f"{zone['id']}.c{self.zones_ptr[2]}"
     cb = etree.SubElement(
       self.parent_el_ptr, 
       "{%s}cb" % TEI_NS, 
@@ -286,8 +284,7 @@ class TEIOutput:
       "id": cb_id,
       "childs": [],
     })
-    self.texts_cb_n = len(txt["childs"])
-    self.texts_lb_n = 0
+    self.texts_ptr[2] = 0
     f_col = etree.SubElement(
       zone["element"], 
       "{%s}zone" % TEI_NS, 
@@ -304,8 +301,7 @@ class TEIOutput:
       "childs": [],
     }
     zone["childs"].append(self.zone_cb)
-    self.zones_cb_n = len(zone["childs"])
-    self.zones_lb_n = 0
+    self.zones_ptr[3] = 0
     return cb
 
   def close_current_column(self):
@@ -323,12 +319,12 @@ class TEIOutput:
     self.zone_cb = None  
 
   def start_new_line(self, line):
-    txt = self.texts[self.texts_pb_n - 1]["childs"][self.texts_cb_n - 1]
-    cnt = len(txt.get("childs", []))
-    lb_id = f"{txt['id']}.lb{cnt+1}"
-    zone = self.zones[self.zones_pb_n - 1]["childs"][self.zones_cb_n - 1]
-    zone["lines_cnt"] += 1
-    f_line_id = f"{zone['id']}.l{zone['lines_cnt']}"
+    txt = self.texts[self.texts_ptr[0] - 1]["childs"][self.texts_ptr[1] - 1]
+    self.texts_ptr[2] += 1
+    lb_id = f"{txt['id']}.lb{self.texts_ptr[2]}"
+    zone = self.surfaces[self.zones_ptr[0] - 1]["childs"][self.zones_ptr[1] - 1]["childs"][self.zones_ptr[2] - 1]
+    self.zones_ptr[3] += 1
+    f_line_id = f"{zone['id']}.l{self.zones_ptr[3]}"
 
     lb = etree.SubElement(
       self.parent_el_ptr, 
