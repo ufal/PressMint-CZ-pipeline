@@ -1,4 +1,4 @@
-from shapely.geometry import Polygon
+from shapely.geometry import Polygon, box
 from shapely.ops import unary_union
 from shapely.strtree import STRtree
 
@@ -8,6 +8,15 @@ def bbox(poly):
 
 def overlap_1d(a1, a2, b1, b2):
     return max(0, min(a2, b2) - max(a1, b1))
+
+
+def crop_polygon_y(poly, center_y, dist):
+    clip = box(-1e9, center_y - dist, 1e9, center_y + dist)
+    return poly.intersection(clip)
+
+def crop_polygon_x(poly, center_x, dist):
+    clip = box(center_x - dist, -1e9, center_x + dist, 1e9)
+    return poly.intersection(clip)
 
 
 def detect_separators(coords,
@@ -45,9 +54,11 @@ def detect_separators(coords,
                 if ov > min_overlap:
 
                     center_x = (maxx1 + minx2) / 2
+                    _, minyc1, _, maxyc1 = bbox(crop_polygon_x(poly, center_x, 2*max_xgap))
+                    _, minyc2, _, maxyc2 = bbox(crop_polygon_x(other, center_x, 2*max_xgap))
 
-                    y1 = max(miny1, miny2)
-                    y2 = min(maxy1, maxy2)
+                    y1 = min(minyc1, minyc2)
+                    y2 = max(maxyc1, maxyc2)
 
                     vertical.append({
                         "orientation": "vertical",
@@ -64,9 +75,11 @@ def detect_separators(coords,
                 if ov > min_overlap:
 
                     center_y = (maxy1 + miny2) / 2
+                    minxc1,_,maxxc1,_ = bbox(crop_polygon_y(poly, center_y, 2*max_ygap))
+                    minxc2,_,maxxc2,_ = bbox(crop_polygon_y(other, center_y, 2*max_ygap))
 
-                    x1 = max(minx1, minx2)
-                    x2 = min(maxx1, maxx2)
+                    x1 = min(minxc1, minxc2)
+                    x2 = max(maxxc1, maxxc2)
 
                     horizontal.append({
                         "orientation": "horizontal",

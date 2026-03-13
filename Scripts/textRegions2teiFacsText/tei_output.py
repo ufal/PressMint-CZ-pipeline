@@ -21,13 +21,13 @@ class TEIOutput:
   
   paragraphs_i: int = 0
 
-  texts_pb_i: int = 0
-  texts_cb_i: int
-  texts_lb_i: int
+  texts_pb_n: int = 0
+  texts_cb_n: int = 0
+  texts_lb_n: int = 0
 
-  zones_pb_i: int # area
-  zones_cb_i: int # col
-  zones_lb_i: int # line
+  zones_pb_n: int = 0 # area
+  zones_cb_n: int = 0 # col
+  zones_lb_n: int = 0 # line
 
   zone_pb: dict = None
   zone_cb: dict = None
@@ -201,8 +201,7 @@ class TEIOutput:
         "width": page_meta.get("width",0),
         "height": page_meta.get("height",0),
       })
-
-    pb_id = f"{self.tei_id}.pb{page_n}"
+    pb_id = f"{self.tei_id}.pb{self.texts_pb_n + 1}"
     surface = self.surfaces[self.surfaces_url_to_index[page_meta["url"]]]
     surface["areas_cnt"] += 1
     # create zone for area
@@ -222,7 +221,10 @@ class TEIOutput:
       "id": pb_id,
       "childs": [],
     })
-    self.texts_cb_i = 0
+    self.texts_pb_n = len(self.texts)
+    self.texts_cb_n = 0
+    self.texts_lb_n = 0
+
     f_area = etree.SubElement(
       surface["element"], 
       "{%s}zone" % TEI_NS, 
@@ -232,7 +234,6 @@ class TEIOutput:
         "type": "page",
         }
       )
-    self.zones_pb_i = len(self.zones)
     self.zone_pb = {
       "element": f_area,
       "id": f_area_id,
@@ -240,7 +241,9 @@ class TEIOutput:
       "childs": [],
     }
     self.zones.append(self.zone_pb)
-    self.zones_cb_i = 0
+    self.zones_pb_n = len(self.zones)
+    self.zones_cb_n = 0
+    self.zones_lb_n = 0 
     return pb
 
   def close_current_page(self):
@@ -263,10 +266,10 @@ class TEIOutput:
 
   def start_new_column(self, col_n):
     self.close_current_column()
-    txt = self.texts[self.texts_pb_i]
-    cnt= len(txt.get("childs", []))
-    cb_id = f"{txt['id']}.cb{cnt+1}"
-    zone = self.zones[self.zones_pb_i]
+    txt = self.texts[self.texts_pb_n - 1]
+    self.texts_cb_n += 1
+    cb_id = f"{txt['id']}.cb{self.texts_cb_n}"
+    zone = self.zones[self.zones_pb_n - 1]
     zone["cols_cnt"] += 1
     f_col_id = f"{zone['id']}.c{zone['cols_cnt']}"
     cb = etree.SubElement(
@@ -283,7 +286,8 @@ class TEIOutput:
       "id": cb_id,
       "childs": [],
     })
-    self.texts_lb_i = 0
+    self.texts_cb_n = len(txt["childs"])
+    self.texts_lb_n = 0
     f_col = etree.SubElement(
       zone["element"], 
       "{%s}zone" % TEI_NS, 
@@ -293,7 +297,6 @@ class TEIOutput:
         "type": "column",
         }
       )
-    self.zones_cb_i = len(zone["childs"])
     self.zone_cb = {
       "element": f_col,
       "id": f_col_id,
@@ -301,7 +304,8 @@ class TEIOutput:
       "childs": [],
     }
     zone["childs"].append(self.zone_cb)
-    self.zones_lb_i = 0
+    self.zones_cb_n = len(zone["childs"])
+    self.zones_lb_n = 0
     return cb
 
   def close_current_column(self):
@@ -319,10 +323,10 @@ class TEIOutput:
     self.zone_cb = None  
 
   def start_new_line(self, line):
-    txt = self.texts[self.texts_pb_i]["childs"][self.texts_cb_i]
+    txt = self.texts[self.texts_pb_n - 1]["childs"][self.texts_cb_n - 1]
     cnt = len(txt.get("childs", []))
     lb_id = f"{txt['id']}.lb{cnt+1}"
-    zone = self.zones[self.zones_pb_i]["childs"][self.zones_cb_i]
+    zone = self.zones[self.zones_pb_n - 1]["childs"][self.zones_cb_n - 1]
     zone["lines_cnt"] += 1
     f_line_id = f"{zone['id']}.l{zone['lines_cnt']}"
 
@@ -335,11 +339,11 @@ class TEIOutput:
         "facs": f"#{f_line_id}",
         }
       )
-    self.texts_lb_i = len(txt["childs"])
     txt["childs"].append({
       "element": lb,
       "id": lb_id,
     })
+    self.texts_lb_n = len(txt["childs"])
     f_line = etree.SubElement(
       zone["element"], 
       "{%s}zone" % TEI_NS, 
@@ -351,7 +355,6 @@ class TEIOutput:
         **TEIOutput.box2attrib(line.get("bbox_xyxy", (0,0,0,0))),
         }
       )
-    self.zones_lb_i = len(zone["childs"])
     self.zone_lb = {
       "element": f_line,
       "id": f_line_id,
@@ -359,6 +362,7 @@ class TEIOutput:
       "bounding_polygon_points": line.get("bounding_polygon_points", None),
     }
     zone["childs"].append(self.zone_lb)
+    self.zones_lb_n = len(zone["childs"])
     return lb
   
   def insert_line_text(self, line):

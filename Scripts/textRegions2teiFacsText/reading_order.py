@@ -11,7 +11,7 @@ def y_top(b):
 def x_overlap(b1, b2):
     return max(0, min(b1[2], b2[2]) - max(b1[0], b2[0]))
 
-def group_into_columns(items, min_overlap_ratio=0.1):
+def group_into_columns(items, min_overlap_ratio=0.8):
   columns = []
   for item in sorted(items, key=lambda i: i["all_pages_bbox_xyxy"][0]):
     x1, _, x2, _ = item["all_pages_bbox_xyxy"]
