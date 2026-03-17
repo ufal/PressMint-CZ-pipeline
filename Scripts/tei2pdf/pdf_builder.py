@@ -4,6 +4,8 @@ from reportlab.pdfbase.pdfmetrics import stringWidth
 from reportlab.lib.utils import ImageReader
 from reportlab.pdfgen import canvas
 from PIL import Image
+import re
+
 #import xml.etree.ElementTree as ET
 from lxml import etree as ET
 
@@ -83,6 +85,59 @@ def get_lb_text(lb):
 
     return "".join(parts).strip()
 
+def is_element_preceding(elem, tag):
+    current = elem
+
+    while current is not None:
+        parent = current.getparent()
+        if parent is None:
+            return False
+
+        # 1. Check immediate previous sibling
+        prev = current.getprevious()
+        while prev is not None:
+            # If there's text immediately after previous element → stop
+            if prev.tail and prev.tail.strip():
+                return False
+            elif prev.tag.endswith(tag): # found preceding element with the tag
+                return True
+            elif prev.text and prev.text.strip(): # skipping <p> with text content
+                return False
+            else:
+                prev = prev.getprevious()
+
+        # 2. No previous sibling → check parent text (text before first child)
+        if parent.text and parent.text.strip():
+            return False
+
+        # 3. Move up to parent and continue
+        current = parent
+
+    return False
+
+def is_no_text_before_element(elem):
+    current = elem
+    prev = current.getprevious()
+    while prev is not None:
+      if prev.tail and prev.tail.strip():
+        return False
+      elif prev.text and prev.text.strip():
+        return False
+      else:
+        prev = prev.getprevious()
+    return True
+
+def is_no_text_after_element(elem):
+    current = elem
+    next = current.getnext()
+    while next is not None:
+      if next.text and next.text.strip():
+        return False
+      elif next.tail and next.tail.strip():
+        return False
+      else:
+        next = next.getnext()
+    return True
 
 def fit_text_to_box(c, text, box_width, box_height,
                     font_name="Helvetica",
@@ -176,13 +231,11 @@ class PDFBuilder:
             pos.append((2, 0)) # draw third time even further right if not linked to any text element to avoid overlap with text
           self.draw_zone(zone, position=pos)
 
+        # draw paths in current surface
         for path in surface.xpath(".//tei:path", namespaces=ns):
           self.draw_path(path, position=[(0,0),(2,0)])
         
-        
-        ################## TODO:
-       
-
+        # current surface id to zone mapping:
         zone_lookup = { 
           zone.attrib.get("{http://www.w3.org/XML/1998/namespace}id"): zone 
           for zone 
@@ -190,52 +243,41 @@ class PDFBuilder:
           if zone.attrib.get("{http://www.w3.org/XML/1998/namespace}id")
         }
 
-        previous_line_zone = None
-        pending_page_break = False
+        # draw reading order for pb and cb
+        order = [0,0]
+        previous_line_zone = (0,0,0,0)
         pending_column_break = False
         for elem in root.xpath(".//tei:pb | .//tei:lb | .//tei:cb", namespaces=ns):
             if not elem.get("facs") or elem.get("facs").lstrip("#") not in zone_lookup:
               continue
             
             if elem.tag.endswith("pb"):
+              order[0] += 1
+              order[1] = 0
               self.draw_beginning(elem, zone_lookup[elem.get("facs").lstrip("#")],position=[(0,0), (1,0)])
-              pending_page_break = True
-              if previous_line_zone is not None:
-                self.draw_arrow(previous_line_zone,(self.page_width,self.page_height,self.page_width,self.page_height),position=[(1,0)]) # arrow from last line to right edge of page
-              continue
-
-            if elem.tag.endswith("cb"):
+              if previous_line_zone != (0,0,0,0):
+                self.draw_arrow(previous_line_zone,(self.page_width,self.page_height,self.page_width,self.page_height),position=[(1,0),(2,0)], label=f"{''.join(map(str, order))}") # arrow from last line to right edge of page
+                previous_line_zone = (0,0,0,0)
+            elif elem.tag.endswith("cb"):
+              order[1] += 1
               self.draw_beginning(elem, zone_lookup[elem.get("facs").lstrip("#")],position=[(0,0), (1,0)])
               pending_column_break = True
-              continue
-        
-            if elem.tag.endswith("lb"):
+            elif elem.tag.endswith("lb"):
                 zone_id = elem.get("facs")
                 if not zone_id:
                     continue
-        
                 zone = zone_lookup[zone_id.lstrip("#")]
                 ulx, uly, lrx, lry = get_zone_box(zone)
-        
-                # convert TEI coords - PDF coords
-                y_top = self.page_height - uly
-                y_bottom = self.page_height - lry
-        
-                # compute anchor points
-                start_x = lrx
-                start_y = (y_top + y_bottom) / 2
-                if pending_page_break:
-                  previous_line_zone = (0,0,0,0) # anchor from left edge of page
-                  pending_page_break = False
-                if pending_column_break and previous_line_zone is not None:
+                if pending_column_break:  # and previous_line_zone != (0,0,0,0):
                     # draw arrow from previous line to this line
-                    self.draw_arrow(previous_line_zone, (ulx, uly, lrx, lry), position=[(1,0)]) # arrow from last line to this line        
+                    self.draw_arrow(previous_line_zone, (ulx, uly, lrx, lry), position=[(1,0),(2,0)], label=f"{''.join(map(str, order))}") # arrow from last line to this line        
                     pending_column_break = False
-        
                 previous_line_zone = (ulx, uly, lrx, lry)
+        order[0] += 1
+        order[1] = 0
+        self.draw_arrow(previous_line_zone,(self.page_width,self.page_height,self.page_width,self.page_height),position=[(1,0),(2,0)], label=f"{''.join(map(str, order))}") # arrow from last line to right edge of page
 
-
-
+        # draw text for lines in current surface
         line_zones = {}
         for zone in surface.findall(".//{http://www.tei-c.org/ns/1.0}zone[@type='line']"):
           zid = zone.attrib.get("{http://www.w3.org/XML/1998/namespace}id")
@@ -247,6 +289,7 @@ class PDFBuilder:
             "lrx": float(zone.get("lrx")),
             "lry": float(zone.get("lry")),
           }
+        ln = 0
         for lb in root.findall(".//{http://www.tei-c.org/ns/1.0}lb"):
           facs = lb.get("facs")
           if not facs:
@@ -255,8 +298,9 @@ class PDFBuilder:
           # Only print if zone belongs to this surface
           if facs_id not in line_zones:
               continue
-
+          ln += 1
           text = get_lb_text(lb)
+          lb_id = lb.attrib.get("{http://www.w3.org/XML/1998/namespace}id")
           if not text:
               continue
 
@@ -270,9 +314,6 @@ class PDFBuilder:
           width = lrx - ulx
           height = lry - uly
 
-          # Convert coordinate system
-          pdf_y = self.page_height - lry
-
           # Optional: scale font to line height
           font_size = fit_text_to_box(self.c, text, width, height, font_name="DejaVu", max_font_size=height, min_font_size=3)
           self.c.setFont("DejaVu", font_size)
@@ -284,24 +325,56 @@ class PDFBuilder:
           # Vertically center baseline
           y = self.page_height - uly - (height - font_size) / 2 - font_size
 
+          # beginning of paragraph
+          if lb.getnext() and lb.getnext().tag.endswith("p"):
+            self.c.setFillColor(colors.green)
+            self.c.rect(ulx+self.page_width, self.page_height - uly, 6, uly-lry, stroke=0, fill=1)
+
+          # end of paragraph
+          if is_no_text_after_element(lb) and lb.getparent().tag.endswith("p"):
+            self.c.setFillColor(colors.orange)
+            self.c.rect(lrx+self.page_width, self.page_height - uly, 6, uly-lry, stroke=0, fill=1)  
+
           # Draw text
           self.c.drawString(x+self.page_width, y, text)
+          # Draw line ID for debugging
+          self.c.setFont("DejaVu", font_size * 0.6)
+          self.c.setFillColor(colors.red)
+          idx = re.sub(r'[pclb]','','.'.join(lb_id.split('.')[1:]))
+          self.c.drawString(x+2*self.page_width, y, f"({ln}){idx}")
+          
+          self.c.setDash()
+          if is_element_preceding(lb,'pb'):
+            print(f"LB {lb_id} is preceded by page break")
+            self.c.setFillColor(colors.purple)
+            self.c.rect(ulx-9+self.page_width, self.page_height - uly, 6, uly-lry, stroke=0, fill=1)
+          if is_element_preceding(lb,'cb'):
+            print(f"LB {lb_id} is preceded by column break")
+            self.c.setFillColor(colors.cyan)
+            self.c.rect(ulx-3+self.page_width, self.page_height - uly, 6, uly-lry, stroke=0, fill=1)
+
 
         self.c.showPage()
             
     self.c.save()
 
 
-  def draw_arrow(self, start_zone, end_zone, position=[(0,0)]):
+  def draw_arrow(self, start_zone, end_zone, position=[(0,0)], label=None):
     start_x = start_zone[2]
     start_y = self.page_height - start_zone[3]
     end_x = end_zone[0]
     end_y = self.page_height - end_zone[1]
     for pos in position:
-      self.c.setStrokeColor(ZONE_COLORS.get("column", colors.black))
-      self.c.setLineWidth(1)
+      #self.c.setStrokeColor(ZONE_COLORS.get("column", colors.black))
+      self.c.setStrokeColor(colors.purple)
+      self.c.setStrokeAlpha(0.5)
+      self.c.setLineWidth(10)
       draw_arrow(self.c, start_x+pos[0]*self.page_width, start_y+pos[1]*self.page_height,
                       end_x+pos[0]*self.page_width, end_y+pos[1]*self.page_height)
+      if label:
+        self.c.setFont("DejaVu", 30)
+        self.c.setFillColor(colors.red)
+        self.c.drawString(0.1*start_x+0.9*end_x+pos[0]*self.page_width, 0.1*start_y+0.9*end_y+pos[1]*self.page_height, label)
 
   def draw_image(self, graphic, tei_id, surface_id, position=[(0,0)], max_dim=1500):
     url = graphic.get("url") 
