@@ -33,6 +33,7 @@ def group_into_columns(items, min_overlap_ratio=0.8):
         columns.append({
           "x_span": (x1, x2),
           "items": [item],
+          "page_n": item["page_n"]
         })
   return columns
 
@@ -85,14 +86,25 @@ def determine_reading_order(pages):
   print("============ SORTED COLUMNS ============")
   print(dev_short(sorted_columns))
   sorted_regions = []
+  is_page_start = True
   for i, col in enumerate(sorted_columns):
-    col["items"].sort(key=lambda i: i["all_pages_bbox_xyxy"][1])
+    col["items"].sort(key=lambda line: 
+        sum([line["all_pages_bbox_xyxy"][1], line["all_pages_bbox_xyxy"][3]])/2
+        + 0.1 *line["all_pages_bbox_xyxy"][0])
+    if i > 0:
+      prev_col = sorted_columns[i-1]
+      # check if columns are on the same page
+      if prev_col["page_n"] == col["page_n"]:
+        is_page_start = False
+      else:
+        is_page_start = True
     for j, item in enumerate(col["items"]):
-      item["is_page_start"] = (j == 0) or (item["page_n"] != col["items"][j-1]["page_n"])
+      item["is_page_start"] = is_page_start
       item["is_column_start"] = (j == 0)
       item["col_n"] = i
       item["all_pages_col_x_span"] = col["x_span"]
-      sorted_regions.append(item)
+      sorted_regions.append(item) 
+      is_page_start = False
   print("============ SORTED REGIONS ============")
   print(dev_short(sorted_regions))
   
