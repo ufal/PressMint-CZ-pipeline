@@ -208,7 +208,7 @@ class TEIOutput:
     # create zone for area
     f_area_id = f"{surface['id']}.a{surface['areas_cnt']}"
     pb = etree.SubElement(
-      self.body, 
+      self.parent_el_ptr,
       "{%s}pb" % TEI_NS, 
       attrib={
         "{%s}id" % XML_NS: pb_id,
