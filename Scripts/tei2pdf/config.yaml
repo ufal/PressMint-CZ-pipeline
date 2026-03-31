@@ -44,21 +44,19 @@ profiles:
     tasks:
       - name : text
         position:
-          - [0,0]
           - [1,0]
+          - [2,0]
       - name : image
         max_resolution: 1500
         grayscale: false
         quality: 80
         position:
-          - [0,0]
-      - name : zone
-        zone_type: column
-        position:
-          - [1, 0]
+          - [1,0]
       - name : zone
         position:
           - [0, 0]
+          - [1, 0]
+      
   test-img:
     tasks:
       - name : image

@@ -56,10 +56,10 @@
          <tagsDecl>
             <namespace name="http://www.tei-c.org/ns/1.0">
                <tagUsage gi="body" occurs="5"/>
-               <tagUsage gi="cb" occurs="83"/>
+               <tagUsage gi="cb" occurs="87"/>
                <tagUsage gi="lb" occurs="8365"/>
                <tagUsage gi="p" occurs="722"/>
-               <tagUsage gi="pb" occurs="83"/>
+               <tagUsage gi="pb" occurs="22"/>
                <tagUsage gi="pc" occurs="2279"/>
                <tagUsage gi="text" occurs="5"/>
             </namespace>
