@@ -1,0 +1,95 @@
+templates:
+  default:
+    position:
+      - [0, 0]
+
+styles:
+  zone_base:
+    pattern: [zone]
+    width: 1
+    color: black
+    dash: []
+
+  zone_line:
+    pattern: [zone, line]
+    width: 1
+    color: green
+    dash: [8,2]
+
+  zone_column:
+    pattern: [zone, column]
+    width: 2
+    color: blue
+    dash: [10,5]
+
+  zone_page:
+    pattern: [zone, page]
+    width: 4
+    color: red
+
+  text:
+    pattern: [text]
+    fill: black
+
+
+
+profiles:
+  default:
+    tasks:
+      - template: default
+        name : text
+      - template: default
+        name : image
+  dev:
+    tasks:
+      - name : text
+        position:
+          - [0,0]
+          - [1,0]
+      - name : image
+        max_resolution: 1500
+        grayscale: false
+        quality: 80
+        position:
+          - [0,0]
+      - name : zone
+        zone_type: column
+        position:
+          - [1, 0]
+      - name : zone
+        position:
+          - [0, 0]
+  test-img:
+    tasks:
+      - name : image
+        max_resolution: 1500
+        grayscale: false
+        quality: 80
+        position:
+          - [0,0]
+  test-zone:
+    tasks:
+      - name : zone
+        zone_type: line
+        position:
+          - [1, 0]
+      - name : zone
+        position:
+          - [0, 0]
+  test-text:
+    tasks:
+      - name : image
+        max_resolution: 1500
+        quality: 80 
+      - name : text
+        template: default
+
+  test-elem:
+    tasks:
+      - name : image
+        max_resolution: 1500
+        quality: 80 
+      - name : element
+        template: default
+
+active_profile: dev

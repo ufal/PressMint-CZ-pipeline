@@ -1,5 +1,3 @@
-from reportlab.pdfbase import pdfmetrics
-from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.pdfbase.pdfmetrics import stringWidth
 from reportlab.lib.utils import ImageReader
 from reportlab.pdfgen import canvas
@@ -13,7 +11,6 @@ from pathlib import Path
 import io
 from reportlab.lib import colors
 
-from tei2pdf.image import get_cached_image
 
 
 ZONE_COLORS = {
@@ -50,70 +47,14 @@ PATH_COLORS = {
     "unknown": colors.gray
 }
 
-pdfmetrics.registerFont(TTFont("DejaVu", "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"))
 ns = {"tei": "http://www.tei-c.org/ns/1.0"}
 
 
-IMAGE_EXTENSIONS = {".jpg", ".jpeg", ".png", ".tif", ".tiff"}
 
 
-def get_lb_text(lb):
-    """
-    Returns all text between this <lb> and the next <lb>,
-    including inline elements like <pc>.
-    """
 
-    parts = []
 
-    # text directly after <lb/>
-    if lb.tail:
-        parts.append(lb.tail)
 
-    # iterate over following siblings
-    for sib in lb.itersiblings():
-        # stop at next <lb>
-        if sib.tag.endswith("lb"):
-            break
-
-        # element text
-        if sib.text:
-            parts.append(sib.text)
-
-        # element tail
-        if sib.tail:
-            parts.append(sib.tail)
-
-    return "".join(parts).strip()
-
-def is_element_preceding(elem, tag):
-    current = elem
-
-    while current is not None:
-        parent = current.getparent()
-        if parent is None:
-            return False
-
-        # 1. Check immediate previous sibling
-        prev = current.getprevious()
-        while prev is not None:
-            # If there's text immediately after previous element → stop
-            if prev.tail and prev.tail.strip():
-                return False
-            elif prev.tag.endswith(tag): # found preceding element with the tag
-                return True
-            elif prev.text and prev.text.strip(): # skipping <p> with text content
-                return False
-            else:
-                prev = prev.getprevious()
-
-        # 2. No previous sibling → check parent text (text before first child)
-        if parent.text and parent.text.strip():
-            return False
-
-        # 3. Move up to parent and continue
-        current = parent
-
-    return False
 
 def is_no_text_before_element(elem):
     current = elem
@@ -127,38 +68,9 @@ def is_no_text_before_element(elem):
         prev = prev.getprevious()
     return True
 
-def is_no_text_after_element(elem):
-    current = elem
-    next = current.getnext()
-    while next is not None:
-      if next.text and next.text.strip():
-        return False
-      elif next.tail and next.tail.strip():
-        return False
-      else:
-        next = next.getnext()
-    return True
 
-def fit_text_to_box(c, text, box_width, box_height,
-                    font_name="Helvetica",
-                    max_font_size=20,
-                    min_font_size=3):
-    """
-    Returns the largest font size that fits inside the box.
-    """
 
-    font_size = max_font_size
 
-    while font_size >= min_font_size:
-        text_width = pdfmetrics.stringWidth(text, font_name, font_size)
-        text_height = font_size  # approx baseline height
-
-        if text_width <= box_width and text_height <= box_height:
-            return font_size
-
-        font_size -= 0.5
-
-    return min_font_size
 
 def get_zone_box(zone):
     ulx = float(zone.get("ulx"))
@@ -196,11 +108,27 @@ def draw_arrow(c, x1, y1, x2, y2, head_len=20, head_angle=30):
 
 
 class PDFBuilder:
-  def __init__(self, tei_path: str, cache_dir: str | None):
+
+  def __init__(self, tei_path: str, cache_dir: str | None, tasks=None, styles = {}):
     self.tei_path = tei_path
     self.cache_dir = Path(cache_dir) if cache_dir else None
+    self.tasks = tasks
+    max_x = 0
+    max_y = 0
+    for task in self.tasks:
+        positions = task.get_positions()
 
-  def build_pdf(self, output_path: str, max_dim=1500):
+        for pos in positions:
+            x, y = pos
+            max_x = max(max_x, x)
+            max_y = max(max_y, y)
+
+    self.repeat_x = max_x + 1
+    self.repeat_y = max_y + 1
+    self.styles = styles
+
+
+  def build_pdf(self, output_path: str):
     Path(output_path).parent.mkdir(parents=True, exist_ok=True)
     self.c = canvas.Canvas(str(output_path))
     parser = ET.XMLParser(remove_blank_text=True, no_network=True, recover=True)
@@ -209,11 +137,33 @@ class PDFBuilder:
     tei_id = root.attrib.get("{http://www.w3.org/XML/1998/namespace}id")
     # loop over facsimiles/surface elements and add each image to the PDF
     for surface in root.findall(".//{http://www.tei-c.org/ns/1.0}surface"):
+      surface_id = surface.attrib.get("{http://www.w3.org/XML/1998/namespace}id")
+      self.initialize_page(surface)
+      for task in self.tasks:
+        print(f"{task}: Running on surface {surface_id} of TEI document {tei_id}")
+        task.run(self.c, 
+                     surface, 
+                     shared_context = {
+                      "cache_dir": self.cache_dir,
+                      "tei_id": tei_id,
+                      "surface_id": surface_id,
+                      "root": root,
+                      "ns": ns,
+                      "page_width": self.page_width,
+                      "page_height": self.page_height,
+                      "styles": self.styles
+                     })
+      self.c.showPage()
+    self.c.save()
+
+    return
+    ##### TODO: REMOVE THIS HARDCODED TESTING CODE AND REPLACE WITH TASKS DEFINED IN YAML CONFIG #####
+    max_dim = 1500
+    # loop over facsimiles/surface elements and add each image to the PDF
+    for surface in root.findall(".//{http://www.tei-c.org/ns/1.0}surface"):
         surface_id = surface.attrib.get("{http://www.w3.org/XML/1998/namespace}id")
         graphic = surface.find("{http://www.tei-c.org/ns/1.0}graphic")
         self.initialize_page(surface)
-        if graphic is not None:
-          self.draw_image(graphic, tei_id, surface_id, position=[(0,0)], max_dim=max_dim)
         
         zones = surface.xpath(".//tei:zone", namespaces=ns)
         facs_ids = {
@@ -277,83 +227,6 @@ class PDFBuilder:
         order[1] = 0
         self.draw_arrow(previous_line_zone,(self.page_width,self.page_height,self.page_width,self.page_height),position=[(1,0),(2,0)], label=f"{''.join(map(str, order))}") # arrow from last line to right edge of page
 
-        # draw text for lines in current surface
-        line_zones = {}
-        for zone in surface.findall(".//{http://www.tei-c.org/ns/1.0}zone[@type='line']"):
-          zid = zone.attrib.get("{http://www.w3.org/XML/1998/namespace}id")
-          if not all(zone.get(a) for a in ("ulx", "uly", "lrx", "lry")):
-            continue
-          line_zones[zid] = {
-            "ulx": float(zone.get("ulx")),
-            "uly": float(zone.get("uly")),
-            "lrx": float(zone.get("lrx")),
-            "lry": float(zone.get("lry")),
-          }
-        ln = 0
-        for lb in root.findall(".//{http://www.tei-c.org/ns/1.0}lb"):
-          facs = lb.get("facs")
-          if not facs:
-              continue
-          facs_id = facs.lstrip("#")
-          # Only print if zone belongs to this surface
-          if facs_id not in line_zones:
-              continue
-          ln += 1
-          text = get_lb_text(lb)
-          lb_id = lb.attrib.get("{http://www.w3.org/XML/1998/namespace}id")
-          if not text:
-              continue
-
-          zone = line_zones[facs_id]
-
-          ulx = zone["ulx"]
-          uly = zone["uly"]
-          lrx = zone["lrx"]
-          lry = zone["lry"]
-
-          width = lrx - ulx
-          height = lry - uly
-
-          # Optional: scale font to line height
-          font_size = fit_text_to_box(self.c, text, width, height, font_name="DejaVu", max_font_size=height, min_font_size=3)
-          self.c.setFont("DejaVu", font_size)
-          self.c.setFillColor(colors.black)
-
-          text_width = pdfmetrics.stringWidth(text, "DejaVu", font_size)
-          # Center horizontally
-          x = ulx + (width - text_width) / 2
-          # Vertically center baseline
-          y = self.page_height - uly - (height - font_size) / 2 - font_size
-
-          # beginning of paragraph
-          if lb.getnext() and lb.getnext().tag.endswith("p"):
-            self.c.setFillColor(colors.green)
-            self.c.rect(ulx+self.page_width, self.page_height - uly, 6, uly-lry, stroke=0, fill=1)
-
-          # end of paragraph
-          if is_no_text_after_element(lb) and lb.getparent().tag.endswith("p"):
-            self.c.setFillColor(colors.orange)
-            self.c.rect(lrx+self.page_width, self.page_height - uly, 6, uly-lry, stroke=0, fill=1)  
-
-          # Draw text
-          self.c.drawString(x+self.page_width, y, text)
-          # Draw line ID for debugging
-          self.c.setFont("DejaVu", font_size * 0.6)
-          self.c.setFillColor(colors.red)
-          idx = re.sub(r'[pclb]','','.'.join(lb_id.split('.')[1:]))
-          self.c.drawString(x+2*self.page_width, y, f"({ln}){idx}")
-          
-          self.c.setDash()
-          if is_element_preceding(lb,'pb'):
-            print(f"LB {lb_id} is preceded by page break")
-            self.c.setFillColor(colors.purple)
-            self.c.rect(ulx-9+self.page_width, self.page_height - uly, 6, uly-lry, stroke=0, fill=1)
-          if is_element_preceding(lb,'cb'):
-            print(f"LB {lb_id} is preceded by column break")
-            self.c.setFillColor(colors.cyan)
-            self.c.rect(ulx-3+self.page_width, self.page_height - uly, 6, uly-lry, stroke=0, fill=1)
-
-
         self.c.showPage()
             
     self.c.save()
@@ -376,29 +249,14 @@ class PDFBuilder:
         self.c.setFillColor(colors.red)
         self.c.drawString(0.1*start_x+0.9*end_x+pos[0]*self.page_width, 0.1*start_y+0.9*end_y+pos[1]*self.page_height, label)
 
-  def draw_image(self, graphic, tei_id, surface_id, position=[(0,0)], max_dim=1500):
-    url = graphic.get("url") 
-    if url and Path(url).suffix.lower() in IMAGE_EXTENSIONS:
-        cached_image = get_cached_image(url, self.cache_dir, tei_id, surface_id)
-        img = Image.open(cached_image)
-        ratio = min(max_dim / self.page_width, max_dim / self.page_height, 1)
-        new_size = (int(self.page_width * ratio), int(self.page_height * ratio))
-        img = img.resize(new_size, Image.LANCZOS)
-        #img = img.convert("L")  # grayscale
-        buffer = io.BytesIO()
-        img.save(buffer, format="JPEG", quality=80, optimize=True, progressive=True)
-        buffer.seek(0)
-        for pos in position:       
-          self.c.drawImage(ImageReader(buffer), 0+pos[0]*self.page_width, 0+pos[1]*self.page_height, width=self.page_width, height=self.page_height)
 
-
-  def initialize_page(self, surface, x_stretch=3, y_stretch=1):
+  def initialize_page(self, surface):
     #self.page_width, self.page_height = self.get_max_dimensions(surface)
     self.page_width = float(surface.get("lrx", 0))
     self.page_height = float(surface.get("lry", 0))
-    self.c.setPageSize((self.page_width * x_stretch, self.page_height * y_stretch))
+    self.c.setPageSize((self.page_width * self.repeat_x, self.page_height * self.repeat_y))
     self.c.setFillColor(colors.white)
-    self.c.rect(0, 0, self.page_width * x_stretch, self.page_height * y_stretch, fill=1)
+    self.c.rect(0, 0, self.page_width * self.repeat_x, self.page_height * self.repeat_y, fill=1)
 
 
   def get_max_dimensions(self, surface):
