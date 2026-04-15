@@ -31,7 +31,24 @@ styles:
     pattern: [text]
     fill: black
 
-
+  element_p:
+    pattern: [element p]
+    color: pink
+  element_lb:
+    pattern: [element lb]
+    color: cyan
+  element_cb:
+    pattern: [element cb]
+    color: yellow
+  element_pb:
+    pattern: [element pb]
+    color: magenta
+  element_pc:
+    pattern: [element pc]
+    color: orange
+  element_other:
+    pattern: [element]
+    color: red
 
 profiles:
   default:
@@ -52,6 +69,14 @@ profiles:
         quality: 80
         position:
           - [1,0]
+      - name : element
+        element:
+          - p
+        template: default
+        position:
+          - [0, 0]
+          - [1, 0]
+          - [2, 0]
       - name : zone
         position:
           - [0, 0]
@@ -88,6 +113,15 @@ profiles:
         max_resolution: 1500
         quality: 80 
       - name : element
+        element:
+          - p
         template: default
+        position:
+          - [0, 0]
+          - [1, 0]
+      - name: text
+        template: default
+        position:
+          - [1, 0]
 
 active_profile: dev

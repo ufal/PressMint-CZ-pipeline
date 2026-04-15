@@ -1,8 +1,9 @@
 
 class BaseTask:
     def __init__(self, config):
+        print(f"Initializing task with config: {config}")
         self.config = config
-        self.filter = set()
+        self.filter = list()
 
     def get_positions(self):
         positions = self.config.get("position")
@@ -23,8 +24,10 @@ class BaseTask:
         return dict(self.config.get("style", {}))
 
     def match_features(self, element_features, shared_context):
-        print(f"{self.filter.issubset(element_features)} ??  filter {self.filter}  vs elem {element_features}")
-        return self.filter.issubset(element_features)
+        for filter in self.filter:
+          if filter.issubset(element_features):
+            return True
+        return False
 
     def run(self, canvas, surface, shared_context):
         """Main entry point"""

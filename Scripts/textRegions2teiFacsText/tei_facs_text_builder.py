@@ -135,9 +135,9 @@ def annotate_lines_in_region(region):
     - position has higher priority than character recognition (Capital/interpunction/hyphen)
 
   """    
-  window_size = 5
+  window_size = 8
   parStart_indent_vs_avgHeight = 1.0
-  parEnd_indent_vs_avgHeight = 2.0
+  parEnd_indent_vs_avgHeight = 1.0
   if not region.get("lines", None):
     return;
   lines = region["lines"];

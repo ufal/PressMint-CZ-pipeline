@@ -9,18 +9,20 @@ default_config = {
 class ZoneTask(BaseTask):
     def __init__(self, config):
         super().__init__({**default_config, **config})
-        self.filter.add("zone")
+        filter = set()
+        filter.add("zone")
         if "coordtype" in config:
-            self.filter.add(config['coordtype'])
+            filter.add(config['coordtype'])
         if "zone_type" in config:
-            self.filter.add(config['zone_type'])
+            filter.add(config['zone_type'])
         if "linked" in config:
             if config["linked"]:
-                self.filter.add("linked")
+                filter.add("linked")
             else:
-                self.filter.add("notlinked")
+                filter.add("notlinked")
         else:
-            self.filter.add("linked+notlinked")
+            filter.add("linked+notlinked")
+        self.filter.append(filter)
 
     def run_at_position(self, canvas, surface, position, shared_context):
         x, y = position
