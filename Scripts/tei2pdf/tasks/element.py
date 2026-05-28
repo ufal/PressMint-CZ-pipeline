@@ -14,7 +14,7 @@ XML_ID = "{http://www.w3.org/XML/1998/namespace}id"
 
 
 def element_info_to_string(elem):
-    return f"{elem.tag.split('}')[1]}#{elem.get(XML_ID, '')}"
+    return f"{elem.tag.split('}')[1]}#{elem.get(XML_ID, '')}(facs: {elem.get('facs', '')}, children: {len(elem)})"
 
 def has_text_between(node1, node2):
     if node1.getparent() != node2.getparent():
@@ -53,6 +53,7 @@ def get_facs_coordinate(elem, zones, coord=""):
     return None
 
 def get_candidate_start(elem, zones, type="precise"):
+  print(f" searching for {elem.get('facs', '<no facs>')[1:]} in zones:\n\t result={elem.get('facs', '<no facs>')[1:] in zones}")
   if elem.get("facs") and elem.get("facs", "").startswith("#") and elem.get("facs", "")[1:] in zones:
     return {
       "x": get_facs_coordinate(elem, zones, "minx"),
@@ -66,6 +67,7 @@ def get_candidate_start(elem, zones, type="precise"):
     return None
 
 def get_candidate_end(elem, zones, type="precise"):
+  print(f" searching for {elem.get('facs', '<no facs>')[1:]} in zones:\n\t result={elem.get('facs', '<no facs>')[1:] in zones}")
   if elem.get("facs") and elem.get("facs", "").startswith("#") and elem.get("facs", "")[1:] in zones:
     return {
       "x": get_facs_coordinate(elem, zones, "maxx"),
@@ -86,9 +88,11 @@ def get_ancestor_adjected_start(elem, zones, type="precise"):
   candidate = get_candidate_start(elem, zones, type)
   if candidate:
     return candidate
+  print(f"    no candidate in current element {element_info_to_string(elem)}, checking previous elements in the same level")
   # check previous elements in the same level
   prec_elem = elem.getprevious() 
   if prec_elem is not None:
+    print(f"    Checking previous element {element_info_to_string(prec_elem)} for ancestor start coordinates")
     has_text_before = has_text_between(prec_elem,elem)
     type = "approximate" if has_text_before else type
     prec_has_child = bool(prec_elem.text or len(prec_elem) > 0)
@@ -100,6 +104,7 @@ def get_ancestor_adjected_start(elem, zones, type="precise"):
       candidate = get_descendant_adjected_start(prec_elem, zones, type)
     if candidate:
       return candidate
+    print(f"    No candidate found in previous element {element_info_to_string(prec_elem)}, checking ancestors of previous element")
     return get_ancestor_adjected_start(prec_elem, zones, type)
   # check parent
   parent = elem.getparent()
@@ -163,6 +168,7 @@ def get_descendant_adjected_end(elem, zones, type="precise"):
     print(f"DESCENDANT END {element_info_to_string(elem)} with type {type}")
     candidate = get_candidate_end(elem, zones, type)
     if candidate:
+      print(f"Found candidate end coordinates in element {element_info_to_string(elem)} with type {type}")
       return candidate
     for child in reversed(elem):
       has_text_after = has_text_between(elem, child)
@@ -220,7 +226,7 @@ class ElementTask(BaseTask):
           zone.get(XML_ID): zone
           for zone in surface.xpath(".//tei:zone", namespaces=shared_context["ns"])
         }
-
+        seen_on_surface = False
         for elem in shared_context["root"].findall(".//tei:text//tei:*", namespaces=shared_context["ns"]):
           features = {"element", elem.tag.split("}")[1]}
           if not self.match_features(features, shared_context):
@@ -237,13 +243,29 @@ class ElementTask(BaseTask):
               "source_elem": <element>
             }
           """
+          ## TODO IMPROVE CHECKING WHETHER ELEMENT IS ON SURFACE
+          # self with facs
+          elem_s = elem.find("self::*[@facs]", namespaces=shared_context["ns"]) 
+          # preceding element with facs
+          elem_p = elem.find("preceding::*[@facs]", namespaces=shared_context["ns"])
+          # following element with facs
+          elem_f = elem.find("following::*[@facs]", namespaces=shared_context["ns"])
+          # first descendant with facs
+          elem_d1 = elem.find("descendant::*[@facs]", namespaces=shared_context["ns"])
+          # last descendant with facs
+          elem_d2 = elem.find("descendant::*[@facs][last()]", namespaces=shared_context["ns"])
+
+
+
           start, end = self.get_position(elem, zones, shared_context)
-          print(f"ELEMENT {elem.tag}: {start}, {end}")
-          
+          if (start or end) and not seen_on_surface:
+            print(f"FIRST ELEMENT ON SURFACE:\nElement {element_info_to_string(elem)} has coordinates: start={start}, end={end}")
+            seen_on_surface = True
+          print(f"ELEMENT {element_info_to_string(elem)}: \n\tSTART: {start} \n\tEND: {end}")
           for pos,shift in [(start,1), (end,-1)]:
             if pos and pos["type"] in self.config["coordsource"]:
               shared_context["styles"].apply(canvas, features)
-              print(f"Element {elem.tag} at ({pos['x']}, {pos['y']})")
+              print(f"Element {element_info_to_string(elem)} at ({pos['x']}, {pos['y']})")
               while self.used_position(pos):
                 pos["x"] += shift * 1
               print(f"Drawing element {element_info_to_string(elem)} at ({pos['x']}, {pos['y']}) with height {shift*pos['h']} and shift {shift}")
