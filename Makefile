@@ -1,12 +1,14 @@
 .DEFAULT_GOAL := help
 
-VENV_DIR=env
+VENV_DIR=.venv
 export PATH := $(abspath $(VENV_DIR)/bin):$(PATH)
 
 -include .env
 export
 
 DEVICE = cpu
+
+FLEXIPIPE = ../flexipipe/.venv/bin/python -m flexipipe
 
 PERO_OCR_COMMIT := b5ced044e7f6e44f34b257ed75a527f01f91b482
 PERO_OCR_STAMP = $(VENV_DIR)/.pero-ocr-$(PERO_OCR_COMMIT)
@@ -59,6 +61,7 @@ CACHE := ${WORK}/cache
 
 imageRegions := ${WORK}/imageRegions
 TEIFacsText := ${WORK}/teiFacsText
+TEIFacsTT := ${WORK}/teiFacsTT
 TEItext := ${WORK}/tei-text
 TEItext_cleaned := ${WORK}/tei-text-cleaned
 TEIANAtext := ${WORK}/tei-ana-text
@@ -264,7 +267,7 @@ chart-periodicalvolumes:
 
 ### process data
 
-$(JSONissues) $(idMapping) $(xmlOCR) $(altoOCR) $(vizOCRxml) $(vizLAYOUTxml) $(vizLAYOUTalto) $(vizLAYOUTregions) $(vizLAYOUTmerge) $(vizTEI) $(imageRegions) $(TEI) $(TEIANA) $(TEItext) $(TEItext_cleaned) $(TEIheader) $(TEIANAtext) $(UDPIPE) $(NAMETAG) $(LOGDIR):
+$(JSONissues) $(idMapping) $(xmlOCR) $(altoOCR) $(vizOCRxml) $(vizLAYOUTxml) $(vizLAYOUTalto) $(vizLAYOUTregions) $(vizLAYOUTmerge) $(vizTEI) $(imageRegions) $(TEI) $(TEIANA) $(TEItext) $(TEItext_cleaned) $(TEIheader) $(TEIANAtext) $(UDPIPE) $(NAMETAG) $(LOGDIR) $(TEIFacsTT):
 	mkdir -p $@
 # merge issues and page json files
 
@@ -442,7 +445,7 @@ inputJson2teiHeader: $(IN)/periodical/$(UUID_PATH).json $(TEIheader)
 teiText2teiTextCleaned: $(TEItext_cleaned)
 	find $(TEItext) -type f -name "*.xml"  -printf "%P\n" | xargs -I {} $(SAXON) outFile=$</{} -xsl:Scripts/remove-lb.xsl $(TEItext)/{}
 
-
+# [DEPRECATED]
 ### annotate TEI/text
 teiText2teiTextAnaUD: $(UDPIPE)
 	find $(TEItext_cleaned) -type f -printf "%P\n" |sort > $(UDPIPE).fl
@@ -468,7 +471,35 @@ teiText2teiTextAnaNER: $(NAMETAG)
 	                                 --filelist $(NAMETAG).fl \
 	                                 --input-dir $(UDPIPE) \
 	                                 --output-dir $(NAMETAG)
+### annotate
+### annotate teiFacsText with flexipipe TEIFacsTT
+teiText2tt: $(TEIFacsTT)
+	find $(TEIFacsText) -type f -name "*.xml"  -printf "%P\n"| sort > $(TEIFacsTT).fl
+	cat $(TEIFacsTT).fl | sed 's@/.*@@'|sort|uniq | xargs -I {} mkdir -p $(TEIFacsTT)/{}
+	cat $(TEIFacsTT).fl | xargs -I {} cp $(TEIFacsText)/{} $(TEIFacsTT)/{}
+	#cat $(TEIFacsTT).fl | xargs -I {} \
+	#  xmlstarlet edit --inplace \
+	#	--delete "//_:pc[@force='weak']" \
+	#	--delete "//_:lb[@break='no']" \
+	#	$(TEIFacsTT)/{}
+	cat $(TEIFacsTT).fl | xargs -I {} \
+	  $(FLEXIPIPE) \
+	  process --verbose --debug --teitok \
+		--input $(TEIFacsTT)/{} \
+		--tokenize --backend udpipe --ner-backend nametag --language cs \
+		--model czech-pdtc-ud-2.17-251125 \
+		--nametag-model nametag3-multilingual-conll-250203 \
+		--tasks segment,tokenize,lemmatize,tag,ner \
+		--writeback
 
+### convert TEIFacsTT to TEIANAtext
+TT2teiANA: $(TEIANAtext)
+	find $(TEIFacsTT) -type f -name "*.xml" -printf "%P\n" |sort > $(TEIANAtext).fl
+	cat $(TEIFacsTT).fl | sed 's@/.*@@'|sort|uniq | xargs -I {} mkdir -p $(TEIANAtext)/{}
+	cat $(TEIFacsTT).fl | xargs -I {} \
+	  python Scripts/teitok2tei.py \
+			--input $(TEIFacsTT)/{} \
+			--output $(TEIANAtext)/{} 
 
 ### merge data to TEI and teiCorpus
 
@@ -495,7 +526,7 @@ dist-tei: $(TEI)
 dist-tei-ana: $(TEIANA)
 	$(SAXON) -xsl:Scripts/distro.xsl \
 	    outDir=$< \
-	    inComponentDir=$(NAMETAG) \
+	    inComponentDir=$(TEIANAtext) \
 	    inHeaderDir=$(TEIheader) \
 	    inTaxonomiesDir=$(TAXONOMIES) \
 	    type=TEI.ana \
