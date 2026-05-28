@@ -24,8 +24,8 @@
             <edition>1.0</edition>
          </editionStmt>
          <extent>
-            <measure unit="words" quantity="0" xml:lang="en">0 words</measure>
-            <measure unit="words" quantity="0" xml:lang="cs">0 slov</measure>
+            <measure unit="words" quantity="8195" xml:lang="en">8195 words</measure>
+            <measure unit="words" quantity="8195" xml:lang="cs">8195 slov</measure>
          </extent>
          <publicationStmt>
             <publisher>
@@ -53,7 +53,7 @@
                <tagUsage gi="body" occurs="1"/>
                <tagUsage gi="cb" occurs="13"/>
                <tagUsage gi="lb" occurs="1240"/>
-               <tagUsage gi="p" occurs="85"/>
+               <tagUsage gi="p" occurs="97"/>
                <tagUsage gi="pb" occurs="4"/>
                <tagUsage gi="pc" occurs="355"/>
                <tagUsage gi="text" occurs="1"/>
@@ -12206,7 +12206,7 @@
              facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg0.a1.c1"/>
          <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb1.cb1.lb1"
              facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg0.a1.c1.l1"/>
-         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p95">Telegramy Národních Listů.<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb1.cb1.lb2"
+         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p102">Telegramy Národních Listů.<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb1.cb1.lb2"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg0.a1.c1.l2"/>Vídeň 31. prosince v 9 hodin 30 min. <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb1.cb1.lb3"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg0.a1.c1.l3"/>večer. Uvěrní ústav platí za akcii 5% <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb1.cb1.lb4"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg0.a1.c1.l4"/>úroků. Na večerní burse: Úvěrní ak<pc force="weak">-</pc>
@@ -12216,27 +12216,29 @@
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg0.a1.c1.l6"/>půjčka 73.</p>
          <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb1.cb1.lb7"
              facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg0.a1.c1.l7"/>
-         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p96">Londýn, 31. prosince. Anglický bank<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb1.cb1.lb8"
+         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p103">Londýn, 31. prosince. Anglický bank<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb1.cb1.lb8"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg0.a1.c1.l8"/>zvýšil diskonto na 6%</p>
          <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb1.cb1.lb9"
              facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg0.a1.c1.l9"/>
-         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p97">Paříž, 31. prosince. Oddělení fran<pc force="weak">-</pc>
+         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p104">Paříž, 31. prosince. Oddělení fran<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb1.cb1.lb10"
                 break="no"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg0.a1.c1.l10"/>couzského loďstva neopustilo ještě přístav <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb1.cb1.lb11"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg0.a1.c1.l11"/>Gaetský. 3% duchod 67.55.</p>
          <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb1.cb1.lb12"
              facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg0.a1.c1.l12"/>
-         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p98">Turin, 31. prosince. Peněžník Genero<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb1.cb1.lb13"
+         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p105">Turin, 31. prosince. Peněžník Genero<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb1.cb1.lb13"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg0.a1.c1.l13"/>se odebéře do Pařiže, aby uzavřel půjčku <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb1.cb1.lb14"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg0.a1.c1.l14"/>300 milionů.</p>
          <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb1.cb1.lb15"
              facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg0.a1.c1.l15"/>
-         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p99">Program Národních Listů,<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb1.cb1.lb16"
+         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p106">Program Národních Listů,<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb1.cb1.lb16"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg0.a1.c1.l16"/>kterýž jsme rozeslali, jest základním kamenem, <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb1.cb1.lb17"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg0.a1.c1.l17"/>na němž dále, trvale a důsledne stavěti budeme, <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb1.cb1.lb18"
-                facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg0.a1.c1.l18"/>a protož jím počínáme vážné dílo své. <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb1.cb1.lb19"
-                facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg0.a1.c1.l19"/>Učel těchto novin jest napomáhati politi<pc force="weak">-</pc>
+                facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg0.a1.c1.l18"/>a protož jím počínáme vážné dílo své.</p>
+         <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb1.cb1.lb19"
+             facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg0.a1.c1.l19"/>
+         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p107">Učel těchto novin jest napomáhati politi<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb1.cb1.lb20"
                 break="no"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg0.a1.c1.l20"/>ckému a obecnému vzdělání národu našeho, aby <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb1.cb1.lb21"
@@ -12253,7 +12255,7 @@
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg0.a1.c1.l25"/>stojným ohlasem veliké naší minulosti.</p>
          <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb1.cb1.lb26"
              facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg0.a1.c1.l26"/>
-         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p100">Z ohledu poměrů státních a ústavních žádá<pc force="weak">-</pc>
+         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p108">Z ohledu poměrů státních a ústavních žádá<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb1.cb1.lb27"
                 break="no"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg0.a1.c1.l27"/>me důsledného provedení nejvyššího diplomu od <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb1.cb1.lb28"
@@ -12279,7 +12281,7 @@
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg0.a1.c1.l39"/>zemský.</p>
          <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb1.cb1.lb40"
              facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg0.a1.c1.l40"/>
-         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p101">Diplom od 20. října 1860 zaručuje nám<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb1.cb1.lb41"
+         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p109">Diplom od 20. října 1860 zaručuje nám<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb1.cb1.lb41"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg0.a1.c1.l41"/>právo historické. Historickou oprávněnou oso<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb1.cb1.lb42"
                 break="no"
@@ -12327,7 +12329,7 @@
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg0.a1.c1.l61"/>dová: proč ji vylučovat z divadla?</p>
          <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb1.cb1.lb62"
              facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg0.a1.c1.l62"/>
-         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p102">Před třemi roky, než nastoupil nynější diva<pc force="weak">-</pc>
+         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p110">Před třemi roky, než nastoupil nynější diva<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb1.cb1.lb63"
                 break="no"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg0.a1.c1.l63"/>delní ředitel v úřadování své, kolovala v Praze <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb1.cb1.lb64"
@@ -12340,8 +12342,10 @@
                 break="no"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg0.a1.c1.l67"/>ná, tak jako náš politický život; zemský výbor <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb1.cb1.lb68"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg0.a1.c1.l68"/>tu žádosť odepřel, ana prý již přišla „o hodině <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb1.cb1.lb69"
-                facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg0.a1.c1.l69"/>dvanácté,“ čili dle našeho rozumu — pozdě. <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb1.cb1.lb70"
-                facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg0.a1.c1.l70"/>Zde nám budiž dovoleno, abysme se poně<pc force="weak">-</pc>
+                facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg0.a1.c1.l69"/>dvanácté,“ čili dle našeho rozumu — pozdě.</p>
+         <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb1.cb1.lb70"
+             facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg0.a1.c1.l70"/>
+         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p111">Zde nám budiž dovoleno, abysme se poně<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb1.cb1.lb71"
                 break="no"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg0.a1.c1.l71"/>kud pozdrželi. Nechceme zde opakovat, mnoho-li <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb1.cb1.lb72"
@@ -12369,7 +12373,7 @@
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg0.a1.c1.l81"/>mi léty.</p>
          <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb1.cb1.lb82"
              facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg0.a1.c1.l82"/>
-         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p103">Stavovské divadlo pražské je vydržováno ze<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb1.cb1.lb83"
+         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p112">Stavovské divadlo pražské je vydržováno ze<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb1.cb1.lb83"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg0.a1.c1.l83"/>zemských důchodů. Roční příspěvky tyto obná<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb1.cb1.lb84"
                 break="no"
@@ -12416,7 +12420,7 @@
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg0.a1.c2.l22"/>valném, všem zemím kornny společném.</p>
          <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb1.cb2.lb23"
              facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg0.a1.c2.l23"/>
-         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p104">Privilegií politických mezi občany nechceme,<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb1.cb2.lb24"
+         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p113">Privilegií politických mezi občany nechceme,<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb1.cb2.lb24"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg0.a1.c2.l24"/>majíce za to, že staré zřízení stavovské histori<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb1.cb2.lb25"
                 break="no"
@@ -12521,13 +12525,13 @@
              facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg0.a1.c3"/>
          <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb1.cb3.lb1"
              facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg0.a1.c3.l1"/>
-         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p105">vlastenectvím. My ovšem, ať se šlechtou, nebo<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb1.cb3.lb2"
+         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p114">vlastenectvím. My ovšem, ať se šlechtou, nebo<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb1.cb3.lb2"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg0.a1.c3.l2"/>bez ní, budeme pokračovati neodvratně na cestě <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb1.cb3.lb3"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg0.a1.c3.l3"/>ke zvelebení duševnímu i hmotnému národu <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb1.cb3.lb4"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg0.a1.c3.l4"/>svého.</p>
          <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb1.cb3.lb5"
              facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg0.a1.c3.l5"/>
-         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p106">Samosprávě rozumíme tak, aby všickni dle<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb1.cb3.lb6"
+         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p115">Samosprávě rozumíme tak, aby všickni dle<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb1.cb3.lb6"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg0.a1.c3.l6"/>zákonův přirozených vyvinutí údové státního tě<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb1.cb3.lb7"
                 break="no"
@@ -12588,7 +12592,7 @@
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg0.a1.c3.l39"/>nám zůstavil.</p>
          <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb1.cb3.lb40"
              facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg0.a1.c3.l40"/>
-         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p107">Spolučinění občanů žádáme i v soudství,<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb1.cb3.lb41"
+         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p116">Spolučinění občanů žádáme i v soudství,<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb1.cb3.lb41"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg0.a1.c3.l41"/>kteréž si přejeme zřízené dle zásady veřejnosti <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb1.cb3.lb42"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg0.a1.c3.l42"/>a ústního jednání, oddělené od správy politické. <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb1.cb3.lb43"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg0.a1.c3.l43"/>Jako ve všem, žádáme svobody občanův též <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb1.cb3.lb44"
@@ -12631,7 +12635,7 @@
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg0.a1.c3.l66"/>vadla před námi.</p>
          <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb1.cb3.lb67"
              facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg0.a1.c3.l67"/>
-         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p108">A protož závěrek náš tento: My chceme,<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb1.cb3.lb68"
+         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p117">A protož závěrek náš tento: My chceme,<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb1.cb3.lb68"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg0.a1.c3.l68"/>a to hned, pokud vlastního svého divadla míti <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb1.cb3.lb69"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg0.a1.c3.l69"/>nebudeme, polovici večerů v stavovském <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb1.cb3.lb70"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg0.a1.c3.l70"/>divadle k představením českým, druhou <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb1.cb3.lb71"
@@ -12649,7 +12653,7 @@
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg0.a1.c3.l80"/>kroky, kterak by stížnosť tuto odstranil.</p>
          <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb1.cb3.lb81"
              facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg0.a1.c3.l81"/>
-         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p109">Národní život naš a naše literatura.<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb1.cb3.lb82"
+         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p118">Národní život naš a naše literatura.<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb1.cb3.lb82"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg0.a1.c3.l82"/>V.— Četl jsi milý čtenáři spisy Daniela Adama <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb1.cb3.lb83"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg0.a1.c3.l83"/>Veleslavínského? — Nečetl; ano Veleslavínský <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb1.cb3.lb84"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg0.a1.c3.l84"/>jest jeden z těch spisovatelů, které skoro každý <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb1.cb3.lb85"
@@ -12663,7 +12667,7 @@
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg0.a1.c4.l3"/>každé následující 4 kr.</p>
          <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb1.cb4.lb4"
              facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg0.a1.c4.l4"/>
-         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p110">Dopisy nefránkované se nepřijímaji.<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb1.cb4.lb5"
+         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p119">Dopisy nefránkované se nepřijímaji.<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb1.cb4.lb5"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg0.a1.c4.l5"/>Redakce nachází se v Kolovratské třídě č. 862—II. <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb1.cb4.lb6"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg0.a1.c4.l6"/>vům, kteřížto jsou tak úzce spojeni se samým <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb1.cb4.lb7"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg0.a1.c4.l7"/>citem náboženským, velikým tímto činitelem v <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb1.cb4.lb8"
@@ -12682,7 +12686,7 @@
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg0.a1.c4.l16"/>více překážet.</p>
          <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb1.cb4.lb17"
              facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg0.a1.c4.l17"/>
-         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p111">I Židé jsou spoluobčané naši; my jsouce<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb1.cb4.lb18"
+         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p120">I Židé jsou spoluobčané naši; my jsouce<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb1.cb4.lb18"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg0.a1.c4.l18"/>důslední zastavatelé svobody občanské, chceme <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb1.cb4.lb19"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg0.a1.c4.l19"/>též úplné občanské rovnoprávnosti Židů. Přeje<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb1.cb4.lb20"
@@ -12713,7 +12717,7 @@
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg0.a1.c4.l35"/>zákon Kristův nekáže.</p>
          <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb1.cb4.lb36"
              facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg0.a1.c4.l36"/>
-         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p112">Vzhledem literatury a vší činnosti duševní<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb1.cb4.lb37"
+         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p121">Vzhledem literatury a vší činnosti duševní<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb1.cb4.lb37"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg0.a1.c4.l37"/>žádáme všem stejné svobody; chceme svobodu <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb1.cb4.lb38"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg0.a1.c4.l38"/>tisku celou a pravou, neporušenou ordonancemi, <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb1.cb4.lb39"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg0.a1.c4.l39"/>libovolnými koncessemi a policejním dobrým <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb1.cb4.lb40"
@@ -12725,7 +12729,7 @@
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg0.a1.c4.l43"/>za slovo své.</p>
          <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb1.cb4.lb44"
              facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg0.a1.c4.l44"/>
-         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p113">Jako ruchu duševnímu, žádáme svobody i<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb1.cb4.lb45"
+         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p122">Jako ruchu duševnímu, žádáme svobody i<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb1.cb4.lb45"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg0.a1.c4.l45"/>ruchu hmotnému — hospodářství národnímu. <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb1.cb4.lb46"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg0.a1.c4.l46"/>Přejeme si, aby vláda vystříhajíc se ovšem ná<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb1.cb4.lb47"
@@ -12799,7 +12803,7 @@
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg0.a1.c4.l91"/>tileté . . .</p>
          <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb1.cb4.lb92"
              facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg0.a1.c4.l92"/>
-         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p114">Před osmdesáti roky, když Josef II. dosedl<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb1.cb4.lb93"
+         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p123">Před osmdesáti roky, když Josef II. dosedl<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb1.cb4.lb93"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg0.a1.c4.l93"/>na stolici císařskou byl národ náš nejhlouběji<pb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb6"
                 n="1"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg1.a1"/>
@@ -12830,7 +12834,7 @@
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg1.a1.c1.l12"/>v oboru vojenském i správním.</p>
          <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb6.cb1.lb13"
              facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg1.a1.c1.l13"/>
-         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p115">Vzhledem k národnosti, kteráž je na ten čas<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb6.cb1.lb14"
+         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p124">Vzhledem k národnosti, kteráž je na ten čas<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb6.cb1.lb14"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg1.a1.c1.l14"/>nejmocnějším činitelem v životě státním, žádáme <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb6.cb1.lb15"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg1.a1.c1.l15"/>národnosti své ve všem veřejném životě oné cti <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb6.cb1.lb16"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg1.a1.c1.l16"/>a šetrnosti, kteráž jí přísluší co národnosti histori<pc force="weak">-</pc>
@@ -12901,7 +12905,7 @@
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg1.a1.c1.l55"/>trhnouti nedovede.</p>
          <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb6.cb1.lb56"
              facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg1.a1.c1.l56"/>
-         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p116">My jsme Slované a milujeme Slovanské<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb6.cb1.lb57"
+         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p125">My jsme Slované a milujeme Slovanské<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb6.cb1.lb57"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg1.a1.c1.l57"/>kmenovce své. Nebudeť zajisté nám Slovanům <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb6.cb1.lb58"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg1.a1.c1.l58"/>počteno za zločin, co se Němcům vespolek poklá<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb6.cb1.lb59"
@@ -12945,7 +12949,7 @@
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg1.a1.c1.l83"/>ního jeho útočiště.</p>
          <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb6.cb1.lb84"
              facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg1.a1.c1.l84"/>
-         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p117">Jazyku Svatováclavskému zvonili umíráčkem<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb6.cb1.lb85"
+         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p126">Jazyku Svatováclavskému zvonili umíráčkem<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb6.cb1.lb85"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg1.a1.c1.l85"/>a zdálo se, jakoby si při tom sotva kdo zpomí<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb6.cb1.lb86"
                 break="no"
@@ -13015,7 +13019,7 @@
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg1.a1.c2.l16"/>ká-li nás v budoucnosti.</p>
          <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb6.cb2.lb17"
              facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg1.a1.c2.l17"/>
-         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p118">Vzhledem bratrův Slovákův přejeme vroucně,<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb6.cb2.lb18"
+         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p127">Vzhledem bratrův Slovákův přejeme vroucně,<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb6.cb2.lb18"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg1.a1.c2.l18"/>aby i jim se dostalo rovnoprávnosti a důstojného <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb6.cb2.lb19"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg1.a1.c2.l19"/>postavení v mezích království uherského, o jehož <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb6.cb2.lb20"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg1.a1.c2.l20"/>minulost, válečnou obranu i kulturní vyvinutí <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb6.cb2.lb21"
@@ -13060,7 +13064,7 @@
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg1.a1.c2.l41"/>mezi Čechy.</p>
          <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb6.cb2.lb42"
              facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg1.a1.c2.l42"/>
-         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p119">Jakož pak Čech pokládá Slovana za bratra,<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb6.cb2.lb43"
+         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p128">Jakož pak Čech pokládá Slovana za bratra,<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb6.cb2.lb43"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg1.a1.c2.l43"/>Slováka za blížence svého, je nám Moravan ta<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb6.cb2.lb44"
                 break="no"
@@ -13089,7 +13093,7 @@
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg1.a1.c2.l58"/>vyhledával.</p>
          <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb6.cb2.lb59"
              facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg1.a1.c2.l59"/>
-         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p120">To jsou naše zásady, jež v „Listech Ná<pc force="weak">-</pc>
+         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p129">To jsou naše zásady, jež v „Listech Ná<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb6.cb2.lb60"
                 break="no"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg1.a1.c2.l60"/>rodních“ zastupovati hodláme. Co žádáme, je <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb6.cb2.lb61"
@@ -13126,7 +13130,7 @@
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg1.a1.c2.l75"/>řili novou naši literaturu.</p>
          <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb6.cb2.lb76"
              facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg1.a1.c2.l76"/>
-         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p121">Literatura naše novější vykvetla v okolno<pc force="weak">-</pc>
+         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p130">Literatura naše novější vykvetla v okolno<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb6.cb2.lb77"
                 break="no"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg1.a1.c2.l77"/>stech nejtěžších. Jen malá část národu všímala <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb6.cb2.lb78"
@@ -13179,7 +13183,7 @@
              facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg1.a1.c3"/>
          <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb6.cb3.lb1"
              facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg1.a1.c3.l1"/>
-         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p122">Krom toho slíbili nám nejčelnější mužové národa<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb6.cb3.lb2"
+         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p131">Krom toho slíbili nám nejčelnější mužové národa<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb6.cb3.lb2"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg1.a1.c3.l2"/>našeho, výteční politickým věhlasem i literární<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb6.cb3.lb3"
                 break="no"
@@ -13202,14 +13206,14 @@
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg1.a1.c3.l11"/>J. Wenzig, prof. V. Zelený a j.</p>
          <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb6.cb3.lb12"
              facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg1.a1.c3.l12"/>
-         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p123">Stálí spolupracovníci naši budou: Vojtěch<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb6.cb3.lb13"
+         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p132">Stálí spolupracovníci naši budou: Vojtěch<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb6.cb3.lb13"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg1.a1.c3.l13"/>Bělák, Vítězslav Hálek, Jiljí Jahn, JUD. <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb6.cb3.lb14"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg1.a1.c3.l14"/>Jeřábek, Fr. Jeřábek, JUD. V. Svatek, dir. <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb6.cb3.lb15"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg1.a1.c3.l15"/>Leop. Zvonař, ve věcech uherských prof. M. <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb6.cb3.lb16"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg1.a1.c3.l16"/>Hattala a j.</p>
          <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb6.cb3.lb17"
              facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg1.a1.c3.l17"/>
-         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p124">Ostatně nehledáme v provádění úkolu svého<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb6.cb3.lb18"
+         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p133">Ostatně nehledáme v provádění úkolu svého<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb6.cb3.lb18"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg1.a1.c3.l18"/>žádného monopolu. Každá hlava, každá ruka bo<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb6.cb3.lb19"
                 break="no"
@@ -13232,9 +13236,13 @@
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg1.a1.c3.l27"/>přátel a nepřátelé svých nepřátel.</p>
          <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb6.cb3.lb28"
              facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg1.a1.c3.l28"/>
-         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p125">V Praze dne 20. prosince 1860.<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb6.cb3.lb29"
-                facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg1.a1.c3.l29"/>Redakce. <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb6.cb3.lb30"
-                facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg1.a1.c3.l30"/>Program p. ministra Schmerlinga. <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb6.cb3.lb31"
+         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p134">V Praze dne 20. prosince 1860.</p>
+         <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb6.cb3.lb29"
+             facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg1.a1.c3.l29"/>
+         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p135">Redakce.</p>
+         <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb6.cb3.lb30"
+             facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg1.a1.c3.l30"/>
+         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p136">Program p. ministra Schmerlinga.<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb6.cb3.lb31"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg1.a1.c3.l31"/>I. <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb6.cb3.lb32"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg1.a1.c3.l32"/>Za posledních dnů neudálo se v politice Ra<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb6.cb3.lb33"
@@ -13361,7 +13369,7 @@
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg1.a1.c4.l9"/>mluvíme ještě později.</p>
          <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb6.cb4.lb10"
              facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg1.a1.c4.l10"/>
-         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p126">Program Schmerlingův zamlčel ještě ledacos<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb6.cb4.lb11"
+         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p137">Program Schmerlingův zamlčel ještě ledacos<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb6.cb4.lb11"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg1.a1.c4.l11"/>jiného. On praví: že předcházející zasaho<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb6.cb4.lb12"
                 break="no"
@@ -13398,10 +13406,8 @@
             <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb6.cb4.lb30"
                 break="no"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg1.a1.c4.l30"/>ností byl předce odmrštěn a to sice již od té <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb6.cb4.lb31"
-                facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg1.a1.c4.l31"/>chvíle, co je p. Schmerling ministrem!</p>
-         <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb6.cb4.lb32"
-             facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg1.a1.c4.l32"/>
-         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p127">Jeho program přislibuje dále veřejné a ústní<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb6.cb4.lb33"
+                facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg1.a1.c4.l31"/>chvíle, co je p. Schmerling ministrem! <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb6.cb4.lb32"
+                facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg1.a1.c4.l32"/>Jeho program přislibuje dále veřejné a ústní <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb6.cb4.lb33"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg1.a1.c4.l33"/>jednání v soudství a však mlčí o zavedení po<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb6.cb4.lb34"
                 break="no"
@@ -13411,7 +13417,7 @@
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg1.a1.c4.l35"/>bát bez šosú.</p>
          <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb6.cb4.lb36"
              facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg1.a1.c4.l36"/>
-         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p128">Jeho program mluví dále o státech, mezi<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb6.cb4.lb37"
+         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p138">Jeho program mluví dále o státech, mezi<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb6.cb4.lb37"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg1.a1.c4.l37"/>něž se prý Rakousko postaví, a jež my obyčejně <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb6.cb4.lb38"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg1.a1.c4.l38"/>konštitučními nazýváme. Pan minister vy<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb6.cb4.lb39"
@@ -13518,7 +13524,7 @@
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c1.l6"/>doma i za hranicemi.</p>
          <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb1.lb7"
              facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c1.l7"/>
-         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p129">Svobodné, národní vychování mláde<pc force="weak">-</pc>
+         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p139">Svobodné, národní vychování mláde<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb1.lb8"
                 break="no"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c1.l8"/>že to jest čím národ stojí, čim postupuje a zna<pc force="weak">-</pc>
@@ -13528,7 +13534,7 @@
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c1.l10"/>tam přestává i život národní.</p>
          <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb1.lb11"
              facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c1.l11"/>
-         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p130">Tak zajisté smýšleli nejosvícenější učitelé<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb1.lb12"
+         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p140">Tak zajisté smýšleli nejosvícenější učitelé<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb1.lb12"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c1.l12"/>národů uvědomělých a vzdělaných; tak i smýšle<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb1.lb13"
                 break="no"
@@ -13556,20 +13562,22 @@
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c1.l30"/>známějších.</p>
          <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb1.lb31"
              facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c1.l31"/>
-         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p131">Za Vašeho úřadováni zaváděli se německé<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb1.lb32"
+         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p141">Za Vašeho úřadováni zaváděli se německé<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb1.lb32"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c1.l32"/>učitelé na hlavní školy české;</p>
          <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb1.lb33"
              facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c1.l33"/>
-         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p132">zaváděli se němečtí učitelé na reálky v mě<pc force="weak">-</pc>
+         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p142">zaváděli se němečtí učitelé na reálky v mě<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb1.lb34"
                 break="no"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c1.l34"/>stech českých a učitelé čeští strkáni do krajů <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb1.lb35"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c1.l35"/>německých;</p>
          <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb1.lb36"
              facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c1.l36"/>
-         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p133">zavedeny německé školské sestry do Čech,<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb1.lb37"
-                facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c1.l37"/>které výhradně německy vyučují; <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb1.lb38"
-                facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c1.l38"/>reálky obsazeny nejvíce lidmi jazyka české<pc force="weak">-</pc>
+         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p143">zavedeny německé školské sestry do Čech,<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb1.lb37"
+                facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c1.l37"/>které výhradně německy vyučují;</p>
+         <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb1.lb38"
+             facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c1.l38"/>
+         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p144">reálky obsazeny nejvíce lidmi jazyka české<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb1.lb39"
                 break="no"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c1.l39"/>ho ani gramatikálně, ani orthograficky neznají<pc force="weak">-</pc>
@@ -13579,7 +13587,7 @@
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c1.l41"/>nepřátelskými;</p>
          <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb1.lb42"
              facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c1.l42"/>
-         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p134">obsazena místa direktorská kaplany, kteří<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb1.lb43"
+         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p145">obsazena místa direktorská kaplany, kteří<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb1.lb43"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c1.l43"/>realního vzdělání nemají, ba podřízení jim uči<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb1.lb44"
                 break="no"
@@ -13594,7 +13602,7 @@
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c1.l50"/>bávány;</p>
          <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb1.lb51"
              facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c1.l51"/>
-         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p135">zaveden místo řádných českých skolních kněh<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb1.lb52"
+         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p146">zaveden místo řádných českých skolních kněh<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb1.lb52"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c1.l52"/>německý surogát s českou terminologií; <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb1.lb53"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c1.l53"/>nenaučily se dítky ze čtvrté třidy vystupu<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb1.lb54"
@@ -13610,14 +13618,14 @@
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c1.l58"/>trpěti;</p>
          <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb1.lb59"
              facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c1.l59"/>
-         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p136">byla němčina úřední řečí při úřadování škol<pc force="weak">-</pc>
+         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p147">byla němčina úřední řečí při úřadování škol<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb1.lb60"
                 break="no"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c1.l60"/>ním, katalalogy, Stundeneintheilungy atd., všechno <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb1.lb61"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c1.l61"/>bylo německé;</p>
          <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb1.lb62"
              facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c1.l62"/>
-         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p137">potlačeny jsou r. 1857 sbírky na české<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb1.lb63"
+         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p148">potlačeny jsou r. 1857 sbírky na české<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb1.lb63"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c1.l63"/>pedagogium Mladoboleslavské, ač jste Vy sám <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb1.lb64"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c1.l64"/>tehdá sbíral na pedagogium Pražské, Litoměři<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb1.lb65"
@@ -13629,7 +13637,7 @@
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c1.l67"/>važuje;</p>
          <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb1.lb68"
              facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c1.l68"/>
-         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p138">nestala se řeč česká na německé reálce<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb1.lb69"
+         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p149">nestala se řeč česká na německé reálce<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb1.lb69"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c1.l69"/>Pražské navzdor veliké většině žákův českých <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb1.lb70"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c1.l70"/>předmětem obligátním, taktéž ani na reálce Li<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb1.lb71"
@@ -13637,14 +13645,14 @@
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c1.l71"/>berecké;</p>
          <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb1.lb72"
              facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c1.l72"/>
-         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p139">zůstala malostranská Musterhauptschule cele<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb1.lb73"
+         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p150">zůstala malostranská Musterhauptschule cele<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb1.lb73"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c1.l73"/>německou, s německými učiteli, bez vyučování <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb1.lb74"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c1.l74"/>náboženství v řeči české, bez vyučováni českému <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb1.lb75"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c1.l75"/>jazyku, taktéž jest reálka Týnská zcelá německá, <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb1.lb76"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c1.l76"/>z větší části s německými učiteli;</p>
          <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb1.lb77"
              facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c1.l77"/>
-         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p140">nežádala se a nežádá kvalifikace česká; dosa<pc force="weak">-</pc>
+         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p151">nežádala se a nežádá kvalifikace česká; dosa<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb1.lb78"
                 break="no"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c1.l78"/>zováni jsou na mnoze učitelé bez zákonitě pře<pc force="weak">-</pc>
@@ -13654,7 +13662,7 @@
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c1.l80"/>Vaše odporuční lístky a t. d. a t. d.</p>
          <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb1.lb81"
              facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c1.l81"/>
-         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p141">Protož není snad osobnosti, o které by se<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb1.lb82"
+         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p152">Protož není snad osobnosti, o které by se<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb1.lb82"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c1.l82"/>bylo v době novější v české žurnalistice tolik <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb1.lb83"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c1.l83"/>psalo jako o Vás, pane rado školní. — Že my <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb1.lb84"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c1.l84"/>hned na začátku našich listů národních též slovo <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb1.lb85"
@@ -13686,13 +13694,15 @@
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c2.l10"/>blahobyt národní!</p>
          <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb2.lb11"
              facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c2.l11"/>
-         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p142">Že vychování toto však státi musí na půdě<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb2.lb12"
+         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p153">Že vychování toto však státi musí na půdě<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb2.lb12"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c2.l12"/>národnosti, že musí díti jazykem máterským, jest <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb2.lb13"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c2.l13"/>pravda všestranně mnohonásobně osvětlená a do<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb2.lb14"
                 break="no"
-                facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c2.l14"/>kázaná, že dalších řeči o ní šířiti zbytečno. <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb2.lb15"
-                facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c2.l15"/>A že ste Vy, pane rado, nešetřil jazyka na<pc force="weak">-</pc>
+                facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c2.l14"/>kázaná, že dalších řeči o ní šířiti zbytečno.</p>
+         <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb2.lb15"
+             facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c2.l15"/>
+         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p154">A že ste Vy, pane rado, nešetřil jazyka na<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb2.lb16"
                 break="no"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c2.l16"/>šeho ve školách Vám svěřených, a nepodporoval <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb2.lb17"
@@ -13710,13 +13720,13 @@
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c2.l24"/>—</p>
          <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb2.lb25"
              facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c2.l25"/>
-         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p143">Vámi zasazené, nedají se lehce zaceliti, krvácejit<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb2.lb26"
+         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p155">Vámi zasazené, nedají se lehce zaceliti, krvácejit<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb2.lb26"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c2.l26"/>podnes, a budou ještě dlouho krváceti, i kdyby <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb2.lb27"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c2.l27"/>jste je zakrývati chtěl obvazkem výmluv a slov <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb2.lb28"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c2.l28"/>nejskvělejších.</p>
          <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb2.lb29"
              facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c2.l29"/>
-         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p144">Vy, pane rado, povstana s systemem germa<pc force="weak">-</pc>
+         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p156">Vy, pane rado, povstana s systemem germa<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb2.lb30"
                 break="no"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c2.l30"/>nisující centralisace, nyní již ztroskotaným, jste <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb2.lb31"
@@ -13733,7 +13743,7 @@
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c2.l37"/>rodní. —</p>
          <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb2.lb38"
              facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c2.l38"/>
-         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p145">Každý vládní system má své přívržence. —<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb2.lb39"
+         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p157">Každý vládní system má své přívržence. —<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb2.lb39"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c2.l39"/>Nejspůsobilejším a nejčelnějším dostávají se oby<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb2.lb40"
                 break="no"
@@ -13743,20 +13753,22 @@
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c2.l43"/>—</p>
          <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb2.lb44"
              facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c2.l44"/>
-         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p146">dobou čelní jeho podporovatelé, ovšem jsou-li<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb2.lb45"
+         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p158">dobou čelní jeho podporovatelé, ovšem jsou-li<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb2.lb45"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c2.l45"/>mužové důslední, jímž jde čest a přesvědčení <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb2.lb46"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c2.l46"/>nad ctižádost a zisk osobní. —</p>
          <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb2.lb47"
              facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c2.l47"/>
-         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p147">Očekávali jsme tudiž všickni, že diplom od<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb2.lb48"
+         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p159">Očekávali jsme tudiž všickni, že diplom od<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb2.lb48"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c2.l48"/>20. října 1860, nímž stará centralisace a germa<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb2.lb49"
                 break="no"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c2.l49"/>nisace odstraněná byla, i Vás co nepatrného <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb2.lb50"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c2.l50"/>agenta této k odstoupení přiměje. — Vy však <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb2.lb51"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c2.l51"/>posud trvátev úřadě svém, vzdor všeobecné indignací <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb2.lb52"
-                facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c2.l52"/>která v národu našem proti Vám povstala. <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb2.lb53"
-                facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c2.l53"/>Nadějeme se však, že poznáv nemožnost <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb2.lb54"
+                facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c2.l52"/>která v národu našem proti Vám povstala.</p>
+         <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb2.lb53"
+             facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c2.l53"/>
+         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p160">Nadějeme se však, že poznáv nemožnost<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb2.lb54"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c2.l54"/>dalšího trvání v úřadě svém, v době nejblíže příští, <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb2.lb55"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c2.l55"/>konečně složíte úřad dosavádní činností své — <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb2.lb56"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c2.l56"/>nečekaje, až by vláda sama, seznavši spravedlivé <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb2.lb57"
@@ -13766,8 +13778,10 @@
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c2.l58"/>stila. —</p>
          <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb2.lb59"
              facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c2.l59"/>
-         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p148">V Praze dne 1. ledna 1861.<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb2.lb60"
-                facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c2.l60"/>Gr. <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb2.lb61"
+         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p161">V Praze dne 1. ledna 1861.</p>
+         <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb2.lb60"
+             facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c2.l60"/>
+         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p162">Gr.<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb2.lb61"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c2.l61"/>Politické zprávy. <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb2.lb62"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c2.l62"/>Videň, 29. prosince. Přivtělení Vojvodiny <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb2.lb63"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c2.l63"/>ku koruně Uherské jest úředně prohlášeno. — <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb2.lb64"
@@ -13845,7 +13859,7 @@
              facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c3"/>
          <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb3.lb1"
              facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c3.l1"/>
-         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p149">— „Wiener Zeitung“ uveřejňuje následující<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb3.lb2"
+         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p163">— „Wiener Zeitung“ uveřejňuje následující<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb3.lb2"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c3.l2"/>oznámení: Jelikož dle Nejvyššího císařského na<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb3.lb3"
                 break="no"
@@ -13870,7 +13884,7 @@
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c3.l13"/>brné šestáky.</p>
          <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb3.lb14"
              facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c3.l14"/>
-         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p150">— Hlasy naše o rovnoprávnost národní ne<pc force="weak">-</pc>
+         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p164">— Hlasy naše o rovnoprávnost národní ne<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb3.lb15"
                 break="no"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c3.l15"/>zůstávají bez ohlasu. Vídeňský aristokratický ča<pc force="weak">-</pc>
@@ -13891,7 +13905,7 @@
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c3.l22"/>zyku se pilně učiti.</p>
          <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb3.lb23"
              facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c3.l23"/>
-         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p151">— Vrchní státní zástupce a rada u ban<pc force="weak">-</pc>
+         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p165">— Vrchní státní zástupce a rada u ban<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb3.lb24"
                 break="no"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c3.l24"/>ského stolu Jan Mazuranič byl jmenován za <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb3.lb25"
@@ -13902,7 +13916,7 @@
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c3.l27"/>tinské.</p>
          <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb3.lb28"
              facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c3.l28"/>
-         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p152">A Pešť-Budín, dne 28. prosince. „Tantae<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb3.lb29"
+         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p166">A Pešť-Budín, dne 28. prosince. „Tantae<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb3.lb29"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c3.l29"/>molis erat —“ musíme i my zvolati s Virgilem, <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb3.lb30"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c3.l30"/>a však ne „romanam condere gentem,“ nýbrž <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb3.lb31"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c3.l31"/>pořádné, čest a poctivé smýšlení národa českého <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb3.lb32"
@@ -14034,11 +14048,11 @@
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c3.l105"/>rintu Slávy:“</p>
          <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb3.lb106"
              facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c3.l106"/>
-         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p153">Berlin, 30. prosince. Zemský sněm svolán<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb3.lb107"
+         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p167">Berlin, 30. prosince. Zemský sněm svolán<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb3.lb107"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c3.l107"/>na 14. ledna 1861. (Tel. Presse.)</p>
          <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb3.lb108"
              facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c3.l108"/>
-         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p154">Milán, 30. prosince. Jak se úředně „Per<pc force="weak">-</pc>
+         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p168">Milán, 30. prosince. Jak se úředně „Per<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb3.lb109"
                 break="no"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c3.l109"/>severanze“ sděluje, přečten včera senátu a ko<pc force="weak">-</pc>
@@ -14052,14 +14066,14 @@
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c3.l113"/>vzdá. (Tel. Presse.)</p>
          <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb3.lb114"
              facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c3.l114"/>
-         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p155">Bologna, 28. prosince. Král sem 30. do<pc force="weak">-</pc>
+         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p169">Bologna, 28. prosince. Král sem 30. do<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb3.lb115"
                 break="no"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c3.l115"/>razí. „Moniteur“ stýská si na obecně panující <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb3.lb116"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c3.l116"/>nejistotu. (Tel. Presse.)</p>
          <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb3.lb117"
              facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c3.l117"/>
-         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p156">Z Londýna, 29. prosince. Zdejší listy ozna<pc force="weak">-</pc>
+         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p170">Z Londýna, 29. prosince. Zdejší listy ozna<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb3.lb118"
                 break="no"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c3.l118"/>mují z New Yorku od 15., že státní sekretář<cb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb4"
@@ -14080,7 +14094,7 @@
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c4.l7"/>sterlinků.</p>
          <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb4.lb8"
              facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c4.l8"/>
-         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p157">Domácí zprávy.<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb4.lb9"
+         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p171">Domácí zprávy.<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb4.lb9"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c4.l9"/>Vídeň 31. prosince v 11 hodin 50 m. v noci. <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb4.lb10"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c4.l10"/>Měšťanské besedě v Praze. Čechoslované <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb4.lb11"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c4.l11"/>ve Vídni v hostinei u Ruského dvora u <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb4.lb12"
@@ -14089,7 +14103,7 @@
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c4.l14"/>Sláva!</p>
          <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb4.lb15"
              facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c4.l15"/>
-         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p158">— Pan Antonín Augusta zasloužilý nakladatel<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb4.lb16"
+         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p172">— Pan Antonín Augusta zasloužilý nakladatel<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb4.lb16"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c4.l16"/>českých kněh sděluje nám, že hodlá pány předpla<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb4.lb17"
                 break="no"
@@ -14104,7 +14118,7 @@
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c4.l23"/>poštou franko odeslány.</p>
          <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb4.lb24"
              facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c4.l24"/>
-         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p159">— Jeho Jasnosť p. Dr. Rudolf kníže z Turnů<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb4.lb25"
+         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p173">— Jeho Jasnosť p. Dr. Rudolf kníže z Turnů<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb4.lb25"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c4.l25"/>a Taxisů, náš ctěný spolupracovník, začne v krát<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb4.lb26"
                 break="no"
@@ -14142,7 +14156,7 @@
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c4.l45"/>Proto voláme z celé duše: Zdař Bůh!</p>
          <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb4.lb46"
              facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c4.l46"/>
-         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p160">— Ve vesnici Syrákově v okresu Polenském<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb4.lb47"
+         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p174">— Ve vesnici Syrákově v okresu Polenském<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb4.lb47"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c4.l47"/>stala se pověra opět příčinou hrozného neštěstí. Dí<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb4.lb48"
                 break="no"
@@ -14150,7 +14164,7 @@
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c4.l49"/>zadělali a v kteréž se také upeklo.</p>
          <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb4.lb50"
              facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c4.l50"/>
-         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p161">— Dnes v 5 hodin odpůldne hudební beseda na<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb4.lb51"
+         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p175">— Dnes v 5 hodin odpůldne hudební beseda na<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb4.lb51"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c4.l51"/>střeleckém ostrově v níž se provozovafi budou na <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb4.lb52"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c4.l52"/>zkoušku kusy k tanečním zábavám a k plesu ostro<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb4.lb53"
@@ -14179,7 +14193,7 @@
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c4.l70"/>ve všech místnostech naplní.</p>
          <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb4.lb71"
              facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c4.l71"/>
-         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p162">— Staré na konvenční minci znějící bankovky,<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb4.lb72"
+         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p176">— Staré na konvenční minci znějící bankovky,<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb4.lb72"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c4.l72"/>přestanou se v korunních zemich dne 31. prosince <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb4.lb73"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c4.l73"/>1860 bráti. U bankovnich pokladníc ve Vídni bu<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb4.lb74"
@@ -14188,14 +14202,18 @@
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c4.l75"/>Kupony (znějící na placcní střibrem) prioritních ob <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb4.lb76"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c4.l76"/>ligací západní železnice císařovny Alžběty počnou <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb4.lb77"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c4.l77"/>se na začátku ledna při pokladníci ve Vídeňském <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb4.lb78"
-                facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c4.l78"/>nádraží též železnice raženou mincí vypláceti. <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb4.lb79"
-                facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c4.l79"/>Král. stav. divadlo v Praze. <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb4.lb80"
-                facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c4.l80"/>Dnes v úterý dne 1. ledna 1861 — Začátek o půl 4. hodině. <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb4.lb81"
+                facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c4.l78"/>nádraží též železnice raženou mincí vypláceti.</p>
+         <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb4.lb79"
+             facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c4.l79"/>
+         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p177">Král. stav. divadlo v Praze.</p>
+         <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb4.lb80"
+             facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c4.l80"/>
+         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p178">Dnes v úterý dne 1. ledna 1861 — Začátek o půl 4. hodině.<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb4.lb81"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c4.l81"/>Ve prospěch pana Karla Šimanovského. (Ponejprv) <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb4.lb82"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c4.l82"/>RUY BLAS.</p>
          <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb4.lb83"
              facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c4.l83"/>
-         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p163">Drama v 5 odděleních od V. Hugo Překlad od Fr. D.<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb4.lb84"
+         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p179">Drama v 5 odděleních od V. Hugo Překlad od Fr. D.<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb4.lb84"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c4.l84"/>První oddělení: Pán a sluha. Druhé oddělení: <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb4.lb85"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c4.l85"/>Královna španělská a její dvůr. Třetí oddě<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb4.lb86"
@@ -14236,7 +14254,7 @@
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c4.l109"/>Dva němí černochové.</p>
          <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb4.lb110"
              facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c4.l110"/>
-         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p164">Videnská bursa. Telegrafická zpráva o kur<pc force="weak">-</pc>
+         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p180">Videnská bursa. Telegrafická zpráva o kur<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb4.lb111"
                 break="no"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c4.l111"/>sech od 31. prosince. Národní půjčka 5 za 100 zl. <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb4.lb112"
@@ -14248,7 +14266,7 @@
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c4.l115"/>za 10 liber ster. 144. — C. kr. dukáty 6.83.</p>
          <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb4.lb116"
              facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c4.l116"/>
-         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p165">Kupecká beseda, od 31. prosince. Akcie úvěrního<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb4.lb117"
+         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p181">Kupecká beseda, od 31. prosince. Akcie úvěrního<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb4.lb117"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c4.l117"/>ústavu 157,70 až 157. Národní půjčka 73,80. Nová půjč<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb7.cb4.lb118"
                 break="no"
@@ -14260,7 +14278,7 @@
              facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg3.a1.c1"/>
          <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb8.cb1.lb1"
              facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg3.a1.c1.l1"/>
-         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p166">U nás není tureckého bubnu zapotřebí!<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb8.cb1.lb2"
+         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p182">U nás není tureckého bubnu zapotřebí!<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb8.cb1.lb2"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg3.a1.c1.l2"/>Tak byl jednou jeden lev, a ten lev měl mnoho nepřátel. Jeho nejouhlavnějšími odpůrci ale byli tr<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb8.cb1.lb3"
                 break="no"
@@ -14268,8 +14286,10 @@
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg3.a1.c1.l4"/>onak neublížili. Jednoho času přemluvili jsou chytrým způsobem na nic zlého nemyslícího krále zvířat, by sobě <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb8.cb1.lb5"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg3.a1.c1.l5"/>pro okrasu těla pazoury ustříhati, zuby vytrhati, ohon přetnouti a na hlavu kastor nasaditi dal, čemuž se í lev <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb8.cb1.lb6"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg3.a1.c1.l6"/>skutečně podvolil, nemysle na to, že se tím všech svých zbraní dobrovolně zbavuje a nepřátelům v posměch vydává. <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb8.cb1.lb7"
-                facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg3.a1.c1.l7"/>K všeobecnému povšimnutí. <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb8.cb1.lb8"
-                facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg3.a1.c1.l8"/>Vzdávaje díky všem posud mým pánům ho<pc force="weak">-</pc>
+                facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg3.a1.c1.l7"/>K všeobecnému povšimnutí.</p>
+         <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb8.cb1.lb8"
+             facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg3.a1.c1.l8"/>
+         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p183">Vzdávaje díky všem posud mým pánům ho<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb8.cb1.lb9"
                 break="no"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg3.a1.c1.l9"/>stům za uctivou návštěvu, oznamuju též veleslav<pc force="weak">-</pc>
@@ -14286,22 +14306,24 @@
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg3.a1.c1.l14"/>obědy za 22 kr. rak. čísla.</p>
          <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb8.cb1.lb15"
              facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg3.a1.c1.l15"/>
-         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p167">Prosím veleslavné obecenstvo o hojnou ná<pc force="weak">-</pc>
+         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p184">Prosím veleslavné obecenstvo o hojnou ná<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb8.cb1.lb16"
                 break="no"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg3.a1.c1.l16"/>vštěvu</p>
          <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb8.cb1.lb17"
              facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg3.a1.c1.l17"/>
-         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p168">3—1<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb8.cb1.lb18"
+         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p185">3—1<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb8.cb1.lb18"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg3.a1.c1.l18"/>Jesef Sebek. <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb8.cb1.lb19"
-                facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg3.a1.c1.l19"/>F. DURST, <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb8.cb1.lb20"
-                facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg3.a1.c1.l20"/>mechanikus a optikus <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb8.cb1.lb21"
+                facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg3.a1.c1.l19"/>F. DURST,</p>
+         <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb8.cb1.lb20"
+             facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg3.a1.c1.l20"/>
+         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p186">mechanikus a optikus<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb8.cb1.lb21"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg3.a1.c1.l21"/>v Praze v ovocné ulici č. 953 vedle kavárny Böhmovy <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb8.cb1.lb22"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg3.a1.c1.l22"/>8—1 <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb8.cb1.lb23"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg3.a1.c1.l23"/>odporučuje svůj sklad</p>
          <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb8.cb1.lb24"
              facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg3.a1.c1.l24"/>
-         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p169">brejlí, lorňetů, dalekohle<pc force="weak">-</pc>
+         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p187">brejlí, lorňetů, dalekohle<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb8.cb1.lb25"
                 break="no"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg3.a1.c1.l25"/>dů, tlakoměrů, teploměrů, <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb8.cb1.lb26"
@@ -14310,24 +14332,24 @@
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg3.a1.c1.l28"/>LITOGRAFIE</p>
          <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb8.cb1.lb29"
              facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg3.a1.c1.l29"/>
-         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p170">FARSKÉHO<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb8.cb1.lb30"
+         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p188">FARSKÉHO<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb8.cb1.lb30"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg3.a1.c1.l30"/>ЛИТОГРАФIЯ</p>
          <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb8.cb1.lb31"
              facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg3.a1.c1.l31"/>
-         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p171">v Praze n Dominikánů číslo 445—I bude od 15. ledna<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb8.cb1.lb32"
+         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p189">v Praze n Dominikánů číslo 445—I bude od 15. ledna<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb8.cb1.lb32"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg3.a1.c1.l32"/>přenešena do čísla 365—I, roh nových alejí a sirkové ulice <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb8.cb1.lb33"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg3.a1.c1.l33"/>u Lémonů</p>
          <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb8.cb1.lb34"
              facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg3.a1.c1.l34"/>
-         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p172">a odporučuje se k dálší přízni.<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb8.cb1.lb35"
+         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p190">a odporučuje se k dálší přízni.<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb8.cb1.lb35"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg3.a1.c1.l35"/>9 — 1 <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb8.cb1.lb36"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg3.a1.c1.l36"/>Cís. král.</p>
          <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb8.cb1.lb37"
              facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg3.a1.c1.l37"/>
-         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p173">výhr.</p>
+         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p191">výhr.</p>
          <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb8.cb1.lb38"
              facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg3.a1.c1.l38"/>
-         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p174">všecky movité i nemovité předměty, jako stavení, tovární nářadí, nábytek,<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb8.cb1.lb39"
+         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p192">všecky movité i nemovité předměty, jako stavení, tovární nářadí, nábytek,<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb8.cb1.lb39"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg3.a1.c1.l39"/>zásoby zboží, movítosti, zásoby ze žní jak v stodolách a hospodářských staveních, tak i ve stozích na šírém poli; proti všem <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb8.cb1.lb40"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg3.a1.c1.l40"/>Skodám živelním na zboží na cestě se nacházejícím i proti Skodám z kru<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb8.cb1.lb41"
@@ -14336,28 +14358,30 @@
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg3.a1.c1.l42"/>a za doby nejnovější vykonává též</p>
          <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb8.cb1.lb43"
              facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg3.a1.c1.l43"/>
-         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p175">pojištění na život, důchody a penze a výbytek a. t. d.<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb8.cb1.lb44"
+         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p193">pojištění na život, důchody a penze a výbytek a. t. d.<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb8.cb1.lb44"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg3.a1.c1.l44"/>Nuova Società Commerciale di Assicuracioni <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb8.cb1.lb45"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg3.a1.c1.l45"/>Terstu</p>
          <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb8.cb1.lb46"
              facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg3.a1.c1.l46"/>
-         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p176">(zaručující fond záložní asi osm milionů zl. r. č.)<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb8.cb1.lb47"
+         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p194">(zaručující fond záložní asi osm milionů zl. r. č.)<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb8.cb1.lb47"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg3.a1.c1.l47"/>pojištuje skrze své splnomocněné ústřední jednatelstvo proti</p>
          <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb8.cb1.lb48"
              facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg3.a1.c1.l48"/>
-         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p177">Skodám požárem způsobeným</p>
+         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p195">Skodám požárem způsobeným</p>
          <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb8.cb1.lb49"
              facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg3.a1.c1.l49"/>
-         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p178">dle všech možných kombinací.<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb8.cb1.lb50"
+         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p196">dle všech možných kombinací.<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb8.cb1.lb50"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg3.a1.c1.l50"/>Přijímá pojištění na vybyté pro dětí pod tou výmínkou, že když dítě pojištěné rok k vyzdvížení peněz určený nedosáhne, prémie až <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb8.cb1.lb51"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg3.a1.c1.l51"/>v tu dobu vyplacené bez nejmenší ztráty se navrátí. Dotčená společnost zařídila též spolky výbitku a vzájemné kassy pro dědictví pro <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb8.cb1.lb52"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg3.a1.c1.l52"/>děti (i Tontiny čili vzájemné pojištění v pádu přežití:) Ke všem bližším zprávám, podaním a doručení potřebných formulářů, se vždy <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb8.cb1.lb53"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg3.a1.c1.l53"/>s největší ochotností propůjčuje</p>
          <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb8.cb1.lb54"
              facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg3.a1.c1.l54"/>
-         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p179">10—1<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb8.cb1.lb55"
-                facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg3.a1.c1.l55"/>Ústřední Jednatelstvo pro Čechy <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb8.cb1.lb56"
-                facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg3.a1.c1.l56"/>Jindřich Fügner, <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb8.cb1.lb57"
+         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p197">10—1<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb8.cb1.lb55"
+                facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg3.a1.c1.l55"/>Ústřední Jednatelstvo pro Čechy</p>
+         <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb8.cb1.lb56"
+             facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg3.a1.c1.l56"/>
+         <p xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p198">Jindřich Fügner,<lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb8.cb1.lb57"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg3.a1.c1.l57"/>Ústřední Jednatel. <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb8.cb1.lb58"
                 facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg3.a1.c1.l58"/>Úřadování v Lánnově domě č. 1830-31-II bliže nádraží.</p>
       </body>

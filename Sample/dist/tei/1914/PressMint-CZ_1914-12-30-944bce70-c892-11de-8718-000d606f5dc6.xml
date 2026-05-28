@@ -24,8 +24,8 @@
             <edition>1.0</edition>
          </editionStmt>
          <extent>
-            <measure unit="words" quantity="0" xml:lang="en">0 words</measure>
-            <measure unit="words" quantity="0" xml:lang="cs">0 slov</measure>
+            <measure unit="words" quantity="5781" xml:lang="en">5781 words</measure>
+            <measure unit="words" quantity="5781" xml:lang="cs">5781 slov</measure>
          </extent>
          <publicationStmt>
             <publisher>
@@ -53,7 +53,7 @@
                <tagUsage gi="body" occurs="1"/>
                <tagUsage gi="cb" occurs="11"/>
                <tagUsage gi="lb" occurs="1111"/>
-               <tagUsage gi="p" occurs="100"/>
+               <tagUsage gi="p" occurs="122"/>
                <tagUsage gi="pb" occurs="3"/>
                <tagUsage gi="pc" occurs="325"/>
                <tagUsage gi="text" occurs="1"/>
@@ -11048,27 +11048,31 @@
              facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c1"/>
          <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb1.lb1"
              facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c1.l1"/>
-         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p506">NA „MORAVSKOU ORLICE<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb1.lb2"
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p582">NA „MORAVSKOU ORLICE<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb1.lb2"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c1.l2"/>předplácí se v Brně: <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb1.lb3"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c1.l3"/>bez donášení měsíně. <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb1.lb4"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c1.l4"/>s donáškou</p>
          <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb1.lb5"
              facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c1.l5"/>
-         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p507">.K 190<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb1.lb6"
-                facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c1.l6"/>„ <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb1.lb7"
-                facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c1.l7"/>Na předplaté lstky <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb1.lb8"
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p583">.K 190<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb1.lb6"
+                facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c1.l6"/>„</p>
+         <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb1.lb7"
+             facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c1.l7"/>
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p584">Na předplaté lstky<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb1.lb8"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c1.l8"/>znějící na 6 po sobě jdoucích <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb1.lb9"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c1.l9"/>čísel 48 laléřů. <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb1.lb10"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c1.l10"/>Jednotlivá čísla po 8 h, sobotní <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb1.lb11"
-                facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c1.l11"/>v Brně po 10 hal. <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb1.lb12"
-                facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c1.l12"/>Poštou měsíčě . . . <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb1.lb13"
+                facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c1.l11"/>v Brně po 10 hal.</p>
+         <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb1.lb12"
+             facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c1.l12"/>
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p585">Poštou měsíčě . . .<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb1.lb13"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c1.l13"/>čtvrtidně. . . 750 <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb1.lb14"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c1.l14"/>„ pololáně . . . 15.— <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb1.lb15"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c1.l15"/>celorčně. . . 30.— <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb1.lb16"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c1.l16"/>„</p>
          <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb1.lb17"
              facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c1.l17"/>
-         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p508">Jednotlivá čsla na venkově<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb1.lb18"
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p586">Jednotlivá čsla na venkově<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb1.lb18"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c1.l18"/>po 10 haléřích. <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb1.lb19"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c1.l19"/>List vycház denně vyjímaje <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb1.lb20"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c1.l20"/>neděle a svátky. <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb1.lb21"
@@ -11081,7 +11085,7 @@
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c1.l25"/>jišti praví:</p>
          <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb1.lb26"
              facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c1.l26"/>
-         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p509">Na balkánském bojišti rozvinuli<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb1.lb27"
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p587">Na balkánském bojišti rozvinuli<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb1.lb27"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c1.l27"/>Černohorci živější, avšak bezúspěš<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb1.lb28"
                 break="no"
@@ -11093,7 +11097,7 @@
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c1.l31"/>dělostřelectvo bylo umlčeno.</p>
          <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb1.lb32"
              facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c1.l32"/>
-         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p510">Proti silnější pohraniční pevno<pc force="weak">-</pc>
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p588">Proti silnější pohraniční pevno<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb1.lb33"
                 break="no"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c1.l33"/>sti na Krivošiji neměla černohorská <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb1.lb34"
@@ -11107,8 +11111,10 @@
             <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb1.lb39"
                 break="no"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c1.l39"/>cii a Anglii o zaslání dělostřeleckých <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb1.lb40"
-                facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c1.l40"/>a jízdeckých uniforem do Srbska. <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb1.lb41"
-                facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c1.l41"/>Váša rakousko-ruská. <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb1.lb42"
+                facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c1.l40"/>a jízdeckých uniforem do Srbska.</p>
+         <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb1.lb41"
+             facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c1.l41"/>
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p589">Váša rakousko-ruská.<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb1.lb42"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c1.l42"/>Rakouská situační zpráva. <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb1.lb43"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c1.l43"/>Úřadně sděleno 29. prosince: <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb1.lb44"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c1.l44"/>Ruská 8. armáda, která asi před <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb1.lb45"
@@ -11130,7 +11136,7 @@
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c1.l52"/>veru není tím dotčena.</p>
          <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb1.lb53"
              facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c1.l53"/>
-         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p511">Situace Rusů v Karpatech.<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb1.lb54"
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p590">Situace Rusů v Karpatech.<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb1.lb54"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c1.l54"/>»Az Est« sděluje z Marmaroš<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb1.lb55"
                 break="no"
@@ -11153,24 +11159,26 @@
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c1.l61"/>ské území.</p>
          <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb1.lb62"
              facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c1.l62"/>
-         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p512">U Oekörmezö boje trvají. Rusové<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb1.lb63"
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p591">U Oekörmezö boje trvají. Rusové<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb1.lb63"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c1.l63"/>podnikli tu ve svaté noci útok, ale byli <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb1.lb64"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c1.l64"/>krvavě odraženi.</p>
          <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb1.lb65"
              facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c1.l65"/>
-         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p513">K situaci na východním<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb1.lb66"
-                facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c1.l66"/>bojišti. <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb1.lb67"
-                facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c1.l67"/>Nynější situace. <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb1.lb68"
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p592">K situaci na východním<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb1.lb66"
+                facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c1.l66"/>bojišti.</p>
+         <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb1.lb67"
+             facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c1.l67"/>
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p593">Nynější situace.<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb1.lb68"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c1.l68"/>Roda-Roda, válečný zpravodaj »N. <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb1.lb69"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c1.l69"/>Fr. Presse«, telegrafuje svému listu o <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb1.lb70"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c1.l70"/>vojenské situaci:</p>
          <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb1.lb71"
              facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c1.l71"/>
-         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p514">Dovídám se o vojenské situaci<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb1.lb72"
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p594">Dovídám se o vojenské situaci<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb1.lb72"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c1.l72"/>toto:</p>
          <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb1.lb73"
              facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c1.l73"/>
-         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p515">Po »šachu« u Lodže z jedné stra<pc force="weak">-</pc>
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p595">Po »šachu« u Lodže z jedné stra<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb1.lb74"
                 break="no"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c1.l74"/>ny a u Bochnie-Limanové z druhé stra<pc force="weak">-</pc>
@@ -11187,7 +11195,7 @@
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c1.l79"/>tu změniti ve více napřímenou.</p>
          <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb1.lb80"
              facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c1.l80"/>
-         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p516">Když Nikolaj Nikolaje<pc force="weak">-</pc>
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p596">Když Nikolaj Nikolaje<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb1.lb81"
                 break="no"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c1.l81"/>vič přispěl na pomoc svému těžce o<pc force="weak">-</pc>
@@ -11206,10 +11214,10 @@
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c2.l1"/>Za o hal.</p>
          <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb2.lb2"
              facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c2.l2"/>
-         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p517">MU</p>
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p597">MU</p>
          <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb2.lb3"
              facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c2.l3"/>
-         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p518">Za á Ran.<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb2.lb4"
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p598">Za á Ran.<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb2.lb4"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c2.l4"/>SKA ORECL <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb2.lb5"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c2.l5"/>1 a <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb2.lb6"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c2.l6"/>byvatel než Rusko má dnes téměř 100 <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb2.lb7"
@@ -11219,9 +11227,11 @@
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c2.l8"/>sko má téměř polovinu.</p>
          <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb2.lb9"
              facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c2.l9"/>
-         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p519">kému náporu krok za krokem bojujíce<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb2.lb10"
-                facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c2.l10"/>uhýbati a jíti k hřebenu Karpat. <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb2.lb11"
-                facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c2.l11"/>Tím dosáhli Rusové také té výho<pc force="weak">-</pc>
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p599">kému náporu krok za krokem bojujíce<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb2.lb10"
+                facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c2.l10"/>uhýbati a jíti k hřebenu Karpat.</p>
+         <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb2.lb11"
+             facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c2.l11"/>
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p600">Tím dosáhli Rusové také té výho<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb2.lb12"
                 break="no"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c2.l12"/>dy, že se zatím ještě nemusejí vzdáti <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb2.lb13"
@@ -11231,19 +11241,21 @@
                 break="no"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c2.l15"/>proti čemuž stojí nevýhoda, že velkou <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb2.lb16"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c2.l16"/>část svých sil upoutávají daleko od <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb2.lb17"
-                facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c2.l17"/>hlavního bojiště v ruském Polsku. <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb2.lb18"
-                facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c2.l18"/>Válečný stav nad Petro<pc force="weak">-</pc>
+                facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c2.l17"/>hlavního bojiště v ruském Polsku.</p>
+         <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb2.lb18"
+             facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c2.l18"/>
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p601">Válečný stav nad Petro<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb2.lb19"
                 break="no"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c2.l19"/>hradem.</p>
          <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb2.lb20"
              facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c2.l20"/>
-         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p520">Sděluje se ze Štokholmu, že nad<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb2.lb21"
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p602">Sděluje se ze Štokholmu, že nad<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb2.lb21"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c2.l21"/>Petrohradem je vyhlášen nejpřísnější <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb2.lb22"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c2.l22"/>stav válečný.</p>
          <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb2.lb23"
              facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c2.l23"/>
-         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p521">Anglický zpravodaj o situaci.<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb2.lb24"
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p603">Anglický zpravodaj o situaci.<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb2.lb24"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c2.l24"/>»Daily Mail« dostal od svého <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb2.lb25"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c2.l25"/>Finance Ruska. <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb2.lb26"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c2.l26"/>zpravodaje v Petrohradě Hamilto<pc force="weak">-</pc>
@@ -11296,7 +11308,7 @@
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c2.l51"/>ku do Varšavy.</p>
          <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb2.lb52"
              facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c2.l52"/>
-         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p522">Z Kodaně, 29. prosince. Vůdce ka<pc force="weak">-</pc>
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p604">Z Kodaně, 29. prosince. Vůdce ka<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb2.lb53"
                 break="no"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c2.l53"/>detů, Šingarov, kritisuje ve Rječi ze <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb2.lb54"
@@ -11344,11 +11356,11 @@
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c2.l75"/>má Rusko k disposici.</p>
          <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb2.lb76"
              facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c2.l76"/>
-         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p523">Válka rusko-německá.<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb2.lb77"
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p605">Válka rusko-německá.<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb2.lb77"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c2.l77"/>Ruské naděje.</p>
          <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb2.lb78"
              facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c2.l78"/>
-         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p524">Petrohradský dopisovatel »Gior<pc force="weak">-</pc>
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p606">Petrohradský dopisovatel »Gior<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb2.lb79"
                 break="no"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c2.l79"/>Německá zpráva. <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb2.lb80"
@@ -11357,20 +11369,20 @@
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c2.l82"/>dopoledne:</p>
          <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb2.lb83"
              facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c2.l83"/>
-         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p525">Ve východním Prusku a v Pol<pc force="weak">-</pc>
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p607">Ve východním Prusku a v Pol<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb2.lb84"
                 break="no"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c2.l84"/>sku v pravo od Visly není žádná <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb2.lb85"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c2.l85"/>změna.</p>
          <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb2.lb86"
              facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c2.l86"/>
-         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p526">V úseku na Bzuře a Rawce po<pc force="weak">-</pc>
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p608">V úseku na Bzuře a Rawce po<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb2.lb87"
                 break="no"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c2.l87"/>kročily naše útoky.</p>
          <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb2.lb88"
              facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c2.l88"/>
-         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p527">V krajině jižně od Inowlodže by<pc force="weak">-</pc>
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p609">V krajině jižně od Inowlodže by<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb2.lb89"
                 break="no"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c2.l89"/>ly odraženy silné ruské útoky. <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb2.lb90"
@@ -11380,7 +11392,7 @@
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c2.l91"/>čevem.</p>
          <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb2.lb92"
              facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c2.l92"/>
-         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p528">nale d'Italia« měl rozmluvu s ji<pc force="weak">-</pc>
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p610">nale d'Italia« měl rozmluvu s ji<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb2.lb93"
                 break="no"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c2.l93"/>stou oficielní ruskou osobností, která <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb2.lb94"
@@ -11416,7 +11428,7 @@
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c2.l111"/>od Rakušanů.</p>
          <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb2.lb112"
              facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c2.l112"/>
-         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p529">Vojenský pracovník časop. »Per<pc force="weak">-</pc>
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p611">Vojenský pracovník časop. »Per<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb2.lb113"
                 break="no"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c2.l113"/>severanza«, Gabiati, praví, že <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb2.lb114"
@@ -11466,8 +11478,10 @@
             <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb2.lb135"
                 break="no"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c2.l135"/>mělo možnosti z bitevní čáry dopraviti <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb2.lb136"
-                facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c2.l136"/>a zachrániti těžce raněné vojáky. <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb2.lb137"
-                facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c2.l137"/>Berlínskému »Tageblattu« telegra<pc force="weak">-</pc>
+                facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c2.l136"/>a zachrániti těžce raněné vojáky.</p>
+         <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb2.lb137"
+             facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c2.l137"/>
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p612">Berlínskému »Tageblattu« telegra<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb2.lb138"
                 break="no"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c2.l138"/>fují: Nad Sochačevem objevilo se 5 <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb2.lb139"
@@ -11480,29 +11494,37 @@
              facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c3"/>
          <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb3.lb1"
              facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c3.l1"/>
-         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p530">REDAKCE, . MINISTRACE<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb3.lb2"
-                facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c3.l2"/>A E.. ..DICE <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb3.lb3"
-                facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c3.l3"/>v Besedním domě, Eliščina tř <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb3.lb4"
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p613">REDAKCE, . MINISTRACE<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb3.lb2"
+                facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c3.l2"/>A E.. ..DICE</p>
+         <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb3.lb3"
+             facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c3.l3"/>
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p614">v Besedním domě, Eliščina tř<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb3.lb4"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c3.l4"/>ČÍSLO TELEPONU: <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb3.lb5"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c3.l5"/>redakce 468a, administrace 46. <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb3.lb6"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c3.l6"/>Listy přijímují se <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb3.lb7"
-                facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c3.l7"/>frankované. <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb3.lb8"
-                facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c3.l8"/>Reklamace, nejsou-li zapeče<pc force="weak">-</pc>
+                facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c3.l7"/>frankované.</p>
+         <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb3.lb8"
+             facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c3.l8"/>
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p615">Reklamace, nejsou-li zapeče<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb3.lb9"
                 break="no"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c3.l9"/>těny, se nefrankují. <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb3.lb10"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c3.l10"/>= Rukopisy se nevracejí. — <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb3.lb11"
-                facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c3.l11"/>INSERÁTY <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb3.lb12"
-                facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c3.l12"/>přijímá jen administrace a účtní« <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb3.lb13"
+                facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c3.l11"/>INSERÁTY</p>
+         <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb3.lb12"
+             facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c3.l12"/>
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p616">přijímá jen administrace a účtní«<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb3.lb13"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c3.l13"/>je mírně.</p>
          <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb3.lb14"
              facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c3.l14"/>
-         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p531">PŘEDPLATNÉ A INSERTNĚ<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb3.lb15"
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p617">PŘEDPLATNÉ A INSERTNĚ<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb3.lb15"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c3.l15"/>zapravuje se jenom v admini<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb3.lb16"
                 break="no"
-                facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c3.l16"/>straci v Brně. <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb3.lb17"
-                facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c3.l17"/>Nejvyšší vojenské velení. <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb3.lb18"
+                facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c3.l16"/>straci v Brně.</p>
+         <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb3.lb17"
+             facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c3.l17"/>
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p618">Nejvyšší vojenské velení.<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb3.lb18"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c3.l18"/>Válka s Tureckem. <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb3.lb19"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c3.l19"/>Anglické loďstvo u Tenedu. <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb3.lb20"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c3.l20"/>Berl. „Tagesztg.“ oznamuje z Athén: <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb3.lb21"
@@ -11532,7 +11554,7 @@
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c3.l32"/>Soluně.</p>
          <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb3.lb33"
              facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c3.l33"/>
-         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p532">Proti Husseinu Kemalovi.<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb3.lb34"
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p619">Proti Husseinu Kemalovi.<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb3.lb34"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c3.l34"/>Z Cařihradu, 29. prosince. V úřed<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb3.lb35"
                 break="no"
@@ -11575,7 +11597,7 @@
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c3.l51"/>leny.</p>
          <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb3.lb52"
              facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c3.l52"/>
-         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p533">Tři fetvy.<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb3.lb53"
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p620">Tři fetvy.<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb3.lb53"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c3.l53"/>Z Cařihradu, 29. prosince. V úřed<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb3.lb54"
                 break="no"
@@ -11617,7 +11639,7 @@
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c3.l71"/>ci býti odsouzen k smrti.</p>
          <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb3.lb72"
              facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c3.l72"/>
-         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p534">Cesty Mohameda Ferida.<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb3.lb73"
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p621">Cesty Mohameda Ferida.<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb3.lb73"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c3.l73"/>Z Cařihradu, 29. prosince. Vůdce <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb3.lb74"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c3.l74"/>egyptské nacionální strany Moha<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb3.lb75"
@@ -11628,7 +11650,7 @@
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c3.l76"/>lína.</p>
          <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb3.lb77"
              facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c3.l77"/>
-         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p535">Na západním bojišti.<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb3.lb78"
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p622">Na západním bojišti.<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb3.lb78"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c3.l78"/>Německá zpráva. <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb3.lb79"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c3.l79"/>»Wolffova kancelář« oznamuje z <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb3.lb80"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c3.l80"/>velkého hlavního stanu 29. prosince <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb3.lb81"
@@ -11640,14 +11662,14 @@
              facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c1"/>
          <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb1.lb1"
              facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c1.l1"/>
-         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p536">U Nieuportu a jihovýchodně od<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb1.lb2"
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p623">U Nieuportu a jihovýchodně od<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb1.lb2"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c1.l2"/>Ypernu získali jsme v menších bo<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb1.lb3"
                 break="no"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c1.l3"/>jích jistou část půdy.</p>
          <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb1.lb4"
              facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c1.l4"/>
-         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p537">Několik silných francouzských<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb1.lb5"
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p624">Několik silných francouzských<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb1.lb5"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c1.l5"/>útoků severozápadně od Sainte<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb1.lb6"
                 break="no"
@@ -11656,7 +11678,7 @@
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c1.l8"/>jsme několik set nepřátel.</p>
          <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb1.lb9"
              facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c1.l9"/>
-         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p538">Výpad v Bois-Brulé západně od<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb1.lb10"
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p625">Výpad v Bois-Brulé západně od<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb1.lb10"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c1.l10"/>Apremontu vedl k ukořistění 3 <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb1.lb11"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c1.l11"/>strojních pušek a ku vzetí francouz<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb1.lb12"
@@ -11664,9 +11686,11 @@
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c1.l12"/>ského střeleckého zákopu.</p>
          <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb1.lb13"
              facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c1.l13"/>
-         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p539">Francouzské útoky západně od<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb1.lb14"
-                facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c1.l14"/>Sennheimu byly odraženy. <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb1.lb15"
-                facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c1.l15"/>Přiznávají. <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb1.lb16"
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p626">Francouzské útoky západně od<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb1.lb14"
+                facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c1.l14"/>Sennheimu byly odraženy.</p>
+         <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb1.lb15"
+             facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c1.l15"/>
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p627">Přiznávají.<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb1.lb16"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c1.l16"/>»Lokalanzeiger« oznamuje <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb1.lb17"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c1.l17"/>ze Ženevy: Zpráva Joffrova připisuje <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb1.lb18"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c1.l18"/>ticho v záp. Flandrech výhradně špat<pc force="weak">-</pc>
@@ -11713,7 +11737,7 @@
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c1.l37"/>vyklo na podnebí.</p>
          <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb1.lb38"
              facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c1.l38"/>
-         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p540">Pro japonskou intervenci.<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb1.lb39"
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p628">Pro japonskou intervenci.<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb1.lb39"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c1.l39"/>»Lokalanzeiger« oznamuje z <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb1.lb40"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c1.l40"/>Říma, že býv. ministr Pichon znova <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb1.lb41"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c1.l41"/>prohlašuje, že neustane agitovat pro <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb1.lb42"
@@ -11725,8 +11749,10 @@
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c1.l45"/>stane.</p>
          <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb1.lb46"
              facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c1.l46"/>
-         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p541">Angličané na bojišti.<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb1.lb47"
-                facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c1.l47"/>»Lokalanzeiger« oznamuje, <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb1.lb48"
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p629">Angličané na bojišti.</p>
+         <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb1.lb47"
+             facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c1.l47"/>
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p630">»Lokalanzeiger« oznamuje,<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb1.lb48"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c1.l48"/>že anglické loďstvo na pobřeží záp. <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb1.lb49"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c1.l49"/>Flander zahájilo opět činnost. Minulé <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb1.lb50"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c1.l50"/>noci řádila v Holandsku a Belgii or<pc force="weak">-</pc>
@@ -11736,23 +11762,25 @@
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c1.l52"/>lodě nenarazily na miny.</p>
          <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb1.lb53"
              facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c1.l53"/>
-         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p542">Týž list sděluje z Havru, že asi 40<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb1.lb54"
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p631">Týž list sděluje z Havru, že asi 40<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb1.lb54"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c1.l54"/>tisíc mužů anglického vojska bylo mi<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb1.lb55"
                 break="no"
-                facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c1.l55"/>nulý týden dopraveno do Francie. <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb1.lb56"
-                facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c1.l56"/>Ostřelování belgického hlavního <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb1.lb57"
+                facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c1.l55"/>nulý týden dopraveno do Francie.</p>
+         <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb1.lb56"
+             facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c1.l56"/>
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p632">Ostřelování belgického hlavního<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb1.lb57"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c1.l57"/>stanu.</p>
          <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb1.lb58"
              facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c1.l58"/>
-         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p543">O svátcích vánočních stříleli Něm<pc force="weak">-</pc>
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p633">O svátcích vánočních stříleli Něm<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb1.lb59"
                 break="no"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c1.l59"/>ci celou hodinu na belgický hlavní <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb1.lb60"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c1.l60"/>stan ve Fournes.</p>
          <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb1.lb61"
              facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c1.l61"/>
-         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p544">Ohromné ztráty v boji na Yseře.<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb1.lb62"
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p634">Ohromné ztráty v boji na Yseře.<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb1.lb62"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c1.l62"/>„Voss. Ztg.“ oznamuje podle „Reu<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb1.lb63"
                 break="no"
@@ -11784,7 +11812,7 @@
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c1.l80"/>lované německou rychlopalbou.“</p>
          <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb1.lb81"
              facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c1.l81"/>
-         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p545">Ve Francii žádají za povolání 17letých.<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb1.lb82"
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p635">Ve Francii žádají za povolání 17letých.<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb1.lb82"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c1.l82"/>Z Paříže se sděluje: Poněvadž je <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb1.lb83"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c1.l83"/>obava, že výsledky odvodů mladíků, na<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb1.lb84"
@@ -11828,7 +11856,7 @@
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c2.l3"/>nili svoji vlast.</p>
          <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb2.lb4"
              facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c2.l4"/>
-         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p546">Pak pravil král: Jsem přesvědčen,<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb2.lb5"
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p636">Pak pravil král: Jsem přesvědčen,<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb2.lb5"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c2.l5"/>že byly to naše čety, jimž patří zásluha <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb2.lb6"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c2.l6"/>o to, že Calais bylo zachránéno. A <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb2.lb7"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c2.l7"/>skončil: Budoucí doby najisto spatří <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb2.lb8"
@@ -11838,7 +11866,7 @@
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c2.l9"/>mi Brusselu.</p>
          <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb2.lb10"
              facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c2.l10"/>
-         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p547">Válka angšicko-německá.<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb2.lb11"
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p637">Válka angšicko-německá.<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb2.lb11"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c2.l11"/>Anglický zajatec odsouzen k smrti. <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb2.lb12"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c2.l12"/>Anglický válečný zajatec, průvod<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb2.lb13"
@@ -11858,7 +11886,7 @@
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c2.l19"/>smrti.</p>
          <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb2.lb20"
              facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c2.l20"/>
-         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p548">Co pohnulo Anglii k válce?<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb2.lb21"
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p638">Co pohnulo Anglii k válce?<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb2.lb21"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c2.l21"/>Z Berlína se sděluje: Na tábo<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb2.lb22"
                 break="no"
@@ -11899,7 +11927,7 @@
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c2.l36"/>člověku a domnělém nadstátě.</p>
          <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb2.lb37"
              facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c2.l37"/>
-         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p549">»Norddeutsche Allgemei<pc force="weak">-</pc>
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p639">»Norddeutsche Allgemei<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb2.lb38"
                 break="no"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c2.l38"/>ne Zeitung« k tomu podotýká, že <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb2.lb39"
@@ -11922,7 +11950,7 @@
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c2.l47"/>jem Anglie na válce.</p>
          <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb2.lb48"
              facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c2.l48"/>
-         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p550">Anglie a americké lodě.<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb2.lb49"
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p640">Anglie a americké lodě.<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb2.lb49"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c2.l49"/>Z Washingtonu, 29. prosince. Pre<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb2.lb50"
                 break="no"
@@ -11939,7 +11967,7 @@
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c2.l56"/>merických lodních nákladů.</p>
          <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb2.lb57"
              facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c2.l57"/>
-         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p551">Zpráva o Sachalinu<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb2.lb58"
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p641">Zpráva o Sachalinu<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb2.lb58"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c2.l58"/>dementována. <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb2.lb59"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c2.l59"/>Petrohradská telegrafní agentura <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb2.lb60"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c2.l60"/>vyvrací kategoricky zprávu Reuterovy <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb2.lb61"
@@ -11949,7 +11977,7 @@
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c2.l62"/>strova Sachalinu Japonsku.</p>
          <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb2.lb63"
              facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c2.l63"/>
-         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p552">Ústřední sběrna<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb2.lb64"
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p642">Ústřední sběrna<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb2.lb64"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c2.l64"/>Červeného kříže <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb2.lb65"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c2.l65"/>(okresní hejtmanství, Lažanského <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb2.lb66"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c2.l66"/>nám. v levo, přízemí.) <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb2.lb67"
@@ -11960,12 +11988,12 @@
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c2.l69"/>dinou večerní.</p>
          <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb2.lb70"
              facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c2.l70"/>
-         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p553">Pomocná akce.<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb2.lb71"
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p643">Pomocná akce.<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb2.lb71"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c2.l71"/>Mimořádná státní loterie pro účely <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb2.lb72"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c2.l72"/>válečné péče.</p>
          <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb2.lb73"
              facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c2.l73"/>
-         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p554">Dne 28. ledna 1915 bude se konati<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb2.lb74"
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p644">Dne 28. ledna 1915 bude se konati<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb2.lb74"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c2.l74"/>tah státní loterie pro účely válečné pé<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb2.lb75"
                 break="no"
@@ -11983,7 +12011,7 @@
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c2.l82"/>ální péče.)</p>
          <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb2.lb83"
              facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c2.l83"/>
-         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p555">Péče o invalidy.<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb2.lb84"
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p645">Péče o invalidy.<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb2.lb84"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c2.l84"/>Ministerstvo války zřídilo ve Ví<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb2.lb85"
                 break="no"
@@ -12009,44 +12037,46 @@
              facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c3"/>
          <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb3.lb1"
              facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c3.l1"/>
-         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p556">Pozvání ku predplacení.<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb3.lb2"
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p646">Pozvání ku predplacení.<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb3.lb2"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c3.l2"/>Dnam 2. ledna 7985 <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb3.lb3"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c3.l3"/>počne nové předplacení na první čtvus. <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb3.lb4"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c3.l4"/>letí politického denníku <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb3.lb5"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c3.l5"/>MUREUEEUHEIE <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb3.lb6"
-                facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c3.l6"/>Předplátí se: <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb3.lb7"
-                facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c3.l7"/>v Brně:</p>
+                facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c3.l6"/>Předplátí se:</p>
+         <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb3.lb7"
+             facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c3.l7"/>
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p647">v Brně:</p>
          <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb3.lb8"
              facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c3.l8"/>
-         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p557">poštou:<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb3.lb9"
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p648">poštou:<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb3.lb9"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c3.l9"/>na měsíc . . 1 K 70 h</p>
          <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb3.lb10"
              facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c3.l10"/>
-         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p558">na měsíc . . 2 K 50 h<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb3.lb11"
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p649">na měsíc . . 2 K 50 h<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb3.lb11"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c3.l11"/>na čtvrt roku 5 K 10h</p>
          <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb3.lb12"
              facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c3.l12"/>
-         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p559">na čtvrt roku 7 K 50h<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb3.lb13"
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p650">na čtvrt roku 7 K 50h<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb3.lb13"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c3.l13"/>na půl roku . 10 K 20 h</p>
          <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb3.lb14"
              facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c3.l14"/>
-         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p560">na půl roku. 15 K — h<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb3.lb15"
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p651">na půl roku. 15 K — h<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb3.lb15"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c3.l15"/>na rok . . . 20 K 49 h</p>
          <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb3.lb16"
              facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c3.l16"/>
-         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p561">na rok . . . 30 K — b<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb3.lb17"
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p652">na rok . . . 30 K — b<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb3.lb17"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c3.l17"/>Za donášku do domu platí se za měsíc 20 hal. <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb3.lb18"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c3.l18"/>Jednotlivá čísla prodávají se za 6 ha! <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb3.lb19"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c3.l19"/>K hojnému předplacení zve</p>
          <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb3.lb20"
              facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c3.l20"/>
-         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p562">administrace fioravské Orlice v Brně<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb3.lb21"
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p653">administrace fioravské Orlice v Brně<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb3.lb21"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c3.l21"/>Politická hlídka. <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb3.lb22"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c3.l22"/>Blahopřání metropolity rumunské <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb3.lb23"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c3.l23"/>církve.</p>
          <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb3.lb24"
              facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c3.l24"/>
-         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p563">Uherská tel. kor. kancelář sděluje ze<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb3.lb25"
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p654">Uherská tel. kor. kancelář sděluje ze<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb3.lb25"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c3.l25"/>Sibině: Orgán metropolity „Tele<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb3.lb26"
                 break="no"
@@ -12062,7 +12092,7 @@
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c3.l31"/>příslušníků této církve.</p>
          <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb3.lb32"
              facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c3.l32"/>
-         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p564">Odborový přednosta šl. Daruvary<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb3.lb33"
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p655">Odborový přednosta šl. Daruvary<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb3.lb33"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c3.l33"/>odpověděl telegramem, ve kterém me<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb3.lb34"
                 break="no"
@@ -12075,8 +12105,10 @@
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c3.l38"/>to svůj nejsrdečnější dík a ujišťuje sou<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb3.lb39"
                 break="no"
-                facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c3.l39"/>časně církev svojí další blahovůlí. <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb3.lb40"
-                facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c3.l40"/>Diplomatické publikace. <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb3.lb41"
+                facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c3.l39"/>časně církev svojí další blahovůlí.</p>
+         <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb3.lb40"
+             facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c3.l40"/>
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p656">Diplomatické publikace.<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb3.lb41"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c3.l41"/>Ministerstvo zahraničních <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb3.lb42"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c3.l42"/>záležitostí ve Vídni se usneslo, <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb3.lb43"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c3.l43"/>že vydá „červenou knihu“, vysvě<pc force="weak">-</pc>
@@ -12086,14 +12118,14 @@
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c3.l45"/>krisi před vypuknutím války.</p>
          <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb3.lb46"
              facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c3.l46"/>
-         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p565">Italské ministerstvo zahra<pc force="weak">-</pc>
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p657">Italské ministerstvo zahra<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb3.lb47"
                 break="no"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c3.l47"/>ničí se dle W. Allg. Ztg. vzdalo vydání <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb3.lb48"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c3.l48"/>„zelené knihy“.</p>
          <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb3.lb49"
              facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c3.l49"/>
-         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p566">Nový anglický výslanec u Vatikánu.<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb3.lb50"
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p658">Nový anglický výslanec u Vatikánu.<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb3.lb50"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c3.l50"/>Nově jmenovaný anglický vyslanec <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb3.lb51"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c3.l51"/>Howard odevzdal ve Vatikánu své <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb3.lb52"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c3.l52"/>pověřovací listiny, ve kterých se mluví <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb3.lb53"
@@ -12101,7 +12133,7 @@
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c3.l54"/>poslání.</p>
          <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb3.lb55"
              facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c3.l55"/>
-         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p567">Bulharsko.<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb3.lb56"
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p659">Bulharsko.<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb3.lb56"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c3.l56"/>V Sofiji konala se schůze výboru pro <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb3.lb57"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c3.l57"/>zacelení ran balkánských válek, stojícího <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb3.lb58"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c3.l58"/>pod patronátem princezen Eudoxie a <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb3.lb59"
@@ -12110,7 +12142,7 @@
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c3.l61"/>po vojínech.</p>
          <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb3.lb62"
              facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c3.l62"/>
-         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p568">Albánie.<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb3.lb63"
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p660">Albánie.<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb3.lb63"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c3.l63"/>„Agenzia Stefani“ oznamuje z Va<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb3.lb64"
                 break="no"
@@ -12125,7 +12157,7 @@
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c3.l70"/>městě velí poručík karabiníků.</p>
          <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb3.lb71"
              facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c3.l71"/>
-         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p569">Z Říma, 30. prosince. „Agenzia<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb3.lb72"
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p661">Z Říma, 30. prosince. „Agenzia<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb3.lb72"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c3.l72"/>Stefani“ sděluje z Valony: Admirál <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb3.lb73"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c3.l73"/>Patris, plukovník Mosca, konsul Lori <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb3.lb74"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c3.l74"/>a notáblové byli přítomni při defilování <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb3.lb75"
@@ -12139,7 +12171,7 @@
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c3.l80"/>nostním způsobem do města.</p>
          <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb3.lb81"
              facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c3.l81"/>
-         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p570">Turecko.<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb3.lb82"
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p662">Turecko.<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb3.lb82"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c3.l82"/>President nejvyšší válečné rady, mar<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb3.lb83"
                 break="no"
@@ -12147,7 +12179,7 @@
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c3.l84"/>senátorem.</p>
          <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb3.lb85"
              facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c3.l85"/>
-         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p571">N. Fr. Pr. sděluje z Cařihradu: Bý<pc force="weak">-</pc>
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p663">N. Fr. Pr. sděluje z Cařihradu: Bý<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb3.lb86"
                 break="no"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c3.l86"/>valý sultán Abdul Hamid byl dopra<pc force="weak">-</pc>
@@ -12156,7 +12188,7 @@
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c3.l87"/>ven do Brussy.</p>
          <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb3.lb88"
              facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c3.l88"/>
-         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p572">Perský velkosulema v Cařihradě.<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb3.lb89"
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p664">Perský velkosulema v Cařihradě.<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb3.lb89"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c3.l89"/>Perský velkosulema, člen vlád<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb3.lb90"
                 break="no"
@@ -12166,7 +12198,7 @@
              facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c4"/>
          <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb4.lb1"
              facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c4.l1"/>
-         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p573">Egypt.<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb4.lb2"
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p665">Egypt.<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb4.lb2"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c4.l2"/>Cařihradský „Tanin“ soudí, že všecky <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb4.lb3"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c4.l3"/>neutrální státy, jimž Anglie potifikovala <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb4.lb4"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c4.l4"/>změny, provedené v Egypté, vyškají konce <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb4.lb5"
@@ -12176,7 +12208,7 @@
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c4.l8"/>na tuto odpověď.</p>
          <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb4.lb9"
              facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c4.l9"/>
-         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p574">Situace v Maroku.<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb4.lb10"
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p666">Situace v Maroku.<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb4.lb10"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c4.l10"/>Dle zprávy z Paříže oznamuje <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb4.lb11"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c4.l11"/>„Temps“ z Tangeru: Hnutí nepřátel<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb4.lb12"
@@ -12198,7 +12230,7 @@
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c4.l24"/>učiněna.</p>
          <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb4.lb25"
              facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c4.l25"/>
-         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p575">Zemská školní rada.<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb4.lb26"
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p667">Zemská školní rada.<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb4.lb26"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c4.l26"/>Český odbor c. k. zemské školní rady <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb4.lb27"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c4.l27"/>moravské usnesl se v sezení konaném dne <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb4.lb28"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c4.l28"/>29. prosince 1914 mimo jiné na tomto: <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb4.lb29"
@@ -12223,7 +12255,7 @@
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c4.l41"/>šk. okr. uher.-hradištský).</p>
          <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb4.lb42"
              facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c4.l42"/>
-         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p576">Při školách obecných: řídícími<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb4.lb43"
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p668">Při školách obecných: řídícími<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb4.lb43"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg1.a1.c4.l43"/>učiteli: Josef Gerlich (Přísnotice) v Rak<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb16.cb4.lb44"
                 break="no"
@@ -12317,7 +12349,7 @@
              facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c1"/>
          <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb1.lb1"
              facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c1.l1"/>
-         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p577">46 osobám učitelským přiznáno bylo<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb1.lb2"
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p669">46 osobám učitelským přiznáno bylo<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb1.lb2"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c1.l2"/>zvýšení služného, 3 osobní přídavek. Učitelky <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb1.lb3"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c1.l3"/>Hedvika Čelechovská, Františka Bílovská a <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb1.lb4"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c1.l4"/>Libuše Binkova při dívčí škole obecné v Hut<pc force="weak">-</pc>
@@ -12333,7 +12365,7 @@
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c1.l10"/>vicích.</p>
          <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb1.lb11"
              facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c1.l11"/>
-         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p578">Na trvalý odpočinek dáni byli: Řiditel<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb1.lb12"
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p670">Na trvalý odpočinek dáni byli: Řiditel<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb1.lb12"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c1.l12"/>dívčí školy měšťanské ve Vsetíně, Josef Zlá<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb1.lb13"
                 break="no"
@@ -12355,7 +12387,7 @@
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c1.l24"/>školní.</p>
          <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb1.lb25"
              facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c1.l25"/>
-         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p579">Povoleno bylo rozšířiti čtyřtřídní chla<pc force="weak">-</pc>
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p671">Povoleno bylo rozšířiti čtyřtřídní chla<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb1.lb26"
                 break="no"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c1.l26"/>peckou školu obecnou v Hodolanech (venk. šk. <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb1.lb27"
@@ -12392,8 +12424,10 @@
             <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb1.lb49"
                 break="no"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c1.l49"/>chání druhé zatímní pobočky při 1. třidě <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb1.lb50"
-                facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c1.l50"/>chlapecké školy měšťanské ve Vyškově. <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb1.lb51"
-                facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c1.l51"/>Zavedeno bylo nepovinné vyučování ja<pc force="weak">-</pc>
+                facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c1.l50"/>chlapecké školy měšťanské ve Vyškově.</p>
+         <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb1.lb51"
+             facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c1.l51"/>
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p672">Zavedeno bylo nepovinné vyučování ja<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb1.lb52"
                 break="no"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c1.l52"/>zyku německému při obecné škole v Hor. <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb1.lb53"
@@ -12407,7 +12441,7 @@
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c1.l56"/>novení suplujícího učitele.</p>
          <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb1.lb57"
              facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c1.l57"/>
-         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p580">Denní zprávy.<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb1.lb58"
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p673">Denní zprávy.<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb1.lb58"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c1.l58"/>Jmenování. Císař jmenoval rozhodnu<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb1.lb59"
                 break="no"
@@ -12420,7 +12454,7 @@
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c1.l63"/>kouského řádu Františka Josefa.</p>
          <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb1.lb64"
              facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c1.l64"/>
-         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p581">Změny ve finančním řiditelství v Brně.<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb1.lb65"
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p674">Změny ve finančním řiditelství v Brně.<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb1.lb65"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c1.l65"/>Císař jmenoval rozhodnutím ze dne 25. pro<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb1.lb66"
                 break="no"
@@ -12461,7 +12495,7 @@
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c1.l82"/>dv. r. Kofranek.</p>
          <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb1.lb83"
              facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c1.l83"/>
-         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p582">Povýšení ve válce. Pan Leoš Schulz,<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb1.lb84"
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p675">Povýšení ve válce. Pan Leoš Schulz,<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb1.lb84"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c1.l84"/>úředník vrchního soudu zemského v Brně, <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb1.lb85"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c1.l85"/>povýšen byl od 1. listopadu t. r. na c. a k. <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb1.lb86"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c1.l86"/>vojenského officiála sboru zásobovacího a <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb1.lb87"
@@ -12476,7 +12510,7 @@
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c1.l91"/>professora Schulze z Brna.</p>
          <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb1.lb92"
              facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c1.l92"/>
-         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p583">Nepěkný zjev. Pražský hudební list<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb1.lb93"
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p676">Nepěkný zjev. Pražský hudební list<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb1.lb93"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c1.l93"/>„Smetana“ věnoval také vzpomínku ve <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb1.lb94"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c1.l94"/>válce padlému virtuosovi Jos. Faměrovi. <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb1.lb95"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c1.l95"/>A skončil ji takto: „Nám ovšem nedostačo<pc force="weak">-</pc>
@@ -12513,7 +12547,7 @@
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c2.l8"/>ve Vídni, či v odborech spolku.</p>
          <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb2.lb9"
              facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c2.l9"/>
-         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p584">Přes 500 pokladniček spolku »Komen<pc force="weak">-</pc>
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p677">Přes 500 pokladniček spolku »Komen<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb2.lb10"
                 break="no"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c2.l10"/>ský« ve Vídni umístěno jest v různých <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb2.lb11"
@@ -12585,7 +12619,7 @@
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c2.l52"/>vroucně děkuje.</p>
          <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb2.lb53"
              facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c2.l53"/>
-         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p585">Maximální ceny mouky v Brně. Vý<pc force="weak">-</pc>
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p678">Maximální ceny mouky v Brně. Vý<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb2.lb54"
                 break="no"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c2.l54"/>nosem ze dne 22. prosince 1914 čís. 90950 <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb2.lb55"
@@ -12612,7 +12646,7 @@
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c2.l69"/>za kilo.</p>
          <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb2.lb70"
              facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c2.l70"/>
-         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p586">Telefonní hovory mezi Rakouskem<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb2.lb71"
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p679">Telefonní hovory mezi Rakouskem<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb2.lb71"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c2.l71"/>a Německem. Soukromé telefonní hovory <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb2.lb72"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c2.l72"/>mezi Rakouskem a Německem byly pro ona <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb2.lb73"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c2.l73"/>rakouská území, pro něž meziměstské sou<pc force="weak">-</pc>
@@ -12652,7 +12686,7 @@
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c2.l91"/>místa o přiměřená opatření.</p>
          <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb2.lb92"
              facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c2.l92"/>
-         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p587">Poštovní doprava knih do Bosny a Her<pc force="weak">-</pc>
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p680">Poštovní doprava knih do Bosny a Her<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb2.lb93"
                 break="no"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c2.l93"/>cegoviny, jakož i odtud. Dle zprávy c. k. ři<pc force="weak">-</pc>
@@ -12672,7 +12706,7 @@
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c2.l99"/>teli vrátí.</p>
          <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb2.lb100"
              facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c2.l100"/>
-         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p588">Prodej vyřazených vojenských koní z<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb2.lb101"
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p681">Prodej vyřazených vojenských koní z<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb2.lb101"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c2.l101"/>vojenských nemocnic koňských na Moravě <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb2.lb102"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c2.l102"/>konati se bude opět až v druhé polovici <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb2.lb103"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c2.l103"/>ledna. Hromadné žádosti řízeny buďtež jen <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb2.lb104"
@@ -12686,7 +12720,7 @@
              facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c3"/>
          <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb3.lb1"
              facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c3.l1"/>
-         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p589">Dary vojínům. S transportem dne 20.<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb3.lb2"
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p682">Dary vojínům. S transportem dne 20.<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb3.lb2"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c3.l2"/>t. m. na severní bojiště táhnoucím bylo za<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb3.lb3"
                 break="no"
@@ -12709,7 +12743,7 @@
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c3.l15"/>udělena peněžitá podpora po 10 K.</p>
          <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb3.lb16"
              facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c3.l16"/>
-         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p590">Transport raněných v Brně. Dnes<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb3.lb17"
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p683">Transport raněných v Brně. Dnes<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb3.lb17"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c3.l17"/>v noci přibyl na zdejší nádraží nemocniční <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb3.lb18"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c3.l18"/>vlak s transpostem asi 200 zraněných vojínů <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb3.lb19"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c3.l19"/>ze severního bojiště. Mezi raněnými bylo 20 <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb3.lb20"
@@ -12719,7 +12753,7 @@
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c3.l21"/>veni do zdejších nemocnic.</p>
          <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb3.lb22"
              facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c3.l22"/>
-         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p591">Úmrtí vojínu v Brně. Z raněných a<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb3.lb23"
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p684">Úmrtí vojínu v Brně. Z raněných a<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb3.lb23"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c3.l23"/>nemocných vojínů, nalezajících se v ošetřo<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb3.lb24"
                 break="no"
@@ -12729,7 +12763,7 @@
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c3.l27"/>39letý domobranec Josef Swaldi.</p>
          <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb3.lb28"
              facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c3.l28"/>
-         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p592">Zoufal si ve vlaku. V minulých<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb3.lb29"
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p685">Zoufal si ve vlaku. V minulých<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb3.lb29"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c3.l29"/>dnech postřelil se v poštovním vlaku za jízdy <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb3.lb30"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c3.l30"/>mezi Brodkem a Grygovem 21letý Jaroslav <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb3.lb31"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c3.l31"/>Kopecký z Kyniček, bydlící v Terstu. Do<pc force="weak">-</pc>
@@ -12739,7 +12773,7 @@
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c3.l33"/>Proč si zoufal, není známo.</p>
          <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb3.lb34"
              facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c3.l34"/>
-         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p593">Zatčený zloděj zimníků. Včera byl<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb3.lb35"
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p686">Zatčený zloděj zimníků. Včera byl<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb3.lb35"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c3.l35"/>zde zatčen zahaleč František Kousal právě <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb3.lb36"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c3.l36"/>v okamžiku, když rychle vzdaloval se z domu <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb3.lb37"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c3.l37"/>č. 4 na Křenové, kde ukradl kožich v ceně <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb3.lb38"
@@ -12752,7 +12786,7 @@
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c3.l44"/>do vazby.</p>
          <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb3.lb45"
              facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c3.l45"/>
-         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p594">Velký požár. V Uh. Brodě vyhořel<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb3.lb46"
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p687">Velký požár. V Uh. Brodě vyhořel<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb3.lb46"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c3.l46"/>předevčírem v noci tak zvaný předbranský <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb3.lb47"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c3.l47"/>mlýn, jenž je majetkem firmy May v Uh. <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb3.lb48"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c3.l48"/>Ostroze, nájemcem pak mlynář K. Kadlec. <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb3.lb49"
@@ -12764,7 +12798,7 @@
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c3.l52"/>asi následkem poškození v komíně.</p>
          <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb3.lb53"
              facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c3.l53"/>
-         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p595">Z neopatrnosti postřelil kamaráda.<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb3.lb54"
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p688">Z neopatrnosti postřelil kamaráda.<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb3.lb54"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c3.l54"/>Včera k večeru hrál si ve zdejším pasířství <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb3.lb55"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c3.l55"/>jistý pomocník s nabitou flobertovou pistolí <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb3.lb56"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c3.l56"/>tak neopatrně, že tato pojednou spustila a <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb3.lb57"
@@ -12774,7 +12808,7 @@
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c3.l58"/>delu v obličeji.</p>
          <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb3.lb59"
              facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c3.l59"/>
-         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p596">Ročenka českého venkova na rok 1915<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb3.lb60"
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p689">Ročenka českého venkova na rok 1915<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb3.lb60"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c3.l60"/>jest výbornou informační pomůckou pro <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb3.lb61"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c3.l61"/>každého, kdo zavítá do Prahy v nejrůzněj<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb3.lb62"
@@ -12795,12 +12829,12 @@
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c3.l69"/>Václavské nám. 13. »u zlaté husy«.</p>
          <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb3.lb70"
              facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c3.l70"/>
-         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p597">Ze zajetí, velmi zajímavé a cenné líčení<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb3.lb71"
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p690">Ze zajetí, velmi zajímavé a cenné líčení<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb3.lb71"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c3.l71"/>přináší »Ženský Obzor« v čís. 7., roč. XIII. <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb3.lb72"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c3.l72"/>Král. Vinohrady 1095.</p>
          <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb3.lb73"
              facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c3.l73"/>
-         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p598">Pokutované ruské časopisy. Z Ko<pc force="weak">-</pc>
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p691">Pokutované ruské časopisy. Z Ko<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb3.lb74"
                 break="no"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c3.l74"/>daně se sděluje: Dle zprávy „Rječi“ z8. <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb3.lb75"
@@ -12814,7 +12848,7 @@
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c3.l80"/>cionářská politika.</p>
          <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb3.lb81"
              facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c3.l81"/>
-         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p599">Zabavili „Křišťalový palác“. Světo<pc force="weak">-</pc>
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p692">Zabavili „Křišťalový palác“. Světo<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb3.lb82"
                 break="no"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c3.l82"/>známá stavba londýnská, obrovský „Křišťa<pc force="weak">-</pc>
@@ -12836,7 +12870,7 @@
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c3.l90"/>story pro zábavy lidu.</p>
          <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb3.lb91"
              facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c3.l91"/>
-         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p600">Hroby rakousko-uherských vojínů u<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb3.lb92"
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p693">Hroby rakousko-uherských vojínů u<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb3.lb92"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c3.l92"/>Berlína. V Hasenheidě u Berlína zřízena by<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb3.lb93"
                 break="no"
@@ -12863,7 +12897,7 @@
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c3.l105"/>něním trojdohody.</p>
          <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb3.lb106"
              facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c3.l106"/>
-         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p601">Sven Hedin o válce Německa. Sven He<pc force="weak">-</pc>
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p694">Sven Hedin o válce Německa. Sven He<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb3.lb107"
                 break="no"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c3.l107"/>din, i u nás známý cestovatel, píše jako od<pc force="weak">-</pc>
@@ -12876,8 +12910,10 @@
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c4.l1"/>musí zvítěziti, jinak byla by Evropa otevře<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb4.lb2"
                 break="no"
-                facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c4.l2"/>na Slovanům a žlutému plemeni.« <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb4.lb3"
-                facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c4.l3"/>Povětrnost v lednu. Theorie prof. K. V. <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb4.lb4"
+                facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c4.l2"/>na Slovanům a žlutému plemeni.«</p>
+         <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb4.lb3"
+             facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c4.l3"/>
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p695">Povětrnost v lednu. Theorie prof. K. V.<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb4.lb4"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c4.l4"/>Zengera vykazuje v lednu velké množ<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb4.lb5"
                 break="no"
@@ -12954,7 +12990,7 @@
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c4.l49"/>jen méně vydatnější srážky.</p>
          <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb4.lb50"
              facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c4.l50"/>
-         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p602">Lidové sanatorium v Král. Poli. Sme<pc force="weak">-</pc>
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p696">Lidové sanatorium v Král. Poli. Sme<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb4.lb51"
                 break="no"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c4.l51"/>tanova 34. Moderní, ceny jako třídy ve <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb4.lb52"
@@ -12969,7 +13005,7 @@
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c4.l58"/>doprava k disposici.</p>
          <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb4.lb59"
              facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c4.l59"/>
-         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p603">3495.<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb4.lb60"
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p697">3495.<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb4.lb60"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c4.l60"/>Cukrářství Fr. Novotného u Národního <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb4.lb61"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c4.l61"/>divadla doporučuje se ct. obecenstvu. 2179 <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb4.lb62"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c4.l62"/>Počasí. Střídavě zamračeno, později <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb4.lb63"
@@ -12977,7 +13013,7 @@
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c4.l64"/>větry.</p>
          <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb4.lb65"
              facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c4.l65"/>
-         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p604">Divadlo.<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb4.lb66"
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p698">Divadlo.<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb4.lb66"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c4.l66"/>Z kanceláře Národního divadla v <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb4.lb67"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c4.l67"/>Brně. Dnes „Hubicka“ (III. čtvrtka). <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb4.lb68"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c4.l68"/>Ve čtvrtek „Divadelní Sylvestr“. <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb4.lb69"
@@ -12997,7 +13033,7 @@
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c4.l80"/>divadelních předprodejích.</p>
          <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb4.lb81"
              facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c4.l81"/>
-         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p605">Koncertní pěvec Karel Burian se<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb4.lb82"
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p699">Koncertní pěvec Karel Burian se<lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb4.lb82"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c4.l82"/>svým bratrem Emilem Burianem, <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb4.lb83"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c4.l83"/>členem Král. čes. zem. Národního di<pc force="weak">-</pc>
             <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb4.lb84"
@@ -13029,11 +13065,19 @@
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c4.l100"/>upozorňujeme, že může se zaplatiti ve <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb4.lb101"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c4.l101"/>dvou splátkách, a sice první polovice <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb4.lb102"
                 facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c4.l102"/>splatna jest hned při dodání náod-l <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb4.lb103"
-                facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c4.l103"/>ního lístku a druhá 15. ún <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb4.lb104"
-                facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c4.l104"/>vidět, vychází členstvo P. T. <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb4.lb105"
-                facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c4.l105"/>co možná nejvíce vstříc a 1 <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb4.lb106"
-                facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c4.l106"/>i tentokráte v hojnou přízeň. <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb4.lb107"
-                facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c4.l107"/>nel</p>
+                facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c4.l103"/>ního lístku a druhá 15. ún</p>
+         <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb4.lb104"
+             facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c4.l104"/>
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p700">vidět, vychází členstvo P. T.</p>
+         <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb4.lb105"
+             facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c4.l105"/>
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p701">co možná nejvíce vstříc a 1</p>
+         <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb4.lb106"
+             facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c4.l106"/>
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p702">i tentokráte v hojnou přízeň.</p>
+         <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb17.cb4.lb107"
+             facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg2.a1.c4.l107"/>
+         <p xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p703">nel</p>
       </body>
    </text>
 </TEI>
