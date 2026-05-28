@@ -28,9 +28,14 @@ YOLO_MODEL := Models/textbite/yolo-m-1200.pt
 PERLBREW_ROOT=~/perl5/perlbrew
 PERL := $(shell test -n "$(USE_PERL)" && echo -n "$(PERLBREW_ROOT)/perls/$(USE_PERL)/bin/perl" || echo -n "perl")
 
+##$SAMPLE## Set to 1 to use sample data instead of full data
 SAMPLE ?= 0
+
+##$DATA## Base directory for data processing (default: ./Data, when SAMPLE=1 then ./Sample)
 DATA ?= $(shell pwd)/Data/
 SAMPLE_SOURCE_SOURCE = $(shell pwd)/Data/source
+
+##$SAMPLE_UUIDs_FILE## File containing UUIDs of samples to process
 SAMPLE_UUIDs_FILE = $(shell pwd)/DataManual/sample-issues.paths.uuid
 ifeq ($(SAMPLE),1)
 DATA := $(shell pwd)/Sample/
@@ -112,10 +117,6 @@ pages := $(shell test -f "$(periodicalitem_uuid)" && cat $(periodicalitem_uuid) 
 periodicalitem := $(basename $(notdir $(periodicalitem_uuid)))
 endif
 
-.PHONY: help
-## help ## print this help
-help:
-	echo "TODO"
 
 -include Makefile.dev
 -include Makefile.deprecated
@@ -129,8 +130,12 @@ $(IN)/PressMint-CZ-issues.uuid: $(IN)/PressMint-CZ-issues.json
 filter-issues: $(IN)/PressMint-CZ-issues.uuid
 endif
 
+###### data downloading
 
 # PressMint data gathering starting point
+## get-PressMint-CZ-periodicals ## starting point for getting data 
+#### when SAMPLE=1, it will get only sample data defined in $(SAMPLE_UUIDs_FILE) 
+#### otherwise all data derived from DataManual/issues.json where include == true is used)
 get-PressMint-CZ-periodicals: $(IN)/PressMint-CZ-issues.uuid
 ifeq ($(SAMPLE),1)
 	@echo "Skipping data downloading: SAMPLE mode active."
@@ -159,7 +164,7 @@ else
 endif
 
 
-# loop periodical(issues) to get volumes
+##get-periodicals## loop periodical(issues) to get volumes
 get-periodicals-UUID = $(addprefix get-periodicals-, $(periodicals))
 get-periodicals: $(get-periodicals-UUID)
 $(get-periodicals-UUID): get-periodicals-%: $(IN)/periodical
@@ -178,7 +183,7 @@ endif
 
 $(IN)/periodical/$(periodical):
 	mkdir -p $@
-# loop volumes to get items(copies)
+##get-periodicalvolumes## loop volumes to get items(copies)
 get-periodicalvolumes-UUID = $(addprefix get-periodicalvolumes-, $(periodicalvolumes))
 get-periodicalvolumes: $(get-periodicalvolumes-UUID)
 $(get-periodicalvolumes-UUID): get-periodicalvolumes-%: $(IN)/periodical/$(periodical)
@@ -194,7 +199,7 @@ $(get-periodicalvolumes-UUID): get-periodicalvolumes-%: $(IN)/periodical/$(perio
 
 $(IN)/periodical/$(periodical)/$(periodicalvolume):
 	mkdir -p $@
-# loop items(copies) to get pages
+##get-periodicalitems## loop items(copies) to get pages
 get-periodicalitems-UUID = $(addprefix get-periodicalitems-, $(periodicalitems))
 get-periodicalitems: $(get-periodicalitems-UUID)
 $(get-periodicalitems-UUID): get-periodicalitems-%: $(IN)/periodical/$(periodical)/$(periodicalvolume)
@@ -206,7 +211,7 @@ $(get-periodicalitems-UUID): get-periodicalitems-%: $(IN)/periodical/$(periodica
 	make get-page-ocr-texts periodical=$(periodical) periodicalvolume=$(periodicalvolume) periodicalitem_uuid=$(IN)/periodical/$(periodical)/$(periodicalvolume)/$*.uuid
 
 
-# loop pages to get ocr text
+##get-page-ocr-texts## loop pages to get ocr text [note: this is not used in result, because we are running custom ocrn original images]
 $(IN)/periodical/$(periodical)/$(periodicalvolume)/$(periodicalitem):
 	mkdir -p $@
 get-page-ocr-texts-UUID = $(addprefix get-page-ocr-texts-, $(pages))
@@ -219,6 +224,8 @@ $(get-page-ocr-texts-UUID): get-page-ocr-texts-%: $(IN)/periodical/$(periodical)
 
 # loop pages to get metadata
 # loop pages to get fascimiles
+
+##get-page-image## loop pages to get image files
 get-page-image-UUID = $(addprefix get-page-image-, $(pages))
 get-page-image: $(get-page-image-UUID)
 $(get-page-image-UUID): get-page-image-%: $(IN)/periodical/$(periodical)/$(periodicalvolume)/$(periodicalitem)
@@ -230,7 +237,7 @@ $(get-page-image-UUID): get-page-image-%: $(IN)/periodical/$(periodical)/$(perio
 uuid2url:
 	echo "TODO: not implemented $@"
 
-
+######input data statistics and visualization
 
 stats-copies:
 	@echo "id_issue\tid_volume\tid_copy\ttitle\tdate\tlanguages\tpages\twords" \
@@ -263,52 +270,8 @@ stats-periodicalvolumes:
 chart-periodicalvolumes:
 	bash ./Scripts/plot-stackedbar.sh -i DataStats/stats-periodicalvolumes.tsv -o DataStats/chart-year-word-issue.png -m words
 
-
-
-### process data
-
-$(JSONissues) $(idMapping) $(xmlOCR) $(altoOCR) $(vizOCRxml) $(vizLAYOUTxml) $(vizLAYOUTalto) $(vizLAYOUTregions) $(vizLAYOUTmerge) $(vizTEI) $(imageRegions) $(TEI) $(TEIANA) $(TEItext) $(TEItext_cleaned) $(TEIheader) $(TEIANAtext) $(UDPIPE) $(NAMETAG) $(LOGDIR) $(TEIFacsTT):
-	mkdir -p $@
-# merge issues and page json files
-
-inputJsonMerge: $(IN)/periodical/$(UUID_PATH).json $(JSONissues)
-ifeq ($(UUID_PATH_LEVEL),1)
-	mkdir -p $(JSONissues)/$(UUID_PATH)
-	jq -c '.response.docs[]' $< | while read -r obj; \
-	do \
-	  pid=$$(echo "$$obj" | jq -r '.pid'| sed "s/^uuid://") ;\
-	  pages_file="$(IN)/periodical/$(UUID_PATH)/$${pid}.json" ;\
-	  if [ -f "$$pages_file" ]; \
-		then \
-	    obj=$$(echo "$$obj" | jq --slurpfile pages "$$pages_file" '.pages = $$pages[0].response.docs') ;\
-	    echo "$$obj" | jq '.' > "$(JSONissues)/$(UUID_PATH)/$${pid}.json" ;\
-		  echo "INFO: saving $(JSONissues)/$(UUID_PATH)/$${pid}.json" ;\
-	  fi ;\
-	done
-else
-	@echo "ERROR: invalid UUID_PATH level - expecting volume level: periodical-uuid/volume-uuid\n"
-endif
-
-input2outputMapping: $(IN)/periodical/$(UUID_PATH).json $(idMapping)
-	$(PERL) -I Scripts/lib Scripts/idMapping.pl \
-										 --input-base-dir $(JSONissues) \
-										 --input-uuid-path "$(UUID_PATH)" \
-										 --output-dir $(idMapping)
-
-# original images to pageXML
-inputImg2pageXML: $(IN)/periodical/$(UUID_PATH).json $(xmlOCR) setup-pero-ocr $(PERO_OCR_MODEL_CONFIG)
-	$(PERL) -I Scripts/lib Scripts/runOCR.pl \
-										 --input-file-suffix ".jpg" \
-										 --input-img-dir $(IN)/periodical \
-										 --input-base-dir $(JSONissues) \
-										 --input-uuid-path "$(UUID_PATH)" \
-										 --model $(PERO_OCR_MODEL_CONFIG) \
-										 --device $(PERO_OCR_DEVICE) \
-										 --output-xml-dir $(xmlOCR) \
-										 --output-alto-dir $(altoOCR)
-
-
-# visualizations
+###### visualizations of intermediate data and results
+##visualize-pageXML## visualize pageXML output of OCR as pdf files with original image and detected regions overlayed
 visualize-pageXML: $(vizOCRxml)
 	for COMP in `find $(idMapping) -type f -name "*.jsonl" -printf "%P\n" | sed 's/.jsonl$$//'| sort`;\
 	do \
@@ -320,6 +283,7 @@ visualize-pageXML: $(vizOCRxml)
 			--output $(vizOCRxml)/$${COMP}.pdf;\
 	done
 
+##visualize-layout-pageXML## visualize layout pageXML files
 visualize-layout-pageXML: $(vizLAYOUTxml)
 	for COMP in `find $(idMapping) -type f -name "*.jsonl" -printf "%P\n" | sed 's/.jsonl$$//'| sort`;\
 	do \
@@ -332,7 +296,7 @@ visualize-layout-pageXML: $(vizLAYOUTxml)
 			done;\
 	done
 
-
+##visualize-layout-alto## visualize layout ALTO files
 visualize-layout-alto: $(vizLAYOUTalto) 
 	for COMP in `find $(idMapping) -type f -name "*.jsonl" -printf "%P\n" | sed 's/.jsonl$$//'| sort`;\
 	do \
@@ -345,7 +309,7 @@ visualize-layout-alto: $(vizLAYOUTalto)
 			done;\
 	done
 
-
+##visualize-layout-regions## visualize layout regions detected by YOLO as png files with original image and detected regions overlayed
 visualize-layout-regions: $(vizLAYOUTregions)
 	echo "TODO $@"
 	for COMP in `find $(imageRegions) -type f -name "*.jsonl" -printf "%P\n" | sed 's/.jsonl$$//'| sort`;\
@@ -367,7 +331,7 @@ visualize-layout-regions: $(vizLAYOUTregions)
 		done;\
 	done
 
-
+##visualize-layout-merge## visualize layout merge files as png files with original image and detected regions overlayed
 visualize-layout-merge: $(vizLAYOUTmerge)
 	for COMP in `find $(idMapping) -type f -name "*.jsonl" -printf "%P\n" | sed 's/.jsonl$$//'| sort`;\
 	do \
@@ -388,6 +352,7 @@ visualize-layout-merge: $(vizLAYOUTmerge)
 			done;\
 	done
 
+##visualize-tei## visualize TEI files as pdf files with original image and detected regions overlayed
 visualize-tei: $(vizTEI)
 	echo "TODO $@"	
 	for COMP in `find $(TEI) -type f -name "*.xml" -printf "%P\n" | sed 's/.xml$$//'| sort`;\
@@ -399,8 +364,57 @@ visualize-tei: $(vizTEI)
 			--cache $(CACHE)/tei2pdf/$${COMP};\
 	done
 
+###### process metadata
+##inputJsonMerge## merge issues and page json files
+inputJsonMerge: $(IN)/periodical/$(UUID_PATH).json $(JSONissues)
+ifeq ($(UUID_PATH_LEVEL),1)
+	mkdir -p $(JSONissues)/$(UUID_PATH)
+	jq -c '.response.docs[]' $< | while read -r obj; \
+	do \
+	  pid=$$(echo "$$obj" | jq -r '.pid'| sed "s/^uuid://") ;\
+	  pages_file="$(IN)/periodical/$(UUID_PATH)/$${pid}.json" ;\
+	  if [ -f "$$pages_file" ]; \
+		then \
+	    obj=$$(echo "$$obj" | jq --slurpfile pages "$$pages_file" '.pages = $$pages[0].response.docs') ;\
+	    echo "$$obj" | jq '.' > "$(JSONissues)/$(UUID_PATH)/$${pid}.json" ;\
+		  echo "INFO: saving $(JSONissues)/$(UUID_PATH)/$${pid}.json" ;\
+	  fi ;\
+	done
+else
+	@echo "ERROR: invalid UUID_PATH level - expecting volume level: periodical-uuid/volume-uuid\n"
+endif
 
-# detect and clasify regions
+##inputJson2idMapping## create mapping of page UUIDs to page order in volume
+input2outputMapping: $(IN)/periodical/$(UUID_PATH).json $(idMapping)
+	$(PERL) -I Scripts/lib Scripts/idMapping.pl \
+										 --input-base-dir $(JSONissues) \
+										 --input-uuid-path "$(UUID_PATH)" \
+										 --output-dir $(idMapping)
+
+
+
+
+###### process data (img --> text --> TEI with facs and text)
+
+$(JSONissues) $(idMapping) $(xmlOCR) $(altoOCR) $(vizOCRxml) $(vizLAYOUTxml) $(vizLAYOUTalto) $(vizLAYOUTregions) $(vizLAYOUTmerge) $(vizTEI) $(imageRegions) $(TEI) $(TEIANA) $(TEItext) $(TEItext_cleaned) $(TEIheader) $(TEIANAtext) $(UDPIPE) $(NAMETAG) $(LOGDIR) $(TEIFacsTT):
+	mkdir -p $@
+
+
+
+##inputImg2pageXML## OCR original images to pageXML
+inputImg2pageXML: $(IN)/periodical/$(UUID_PATH).json $(xmlOCR) setup-pero-ocr $(PERO_OCR_MODEL_CONFIG)
+	$(PERL) -I Scripts/lib Scripts/runOCR.pl \
+										 --input-file-suffix ".jpg" \
+										 --input-img-dir $(IN)/periodical \
+										 --input-base-dir $(JSONissues) \
+										 --input-uuid-path "$(UUID_PATH)" \
+										 --model $(PERO_OCR_MODEL_CONFIG) \
+										 --device $(PERO_OCR_DEVICE) \
+										 --output-xml-dir $(xmlOCR) \
+										 --output-alto-dir $(altoOCR)
+
+
+##inputImg2imageRegions## detect and classify regions in original images using YOLO model
 inputImg2imageRegions: $(IN)/periodical/$(UUID_PATH).json $(imageRegions) $(YOLO_MODEL)
 	$(PERL) -I Scripts/lib Scripts/runImageRegionsDetection.pl \
 										 --input-img-dir $(IN)/periodical \
@@ -410,8 +424,16 @@ inputImg2imageRegions: $(IN)/periodical/$(UUID_PATH).json $(imageRegions) $(YOLO
 										 --device $(DEVICE) \
 										 --output-dir $(imageRegions)
 
+##inputJson2teiHeader## json metadata to TEI/teiHeader (expecting UUID_PATH_LEVEL>0)
+inputJson2teiHeader: $(IN)/periodical/$(UUID_PATH).json $(TEIheader)
+	$(PERL) -I Scripts/lib Scripts/json2teiHeader.pl \
+										 --input-base-dir $(JSONissues) \
+										 --input-uuid-path "$(UUID_PATH)" \
+										 --output-dir $(TEIheader)
 
-# merge region detection and ocr output to TEI documents
+##textRegions2teiFacsText## merge region detection and ocr output to TEI documents
+#### this also attempts to determine correct reading order of text regions based on pageXML reading order and detected regions, but this is not perfect and can be improved in the future
+#### TODO: add some article segmentation based on detected regions and reading order, currently we just put all text regions in one big text body
 textRegions2teiFacsText:
 	find $(idMapping) -type f -name "*.jsonl" -printf "%P\n" | sed 's/.jsonl$$//'|sort > $(TEIFacsText).list
 	cat $(TEIFacsText).list \
@@ -421,7 +443,9 @@ textRegions2teiFacsText:
 				--page-order-dir "$(idMapping)" \
 				--output-dir "$(TEIFacsText)"
 
-# [DEPRECATED] original text to TEI/text (expecting UUID_PATH_LEVEL>0)
+###### [DEPRECATED] targets
+
+##inputTxt2teiText## [DEPRECATED] original text to TEI/text (expecting UUID_PATH_LEVEL>0)
 inputTxt2teiText: $(IN)/periodical/$(UUID_PATH).json $(TEItext)
 	$(PERL) -I Scripts/lib Scripts/text2teiText.pl \
 										 --input-format "txt" \
@@ -433,20 +457,16 @@ inputTxt2teiText: $(IN)/periodical/$(UUID_PATH).json $(TEItext)
 
 
 
-# json metadata to TEI/teiHeader (expecting UUID_PATH_LEVEL>0)
-inputJson2teiHeader: $(IN)/periodical/$(UUID_PATH).json $(TEIheader)
-	$(PERL) -I Scripts/lib Scripts/json2teiHeader.pl \
-										 --input-base-dir $(JSONissues) \
-										 --input-uuid-path "$(UUID_PATH)" \
-										 --output-dir $(TEIheader)
 
 
-# this target should be deprecated because it removes linking between lines in text and facs
+
+##teiText2teiTextCleaned## [DEPRECATED] this target should be deprecated because it removes linking between lines in text and facs
 teiText2teiTextCleaned: $(TEItext_cleaned)
 	find $(TEItext) -type f -name "*.xml"  -printf "%P\n" | xargs -I {} $(SAXON) outFile=$</{} -xsl:Scripts/remove-lb.xsl $(TEItext)/{}
 
 # [DEPRECATED]
 ### annotate TEI/text
+##teiText2teiTextAnaUD## [DEPRECATED] annotate TEI/text with UDPipe (lemmatization, POS tagging, dependency parsing)
 teiText2teiTextAnaUD: $(UDPIPE)
 	find $(TEItext_cleaned) -type f -printf "%P\n" |sort > $(UDPIPE).fl
 	$(PERL) -I Scripts/resources/lib Scripts/resources/udpipe2/udpipe2.pl --colon2underscore \
@@ -460,7 +480,8 @@ teiText2teiTextAnaUD: $(UDPIPE)
 	                               --filelist $(UDPIPE).fl \
 	                               --input-dir $(TEItext_cleaned) \
 	                               --output-dir $(UDPIPE)
-
+# [DEPRECATED]
+##teiText2teiTextAnaNER## [DEPRECATED] annotate TEI/text with NameTag (named entity recognition)
 teiText2teiTextAnaNER: $(NAMETAG)
 	find $(UDPIPE) -type f -printf "%P\n" |sort > $(NAMETAG).fl
 	$(PERL) -I Scripts/resources/lib Scripts/resources/nametag2/nametag2.pl \
@@ -471,8 +492,8 @@ teiText2teiTextAnaNER: $(NAMETAG)
 	                                 --filelist $(NAMETAG).fl \
 	                                 --input-dir $(UDPIPE) \
 	                                 --output-dir $(NAMETAG)
-### annotate
-### annotate teiFacsText with flexipipe TEIFacsTT
+###### Linguistic annotation of TEI documents
+##teiText2tt## annotate teiFacsText with flexipipe TEIFacsTT
 teiText2tt: $(TEIFacsTT)
 	find $(TEIFacsText) -type f -name "*.xml"  -printf "%P\n"| sort > $(TEIFacsTT).fl
 	cat $(TEIFacsTT).fl | sed 's@/.*@@'|sort|uniq | xargs -I {} mkdir -p $(TEIFacsTT)/{}
@@ -492,7 +513,7 @@ teiText2tt: $(TEIFacsTT)
 		--tasks segment,tokenize,lemmatize,tag,ner \
 		--writeback
 
-### convert TEIFacsTT to TEIANAtext
+##TT2teiANA## convert TEIFacsTT to TEIANAtext
 TT2teiANA: $(TEIANAtext)
 	find $(TEIFacsTT) -type f -name "*.xml" -printf "%P\n" |sort > $(TEIANAtext).fl
 	cat $(TEIFacsTT).fl | sed 's@/.*@@'|sort|uniq | xargs -I {} mkdir -p $(TEIANAtext)/{}
@@ -501,9 +522,10 @@ TT2teiANA: $(TEIANAtext)
 			--input $(TEIFacsTT)/{} \
 			--output $(TEIANAtext)/{} 
 
-### merge data to TEI and teiCorpus
 
+###### Build TEI documents and corpus
 
+##corpus-template## create TEI corpus template with xi:include for all TEI headers and text components, this is used as input for distribution XSLT stylesheet to create final TEI documents with included headers and text
 corpus-template:
 	echo '<?xml version="1.0" encoding="UTF-8"?>' > $(CORPUS_TEMPLATE)
 	echo '<teiCorpus xmlns="http://www.tei-c.org/ns/1.0"' >> $(CORPUS_TEMPLATE)
@@ -512,6 +534,7 @@ corpus-template:
 	find $(TEIheader) -type f -name "*.xml" -printf "%P\n"| xargs -I {} echo '  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="'{}'"/>' >> $(CORPUS_TEMPLATE)
 	echo '</teiCorpus>' >> $(CORPUS_TEMPLATE)
 
+##dist-tei## create final TEI documents with included headers and text
 dist-tei: $(TEI)
 	$(SAXON) -xsl:Scripts/distro.xsl \
 	    outDir=$< \
@@ -523,6 +546,7 @@ dist-tei: $(TEI)
 	    projectConfig=$(CONFIG) \
 	    $(CORPUS_TEMPLATE)
 
+##dist-tei-ana## create final TEI documents with included headers and text
 dist-tei-ana: $(TEIANA)
 	$(SAXON) -xsl:Scripts/distro.xsl \
 	    outDir=$< \
@@ -533,6 +557,8 @@ dist-tei-ana: $(TEIANA)
 	    projectConfig=$(CONFIG) \
 	    $(CORPUS_TEMPLATE)
 
+
+######setup and resources
 ####
 prereq: parczech
 
@@ -572,3 +598,36 @@ $(PERO_OCR_MODEL_CONFIG):
 	cd Models;\
 	wget $(PERO_OCR_MODEL_URL) -O $(PERO_OCR_MODEL_NAME).$(PERO_OCR_MODEL_ARCHEXT);\
 	unzip $(PERO_OCR_MODEL_NAME).$(PERO_OCR_MODEL_ARCHEXT)
+
+
+###### Help
+
+help-intro:
+	@echo "Pipeline of PressMint-CZ data processing:\n\t \n "
+	@echo "Process data directories:\n\t./Sample when SAMPLE=1 variable is set\n\t./Data (default)\n\t$(DATA) (currently set)"
+	@echo "Directories structure:\n\t$(IN)\n\t$(WORK)\n\t$(VIZ)\n\t$(DIST)"
+
+help-variables:
+	@echo "\033[1m\033[32mVARIABLES:\033[0m"
+	@echo "Variable VAR with value 'value' can be set when calling target TARGET in $(MAKEFILE_LIST): make VAR=value TARGET\n"
+	@awk '/^##\$$[a-zA-Z0-9_-]+/ { \
+		comment = $$0; \
+		getline; \
+		split(comment, comment_parts, "##\\$$|##"); \
+		var_name = comment_parts[2]; \
+		desc = comment_parts[3]; \
+		print var_name " " desc; \
+	}' $(MAKEFILE_LIST) | while read -r var_name desc; do \
+		eval current_val="\"\$$$${var_name}\""; \
+		printf "\033[36m%-20s\033[0m %s \n\t=\033[1;33m%s \033[0m(current)\n" "$$var_name" "$$desc" "$$current_val"; \
+	done
+
+
+help-targets:
+	@echo "\033[1m\033[32mTARGETS:\033[0m"
+	@grep -E '^## *[a-zA-Z_-]+.*?##.*$$|^####' $(MAKEFILE_LIST) | awk 'BEGIN {FS = " *## *"}; {printf "\033[1m%s\033[0m\033[36m%-25s\033[0m %s\n", $$4, $$2, $$3}'
+
+
+.PHONY: help
+## help ## print this help
+help: help-intro help-variables help-targets
