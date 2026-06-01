@@ -5,6 +5,7 @@ use utf8;
 use open qw(:std :utf8);
 use File::Spec;
 use XML::LibXML;
+use feature 'state';
 
 use PressMintCZ;
 
@@ -24,7 +25,7 @@ sub convert2header{
   $opts{id} = PressMintCZ::create_comp_id($json);
   $opts{date} = PressMintCZ::get_comp_date($json);
   $opts{year} = PressMintCZ::get_comp_year($json);
-  my $xml = do { local $/; <DATA> };
+  state $xml = do { local $/; <DATA> };
   my $parser = XML::LibXML->new();
   my $dom = $parser->parse_string($xml);
   my $xpc = XML::LibXML::XPathContext->new($dom);
