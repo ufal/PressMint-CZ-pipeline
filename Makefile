@@ -34,11 +34,11 @@ SAMPLE ?= 0
 ##$DATA## Base directory for data processing (default: ./Data, when SAMPLE=1 then ./Sample)
 DATA ?= $(shell pwd)/Data/
 SAMPLE_SOURCE_SOURCE = $(shell pwd)/Data/source
-
+SAMPLE_DIRNAME = Sample
 ##$SAMPLE_UUIDs_FILE## File containing UUIDs of samples to process
 SAMPLE_UUIDs_FILE = $(shell pwd)/DataManual/sample-issues.paths.uuid
 ifeq ($(SAMPLE),1)
-DATA := $(shell pwd)/Sample/
+DATA := $(shell pwd)/$(SAMPLE_DIRNAME)/
 endif
 
 CONFIG := $(shell pwd)/DataManual/config_PressMint-CZ.xml
@@ -47,6 +47,11 @@ IN := ${DATA}source
 WORK := ${DATA}work
 VIZ := ${DATA}viz
 DIST := ${DATA}dist
+TASKS := ${DATA}/tasks
+TASKS_PERIODICALS := ${TASKS}/periodicals.tasks
+TASKS_VOLUMES := ${TASKS}/volumes.tasks
+TASKS_ISSUES := ${TASKS}/issues.tasks
+TASKS_TEI_COMPONENTS := ${TASKS}/tei-components.tasks
 
 JSONissues := ${WORK}/json-issues
 idMapping := ${WORK}/idMapping
@@ -237,7 +242,25 @@ $(get-page-image-UUID): get-page-image-%: $(IN)/periodical/$(periodical)/$(perio
 uuid2url:
 	echo "TODO: not implemented $@"
 
+###### tasks preparation
+
+##prepare-tasks## prepare task lists for processing
+prepare-tasks: $(TASKS_ISSUES) $(TASKS_VOLUMES) $(TASKS_PERIODICALS) $(TASKS_TEI_COMPONENTS)
+
+$(TASKS_ISSUES): $(TASKS)
+	find $(IN)/periodical  -mindepth 3 -maxdepth 3 -type f -name "*.json" | sed 's@^.*periodical/\(.*\).json$$@\1@' |sort > $@
+$(TASKS_VOLUMES): $(TASKS_ISSUES)
+	cut -f1-2 -d\/ $(TASKS_ISSUES) | sort | uniq > $@
+$(TASKS_PERIODICALS): $(TASKS_ISSUES)
+	cut -f1 -d\/ $(TASKS_ISSUES) | sort | uniq > $@
+$(TASKS_TEI_COMPONENTS): $(idMapping) $(TASKS)
+	echo "TODO: add a kind of filtering to allow processing only some components (e.g. only some volumes or issues) based on task lists, currently we just process all components for all issues"
+	find $(idMapping) -type f -name "*.jsonl" -printf "%P\n" | sed 's/.jsonl$$//'|sort > $@
+
+
 ######input data statistics and visualization
+
+visualize-input: stats-copies stats-periodical stats-periodicalvolumesQ stats-periodicalvolumes chart-periodicalvolumes
 
 stats-copies:
 	@echo "id_issue\tid_volume\tid_copy\ttitle\tdate\tlanguages\tpages\twords" \
@@ -365,9 +388,17 @@ visualize-tei: $(vizTEI)
 	done
 
 ###### process metadata
+
+##process-metadata-all## process metadata for all volumes based on task list prepared by prepare-tasks
+process-metadata-all: $(TASKS_VOLUMES)
+	cat $(TASKS_VOLUMES) | xargs -I {} make process-metadata UUID_PATH={} SAMPLE=$(SAMPLE)
+process-metadata: $(IN)/periodical/$(UUID_PATH).json input2outputMapping inputJsonMerge inputJson2teiHeader 
+
+
 ##inputJsonMerge## merge issues and page json files
 inputJsonMerge: $(IN)/periodical/$(UUID_PATH).json $(JSONissues)
 ifeq ($(UUID_PATH_LEVEL),1)
+	@echo "INFO: processing volume $(UUID_PATH)"
 	mkdir -p $(JSONissues)/$(UUID_PATH)
 	jq -c '.response.docs[]' $< | while read -r obj; \
 	do \
@@ -386,19 +417,31 @@ endif
 
 ##inputJson2idMapping## create mapping of page UUIDs to page order in volume
 input2outputMapping: $(IN)/periodical/$(UUID_PATH).json $(idMapping)
+	@echo "INFO: creating id mapping for $(UUID_PATH) in $(idMapping)"
 	$(PERL) -I Scripts/lib Scripts/idMapping.pl \
 										 --input-base-dir $(JSONissues) \
 										 --input-uuid-path "$(UUID_PATH)" \
 										 --output-dir $(idMapping)
 
 
-
+##inputJson2teiHeader## json metadata to TEI/teiHeader (expecting UUID_PATH_LEVEL>0)
+inputJson2teiHeader: $(IN)/periodical/$(UUID_PATH).json $(TEIheader)
+	@echo "INFO: creating TEI header for $(UUID_PATH) in $(TEIheader)"
+	$(PERL) -I Scripts/lib Scripts/json2teiHeader.pl \
+										 --input-base-dir $(JSONissues) \
+										 --input-uuid-path "$(UUID_PATH)" \
+										 --output-dir $(TEIheader)
 
 ###### process data (img --> text --> TEI with facs and text)
 
-$(JSONissues) $(idMapping) $(xmlOCR) $(altoOCR) $(vizOCRxml) $(vizLAYOUTxml) $(vizLAYOUTalto) $(vizLAYOUTregions) $(vizLAYOUTmerge) $(vizTEI) $(imageRegions) $(TEI) $(TEIANA) $(TEItext) $(TEItext_cleaned) $(TEIheader) $(TEIANAtext) $(UDPIPE) $(NAMETAG) $(LOGDIR) $(TEIFacsTT):
+$(TASKS) $(JSONissues) $(idMapping) $(xmlOCR) $(altoOCR) $(vizOCRxml) $(vizLAYOUTxml) $(vizLAYOUTalto) $(vizLAYOUTregions) $(vizLAYOUTmerge) $(vizTEI) $(imageRegions) $(TEI) $(TEIANA) $(TEItext) $(TEItext_cleaned) $(TEIheader) $(TEIANAtext) $(UDPIPE) $(NAMETAG) $(LOGDIR) $(TEIFacsTT):
 	mkdir -p $@
 
+
+##process-data-all## process data for all issues (img->text-->TEI) based on task list prepared by prepare-tasks
+process-data-all: $(TASKS_ISSUES)
+	cat $(TASKS_ISSUES) | xargs -I {} make process-data UUID_PATH={} SAMPLE=$(SAMPLE)
+process-data: $(IN)/periodical/$(UUID_PATH).json inputImg2pageXML inputImg2imageRegions textRegions2teiFacsText
 
 
 ##inputImg2pageXML## OCR original images to pageXML
@@ -424,19 +467,14 @@ inputImg2imageRegions: $(IN)/periodical/$(UUID_PATH).json $(imageRegions) $(YOLO
 										 --device $(DEVICE) \
 										 --output-dir $(imageRegions)
 
-##inputJson2teiHeader## json metadata to TEI/teiHeader (expecting UUID_PATH_LEVEL>0)
-inputJson2teiHeader: $(IN)/periodical/$(UUID_PATH).json $(TEIheader)
-	$(PERL) -I Scripts/lib Scripts/json2teiHeader.pl \
-										 --input-base-dir $(JSONissues) \
-										 --input-uuid-path "$(UUID_PATH)" \
-										 --output-dir $(TEIheader)
 
 ##textRegions2teiFacsText## merge region detection and ocr output to TEI documents
 #### this also attempts to determine correct reading order of text regions based on pageXML reading order and detected regions, but this is not perfect and can be improved in the future
 #### TODO: add some article segmentation based on detected regions and reading order, currently we just put all text regions in one big text body
 textRegions2teiFacsText:
-	find $(idMapping) -type f -name "*.jsonl" -printf "%P\n" | sed 's/.jsonl$$//'|sort > $(TEIFacsText).list
-	cat $(TEIFacsText).list \
+	 $(PERL) -I Scripts/lib Scripts/uuid2componentPath.pl \
+										 --input-base-dir $(JSONissues) \
+										 --input-uuid-path "$(UUID_PATH)" \
 	  | PYTHONPATH=Scripts python -m textRegions2teiFacsText.main \
 		    --ocr-xml-dir "$(xmlOCR)" \
 				--regions-dir "$(imageRegions)" \
@@ -493,6 +531,11 @@ teiText2teiTextAnaNER: $(NAMETAG)
 	                                 --input-dir $(UDPIPE) \
 	                                 --output-dir $(NAMETAG)
 ###### Linguistic annotation of TEI documents
+
+##process-annotation-all## process annotation for all issues based on task list prepared by prepare-tasks
+process-annotation-all: teiText2tt TT2teiANA
+
+
 ##teiText2tt## annotate teiFacsText with flexipipe TEIFacsTT
 teiText2tt: $(TEIFacsTT)
 	find $(TEIFacsText) -type f -name "*.xml"  -printf "%P\n"| sort > $(TEIFacsTT).fl

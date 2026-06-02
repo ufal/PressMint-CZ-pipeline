@@ -27,7 +27,7 @@ PressMintCZ::process_issues(
 sub runImageRegionsDetection {
   my $json = shift;
   my %opts = @_;
-  print STDERR "INFO: Running ocr on $opts{'input-uuid-path'}\n";
+  print STDERR "INFO: Running region detection on $opts{'input-uuid-path'}\n";
   my @pages = PressMintCZ::get_page($json);
   $opts{id} = PressMintCZ::create_comp_id($json);
   $opts{date} = PressMintCZ::get_comp_date($json);
