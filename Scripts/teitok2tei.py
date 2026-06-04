@@ -63,7 +63,9 @@ def transform_text(tree):
             value = el.attrib.pop("id")
             el.set(f"{{{XML_NS}}}id", value)
 
-    for p in root.iter(q("p")):
+    for p in root.iter():
+      if localname(p.tag) != "p":
+        continue
       p_id = p.get(f"{{{XML_NS}}}id")
       print(f"\n[PARAGRAPH] {p_id}",flush=True)
       sentence_idx = 1
@@ -88,59 +90,7 @@ def transform_text(tree):
       token_idx = 1
       # convert tok -> w / pc
       for tok in list(s.iter()):
-        if localname(tok.tag) != "tok":
-          continue
-        print(f"\n[TOKEN] {token_idx} {tok.text}",flush=True)
-
-        upos = tok.get("upos", "")
-        form = tok.get("form", "") or (tok.text or "")
-
-        new_tag = "pc" if upos in PUNCT_UPOS else "w"
-
-        new_el = etree.Element(q(new_tag))
-
-        # transfer attributes
-        upos = tok.get("upos", "")
-        if upos:
-            new_el.set("msd", f"UPosTag={upos}")
-        for k, v in tok.attrib.items():
-
-            if k == "ord":
-                continue
-
-            if k == "misc":
-                if "SpaceAfter=No" in v.split("|"):
-                    new_el.set("join", "right") 
-                continue
-
-            if k == "upos":
-                continue
-
-            if k == "xpos":
-                new_el.set("pos", v)
-                continue
-
-            if k == "feats":
-                new_el.set("msd", (f"UPosTag={upos}|" if upos else "") + v)
-                continue
-
-            if k == f"{{{XML_NS}}}id":
-                continue
-
-            new_el.set(k, v)
-        new_el.set(
-                f"{{{XML_NS}}}id",
-                f"{s_id}.w{token_idx}"
-            )
-        
-        # set token text
-        new_el.text = form
-
-        # preserve whitespace after token
-        new_el.tail = tok.tail
-
-        tok.getparent().replace(tok, new_el)
-        token_idx += 1
+        token_idx = process_token(tok, s_id, token_idx)
 
     # remove helper attrs
     for el in root.iter():
@@ -148,8 +98,54 @@ def transform_text(tree):
         for attr in ["form", "text"]:
             if attr in el.attrib:
                 del el.attrib[attr]
-
+    etree.cleanup_namespaces(tree)
     return tree
+
+def process_token(tok, s_id, token_idx):
+    if localname(tok.tag) != "tok" and localname(tok.tag) != "dtok":
+        return token_idx
+    upos = tok.get("upos", "")
+    form = tok.get("form", "") or (tok.text or "")
+    old_tag = localname(tok.tag)
+    new_tag = "pc" if upos in PUNCT_UPOS else "w"
+    tok.tag = q(new_tag)
+    # transfer attributes
+    attrs = {}
+    upos = tok.get("upos", "")
+    if upos:
+          attrs["msd"] = f"UPosTag={upos}"
+    for k, v in tok.attrib.items():
+         if k == "ord":
+              continue
+         if k == "misc":
+              if "SpaceAfter=No" in v.split("|"):
+                  attrs["join"] = "right"
+              continue
+         if k == "upos":
+              continue
+         if k == "xpos":
+              attrs["pos"] = v
+              continue
+         if k == "feats":
+              attrs["msd"] = (f"UPosTag={upos}|" if upos else "") + v
+              continue
+         if k == f"{{{XML_NS}}}id":
+              continue
+         if k == "lemma":
+              if old_tag == "dtok":
+                attrs["norm"] = v
+              else:
+                attrs["lemma"] = v
+              continue
+         print (f"Warning: Unhandled attribute {k}={v} in token {token_idx} of sentence {s_id}", flush=True)
+    tok.attrib.clear()
+    for k, v in attrs.items():
+        tok.set(k, v)
+    tok.set(f"{{{XML_NS}}}id", f"{s_id}.w{token_idx}")
+      
+    token_idx += 1
+    return token_idx
+
 
 def patch_header(tree):
     root = tree.getroot()

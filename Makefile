@@ -536,26 +536,23 @@ teiText2teiTextAnaNER: $(NAMETAG)
 process-annotation-all: teiText2tt TT2teiANA
 
 
+
 ##teiText2tt## annotate teiFacsText with flexipipe TEIFacsTT
 teiText2tt: $(TEIFacsTT)
 	find $(TEIFacsText) -type f -name "*.xml"  -printf "%P\n"| sort > $(TEIFacsTT).fl
 	cat $(TEIFacsTT).fl | sed 's@/.*@@'|sort|uniq | xargs -I {} mkdir -p $(TEIFacsTT)/{}
 	cat $(TEIFacsTT).fl | xargs -I {} cp $(TEIFacsText)/{} $(TEIFacsTT)/{}
-	#cat $(TEIFacsTT).fl | xargs -I {} \
-	#  xmlstarlet edit --inplace \
-	#	--delete "//_:pc[@force='weak']" \
-	#	--delete "//_:lb[@break='no']" \
-	#	$(TEIFacsTT)/{}
 	cat $(TEIFacsTT).fl | xargs -I {} \
 	  $(FLEXIPIPE) \
-	  process --verbose --debug --teitok \
-		--input $(TEIFacsTT)/{} \
-		--tokenize --backend udpipe --ner-backend nametag --language cs \
-		--model czech-pdtc-ud-2.17-251125 \
-		--nametag-model nametag3-multilingual-conll-250203 \
-		--tasks segment,tokenize,lemmatize,tag,ner \
-		--writeback
-
+	    process $(TEIFacsTT)/{} \
+		  --tokenize \
+			--backend udpipe --model czech-pdtc-ud-2.17-251125 \
+			--ner-backend nametag --nametag-model nametag3-multilingual-conll-250203 \
+			--language cs \
+		  --tasks segment,tokenize,lemmatize,tag,ner \
+			--writeback --writeback-engine xmltokenizer \
+	    -O punctuation-split:hard
+		
 ##TT2teiANA## convert TEIFacsTT to TEIANAtext
 TT2teiANA: $(TEIANAtext)
 	find $(TEIFacsTT) -type f -name "*.xml" -printf "%P\n" |sort > $(TEIANAtext).fl
@@ -567,6 +564,8 @@ TT2teiANA: $(TEIANAtext)
 
 
 ###### Build TEI documents and corpus
+
+process-build: corpus-template dist-tei-ana dist-tei
 
 ##corpus-template## create TEI corpus template with xi:include for all TEI headers and text components, this is used as input for distribution XSLT stylesheet to create final TEI documents with included headers and text
 corpus-template:
