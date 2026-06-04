@@ -22,8 +22,8 @@
             <edition>1.0</edition>
          </editionStmt>
          <extent>
-            <measure unit="words" quantity="51704" xml:lang="en">51704 words</measure>
-            <measure unit="words" quantity="51704" xml:lang="cs">51704 slov</measure>
+            <measure unit="words" quantity="48843" xml:lang="en">48843 words</measure>
+            <measure unit="words" quantity="48843" xml:lang="cs">48843 slov</measure>
          </extent>
          <publicationStmt>
             <publisher>
@@ -58,7 +58,7 @@
                <tagUsage gi="body" occurs="5"/>
                <tagUsage gi="cb" occurs="87"/>
                <tagUsage gi="lb" occurs="8365"/>
-               <tagUsage gi="p" occurs="843"/>
+               <tagUsage gi="p" occurs="842"/>
                <tagUsage gi="pb" occurs="22"/>
                <tagUsage gi="pc" occurs="2278"/>
                <tagUsage gi="text" occurs="5"/>
