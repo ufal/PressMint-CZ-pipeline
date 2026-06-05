@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlnsoff="http://www.tei-c.org/ns/1.0" xml:lang="cs" xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea"><facsimile>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cs" xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea"><facsimile>
     <surface xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg0" n="0" ulx="0" uly="0" lrx="4107" lry="5842">
       <graphic url="https://api.kramerius.mzk.cz/search/iiif/uuid:1c0e0e26-435f-11dd-b505-00145e5790ea/full/max/0/default.jpg"/>
       <zone xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg0.a1" start="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb1" type="page" points="56,1217 158,1083 2904,728 3367,726 3650,725 3775,1047 3784,1861 3786,2107 3800,4725 3800,5478 1554,5481 111,5475 60,2341" ulx="56" uly="725" lrx="3800" lry="5481">

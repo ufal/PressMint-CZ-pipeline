@@ -98,6 +98,7 @@ def transform_text(tree):
         for attr in ["form", "text"]:
             if attr in el.attrib:
                 del el.attrib[attr]
+    root.attrib.pop('xmlnsoff', None)
     etree.cleanup_namespaces(tree)
     return tree
 
