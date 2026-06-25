@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <TEI xmlnsoff="http://www.tei-c.org/ns/1.0" xml:lang="cs" xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6">
-  <teiHeader><revisionDesc><change when="2026-06-05T05:04:52Z" who="flexipipe" tasks="lemmatize,ner,normalize,tag">Tagged via NAMETAG, UDPIPE (tasks=lemmatize,ner,normalize,tag)</change></revisionDesc></teiHeader><facsimile>
+  <teiHeader><revisionDesc><change when="2026-06-25T13:07:01Z" who="flexipipe" tasks="lemmatize,ner,normalize,tag">Tagged via NAMETAG, UDPIPE (tasks=lemmatize,ner,normalize,tag)</change></revisionDesc></teiHeader><facsimile>
     <surface xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0" n="0" ulx="0" uly="0" lrx="4051" lry="5993">
       <graphic url="https://api.kramerius.mzk.cz/search/iiif/uuid:f7a52970-b8a3-11de-b6eb-000d606f5dc6/full/max/0/default.jpg" />
       <zone xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1" start="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1" type="page" points="790,319 3822,339 3843,2529 3856,5751 3852,5803 3848,5851 3219,5899 2949,5899 2011,5892 1029,5882 120,5866 118,4625 118,4275 121,2566 156,326 287,324 475,322" ulx="118" uly="319" lrx="3856" lry="5899">

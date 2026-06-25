@@ -72,7 +72,7 @@ NOT SUPPORTED ELEMENT -->
                <tagUsage gi="lb" occurs="931"/>
                <tagUsage gi="p" occurs="101"/>
                <tagUsage gi="pb" occurs="4"/>
-               <tagUsage gi="pc" occurs="250"/>
+               <tagUsage gi="pc" occurs="249"/>
                <tagUsage gi="text" occurs="1"/>
             </namespace>
          </tagsDecl>
@@ -10565,8 +10565,7 @@ NOT SUPPORTED ELEMENT -->
          <p xml:id="PressMint-CZ_1848-04-05-f2413420-c8eb-11e9-bfd1-5ef3fc9bb22f.p100">Tisk Jaroslawa Pospíšila.</p>
          <lb xml:id="PressMint-CZ_1848-04-05-f2413420-c8eb-11e9-bfd1-5ef3fc9bb22f.pb4.cb3.lb80"
              facs="#PressMint-CZ_1848-04-05-f2413420-c8eb-11e9-bfd1-5ef3fc9bb22f.f.pg3.a1.c3.l80"/>
-         <p xml:id="PressMint-CZ_1848-04-05-f2413420-c8eb-11e9-bfd1-5ef3fc9bb22f.p101">Papír z dilny Fr. Loreicowých synů a Eichmanna w Ho<pc force="weak">-</pc>
-         </p>
+         <p xml:id="PressMint-CZ_1848-04-05-f2413420-c8eb-11e9-bfd1-5ef3fc9bb22f.p101">Papír z dilny Fr. Loreicowých synů a Eichmanna w Ho-</p>
       </body>
    </text>
 </TEI>

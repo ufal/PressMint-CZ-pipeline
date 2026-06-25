@@ -9,6 +9,7 @@ from .line_ana import LineAna, LineEndCat, Y
 TEI_NS = "http://www.tei-c.org/ns/1.0"
 XML_NS = "http://www.w3.org/XML/1998/namespace"
 NSMAP = {None: TEI_NS, "xml": XML_NS}
+xpath_ns = {"tei": TEI_NS}
 
 class TEIOutput:
   tei_id: str
@@ -260,6 +261,13 @@ class TEIOutput:
     
     self.zone_pb = None
 
+  def remove_last_hyphen_if_present(self):
+    # remove last hyphen (pc with break=no) in all paragraphs, if present, as it is likely an artifact of line merging and not a real hyphen
+    for pc in self.TEI.xpath(".//tei:*[last()][local-name()='pc'][@force='weak']", namespaces=xpath_ns):
+      parent = pc.getparent()
+      if parent is not None and not pc.tail:
+        parent.text += pc.text if parent.text else pc.text
+        parent.remove(pc)
 
   def start_new_column(self, col_n):
     self.close_current_column()
@@ -381,9 +389,13 @@ class TEIOutput:
         # appending
         self.el_ptr.tail = text
       if line.get('ana', LineAna).lineEnd == LineEndCat.HYPHEN:
-        pc = etree.SubElement(self.parent_el_ptr, "{%s}pc" % TEI_NS, attrib={"force": "weak"})
-        pc.text = pc_hyphen
-        self.el_ptr = pc
+        if line.get('ana', LineAna).parEnd != Y:
+          pc = etree.SubElement(self.parent_el_ptr, "{%s}pc" % TEI_NS, attrib={"force": "weak"})
+          pc.text = pc_hyphen
+          self.el_ptr = pc
+        else:
+          self.el_ptr.tail += pc_hyphen
+
       # print(f"INFO: line text {line.get('text','')}")
       if line.get('ana', LineAna).parEnd == Y: # paragraph end -> close paragraph
         self.parent_el_ptr = self.parent_el_ptr.getparent()

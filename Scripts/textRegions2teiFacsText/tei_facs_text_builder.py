@@ -292,5 +292,6 @@ def process_task(pagesFile, pagexmlDir, regionsFile, outFile, tei_id):
       tei.add_zone(text_region, "textRegion", page["page_meta"]["url"])
     for separator in detect_separators([region['bounding_polygon_points'] for region in page["text_regions"]]):
       tei.add_path(separator.get("path", []), separator.get("orientation", "unknown"),separator.get("thickness", 1), page["page_meta"]["url"])
+  tei.remove_last_hyphen_if_present()
   tei.close_current_page() # important, it calculates page hull from regions, so it has to be called after all regions are added
   tei.write(outFile)

@@ -443,6 +443,8 @@ process-data-all: $(TASKS_ISSUES)
 	cat $(TASKS_ISSUES) | xargs -I {} make process-data UUID_PATH={} SAMPLE=$(SAMPLE)
 process-data: $(IN)/periodical/$(UUID_PATH).json inputImg2pageXML inputImg2imageRegions textRegions2teiFacsText
 
+textRegions2teiFacsText-all: $(TASKS_ISSUES)
+	cat $(TASKS_ISSUES) | xargs -I {} make textRegions2teiFacsText UUID_PATH={} SAMPLE=$(SAMPLE)
 
 ##inputImg2pageXML## OCR original images to pageXML
 inputImg2pageXML: $(IN)/periodical/$(UUID_PATH).json $(xmlOCR) setup-pero-ocr $(PERO_OCR_MODEL_CONFIG)

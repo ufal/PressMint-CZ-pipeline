@@ -25952,17 +25952,16 @@
                   lemma="promlat"
                   pos="VB-P---3P-AAP--"
                   xml:id="PressMint-CZ_1914-12-31-dda72f90-c894-11de-b208-000d606f5dc6.p24.s2.w5">promlou</w>
-               <pc msd="UPosTag=PUNCT"
+               <pc force="weak">-</pc>
+               <cb xml:id="PressMint-CZ_1914-12-31-dda72f90-c894-11de-b208-000d606f5dc6.pb1.cb4"
+                   break="no"
+                   facs="#PressMint-CZ_1914-12-31-dda72f90-c894-11de-b208-000d606f5dc6.f.pg0.a1.c4"/>
+               <lb xml:id="PressMint-CZ_1914-12-31-dda72f90-c894-11de-b208-000d606f5dc6.pb1.cb4.lb1"
+                   break="no"
+                   facs="#PressMint-CZ_1914-12-31-dda72f90-c894-11de-b208-000d606f5dc6.f.pg0.a1.c4.l1"/>»<pc msd="UPosTag=PUNCT"
                    lemma="»"
                    pos="Z:-------------"
-                   xml:id="PressMint-CZ_1914-12-31-dda72f90-c894-11de-b208-000d606f5dc6.p24.s2.w6">
-                  <pc force="weak">-</pc>
-                  <cb xml:id="PressMint-CZ_1914-12-31-dda72f90-c894-11de-b208-000d606f5dc6.pb1.cb4"
-                      break="no"
-                      facs="#PressMint-CZ_1914-12-31-dda72f90-c894-11de-b208-000d606f5dc6.f.pg0.a1.c4"/>
-                  <lb xml:id="PressMint-CZ_1914-12-31-dda72f90-c894-11de-b208-000d606f5dc6.pb1.cb4.lb1"
-                      break="no"
-                      facs="#PressMint-CZ_1914-12-31-dda72f90-c894-11de-b208-000d606f5dc6.f.pg0.a1.c4.l1"/>»</pc>
+                   xml:id="PressMint-CZ_1914-12-31-dda72f90-c894-11de-b208-000d606f5dc6.p24.s2.w6"/>
                <name type="MISC">
                   <w msd="UPosTag=PROPN|Foreign=Yes"
                      lemma="Gneisenau"
@@ -46914,14 +46913,13 @@
                   lemma="pro"
                   pos="RR--4----------"
                   xml:id="PressMint-CZ_1914-12-31-dda72f90-c894-11de-b208-000d606f5dc6.p103.s5.w17">pro</w>
-               <pc msd="UPosTag=PUNCT"
+               <pc force="weak">-</pc>
+               <lb xml:id="PressMint-CZ_1914-12-31-dda72f90-c894-11de-b208-000d606f5dc6.pb4.cb1.lb10"
+                   break="no"
+                   facs="#PressMint-CZ_1914-12-31-dda72f90-c894-11de-b208-000d606f5dc6.f.pg3.a1.c1.l10"/>„<pc msd="UPosTag=PUNCT"
                    lemma="&#34;"
                    pos="Z:-------------"
-                   xml:id="PressMint-CZ_1914-12-31-dda72f90-c894-11de-b208-000d606f5dc6.p103.s5.w18">
-                  <pc force="weak">-</pc>
-                  <lb xml:id="PressMint-CZ_1914-12-31-dda72f90-c894-11de-b208-000d606f5dc6.pb4.cb1.lb10"
-                      break="no"
-                      facs="#PressMint-CZ_1914-12-31-dda72f90-c894-11de-b208-000d606f5dc6.f.pg3.a1.c1.l10"/>„</pc>
+                   xml:id="PressMint-CZ_1914-12-31-dda72f90-c894-11de-b208-000d606f5dc6.p103.s5.w18"/>
                <w msd="UPosTag=ADJ|Animacy=Anim|Aspect=Perf|Degree=Pos|Gender=Masc|Number=Plur|Polarity=Pos|Variant=Short|VerbForm=Part|Voice=Pass"
                   lemma="uštěný"
                   pos="VsMP----X-APP--"
@@ -47102,14 +47100,13 @@
                   lemma="vazba"
                   pos="NNFS6-----A----"
                   xml:id="PressMint-CZ_1914-12-31-dda72f90-c894-11de-b208-000d606f5dc6.p103.s7.w24">vazbě</w>
-               <pc msd="UPosTag=PUNCT"
+               <pc force="weak">-</pc>
+               <lb xml:id="PressMint-CZ_1914-12-31-dda72f90-c894-11de-b208-000d606f5dc6.pb4.cb1.lb16"
+                   break="no"
+                   facs="#PressMint-CZ_1914-12-31-dda72f90-c894-11de-b208-000d606f5dc6.f.pg3.a1.c1.l16"/>„<pc msd="UPosTag=PUNCT"
                    lemma="&#34;"
                    pos="Z:-------------"
-                   xml:id="PressMint-CZ_1914-12-31-dda72f90-c894-11de-b208-000d606f5dc6.p103.s7.w25">
-                  <pc force="weak">-</pc>
-                  <lb xml:id="PressMint-CZ_1914-12-31-dda72f90-c894-11de-b208-000d606f5dc6.pb4.cb1.lb16"
-                      break="no"
-                      facs="#PressMint-CZ_1914-12-31-dda72f90-c894-11de-b208-000d606f5dc6.f.pg3.a1.c1.l16"/>„</pc>
+                   xml:id="PressMint-CZ_1914-12-31-dda72f90-c894-11de-b208-000d606f5dc6.p103.s7.w25"/>
                <name type="ORG">
                   <w msd="UPosTag=NOUN|Foreign=Yes"
                      lemma="Reč"
@@ -62396,14 +62393,13 @@
                      pos="NNFP2-----A----"
                      xml:id="PressMint-CZ_1914-12-31-dda72f90-c894-11de-b208-000d606f5dc6.p136.s2.w11">živnosten</w>
                </name>
-               <pc msd="UPosTag=PUNCT"
+               <pc force="weak">-</pc>
+               <lb xml:id="PressMint-CZ_1914-12-31-dda72f90-c894-11de-b208-000d606f5dc6.pb5.cb2.lb58"
+                   break="no"
+                   facs="#PressMint-CZ_1914-12-31-dda72f90-c894-11de-b208-000d606f5dc6.f.pg4.a1.c2.l58"/>(<pc msd="UPosTag=PUNCT"
                    lemma="("
                    pos="Z:-------------"
-                   xml:id="PressMint-CZ_1914-12-31-dda72f90-c894-11de-b208-000d606f5dc6.p136.s2.w12">
-                  <pc force="weak">-</pc>
-                  <lb xml:id="PressMint-CZ_1914-12-31-dda72f90-c894-11de-b208-000d606f5dc6.pb5.cb2.lb58"
-                      break="no"
-                      facs="#PressMint-CZ_1914-12-31-dda72f90-c894-11de-b208-000d606f5dc6.f.pg4.a1.c2.l58"/>(</pc>
+                   xml:id="PressMint-CZ_1914-12-31-dda72f90-c894-11de-b208-000d606f5dc6.p136.s2.w12"/>
                <name type="LOC">
                   <w msd="UPosTag=ADJ|Case=Nom|Gender=Fem|Gender[psor]=Masc|NameType=Giv|Number=Sing|Poss=Yes"
                      lemma="Rudolfův"

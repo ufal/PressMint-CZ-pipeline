@@ -108272,17 +108272,16 @@
                   lemma="pra"
                   pos="Vf--------A-I--"
                   xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p174.s5.w10">pra</w>
-               <pc msd="UPosTag=PUNCT"
+               <pc force="weak">-</pc>
+               <cb xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.pb3.cb4"
+                   break="no"
+                   facs="#PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.f.pg2.a1.c4"/>
+               <lb xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.pb3.cb4.lb1"
+                   break="no"
+                   facs="#PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.f.pg2.a1.c4.l1"/>—<pc msd="UPosTag=PUNCT"
                    lemma="—"
                    pos="Z:-------------"
-                   xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p174.s5.w11">
-                  <pc force="weak">-</pc>
-                  <cb xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.pb3.cb4"
-                      break="no"
-                      facs="#PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.f.pg2.a1.c4"/>
-                  <lb xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.pb3.cb4.lb1"
-                      break="no"
-                      facs="#PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.f.pg2.a1.c4.l1"/>—</pc>
+                   xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p174.s5.w11"/>
                <lb xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.pb3.cb4.lb2"
                    facs="#PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.f.pg2.a1.c4.l2"/>
                <w msd="UPosTag=NOUN|Abbr=Yes"

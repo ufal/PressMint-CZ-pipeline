@@ -165,6 +165,21 @@ def patch_header(tree):
                     if name == "teiHeader":
                         break
     return tree
+
+
+def patch_text(tree):
+  root = tree.getroot()
+  # move child pc outside token if it is at the first position
+  for pc in root.xpath("//*[local-name()='pc']/*[1][local-name()='pc']"):
+    pc.getparent().addprevious(pc)
+  changed = 1
+  while(changed):
+    changed = 0
+    for xb in ('pb', 'cb', 'lb'):
+      for el in root.xpath(f"//*[local-name()='pc']/*[1][local-name()='{xb}']"):
+        el.getparent().addprevious(el)
+        changed = 1
+  return tree
 # --------------------
 # IO
 # --------------------
@@ -236,6 +251,7 @@ def main():
     tree = load_xml(args.input)
 
     tree = transform_text(tree)
+    tree = patch_text(tree)
     tree = patch_header(tree)
 
     write_xml(tree, args.output)

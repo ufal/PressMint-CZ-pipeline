@@ -16756,14 +16756,13 @@
                   lemma="o"
                   pos="RR--4----------"
                   xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p30.s4.w13">o</w>
-               <pc msd="UPosTag=PUNCT"
+               <pc force="weak">-</pc>
+               <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb2.lb123"
+                   break="no"
+                   facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c2.l123"/>»<pc msd="UPosTag=PUNCT"
                    lemma="»"
                    pos="Z:-------------"
-                   xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p30.s4.w14">
-                  <pc force="weak">-</pc>
-                  <lb xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.pb1.cb2.lb123"
-                      break="no"
-                      facs="#PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.f.pg0.a1.c2.l123"/>»</pc>
+                   xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.p30.s4.w14"/>
                <name type="ORG">
                   <w msd="UPosTag=X|Foreign=Yes"
                      lemma="Daily"
