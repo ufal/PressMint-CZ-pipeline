@@ -12660,11 +12660,13 @@
                    xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p4.s2.w7">,</pc>
                <w xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p4.s2.w8">aby<w msd="UPosTag=SCONJ"
                      norm="aby"
+                     lemma="aby"
                      pos="J,-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p4.s2.w9"/>
                   <w msd="UPosTag=AUX|Aspect=Imp|Mood=Cnd|VerbForm=Fin"
-                     norm="být"
+                     norm="by"
+                     lemma="být"
                      pos="Vc-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p4.s2.w10"/>
@@ -12895,11 +12897,13 @@
                    xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p6.s1.w12">,</pc>
                <w xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p6.s1.w13">aby<w msd="UPosTag=SCONJ"
                      norm="aby"
+                     lemma="aby"
                      pos="J,-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p6.s1.w14"/>
                   <w msd="UPosTag=AUX|Aspect=Imp|Mood=Cnd|VerbForm=Fin"
-                     norm="být"
+                     norm="by"
+                     lemma="být"
                      pos="Vc-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p6.s1.w15"/>
@@ -13344,11 +13348,13 @@
                    xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p7.s3.w3">,</pc>
                <w xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p7.s3.w4">aby<w msd="UPosTag=SCONJ"
                      norm="aby"
+                     lemma="aby"
                      pos="J,-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p7.s3.w5"/>
                   <w msd="UPosTag=AUX|Aspect=Imp|Mood=Cnd|VerbForm=Fin"
-                     norm="být"
+                     norm="by"
+                     lemma="být"
                      pos="Vc-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p7.s3.w6"/>
@@ -13414,11 +13420,13 @@
                   xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p7.s3.w19">i</w>
                <w xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p7.s3.w20">aby<w msd="UPosTag=SCONJ"
                      norm="aby"
+                     lemma="aby"
                      pos="J,-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p7.s3.w21"/>
                   <w msd="UPosTag=AUX|Aspect=Imp|Mood=Cnd|VerbForm=Fin"
-                     norm="být"
+                     norm="by"
+                     lemma="být"
                      pos="Vc-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p7.s3.w22"/>
@@ -13649,17 +13657,20 @@
             <s xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p8.s3"
                n="19">
                <w xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p8.s3.w1">Jakých-koli<w msd="UPosTag=DET|Case=Gen|Number=Plur|PronType=Int,Rel"
-                     norm="jaký"
+                     norm="Jakých"
+                     lemma="jaký"
                      pos="P4XP2----------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p8.s3.w2"/>
                   <pc msd="UPosTag=PUNCT"
                       norm="-"
+                      lemma="-"
                       pos="Z:-------------"
                       join="right"
                       xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p8.s3.w3"/>
                   <w msd="UPosTag=DET"
                      norm="koli"
+                     lemma="koli"
                      pos="Ca--2----------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p8.s3.w4"/>
@@ -13965,17 +13976,20 @@
                    pos="Z:-------------"
                    xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p8.s6.w16">,</pc>
                <w xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p8.s6.w17">nemá-li<w msd="UPosTag=VERB|Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Polarity=Neg|Tense=Pres|VerbForm=Fin|Voice=Act"
-                     norm="mít"
+                     norm="nemá"
+                     lemma="mít"
                      pos="VB-S---3P-NAI--"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p8.s6.w18"/>
                   <pc msd="UPosTag=PUNCT"
                       norm="-"
+                      lemma="-"
                       pos="Z:-------------"
                       join="right"
                       xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p8.s6.w19"/>
                   <w msd="UPosTag=SCONJ"
                      norm="li"
+                     lemma="li"
                      pos="J,-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p8.s6.w20"/>
@@ -14155,17 +14169,20 @@
                   pos="J,-------------"
                   xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p8.s9.w2">protož</w>
                <w xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p8.s9.w3">má-li<w msd="UPosTag=VERB|Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Polarity=Pos|Tense=Pres|VerbForm=Fin|Voice=Act"
-                     norm="mít"
+                     norm="má"
+                     lemma="mít"
                      pos="VB-S---3P-AAI--"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p8.s9.w4"/>
                   <pc msd="UPosTag=PUNCT"
                       norm="-"
+                      lemma="-"
                       pos="Z:-------------"
                       join="right"
                       xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p8.s9.w5"/>
                   <w msd="UPosTag=SCONJ"
                      norm="li"
+                     lemma="li"
                      pos="J,-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p8.s9.w6"/>
@@ -14288,17 +14305,20 @@
                    pos="Z:-------------"
                    xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p8.s10.w7">—</pc>
                <w xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p8.s10.w8">je-li<w msd="UPosTag=AUX|Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Polarity=Pos|Tense=Pres|VerbForm=Fin|Voice=Act"
-                     norm="být"
+                     norm="je"
+                     lemma="být"
                      pos="VB-S---3P-AAI--"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p8.s10.w9"/>
                   <pc msd="UPosTag=PUNCT"
                       norm="-"
+                      lemma="-"
                       pos="Z:-------------"
                       join="right"
                       xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p8.s10.w10"/>
                   <w msd="UPosTag=SCONJ"
                      norm="li"
+                     lemma="li"
                      pos="J,-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p8.s10.w11"/>
@@ -14443,11 +14463,13 @@
                    xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p9.s1.w21">,</pc>
                <w xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p9.s1.w22">aby<w msd="UPosTag=SCONJ"
                      norm="aby"
+                     lemma="aby"
                      pos="J,-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p9.s1.w23"/>
                   <w msd="UPosTag=AUX|Aspect=Imp|Mood=Cnd|VerbForm=Fin"
-                     norm="být"
+                     norm="by"
+                     lemma="být"
                      pos="Vc-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p9.s1.w24"/>
@@ -14702,11 +14724,13 @@
                    xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p10.s1.w5">,</pc>
                <w xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p10.s1.w6">abysme<w msd="UPosTag=SCONJ"
                      norm="aby"
+                     lemma="aby"
                      pos="J,-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p10.s1.w7"/>
                   <w msd="UPosTag=AUX|Aspect=Imp|Mood=Cnd|Number=Plur|Person=1|VerbForm=Fin"
-                     norm="být"
+                     norm="bysme"
+                     lemma="být"
                      pos="Vc-P---1-------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p10.s1.w8"/>
@@ -14753,16 +14777,19 @@
                    xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p10.s2.w4">,</pc>
                <w xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p10.s2.w5">mnoho-li<w msd="UPosTag=DET|Case=Nom|NumType=Card|PronType=Ind"
                      norm="mnoho"
+                     lemma="mnoho"
                      pos="Ca--1----------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p10.s2.w6"/>
                   <pc msd="UPosTag=PUNCT"
                       norm="-"
+                      lemma="-"
                       pos="Z:-------------"
                       join="right"
                       xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p10.s2.w7"/>
                   <w msd="UPosTag=SCONJ"
                      norm="li"
+                     lemma="li"
                      pos="J,-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p10.s2.w8"/>
@@ -14827,17 +14854,20 @@
                    pos="Z:-------------"
                    xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p10.s2.w20">,</pc>
                <w xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p10.s2.w21">je-li<w msd="UPosTag=AUX|Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Polarity=Pos|Tense=Pres|VerbForm=Fin|Voice=Act"
-                     norm="být"
+                     norm="je"
+                     lemma="být"
                      pos="VB-S---3P-AAI--"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p10.s2.w22"/>
                   <pc msd="UPosTag=PUNCT"
                       norm="-"
+                      lemma="-"
                       pos="Z:-------------"
                       join="right"
                       xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p10.s2.w23"/>
                   <w msd="UPosTag=SCONJ"
                      norm="li"
+                     lemma="li"
                      pos="J,-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p10.s2.w24"/>
@@ -15722,11 +15752,13 @@
                    xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p11.s5.w4">,</pc>
                <w xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p11.s5.w5">aby<w msd="UPosTag=SCONJ"
                      norm="aby"
+                     lemma="aby"
                      pos="J,-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p11.s5.w6"/>
                   <w msd="UPosTag=AUX|Aspect=Imp|Mood=Cnd|VerbForm=Fin"
-                     norm="být"
+                     norm="by"
+                     lemma="být"
                      pos="Vc-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p11.s5.w7"/>
@@ -16684,11 +16716,13 @@
                    xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p12.s5.w19">,</pc>
                <w xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p12.s5.w20">aby<w msd="UPosTag=SCONJ"
                      norm="aby"
+                     lemma="aby"
                      pos="J,-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p12.s5.w21"/>
                   <w msd="UPosTag=AUX|Aspect=Imp|Mood=Cnd|VerbForm=Fin"
-                     norm="být"
+                     norm="by"
+                     lemma="být"
                      pos="Vc-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p12.s5.w22"/>
@@ -17071,17 +17105,20 @@
                   pos="J^-------------"
                   xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p12.s7.w11">a</w>
                <w xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p12.s7.w12">je-li<w msd="UPosTag=AUX|Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Polarity=Pos|Tense=Pres|VerbForm=Fin|Voice=Act"
-                     norm="být"
+                     norm="je"
+                     lemma="být"
                      pos="VB-S---3P-AAI--"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p12.s7.w13"/>
                   <pc msd="UPosTag=PUNCT"
                       norm="-"
+                      lemma="-"
                       pos="Z:-------------"
                       join="right"
                       xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p12.s7.w14"/>
                   <w msd="UPosTag=SCONJ"
                      norm="li"
+                     lemma="li"
                      pos="J,-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p12.s7.w15"/>
@@ -17281,11 +17318,13 @@
                    xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p12.s9.w5">,</pc>
                <w xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p12.s9.w6">abysme<w msd="UPosTag=SCONJ"
                      norm="aby"
+                     lemma="aby"
                      pos="J,-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p12.s9.w7"/>
                   <w msd="UPosTag=AUX|Aspect=Imp|Mood=Cnd|Number=Plur|Person=1|VerbForm=Fin"
-                     norm="být"
+                     norm="bysme"
+                     lemma="být"
                      pos="Vc-P---1-------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p12.s9.w8"/>
@@ -17524,17 +17563,20 @@
                    pos="Z:-------------"
                    xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p12.s12.w10">:</pc>
                <w xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p12.s12.w11">Chtějí-li<w msd="UPosTag=VERB|Aspect=Imp|Mood=Ind|Number=Plur|Person=3|Polarity=Pos|Tense=Pres|VerbForm=Fin|Voice=Act"
-                     norm="chtít"
+                     norm="Chtějí"
+                     lemma="chtít"
                      pos="VB-P---3P-AAI--"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p12.s12.w12"/>
                   <pc msd="UPosTag=PUNCT"
                       norm="-"
+                      lemma="-"
                       pos="Z:-------------"
                       join="right"
                       xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p12.s12.w13"/>
                   <w msd="UPosTag=SCONJ"
                      norm="li"
+                     lemma="li"
                      pos="J,-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p12.s12.w14"/>
@@ -17793,11 +17835,13 @@
                    xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p12.s14.w21">,</pc>
                <w xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p12.s14.w22">aby<w msd="UPosTag=SCONJ"
                      norm="aby"
+                     lemma="aby"
                      pos="J,-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p12.s14.w23"/>
                   <w msd="UPosTag=AUX|Aspect=Imp|Mood=Cnd|VerbForm=Fin"
-                     norm="být"
+                     norm="by"
+                     lemma="být"
                      pos="Vc-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p12.s14.w24"/>
@@ -17935,11 +17979,13 @@
                    xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p12.s15.w5">,</pc>
                <w xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p12.s15.w6">aby<w msd="UPosTag=SCONJ"
                      norm="aby"
+                     lemma="aby"
                      pos="J,-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p12.s15.w7"/>
                   <w msd="UPosTag=AUX|Aspect=Imp|Mood=Cnd|VerbForm=Fin"
-                     norm="být"
+                     norm="by"
+                     lemma="být"
                      pos="Vc-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p12.s15.w8"/>
@@ -18099,11 +18145,13 @@
                    xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p12.s16.w5">,</pc>
                <w xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p12.s16.w6">aby<w msd="UPosTag=SCONJ"
                      norm="aby"
+                     lemma="aby"
                      pos="J,-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p12.s16.w7"/>
                   <w msd="UPosTag=AUX|Aspect=Imp|Mood=Cnd|VerbForm=Fin"
-                     norm="být"
+                     norm="by"
+                     lemma="být"
                      pos="Vc-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p12.s16.w8"/>
@@ -18120,17 +18168,20 @@
                    pos="Z:-------------"
                    xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p12.s16.w10">,</pc>
                <w xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p12.s16.w11">bude-li<w msd="UPosTag=AUX|Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Polarity=Pos|Tense=Fut|VerbForm=Fin|Voice=Act"
-                     norm="být"
+                     norm="bude"
+                     lemma="být"
                      pos="VB-S---3F-AAI--"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p12.s16.w12"/>
                   <pc msd="UPosTag=PUNCT"
                       norm="-"
+                      lemma="-"
                       pos="Z:-------------"
                       join="right"
                       xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p12.s16.w13"/>
                   <w msd="UPosTag=SCONJ"
                      norm="li"
+                     lemma="li"
                      pos="J,-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p12.s16.w14"/>
@@ -18295,11 +18346,13 @@
                    xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p12.s16.w50">,</pc>
                <w xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p12.s16.w51">aby<w msd="UPosTag=SCONJ"
                      norm="aby"
+                     lemma="aby"
                      pos="J,-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p12.s16.w52"/>
                   <w msd="UPosTag=AUX|Aspect=Imp|Mood=Cnd|VerbForm=Fin"
-                     norm="být"
+                     norm="by"
+                     lemma="být"
                      pos="Vc-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p12.s16.w53"/>
@@ -18747,11 +18800,13 @@
                    xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p14.s1.w4">,</pc>
                <w xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p14.s1.w5">aby<w msd="UPosTag=SCONJ"
                      norm="aby"
+                     lemma="aby"
                      pos="J,-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p14.s1.w6"/>
                   <w msd="UPosTag=AUX|Aspect=Imp|Mood=Cnd|VerbForm=Fin"
-                     norm="být"
+                     norm="by"
+                     lemma="být"
                      pos="Vc-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p14.s1.w7"/>
@@ -18847,11 +18902,13 @@
                   xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p14.s1.w27">a</w>
                <w xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p14.s1.w28">aby<w msd="UPosTag=SCONJ"
                      norm="aby"
+                     lemma="aby"
                      pos="J,-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p14.s1.w29"/>
                   <w msd="UPosTag=AUX|Aspect=Imp|Mood=Cnd|VerbForm=Fin"
-                     norm="být"
+                     norm="by"
+                     lemma="být"
                      pos="Vc-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p14.s1.w30"/>
@@ -19342,16 +19399,19 @@
                   xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p14.s4.w11">její</w>
                <w xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p14.s4.w12">zjedno-dušeni<w msd="UPosTag=ADJ|Degree=Pos|Hyph=Yes|Polarity=Pos"
                      norm="zjedno"
+                     lemma="zjedno"
                      pos="S2--------A----"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p14.s4.w13"/>
                   <pc msd="UPosTag=PUNCT"
                       norm="-"
+                      lemma="-"
                       pos="Z:-------------"
                       join="right"
                       xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p14.s4.w14"/>
                   <w msd="UPosTag=NOUN|Gender=Neut"
-                     norm="dušen"
+                     norm="dušeni"
+                     lemma="dušen"
                      pos="NNNXX-----A----"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p14.s4.w15"/>
@@ -20721,17 +20781,20 @@
             <s xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p15.s12"
                n="79">
                <w xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p15.s12.w1">Máme-li<w msd="UPosTag=VERB|Aspect=Imp|Mood=Ind|Number=Plur|Person=1|Polarity=Pos|Tense=Pres|VerbForm=Fin|Voice=Act"
-                     norm="mít"
+                     norm="Máme"
+                     lemma="mít"
                      pos="VB-P---1P-AAI--"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p15.s12.w2"/>
                   <pc msd="UPosTag=PUNCT"
                       norm="-"
+                      lemma="-"
                       pos="Z:-------------"
                       join="right"
                       xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p15.s12.w3"/>
                   <w msd="UPosTag=SCONJ"
                      norm="li"
+                     lemma="li"
                      pos="J,-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p15.s12.w4"/>
@@ -20773,17 +20836,20 @@
             <s xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p15.s13"
                n="80">
                <w xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p15.s13.w1">Vydržuje-li<w msd="UPosTag=VERB|Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Polarity=Pos|Tense=Pres|VerbForm=Fin|Voice=Act"
-                     norm="vydržovat"
+                     norm="Vydržuje"
+                     lemma="vydržovat"
                      pos="VB-S---3P-AAI--"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p15.s13.w2"/>
                   <pc msd="UPosTag=PUNCT"
                       norm="-"
+                      lemma="-"
                       pos="Z:-------------"
                       join="right"
                       xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p15.s13.w3"/>
                   <w msd="UPosTag=SCONJ"
                      norm="li"
+                     lemma="li"
                      pos="J,-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p15.s13.w4"/>
@@ -20966,11 +21032,13 @@
                    xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p15.s15.w14">,</pc>
                <w xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p15.s15.w15">aby<w msd="UPosTag=SCONJ"
                      norm="aby"
+                     lemma="aby"
                      pos="J,-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p15.s15.w16"/>
                   <w msd="UPosTag=AUX|Aspect=Imp|Mood=Cnd|VerbForm=Fin"
-                     norm="být"
+                     norm="by"
+                     lemma="být"
                      pos="Vc-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p15.s15.w17"/>
@@ -21516,11 +21584,13 @@
                    xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p16.s7.w8">,</pc>
                <w xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p16.s7.w9">aby<w msd="UPosTag=SCONJ"
                      norm="aby"
+                     lemma="aby"
                      pos="J,-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p16.s7.w10"/>
                   <w msd="UPosTag=AUX|Aspect=Imp|Mood=Cnd|VerbForm=Fin"
-                     norm="být"
+                     norm="by"
+                     lemma="být"
                      pos="Vc-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p16.s7.w11"/>
@@ -22215,11 +22285,13 @@
                    xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p18.s4.w12">,</pc>
                <w xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p18.s4.w13">aby<w msd="UPosTag=SCONJ"
                      norm="aby"
+                     lemma="aby"
                      pos="J,-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p18.s4.w14"/>
                   <w msd="UPosTag=AUX|Aspect=Imp|Mood=Cnd|VerbForm=Fin"
-                     norm="být"
+                     norm="by"
+                     lemma="být"
                      pos="Vc-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p18.s4.w15"/>
@@ -22290,11 +22362,13 @@
                   xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p18.s4.w29">a</w>
                <w xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p18.s4.w30">aby<w msd="UPosTag=SCONJ"
                      norm="aby"
+                     lemma="aby"
                      pos="J,-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p18.s4.w31"/>
                   <w msd="UPosTag=AUX|Aspect=Imp|Mood=Cnd|VerbForm=Fin"
-                     norm="být"
+                     norm="by"
+                     lemma="být"
                      pos="Vc-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p18.s4.w32"/>
@@ -22546,11 +22620,13 @@
                <w join="right"
                   xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p19.s2.w6">aby<w msd="UPosTag=SCONJ"
                      norm="aby"
+                     lemma="aby"
                      pos="J,-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p19.s2.w7"/>
                   <w msd="UPosTag=AUX|Aspect=Imp|Mood=Cnd|VerbForm=Fin"
-                     norm="být"
+                     norm="by"
+                     lemma="být"
                      pos="Vc-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p19.s2.w8"/>
@@ -22644,11 +22720,13 @@
                    facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg0.a1.c4.l23"/>
                <w xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p19.s2.w29">aby<w msd="UPosTag=SCONJ"
                      norm="aby"
+                     lemma="aby"
                      pos="J,-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p19.s2.w30"/>
                   <w msd="UPosTag=AUX|Aspect=Imp|Mood=Cnd|VerbForm=Fin"
-                     norm="být"
+                     norm="by"
+                     lemma="být"
                      pos="Vc-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p19.s2.w31"/>
@@ -22693,11 +22771,13 @@
                    xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p19.s2.w40">,</pc>
                <w xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p19.s2.w41">aby<w msd="UPosTag=SCONJ"
                      norm="aby"
+                     lemma="aby"
                      pos="J,-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p19.s2.w42"/>
                   <w msd="UPosTag=AUX|Aspect=Imp|Mood=Cnd|VerbForm=Fin"
-                     norm="být"
+                     norm="by"
+                     lemma="být"
                      pos="Vc-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p19.s2.w43"/>
@@ -22943,12 +23023,14 @@
             <s xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p19.s4"
                n="102">
                <w xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p19.s4.w1">Abychom<w msd="UPosTag=SCONJ"
-                     norm="aby"
+                     norm="Aby"
+                     lemma="aby"
                      pos="J,-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p19.s4.w2"/>
                   <w msd="UPosTag=AUX|Aspect=Imp|Mood=Cnd|Number=Plur|Person=1|VerbForm=Fin"
-                     norm="být"
+                     norm="bychom"
+                     lemma="být"
                      pos="Vc-P---1-------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p19.s4.w3"/>
@@ -23455,11 +23537,13 @@
                    xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p21.s2.w3">,</pc>
                <w xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p21.s2.w4">aby<w msd="UPosTag=SCONJ"
                      norm="aby"
+                     lemma="aby"
                      pos="J,-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p21.s2.w5"/>
                   <w msd="UPosTag=AUX|Aspect=Imp|Mood=Cnd|VerbForm=Fin"
-                     norm="být"
+                     norm="by"
+                     lemma="být"
                      pos="Vc-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p21.s2.w6"/>
@@ -24293,11 +24377,13 @@
                    xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p21.s6.w13">,</pc>
                <w xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p21.s6.w14">aby<w msd="UPosTag=SCONJ"
                      norm="aby"
+                     lemma="aby"
                      pos="J,-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p21.s6.w15"/>
                   <w msd="UPosTag=AUX|Aspect=Imp|Mood=Cnd|VerbForm=Fin"
-                     norm="být"
+                     norm="by"
+                     lemma="být"
                      pos="Vc-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p21.s6.w16"/>
@@ -24969,17 +25055,20 @@
                    pos="Z:-------------"
                    xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p21.s10.w21">,</pc>
                <w xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p21.s10.w22">máš-li<w msd="UPosTag=VERB|Aspect=Imp|Mood=Ind|Number=Sing|Person=2|Polarity=Pos|Tense=Pres|VerbForm=Fin|Voice=Act"
-                     norm="mít"
+                     norm="máš"
+                     lemma="mít"
                      pos="VB-S---2P-AAI--"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p21.s10.w23"/>
                   <pc msd="UPosTag=PUNCT"
                       norm="-"
+                      lemma="-"
                       pos="Z:-------------"
                       join="right"
                       xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p21.s10.w24"/>
                   <w msd="UPosTag=SCONJ"
                      norm="li"
+                     lemma="li"
                      pos="J,-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p21.s10.w25"/>
@@ -26132,11 +26221,13 @@
                    xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p23.s3.w30">,</pc>
                <w xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p23.s3.w31">aby<w msd="UPosTag=SCONJ"
                      norm="aby"
+                     lemma="aby"
                      pos="J,-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p23.s3.w32"/>
                   <w msd="UPosTag=AUX|Aspect=Imp|Mood=Cnd|VerbForm=Fin"
-                     norm="být"
+                     norm="by"
+                     lemma="být"
                      pos="Vc-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p23.s3.w33"/>
@@ -26281,11 +26372,13 @@
                    xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p23.s5.w4">,</pc>
                <w xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p23.s5.w5">aby<w msd="UPosTag=SCONJ"
                      norm="aby"
+                     lemma="aby"
                      pos="J,-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p23.s5.w6"/>
                   <w msd="UPosTag=AUX|Aspect=Imp|Mood=Cnd|VerbForm=Fin"
-                     norm="být"
+                     norm="by"
+                     lemma="být"
                      pos="Vc-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p23.s5.w7"/>
@@ -26323,11 +26416,13 @@
                    xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p23.s5.w14">,</pc>
                <w xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p23.s5.w15">aby<w msd="UPosTag=SCONJ"
                      norm="aby"
+                     lemma="aby"
                      pos="J,-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p23.s5.w16"/>
                   <w msd="UPosTag=AUX|Aspect=Imp|Mood=Cnd|VerbForm=Fin"
-                     norm="být"
+                     norm="by"
+                     lemma="být"
                      pos="Vc-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p23.s5.w17"/>
@@ -26592,11 +26687,13 @@
                    xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p23.s7.w4">,</pc>
                <w xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p23.s7.w5">aby<w msd="UPosTag=SCONJ"
                      norm="aby"
+                     lemma="aby"
                      pos="J,-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p23.s7.w6"/>
                   <w msd="UPosTag=AUX|Aspect=Imp|Mood=Cnd|VerbForm=Fin"
-                     norm="být"
+                     norm="by"
+                     lemma="být"
                      pos="Vc-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p23.s7.w7"/>
@@ -26666,11 +26763,13 @@
                       break="no"
                       facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg1.a1.c1.l38"/>chom<w msd="UPosTag=SCONJ"
                      norm="aby"
+                     lemma="aby"
                      pos="J,-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p23.s7.w23"/>
                   <w msd="UPosTag=AUX|Aspect=Imp|Mood=Cnd|Number=Plur|Person=1|VerbForm=Fin"
-                     norm="být"
+                     norm="bychom"
+                     lemma="být"
                      pos="Vc-P---1-------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p23.s7.w24"/>
@@ -26708,11 +26807,13 @@
                    facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg1.a1.c1.l39"/>
                <w xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p23.s7.w32">aby<w msd="UPosTag=SCONJ"
                      norm="aby"
+                     lemma="aby"
                      pos="J,-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p23.s7.w33"/>
                   <w msd="UPosTag=AUX|Aspect=Imp|Mood=Cnd|VerbForm=Fin"
-                     norm="být"
+                     norm="by"
+                     lemma="být"
                      pos="Vc-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p23.s7.w34"/>
@@ -26830,11 +26931,13 @@
                   xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p23.s7.w59">a</w>
                <w xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p23.s7.w60">aby<w msd="UPosTag=SCONJ"
                      norm="aby"
+                     lemma="aby"
                      pos="J,-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p23.s7.w61"/>
                   <w msd="UPosTag=AUX|Aspect=Imp|Mood=Cnd|VerbForm=Fin"
-                     norm="být"
+                     norm="by"
+                     lemma="být"
                      pos="Vc-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p23.s7.w62"/>
@@ -28002,11 +28105,13 @@
                    xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p24.s7.w20">,</pc>
                <w xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p24.s7.w21">aby<w msd="UPosTag=SCONJ"
                      norm="aby"
+                     lemma="aby"
                      pos="J,-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p24.s7.w22"/>
                   <w msd="UPosTag=AUX|Aspect=Imp|Mood=Cnd|VerbForm=Fin"
-                     norm="být"
+                     norm="by"
+                     lemma="být"
                      pos="Vc-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p24.s7.w23"/>
@@ -28044,11 +28149,13 @@
                    facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg1.a1.c1.l74"/>
                <w xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p24.s7.w31">aby<w msd="UPosTag=SCONJ"
                      norm="aby"
+                     lemma="aby"
                      pos="J,-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p24.s7.w32"/>
                   <w msd="UPosTag=AUX|Aspect=Imp|Mood=Cnd|VerbForm=Fin"
-                     norm="být"
+                     norm="by"
+                     lemma="být"
                      pos="Vc-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p24.s7.w33"/>
@@ -28327,11 +28434,13 @@
                    xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p24.s9.w19">,</pc>
                <w xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p24.s9.w20">aby<w msd="UPosTag=SCONJ"
                      norm="aby"
+                     lemma="aby"
                      pos="J,-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p24.s9.w21"/>
                   <w msd="UPosTag=AUX|Aspect=Imp|Mood=Cnd|VerbForm=Fin"
-                     norm="být"
+                     norm="by"
+                     lemma="být"
                      pos="Vc-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p24.s9.w22"/>
@@ -28896,11 +29005,13 @@
                <w join="right"
                   xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p25.s4.w31">aby<w msd="UPosTag=SCONJ"
                      norm="aby"
+                     lemma="aby"
                      pos="J,-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p25.s4.w32"/>
                   <w msd="UPosTag=AUX|Aspect=Imp|Mood=Cnd|VerbForm=Fin"
-                     norm="být"
+                     norm="by"
+                     lemma="být"
                      pos="Vc-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p25.s4.w33"/>
@@ -28914,16 +29025,19 @@
                       break="no"
                       facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg1.a1.c1.l95"/>žná-li<w msd="UPosTag=PART"
                      norm="možná"
+                     lemma="možná"
                      pos="TT-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p25.s4.w36"/>
                   <pc msd="UPosTag=PUNCT"
                       norm="-"
+                      lemma="-"
                       pos="Z:-------------"
                       join="right"
                       xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p25.s4.w37"/>
                   <w msd="UPosTag=SCONJ"
                      norm="li"
+                     lemma="li"
                      pos="J,-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p25.s4.w38"/>
@@ -29531,11 +29645,13 @@
                    facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg1.a1.c2.l8"/>
                <w xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p25.s9.w7">abychom<w msd="UPosTag=SCONJ"
                      norm="aby"
+                     lemma="aby"
                      pos="J,-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p25.s9.w8"/>
                   <w msd="UPosTag=AUX|Aspect=Imp|Mood=Cnd|Number=Plur|Person=1|VerbForm=Fin"
-                     norm="být"
+                     norm="bychom"
+                     lemma="být"
                      pos="Vc-P---1-------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p25.s9.w9"/>
@@ -29764,11 +29880,13 @@
                    xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p25.s9.w58">,</pc>
                <w xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p25.s9.w59">kdyby<w msd="UPosTag=SCONJ"
                      norm="když"
+                     lemma="když"
                      pos="J,-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p25.s9.w60"/>
                   <w msd="UPosTag=AUX|Aspect=Imp|Mood=Cnd|VerbForm=Fin"
-                     norm="být"
+                     norm="by"
+                     lemma="být"
                      pos="Vc-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p25.s9.w61"/>
@@ -29826,17 +29944,20 @@
                   <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb2.cb2.lb16"
                       break="no"
                       facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg1.a1.c2.l16"/>ká-li<w msd="UPosTag=VERB|Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Polarity=Neg|Tense=Pres|VerbForm=Fin|Voice=Act"
-                     norm="čekat"
+                     norm="nečeká"
+                     lemma="čekat"
                      pos="VB-S---3P-NAI--"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p25.s9.w74"/>
                   <pc msd="UPosTag=PUNCT"
                       norm="-"
+                      lemma="-"
                       pos="Z:-------------"
                       join="right"
                       xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p25.s9.w75"/>
                   <w msd="UPosTag=SCONJ"
                      norm="li"
+                     lemma="li"
                      pos="J,-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p25.s9.w76"/>
@@ -29897,11 +30018,13 @@
                    facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg1.a1.c2.l18"/>
                <w xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p26.s1.w7">aby<w msd="UPosTag=SCONJ"
                      norm="aby"
+                     lemma="aby"
                      pos="J,-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p26.s1.w8"/>
                   <w msd="UPosTag=AUX|Aspect=Imp|Mood=Cnd|VerbForm=Fin"
-                     norm="být"
+                     norm="by"
+                     lemma="být"
                      pos="Vc-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p26.s1.w9"/>
@@ -30097,11 +30220,13 @@
                    xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p26.s2.w3">,</pc>
                <w xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p26.s2.w4">aby<w msd="UPosTag=SCONJ"
                      norm="aby"
+                     lemma="aby"
                      pos="J,-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p26.s2.w5"/>
                   <w msd="UPosTag=AUX|Aspect=Imp|Mood=Cnd|VerbForm=Fin"
-                     norm="být"
+                     norm="by"
+                     lemma="být"
                      pos="Vc-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p26.s2.w6"/>
@@ -30450,11 +30575,13 @@
                       break="no"
                       facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg1.a1.c2.l33"/>chom<w msd="UPosTag=SCONJ"
                      norm="aby"
+                     lemma="aby"
                      pos="J,-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p26.s3.w23"/>
                   <w msd="UPosTag=AUX|Aspect=Imp|Mood=Cnd|Number=Plur|Person=1|VerbForm=Fin"
-                     norm="být"
+                     norm="bychom"
+                     lemma="být"
                      pos="Vc-P---1-------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p26.s3.w24"/>
@@ -31229,11 +31356,13 @@
                    xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p27.s4.w8">,</pc>
                <w xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p27.s4.w9">aby<w msd="UPosTag=SCONJ"
                      norm="aby"
+                     lemma="aby"
                      pos="J,-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p27.s4.w10"/>
                   <w msd="UPosTag=AUX|Aspect=Imp|Mood=Cnd|VerbForm=Fin"
-                     norm="být"
+                     norm="by"
+                     lemma="být"
                      pos="Vc-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p27.s4.w11"/>
@@ -31359,11 +31488,13 @@
                    xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p27.s5.w9">,</pc>
                <w xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p27.s5.w10">aby<w msd="UPosTag=SCONJ"
                      norm="aby"
+                     lemma="aby"
                      pos="J,-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p27.s5.w11"/>
                   <w msd="UPosTag=AUX|Aspect=Imp|Mood=Cnd|VerbForm=Fin"
-                     norm="být"
+                     norm="by"
+                     lemma="být"
                      pos="Vc-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p27.s5.w12"/>
@@ -34132,11 +34263,13 @@
                    xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p32.s4.w15">,</pc>
                <w xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p32.s4.w16">aby<w msd="UPosTag=SCONJ"
                      norm="aby"
+                     lemma="aby"
                      pos="J,-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p32.s4.w17"/>
                   <w msd="UPosTag=AUX|Aspect=Imp|Mood=Cnd|VerbForm=Fin"
-                     norm="být"
+                     norm="by"
+                     lemma="být"
                      pos="Vc-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p32.s4.w18"/>
@@ -34175,11 +34308,13 @@
                   xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p32.s4.w25">též</w>
                <w xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p32.s4.w26">aby<w msd="UPosTag=SCONJ"
                      norm="aby"
+                     lemma="aby"
                      pos="J,-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p32.s4.w27"/>
                   <w msd="UPosTag=AUX|Aspect=Imp|Mood=Cnd|VerbForm=Fin"
-                     norm="být"
+                     norm="by"
+                     lemma="být"
                      pos="Vc-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p32.s4.w28"/>
@@ -34541,11 +34676,13 @@
                    xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p35.s3.w5">,</pc>
                <w xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p35.s3.w6">aby<w msd="UPosTag=SCONJ"
                      norm="aby"
+                     lemma="aby"
                      pos="J,-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p35.s3.w7"/>
                   <w msd="UPosTag=AUX|Aspect=Imp|Mood=Cnd|VerbForm=Fin"
-                     norm="být"
+                     norm="by"
+                     lemma="být"
                      pos="Vc-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p35.s3.w8"/>
@@ -34597,11 +34734,13 @@
                   xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p35.s3.w18">spíše</w>
                <w xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p35.s3.w19">aby<w msd="UPosTag=SCONJ"
                      norm="aby"
+                     lemma="aby"
                      pos="J,-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p35.s3.w20"/>
                   <w msd="UPosTag=AUX|Aspect=Imp|Mood=Cnd|VerbForm=Fin"
-                     norm="být"
+                     norm="by"
+                     lemma="být"
                      pos="Vc-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p35.s3.w21"/>
@@ -35787,11 +35926,13 @@
                   xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p35.s9.w12">všeliké</w>
                <w xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p35.s9.w13">kdyby<w msd="UPosTag=SCONJ"
                      norm="když"
+                     lemma="když"
                      pos="J,-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p35.s9.w14"/>
                   <w msd="UPosTag=AUX|Aspect=Imp|Mood=Cnd|VerbForm=Fin"
-                     norm="být"
+                     norm="by"
+                     lemma="být"
                      pos="Vc-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p35.s9.w15"/>
@@ -36928,17 +37069,20 @@
                   pos="J^-------------"
                   xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p35.s22.w17">a</w>
                <w xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p35.s22.w18">není-liž<w msd="UPosTag=AUX|Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Polarity=Neg|Tense=Pres|VerbForm=Fin|Voice=Act"
-                     norm="být"
+                     norm="není"
+                     lemma="být"
                      pos="VB-S---3P-NAI--"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p35.s22.w19"/>
                   <pc msd="UPosTag=PUNCT"
                       norm="-"
+                      lemma="-"
                       pos="Z:-------------"
                       join="right"
                       xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p35.s22.w20"/>
                   <w msd="UPosTag=SCONJ"
                      norm="liž"
+                     lemma="liž"
                      pos="J,-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p35.s22.w21"/>
@@ -37185,11 +37329,13 @@
                    xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p35.s23.w34">,</pc>
                <w xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p35.s23.w35">aby<w msd="UPosTag=SCONJ"
                      norm="aby"
+                     lemma="aby"
                      pos="J,-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p35.s23.w36"/>
                   <w msd="UPosTag=AUX|Aspect=Imp|Mood=Cnd|VerbForm=Fin"
-                     norm="být"
+                     norm="by"
+                     lemma="být"
                      pos="Vc-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p35.s23.w37"/>
@@ -37249,11 +37395,13 @@
                    xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p35.s23.w49">,</pc>
                <w xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p35.s23.w50">aby<w msd="UPosTag=SCONJ"
                      norm="aby"
+                     lemma="aby"
                      pos="J,-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p35.s23.w51"/>
                   <w msd="UPosTag=AUX|Aspect=Imp|Mood=Cnd|VerbForm=Fin"
-                     norm="být"
+                     norm="by"
+                     lemma="být"
                      pos="Vc-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p35.s23.w52"/>
@@ -37303,11 +37451,13 @@
                   xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p35.s23.w62">a</w>
                <w xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p35.s23.w63">aby<w msd="UPosTag=SCONJ"
                      norm="aby"
+                     lemma="aby"
                      pos="J,-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p35.s23.w64"/>
                   <w msd="UPosTag=AUX|Aspect=Imp|Mood=Cnd|VerbForm=Fin"
-                     norm="být"
+                     norm="by"
+                     lemma="být"
                      pos="Vc-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p35.s23.w65"/>
@@ -37595,17 +37745,20 @@
                    pos="Z:-------------"
                    xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p36.s3.w4">,</pc>
                <w xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p36.s3.w5">bude-li<w msd="UPosTag=AUX|Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Polarity=Pos|Tense=Fut|VerbForm=Fin|Voice=Act"
-                     norm="být"
+                     norm="bude"
+                     lemma="být"
                      pos="VB-S---3F-AAI--"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p36.s3.w6"/>
                   <pc msd="UPosTag=PUNCT"
                       norm="-"
+                      lemma="-"
                       pos="Z:-------------"
                       join="right"
                       xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p36.s3.w7"/>
                   <w msd="UPosTag=SCONJ"
                      norm="li"
+                     lemma="li"
                      pos="J,-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p36.s3.w8"/>
@@ -37633,17 +37786,20 @@
                   pos="J^-------------"
                   xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p36.s3.w13">a</w>
                <w xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p36.s3.w14">bude-li<w msd="UPosTag=AUX|Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Polarity=Pos|Tense=Fut|VerbForm=Fin|Voice=Act"
-                     norm="být"
+                     norm="bude"
+                     lemma="být"
                      pos="VB-S---3F-AAI--"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p36.s3.w15"/>
                   <pc msd="UPosTag=PUNCT"
                       norm="-"
+                      lemma="-"
                       pos="Z:-------------"
                       join="right"
                       xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p36.s3.w16"/>
                   <w msd="UPosTag=SCONJ"
                      norm="li"
+                     lemma="li"
                      pos="J,-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p36.s3.w17"/>
@@ -37761,17 +37917,20 @@
                <lb xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.pb2.cb4.lb17"
                    facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg1.a1.c4.l17"/>
                <w xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p36.s3.w44">máme-li<w msd="UPosTag=VERB|Aspect=Imp|Mood=Ind|Number=Plur|Person=1|Polarity=Pos|Tense=Pres|VerbForm=Fin|Voice=Act"
-                     norm="mít"
+                     norm="máme"
+                     lemma="mít"
                      pos="VB-P---1P-AAI--"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p36.s3.w45"/>
                   <pc msd="UPosTag=PUNCT"
                       norm="-"
+                      lemma="-"
                       pos="Z:-------------"
                       join="right"
                       xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p36.s3.w46"/>
                   <w msd="UPosTag=SCONJ"
                      norm="li"
+                     lemma="li"
                      pos="J,-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p36.s3.w47"/>
@@ -39677,11 +39836,13 @@
                   xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p37.s8.w19">než</w>
                <w xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p37.s8.w20">aby<w msd="UPosTag=SCONJ"
                      norm="aby"
+                     lemma="aby"
                      pos="J,-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p37.s8.w21"/>
                   <w msd="UPosTag=AUX|Aspect=Imp|Mood=Cnd|VerbForm=Fin"
-                     norm="být"
+                     norm="by"
+                     lemma="být"
                      pos="Vc-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p37.s8.w22"/>
@@ -39745,17 +39906,20 @@
                    pos="Z:-------------"
                    xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p37.s9.w6">,</pc>
                <w xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p37.s9.w7">nemá-li<w msd="UPosTag=VERB|Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Polarity=Neg|Tense=Pres|VerbForm=Fin|Voice=Act"
-                     norm="mít"
+                     norm="nemá"
+                     lemma="mít"
                      pos="VB-S---3P-NAI--"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p37.s9.w8"/>
                   <pc msd="UPosTag=PUNCT"
                       norm="-"
+                      lemma="-"
                       pos="Z:-------------"
                       join="right"
                       xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p37.s9.w9"/>
                   <w msd="UPosTag=SCONJ"
                      norm="li"
+                     lemma="li"
                      pos="J,-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p37.s9.w10"/>
@@ -40260,11 +40424,13 @@
                    xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p37.s13.w37">„</pc>
                <w xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p37.s13.w38">aby<w msd="UPosTag=SCONJ"
                      norm="aby"
+                     lemma="aby"
                      pos="J,-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p37.s13.w39"/>
                   <w msd="UPosTag=AUX|Aspect=Imp|Mood=Cnd|VerbForm=Fin"
-                     norm="být"
+                     norm="by"
+                     lemma="být"
                      pos="Vc-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p37.s13.w40"/>
@@ -40310,11 +40476,13 @@
                   xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p37.s14.w2">jak</w>
                <w xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p37.s14.w3">kdyby<w msd="UPosTag=SCONJ"
                      norm="když"
+                     lemma="když"
                      pos="J,-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p37.s14.w4"/>
                   <w msd="UPosTag=AUX|Aspect=Imp|Mood=Cnd|VerbForm=Fin"
-                     norm="být"
+                     norm="by"
+                     lemma="být"
                      pos="Vc-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p37.s14.w5"/>
@@ -40748,11 +40916,13 @@
                    xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p37.s17.w14">,</pc>
                <w xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p37.s17.w15">aby<w msd="UPosTag=SCONJ"
                      norm="aby"
+                     lemma="aby"
                      pos="J,-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p37.s17.w16"/>
                   <w msd="UPosTag=AUX|Aspect=Imp|Mood=Cnd|VerbForm=Fin"
-                     norm="být"
+                     norm="by"
+                     lemma="být"
                      pos="Vc-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p37.s17.w17"/>
@@ -44128,11 +44298,13 @@
                    xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p51.s5.w6">,</pc>
                <w xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p51.s5.w7">aby<w msd="UPosTag=SCONJ"
                      norm="aby"
+                     lemma="aby"
                      pos="J,-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p51.s5.w8"/>
                   <w msd="UPosTag=AUX|Aspect=Imp|Mood=Cnd|VerbForm=Fin"
-                     norm="být"
+                     norm="by"
+                     lemma="být"
                      pos="Vc-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p51.s5.w9"/>
@@ -44237,11 +44409,13 @@
                    xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p51.s6.w8">,</pc>
                <w xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p51.s6.w9">aby<w msd="UPosTag=SCONJ"
                      norm="aby"
+                     lemma="aby"
                      pos="J,-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p51.s6.w10"/>
                   <w msd="UPosTag=AUX|Aspect=Imp|Mood=Cnd|VerbForm=Fin"
-                     norm="být"
+                     norm="by"
+                     lemma="být"
                      pos="Vc-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p51.s6.w11"/>
@@ -44913,11 +45087,13 @@
                   xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p54.s1.w18">i</w>
                <w xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p54.s1.w19">kdyby<w msd="UPosTag=SCONJ"
                      norm="když"
+                     lemma="když"
                      pos="J,-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p54.s1.w20"/>
                   <w msd="UPosTag=AUX|Aspect=Imp|Mood=Cnd|VerbForm=Fin"
-                     norm="být"
+                     norm="by"
+                     lemma="být"
                      pos="Vc-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p54.s1.w21"/>
@@ -45434,17 +45610,20 @@
             <s xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p56.s3"
                n="272">
                <w xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p56.s3.w1">Padne-li<w msd="UPosTag=VERB|Aspect=Perf|Mood=Ind|Number=Sing|Person=3|Polarity=Pos|Tense=Pres|VerbForm=Fin|Voice=Act"
-                     norm="padnout"
+                     norm="Padne"
+                     lemma="padnout"
                      pos="VB-S---3P-AAP--"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p56.s3.w2"/>
                   <pc msd="UPosTag=PUNCT"
                       norm="-"
+                      lemma="-"
                       pos="Z:-------------"
                       join="right"
                       xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p56.s3.w3"/>
                   <w msd="UPosTag=SCONJ"
                      norm="li"
+                     lemma="li"
                      pos="J,-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p56.s3.w4"/>
@@ -45522,17 +45701,20 @@
                   xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p57.s1.w6">ovšem</w>
                <w join="right"
                   xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p57.s1.w7">jsou-li<w msd="UPosTag=AUX|Aspect=Imp|Mood=Ind|Number=Plur|Person=3|Polarity=Pos|Tense=Pres|VerbForm=Fin|Voice=Act"
-                     norm="být"
+                     norm="jsou"
+                     lemma="být"
                      pos="VB-P---3P-AAI--"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p57.s1.w8"/>
                   <pc msd="UPosTag=PUNCT"
                       norm="-"
+                      lemma="-"
                       pos="Z:-------------"
                       join="right"
                       xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p57.s1.w9"/>
                   <w msd="UPosTag=SCONJ"
                      norm="li"
+                     lemma="li"
                      pos="J,-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p57.s1.w10"/>
@@ -48066,11 +48248,13 @@
                    xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p62.s1.w62">,</pc>
                <w xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p62.s1.w63">aby<w msd="UPosTag=SCONJ"
                      norm="aby"
+                     lemma="aby"
                      pos="J,-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p62.s1.w64"/>
                   <w msd="UPosTag=AUX|Aspect=Imp|Mood=Cnd|VerbForm=Fin"
-                     norm="být"
+                     norm="by"
+                     lemma="být"
                      pos="Vc-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p62.s1.w65"/>
@@ -48245,11 +48429,13 @@
                    xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p62.s2.w6">,</pc>
                <w xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p62.s2.w7">aby<w msd="UPosTag=SCONJ"
                      norm="aby"
+                     lemma="aby"
                      pos="J,-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p62.s2.w8"/>
                   <w msd="UPosTag=AUX|Aspect=Imp|Mood=Cnd|VerbForm=Fin"
-                     norm="být"
+                     norm="by"
+                     lemma="být"
                      pos="Vc-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p62.s2.w9"/>
@@ -49819,16 +50005,19 @@
                    facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c3.l56"/>
                <w xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p65.s7.w49">Pešť-Budíně<w msd="UPosTag=PROPN|Case=Loc|Gender=Fem|NameType=Geo|Number=Sing"
                      norm="Pešť"
+                     lemma="Pešť"
                      pos="F%-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p65.s7.w50"/>
                   <pc msd="UPosTag=PUNCT"
                       norm="-"
+                      lemma="-"
                       pos="Z:-------------"
                       join="right"
                       xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p65.s7.w51"/>
                   <w msd="UPosTag=PROPN|Animacy=Inan|Case=Loc|Gender=Masc|NameType=Geo|Number=Sing"
-                     norm="Budín"
+                     norm="Budíně"
+                     lemma="Budín"
                      pos="NNIS6-----A----"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p65.s7.w52"/>
@@ -50401,16 +50590,19 @@
                    facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c3.l72"/>
                <w xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p65.s13.w16">Pešt-Budíně<w msd="UPosTag=PROPN|Foreign=Yes"
                      norm="Pešt"
+                     lemma="Pešt"
                      pos="F%-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p65.s13.w17"/>
                   <pc msd="UPosTag=PUNCT"
                       norm="-"
+                      lemma="-"
                       pos="Z:-------------"
                       join="right"
                       xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p65.s13.w18"/>
                   <w msd="UPosTag=PROPN|Animacy=Inan|Case=Loc|Gender=Masc|NameType=Geo|Number=Sing"
-                     norm="Budín"
+                     norm="Budíně"
+                     lemma="Budín"
                      pos="NNIS6-----A----"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p65.s13.w19"/>
@@ -51144,11 +51336,13 @@
                       break="no"
                       facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg2.a1.c3.l90"/>tiletou<w msd="UPosTag=NUM|NumForm=Digit|NumType=Card"
                      norm="11"
+                     lemma="11"
                      pos="C=-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p65.s19.w26"/>
                   <w msd="UPosTag=ADJ|Case=Ins|Degree=Pos|Gender=Fem|Number=Sing|Polarity=Pos"
-                     norm="tiletý"
+                     norm="tiletou"
+                     lemma="tiletý"
                      pos="AAFS7----1A----"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p65.s19.w27"/>
@@ -51350,17 +51544,20 @@
             <s xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p65.s21"
                n="319">
                <w xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p65.s21.w1">Nemáme-li<w msd="UPosTag=VERB|Aspect=Imp|Mood=Ind|Number=Plur|Person=1|Polarity=Neg|Tense=Pres|VerbForm=Fin|Voice=Act"
-                     norm="mít"
+                     norm="Nemáme"
+                     lemma="mít"
                      pos="VB-P---1P-NAI--"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p65.s21.w2"/>
                   <pc msd="UPosTag=PUNCT"
                       norm="-"
+                      lemma="-"
                       pos="Z:-------------"
                       join="right"
                       xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p65.s21.w3"/>
                   <w msd="UPosTag=SCONJ"
                      norm="li"
+                     lemma="li"
                      pos="J,-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p65.s21.w4"/>
@@ -51419,11 +51616,13 @@
                    xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p65.s21.w15">,</pc>
                <w xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p65.s21.w16">abychom<w msd="UPosTag=SCONJ"
                      norm="aby"
+                     lemma="aby"
                      pos="J,-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p65.s21.w17"/>
                   <w msd="UPosTag=AUX|Aspect=Imp|Mood=Cnd|Number=Plur|Person=1|VerbForm=Fin"
-                     norm="být"
+                     norm="bychom"
+                     lemma="být"
                      pos="Vc-P---1-------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p65.s21.w18"/>
@@ -56866,16 +57065,19 @@
                    xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p78.s17.w6">,</pc>
                <w xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p78.s17.w7">mayor-domo<w msd="UPosTag=NOUN|Animacy=Anim|Case=Nom|Gender=Masc|Number=Sing"
                      norm="mayor"
+                     lemma="mayor"
                      pos="S2--------A----"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p78.s17.w8"/>
                   <pc msd="UPosTag=PUNCT"
                       norm="-"
+                      lemma="-"
                       pos="Z:-------------"
                       join="right"
                       xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p78.s17.w9"/>
                   <w msd="UPosTag=NOUN|Case=Nom|Gender=Neut|Number=Sing"
                      norm="domo"
+                     lemma="domo"
                      pos="NNNS1-----A----"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p78.s17.w10"/>
@@ -57983,11 +58185,13 @@
                <w join="right"
                   xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p80.s3.w9">82—<w msd="UPosTag=NUM|NumForm=Digit|NumType=Card"
                      norm="82"
+                     lemma="82"
                      pos="C=-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p80.s3.w10"/>
                   <pc msd="UPosTag=SYM"
                       norm="—"
+                      lemma="—"
                       pos="Z:-------------"
                       join="right"
                       xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p80.s3.w11"/>
@@ -58231,11 +58435,13 @@
                    xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p81.s3.w23">,</pc>
                <w xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p81.s3.w24">aby<w msd="UPosTag=SCONJ"
                      norm="aby"
+                     lemma="aby"
                      pos="J,-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p81.s3.w25"/>
                   <w msd="UPosTag=AUX|Aspect=Imp|Mood=Cnd|VerbForm=Fin"
-                     norm="být"
+                     norm="by"
+                     lemma="být"
                      pos="Vc-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p81.s3.w26"/>
@@ -58904,11 +59110,13 @@
                <w join="right"
                   xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p84.s1.w1">3—<w msd="UPosTag=NUM|NumForm=Digit|NumType=Card"
                      norm="3"
+                     lemma="3"
                      pos="C=-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p84.s1.w2"/>
                   <pc msd="UPosTag=SYM"
                       norm="—"
+                      lemma="—"
                       pos="Z:-------------"
                       join="right"
                       xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p84.s1.w3"/>
@@ -59035,16 +59243,19 @@
                    facs="#PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.f.pg3.a1.c1.l22"/>
                <w xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p85.s1.w15">8—1<w msd="UPosTag=NUM|NumForm=Digit|NumType=Card"
                      norm="8"
+                     lemma="8"
                      pos="C=-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p85.s1.w16"/>
                   <pc msd="UPosTag=PUNCT"
                       norm="—"
+                      lemma="—"
                       pos="Z:-------------"
                       join="right"
                       xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p85.s1.w17"/>
                   <w msd="UPosTag=NUM|NumForm=Digit|NumType=Card"
                      norm="1"
+                     lemma="1"
                      pos="C=-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p85.s1.w18"/>
@@ -59248,16 +59459,19 @@
                   xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p88.s1.w5">číslo</w>
                <w xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p88.s1.w6">445—I<w msd="UPosTag=NUM|NumForm=Digit|NumType=Card"
                      norm="445"
+                     lemma="445"
                      pos="C=-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p88.s1.w7"/>
                   <pc msd="UPosTag=PUNCT"
                       norm="—"
+                      lemma="—"
                       pos="Z:-------------"
                       join="right"
                       xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p88.s1.w8"/>
                   <w msd="UPosTag=NUM|NumForm=Roman|NumType=Card"
                      norm="I"
+                     lemma="I"
                      pos="C}-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p88.s1.w9"/>
@@ -60345,16 +60559,19 @@
                <w join="right"
                   xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p96.s1.w1">10—1<w msd="UPosTag=NUM|NumForm=Digit|NumType=Card"
                      norm="10"
+                     lemma="10"
                      pos="C=-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p96.s1.w2"/>
                   <pc msd="UPosTag=PUNCT"
                       norm="—"
+                      lemma="—"
                       pos="Z:-------------"
                       join="right"
                       xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p96.s1.w3"/>
                   <w msd="UPosTag=NUM|NumForm=Digit|NumType=Card"
                      norm="1"
+                     lemma="1"
                      pos="C=-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p96.s1.w4"/>
@@ -60453,26 +60670,31 @@
                    xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p97.s2.w6">.</pc>
                <w xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p97.s2.w7">1830-31-II<w msd="UPosTag=NUM|NumForm=Digit|NumType=Card"
                      norm="1830"
+                     lemma="1830"
                      pos="C=-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p97.s2.w8"/>
                   <pc msd="UPosTag=PUNCT"
                       norm="-"
+                      lemma="-"
                       pos="Z:-------------"
                       join="right"
                       xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p97.s2.w9"/>
                   <w msd="UPosTag=NUM|NumForm=Digit|NumType=Card"
                      norm="31"
+                     lemma="31"
                      pos="C=-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p97.s2.w10"/>
                   <pc msd="UPosTag=PUNCT"
                       norm="-"
+                      lemma="-"
                       pos="Z:-------------"
                       join="right"
                       xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p97.s2.w11"/>
                   <w msd="UPosTag=NUM|NumForm=Roman|NumType=Card"
                      norm="II"
+                     lemma="II"
                      pos="C}-------------"
                      join="right"
                      xml:id="PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.p97.s2.w12"/>

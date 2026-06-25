@@ -133,11 +133,12 @@ def process_token(tok, s_id, token_idx, is_last=False):
               continue
          if k == f"{{{XML_NS}}}id":
               continue
-         if k == "lemma":
+         if k == "form":
               if old_tag == "dtok":
                 attrs["norm"] = v
-              else:
-                attrs["lemma"] = v
+              continue
+         if k == "lemma":
+              attrs["lemma"] = v
               continue
          print (f"Warning: Unhandled attribute {k}={v} in token {token_idx} of sentence {s_id}", flush=True)
     tok.attrib.clear()
