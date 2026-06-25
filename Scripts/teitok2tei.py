@@ -89,8 +89,9 @@ def transform_text(tree):
 
       token_idx = 1
       # convert tok -> w / pc
-      for tok in list(s.iter()):
-        token_idx = process_token(tok, s_id, token_idx)
+      tokens = list(s.iter())
+      for tok in tokens:
+        token_idx = process_token(tok, s_id, token_idx, (tok == tokens[-1]))
 
     # remove helper attrs
     for el in root.iter():
@@ -102,7 +103,7 @@ def transform_text(tree):
     etree.cleanup_namespaces(tree)
     return tree
 
-def process_token(tok, s_id, token_idx):
+def process_token(tok, s_id, token_idx, is_last=False):
     if localname(tok.tag) != "tok" and localname(tok.tag) != "dtok":
         return token_idx
     upos = tok.get("upos", "")
@@ -140,6 +141,8 @@ def process_token(tok, s_id, token_idx):
               continue
          print (f"Warning: Unhandled attribute {k}={v} in token {token_idx} of sentence {s_id}", flush=True)
     tok.attrib.clear()
+    if not(tok.tail and tok.tail.strip() == "" and len(tok.tail) > 0) and not(is_last):
+      attrs["join"] = "right"
     for k, v in attrs.items():
         tok.set(k, v)
     tok.set(f"{{{XML_NS}}}id", f"{s_id}.w{token_idx}")
