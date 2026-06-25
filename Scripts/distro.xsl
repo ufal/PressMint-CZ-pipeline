@@ -8,7 +8,7 @@
   xmlns:mk="http://ufal.mff.cuni.cz/matyas-kopp"
   exclude-result-prefixes="xs tei xi mk">
 
-  <xsl:output method="xml" indent="yes" encoding="UTF-8" />
+  <xsl:output method="xml" indent="yes" encoding="UTF-8" suppress-indentation="w pc"/>
 
   <xsl:param name="outDir" />
   <xsl:param name="inComponentDir" />
