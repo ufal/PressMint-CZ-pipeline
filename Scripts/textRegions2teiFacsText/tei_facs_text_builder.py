@@ -237,8 +237,10 @@ def get_page_text_regions(pageXMLroot):
   text_region_dicts = [ element_to_dict(tr) for tr in pageXMLroot.iter(ns(pageXMLroot,"TextRegion")) ]
   return [convert_to_region_like_format(pgRegion) for pgRegion in text_region_dicts]
 
-def process_task(pagesFile, pagexmlDir, regionsFile, outFile, tei_id):
-  print(f"{outFile}")
+def process_task(pagesFile, pagexmlDir, regionsFile, outTextFile, outFacsFile, tei_id):
+  print(f"{outTextFile}")
+  print(f"{outFacsFile}")
+
   # loop over pages
   pages_meta = []
   regions = []
@@ -294,4 +296,4 @@ def process_task(pagesFile, pagexmlDir, regionsFile, outFile, tei_id):
       tei.add_path(separator.get("path", []), separator.get("orientation", "unknown"),separator.get("thickness", 1), page["page_meta"]["url"])
   tei.remove_last_hyphen_if_present()
   tei.close_current_page() # important, it calculates page hull from regions, so it has to be called after all regions are added
-  tei.write(outFile)
+  tei.write(outTextFile, outFacsFile)

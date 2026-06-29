@@ -43,10 +43,17 @@ def parse_args():
     )
 
     parser.add_argument(
-        "-o", "--output-dir",
+        "-T", "--output-text-dir",
         required=True,
         type=Path,
-        help="Output directory"
+        help="Output directory for TEI/text"
+    )
+
+    parser.add_argument(
+        "-F", "--output-facs-dir",
+        required=True,
+        type=Path,
+        help="Output directory for TEI/facsimile"
     )
 
     args = parser.parse_args()
@@ -77,7 +84,8 @@ def main():
           pagesFile=args.page_order_dir / f"{line}.jsonl",
           pagexmlDir=args.ocr_xml_dir / line,
           regionsFile=args.regions_dir /  f"{line}.jsonl",
-          outFile=args.output_dir / f"{line}.xml",
+          outTextFile=args.output_text_dir / f"{line}.xml",
+          outFacsFile=args.output_facs_dir / f"{line}.xml",
           tei_id=tei_id
         )
 

@@ -2,8 +2,8 @@
 <PcGts xmlns="http://schema.primaresearch.org/PAGE/gts/pagecontent/2019-07-15" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schema.primaresearch.org/PAGE/gts/pagecontent/2019-07-15/pagecontent.xsd">
   <Metadata>
     <Creator>Pero OCR</Creator>
-    <Created>2026-06-01T16:38:25.507235+00:00</Created>
-    <LastChange>2026-06-01T16:38:25.507235+00:00</LastChange>
+    <Created>2026-06-29T13:57:59.957093+00:00</Created>
+    <LastChange>2026-06-29T13:57:59.957093+00:00</LastChange>
   </Metadata>
   <Page imageFilename="95c25c74-3392-4025-9cfa-10ec83f82ad4" imageWidth="3261" imageHeight="4705">
     <TextRegion id="r010" custom="{&quot;category&quot;: &quot;text&quot;}">
@@ -116,7 +116,7 @@
           <Unicode>laný, jak si jej mnozí předstawují.</Unicode>
         </TextEquiv>
       </TextLine>
-      <TextLine id="r002-l042" index="14" custom="{&quot;heights&quot;: [34.4, 15.5], &quot;category&quot;: &quot;text&quot;}">
+      <TextLine id="r002-l041" index="14" custom="{&quot;heights&quot;: [34.4, 15.5], &quot;category&quot;: &quot;text&quot;}">
         <Coords points="191,993 299,993 401,991 504,991 607,991 709,988 811,988 913,985 1016,985 1126,985 1126,935 1016,935 913,935 810,938 709,938 605,941 504,941 401,941 298,943 191,943 191,993"/>
         <Baseline points="191,978 299,978 401,975 504,975 606,975 709,973 811,973 913,970 1016,970 1126,970"/>
         <TextEquiv conf="1.000">
@@ -666,7 +666,7 @@
           <Unicode>sud zemským sněmem w Čechách nazýwá, jest od roku</Unicode>
         </TextEquiv>
       </TextLine>
-      <TextLine id="r000-l198" index="40" custom="{&quot;heights&quot;: [33.4, 14.9], &quot;category&quot;: &quot;text&quot;}">
+      <TextLine id="r000-l199" index="40" custom="{&quot;heights&quot;: [33.4, 14.9], &quot;category&quot;: &quot;text&quot;}">
         <Coords points="67,3741 186,3741 299,3741 412,3741 526,3741 638,3738 752,3738 865,3738 978,3738 1096,3738 1096,3690 978,3690 865,3690 752,3690 638,3690 525,3692 412,3692 299,3692 186,3692 68,3692 67,3741"/>
         <Baseline points="67,3726 186,3726 299,3726 412,3726 525,3726 638,3723 752,3723 865,3723 978,3723 1096,3723"/>
         <TextEquiv conf="1.000">
@@ -792,7 +792,7 @@
           <Unicode>znání náboženského.“ Kdybyste byli alespoň řekli: těch</Unicode>
         </TextEquiv>
       </TextLine>
-      <TextLine id="r000-l248" index="58" custom="{&quot;heights&quot;: [33.7, 14.1], &quot;category&quot;: &quot;text&quot;}">
+      <TextLine id="r000-l247" index="58" custom="{&quot;heights&quot;: [33.7, 14.1], &quot;category&quot;: &quot;text&quot;}">
         <Coords points="51,4677 170,4677 283,4677 399,4677 512,4675 625,4677 697,4679 1088,4680 1088,4632 967,4632 854,4632 741,4632 626,4630 513,4627 398,4630 283,4630 170,4630 52,4630 51,4677"/>
         <Baseline points="51,4663 170,4663 283,4663 399,4663 512,4661 625,4663 741,4666 854,4666 967,4666 1088,4666"/>
         <TextEquiv conf="1.000">
@@ -1151,7 +1151,7 @@
           <Unicode>obležení. 5 osob nesmí pohromadě státi, zatýká se na</Unicode>
         </TextEquiv>
       </TextLine>
-      <TextLine id="r005-l189" index="5" custom="{&quot;heights&quot;: [34.5, 15.5], &quot;category&quot;: &quot;text&quot;}">
+      <TextLine id="r005-l190" index="5" custom="{&quot;heights&quot;: [34.5, 15.5], &quot;category&quot;: &quot;text&quot;}">
         <Coords points="1123,3585 1242,3585 1355,3585 1468,3585 1581,3585 1697,3588 1810,3588 1924,3590 2037,3588 2158,3585 2157,3535 2036,3538 1923,3540 1811,3538 1697,3538 1582,3535 1468,3535 1355,3535 1242,3535 1123,3535 1123,3585"/>
         <Baseline points="1123,3570 1242,3570 1355,3570 1468,3570 1581,3570 1697,3572 1810,3572 1923,3575 2037,3572 2158,3570"/>
         <TextEquiv conf="1.000">
@@ -1269,7 +1269,7 @@
           <Unicode>Turecko.</Unicode>
         </TextEquiv>
       </TextLine>
-      <TextLine id="r013-l041" index="1" custom="{&quot;heights&quot;: [35.4, 15.4], &quot;category&quot;: &quot;text&quot;}">
+      <TextLine id="r013-l042" index="1" custom="{&quot;heights&quot;: [35.4, 15.4], &quot;category&quot;: &quot;text&quot;}">
         <Coords points="2995,951 2908,953 2823,953 2738,951 2651,951 2565,951 2480,948 2394,943 2301,942 2301,993 2391,993 2478,999 2565,1001 2651,1001 2737,1001 2823,1004 2910,1004 2996,1001 3088,999 3086,948 2995,951"/>
         <Baseline points="2301,978 2392,978 2478,983 2565,986 2651,986 2737,986 2823,989 2909,989 2996,986 3087,983"/>
         <TextEquiv conf="1.000">
@@ -1619,7 +1619,7 @@
           <Unicode>Národy ewropejské probudili a ozwali se o ústawy</Unicode>
         </TextEquiv>
       </TextLine>
-      <TextLine id="r013-l190" index="51" custom="{&quot;heights&quot;: [34.2, 15.2], &quot;category&quot;: &quot;text&quot;}">
+      <TextLine id="r013-l189" index="51" custom="{&quot;heights&quot;: [34.2, 15.2], &quot;category&quot;: &quot;text&quot;}">
         <Coords points="2180,3585 2293,3585 2406,3585 2519,3585 2632,3582 2745,3582 2858,3582 2971,3585 3085,3587 3203,3585 3202,3535 3084,3538 2972,3535 2859,3533 2745,3533 2632,3533 2518,3535 2406,3535 2293,3535 2180,3535 2180,3585"/>
         <Baseline points="2180,3570 2293,3570 2406,3570 2519,3570 2632,3567 2745,3567 2858,3567 2971,3570 3085,3572 3203,3570"/>
         <TextEquiv conf="1.000">
@@ -1640,7 +1640,7 @@
           <Unicode>zdali swrhne těžké jarmo turecké? Jako že tento národ</Unicode>
         </TextEquiv>
       </TextLine>
-      <TextLine id="r013-l199" index="54" custom="{&quot;heights&quot;: [32.9, 15.3], &quot;category&quot;: &quot;text&quot;}">
+      <TextLine id="r013-l198" index="54" custom="{&quot;heights&quot;: [32.9, 15.3], &quot;category&quot;: &quot;text&quot;}">
         <Coords points="2177,3741 2293,3741 2406,3741 2518,3738 2632,3741 2745,3738 2858,3738 2971,3741 3084,3744 3203,3746 3204,3698 3085,3696 2972,3693 2859,3690 2745,3690 2631,3693 2520,3690 2405,3693 2293,3693 2178,3693 2177,3741"/>
         <Baseline points="2177,3726 2293,3726 2406,3726 2519,3723 2632,3726 2745,3723 2858,3723 2971,3726 3085,3728 3203,3731"/>
         <TextEquiv conf="1.000">
@@ -1789,7 +1789,7 @@
           <Unicode>Papír z dilny Fr. Loreicowých synů a Eichmanna w Ho-</Unicode>
         </TextEquiv>
       </TextLine>
-      <TextLine id="r012-l247" index="2" custom="{&quot;heights&quot;: [29.1, 13.0], &quot;category&quot;: &quot;text&quot;}">
+      <TextLine id="r012-l248" index="2" custom="{&quot;heights&quot;: [29.1, 13.0], &quot;category&quot;: &quot;text&quot;}">
         <Coords points="2728,4674 2737,4674 2769,4674 2807,4674 2807,4632 2769,4632 2737,4632 2705,4634 2675,4634 2643,4634 2613,4634 2581,4634 2546,4634 2546,4676 2728,4674"/>
         <Baseline points="2546,4663 2581,4663 2613,4663 2643,4663 2675,4663 2707,4663 2737,4661 2769,4661 2807,4661"/>
         <TextEquiv conf="1.000">

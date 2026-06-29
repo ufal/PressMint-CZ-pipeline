@@ -12,6 +12,7 @@
 
   <xsl:param name="outDir" />
   <xsl:param name="inComponentDir" />
+  <xsl:param name="inFacsDir" />
   <xsl:param name="inHeaderDir" />
   <xsl:param name="anaDir" />
   <xsl:param name="inTaxonomiesDir" />
@@ -55,6 +56,7 @@
 
   <!-- Gather URIs of component xi + files and map to new files, incl. .ana files -->
   <xsl:variable name="docs">
+    <xsl:message select="$inFacsDir"/>
     <xsl:for-each select="/tei:teiCorpus/xi:include">
       <item>
         <xi-orig>
@@ -69,6 +71,8 @@
               mode="insertHeader">
               <xsl:with-param name="teiHeader"
                 select="document(concat($inHeaderDir, '/', @href))/tei:TEI/tei:teiHeader" />
+              <xsl:with-param name="facsimile"
+                select="document(concat($inFacsDir, '/', @href))/tei:TEI/tei:facsimile" />
               <xsl:with-param name="fileType">comp</xsl:with-param>
             </xsl:apply-templates>
           </xsl:variable>
@@ -397,6 +401,7 @@
   <!-- merge header and text content -->
   <xsl:template mode="insertHeader" match="tei:TEI | tei:teiCorpus">
     <xsl:param name="teiHeader" />
+    <xsl:param name="facsimile" />    
     <xsl:copy>
       <xsl:copy-of select="@*" />
       <!-- <xsl:apply-templates select="$teiHeader" mode="insertHeader"/> předělat na volání
@@ -412,6 +417,7 @@
           </xsl:with-param>
         </xsl:apply-templates>
       </teiHeader>
+      <xsl:copy-of select="$facsimile"/>
       <xsl:copy-of select="./*" />
     </xsl:copy>
   </xsl:template>

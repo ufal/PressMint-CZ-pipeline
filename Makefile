@@ -70,11 +70,10 @@ vizTEI := ${VIZ}/tei
 CACHE := ${WORK}/cache
 
 imageRegions := ${WORK}/imageRegions
-TEIFacsText := ${WORK}/teiFacsText
-TEIFacsTT := ${WORK}/teiFacsTT
 TEItext := ${WORK}/tei-text
-TEItext_cleaned := ${WORK}/tei-text-cleaned
-TEIANAtext := ${WORK}/tei-ana-text
+TEIfacs := ${WORK}/tei-facs
+TEItextTT := ${WORK}/tei-text.TT
+TEItextANA := ${WORK}/tei-text.ana
 TEI := ${DIST}/tei
 TEIANA := ${DIST}/tei-ana
 UDPIPE := ${WORK}/udpipe
@@ -434,7 +433,7 @@ inputJson2teiHeader: $(IN)/periodical/$(UUID_PATH).json $(TEIheader)
 
 ###### process data (img --> text --> TEI with facs and text)
 
-$(TASKS) $(JSONissues) $(idMapping) $(xmlOCR) $(altoOCR) $(vizOCRxml) $(vizLAYOUTxml) $(vizLAYOUTalto) $(vizLAYOUTregions) $(vizLAYOUTmerge) $(vizTEI) $(imageRegions) $(TEI) $(TEIANA) $(TEItext) $(TEItext_cleaned) $(TEIheader) $(TEIANAtext) $(UDPIPE) $(NAMETAG) $(LOGDIR) $(TEIFacsTT):
+$(TASKS) $(JSONissues) $(idMapping) $(xmlOCR) $(altoOCR) $(vizOCRxml) $(vizLAYOUTxml) $(vizLAYOUTalto) $(vizLAYOUTregions) $(vizLAYOUTmerge) $(vizTEI) $(imageRegions) $(TEI) $(TEIANA) $(TEItext) $(TEItext_cleaned) $(TEIheader) $(TEItextANA) $(UDPIPE) $(NAMETAG) $(LOGDIR) $(TEItextTT):
 	mkdir -p $@
 
 
@@ -481,7 +480,8 @@ textRegions2teiFacsText:
 		    --ocr-xml-dir "$(xmlOCR)" \
 				--regions-dir "$(imageRegions)" \
 				--page-order-dir "$(idMapping)" \
-				--output-dir "$(TEIFacsText)"
+				--output-facs-dir "$(TEIfacs)" \
+				--output-text-dir "$(TEItext)"
 
 ###### [DEPRECATED] targets
 
@@ -539,14 +539,14 @@ process-annotation-all: teiText2tt TT2teiANA
 
 
 
-##teiText2tt## annotate teiFacsText with flexipipe TEIFacsTT
-teiText2tt: $(TEIFacsTT)
-	find $(TEIFacsText) -type f -name "*.xml"  -printf "%P\n"| sort > $(TEIFacsTT).fl
-	cat $(TEIFacsTT).fl | sed 's@/.*@@'|sort|uniq | xargs -I {} mkdir -p $(TEIFacsTT)/{}
-	cat $(TEIFacsTT).fl | xargs -I {} cp $(TEIFacsText)/{} $(TEIFacsTT)/{}
-	cat $(TEIFacsTT).fl | xargs -I {} \
+##teiText2tt## annotate TEItext with flexipipe TEItextTT
+teiText2tt: $(TEItextTT)
+	find $(TEItext) -type f -name "*.xml"  -printf "%P\n"| sort > $(TEItextTT).fl
+	cat $(TEItextTT).fl | sed 's@/.*@@'|sort|uniq | xargs -I {} mkdir -p $(TEItextTT)/{}
+	cat $(TEItextTT).fl | xargs -I {} cp $(TEItext)/{} $(TEItextTT)/{}
+	cat $(TEItextTT).fl | xargs -I {} \
 	  $(FLEXIPIPE) \
-	    process $(TEIFacsTT)/{} \
+	    process $(TEItextTT)/{} \
 		  --tokenize \
 			--backend udpipe --model czech-pdtc-ud-2.17-251125 \
 			--ner-backend nametag --nametag-model nametag3-multilingual-conll-250203 \
@@ -555,14 +555,14 @@ teiText2tt: $(TEIFacsTT)
 			--writeback --writeback-engine xmltokenizer \
 	    -O punctuation-split:hard
 		
-##TT2teiANA## convert TEIFacsTT to TEIANAtext
-TT2teiANA: $(TEIANAtext)
-	find $(TEIFacsTT) -type f -name "*.xml" -printf "%P\n" |sort > $(TEIANAtext).fl
-	cat $(TEIFacsTT).fl | sed 's@/.*@@'|sort|uniq | xargs -I {} mkdir -p $(TEIANAtext)/{}
-	cat $(TEIFacsTT).fl | xargs -I {} \
+##TT2teiANA## convert TEItextTT to TEItextANA
+TT2teiANA: $(TEItextANA)
+	find $(TEItextTT) -type f -name "*.xml" -printf "%P\n" |sort > $(TEItextANA).fl
+	cat $(TEItextTT).fl | sed 's@/.*@@'|sort|uniq | xargs -I {} mkdir -p $(TEItextANA)/{}
+	cat $(TEItextTT).fl | xargs -I {} \
 	  python Scripts/teitok2tei.py \
-			--input $(TEIFacsTT)/{} \
-			--output $(TEIANAtext)/{} 
+			--input $(TEItextTT)/{} \
+			--output $(TEItextANA)/{} 
 
 
 ###### Build TEI documents and corpus
@@ -582,19 +582,22 @@ corpus-template:
 dist-tei: $(TEI)
 	$(SAXON) -xsl:Scripts/distro.xsl \
 	    outDir=$< \
-	    inComponentDir=$(TEIFacsText) \
+	    inComponentDir=$(TEItext) \
+	    inFacsDir=$(TEIfacs) \
 	    inHeaderDir=$(TEIheader) \
 	    anaDir=$(TEIANA) \
 	    inTaxonomiesDir=$(TAXONOMIES) \
 	    type=TEI \
 	    projectConfig=$(CONFIG) \
 	    $(CORPUS_TEMPLATE)
+	
 
 ##dist-tei-ana## create final TEI documents with included headers and text
 dist-tei-ana: $(TEIANA)
 	$(SAXON) -xsl:Scripts/distro.xsl \
 	    outDir=$< \
-	    inComponentDir=$(TEIANAtext) \
+	    inComponentDir=$(TEItextANA) \
+	    inFacsDir=$(TEIfacs) \
 	    inHeaderDir=$(TEIheader) \
 	    inTaxonomiesDir=$(TAXONOMIES) \
 	    type=TEI.ana \

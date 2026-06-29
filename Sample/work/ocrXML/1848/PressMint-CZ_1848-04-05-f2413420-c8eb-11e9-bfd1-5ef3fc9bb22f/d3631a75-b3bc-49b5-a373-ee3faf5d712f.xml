@@ -2,8 +2,8 @@
 <PcGts xmlns="http://schema.primaresearch.org/PAGE/gts/pagecontent/2019-07-15" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schema.primaresearch.org/PAGE/gts/pagecontent/2019-07-15/pagecontent.xsd">
   <Metadata>
     <Creator>Pero OCR</Creator>
-    <Created>2026-06-01T16:40:03.458244+00:00</Created>
-    <LastChange>2026-06-01T16:40:03.458244+00:00</LastChange>
+    <Created>2026-06-29T13:59:46.301758+00:00</Created>
+    <LastChange>2026-06-29T13:59:46.301758+00:00</LastChange>
   </Metadata>
   <Page imageFilename="d3631a75-b3bc-49b5-a373-ee3faf5d712f" imageWidth="3284" imageHeight="4734">
     <TextRegion id="r010" custom="{&quot;category&quot;: &quot;text&quot;}">
@@ -35,7 +35,7 @@
           <Unicode>a) když trestuhodný spis se prodáwá, neb jiným způ-</Unicode>
         </TextEquiv>
       </TextLine>
-      <TextLine id="r003-l007" index="1" custom="{&quot;heights&quot;: [30.3, 12.5], &quot;category&quot;: &quot;text&quot;}">
+      <TextLine id="r003-l006" index="1" custom="{&quot;heights&quot;: [30.3, 12.5], &quot;category&quot;: &quot;text&quot;}">
         <Coords points="51,309 92,309 127,309 162,309 197,309 234,309 268,309 304,312 339,312 383,312 383,269 339,269 304,269 272,266 234,266 197,266 162,266 127,266 92,266 51,266 51,309"/>
         <Baseline points="51,296 92,296 127,296 162,296 197,296 234,296 269,296 304,299 339,299 383,299"/>
         <TextEquiv conf="1.000">
@@ -656,7 +656,7 @@
           <Unicode>obecenstwu abychom wyjewili swé úmysly upřímně a zře-</Unicode>
         </TextEquiv>
       </TextLine>
-      <TextLine id="r007-l023" index="3" custom="{&quot;heights&quot;: [32.4, 15.7], &quot;category&quot;: &quot;text&quot;}">
+      <TextLine id="r007-l024" index="3" custom="{&quot;heights&quot;: [32.4, 15.7], &quot;category&quot;: &quot;text&quot;}">
         <Coords points="1110,618 1110,654 1228,654 1341,654 1455,657 1568,657 1681,657 1794,657 1908,660 2020,657 2139,657 2139,609 2020,609 1907,611 1795,609 1681,609 1568,609 1455,609 1342,606 1228,606 1110,606 1110,618"/>
         <Baseline points="1110,638 1228,638 1342,638 1455,641 1568,641 1681,641 1794,641 1907,644 2020,641 2139,641"/>
         <TextEquiv conf="1.000">
@@ -1103,7 +1103,7 @@
           <Unicode>swobodný pán Mladota ze Solopisků. Robert swobodný pán</Unicode>
         </TextEquiv>
       </TextLine>
-      <TextLine id="r006-l209" index="16" custom="{&quot;heights&quot;: [32.1, 15.0], &quot;category&quot;: &quot;text&quot;}">
+      <TextLine id="r006-l208" index="16" custom="{&quot;heights&quot;: [32.1, 15.0], &quot;category&quot;: &quot;text&quot;}">
         <Coords points="1059,3915 1059,3924 1177,3924 1290,3927 1404,3927 1517,3927 1630,3927 1743,3927 1856,3927 1970,3927 2091,3924 2091,3921 2090,3877 1969,3880 1856,3880 1743,3880 1630,3880 1517,3880 1404,3880 1290,3880 1178,3877 1059,3877 1059,3915"/>
         <Baseline points="1059,3909 1177,3909 1290,3912 1404,3912 1517,3912 1630,3912 1743,3912 1856,3912 1969,3912 2091,3909"/>
         <TextEquiv conf="1.000">
@@ -1217,7 +1217,7 @@
           <Unicode>obecné wykaupení z roboty od J. M. C. w roce pořád</Unicode>
         </TextEquiv>
       </TextLine>
-      <TextLine id="r015-l024" index="2" custom="{&quot;heights&quot;: [32.5, 14.4], &quot;category&quot;: &quot;text&quot;}">
+      <TextLine id="r015-l023" index="2" custom="{&quot;heights&quot;: [32.5, 14.4], &quot;category&quot;: &quot;text&quot;}">
         <Coords points="3196,609 3077,609 2963,611 2850,611 2738,609 2621,609 2509,606 2395,606 2282,606 2163,606 2163,653 2282,653 2395,653 2508,653 2621,656 2737,656 2850,658 2964,658 3077,656 3196,656 3196,609"/>
         <Baseline points="2163,638 2282,638 2395,638 2508,638 2621,641 2737,641 2850,644 2963,644 3077,641 3196,641"/>
         <TextEquiv conf="1.000">
@@ -1642,7 +1642,7 @@
     </TextRegion>
     <TextRegion id="r017" custom="{&quot;category&quot;: &quot;text&quot;}">
       <Coords points="2759,3878 2214,3876 2214,3922 2759,3925 2759,3878"/>
-      <TextLine id="r017-l208" index="0" custom="{&quot;heights&quot;: [33.4, 13.2], &quot;category&quot;: &quot;text&quot;}">
+      <TextLine id="r017-l209" index="0" custom="{&quot;heights&quot;: [33.4, 13.2], &quot;category&quot;: &quot;text&quot;}">
         <Coords points="2214,3876 2214,3922 2278,3922 2287,3922 2759,3925 2759,3878 2694,3878 2635,3878 2575,3878 2516,3878 2455,3881 2398,3881 2340,3878 2288,3876 2214,3876"/>
         <Baseline points="2214,3909 2279,3909 2338,3912 2398,3914 2457,3914 2516,3912 2575,3912 2635,3912 2694,3912 2759,3912"/>
         <TextEquiv conf="1.000">
@@ -1725,7 +1725,7 @@
           <Unicode>J. C. Hickel. J. Sl. Tomíček. K. Hawlíček. Fr. Palacký.</Unicode>
         </TextEquiv>
       </TextLine>
-      <TextLine id="r008-l006" index="1" custom="{&quot;heights&quot;: [34.0, 15.4], &quot;category&quot;: &quot;text&quot;}">
+      <TextLine id="r008-l007" index="1" custom="{&quot;heights&quot;: [34.0, 15.4], &quot;category&quot;: &quot;text&quot;}">
         <Coords points="1444,314 1479,314 1548,314 1578,316 1765,317 1765,268 1689,268 1619,268 1550,265 1479,265 1409,265 1339,265 1269,265 1199,265 1125,262 1123,312 1444,314"/>
         <Baseline points="1123,296 1199,299 1269,299 1339,299 1409,299 1479,299 1549,299 1619,302 1689,302 1765,302"/>
         <TextEquiv conf="1.000">

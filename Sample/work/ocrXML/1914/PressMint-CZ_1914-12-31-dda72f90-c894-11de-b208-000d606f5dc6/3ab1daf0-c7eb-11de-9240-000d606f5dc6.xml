@@ -2,8 +2,8 @@
 <PcGts xmlns="http://schema.primaresearch.org/PAGE/gts/pagecontent/2019-07-15" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schema.primaresearch.org/PAGE/gts/pagecontent/2019-07-15/pagecontent.xsd">
   <Metadata>
     <Creator>Pero OCR</Creator>
-    <Created>2026-06-01T16:27:11.052521+00:00</Created>
-    <LastChange>2026-06-01T16:27:11.052521+00:00</LastChange>
+    <Created>2026-06-29T13:45:28.063152+00:00</Created>
+    <LastChange>2026-06-29T13:45:28.063152+00:00</LastChange>
   </Metadata>
   <Page imageFilename="3ab1daf0-c7eb-11de-9240-000d606f5dc6" imageWidth="3977" imageHeight="5967">
     <TextRegion id="r019" custom="{&quot;category&quot;: &quot;text&quot;}">
@@ -16,51 +16,51 @@
         </TextEquiv>
       </TextLine>
     </TextRegion>
-    <TextRegion id="r002" custom="{&quot;category&quot;: &quot;text&quot;}">
+    <TextRegion id="r001" custom="{&quot;category&quot;: &quot;text&quot;}">
       <Coords points="0,670 0,1029 62,1029 64,723 58,673 0,670"/>
-      <TextLine id="r002-l021" index="0" custom="{&quot;heights&quot;: [42.4, 15.4], &quot;category&quot;: &quot;text&quot;}">
+      <TextLine id="r001-l021" index="0" custom="{&quot;heights&quot;: [42.4, 15.4], &quot;category&quot;: &quot;text&quot;}">
         <Coords points="0,728 55,731 58,673 0,670 0,728"/>
         <Baseline points="0,712 55,715"/>
         <TextEquiv conf="0.622">
           <Unicode>»1</Unicode>
         </TextEquiv>
       </TextLine>
-      <TextLine id="r002-l025" index="1" custom="{&quot;heights&quot;: [41.1, 15.3], &quot;category&quot;: &quot;text&quot;}">
+      <TextLine id="r001-l025" index="1" custom="{&quot;heights&quot;: [41.1, 15.3], &quot;category&quot;: &quot;text&quot;}">
         <Coords points="0,777 61,780 64,723 0,720 0,721 0,777"/>
         <Baseline points="0,761 62,764"/>
         <TextEquiv conf="0.915">
           <Unicode>roz</Unicode>
         </TextEquiv>
       </TextLine>
-      <TextLine id="r002-l030" index="2" custom="{&quot;heights&quot;: [40.7, 14.9], &quot;category&quot;: &quot;text&quot;}">
+      <TextLine id="r001-l030" index="2" custom="{&quot;heights&quot;: [40.7, 14.9], &quot;category&quot;: &quot;text&quot;}">
         <Coords points="0,829 62,829 62,773 0,773 0,829"/>
         <Baseline points="0,814 62,814"/>
         <TextEquiv conf="0.400">
           <Unicode>už</Unicode>
         </TextEquiv>
       </TextLine>
-      <TextLine id="r002-l034" index="3" custom="{&quot;heights&quot;: [41.0, 15.1], &quot;category&quot;: &quot;text&quot;}">
+      <TextLine id="r001-l034" index="3" custom="{&quot;heights&quot;: [41.0, 15.1], &quot;category&quot;: &quot;text&quot;}">
         <Coords points="0,878 59,878 59,822 0,822 0,878"/>
         <Baseline points="0,863 59,863"/>
         <TextEquiv conf="0.705">
           <Unicode>av</Unicode>
         </TextEquiv>
       </TextLine>
-      <TextLine id="r002-l039" index="4" custom="{&quot;heights&quot;: [42.0, 15.4], &quot;category&quot;: &quot;text&quot;}">
+      <TextLine id="r001-l039" index="4" custom="{&quot;heights&quot;: [42.0, 15.4], &quot;category&quot;: &quot;text&quot;}">
         <Coords points="0,928 55,928 55,870 0,870 0,928"/>
         <Baseline points="0,912 55,912"/>
         <TextEquiv conf="0.953">
           <Unicode>by</Unicode>
         </TextEquiv>
       </TextLine>
-      <TextLine id="r002-l044" index="5" custom="{&quot;heights&quot;: [40.9, 14.8], &quot;category&quot;: &quot;text&quot;}">
+      <TextLine id="r001-l043" index="5" custom="{&quot;heights&quot;: [40.9, 14.8], &quot;category&quot;: &quot;text&quot;}">
         <Coords points="0,980 59,980 59,924 0,924 0,980"/>
         <Baseline points="0,965 59,965"/>
         <TextEquiv conf="0.574">
           <Unicode>těr</Unicode>
         </TextEquiv>
       </TextLine>
-      <TextLine id="r002-l050" index="6" custom="{&quot;heights&quot;: [40.7, 14.8], &quot;category&quot;: &quot;text&quot;}">
+      <TextLine id="r001-l050" index="6" custom="{&quot;heights&quot;: [40.7, 14.8], &quot;category&quot;: &quot;text&quot;}">
         <Coords points="0,1029 62,1029 62,973 0,973 0,1029"/>
         <Baseline points="0,1014 62,1014"/>
         <TextEquiv conf="0.757">
@@ -68,23 +68,23 @@
         </TextEquiv>
       </TextLine>
     </TextRegion>
-    <TextRegion id="r001" custom="{&quot;category&quot;: &quot;text&quot;}">
+    <TextRegion id="r003" custom="{&quot;category&quot;: &quot;text&quot;}">
       <Coords points="43,1288 0,1288 0,1452 55,1452 43,1288"/>
-      <TextLine id="r001-l072" index="0" custom="{&quot;heights&quot;: [47.0, 16.0], &quot;category&quot;: &quot;text&quot;}">
+      <TextLine id="r003-l072" index="0" custom="{&quot;heights&quot;: [47.0, 16.0], &quot;category&quot;: &quot;text&quot;}">
         <Coords points="0,1288 0,1351 43,1351 43,1288 0,1288"/>
         <Baseline points="0,1335 43,1335"/>
         <TextEquiv conf="1.000">
           <Unicode>20</Unicode>
         </TextEquiv>
       </TextLine>
-      <TextLine id="r001-l076" index="1" custom="{&quot;heights&quot;: [40.8, 14.7], &quot;category&quot;: &quot;text&quot;}">
+      <TextLine id="r003-l076" index="1" custom="{&quot;heights&quot;: [40.8, 14.7], &quot;category&quot;: &quot;text&quot;}">
         <Coords points="0,1402 49,1402 49,1370 48,1346 0,1346 0,1402"/>
         <Baseline points="0,1387 49,1387"/>
         <TextEquiv conf="0.992">
           <Unicode>ry</Unicode>
         </TextEquiv>
       </TextLine>
-      <TextLine id="r001-l080" index="2" custom="{&quot;heights&quot;: [42.9, 15.3], &quot;category&quot;: &quot;text&quot;}">
+      <TextLine id="r003-l080" index="2" custom="{&quot;heights&quot;: [42.9, 15.3], &quot;category&quot;: &quot;text&quot;}">
         <Coords points="0,1452 55,1452 51,1394 0,1394 0,1452"/>
         <Baseline points="0,1436 54,1436"/>
         <TextEquiv conf="0.997">
@@ -92,23 +92,23 @@
         </TextEquiv>
       </TextLine>
     </TextRegion>
-    <TextRegion id="r003" custom="{&quot;category&quot;: &quot;text&quot;}">
+    <TextRegion id="r002" custom="{&quot;category&quot;: &quot;text&quot;}">
       <Coords points="48,1766 55,1658 49,1611 0,1611 0,1763 48,1766"/>
-      <TextLine id="r003-l094" index="0" custom="{&quot;heights&quot;: [38.6, 14.3], &quot;category&quot;: &quot;text&quot;}">
+      <TextLine id="r002-l094" index="0" custom="{&quot;heights&quot;: [38.6, 14.3], &quot;category&quot;: &quot;text&quot;}">
         <Coords points="0,1611 0,1663 49,1663 49,1611 0,1611"/>
         <Baseline points="0,1649 49,1649"/>
         <TextEquiv conf="0.987">
           <Unicode>ru</Unicode>
         </TextEquiv>
       </TextLine>
-      <TextLine id="r003-l099" index="1" custom="{&quot;heights&quot;: [40.4, 15.4], &quot;category&quot;: &quot;text&quot;}">
+      <TextLine id="r002-l099" index="1" custom="{&quot;heights&quot;: [40.4, 15.4], &quot;category&quot;: &quot;text&quot;}">
         <Coords points="55,1658 0,1655 0,1705 0,1711 51,1714 55,1658"/>
         <Baseline points="0,1695 52,1698"/>
         <TextEquiv conf="0.797">
           <Unicode>sti</Unicode>
         </TextEquiv>
       </TextLine>
-      <TextLine id="r003-l103" index="2" custom="{&quot;heights&quot;: [39.6, 15.0], &quot;category&quot;: &quot;text&quot;}">
+      <TextLine id="r002-l103" index="2" custom="{&quot;heights&quot;: [39.6, 15.0], &quot;category&quot;: &quot;text&quot;}">
         <Coords points="48,1766 52,1711 0,1708 0,1763 48,1766"/>
         <Baseline points="0,1748 49,1751"/>
         <TextEquiv conf="0.999">
@@ -174,14 +174,14 @@
           <Unicode>n</Unicode>
         </TextEquiv>
       </TextLine>
-      <TextLine id="r000-l183" index="8" custom="{&quot;heights&quot;: [42.9, 15.1], &quot;category&quot;: &quot;text&quot;}">
+      <TextLine id="r000-l181" index="8" custom="{&quot;heights&quot;: [42.9, 15.1], &quot;category&quot;: &quot;text&quot;}">
         <Coords points="49,2441 0,2441 0,2500 49,2500 49,2441"/>
         <Baseline points="0,2484 49,2484"/>
         <TextEquiv conf="1.000">
           <Unicode>k</Unicode>
         </TextEquiv>
       </TextLine>
-      <TextLine id="r000-l187" index="9" custom="{&quot;heights&quot;: [42.4, 15.8], &quot;category&quot;: &quot;text&quot;}">
+      <TextLine id="r000-l186" index="9" custom="{&quot;heights&quot;: [42.4, 15.8], &quot;category&quot;: &quot;text&quot;}">
         <Coords points="42,2553 46,2495 0,2491 0,2550 42,2553"/>
         <Baseline points="0,2534 43,2537"/>
         <TextEquiv conf="0.834">
@@ -209,7 +209,7 @@
           <Unicode>c</Unicode>
         </TextEquiv>
       </TextLine>
-      <TextLine id="r000-l210" index="13" custom="{&quot;heights&quot;: [42.3, 15.0], &quot;category&quot;: &quot;text&quot;}">
+      <TextLine id="r000-l209" index="13" custom="{&quot;heights&quot;: [42.3, 15.0], &quot;category&quot;: &quot;text&quot;}">
         <Coords points="43,2741 0,2738 0,2795 38,2798 43,2741"/>
         <Baseline points="0,2780 39,2783"/>
         <TextEquiv conf="1.000">
@@ -275,7 +275,7 @@
           <Unicode>film, kde hoch mouše utrhl křídlo a po-</Unicode>
         </TextEquiv>
       </TextLine>
-      <TextLine id="r004-l016" index="4" custom="{&quot;heights&quot;: [38.8, 14.5], &quot;category&quot;: &quot;text&quot;}">
+      <TextLine id="r004-l017" index="4" custom="{&quot;heights&quot;: [38.8, 14.5], &quot;category&quot;: &quot;text&quot;}">
         <Coords points="1065,618 958,621 860,621 761,621 663,621 561,621 462,621 364,621 265,621 160,621 160,674 265,674 364,674 462,674 561,674 663,674 761,674 860,674 959,674 1064,671 1065,618"/>
         <Baseline points="160,660 265,660 364,660 462,660 561,660 663,660 761,660 860,660 959,660 1064,657"/>
         <TextEquiv conf="1.000">
@@ -296,28 +296,28 @@
           <Unicode>němž konečně i neživé věci účast bra-</Unicode>
         </TextEquiv>
       </TextLine>
-      <TextLine id="r004-l029" index="7" custom="{&quot;heights&quot;: [39.0, 15.1], &quot;category&quot;: &quot;text&quot;}">
+      <TextLine id="r004-l027" index="7" custom="{&quot;heights&quot;: [39.0, 15.1], &quot;category&quot;: &quot;text&quot;}">
         <Coords points="157,823 262,823 360,823 459,826 558,826 657,826 755,826 854,826 952,826 1060,826 1060,772 952,772 854,772 755,772 657,772 558,772 459,772 362,769 262,769 157,769 157,823"/>
         <Baseline points="157,808 262,808 361,808 459,811 558,811 657,811 755,811 854,811 952,811 1060,811"/>
         <TextEquiv conf="1.000">
           <Unicode>ly. Jak učitelka vypravuje, líbilo se to</Unicode>
         </TextEquiv>
       </TextLine>
-      <TextLine id="r004-l033" index="8" custom="{&quot;heights&quot;: [39.9, 15.3], &quot;category&quot;: &quot;text&quot;}">
+      <TextLine id="r004-l031" index="8" custom="{&quot;heights&quot;: [39.9, 15.3], &quot;category&quot;: &quot;text&quot;}">
         <Coords points="1060,829 1060,820 952,820 854,820 755,820 657,820 555,820 457,817 356,820 260,817 154,817 154,872 258,872 358,875 456,872 555,875 657,875 755,875 854,875 952,875 1059,875 1060,829"/>
         <Baseline points="154,857 259,857 358,860 456,857 555,860 657,860 755,860 854,860 952,860 1060,860"/>
         <TextEquiv conf="1.000">
           <Unicode>dětem náramně, o čemž svědčily po-</Unicode>
         </TextEquiv>
       </TextLine>
-      <TextLine id="r004-l036" index="9" custom="{&quot;heights&quot;: [40.3, 15.0], &quot;category&quot;: &quot;text&quot;}">
+      <TextLine id="r004-l037" index="9" custom="{&quot;heights&quot;: [40.3, 15.0], &quot;category&quot;: &quot;text&quot;}">
         <Coords points="1059,872 952,872 855,869 755,869 653,869 555,869 455,872 356,869 256,869 152,866 151,921 256,924 354,924 457,927 555,924 653,924 755,924 853,924 952,927 1058,927 1059,872"/>
         <Baseline points="151,906 256,909 354,909 456,912 555,909 653,909 755,909 854,909 952,912 1058,912"/>
         <TextEquiv conf="1.000">
           <Unicode>známky jejich. Kolik dětí as doma</Unicode>
         </TextEquiv>
       </TextLine>
-      <TextLine id="r004-l041" index="10" custom="{&quot;heights&quot;: [39.7, 14.7], &quot;category&quot;: &quot;text&quot;}">
+      <TextLine id="r004-l040" index="10" custom="{&quot;heights&quot;: [39.7, 14.7], &quot;category&quot;: &quot;text&quot;}">
         <Coords points="1058,925 952,925 855,922 752,922 653,922 553,919 453,919 351,919 254,916 148,916 148,970 252,970 351,973 453,973 551,973 653,976 752,976 853,976 952,979 1057,979 1058,925"/>
         <Baseline points="148,956 253,956 351,959 453,959 552,959 653,962 752,962 854,962 952,965 1057,965"/>
         <TextEquiv conf="1.000">
@@ -331,7 +331,7 @@
           <Unicode>Lehrerin«, roč. 30.)</Unicode>
         </TextEquiv>
       </TextLine>
-      <TextLine id="r004-l052" index="12" custom="{&quot;heights&quot;: [39.6, 14.6], &quot;category&quot;: &quot;text&quot;}">
+      <TextLine id="r004-l053" index="12" custom="{&quot;heights&quot;: [39.6, 14.6], &quot;category&quot;: &quot;text&quot;}">
         <Coords points="1056,1021 960,1024 872,1024 786,1024 695,1027 607,1027 522,1024 432,1024 342,1024 250,1024 250,1078 342,1078 432,1078 520,1078 607,1081 697,1081 786,1078 872,1078 962,1078 1056,1075 1056,1021"/>
         <Baseline points="250,1063 342,1063 432,1063 521,1063 607,1067 697,1067 786,1063 872,1063 962,1063 1056,1060"/>
         <TextEquiv conf="1.000">
@@ -366,7 +366,7 @@
           <Unicode>děna! Tma mocnou fantasii ještě po-</Unicode>
         </TextEquiv>
       </TextLine>
-      <TextLine id="r004-l070" index="17" custom="{&quot;heights&quot;: [40.4, 15.2], &quot;category&quot;: &quot;text&quot;}">
+      <TextLine id="r004-l071" index="17" custom="{&quot;heights&quot;: [40.4, 15.2], &quot;category&quot;: &quot;text&quot;}">
         <Coords points="148,1331 253,1331 352,1331 450,1328 549,1331 650,1331 749,1331 848,1331 946,1331 1054,1331 1054,1276 946,1276 848,1276 749,1276 650,1276 549,1276 451,1273 350,1276 253,1276 148,1276 148,1331"/>
         <Baseline points="148,1316 253,1316 351,1316 450,1313 549,1316 650,1316 749,1316 848,1316 946,1316 1054,1316"/>
         <TextEquiv conf="1.000">
@@ -380,14 +380,14 @@
           <Unicode>Popatřme na plakáty, co vše se slibu-</Unicode>
         </TextEquiv>
       </TextLine>
-      <TextLine id="r004-l078" index="19" custom="{&quot;heights&quot;: [40.4, 15.2], &quot;category&quot;: &quot;text&quot;}">
+      <TextLine id="r004-l079" index="19" custom="{&quot;heights&quot;: [40.4, 15.2], &quot;category&quot;: &quot;text&quot;}">
         <Coords points="148,1430 252,1430 351,1433 450,1433 549,1433 651,1433 749,1430 848,1430 947,1430 1055,1427 1053,1371 945,1374 848,1374 749,1374 649,1378 549,1378 450,1378 351,1378 254,1374 148,1374 148,1430"/>
         <Baseline points="148,1415 253,1415 351,1418 450,1418 549,1418 650,1418 749,1415 848,1415 946,1415 1054,1412"/>
         <TextEquiv conf="1.000">
           <Unicode>je! »Jenom pro dospělé!« Ale majetní-</Unicode>
         </TextEquiv>
       </TextLine>
-      <TextLine id="r004-l082" index="20" custom="{&quot;heights&quot;: [39.9, 14.9], &quot;category&quot;: &quot;text&quot;}">
+      <TextLine id="r004-l083" index="20" custom="{&quot;heights&quot;: [39.9, 14.9], &quot;category&quot;: &quot;text&quot;}">
         <Coords points="148,1479 253,1479 351,1479 450,1482 549,1482 650,1482 749,1482 848,1482 946,1479 1054,1479 1054,1424 946,1424 846,1427 749,1427 650,1427 549,1427 450,1427 353,1424 253,1424 148,1424 148,1479"/>
         <Baseline points="148,1464 253,1464 351,1464 450,1467 549,1467 650,1467 749,1467 848,1467 946,1464 1054,1464"/>
         <TextEquiv conf="1.000">
@@ -443,7 +443,7 @@
           <Unicode>vadlo umělou líhní, v níž nepravosti</Unicode>
         </TextEquiv>
       </TextLine>
-      <TextLine id="r004-l119" index="28" custom="{&quot;heights&quot;: [40.6, 15.0], &quot;category&quot;: &quot;text&quot;}">
+      <TextLine id="r004-l117" index="28" custom="{&quot;heights&quot;: [40.6, 15.0], &quot;category&quot;: &quot;text&quot;}">
         <Coords points="146,1886 250,1886 348,1886 447,1886 546,1886 647,1886 746,1886 845,1886 943,1883 1051,1883 1051,1827 943,1827 843,1831 746,1830 647,1830 546,1830 447,1830 348,1830 250,1830 146,1830 146,1886"/>
         <Baseline points="146,1871 250,1871 348,1871 447,1871 546,1871 647,1871 746,1871 845,1871 943,1868 1051,1868"/>
         <TextEquiv conf="1.000">
@@ -492,7 +492,7 @@
           <Unicode>Zmíněný již odb. učitel Gensch</Unicode>
         </TextEquiv>
       </TextLine>
-      <TextLine id="r004-l152" index="35" custom="{&quot;heights&quot;: [39.9, 15.1], &quot;category&quot;: &quot;text&quot;}">
+      <TextLine id="r004-l153" index="35" custom="{&quot;heights&quot;: [39.9, 15.1], &quot;category&quot;: &quot;text&quot;}">
         <Coords points="142,2238 247,2238 345,2238 443,2237 543,2241 645,2241 743,2238 841,2237 940,2241 1048,2241 1048,2186 940,2186 843,2183 743,2183 643,2186 543,2186 445,2183 345,2183 247,2183 144,2183 142,2238"/>
         <Baseline points="143,2222 247,2222 345,2222 444,2222 543,2226 644,2226 743,2222 842,2222 940,2226 1048,2226"/>
         <TextEquiv conf="1.000">
@@ -569,7 +569,7 @@
           <Unicode>Dobře pozoroval Dr. IkeSpier,</Unicode>
         </TextEquiv>
       </TextLine>
-      <TextLine id="r004-l209" index="46" custom="{&quot;heights&quot;: [38.6, 14.8], &quot;category&quot;: &quot;text&quot;}">
+      <TextLine id="r004-l210" index="46" custom="{&quot;heights&quot;: [38.6, 14.8], &quot;category&quot;: &quot;text&quot;}">
         <Coords points="136,2795 240,2795 339,2795 441,2795 539,2795 641,2795 740,2798 842,2798 941,2798 1048,2795 1047,2742 939,2745 842,2745 740,2745 642,2742 539,2742 441,2742 339,2742 240,2742 136,2742 136,2795"/>
         <Baseline points="136,2780 240,2780 339,2780 441,2780 539,2780 641,2780 740,2783 842,2783 940,2783 1048,2780"/>
         <TextEquiv conf="1.000">
@@ -656,7 +656,7 @@
           <Unicode>děvčata touží po svedení, že hoši chtě-</Unicode>
         </TextEquiv>
       </TextLine>
-      <TextLine id="r016-l020" index="5" custom="{&quot;heights&quot;: [40.2, 15.3], &quot;category&quot;: &quot;text&quot;}">
+      <TextLine id="r016-l019" index="5" custom="{&quot;heights&quot;: [40.2, 15.3], &quot;category&quot;: &quot;text&quot;}">
         <Coords points="2009,672 1903,669 1803,669 1705,669 1606,669 1504,669 1406,669 1307,669 1208,669 1104,669 1104,724 1208,724 1307,724 1406,724 1504,724 1606,724 1705,724 1803,724 1901,724 2008,727 2009,672"/>
         <Baseline points="1104,709 1208,709 1307,709 1406,709 1504,709 1606,709 1705,709 1803,709 1902,709 2009,712"/>
         <TextEquiv conf="1.000">
@@ -670,35 +670,35 @@
           <Unicode>mužů svedl již kinematograf do náručí</Unicode>
         </TextEquiv>
       </TextLine>
-      <TextLine id="r016-l027" index="7" custom="{&quot;heights&quot;: [39.7, 15.0], &quot;category&quot;: &quot;text&quot;}">
+      <TextLine id="r016-l029" index="7" custom="{&quot;heights&quot;: [39.7, 15.0], &quot;category&quot;: &quot;text&quot;}">
         <Coords points="2008,771 1902,771 1804,768 1705,768 1606,768 1504,768 1406,768 1307,768 1208,768 1104,768 1104,823 1208,823 1307,823 1406,823 1504,823 1606,823 1705,823 1803,823 1902,826 2007,826 2008,771"/>
         <Baseline points="1104,808 1208,808 1307,808 1406,808 1504,808 1606,808 1705,808 1803,808 1902,811 2007,811"/>
         <TextEquiv conf="1.000">
           <Unicode>prostitutek! Spier má za to, že četné</Unicode>
         </TextEquiv>
       </TextLine>
-      <TextLine id="r016-l031" index="8" custom="{&quot;heights&quot;: [39.1, 14.7], &quot;category&quot;: &quot;text&quot;}">
+      <TextLine id="r016-l033" index="8" custom="{&quot;heights&quot;: [39.1, 14.7], &quot;category&quot;: &quot;text&quot;}">
         <Coords points="2007,821 1902,821 1803,821 1705,821 1603,821 1504,821 1406,821 1304,821 1206,818 1100,818 1100,872 1205,872 1304,875 1406,875 1504,875 1603,875 1705,875 1803,875 1902,875 2006,875 2007,821"/>
         <Baseline points="1100,857 1205,857 1304,860 1406,860 1504,860 1603,860 1705,860 1803,860 1902,860 2006,860"/>
         <TextEquiv conf="1.000">
           <Unicode>jsou případy porušení věrnosti man-</Unicode>
         </TextEquiv>
       </TextLine>
-      <TextLine id="r016-l037" index="9" custom="{&quot;heights&quot;: [39.6, 14.3], &quot;category&quot;: &quot;text&quot;}">
+      <TextLine id="r016-l036" index="9" custom="{&quot;heights&quot;: [39.6, 14.3], &quot;category&quot;: &quot;text&quot;}">
         <Coords points="2006,873 1902,873 1803,873 1701,873 1603,873 1501,873 1403,873 1302,870 1202,870 1099,867 1097,921 1202,924 1300,924 1403,927 1501,927 1603,927 1701,927 1803,927 1902,927 2005,927 2006,873"/>
         <Baseline points="1097,906 1202,909 1301,909 1403,912 1501,912 1603,912 1701,912 1803,912 1902,912 2006,912"/>
         <TextEquiv conf="1.000">
           <Unicode>želské, jež možno čítati na vrub půso-</Unicode>
         </TextEquiv>
       </TextLine>
-      <TextLine id="r016-l040" index="10" custom="{&quot;heights&quot;: [39.2, 14.0], &quot;category&quot;: &quot;text&quot;}">
+      <TextLine id="r016-l041" index="10" custom="{&quot;heights&quot;: [39.2, 14.0], &quot;category&quot;: &quot;text&quot;}">
         <Coords points="2006,919 1899,919 1800,919 1701,919 1600,919 1501,919 1403,919 1301,919 1202,919 1098,916 1097,970 1202,973 1301,973 1403,973 1501,973 1600,973 1701,973 1800,973 1899,973 2005,973 2006,919"/>
         <Baseline points="1097,956 1202,959 1301,959 1403,959 1501,959 1600,959 1701,959 1800,959 1899,959 2005,959"/>
         <TextEquiv conf="1.000">
           <Unicode>bení kinematografu.« (»Neue Genera-</Unicode>
         </TextEquiv>
       </TextLine>
-      <TextLine id="r016-l047" index="11" custom="{&quot;heights&quot;: [42.1, 15.3], &quot;category&quot;: &quot;text&quot;}">
+      <TextLine id="r016-l048" index="11" custom="{&quot;heights&quot;: [42.1, 15.3], &quot;category&quot;: &quot;text&quot;}">
         <Coords points="1096,1020 1137,1023 1171,1023 1205,1023 1239,1023 1273,1023 1307,1023 1341,1023 1375,1023 1415,1023 1415,966 1375,966 1341,966 1307,966 1273,966 1239,966 1205,966 1171,966 1137,966 1101,963 1096,1016 1096,1020"/>
         <Baseline points="1097,1005 1137,1008 1171,1008 1205,1008 1239,1008 1273,1008 1307,1008 1341,1008 1375,1008 1415,1008"/>
         <TextEquiv conf="1.000">
@@ -740,7 +740,7 @@
           <Unicode>ření!</Unicode>
         </TextEquiv>
       </TextLine>
-      <TextLine id="r016-l071" index="17" custom="{&quot;heights&quot;: [39.8, 14.6], &quot;category&quot;: &quot;text&quot;}">
+      <TextLine id="r016-l070" index="17" custom="{&quot;heights&quot;: [39.8, 14.6], &quot;category&quot;: &quot;text&quot;}">
         <Coords points="2000,1285 1909,1283 1819,1283 1732,1283 1643,1283 1554,1283 1467,1283 1379,1279 1288,1279 1197,1276 1195,1331 1288,1334 1377,1334 1467,1337 1554,1337 1643,1337 1732,1337 1819,1337 1908,1337 1999,1340 2000,1285"/>
         <Baseline points="1196,1316 1288,1319 1378,1319 1467,1322 1554,1322 1643,1322 1732,1322 1819,1322 1908,1322 2000,1325"/>
         <TextEquiv conf="1.000">
@@ -754,14 +754,14 @@
           <Unicode>který zvlášť mocně na mládež působí!</Unicode>
         </TextEquiv>
       </TextLine>
-      <TextLine id="r016-l079" index="19" custom="{&quot;heights&quot;: [40.1, 14.7], &quot;category&quot;: &quot;text&quot;}">
+      <TextLine id="r016-l078" index="19" custom="{&quot;heights&quot;: [40.1, 14.7], &quot;category&quot;: &quot;text&quot;}">
         <Coords points="1999,1384 1894,1381 1794,1381 1697,1378 1597,1378 1498,1378 1399,1378 1301,1378 1203,1375 1097,1375 1097,1430 1202,1430 1301,1433 1399,1433 1498,1433 1597,1433 1695,1433 1794,1436 1892,1436 1998,1439 1999,1384"/>
         <Baseline points="1097,1415 1202,1415 1301,1418 1399,1418 1498,1418 1597,1418 1695,1418 1794,1421 1893,1421 1998,1424"/>
         <TextEquiv conf="1.000">
           <Unicode>Dnešní doba, zvyklá rychle jednati, je</Unicode>
         </TextEquiv>
       </TextLine>
-      <TextLine id="r016-l083" index="20" custom="{&quot;heights&quot;: [40.4, 15.0], &quot;category&quot;: &quot;text&quot;}">
+      <TextLine id="r016-l082" index="20" custom="{&quot;heights&quot;: [40.4, 15.0], &quot;category&quot;: &quot;text&quot;}">
         <Coords points="1998,1433 1893,1433 1795,1430 1695,1430 1597,1430 1495,1430 1398,1427 1298,1427 1200,1424 1094,1424 1094,1462 1094,1479 1199,1479 1298,1482 1396,1482 1495,1485 1597,1485 1695,1485 1794,1485 1893,1488 1997,1488 1998,1433"/>
         <Baseline points="1094,1464 1199,1464 1298,1467 1396,1467 1495,1470 1597,1470 1695,1470 1794,1470 1893,1473 1997,1473"/>
         <TextEquiv conf="1.000">
@@ -866,7 +866,7 @@
           <Unicode>špatné vzory, špatné jednání sugestiv-</Unicode>
         </TextEquiv>
       </TextLine>
-      <TextLine id="r016-l153" index="35" custom="{&quot;heights&quot;: [40.2, 15.4], &quot;category&quot;: &quot;text&quot;}">
+      <TextLine id="r016-l152" index="35" custom="{&quot;heights&quot;: [40.2, 15.4], &quot;category&quot;: &quot;text&quot;}">
         <Coords points="1999,2195 1891,2192 1791,2192 1689,2192 1591,2192 1489,2192 1391,2188 1290,2185 1191,2182 1090,2182 1089,2238 1189,2238 1288,2241 1390,2244 1489,2247 1591,2247 1689,2247 1791,2247 1889,2247 1997,2250 1999,2195"/>
         <Baseline points="1089,2222 1190,2222 1288,2226 1390,2229 1489,2232 1591,2232 1689,2232 1791,2232 1890,2232 1997,2235"/>
         <TextEquiv conf="1.000">
@@ -901,14 +901,14 @@
           <Unicode>mi veškeré surovosti a nemravnosti.</Unicode>
         </TextEquiv>
       </TextLine>
-      <TextLine id="r016-l181" index="40" custom="{&quot;heights&quot;: [40.4, 15.5], &quot;category&quot;: &quot;text&quot;}">
+      <TextLine id="r016-l182" index="40" custom="{&quot;heights&quot;: [40.4, 15.5], &quot;category&quot;: &quot;text&quot;}">
         <Coords points="1991,2441 1883,2441 1785,2441 1685,2444 1587,2444 1486,2444 1387,2444 1288,2444 1190,2444 1085,2444 1085,2500 1190,2500 1288,2500 1387,2500 1486,2500 1587,2500 1687,2500 1785,2497 1883,2497 1991,2497 1991,2441"/>
         <Baseline points="1085,2484 1190,2484 1288,2484 1387,2484 1486,2484 1587,2484 1686,2484 1785,2481 1883,2481 1991,2481"/>
         <TextEquiv conf="1.000">
           <Unicode>Jest jisto, že musí na disponovaná in-</Unicode>
         </TextEquiv>
       </TextLine>
-      <TextLine id="r016-l186" index="41" custom="{&quot;heights&quot;: [40.5, 15.4], &quot;category&quot;: &quot;text&quot;}">
+      <TextLine id="r016-l187" index="41" custom="{&quot;heights&quot;: [40.5, 15.4], &quot;category&quot;: &quot;text&quot;}">
         <Coords points="1991,2496 1883,2496 1786,2493 1686,2493 1587,2493 1485,2496 1387,2496 1288,2496 1191,2493 1085,2493 1085,2549 1189,2549 1288,2552 1387,2552 1486,2552 1587,2549 1686,2549 1784,2549 1883,2552 1991,2552 1991,2496"/>
         <Baseline points="1085,2534 1190,2534 1288,2537 1387,2537 1486,2537 1587,2534 1686,2534 1785,2534 1883,2537 1991,2537"/>
         <TextEquiv conf="1.000">
@@ -978,14 +978,14 @@
           <Unicode>pad třetí: 11letý hoch K. navštěvoval</Unicode>
         </TextEquiv>
       </TextLine>
-      <TextLine id="r016-l234" index="51" custom="{&quot;heights&quot;: [41.0, 15.1], &quot;category&quot;: &quot;text&quot;}">
+      <TextLine id="r016-l233" index="51" custom="{&quot;heights&quot;: [41.0, 15.1], &quot;category&quot;: &quot;text&quot;}">
         <Coords points="1991,2998 1883,2998 1785,2998 1686,2998 1587,2998 1489,2998 1390,2998 1292,2998 1193,2998 1088,2998 1088,3054 1193,3054 1292,3054 1390,3054 1489,3054 1587,3054 1686,3054 1785,3054 1883,3054 1991,3054 1991,2998"/>
         <Baseline points="1088,3039 1193,3039 1292,3039 1390,3039 1489,3039 1587,3039 1686,3039 1785,3039 1883,3039 1991,3039"/>
         <TextEquiv conf="1.000">
           <Unicode>kina denně. Následek se brzo objevil.</Unicode>
         </TextEquiv>
       </TextLine>
-      <TextLine id="r016-l237" index="52" custom="{&quot;heights&quot;: [41.9, 15.2], &quot;category&quot;: &quot;text&quot;}">
+      <TextLine id="r016-l236" index="52" custom="{&quot;heights&quot;: [41.9, 15.2], &quot;category&quot;: &quot;text&quot;}">
         <Coords points="1991,3107 1991,3050 1883,3050 1786,3047 1686,3047 1587,3047 1489,3047 1390,3047 1292,3047 1193,3047 1088,3047 1088,3104 1193,3104 1292,3104 1390,3104 1489,3104 1587,3104 1686,3104 1784,3104 1870,3106 1991,3107"/>
         <Baseline points="1088,3089 1193,3089 1292,3089 1390,3089 1489,3089 1587,3089 1686,3089 1785,3089 1883,3092 1991,3092"/>
         <TextEquiv conf="1.000">
@@ -1023,14 +1023,14 @@
           <Unicode>dalo by se sestaviti hojnost. Uvedeme</Unicode>
         </TextEquiv>
       </TextLine>
-      <TextLine id="r022-l017" index="4" custom="{&quot;heights&quot;: [40.6, 15.3], &quot;category&quot;: &quot;text&quot;}">
+      <TextLine id="r022-l016" index="4" custom="{&quot;heights&quot;: [40.6, 15.3], &quot;category&quot;: &quot;text&quot;}">
         <Coords points="2953,672 2954,625 2849,622 2751,619 2651,619 2552,619 2454,619 2355,619 2256,619 2158,619 2053,619 2053,675 2158,675 2256,675 2355,675 2454,675 2552,675 2651,675 2749,675 2848,678 2952,681 2953,672"/>
         <Baseline points="2053,660 2158,660 2256,660 2355,660 2454,660 2552,660 2651,660 2750,660 2848,663 2953,666"/>
         <TextEquiv conf="1.000">
           <Unicode>jen zajímavější! Citovaný již Lang</Unicode>
         </TextEquiv>
       </TextLine>
-      <TextLine id="r022-l019" index="5" custom="{&quot;heights&quot;: [40.1, 15.3], &quot;category&quot;: &quot;text&quot;}">
+      <TextLine id="r022-l020" index="5" custom="{&quot;heights&quot;: [40.1, 15.3], &quot;category&quot;: &quot;text&quot;}">
         <Coords points="2053,724 2155,724 2254,724 2352,721 2451,721 2549,721 2647,721 2746,724 2845,724 2950,724 2950,669 2845,669 2746,669 2649,666 2549,666 2451,666 2352,666 2252,669 2155,669 2053,669 2053,675 2053,724"/>
         <Baseline points="2053,709 2155,709 2253,709 2352,706 2451,706 2549,706 2648,706 2746,709 2845,709 2950,709"/>
         <TextEquiv conf="1.000">
@@ -1044,7 +1044,7 @@
           <Unicode>mene: Dva 18letí mladíci přepadli v o-</Unicode>
         </TextEquiv>
       </TextLine>
-      <TextLine id="r022-l026" index="7" custom="{&quot;heights&quot;: [40.5, 14.9], &quot;category&quot;: &quot;text&quot;}">
+      <TextLine id="r022-l028" index="7" custom="{&quot;heights&quot;: [40.5, 14.9], &quot;category&quot;: &quot;text&quot;}">
         <Coords points="2949,773 2843,770 2743,770 2645,770 2546,770 2449,767 2349,767 2250,767 2153,764 2050,767 2048,823 2151,819 2250,823 2349,823 2447,823 2546,826 2645,826 2743,826 2842,826 2947,829 2949,773"/>
         <Baseline points="2048,808 2152,805 2250,808 2349,808 2447,808 2546,811 2645,811 2743,811 2842,811 2947,814"/>
         <TextEquiv conf="1.000">
@@ -1072,7 +1072,7 @@
           <Unicode>provádí, nesčetněkrát v kinematogra-</Unicode>
         </TextEquiv>
       </TextLine>
-      <TextLine id="r022-l048" index="11" custom="{&quot;heights&quot;: [40.7, 15.1], &quot;category&quot;: &quot;text&quot;}">
+      <TextLine id="r022-l047" index="11" custom="{&quot;heights&quot;: [40.7, 15.1], &quot;category&quot;: &quot;text&quot;}">
         <Coords points="2940,999 2939,967 2835,970 2737,970 2639,970 2540,970 2443,967 2343,967 2244,967 2147,964 2043,964 2041,1020 2145,1020 2244,1023 2343,1023 2441,1023 2540,1026 2639,1026 2737,1026 2836,1026 2939,1023 2940,999"/>
         <Baseline points="2041,1005 2145,1005 2244,1008 2343,1008 2441,1008 2540,1011 2639,1011 2737,1011 2836,1011 2940,1008"/>
         <TextEquiv conf="1.000">
@@ -1198,7 +1198,7 @@
           <Unicode>domů vracel.</Unicode>
         </TextEquiv>
       </TextLine>
-      <TextLine id="r022-l117" index="29" custom="{&quot;heights&quot;: [43.4, 14.8], &quot;category&quot;: &quot;text&quot;}">
+      <TextLine id="r022-l118" index="29" custom="{&quot;heights&quot;: [43.4, 14.8], &quot;category&quot;: &quot;text&quot;}">
         <Coords points="2885,1889 2885,1831 2839,1831 2802,1831 2765,1831 2728,1831 2691,1828 2651,1828 2614,1828 2571,1828 2571,1886 2614,1886 2651,1886 2687,1886 2705,1887 2885,1889"/>
         <Baseline points="2571,1871 2614,1871 2651,1871 2688,1871 2728,1874 2765,1874 2802,1874 2839,1874 2885,1874"/>
         <TextEquiv conf="1.000">
@@ -1348,14 +1348,14 @@
           <Unicode>Stud. a vojenský lístek do sálu 80 hal.,</Unicode>
         </TextEquiv>
       </TextLine>
-      <TextLine id="r021-l233" index="20" custom="{&quot;heights&quot;: [39.8, 15.1], &quot;category&quot;: &quot;text&quot;}">
+      <TextLine id="r021-l234" index="20" custom="{&quot;heights&quot;: [39.8, 15.1], &quot;category&quot;: &quot;text&quot;}">
         <Coords points="2926,2999 2822,3003 2726,2999 2626,2999 2528,2999 2429,2999 2330,2999 2232,2999 2133,2999 2028,2999 2028,3054 2133,3054 2232,3054 2330,3054 2429,3054 2528,3054 2626,3054 2724,3054 2824,3057 2929,3054 2926,2999"/>
         <Baseline points="2028,3039 2133,3039 2232,3039 2330,3039 2429,3039 2528,3039 2626,3039 2725,3039 2824,3042 2928,3039"/>
         <TextEquiv conf="1.000">
           <Unicode>na galerii 50 h. Vstupenky prodává knih-</Unicode>
         </TextEquiv>
       </TextLine>
-      <TextLine id="r021-l236" index="21" custom="{&quot;heights&quot;: [41.0, 14.8], &quot;category&quot;: &quot;text&quot;}">
+      <TextLine id="r021-l237" index="21" custom="{&quot;heights&quot;: [41.0, 14.8], &quot;category&quot;: &quot;text&quot;}">
         <Coords points="2822,3051 2726,3048 2639,3048 2552,3048 2466,3048 2377,3048 2290,3048 2204,3048 2118,3048 2025,3048 2025,3103 2118,3103 2204,3103 2290,3103 2377,3103 2466,3103 2552,3103 2639,3103 2724,3103 2820,3106 2822,3051"/>
         <Baseline points="2025,3089 2118,3089 2204,3089 2290,3089 2377,3089 2466,3089 2552,3089 2639,3089 2725,3089 2820,3092"/>
         <TextEquiv conf="1.000">
@@ -1365,7 +1365,7 @@
     </TextRegion>
     <TextRegion id="r029" custom="{&quot;category&quot;: &quot;text&quot;}">
       <Coords points="3035,850 3056,1309 3294,1306 3775,1315 3782,980 3696,980 3696,924 3782,924 3782,571 3045,562 3035,850"/>
-      <TextLine id="r029-l028" index="0" custom="{&quot;heights&quot;: [246.1, 41.9], &quot;category&quot;: &quot;text&quot;}">
+      <TextLine id="r029-l026" index="0" custom="{&quot;heights&quot;: [246.1, 41.9], &quot;category&quot;: &quot;text&quot;}">
         <Coords points="3782,571 3693,571 3613,571 3538,568 3449,568 3411,566 3282,565 3203,565 3122,565 3045,562 3035,850 3122,853 3203,853 3286,853 3364,853 3449,856 3528,856 3613,859 3693,859 3782,859 3782,571"/>
         <Baseline points="3036,808 3122,811 3203,811 3286,811 3366,811 3449,814 3529,814 3613,817 3693,817 3782,817"/>
         <TextEquiv conf="0.921">
@@ -1393,7 +1393,7 @@
           <Unicode></Unicode>
         </TextEquiv>
       </TextLine>
-      <TextLine id="r029-l053" index="4" custom="{&quot;heights&quot;: [64.3, 18.1], &quot;category&quot;: &quot;text&quot;}">
+      <TextLine id="r029-l052" index="4" custom="{&quot;heights&quot;: [64.3, 18.1], &quot;category&quot;: &quot;text&quot;}">
         <Coords points="3191,1082 3240,1078 3286,1078 3332,1078 3378,1078 3423,1078 3471,1082 3517,1082 3563,1082 3616,1082 3616,999 3563,999 3517,999 3471,999 3429,996 3378,996 3332,996 3286,996 3240,996 3186,999 3191,1082"/>
         <Baseline points="3190,1063 3240,1060 3286,1060 3332,1060 3378,1060 3425,1060 3471,1063 3517,1063 3563,1063 3616,1063"/>
         <TextEquiv conf="0.352">
@@ -1417,7 +1417,7 @@
     </TextRegion>
     <TextRegion id="r032" custom="{&quot;category&quot;: &quot;text&quot;}">
       <Coords points="3810,924 3696,924 3696,980 3810,980 3810,924"/>
-      <TextLine id="r032-l043" index="0" custom="{&quot;heights&quot;: [41.1, 15.0], &quot;category&quot;: &quot;text&quot;}">
+      <TextLine id="r032-l044" index="0" custom="{&quot;heights&quot;: [41.1, 15.0], &quot;category&quot;: &quot;text&quot;}">
         <Coords points="3751,924 3696,924 3696,980 3751,980 3810,980 3810,924 3751,924"/>
         <Baseline points="3696,965 3751,965 3810,965"/>
         <TextEquiv conf="1.000">
@@ -1469,7 +1469,7 @@
           <Unicode>beraničky„ „ 2.—</Unicode>
         </TextEquiv>
       </TextLine>
-      <TextLine id="r027-l182" index="6" custom="{&quot;heights&quot;: [66.3, 18.1], &quot;category&quot;: &quot;text&quot;}">
+      <TextLine id="r027-l183" index="6" custom="{&quot;heights&quot;: [66.3, 18.1], &quot;category&quot;: &quot;text&quot;}">
         <Coords points="3025,2419 3028,2503 3116,2499 3202,2499 3288,2503 3375,2506 3458,2506 3544,2509 3631,2512 3718,2512 3809,2509 3808,2424 3715,2427 3631,2427 3547,2424 3461,2421 3375,2421 3291,2418 3205,2415 3116,2415 3025,2418 3025,2419"/>
         <Baseline points="3027,2484 3116,2481 3203,2481 3289,2484 3375,2488 3458,2488 3545,2491 3631,2494 3717,2494 3808,2491"/>
         <TextEquiv conf="1.000">
@@ -1535,7 +1535,7 @@
           <Unicode>raglány „ „ 20.—</Unicode>
         </TextEquiv>
       </TextLine>
-      <TextLine id="r028-l118" index="7" custom="{&quot;heights&quot;: [33.7, 12.1], &quot;category&quot;: &quot;text&quot;}">
+      <TextLine id="r028-l119" index="7" custom="{&quot;heights&quot;: [33.7, 12.1], &quot;category&quot;: &quot;text&quot;}">
         <Coords points="3446,1883 3492,1883 3532,1883 3572,1883 3613,1886 3653,1886 3694,1886 3734,1883 3773,1880 3822,1880 3822,1834 3773,1834 3730,1837 3690,1840 3653,1840 3613,1840 3575,1837 3532,1837 3492,1837 3446,1837 3446,1883"/>
         <Baseline points="3446,1871 3492,1871 3532,1871 3573,1871 3613,1874 3653,1874 3693,1874 3733,1871 3773,1868 3822,1868"/>
         <TextEquiv conf="1.000">
@@ -1650,7 +1650,7 @@
     </TextRegion>
     <TextRegion id="r026" custom="{&quot;category&quot;: &quot;text&quot;}">
       <Coords points="3067,2659 3018,2659 3018,2722 3067,2722 3067,2659"/>
-      <TextLine id="r026-l203" index="0" custom="{&quot;heights&quot;: [47.0, 15.6], &quot;category&quot;: &quot;text&quot;}">
+      <TextLine id="r026-l202" index="0" custom="{&quot;heights&quot;: [47.0, 15.6], &quot;category&quot;: &quot;text&quot;}">
         <Coords points="3018,2659 3018,2722 3067,2722 3067,2659 3018,2659"/>
         <Baseline points="3018,2706 3067,2706"/>
         <TextEquiv conf="0.000">
@@ -1708,7 +1708,7 @@
     </TextRegion>
     <TextRegion id="r025" custom="{&quot;category&quot;: &quot;text&quot;}">
       <Coords points="3012,2658 2971,2658 2971,2722 3012,2722 3012,2658"/>
-      <TextLine id="r025-l202" index="0" custom="{&quot;heights&quot;: [48.1, 15.7], &quot;category&quot;: &quot;text&quot;}">
+      <TextLine id="r025-l203" index="0" custom="{&quot;heights&quot;: [48.1, 15.7], &quot;category&quot;: &quot;text&quot;}">
         <Coords points="2971,2658 2971,2722 3012,2722 3012,2658 2971,2658"/>
         <Baseline points="2971,2706 3012,2706"/>
         <TextEquiv conf="0.651">
@@ -1748,7 +1748,7 @@
     </TextRegion>
     <TextRegion id="r006" custom="{&quot;category&quot;: &quot;text&quot;}">
       <Coords points="361,3193 361,3243 472,3243 555,3296 845,3296 851,3191 361,3193"/>
-      <TextLine id="r006-l242" index="0" custom="{&quot;heights&quot;: [37.5, 13.0], &quot;category&quot;: &quot;text&quot;}">
+      <TextLine id="r006-l241" index="0" custom="{&quot;heights&quot;: [37.5, 13.0], &quot;category&quot;: &quot;text&quot;}">
         <Coords points="361,3243 419,3243 472,3243 524,3243 576,3243 632,3243 684,3243 737,3243 789,3240 848,3240 851,3191 767,3191 734,3193 684,3193 632,3193 576,3193 524,3193 472,3193 419,3193 361,3193 361,3243"/>
         <Baseline points="361,3230 419,3230 472,3230 524,3230 576,3230 632,3230 684,3230 737,3230 789,3227 849,3227"/>
         <TextEquiv conf="0.623">
@@ -1765,7 +1765,7 @@
     </TextRegion>
     <TextRegion id="r018" custom="{&quot;category&quot;: &quot;text&quot;}">
       <Coords points="1105,3192 1103,3244 1134,3299 1923,3299 1945,3247 1945,3195 1105,3192"/>
-      <TextLine id="r018-l241" index="0" custom="{&quot;heights&quot;: [38.1, 13.4], &quot;category&quot;: &quot;text&quot;}">
+      <TextLine id="r018-l242" index="0" custom="{&quot;heights&quot;: [38.1, 13.4], &quot;category&quot;: &quot;text&quot;}">
         <Coords points="1103,3244 1199,3247 1292,3247 1384,3247 1476,3247 1569,3247 1661,3247 1754,3247 1846,3247 1945,3247 1945,3195 1846,3195 1754,3195 1661,3195 1569,3195 1476,3195 1384,3195 1292,3195 1199,3195 1105,3192 1103,3244"/>
         <Baseline points="1104,3230 1199,3233 1292,3233 1384,3233 1476,3233 1569,3233 1661,3233 1754,3233 1846,3233 1945,3233"/>
         <TextEquiv conf="0.918">
@@ -1824,18 +1824,18 @@
           <Unicode></Unicode>
         </TextEquiv>
       </TextLine>
-      <TextLine id="r014-l256" index="6" custom="{&quot;heights&quot;: [306.9, 50.5], &quot;category&quot;: &quot;text&quot;}">
-        <Coords points="3153,3836 3104,3836 3104,4193 3153,4193 3153,3836"/>
-        <Baseline points="3104,4143 3153,4143"/>
-        <TextEquiv conf="0.553">
-          <Unicode>y</Unicode>
-        </TextEquiv>
-      </TextLine>
-      <TextLine id="r014-l257" index="7" custom="{&quot;heights&quot;: [303.4, 50.7], &quot;category&quot;: &quot;text&quot;}">
+      <TextLine id="r014-l255" index="6" custom="{&quot;heights&quot;: [303.4, 50.7], &quot;category&quot;: &quot;text&quot;}">
         <Coords points="3078,4194 3095,4194 3095,3839 3061,3839 3061,4166 3078,4194"/>
         <Baseline points="3061,4143 3095,4143"/>
         <TextEquiv conf="0.000">
           <Unicode></Unicode>
+        </TextEquiv>
+      </TextLine>
+      <TextLine id="r014-l257" index="7" custom="{&quot;heights&quot;: [306.9, 50.5], &quot;category&quot;: &quot;text&quot;}">
+        <Coords points="3153,3836 3104,3836 3104,4193 3153,4193 3153,3836"/>
+        <Baseline points="3104,4143 3153,4143"/>
+        <TextEquiv conf="0.553">
+          <Unicode>y</Unicode>
         </TextEquiv>
       </TextLine>
     </TextRegion>
@@ -1879,7 +1879,7 @@
     </TextRegion>
     <TextRegion id="r023" custom="{&quot;category&quot;: &quot;text&quot;}">
       <Coords points="2879,4192 2928,4195 2947,3889 2898,3886 2879,4192"/>
-      <TextLine id="r023-l255" index="0" custom="{&quot;heights&quot;: [256.9, 49.7], &quot;category&quot;: &quot;text&quot;}">
+      <TextLine id="r023-l256" index="0" custom="{&quot;heights&quot;: [256.9, 49.7], &quot;category&quot;: &quot;text&quot;}">
         <Coords points="2928,4195 2947,3889 2898,3886 2879,4192 2928,4195"/>
         <Baseline points="2882,4143 2931,4146"/>
         <TextEquiv conf="0.000">

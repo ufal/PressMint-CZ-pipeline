@@ -7,7 +7,7 @@
     </sourceImageInformation>
     <OCRProcessing ID="IdOcr">
       <ocrProcessingStep>
-        <processingDateTime>2026-06-01T16:40:03.479774</processingDateTime>
+        <processingDateTime>2026-06-29T13:59:46.338861</processingDateTime>
         <processingSoftware>
           <softwareCreator>Project PERO</softwareCreator>
           <softwareName>PERO OCR</softwareName>
@@ -57,7 +57,7 @@
             <SP WIDTH="4" VPOS="209" HPOS="989"/>
             <String CONTENT="způ-" HEIGHT="45" WIDTH="74" VPOS="208" HPOS="1017" WC="1"/>
           </TextLine>
-          <TextLine ID="line_r003-l007" BASELINE="297" VPOS="266" HPOS="51" HEIGHT="45" WIDTH="331">
+          <TextLine ID="line_r003-l006" BASELINE="297" VPOS="266" HPOS="51" HEIGHT="45" WIDTH="331">
             <String CONTENT="sobem" HEIGHT="43" WIDTH="93" VPOS="265" HPOS="61" WC="1"/>
             <SP WIDTH="4" VPOS="265" HPOS="154"/>
             <String CONTENT="obíhá," HEIGHT="44" WIDTH="105" VPOS="265" HPOS="189" WC="1"/>
@@ -1480,7 +1480,7 @@
             <SP WIDTH="4" VPOS="555" HPOS="2047"/>
             <String CONTENT="zře-" HEIGHT="47" WIDTH="74" VPOS="555" HPOS="2064" WC="1"/>
           </TextLine>
-          <TextLine ID="line_r007-l023" BASELINE="641" VPOS="606" HPOS="1109" HEIGHT="53" WIDTH="1029">
+          <TextLine ID="line_r007-l024" BASELINE="641" VPOS="606" HPOS="1109" HEIGHT="53" WIDTH="1029">
             <String CONTENT="telně," HEIGHT="49" WIDTH="102" VPOS="604" HPOS="1108" WC="1"/>
             <SP WIDTH="4" VPOS="604" HPOS="1211"/>
             <String CONTENT="widěli" HEIGHT="48" WIDTH="102" VPOS="606" HPOS="1232" WC="1"/>
@@ -2587,7 +2587,7 @@
             <SP WIDTH="4" VPOS="3825" HPOS="2020"/>
             <String CONTENT="pán" HEIGHT="47" WIDTH="58" VPOS="3827" HPOS="2025" WC="1"/>
           </TextLine>
-          <TextLine ID="line_r006-l209" BASELINE="3911" VPOS="3876" HPOS="1058" HEIGHT="49" WIDTH="1032">
+          <TextLine ID="line_r006-l208" BASELINE="3911" VPOS="3876" HPOS="1058" HEIGHT="49" WIDTH="1032">
             <String CONTENT="Hildprandt." HEIGHT="49" WIDTH="187" VPOS="3875" HPOS="1060" WC="1"/>
             <SP WIDTH="4" VPOS="3875" HPOS="1247"/>
             <String CONTENT="Hrabě" HEIGHT="47" WIDTH="98" VPOS="3877" HPOS="1259" WC="1"/>
@@ -2832,7 +2832,7 @@
             <SP WIDTH="4" VPOS="556" HPOS="3074"/>
             <String CONTENT="pořád" HEIGHT="47" WIDTH="98" VPOS="556" HPOS="3097" WC="1"/>
           </TextLine>
-          <TextLine ID="line_r015-l024" BASELINE="641" VPOS="605" HPOS="2163" HEIGHT="52" WIDTH="1033">
+          <TextLine ID="line_r015-l023" BASELINE="641" VPOS="605" HPOS="2163" HEIGHT="52" WIDTH="1033">
             <String CONTENT="sběhlém" HEIGHT="48" WIDTH="129" VPOS="604" HPOS="2165" WC="1"/>
             <SP WIDTH="4" VPOS="604" HPOS="2295"/>
             <String CONTENT="nařízené," HEIGHT="48" WIDTH="170" VPOS="605" HPOS="2330" WC="1"/>
@@ -3745,7 +3745,7 @@
           </TextLine>
         </TextBlock>
         <TextBlock ID="block_r017" HEIGHT="49" WIDTH="544" VPOS="3875" HPOS="2214">
-          <TextLine ID="line_r017-l208" BASELINE="3912" VPOS="3875" HPOS="2214" HEIGHT="49" WIDTH="544">
+          <TextLine ID="line_r017-l209" BASELINE="3912" VPOS="3875" HPOS="2214" HEIGHT="49" WIDTH="544">
             <String CONTENT="W" HEIGHT="46" WIDTH="15" VPOS="3874" HPOS="2222" WC="1"/>
             <SP WIDTH="4" VPOS="3874" HPOS="2237"/>
             <String CONTENT="Praze" HEIGHT="48" WIDTH="97" VPOS="3876" HPOS="2278" WC="1"/>
@@ -3956,7 +3956,7 @@
             <SP WIDTH="4" VPOS="215" HPOS="1994"/>
             <String CONTENT="Palacký." HEIGHT="48" WIDTH="142" VPOS="216" HPOS="2006" WC="1"/>
           </TextLine>
-          <TextLine ID="line_r008-l006" BASELINE="300" VPOS="262" HPOS="1122" HEIGHT="54" WIDTH="641">
+          <TextLine ID="line_r008-l007" BASELINE="300" VPOS="262" HPOS="1122" HEIGHT="54" WIDTH="641">
             <String CONTENT="Dr." HEIGHT="49" WIDTH="56" VPOS="263" HPOS="1125" WC="1"/>
             <SP WIDTH="4" VPOS="263" HPOS="1182"/>
             <String CONTENT="Čejka." HEIGHT="50" WIDTH="106" VPOS="263" HPOS="1197" WC="1"/>

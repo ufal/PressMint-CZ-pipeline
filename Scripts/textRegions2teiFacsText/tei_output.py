@@ -3,6 +3,7 @@ from lxml import etree
 from pathlib import Path
 import numpy as np
 from scipy.spatial import ConvexHull
+from copy import deepcopy
 
 from .line_ana import LineAna, LineEndCat, Y
 
@@ -401,12 +402,32 @@ class TEIOutput:
         self.parent_el_ptr = self.parent_el_ptr.getparent()
       self.prev_line_end_type = line.get('ana', LineAna).lineEnd
   
-  def write(self, outFile):
-    Path(outFile).parent.mkdir(parents=True, exist_ok=True)
-    etree.ElementTree(self.TEI).write(
-        outFile, 
-        encoding="utf-8", 
+  def write(self, outTextFile, outFacsFile):
+    Path(outTextFile).parent.mkdir(parents=True, exist_ok=True)
+    Path(outFacsFile).parent.mkdir(parents=True, exist_ok=True)
+    text_root = deepcopy(self.TEI)
+    facs_root = deepcopy(self.TEI)
+    # Remove facsimile from text copy
+    facsimile = text_root.find("tei:facsimile", namespaces=xpath_ns)
+    if facsimile is not None:
+        facsimile.getparent().remove(facsimile)
+    text = facs_root.find("tei:text", namespaces=xpath_ns)
+    if text is not None:
+        text.getparent().remove(text)
+
+    etree.ElementTree(text_root).write(
+        outTextFile,
+        encoding="utf-8",
         xml_declaration=True,
-        pretty_print=True
-      )
-    print(f"INFO: output written to {outFile}")
+        pretty_print=True,
+    )
+
+    etree.ElementTree(facs_root).write(
+        outFacsFile,
+        encoding="utf-8",
+        xml_declaration=True,
+        pretty_print=True,
+    )
+
+    print(f"INFO: text written to {outTextFile}")
+    print(f"INFO: facsimile written to {outFacsFile}")
