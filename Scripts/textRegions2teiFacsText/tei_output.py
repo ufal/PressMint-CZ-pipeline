@@ -232,7 +232,7 @@ class TEIOutput:
       attrib={
         "{%s}id" % XML_NS: f_area_id,
         "start": f"#{pb_id}",
-        "type": "page",
+        "type": "pageBody",
         }
       )
     self.zone_pb = {

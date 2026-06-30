@@ -278,22 +278,25 @@ def process_task(pagesFile, pagexmlDir, regionsFile, outTextFile, outFacsFile, t
   ##sorted_regions = use_initial_reading_order(pages)
   tei = TEIOutput(tei_id)
   for region in sorted_regions:
-    if not region.get("region_content", None):
-      print(f"WARN: region without content, skipping: {region['page_meta']['uuid']} {region.get('class_name','unknown')}")
-      print(dev_short(region))
-    else:
-      #print(f"INFO: adding region to TEI: {region}")
-      print(f"INFO: adding region to TEI: BBOX:{region['all_pages_bbox_xyxy']} XSPAN:{region['all_pages_col_x_span']} PAGE:{region['page_n']} COL:{region['col_n']} STARTPAGE:{region['is_page_start']} STARTCOL:{region['is_column_start']} {region.get('class_name','unknown')}")
-      tei.add_region(region)
-    tei.add_zone(region['region_content'], "imageRegion", region['page_meta']['url'])
-  for page in pages:
-    for line in page["outlayer_lines"]:
-      print(f"WARN: line without region, adding as outlayer: (text conf={str(line['confidence'])}) {line['text']}")
-      tei.add_zone(line, "outlayerLine", page["page_meta"]["url"])
-    for text_region in page["text_regions"]:
-      tei.add_zone(text_region, "textRegion", page["page_meta"]["url"])
-    for separator in detect_separators([region['bounding_polygon_points'] for region in page["text_regions"]]):
-      tei.add_path(separator.get("path", []), separator.get("orientation", "unknown"),separator.get("thickness", 1), page["page_meta"]["url"])
+      if not region.get("region_content", None):
+        print(f"WARN: region without content, skipping: {region['page_meta']['uuid']} {region.get('class_name','unknown')}")
+        print(dev_short(region))
+      else:
+        #print(f"INFO: adding region to TEI: {region}")
+        print(f"INFO: adding region to TEI: BBOX:{region['all_pages_bbox_xyxy']} XSPAN:{region['all_pages_col_x_span']} PAGE:{region['page_n']} COL:{region['col_n']} STARTPAGE:{region['is_page_start']} STARTCOL:{region['is_column_start']} {region.get('class_name','unknown')}")
+        tei.add_region(region)
+      if False: # unsuported value
+        tei.add_zone(region['region_content'], "imageRegion", region['page_meta']['url'])
+  if False: # unsuported types:
+    
+    for page in pages:
+      for line in page["outlayer_lines"]:
+        print(f"WARN: line without region, adding as outlayer: (text conf={str(line['confidence'])}) {line['text']}")
+        tei.add_zone(line, "outlayerLine", page["page_meta"]["url"])
+      for text_region in page["text_regions"]:
+        tei.add_zone(text_region, "textRegion", page["page_meta"]["url"])
+      for separator in detect_separators([region['bounding_polygon_points'] for region in page["text_regions"]]):
+        tei.add_path(separator.get("path", []), separator.get("orientation", "unknown"),separator.get("thickness", 1), page["page_meta"]["url"])
   tei.remove_last_hyphen_if_present()
   tei.close_current_page() # important, it calculates page hull from regions, so it has to be called after all regions are added
   tei.write(outTextFile, outFacsFile)
