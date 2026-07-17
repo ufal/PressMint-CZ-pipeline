@@ -2,6 +2,13 @@ from pathlib import Path
 import requests
 from io import BytesIO
 
+headers = {
+    "User-Agent": (
+        "Mozilla/5.0 (X11; Linux x86_64) "
+        "AppleWebKit/537.36 (KHTML, like Gecko) "
+        "Chrome/138.0 Safari/537.36"
+    )
+}
 
 def get_cached_image(url: str,
                      cache_root: Path | None,
@@ -13,7 +20,7 @@ def get_cached_image(url: str,
     """
 
     if cache_root is None:
-        response = requests.get(url, timeout=30)
+        response = requests.get(url, headers=headers, timeout=30)
         response.raise_for_status()
         return BytesIO(response.content)
 
@@ -32,7 +39,7 @@ def get_cached_image(url: str,
 
     if not cached_path.exists():
         print(f"Downloading: {url}")
-        response = requests.get(url, timeout=30)
+        response = requests.get(url, headers=headers, timeout=30)
         response.raise_for_status()
         cached_path.write_bytes(response.content)
     else:

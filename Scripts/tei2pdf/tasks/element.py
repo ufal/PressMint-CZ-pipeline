@@ -245,15 +245,15 @@ class ElementTask(BaseTask):
           """
           ## TODO IMPROVE CHECKING WHETHER ELEMENT IS ON SURFACE
           # self with facs
-          elem_s = elem.find("self::*[@facs]", namespaces=shared_context["ns"]) 
+          elem_s = elem.xpath("self::*[@facs]", namespaces=shared_context["ns"]) 
           # preceding element with facs
-          elem_p = elem.find("preceding::*[@facs]", namespaces=shared_context["ns"])
+          elem_p = elem.xpath("preceding::*[@facs]", namespaces=shared_context["ns"])
           # following element with facs
-          elem_f = elem.find("following::*[@facs]", namespaces=shared_context["ns"])
+          elem_f = elem.xpath("following::*[@facs]", namespaces=shared_context["ns"])
           # first descendant with facs
-          elem_d1 = elem.find("descendant::*[@facs]", namespaces=shared_context["ns"])
+          elem_d1 = elem.xpath("descendant::*[@facs]", namespaces=shared_context["ns"])
           # last descendant with facs
-          elem_d2 = elem.find("descendant::*[@facs][last()]", namespaces=shared_context["ns"])
+          elem_d2 = elem.xpath("descendant::*[@facs][last()]", namespaces=shared_context["ns"])
 
 
 
