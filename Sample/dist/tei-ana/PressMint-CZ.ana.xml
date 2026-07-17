@@ -25,8 +25,8 @@
             <edition>1.0</edition>
          </editionStmt>
          <extent>
-            <measure unit="words" quantity="53076" xml:lang="en">53076 words</measure>
-            <measure unit="words" quantity="53076" xml:lang="cs">53076 slov</measure>
+            <measure unit="words" quantity="53254" xml:lang="en">53254 words</measure>
+            <measure unit="words" quantity="53254" xml:lang="cs">53254 slov</measure>
          </extent>
          <publicationStmt>
             <publisher>
@@ -60,14 +60,14 @@
             <namespace name="http://www.tei-c.org/ns/1.0">
                <tagUsage gi="body" occurs="5"/>
                <tagUsage gi="cb" occurs="87"/>
-               <tagUsage gi="lb" occurs="8365"/>
+               <tagUsage gi="lb" occurs="8351"/>
                <tagUsage gi="name" occurs="2899"/>
                <tagUsage gi="p" occurs="843"/>
                <tagUsage gi="pb" occurs="22"/>
-               <tagUsage gi="pc" occurs="14721"/>
+               <tagUsage gi="pc" occurs="14707"/>
                <tagUsage gi="s" occurs="3298"/>
                <tagUsage gi="text" occurs="5"/>
-               <tagUsage gi="w" occurs="54154"/>
+               <tagUsage gi="w" occurs="53974"/>
             </namespace>
          </tagsDecl>
          <classDecl>

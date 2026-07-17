@@ -4,7 +4,7 @@ from lxml import etree
 import argparse
 import re
 import sys
-
+import copy
 
 TEI_NS = "http://www.tei-c.org/ns/1.0"
 XML_NS = "http://www.w3.org/XML/1998/namespace"
@@ -86,6 +86,70 @@ def transform_text(tree):
         continue
       s_id = s.get(f"{{{XML_NS}}}id")
       print(f"\n[SENTENCE] {s_id}",flush=True)
+
+      # if (pc or lb or ...) is first or last in the token, then put outside the token
+            # 1. Move to the left (First child check)
+      while True:
+        elem = s.xpath("(.//tok/*[not(preceding-sibling::node())])[1][local-name()!='dtok']")
+        if not elem:
+          break
+        target = elem[0]
+        parent = target.getparent()
+        print(f"  [PATCH] Moving tei:element() {target.get(f'{{{XML_NS}}}id')} to the left of its parent token", flush=True)
+        # If target has a tail, it belongs to the token text remaining inside
+        if target.tail:
+            parent.text = (parent.text or "") + target.tail
+            target.tail = None
+        parent.addprevious(target)
+        # Clean up parent if it became an empty token shell
+        if not parent.text and len(parent) == 0:
+            parent.getparent().remove(parent)
+        print(f"  [PATCH] patched {xml_to_string_no_attr(s)}", flush=True)
+
+      # 2. Move to the right (Last child check)
+      while True:
+        elem = s.xpath("(.//tok/*[not(following-sibling::node())])[last()][local-name()!='dtok']")
+        if not elem:
+          break
+        target = elem[0]
+        parent = target.getparent()
+        print(f"  [PATCH] Moving tei:element() {target.get(f'{{{XML_NS}}}id')} to the right of its parent token", flush=True)
+        # If target has a tail, that text belongs inside the token before moving the element out
+        if target.tail:
+            # Shift the tail text into the parent's terminal text or preceding child's tail
+            siblings = target.xpath("preceding-sibling::*")
+            if siblings:
+                siblings[-1].tail = (siblings[-1].tail or "") + target.tail
+            else:
+                parent.text = (parent.text or "") + target.tail
+            target.tail = None
+        parent.addnext(target)
+        # Clean up parent if it became an empty token shell
+        if not parent.text and len(parent) == 0:
+            parent.getparent().remove(parent)
+        print(f"  [PATCH] patched {xml_to_string_no_attr(s)}", flush=True)
+      
+      # patch interval tokens (and maybe some others):
+      # <tok xml:id="w-10134" ord="1-3">10—1<dtok ord="1" form="10" lemma="10" upos="NUM" xpos="C=-------------" feats="NumForm=Digit|NumType=Card" /><dtok ord="2" form="—" lemma="—" upos="PUNCT" xpos="Z:-------------" /><dtok ord="3" form="1" lemma="1" upos="NUM" xpos="C=-------------" feats="NumForm=Digit|NumType=Card" /></tok>
+      # should be converted to:
+      # <tok ord="1" lemma="10" upos="NUM" xpos="C=-------------" feats="NumForm=Digit|NumType=Card">10</tok><tok ord="2" lemma="—" upos="PUNCT" xpos="Z:-------------">—</tok><tok ord="3" lemma="1" upos="NUM" xpos="C=-------------" feats="NumForm=Digit|NumType=Card">1</tok>
+      # if tok contains dtok children, that is PUNCT
+      while token := s.xpath(".//tok[dtok[@upos='PUNCT']]"):
+        tokens = list(token[0].iter())
+        print(f"  [PATCH] Splitting token {token[0].get(f'{{{XML_NS}}}id')} into {len(tokens)} tokens", flush=True)
+        for tok in tokens:
+          if localname(tok.tag) == "dtok":
+            new_tok = etree.Element(q("tok"))
+            for k, v in tok.attrib.items():
+              new_tok.set(k, v)
+            new_tok.text = tok.get("form", "")
+            ##new_tok.remove("form")
+            token[0].addprevious(new_tok)
+        if token[0].tail:
+          token[0].getprevious().tail = token[0].tail
+          token[0].tail = None
+        token[0].getparent().remove(token[0])
+
 
       token_idx = 1
       # convert tok -> w / pc
@@ -217,6 +281,14 @@ def write_xml(tree, path=None):
     )
 
     sys.stdout.buffer.write(output)
+
+
+def xml_to_string_no_attr(elem):
+    e = copy.deepcopy(elem)
+    e.attrib.clear()
+    for ch in e.iter():
+        ch.attrib.clear()
+    return etree.tostring(e, encoding="utf-8", xml_declaration=False).decode("utf-8")
 
 
 # --------------------
