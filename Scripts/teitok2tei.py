@@ -134,7 +134,7 @@ def transform_text(tree):
       # should be converted to:
       # <tok ord="1" lemma="10" upos="NUM" xpos="C=-------------" feats="NumForm=Digit|NumType=Card">10</tok><tok ord="2" lemma="—" upos="PUNCT" xpos="Z:-------------">—</tok><tok ord="3" lemma="1" upos="NUM" xpos="C=-------------" feats="NumForm=Digit|NumType=Card">1</tok>
       # if tok contains dtok children, that is PUNCT
-      while token := s.xpath(".//tok[dtok[@upos='PUNCT']]"):
+      while token := s.xpath(".//tok[dtok[@upos='PUNCT' or @upos='SYM']]"):
         tokens = list(token[0].iter())
         print(f"  [PATCH] Splitting token {token[0].get(f'{{{XML_NS}}}id')} into {len(tokens)} tokens", flush=True)
         for tok in tokens:
@@ -156,6 +156,19 @@ def transform_text(tree):
       tokens = list(s.iter())
       for tok in tokens:
         token_idx = process_token(tok, s_id, token_idx, (tok == tokens[-1]))
+      
+      # postprocess patching - move space tailing last token in name element to the name tail element itself
+      for name in s.xpath(".//*[local-name()='name']"):
+        last_tok = name.xpath(".//*[last()][local-name()='w' or local-name()='pc']")
+        if not last_tok:
+          continue
+        last_tok = last_tok[0]
+        if last_tok.tail and last_tok.tail.strip() == "":
+          print(f"  [PATCH] Moving tail space from token {last_tok.get(f'{{{XML_NS}}}id')} to name {name.get(f'{{{XML_NS}}}id')}", flush=True)
+          print(f"  [PATCH] patching {xml_to_string_no_attr(s)}", flush=True)
+          name.tail = (name.tail or "") + last_tok.tail
+          last_tok.tail = None
+          print(f"  [PATCH] patched {xml_to_string_no_attr(s)}", flush=True)
 
     # remove helper attrs
     for el in root.iter():

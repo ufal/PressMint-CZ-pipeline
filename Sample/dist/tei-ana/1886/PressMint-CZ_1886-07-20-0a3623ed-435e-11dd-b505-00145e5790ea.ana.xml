@@ -60,7 +60,7 @@
                <tagUsage gi="pc" occurs="6648"/>
                <tagUsage gi="s" occurs="1392"/>
                <tagUsage gi="text" occurs="1"/>
-               <tagUsage gi="w" occurs="23695"/>
+               <tagUsage gi="w" occurs="23688"/>
             </namespace>
          </tagsDecl>
       </encodingDesc>
@@ -45301,14 +45301,15 @@
                <w msd="UPosTag=ADP|AdpType=Prep|Case=Loc" lemma="po" pos="RR--6----------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p124.s17.w2">po</w>
                <lb xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.pb3.cb1.lb23"
                    facs="#PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.f.pg2.a1.c1.l23"/>
-               <w join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p124.s17.w3">58—<w msd="UPosTag=NUM|NumForm=Digit|NumType=Card" norm="58" lemma="58" pos="C=-------------" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p124.s17.w4"/><pc msd="UPosTag=SYM" norm="—" lemma="—" pos="Z:-------------" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p124.s17.w5"/></w>
-               <w msd="UPosTag=NUM|NumForm=Digit|NumType=Card" lemma="500" pos="C=-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p124.s17.w6">500</w>
-               <w msd="UPosTag=NOUN|Abbr=Yes|Gender=Fem" lemma="zl" pos="NNFXX-----A---b" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p124.s17.w7">zl</w>
-               <pc msd="UPosTag=PUNCT" lemma="." pos="Z:-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p124.s17.w8">.</pc>
-               <w msd="UPosTag=VERB|Aspect=Imp|Gender=Neut|Number=Sing|Polarity=Pos|Tense=Past|VerbForm=Part|Voice=Act" lemma="mít" pos="VpNS----R-AAI--" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p124.s17.w9">mělo</w>
-               <w msd="UPosTag=NUM|NumForm=Digit|NumType=Card" lemma="9" pos="C=-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p124.s17.w10">9</w>
-               <w msd="UPosTag=NOUN|Animacy=Anim|Case=Gen|Gender=Masc|Number=Plur" lemma="žák" pos="NNMP2-----A----" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p124.s17.w11">žáků</w>
-               <pc msd="UPosTag=PUNCT" lemma="." pos="Z:-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p124.s17.w12">.</pc>
+               <w msd="UPosTag=NUM|NumForm=Digit|NumType=Card" lemma="58" pos="C=-------------" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p124.s17.w3">58</w>
+               <pc msd="UPosTag=SYM" lemma="—" pos="Z:-------------" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p124.s17.w4">—</pc>
+               <w msd="UPosTag=NUM|NumForm=Digit|NumType=Card" lemma="500" pos="C=-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p124.s17.w5">500</w>
+               <w msd="UPosTag=NOUN|Abbr=Yes|Gender=Fem" lemma="zl" pos="NNFXX-----A---b" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p124.s17.w6">zl</w>
+               <pc msd="UPosTag=PUNCT" lemma="." pos="Z:-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p124.s17.w7">.</pc>
+               <w msd="UPosTag=VERB|Aspect=Imp|Gender=Neut|Number=Sing|Polarity=Pos|Tense=Past|VerbForm=Part|Voice=Act" lemma="mít" pos="VpNS----R-AAI--" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p124.s17.w8">mělo</w>
+               <w msd="UPosTag=NUM|NumForm=Digit|NumType=Card" lemma="9" pos="C=-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p124.s17.w9">9</w>
+               <w msd="UPosTag=NOUN|Animacy=Anim|Case=Gen|Gender=Masc|Number=Plur" lemma="žák" pos="NNMP2-----A----" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p124.s17.w10">žáků</w>
+               <pc msd="UPosTag=PUNCT" lemma="." pos="Z:-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p124.s17.w11">.</pc>
             </s>
             <s xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p124.s18"
                n="475">
@@ -65213,19 +65214,20 @@
                <pc msd="UPosTag=PUNCT" lemma="." pos="Z:-------------" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p346.s2.w6">.</pc>
                <lb xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.pb6.cb1.lb38"
                    facs="#PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.f.pg5.a1.c1.l38"/>
-               <w xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p346.s2.w7">88°<w msd="UPosTag=NUM|NumForm=Digit|NumType=Card" norm="88" lemma="88" pos="C=-------------" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p346.s2.w8"/><pc msd="UPosTag=SYM" norm="°" lemma="°" pos="Z:-------------" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p346.s2.w9"/></w>
-               <w msd="UPosTag=ADP|AdpType=Prep|Case=Gen" lemma="dle" pos="RR--2----------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p346.s2.w10">dle</w>
-               <w msd="UPosTag=NOUN|Case=Gen|Gender=Fem|Number=Sing" lemma="stanice" pos="NNFS2-----A----" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p346.s2.w11">stanice</w>
-               <w msd="UPosTag=ADJ|Case=Nom|Degree=Pos|Gender=Fem|Number=Sing|Polarity=Pos" lemma="promptní" pos="AAFS1----1A----" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p346.s2.w12">promptní</w>
-               <w msd="UPosTag=NOUN|Abbr=Yes|Gender=Fem" lemma="zl" pos="NNFXX-----A---b" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p346.s2.w13">zl</w>
-               <pc msd="UPosTag=PUNCT" lemma="." pos="Z:-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p346.s2.w14">.</pc>
-               <w msd="UPosTag=NUM|NumForm=Digit|NumType=Card" lemma="22.50" pos="C=-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p346.s2.w15">22.50</w>
-               <w msd="UPosTag=CCONJ" lemma="až" pos="J^-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p346.s2.w16">až</w>
-               <w msd="UPosTag=NUM|NumForm=Digit|NumType=Card" lemma="23.10" pos="C=-------------" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p346.s2.w17">23.10</w>
-               <pc msd="UPosTag=PUNCT" lemma="," pos="Z:-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p346.s2.w18">,</pc>
-               <w msd="UPosTag=ADP|AdpType=Prep|Case=Acc" lemma="na" pos="RR--4----------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p346.s2.w19">na</w>
-               <w msd="UPosTag=NOUN|Animacy=Inan|Case=Acc|Gender=Masc|Number=Sing" lemma="říjenpros" pos="NNIS4-----A----" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p346.s2.w20">říjen<pc force="weak">-</pc><lb xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.pb6.cb1.lb39" break="no" facs="#PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.f.pg5.a1.c1.l39"/>pros</w>
-               <pc msd="UPosTag=PUNCT" lemma="." pos="Z:-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p346.s2.w21">.</pc>
+               <w msd="UPosTag=NUM|NumForm=Digit|NumType=Card" lemma="88" pos="C=-------------" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p346.s2.w7">88</w>
+               <pc msd="UPosTag=SYM" lemma="°" pos="Z:-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p346.s2.w8">°</pc>
+               <w msd="UPosTag=ADP|AdpType=Prep|Case=Gen" lemma="dle" pos="RR--2----------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p346.s2.w9">dle</w>
+               <w msd="UPosTag=NOUN|Case=Gen|Gender=Fem|Number=Sing" lemma="stanice" pos="NNFS2-----A----" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p346.s2.w10">stanice</w>
+               <w msd="UPosTag=ADJ|Case=Nom|Degree=Pos|Gender=Fem|Number=Sing|Polarity=Pos" lemma="promptní" pos="AAFS1----1A----" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p346.s2.w11">promptní</w>
+               <w msd="UPosTag=NOUN|Abbr=Yes|Gender=Fem" lemma="zl" pos="NNFXX-----A---b" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p346.s2.w12">zl</w>
+               <pc msd="UPosTag=PUNCT" lemma="." pos="Z:-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p346.s2.w13">.</pc>
+               <w msd="UPosTag=NUM|NumForm=Digit|NumType=Card" lemma="22.50" pos="C=-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p346.s2.w14">22.50</w>
+               <w msd="UPosTag=CCONJ" lemma="až" pos="J^-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p346.s2.w15">až</w>
+               <w msd="UPosTag=NUM|NumForm=Digit|NumType=Card" lemma="23.10" pos="C=-------------" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p346.s2.w16">23.10</w>
+               <pc msd="UPosTag=PUNCT" lemma="," pos="Z:-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p346.s2.w17">,</pc>
+               <w msd="UPosTag=ADP|AdpType=Prep|Case=Acc" lemma="na" pos="RR--4----------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p346.s2.w18">na</w>
+               <w msd="UPosTag=NOUN|Animacy=Inan|Case=Acc|Gender=Masc|Number=Sing" lemma="říjenpros" pos="NNIS4-----A----" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p346.s2.w19">říjen<pc force="weak">-</pc><lb xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.pb6.cb1.lb39" break="no" facs="#PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.f.pg5.a1.c1.l39"/>pros</w>
+               <pc msd="UPosTag=PUNCT" lemma="." pos="Z:-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p346.s2.w20">.</pc>
             </s>
             <s xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p346.s3"
                n="1181">
@@ -65243,15 +65245,16 @@
                <pc msd="UPosTag=PUNCT" lemma="." pos="Z:-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p346.s4.w3">.</pc>
                <w msd="UPosTag=NOUN|Abbr=Yes|Animacy=Inan|Gender=Masc" lemma="bs" pos="NNIXX-----A---b" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p346.s4.w4">bs</w>
                <pc msd="UPosTag=PUNCT" lemma="." pos="Z:-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p346.s4.w5">.</pc>
-               <w xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p346.s4.w6">88°<w msd="UPosTag=NUM|NumForm=Digit|NumType=Card" norm="88" lemma="88" pos="C=-------------" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p346.s4.w7"/><pc msd="UPosTag=SYM" norm="°" lemma="°" pos="Z:-------------" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p346.s4.w8"/></w>
-               <w msd="UPosTag=ADP|AdpType=Prep|Case=Gen" lemma="dle" pos="RR--2----------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p346.s4.w9">dle</w>
-               <w msd="UPosTag=NOUN|Case=Gen|Gender=Fem|Number=Sing" lemma="stanice" pos="NNFS2-----A----" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p346.s4.w10">stanice</w>
+               <w msd="UPosTag=NUM|NumForm=Digit|NumType=Card" lemma="88" pos="C=-------------" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p346.s4.w6">88</w>
+               <pc msd="UPosTag=SYM" lemma="°" pos="Z:-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p346.s4.w7">°</pc>
+               <w msd="UPosTag=ADP|AdpType=Prep|Case=Gen" lemma="dle" pos="RR--2----------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p346.s4.w8">dle</w>
+               <w msd="UPosTag=NOUN|Case=Gen|Gender=Fem|Number=Sing" lemma="stanice" pos="NNFS2-----A----" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p346.s4.w9">stanice</w>
                <lb xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.pb6.cb1.lb40"
                    facs="#PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.f.pg5.a1.c1.l40"/>
-               <w msd="UPosTag=NOUN|Abbr=Yes" lemma="poh" pos="NNNXX-----A---b" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p346.s4.w11">poh</w>
-               <pc msd="UPosTag=PUNCT" lemma="." pos="Z:-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p346.s4.w12">.</pc>
-               <w msd="UPosTag=NOUN|Abbr=Yes|Gender=Fem" lemma="zl" pos="BNXXX-----A----" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p346.s4.w13">zl</w>
-               <pc msd="UPosTag=PUNCT" lemma="." pos="Z:-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p346.s4.w14">.</pc>
+               <w msd="UPosTag=NOUN|Abbr=Yes" lemma="poh" pos="NNNXX-----A---b" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p346.s4.w10">poh</w>
+               <pc msd="UPosTag=PUNCT" lemma="." pos="Z:-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p346.s4.w11">.</pc>
+               <w msd="UPosTag=NOUN|Abbr=Yes|Gender=Fem" lemma="zl" pos="BNXXX-----A----" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p346.s4.w12">zl</w>
+               <pc msd="UPosTag=PUNCT" lemma="." pos="Z:-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p346.s4.w13">.</pc>
             </s>
             <s xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p346.s5"
                n="1183">
@@ -65606,116 +65609,117 @@
                <w msd="UPosTag=NOUN|Case=Nom|Gender=Fem|Number=Sing" lemma="výroba" pos="NNFS1-----A----" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w5">výroba</w>
                <w msd="UPosTag=NOUN|Abbr=Yes|Gender=Neut" lemma="být" pos="NNNXX-----A---b" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w6">bas</w>
                <pc msd="UPosTag=PUNCT" lemma="." pos="Z:-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w7">.</pc>
-               <w xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w8">88°<w msd="UPosTag=NUM|NumForm=Digit|NumType=Card" norm="88" lemma="88" pos="C=-------------" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w9"/><pc msd="UPosTag=SYM" norm="°" lemma="°" pos="Z:-------------" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w10"/></w>
-               <w msd="UPosTag=NOUN|Abbr=Yes|Gender=Fem" lemma="rend" pos="NNFXX-----A---b" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w11">rend</w>
-               <pc msd="UPosTag=PUNCT" lemma="." pos="Z:-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w12">.</pc>
+               <w msd="UPosTag=NUM|NumForm=Digit|NumType=Card" lemma="88" pos="C=-------------" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w8">88</w>
+               <pc msd="UPosTag=SYM" lemma="°" pos="Z:-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w9">°</pc>
+               <w msd="UPosTag=NOUN|Abbr=Yes|Gender=Fem" lemma="rend" pos="NNFXX-----A---b" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w10">rend</w>
+               <pc msd="UPosTag=PUNCT" lemma="." pos="Z:-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w11">.</pc>
                <lb xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.pb6.cb1.lb61"
                    facs="#PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.f.pg5.a1.c1.l61"/>
-               <w msd="UPosTag=ADJ|Animacy=Inan|Case=Nom|Degree=Pos|Gender=Masc|Number=Sing|Polarity=Pos" lemma="pohotový" pos="AAIS1----1A----" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w13">pohotový</w>
-               <pc msd="UPosTag=PUNCT" lemma=":" pos="Z:-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w14">:</pc>
-               <w msd="UPosTag=ADP|AdpType=Prep|Case=Gen" lemma="z" pos="RR--2----------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w15">z</w>
+               <w msd="UPosTag=ADJ|Animacy=Inan|Case=Nom|Degree=Pos|Gender=Masc|Number=Sing|Polarity=Pos" lemma="pohotový" pos="AAIS1----1A----" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w12">pohotový</w>
+               <pc msd="UPosTag=PUNCT" lemma=":" pos="Z:-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w13">:</pc>
+               <w msd="UPosTag=ADP|AdpType=Prep|Case=Gen" lemma="z" pos="RR--2----------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w14">z</w>
                <name type="LOC">
-                  <w msd="UPosTag=PROPN|Case=Gen|Gender=Fem|NameType=Geo|Number=Sing" lemma="Praha" pos="NNFS2-----A----" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w16">Prahy</w>
+                  <w msd="UPosTag=PROPN|Case=Gen|Gender=Fem|NameType=Geo|Number=Sing" lemma="Praha" pos="NNFS2-----A----" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w15">Prahy</w>
                </name>
-               <w msd="UPosTag=NOUN|Abbr=Yes|Gender=Neut" lemma="zl" pos="NNNXX-----A---b" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w17">zl</w>
-               <pc msd="UPosTag=PUNCT" lemma="." pos="Z:-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w18">.</pc>
-               <w msd="UPosTag=NUM|NumForm=Digit|NumType=Card" lemma="22.70" pos="C=-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w19">22.70</w>
-               <w msd="UPosTag=CCONJ" lemma="až" pos="J^-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w20">až</w>
-               <w msd="UPosTag=NOUN|Abbr=Yes|Gender=Fem" lemma="zl" pos="NNFXX-----A---b" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w21">zl</w>
-               <pc msd="UPosTag=PUNCT" lemma="." pos="Z:-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w22">.</pc>
-               <w msd="UPosTag=NUM|NumForm=Digit|NumType=Card" lemma="22.80" pos="C=-------------" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w23">22.80</w>
-               <pc msd="UPosTag=PUNCT" lemma="," pos="Z:-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w24">,</pc>
-               <w msd="UPosTag=ADP|AdpType=Prep|Case=Gen" lemma="z" pos="RR--2----------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w25">z</w>
-               <w msd="UPosTag=NOUN|Case=Gen|Gender=Fem|Number=Sing" lemma="trať" pos="NNFS2-----A---1" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w26">trati</w>
+               <w msd="UPosTag=NOUN|Abbr=Yes|Gender=Neut" lemma="zl" pos="NNNXX-----A---b" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w16">zl</w>
+               <pc msd="UPosTag=PUNCT" lemma="." pos="Z:-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w17">.</pc>
+               <w msd="UPosTag=NUM|NumForm=Digit|NumType=Card" lemma="22.70" pos="C=-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w18">22.70</w>
+               <w msd="UPosTag=CCONJ" lemma="až" pos="J^-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w19">až</w>
+               <w msd="UPosTag=NOUN|Abbr=Yes|Gender=Fem" lemma="zl" pos="NNFXX-----A---b" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w20">zl</w>
+               <pc msd="UPosTag=PUNCT" lemma="." pos="Z:-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w21">.</pc>
+               <w msd="UPosTag=NUM|NumForm=Digit|NumType=Card" lemma="22.80" pos="C=-------------" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w22">22.80</w>
+               <pc msd="UPosTag=PUNCT" lemma="," pos="Z:-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w23">,</pc>
+               <w msd="UPosTag=ADP|AdpType=Prep|Case=Gen" lemma="z" pos="RR--2----------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w24">z</w>
+               <w msd="UPosTag=NOUN|Case=Gen|Gender=Fem|Number=Sing" lemma="trať" pos="NNFS2-----A---1" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w25">trati</w>
                <lb xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.pb6.cb1.lb62"
                    facs="#PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.f.pg5.a1.c1.l62"/>
-               <w msd="UPosTag=PROPN|Case=Nom|Gender=Fem|NameType=Geo|Number=Sing" lemma="Praha" pos="NNFS1-----A----" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w27">Praha</w>
-               <pc msd="UPosTag=PUNCT" lemma="-" pos="Z:-------------" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w28">-</pc>
-               <w msd="UPosTag=PROPN|Animacy=Inan|Case=Nom|Gender=Masc|NameType=Geo|Number=Sing" lemma="Kolín" pos="NNIS1-----A----" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w29">Kolín</w>
-               <w msd="UPosTag=NOUN|Abbr=Yes|Animacy=Inan|Gender=Masc" lemma="zl" pos="NNFXX-----A---b" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w30">zl</w>
-               <pc msd="UPosTag=PUNCT" lemma="." pos="Z:-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w31">.</pc>
-               <w msd="UPosTag=NUM|NumForm=Digit|NumType=Card" lemma="22.50" pos="C=-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w32">22.50</w>
-               <w msd="UPosTag=CCONJ" lemma="až" pos="J^-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w33">až</w>
-               <w msd="UPosTag=NOUN|Abbr=Yes|Gender=Fem" lemma="zl" pos="NNFXX-----A---b" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w34">zl</w>
-               <pc msd="UPosTag=PUNCT" lemma="." pos="Z:-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w35">.</pc>
-               <w msd="UPosTag=NUM|NumForm=Digit|NumType=Card" lemma="22.60" pos="C=-------------" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w36">22.60</w>
-               <pc msd="UPosTag=PUNCT" lemma="," pos="Z:-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w37">,</pc>
-               <w msd="UPosTag=ADP|AdpType=Prep|Case=Gen" lemma="z" pos="RR--2----------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w38">z</w>
-               <w msd="UPosTag=NOUN|Case=Gen|Gender=Fem|Number=Sing" lemma="trať" pos="NNFS2-----A---1" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w39">trati</w>
+               <w msd="UPosTag=PROPN|Case=Nom|Gender=Fem|NameType=Geo|Number=Sing" lemma="Praha" pos="NNFS1-----A----" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w26">Praha</w>
+               <pc msd="UPosTag=PUNCT" lemma="-" pos="Z:-------------" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w27">-</pc>
+               <w msd="UPosTag=PROPN|Animacy=Inan|Case=Nom|Gender=Masc|NameType=Geo|Number=Sing" lemma="Kolín" pos="NNIS1-----A----" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w28">Kolín</w>
+               <w msd="UPosTag=NOUN|Abbr=Yes|Animacy=Inan|Gender=Masc" lemma="zl" pos="NNFXX-----A---b" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w29">zl</w>
+               <pc msd="UPosTag=PUNCT" lemma="." pos="Z:-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w30">.</pc>
+               <w msd="UPosTag=NUM|NumForm=Digit|NumType=Card" lemma="22.50" pos="C=-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w31">22.50</w>
+               <w msd="UPosTag=CCONJ" lemma="až" pos="J^-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w32">až</w>
+               <w msd="UPosTag=NOUN|Abbr=Yes|Gender=Fem" lemma="zl" pos="NNFXX-----A---b" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w33">zl</w>
+               <pc msd="UPosTag=PUNCT" lemma="." pos="Z:-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w34">.</pc>
+               <w msd="UPosTag=NUM|NumForm=Digit|NumType=Card" lemma="22.60" pos="C=-------------" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w35">22.60</w>
+               <pc msd="UPosTag=PUNCT" lemma="," pos="Z:-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w36">,</pc>
+               <w msd="UPosTag=ADP|AdpType=Prep|Case=Gen" lemma="z" pos="RR--2----------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w37">z</w>
+               <w msd="UPosTag=NOUN|Case=Gen|Gender=Fem|Number=Sing" lemma="trať" pos="NNFS2-----A---1" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w38">trati</w>
                <name type="LOC">
-                  <w msd="UPosTag=PROPN|Case=Nom|Gender=Fem|NameType=Geo|Number=Plur" lemma="KolíNpardubice" pos="NNFP1-----A----" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w40">Kolín<pc force="weak">-</pc><lb xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.pb6.cb1.lb63" break="no" facs="#PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.f.pg5.a1.c1.l63"/>Pardubice</w>
+                  <w msd="UPosTag=PROPN|Case=Nom|Gender=Fem|NameType=Geo|Number=Plur" lemma="KolíNpardubice" pos="NNFP1-----A----" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w39">Kolín<pc force="weak">-</pc><lb xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.pb6.cb1.lb63" break="no" facs="#PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.f.pg5.a1.c1.l63"/>Pardubice</w>
                </name>
-               <w msd="UPosTag=NOUN|Abbr=Yes|Gender=Neut" lemma="zl" pos="NNNXX-----A---b" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w41">zl</w>
-               <pc msd="UPosTag=PUNCT" lemma="." pos="Z:-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w42">.</pc>
-               <w msd="UPosTag=NUM|NumForm=Digit|NumType=Card" lemma="22" pos="C=-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w43">22</w>
-               <w msd="UPosTag=NUM|NumForm=Digit|NumType=Card" lemma="40" pos="C=-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w44">40</w>
-               <w msd="UPosTag=CCONJ" lemma="až" pos="J^-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w45">až</w>
-               <w msd="UPosTag=NOUN|Abbr=Yes|Gender=Fem" lemma="zl" pos="NNNXX-----A---b" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w46">zl</w>
-               <pc msd="UPosTag=PUNCT" lemma="." pos="Z:-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w47">.</pc>
-               <w msd="UPosTag=NUM|NumForm=Digit|NumType=Card" lemma="22.50" pos="C=-------------" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w48">22.50</w>
-               <pc msd="UPosTag=PUNCT" lemma="," pos="Z:-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w49">,</pc>
-               <w msd="UPosTag=ADP|AdpType=Prep|Case=Gen" lemma="z" pos="RR--2----------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w50">z</w>
-               <w msd="UPosTag=NOUN|Case=Gen|Gender=Fem|Number=Sing" lemma="trať" pos="NNFS2-----A---1" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w51">trati</w>
+               <w msd="UPosTag=NOUN|Abbr=Yes|Gender=Neut" lemma="zl" pos="NNNXX-----A---b" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w40">zl</w>
+               <pc msd="UPosTag=PUNCT" lemma="." pos="Z:-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w41">.</pc>
+               <w msd="UPosTag=NUM|NumForm=Digit|NumType=Card" lemma="22" pos="C=-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w42">22</w>
+               <w msd="UPosTag=NUM|NumForm=Digit|NumType=Card" lemma="40" pos="C=-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w43">40</w>
+               <w msd="UPosTag=CCONJ" lemma="až" pos="J^-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w44">až</w>
+               <w msd="UPosTag=NOUN|Abbr=Yes|Gender=Fem" lemma="zl" pos="NNNXX-----A---b" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w45">zl</w>
+               <pc msd="UPosTag=PUNCT" lemma="." pos="Z:-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w46">.</pc>
+               <w msd="UPosTag=NUM|NumForm=Digit|NumType=Card" lemma="22.50" pos="C=-------------" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w47">22.50</w>
+               <pc msd="UPosTag=PUNCT" lemma="," pos="Z:-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w48">,</pc>
+               <w msd="UPosTag=ADP|AdpType=Prep|Case=Gen" lemma="z" pos="RR--2----------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w49">z</w>
+               <w msd="UPosTag=NOUN|Case=Gen|Gender=Fem|Number=Sing" lemma="trať" pos="NNFS2-----A---1" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w50">trati</w>
                <name type="LOC">
-                  <w msd="UPosTag=PROPN|Animacy=Inan|Case=Nom|Gender=Masc|NameType=Geo|Number=Plur" lemma="Kralupy" pos="NNIP1-----A----" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w52">Kralupy</w>
+                  <w msd="UPosTag=PROPN|Animacy=Inan|Case=Nom|Gender=Masc|NameType=Geo|Number=Plur" lemma="Kralupy" pos="NNIP1-----A----" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w51">Kralupy</w>
                </name>
                <lb xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.pb6.cb1.lb64"
                    facs="#PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.f.pg5.a1.c1.l64"/>
-               <w msd="UPosTag=NOUN|Abbr=Yes|Gender=Fem" lemma="zl" pos="NNFXX-----A---b" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w53">zl</w>
-               <pc msd="UPosTag=PUNCT" lemma="." pos="Z:-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w54">.</pc>
-               <w msd="UPosTag=NUM|NumForm=Digit|NumType=Card" lemma="22.80" pos="C=-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w55">22.80</w>
-               <w msd="UPosTag=CCONJ" lemma="až" pos="J^-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w56">až</w>
-               <w msd="UPosTag=NOUN|Abbr=Yes|Gender=Fem" lemma="zl" pos="NNFXX-----A---b" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w57">zl</w>
-               <pc msd="UPosTag=PUNCT" lemma="." pos="Z:-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w58">.</pc>
-               <w msd="UPosTag=NUM|NumForm=Digit|NumType=Card" lemma="22.90" pos="C=-------------" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w59">22.90</w>
-               <pc msd="UPosTag=PUNCT" lemma="," pos="Z:-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w60">,</pc>
-               <w msd="UPosTag=ADP|AdpType=Voc|Case=Gen" lemma="z" pos="RV--2----------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w61">ze</w>
-               <w msd="UPosTag=NOUN|Case=Gen|Gender=Fem|Number=Plur" lemma="stanice" pos="NNFP2-----A----" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w62">stanic</w>
-               <w msd="UPosTag=ADJ|Case=Gen|Degree=Pos|Gender=Fem|Number=Plur|Polarity=Pos" lemma="polabský" pos="AAFP2----1A----" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w63">polabských</w>
+               <w msd="UPosTag=NOUN|Abbr=Yes|Gender=Fem" lemma="zl" pos="NNFXX-----A---b" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w52">zl</w>
+               <pc msd="UPosTag=PUNCT" lemma="." pos="Z:-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w53">.</pc>
+               <w msd="UPosTag=NUM|NumForm=Digit|NumType=Card" lemma="22.80" pos="C=-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w54">22.80</w>
+               <w msd="UPosTag=CCONJ" lemma="až" pos="J^-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w55">až</w>
+               <w msd="UPosTag=NOUN|Abbr=Yes|Gender=Fem" lemma="zl" pos="NNFXX-----A---b" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w56">zl</w>
+               <pc msd="UPosTag=PUNCT" lemma="." pos="Z:-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w57">.</pc>
+               <w msd="UPosTag=NUM|NumForm=Digit|NumType=Card" lemma="22.90" pos="C=-------------" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w58">22.90</w>
+               <pc msd="UPosTag=PUNCT" lemma="," pos="Z:-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w59">,</pc>
+               <w msd="UPosTag=ADP|AdpType=Voc|Case=Gen" lemma="z" pos="RV--2----------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w60">ze</w>
+               <w msd="UPosTag=NOUN|Case=Gen|Gender=Fem|Number=Plur" lemma="stanice" pos="NNFP2-----A----" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w61">stanic</w>
+               <w msd="UPosTag=ADJ|Case=Gen|Degree=Pos|Gender=Fem|Number=Plur|Polarity=Pos" lemma="polabský" pos="AAFP2----1A----" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w62">polabských</w>
                <lb xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.pb6.cb1.lb65"
                    facs="#PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.f.pg5.a1.c1.l65"/>
-               <w msd="UPosTag=NOUN|Abbr=Yes|Gender=Neut" lemma="zl" pos="NNFXX-----A---b" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w64">zl</w>
-               <pc msd="UPosTag=PUNCT" lemma="." pos="Z:-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w65">.</pc>
-               <w msd="UPosTag=NUM|NumForm=Digit|NumType=Card" lemma="22.90" pos="C=-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w66">22.90</w>
-               <w msd="UPosTag=CCONJ" lemma="až" pos="J^-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w67">až</w>
-               <w msd="UPosTag=NOUN|Abbr=Yes|Gender=Neut" lemma="zl" pos="NNNXX-----A---b" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w68">zl</w>
-               <pc msd="UPosTag=PUNCT" lemma="." pos="Z:-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w69">.</pc>
-               <w msd="UPosTag=NUM|NumForm=Digit|NumType=Card" lemma="23" pos="C=-------------" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w70">23</w>
-               <pc msd="UPosTag=PUNCT" lemma="." pos="Z:-------------" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w71">.</pc>
-               <w msd="UPosTag=NUM|NumForm=Digit|NumType=Card" lemma="—" pos="C=-------------" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w72">—</w>
-               <pc msd="UPosTag=PUNCT" lemma="," pos="Z:-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w73">,</pc>
-               <w msd="UPosTag=ADV|Degree=Pos|Polarity=Pos" lemma="franko" pos="NNNS1-----A----" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w74">franko</w>
-               <w msd="UPosTag=ADP|AdpType=Prep|Case=Gen" lemma="z" pos="RR--2----------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w75">z</w>
+               <w msd="UPosTag=NOUN|Abbr=Yes|Gender=Neut" lemma="zl" pos="NNFXX-----A---b" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w63">zl</w>
+               <pc msd="UPosTag=PUNCT" lemma="." pos="Z:-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w64">.</pc>
+               <w msd="UPosTag=NUM|NumForm=Digit|NumType=Card" lemma="22.90" pos="C=-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w65">22.90</w>
+               <w msd="UPosTag=CCONJ" lemma="až" pos="J^-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w66">až</w>
+               <w msd="UPosTag=NOUN|Abbr=Yes|Gender=Neut" lemma="zl" pos="NNNXX-----A---b" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w67">zl</w>
+               <pc msd="UPosTag=PUNCT" lemma="." pos="Z:-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w68">.</pc>
+               <w msd="UPosTag=NUM|NumForm=Digit|NumType=Card" lemma="23" pos="C=-------------" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w69">23</w>
+               <pc msd="UPosTag=PUNCT" lemma="." pos="Z:-------------" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w70">.</pc>
+               <w msd="UPosTag=NUM|NumForm=Digit|NumType=Card" lemma="—" pos="C=-------------" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w71">—</w>
+               <pc msd="UPosTag=PUNCT" lemma="," pos="Z:-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w72">,</pc>
+               <w msd="UPosTag=ADV|Degree=Pos|Polarity=Pos" lemma="franko" pos="NNNS1-----A----" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w73">franko</w>
+               <w msd="UPosTag=ADP|AdpType=Prep|Case=Gen" lemma="z" pos="RR--2----------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w74">z</w>
                <name type="LOC">
-                  <w msd="UPosTag=PROPN|Case=Gen|Gender=Neut|NameType=Geo|Number=Sing" lemma="Ústí" pos="NNNS2-----A----" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w76">Ústí</w>
-                  <w msd="UPosTag=ADP|AdpType=Prep|Case=Ins" lemma="n" pos="RR--7----------" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w77">n</w>
-                  <pc msd="UPosTag=PUNCT" lemma="." pos="Z:-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w78">.</pc>
-                  <w msd="UPosTag=NOUN|Abbr=Yes" lemma="L" pos="Q3-------------" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w79">L</w>
-                  <pc msd="UPosTag=PUNCT" lemma="." pos="Z:-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w80">.</pc>
+                  <w msd="UPosTag=PROPN|Case=Gen|Gender=Neut|NameType=Geo|Number=Sing" lemma="Ústí" pos="NNNS2-----A----" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w75">Ústí</w>
+                  <w msd="UPosTag=ADP|AdpType=Prep|Case=Ins" lemma="n" pos="RR--7----------" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w76">n</w>
+                  <pc msd="UPosTag=PUNCT" lemma="." pos="Z:-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w77">.</pc>
+                  <w msd="UPosTag=NOUN|Abbr=Yes" lemma="L" pos="Q3-------------" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w78">L</w>
+                  <pc msd="UPosTag=PUNCT" lemma="." pos="Z:-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w79">.</pc>
                </name>
-               <w msd="UPosTag=NOUN|Abbr=Yes|Animacy=Inan|Gender=Masc" lemma="zl" pos="NNIXX-----A---b" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w81">zl</w>
-               <pc msd="UPosTag=PUNCT" lemma="." pos="Z:-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w82">.</pc>
-               <w msd="UPosTag=NUM|NumForm=Digit|NumType=Card" lemma="23.15" pos="C=-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w83">23.15</w>
+               <w msd="UPosTag=NOUN|Abbr=Yes|Animacy=Inan|Gender=Masc" lemma="zl" pos="NNIXX-----A---b" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w80">zl</w>
+               <pc msd="UPosTag=PUNCT" lemma="." pos="Z:-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w81">.</pc>
+               <w msd="UPosTag=NUM|NumForm=Digit|NumType=Card" lemma="23.15" pos="C=-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w82">23.15</w>
                <lb xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.pb6.cb1.lb66"
                    facs="#PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.f.pg5.a1.c1.l66"/>
-               <w msd="UPosTag=CCONJ" lemma="až" pos="J^-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w84">až</w>
-               <w msd="UPosTag=NOUN|Abbr=Yes|Animacy=Inan|Gender=Masc" lemma="zl" pos="NNIXX-----A---b" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w85">zl</w>
-               <pc msd="UPosTag=PUNCT" lemma="." pos="Z:-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w86">.</pc>
-               <w msd="UPosTag=NUM|NumForm=Digit|NumType=Card" lemma="23" pos="C=-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w87">23</w>
-               <w msd="UPosTag=NUM|NumForm=Digit|NumType=Card" lemma="25" pos="C=-------------" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w88">25</w>
-               <pc msd="UPosTag=PUNCT" lemma="," pos="Z:-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w89">,</pc>
-               <w msd="UPosTag=ADP|AdpType=Prep|Case=Gen" lemma="z" pos="RR--2----------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w90">z</w>
-               <w msd="UPosTag=PROPN|Animacy=Inan|Case=Gen|Gender=Masc|NameType=Geo|Number=Plur" lemma="Všetaty" pos="NNIP2-----A----" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w91">Všetat</w>
-               <pc msd="UPosTag=PUNCT" lemma="-" pos="Z:-------------" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w92">-</pc>
-               <w msd="UPosTag=PROPN|Animacy=Inan|Case=Nom|Gender=Masc|NameType=Geo|Number=Sing" lemma="Přívor" pos="NNIS1-----A----" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w93">Přívor</w>
-               <w msd="UPosTag=NOUN|Abbr=Yes|Gender=Fem" lemma="zl" pos="NNIXX-----A---b" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w94">zl</w>
-               <pc msd="UPosTag=PUNCT" lemma="." pos="Z:-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w95">.</pc>
-               <w msd="UPosTag=NUM|NumForm=Digit|NumType=Card" lemma="22.70" pos="C=-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w96">22.70</w>
-               <w msd="UPosTag=CCONJ" lemma="až" pos="J^-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w97">až</w>
-               <w msd="UPosTag=NOUN|Abbr=Yes|Animacy=Inan|Gender=Masc" lemma="zl" pos="NNIXX-----A---b" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w98">zl</w>
-               <pc msd="UPosTag=PUNCT" lemma="." pos="Z:-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w99">.</pc>
-               <w msd="UPosTag=NUM|NumForm=Digit|NumType=Card" lemma="22.80" pos="C=-------------" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w100">22.80</w>
-               <pc msd="UPosTag=PUNCT" lemma="." pos="Z:-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w101">.</pc>
+               <w msd="UPosTag=CCONJ" lemma="až" pos="J^-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w83">až</w>
+               <w msd="UPosTag=NOUN|Abbr=Yes|Animacy=Inan|Gender=Masc" lemma="zl" pos="NNIXX-----A---b" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w84">zl</w>
+               <pc msd="UPosTag=PUNCT" lemma="." pos="Z:-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w85">.</pc>
+               <w msd="UPosTag=NUM|NumForm=Digit|NumType=Card" lemma="23" pos="C=-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w86">23</w>
+               <w msd="UPosTag=NUM|NumForm=Digit|NumType=Card" lemma="25" pos="C=-------------" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w87">25</w>
+               <pc msd="UPosTag=PUNCT" lemma="," pos="Z:-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w88">,</pc>
+               <w msd="UPosTag=ADP|AdpType=Prep|Case=Gen" lemma="z" pos="RR--2----------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w89">z</w>
+               <w msd="UPosTag=PROPN|Animacy=Inan|Case=Gen|Gender=Masc|NameType=Geo|Number=Plur" lemma="Všetaty" pos="NNIP2-----A----" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w90">Všetat</w>
+               <pc msd="UPosTag=PUNCT" lemma="-" pos="Z:-------------" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w91">-</pc>
+               <w msd="UPosTag=PROPN|Animacy=Inan|Case=Nom|Gender=Masc|NameType=Geo|Number=Sing" lemma="Přívor" pos="NNIS1-----A----" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w92">Přívor</w>
+               <w msd="UPosTag=NOUN|Abbr=Yes|Gender=Fem" lemma="zl" pos="NNIXX-----A---b" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w93">zl</w>
+               <pc msd="UPosTag=PUNCT" lemma="." pos="Z:-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w94">.</pc>
+               <w msd="UPosTag=NUM|NumForm=Digit|NumType=Card" lemma="22.70" pos="C=-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w95">22.70</w>
+               <w msd="UPosTag=CCONJ" lemma="až" pos="J^-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w96">až</w>
+               <w msd="UPosTag=NOUN|Abbr=Yes|Animacy=Inan|Gender=Masc" lemma="zl" pos="NNIXX-----A---b" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w97">zl</w>
+               <pc msd="UPosTag=PUNCT" lemma="." pos="Z:-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w98">.</pc>
+               <w msd="UPosTag=NUM|NumForm=Digit|NumType=Card" lemma="22.80" pos="C=-------------" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w99">22.80</w>
+               <pc msd="UPosTag=PUNCT" lemma="." pos="Z:-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s5.w100">.</pc>
             </s>
             <lb xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.pb6.cb1.lb67"
                 facs="#PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.f.pg5.a1.c1.l67"/>
@@ -65782,38 +65786,39 @@
             <s xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s10"
                n="1197">
                <w msd="UPosTag=NOUN|Case=Nom|Gender=Fem|Number=Sing" lemma="melasa" pos="NNFS1-----A----" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s10.w1">Melasa</w>
-               <w xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s10.w2">42°<w msd="UPosTag=NUM|NumForm=Digit|NumType=Card" norm="42" lemma="42" pos="C=-------------" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s10.w3"/><pc msd="UPosTag=SYM" norm="°" lemma="°" pos="Z:-------------" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s10.w4"/></w>
+               <w msd="UPosTag=NUM|NumForm=Digit|NumType=Card" lemma="42" pos="C=-------------" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s10.w2">42</w>
+               <pc msd="UPosTag=SYM" lemma="°" pos="Z:-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s10.w3">°</pc>
                <name type="MISC">
-                  <w msd="UPosTag=NOUN|Abbr=Yes" lemma="B" pos="Q3-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s10.w5">B</w>
+                  <w msd="UPosTag=NOUN|Abbr=Yes" lemma="B" pos="Q3-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s10.w4">B</w>
                </name>
-               <w msd="UPosTag=NUM|NumForm=Digit|NumType=Card" lemma="50" pos="C=-------------" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s10.w6">50</w>
-               <pc msd="UPosTag=SYM" lemma="%" pos="Z:-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s10.w7">%</pc>
+               <w msd="UPosTag=NUM|NumForm=Digit|NumType=Card" lemma="50" pos="C=-------------" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s10.w5">50</w>
+               <pc msd="UPosTag=SYM" lemma="%" pos="Z:-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s10.w6">%</pc>
                <lb xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.pb6.cb1.lb71"
                    facs="#PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.f.pg5.a1.c1.l71"/>
-               <w msd="UPosTag=PROPN|Abbr=Yes|Gender=Fem|NameType=Geo" lemma="Pol" pos="NNFXX-----A---b" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s10.w8">Pol</w>
-               <pc msd="UPosTag=PUNCT" lemma="." pos="Z:-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s10.w9">.</pc>
-               <w msd="UPosTag=ADJ|Case=Nom|Degree=Pos|Gender=Fem|Number=Sing|Polarity=Neg|VerbForm=Part|Voice=Pass" lemma="osmosovaný" pos="AAFS1----1N----" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s10.w10">neosmosovaná</w>
-               <w msd="UPosTag=ADJ|Case=Nom|Degree=Pos|Gender=Fem|Number=Sing|Polarity=Pos" lemma="ponotový" pos="AAFS1----1A----" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s10.w11">ponotová</w>
-               <w msd="UPosTag=NOUN|Abbr=Yes|Animacy=Inan|Gender=Masc" lemma="zl" pos="NNIXX-----A---b" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s10.w12">zl</w>
-               <pc msd="UPosTag=PUNCT" lemma="." pos="Z:-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s10.w13">.</pc>
-               <w msd="UPosTag=NUM|NumForm=Digit|NumType=Card" lemma="4.50" pos="C=-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s10.w14">4.50</w>
-               <w msd="UPosTag=CCONJ" lemma="až" pos="J^-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s10.w15">až</w>
-               <w msd="UPosTag=NOUN|Abbr=Yes|Animacy=Inan|Gender=Masc" lemma="zl" pos="NNIXX-----A---b" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s10.w16">zl</w>
-               <pc msd="UPosTag=PUNCT" lemma="." pos="Z:-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s10.w17">.</pc>
-               <w msd="UPosTag=NUM|NumForm=Digit|NumType=Card" lemma="4.60" pos="C=-------------" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s10.w18">4.60</w>
-               <pc msd="UPosTag=PUNCT" lemma="," pos="Z:-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s10.w19">,</pc>
+               <w msd="UPosTag=PROPN|Abbr=Yes|Gender=Fem|NameType=Geo" lemma="Pol" pos="NNFXX-----A---b" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s10.w7">Pol</w>
+               <pc msd="UPosTag=PUNCT" lemma="." pos="Z:-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s10.w8">.</pc>
+               <w msd="UPosTag=ADJ|Case=Nom|Degree=Pos|Gender=Fem|Number=Sing|Polarity=Neg|VerbForm=Part|Voice=Pass" lemma="osmosovaný" pos="AAFS1----1N----" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s10.w9">neosmosovaná</w>
+               <w msd="UPosTag=ADJ|Case=Nom|Degree=Pos|Gender=Fem|Number=Sing|Polarity=Pos" lemma="ponotový" pos="AAFS1----1A----" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s10.w10">ponotová</w>
+               <w msd="UPosTag=NOUN|Abbr=Yes|Animacy=Inan|Gender=Masc" lemma="zl" pos="NNIXX-----A---b" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s10.w11">zl</w>
+               <pc msd="UPosTag=PUNCT" lemma="." pos="Z:-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s10.w12">.</pc>
+               <w msd="UPosTag=NUM|NumForm=Digit|NumType=Card" lemma="4.50" pos="C=-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s10.w13">4.50</w>
+               <w msd="UPosTag=CCONJ" lemma="až" pos="J^-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s10.w14">až</w>
+               <w msd="UPosTag=NOUN|Abbr=Yes|Animacy=Inan|Gender=Masc" lemma="zl" pos="NNIXX-----A---b" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s10.w15">zl</w>
+               <pc msd="UPosTag=PUNCT" lemma="." pos="Z:-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s10.w16">.</pc>
+               <w msd="UPosTag=NUM|NumForm=Digit|NumType=Card" lemma="4.60" pos="C=-------------" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s10.w17">4.60</w>
+               <pc msd="UPosTag=PUNCT" lemma="," pos="Z:-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s10.w18">,</pc>
                <lb xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.pb6.cb1.lb72"
                    facs="#PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.f.pg5.a1.c1.l72"/>
-               <w msd="UPosTag=NOUN|Case=Nom|Gender=Fem|Number=Sing" lemma="melasa" pos="NNFS1-----A----" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s10.w20">melasa</w>
-               <w msd="UPosTag=ADJ|Case=Nom|Degree=Pos|Gender=Fem|Number=Sing|Polarity=Pos|VerbForm=Part|Voice=Pass" lemma="osmosovaný" pos="AAFS1----1A----" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s10.w21">osmosovaná</w>
-               <w msd="UPosTag=NOUN|Abbr=Yes|Gender=Fem" lemma="zl" pos="NNFXX-----A---b" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s10.w22">zl</w>
-               <pc msd="UPosTag=PUNCT" lemma="." pos="Z:-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s10.w23">.</pc>
-               <w msd="UPosTag=NUM|NumForm=Digit|NumType=Card" lemma="4.40" pos="C=-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s10.w24">4.40</w>
-               <w msd="UPosTag=CCONJ" lemma="až" pos="J^-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s10.w25">až</w>
-               <w msd="UPosTag=NOUN|Abbr=Yes|Gender=Neut" lemma="zl" pos="NNNXX-----A---b" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s10.w26">zl</w>
-               <pc msd="UPosTag=PUNCT" lemma="." pos="Z:-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s10.w27">.</pc>
-               <w msd="UPosTag=NUM|NumForm=Digit|NumType=Card" lemma="4.50" pos="C=-------------" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s10.w28">4.50</w>
-               <pc msd="UPosTag=PUNCT" lemma="." pos="Z:-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s10.w29">.</pc>
+               <w msd="UPosTag=NOUN|Case=Nom|Gender=Fem|Number=Sing" lemma="melasa" pos="NNFS1-----A----" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s10.w19">melasa</w>
+               <w msd="UPosTag=ADJ|Case=Nom|Degree=Pos|Gender=Fem|Number=Sing|Polarity=Pos|VerbForm=Part|Voice=Pass" lemma="osmosovaný" pos="AAFS1----1A----" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s10.w20">osmosovaná</w>
+               <w msd="UPosTag=NOUN|Abbr=Yes|Gender=Fem" lemma="zl" pos="NNFXX-----A---b" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s10.w21">zl</w>
+               <pc msd="UPosTag=PUNCT" lemma="." pos="Z:-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s10.w22">.</pc>
+               <w msd="UPosTag=NUM|NumForm=Digit|NumType=Card" lemma="4.40" pos="C=-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s10.w23">4.40</w>
+               <w msd="UPosTag=CCONJ" lemma="až" pos="J^-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s10.w24">až</w>
+               <w msd="UPosTag=NOUN|Abbr=Yes|Gender=Neut" lemma="zl" pos="NNNXX-----A---b" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s10.w25">zl</w>
+               <pc msd="UPosTag=PUNCT" lemma="." pos="Z:-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s10.w26">.</pc>
+               <w msd="UPosTag=NUM|NumForm=Digit|NumType=Card" lemma="4.50" pos="C=-------------" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s10.w27">4.50</w>
+               <pc msd="UPosTag=PUNCT" lemma="." pos="Z:-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p347.s10.w28">.</pc>
             </s>
          </p>
          <lb xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.pb6.cb1.lb73"
@@ -66974,11 +66979,12 @@
                n="1250">
                <w msd="UPosTag=NOUN|Case=Nom|Gender=Fem|Number=Sing" lemma="kukuřice" pos="NNFS1-----A----" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p357.s10.w1">Kukuřice</w>
                <w msd="UPosTag=ADJ|Case=Nom|Degree=Pos|Gender=Fem|Number=Sing|Polarity=Pos" lemma="promptní" pos="AAFS1----1A----" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p357.s10.w2">promptní</w>
-               <w join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p357.s10.w3">5.05—<w msd="UPosTag=NUM|NumForm=Digit|NumType=Card" norm="5.05" lemma="5.05" pos="C=-------------" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p357.s10.w4"/><pc msd="UPosTag=SYM|ConjType=Oper" norm="—" lemma="—" pos="J*-------------" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p357.s10.w5"/></w>
-               <w msd="UPosTag=NUM|NumForm=Digit|NumType=Card" lemma="5" pos="C=-------------" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p357.s10.w6">5</w>
-               <pc msd="UPosTag=PUNCT" lemma="-" pos="Z:-------------" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p357.s10.w7">-</pc>
-               <w msd="UPosTag=NUM|NumForm=Digit|NumType=Card" lemma="15" pos="C=-------------" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p357.s10.w8">15</w>
-               <pc msd="UPosTag=PUNCT" lemma="." pos="Z:-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p357.s10.w9">.</pc>
+               <w msd="UPosTag=NUM|NumForm=Digit|NumType=Card" lemma="5.05" pos="C=-------------" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p357.s10.w3">5.05</w>
+               <pc msd="UPosTag=SYM|ConjType=Oper" lemma="—" pos="J*-------------" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p357.s10.w4">—</pc>
+               <w msd="UPosTag=NUM|NumForm=Digit|NumType=Card" lemma="5" pos="C=-------------" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p357.s10.w5">5</w>
+               <pc msd="UPosTag=PUNCT" lemma="-" pos="Z:-------------" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p357.s10.w6">-</pc>
+               <w msd="UPosTag=NUM|NumForm=Digit|NumType=Card" lemma="15" pos="C=-------------" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p357.s10.w7">15</w>
+               <pc msd="UPosTag=PUNCT" lemma="." pos="Z:-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p357.s10.w8">.</pc>
             </s>
             <lb xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.pb6.cb1.lb150"
                 facs="#PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.f.pg5.a1.c1.l150"/>
@@ -67349,10 +67355,11 @@
                <w msd="UPosTag=NOUN|Animacy=Inan|Case=Nom|Gender=Masc|Number=Sing" lemma="cukr" pos="NNIS1-----A----" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p360.s2.w9">cukr</w>
                <lb xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.pb6.cb2.lb5"
                    facs="#PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.f.pg5.a1.c2.l5"/>
-               <w xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p360.s2.w10">88°<w msd="UPosTag=NUM|NumForm=Digit|NumType=Card" norm="88" lemma="88" pos="C=-------------" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p360.s2.w11"/><pc msd="UPosTag=SYM" norm="°" lemma="°" pos="Z:-------------" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p360.s2.w12"/></w>
-               <w msd="UPosTag=ADJ|Animacy=Inan|Case=Nom|Degree=Pos|Gender=Masc|Number=Sing|Polarity=Pos" lemma="klidný" pos="AAIS1----1A----" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p360.s2.w13">klidný</w>
-               <w msd="UPosTag=NUM|NumForm=Digit|NumType=Card" lemma="30.75" pos="C=-------------" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p360.s2.w14">30.75</w>
-               <pc msd="UPosTag=PUNCT" lemma="." pos="Z:-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p360.s2.w15">.</pc>
+               <w msd="UPosTag=NUM|NumForm=Digit|NumType=Card" lemma="88" pos="C=-------------" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p360.s2.w10">88</w>
+               <pc msd="UPosTag=SYM" lemma="°" pos="Z:-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p360.s2.w11">°</pc>
+               <w msd="UPosTag=ADJ|Animacy=Inan|Case=Nom|Degree=Pos|Gender=Masc|Number=Sing|Polarity=Pos" lemma="klidný" pos="AAIS1----1A----" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p360.s2.w12">klidný</w>
+               <w msd="UPosTag=NUM|NumForm=Digit|NumType=Card" lemma="30.75" pos="C=-------------" join="right" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p360.s2.w13">30.75</w>
+               <pc msd="UPosTag=PUNCT" lemma="." pos="Z:-------------" xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p360.s2.w14">.</pc>
             </s>
             <s xml:id="PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.p360.s3"
                n="1269">
