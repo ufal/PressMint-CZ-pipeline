@@ -232,6 +232,8 @@ $(get-page-ocr-texts-UUID): get-page-ocr-texts-%: $(IN)/periodical/$(periodical)
 ##get-page-image## loop pages to get image files
 get-page-image-UUID = $(addprefix get-page-image-, $(pages))
 get-page-image: $(get-page-image-UUID)
+	echo "INFO: downloading page images for $(UUID_PATH)"
+	echo "INFO: $(get-page-image-UUID)"
 $(get-page-image-UUID): get-page-image-%: $(IN)/periodical/$(periodical)/$(periodicalvolume)/$(periodicalitem)
 	test -f $(IN)/periodical/$(periodical)/$(periodicalvolume)/$(periodicalitem)/$*.jpg \
 	|| curl 'https://api.kramerius.mzk.cz/search/iiif/uuid:$*/full/max/0/default.jpg' \
@@ -437,10 +439,35 @@ $(TASKS) $(JSONissues) $(idMapping) $(xmlOCR) $(altoOCR) $(vizOCRxml) $(vizLAYOU
 	mkdir -p $@
 
 
+##
+
+
+download-imgs: _test-level-2-$(UUID_PATH_LEVEL)
+	ls $(IN)/periodical/$(UUID_PATH)/*.txt \
+	  | sed "s/.txt$$//;s/^.*\///" \
+		| xargs -I {} make get-page-image UUID_PATH=$(UUID_PATH)/{} || echo "INFO: no images to download for $(UUID_PATH)"
+
+delete-imgs: _test-level-2-$(UUID_PATH_LEVEL)
+ifeq ($(SAMPLE),1)
+	@echo "INFO: skipping deletion of images for $(UUID_PATH) because SAMPLE mode is active"
+else
+	@ echo "INFO: deleting images for $(UUID_PATH)"
+	@ls $(IN)/periodical/$(UUID_PATH)/*.jpg | xargs -I {} echo "INFO: deleting {}"
+	@rm $(IN)/periodical/$(UUID_PATH)/*.jpg
+endif
+
+download-imgs-process-data-delete-imgs: $(IN)/periodical/$(UUID_PATH).json download-imgs process-data  delete-imgs
+
+
 ##process-data-all## process data for all issues (img->text-->TEI) based on task list prepared by prepare-tasks
 process-data-all: $(TASKS_ISSUES)
 	cat $(TASKS_ISSUES) | xargs -I {} make process-data UUID_PATH={} SAMPLE=$(SAMPLE)
 process-data: $(IN)/periodical/$(UUID_PATH).json inputImg2pageXML inputImg2imageRegions textRegions2teiFacsText
+
+DEVprocess-data-all: $(TASKS_ISSUES)
+	cat $(TASKS_ISSUES) | xargs -I {} make DEVprocess-data UUID_PATH={} SAMPLE=$(SAMPLE)
+DEVprocess-data: $(IN)/periodical/$(UUID_PATH).json inputImg2imageRegions textRegions2teiFacsText
+
 
 textRegions2teiFacsText-all: $(TASKS_ISSUES)
 	cat $(TASKS_ISSUES) | xargs -I {} make textRegions2teiFacsText UUID_PATH={} SAMPLE=$(SAMPLE)
@@ -675,6 +702,17 @@ help-targets:
 	@grep -E '^## *[a-zA-Z_-]+.*?##.*$$|^####' $(MAKEFILE_LIST) | awk 'BEGIN {FS = " *## *"}; {printf "\033[1m%s\033[0m\033[36m%-25s\033[0m %s\n", $$4, $$2, $$3}'
 
 
-.PHONY: help
+
+.PHONY: help test-level-%
 ## help ## print this help
 help: help-intro help-variables help-targets
+
+_test-level-%:
+	@X=$$(echo "$*" | cut -d'-' -f1); \
+	Y=$$(echo "$*" | cut -d'-' -f2); \
+	if [ "$$X" = "$$Y" ]; then \
+		echo "INFO: running on level $$X"; \
+	else \
+		echo "FATAL ERROR: expected level $$X but got $$Y ($(UUID_PATH))"; \
+		exit 1; \
+	fi
