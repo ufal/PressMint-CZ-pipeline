@@ -48,6 +48,12 @@ WORK := ${DATA}work
 VIZ := ${DATA}viz
 DIST := ${DATA}dist
 TASKS := ${DATA}/tasks
+
+INjson := ${IN}/json
+INuuid := ${IN}/work-uuid
+INtxt := ${IN}/txt
+INimg := ${IN}/img
+
 TASKS_PERIODICALS := ${TASKS}/periodicals.tasks
 TASKS_VOLUMES := ${TASKS}/volumes.tasks
 TASKS_ISSUES := ${TASKS}/issues.tasks
@@ -154,17 +160,22 @@ get-PressMint-CZ-sample-periodicals:
 ifeq ($(SAMPLE),1)
 	for p in `cat $(SAMPLE_UUIDs_FILE)`; \
 	do \
-	  mkdir -p $(IN)/periodical/$$p; \
-	  cp -r $(SAMPLE_SOURCE_SOURCE)/periodical/$$p/* $(IN)/periodical/$$p/; \
+	  mkdir -p $(INjson)/$$p; \
+	  mkdir -p $(INuuid)/$$p; \
+	  mkdir -p $(INtxt)/$$p; \
+	  test -d $(SAMPLE_SOURCE_SOURCE)/json/$$p && cp -r $(SAMPLE_SOURCE_SOURCE)/json/$$p $(INjson)/$$p; \
+	  test -d $(SAMPLE_SOURCE_SOURCE)/work-uuid/$$p && cp -r $(SAMPLE_SOURCE_SOURCE)/work-uuid/$$p $(INuuid)/$$p; \
+	  test -d $(SAMPLE_SOURCE_SOURCE)/txt/$$p && cp -r $(SAMPLE_SOURCE_SOURCE)/txt/$$p/* $(INtxt)/$$p; \
 		path=""; \
 		for uuid in `echo "$$p" | tr '/' ' '` ; \
 		do \
 		  path="$${path:+$$path/}$$uuid"; \
-		  jq . $(SAMPLE_SOURCE_SOURCE)/periodical/$$path.json > $(IN)/periodical/$$path.json ; \
+		  jq . $(SAMPLE_SOURCE_SOURCE)/json/$$path.json > $(INjson)/$$path.json ; \
 		done; \
-		find $(IN)/periodical/$$p -type f -name "*.txt" \
-		  | sed 's@^.*periodical/\(.*\).txt$$@make SAMPLE=1 get-page-image UUID_PATH=\1@'| sh ; \
+		find $(INtxt)/$$p -type f -name "*.txt" \
+		  | sed 's@^.*txt/\(.*\).txt$$@make SAMPLE=1 get-page-image UUID_PATH=\1@'| sh ; \
 	done
+	find $(IN) -type d -empty -delete
 else	
 	@echo "Available only in SAMPLE mode."
 endif
@@ -173,73 +184,76 @@ endif
 ##get-periodicals## loop periodical(issues) to get volumes
 get-periodicals-UUID = $(addprefix get-periodicals-, $(periodicals))
 get-periodicals: $(get-periodicals-UUID)
-$(get-periodicals-UUID): get-periodicals-%: $(IN)/periodical
+$(get-periodicals-UUID): get-periodicals-%:
 ifeq ($(SAMPLE),1)
 	@echo "Skipping data downloading: SAMPLE mode active."
 else	
-	test -f $(IN)/periodical/$*.json \
+	mkdir -p $(INjson)	$(INuuid)
+	test -f $(INjson)/$*.json \
 	|| curl 'https://api.kramerius.mzk.cz/search/api/client/v7.0/search?q=(model:periodicalvolume)%20AND%20(own_parent.pid:uuid%5C:$*)%20AND%20(licenses:public)&fl=*&sort=date.min%20asc&rows=999&start=0' -H 'accept: application/json, text/plain, */*' \
-	> $(IN)/periodical/$*.json \
-	&& cat $(IN)/periodical/$*.json|jq -r '.response.docs[]|.pid| sub("^uuid:"; "")' \
-	> $(IN)/periodical/$*.uuid \
-	&& make get-periodicalvolumes periodical_uuid=$(IN)/periodical/$*.uuid
+	> $(INjson)/$*.json \
+	&& cat $(INjson)/$*.json|jq -r '.response.docs[]|.pid| sub("^uuid:"; "")' \
+	> $(INuuid)/$*.uuid \
+	&& make get-periodicalvolumes periodical_uuid=$(INuuid)/$*.uuid
 endif
 
 
 
-$(IN)/periodical/$(periodical):
+$(INjson)/$(periodical) $(INuuid)/$(periodical):
 	mkdir -p $@
 ##get-periodicalvolumes## loop volumes to get items(copies)
 get-periodicalvolumes-UUID = $(addprefix get-periodicalvolumes-, $(periodicalvolumes))
 get-periodicalvolumes: $(get-periodicalvolumes-UUID)
-$(get-periodicalvolumes-UUID): get-periodicalvolumes-%: $(IN)/periodical/$(periodical)
-	test -f $(IN)/periodical/$(periodical)/$*.json \
+$(get-periodicalvolumes-UUID): get-periodicalvolumes-%: $(INjson)/$(periodical) $(INuuid)/$(periodical)
+	test -f $(INjson)/$(periodical)/$*.json \
 	|| curl 'https://api.kramerius.mzk.cz/search/api/client/v7.0/search?q=(model:periodicalitem)%20AND%20(own_parent.pid:uuid%5C:$*)%20AND%20(licenses.facet:public%20OR%20licenses:public%20OR%20licenses_of_ancestors:public)&fl=*&sort=date.min%20asc&rows=999&start=0' -H 'accept: application/json, text/plain, */*'  \
-	> $(IN)/periodical/$(periodical)/$*.json
-	cat $(IN)/periodical/$(periodical)/$*.json|jq -r '.response.docs[]|.pid| sub("^uuid:"; "")' \
-	> $(IN)/periodical/$(periodical)/$*.uuid
-	make get-periodicalitems periodical=$(periodical) periodicalvolume_uuid=$(IN)/periodical/$(periodical)/$*.uuid
+	> $(INjson)/$(periodical)/$*.json
+	cat $(INjson)/$(periodical)/$*.json|jq -r '.response.docs[]|.pid| sub("^uuid:"; "")' \
+	> $(INuuid)/$(periodical)/$*.uuid
+	make get-periodicalitems periodical=$(periodical) periodicalvolume_uuid=$(INuuid)/$(periodical)/$*.uuid
 
 
 
 
-$(IN)/periodical/$(periodical)/$(periodicalvolume):
+$(INjson)/$(periodical)/$(periodicalvolume) $(INuuid)/$(periodical)/$(periodicalvolume):
 	mkdir -p $@
 ##get-periodicalitems## loop items(copies) to get pages
 get-periodicalitems-UUID = $(addprefix get-periodicalitems-, $(periodicalitems))
 get-periodicalitems: $(get-periodicalitems-UUID)
-$(get-periodicalitems-UUID): get-periodicalitems-%: $(IN)/periodical/$(periodical)/$(periodicalvolume)
-	test -f $(IN)/periodical/$(periodical)/$(periodicalvolume)/$*.json \
+$(get-periodicalitems-UUID): get-periodicalitems-%: $(INjson)/$(periodical)/$(periodicalvolume) $(INuuid)/$(periodical)/$(periodicalvolume)
+	test -f $(INjson)/$(periodical)/$(periodicalvolume)/$*.json \
 	|| curl 'https://api.kramerius.mzk.cz/search/api/client/v7.0/search?q=(own_parent.pid:uuid%5C:$*)&fl=*&sort=rels_ext_index.sort%20asc&rows=999&start=0' -H 'accept: application/json, text/plain, */*'  \
-	> $(IN)/periodical/$(periodical)/$(periodicalvolume)/$*.json
-	cat $(IN)/periodical/$(periodical)/$(periodicalvolume)/$*.json|jq -r '.response.docs[]|.pid| sub("^uuid:"; "")' \
-	> $(IN)/periodical/$(periodical)/$(periodicalvolume)/$*.uuid
-	make get-page-ocr-texts periodical=$(periodical) periodicalvolume=$(periodicalvolume) periodicalitem_uuid=$(IN)/periodical/$(periodical)/$(periodicalvolume)/$*.uuid
+	> $(INjson)/$(periodical)/$(periodicalvolume)/$*.json
+	cat $(INjson)/$(periodical)/$(periodicalvolume)/$*.json|jq -r '.response.docs[]|.pid| sub("^uuid:"; "")' \
+	> $(INuuid)/$(periodical)/$(periodicalvolume)/$*.uuid
+	make get-page-ocr-texts periodical=$(periodical) periodicalvolume=$(periodicalvolume) periodicalitem_uuid=$(INuuid)/$(periodical)/$(periodicalvolume)/$*.uuid
 
 
 ##get-page-ocr-texts## loop pages to get ocr text [note: this is not used in result, because we are running custom ocrn original images]
-$(IN)/periodical/$(periodical)/$(periodicalvolume)/$(periodicalitem):
+$(INtxt)/$(periodical)/$(periodicalvolume)/$(periodicalitem):
 	mkdir -p $@
 get-page-ocr-texts-UUID = $(addprefix get-page-ocr-texts-, $(pages))
 get-page-ocr-texts: $(get-page-ocr-texts-UUID)
-$(get-page-ocr-texts-UUID): get-page-ocr-texts-%: $(IN)/periodical/$(periodical)/$(periodicalvolume)/$(periodicalitem)
-	test -f $(IN)/periodical/$(periodical)/$(periodicalvolume)/$(periodicalitem)/$*.txt \
+$(get-page-ocr-texts-UUID): get-page-ocr-texts-%: $(INtxt)/$(periodical)/$(periodicalvolume)/$(periodicalitem)
+	test -f $(INtxt)/$(periodical)/$(periodicalvolume)/$(periodicalitem)/$*.txt \
 	|| curl 'https://api.kramerius.mzk.cz/search/api/client/v7.0/items/uuid:$*/ocr/text' -H 'accept: application/json, text/plain, */*' \
-	> $(IN)/periodical/$(periodical)/$(periodicalvolume)/$(periodicalitem)/$*.txt
+	> $(INtxt)/$(periodical)/$(periodicalvolume)/$(periodicalitem)/$*.txt
 
 
 # loop pages to get metadata
 # loop pages to get fascimiles
 
 ##get-page-image## loop pages to get image files
+$(INimg)/$(periodical)/$(periodicalvolume)/$(periodicalitem):
+	mkdir -p $@
 get-page-image-UUID = $(addprefix get-page-image-, $(pages))
 get-page-image: $(get-page-image-UUID)
 	echo "INFO: downloading page images for $(UUID_PATH)"
 	echo "INFO: $(get-page-image-UUID)"
-$(get-page-image-UUID): get-page-image-%: $(IN)/periodical/$(periodical)/$(periodicalvolume)/$(periodicalitem)
-	test -f $(IN)/periodical/$(periodical)/$(periodicalvolume)/$(periodicalitem)/$*.jpg \
+$(get-page-image-UUID): get-page-image-%: $(INimg)/$(periodical)/$(periodicalvolume)/$(periodicalitem)
+	test -f $(INimg)/$(periodical)/$(periodicalvolume)/$(periodicalitem)/$*.jpg \
 	|| curl 'https://api.kramerius.mzk.cz/search/iiif/uuid:$*/full/max/0/default.jpg' \
-	> $(IN)/periodical/$(periodical)/$(periodicalvolume)/$(periodicalitem)/$*.jpg
+	> $(INimg)/$(periodical)/$(periodicalvolume)/$(periodicalitem)/$*.jpg
 
 #
 uuid2url:
@@ -251,7 +265,7 @@ uuid2url:
 prepare-tasks: $(TASKS_ISSUES) $(TASKS_VOLUMES) $(TASKS_PERIODICALS) $(TASKS_TEI_COMPONENTS)
 
 $(TASKS_ISSUES): $(TASKS)
-	find $(IN)/periodical  -mindepth 3 -maxdepth 3 -type f -name "*.json" | sed 's@^.*periodical/\(.*\).json$$@\1@' |sort > $@
+	find $(INjson)  -mindepth 3 -maxdepth 3 -type f -name "*.json" | sed 's@^.*json/\(.*\).json$$@\1@' |sort > $@
 $(TASKS_VOLUMES): $(TASKS_ISSUES)
 	cut -f1-2 -d\/ $(TASKS_ISSUES) | sort | uniq > $@
 $(TASKS_PERIODICALS): $(TASKS_ISSUES)
@@ -268,11 +282,11 @@ visualize-input: stats-copies stats-periodical stats-periodicalvolumesQ stats-pe
 stats-copies:
 	@echo "id_issue\tid_volume\tid_copy\ttitle\tdate\tlanguages\tpages\twords" \
 	> DataStats/stats-copies.tsv
-	@for file in `find $(IN)/periodical  -mindepth 2 -maxdepth 2 -type f -name "*.json"`; do \
+	@for file in `find $(INjson)/periodical  -mindepth 2 -maxdepth 2 -type f -name "*.json"`; do \
 	jq -r '.response.docs[]|"\(.own_pid_path)\t\(.["root.title"])\t\(.["date.min"] | split("T")[0])\t\(.["languages.facet"])\t\(.["count_page"])\t"' $${file}\
 	  | sed "s@/uuid:@\t@g;s/^uuid://" \
 	  | while IFS= read -r line; do \
-		  words=$$(cat $$(echo "$${line}"|cut -f1,2,3|tr "\t" "/"|sed 's@^@$(IN)/periodical/@;s@$$@/*.txt@')| wc -w);\
+		  words=$$(cat $$(echo "$${line}"|cut -f1,2,3|tr "\t" "/"|sed 's@^@$(INtxt)/@;s@$$@/*.txt@')| wc -w);\
 			echo "$${line}$${words}"| tr -d '"[]';\
 		done;\
 	done \
@@ -303,7 +317,7 @@ visualize-pageXML: $(vizOCRxml)
 	do \
 		echo "creating pdf: $(vizOCRxml)/$$output";\
 		python Scripts/pageXML2pdf.py \
-		  --images $(IN)/periodical \
+		  --images $(INimg) \
 			--xml $(xmlOCR)/$${COMP}/ \
 			--jsonl $(idMapping)/$${COMP}.jsonl \
 			--output $(vizOCRxml)/$${COMP}.pdf;\
@@ -370,7 +384,7 @@ visualize-layout-merge: $(vizLAYOUTmerge)
 			echo "UUID=$${UUID}";\
 			echo "UUID_PATH=$${UUID_PATH}";\
 			python Scripts/vizMerge.py \
-		    --background $(IN)/periodical/$${UUID_PATH}.jpg \
+		    --background $(INimg)/$${UUID_PATH}.jpg \
 			  --output "$^/$${COMP}/$${UUID}.jpg" \
 				$(vizLAYOUTregions)/$${COMP}/$${UUID}.png \
 				$(vizLAYOUTxml)/$${COMP}/$${UUID}.png \
@@ -395,18 +409,18 @@ visualize-tei: $(vizTEI)
 ##process-metadata-all## process metadata for all volumes based on task list prepared by prepare-tasks
 process-metadata-all: $(TASKS_VOLUMES)
 	cat $(TASKS_VOLUMES) | xargs -I {} make process-metadata UUID_PATH={} SAMPLE=$(SAMPLE)
-process-metadata: $(IN)/periodical/$(UUID_PATH).json input2outputMapping inputJsonMerge inputJson2teiHeader 
+process-metadata: $(INjson)/$(UUID_PATH).json input2outputMapping inputJsonMerge inputJson2teiHeader 
 
 
 ##inputJsonMerge## merge issues and page json files
-inputJsonMerge: $(IN)/periodical/$(UUID_PATH).json $(JSONissues)
+inputJsonMerge: $(INjson)/$(UUID_PATH).json $(JSONissues)
 ifeq ($(UUID_PATH_LEVEL),1)
 	@echo "INFO: processing volume $(UUID_PATH)"
 	mkdir -p $(JSONissues)/$(UUID_PATH)
 	jq -c '.response.docs[]' $< | while read -r obj; \
 	do \
 	  pid=$$(echo "$$obj" | jq -r '.pid'| sed "s/^uuid://") ;\
-	  pages_file="$(IN)/periodical/$(UUID_PATH)/$${pid}.json" ;\
+	  pages_file="$(INjson)/$(UUID_PATH)/$${pid}.json" ;\
 	  if [ -f "$$pages_file" ]; \
 		then \
 	    obj=$$(echo "$$obj" | jq --slurpfile pages "$$pages_file" '.pages = $$pages[0].response.docs') ;\
@@ -419,7 +433,7 @@ else
 endif
 
 ##inputJson2idMapping## create mapping of page UUIDs to page order in volume
-input2outputMapping: $(IN)/periodical/$(UUID_PATH).json $(idMapping)
+input2outputMapping: $(INjson)/$(UUID_PATH).json $(idMapping)
 	@echo "INFO: creating id mapping for $(UUID_PATH) in $(idMapping)"
 	$(PERL) -I Scripts/lib Scripts/idMapping.pl \
 										 --input-base-dir $(JSONissues) \
@@ -428,7 +442,7 @@ input2outputMapping: $(IN)/periodical/$(UUID_PATH).json $(idMapping)
 
 
 ##inputJson2teiHeader## json metadata to TEI/teiHeader (expecting UUID_PATH_LEVEL>0)
-inputJson2teiHeader: $(IN)/periodical/$(UUID_PATH).json $(TEIheader)
+inputJson2teiHeader: $(INjson)/$(UUID_PATH).json $(TEIheader)
 	@echo "INFO: creating TEI header for $(UUID_PATH) in $(TEIheader)"
 	$(PERL) -I Scripts/lib Scripts/json2teiHeader.pl \
 										 --input-base-dir $(JSONissues) \
@@ -445,7 +459,7 @@ $(TASKS) $(JSONissues) $(idMapping) $(xmlOCR) $(altoOCR) $(vizOCRxml) $(vizLAYOU
 
 
 download-imgs: _test-level-2-$(UUID_PATH_LEVEL)
-	ls $(IN)/periodical/$(UUID_PATH)/*.txt \
+	ls $(INtxt)/$(UUID_PATH)/*.txt \
 	  | sed "s/.txt$$//;s/^.*\///" \
 		| xargs -I {} make get-page-image UUID_PATH=$(UUID_PATH)/{} || echo "INFO: no images to download for $(UUID_PATH)"
 
@@ -454,11 +468,11 @@ ifeq ($(SAMPLE),1)
 	@echo "INFO: skipping deletion of images for $(UUID_PATH) because SAMPLE mode is active"
 else
 	@ echo "INFO: deleting images for $(UUID_PATH)"
-	@ls $(IN)/periodical/$(UUID_PATH)/*.jpg | xargs -I {} echo "INFO: deleting {}"
-	@rm $(IN)/periodical/$(UUID_PATH)/*.jpg
+	@ls $(INimg)/$(UUID_PATH)/*.jpg | xargs -I {} echo "INFO: deleting {}"
+	@rm $(INimg)/$(UUID_PATH)/*.jpg
 endif
 
-download-imgs-process-data-delete-imgs: $(IN)/periodical/$(UUID_PATH).json download-imgs process-data  delete-imgs
+download-imgs-process-data-delete-imgs: $(INjson)/$(UUID_PATH).json download-imgs process-data  delete-imgs
 
 
 
@@ -476,21 +490,21 @@ slurm-img2tei:
 ##process-data-all## process data for all issues (img->text-->TEI) based on task list prepared by prepare-tasks
 process-data-all: $(TASKS_ISSUES)
 	cat $(TASKS_ISSUES) | xargs -I {} make process-data UUID_PATH={} SAMPLE=$(SAMPLE)
-process-data: $(IN)/periodical/$(UUID_PATH).json inputImg2pageXML inputImg2imageRegions textRegions2teiFacsText
+process-data: $(INjson)/$(UUID_PATH).json inputImg2pageXML inputImg2imageRegions textRegions2teiFacsText
 
 DEVprocess-data-all: $(TASKS_ISSUES)
 	cat $(TASKS_ISSUES) | xargs -I {} make DEVprocess-data UUID_PATH={} SAMPLE=$(SAMPLE)
-DEVprocess-data: $(IN)/periodical/$(UUID_PATH).json inputImg2imageRegions textRegions2teiFacsText
+DEVprocess-data: $(INjson)/$(UUID_PATH).json inputImg2imageRegions textRegions2teiFacsText
 
 
 textRegions2teiFacsText-all: $(TASKS_ISSUES)
 	cat $(TASKS_ISSUES) | xargs -I {} make textRegions2teiFacsText UUID_PATH={} SAMPLE=$(SAMPLE)
 
 ##inputImg2pageXML## OCR original images to pageXML
-inputImg2pageXML: $(IN)/periodical/$(UUID_PATH).json $(xmlOCR) setup-pero-ocr $(PERO_OCR_MODEL_CONFIG)
+inputImg2pageXML: $(INjson)/$(UUID_PATH).json $(xmlOCR) setup-pero-ocr $(PERO_OCR_MODEL_CONFIG)
 	$(PERL) -I Scripts/lib Scripts/runOCR.pl \
 										 --input-file-suffix ".jpg" \
-										 --input-img-dir $(IN)/periodical \
+										 --input-img-dir $(INimg) \
 										 --input-base-dir $(JSONissues) \
 										 --input-uuid-path "$(UUID_PATH)" \
 										 --model $(PERO_OCR_MODEL_CONFIG) \
@@ -500,9 +514,9 @@ inputImg2pageXML: $(IN)/periodical/$(UUID_PATH).json $(xmlOCR) setup-pero-ocr $(
 
 
 ##inputImg2imageRegions## detect and classify regions in original images using YOLO model
-inputImg2imageRegions: $(IN)/periodical/$(UUID_PATH).json $(imageRegions) $(YOLO_MODEL)
+inputImg2imageRegions: $(INjson)/$(UUID_PATH).json $(imageRegions) $(YOLO_MODEL)
 	$(PERL) -I Scripts/lib Scripts/runImageRegionsDetection.pl \
-										 --input-img-dir $(IN)/periodical \
+										 --input-img-dir $(INimg) \
 										 --input-base-dir $(JSONissues) \
 										 --input-uuid-path "$(UUID_PATH)" \
 										 --model $(YOLO_MODEL) \
@@ -527,11 +541,11 @@ textRegions2teiFacsText:
 ###### [DEPRECATED] targets
 
 ##inputTxt2teiText## [DEPRECATED] original text to TEI/text (expecting UUID_PATH_LEVEL>0)
-inputTxt2teiText: $(IN)/periodical/$(UUID_PATH).json $(TEItext)
+inputTxt2teiText: $(INjson)/$(UUID_PATH).json $(TEItext)
 	$(PERL) -I Scripts/lib Scripts/text2teiText.pl \
 										 --input-format "txt" \
 										 --input-file-suffix ".txt" \
-										 --input-text-dir $(IN)/periodical \
+										 --input-text-dir $(INtxt) \
 										 --input-base-dir $(JSONissues) \
 										 --input-uuid-path "$(UUID_PATH)" \
 										 --output-dir $(TEItext)
