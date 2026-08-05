@@ -88,6 +88,8 @@ JM := $(shell test -n "$(JAVA-MEMORY)" && echo -n "-Xmx$(JAVA-MEMORY)g")
 JAVA-MEMORY-GB = $(shell java $(JM) -XX:+PrintFlagsFinal -version 2>&1| grep " MaxHeapSize"|sed "s/^.*= *//;s/ .*$$//"|awk '{print "\t" $$1/1024/1024/1024}')
 SAXON := java $(JM) -jar Scripts/bin/saxon.jar
 
+SLURM_MAX_CONCURRENT ?= 30
+
 
 ifdef UUID_PATH
 
@@ -458,6 +460,18 @@ endif
 
 download-imgs-process-data-delete-imgs: $(IN)/periodical/$(UUID_PATH).json download-imgs process-data  delete-imgs
 
+
+
+# Variables assuming they are passed or defined earlier
+
+slurm-img2tei:
+	@mkdir -p logs
+	@# Count total lines in the file
+	$(eval TOTAL_TASKS := $(shell wc -l < $(TASKS_ISSUES) | tr -d ' '))
+	@# Submit the array to Slurm, passing the file and sample variables
+	sbatch --array=1-$(TOTAL_TASKS)%$(SLURM_MAX_CONCURRENT) \
+	       --export=ALL,TASKS_FILE=$(TASKS_ISSUES),SAMPLE=$(SAMPLE),MAKEFILE_TARGET=download-imgs-process-data-delete-imgs \
+	       slurm_submit_process.sh
 
 ##process-data-all## process data for all issues (img->text-->TEI) based on task list prepared by prepare-tasks
 process-data-all: $(TASKS_ISSUES)
