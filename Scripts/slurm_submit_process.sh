@@ -8,7 +8,6 @@
 #SBATCH --gres=gpu:1                  # Requests exactly 1 GPU
 #SBATCH --cpus-per-task=4          # Adjust if your process uses multi-threading
 #SBATCH --mem=16G                   # Adjust memory per line/task
-#SBATCH --constraint=gpuram16
 
 # Ensure the tasks file path is provided via environment variable
 if [ -z "$TASKS_FILE" ]; then
