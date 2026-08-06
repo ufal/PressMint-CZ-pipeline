@@ -4,8 +4,9 @@
 #SBATCH --error=logs/process_%A_%a.err
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
-#SBATCH --cpus-per-task=1          # Adjust if your process uses multi-threading
-#SBATCH --mem=4G                   # Adjust memory per line/task
+#SBATCH --gres=gpu:1                  # Requests exactly 1 GPU
+#SBATCH --cpus-per-task=4          # Adjust if your process uses multi-threading
+#SBATCH --mem=16G                   # Adjust memory per line/task
 
 # Ensure the tasks file path is provided via environment variable
 if [ -z "$TASKS_FILE" ]; then
@@ -19,6 +20,10 @@ if [ -z "$MAKEFILE_TARGET" ]; then
     exit 1
 fi
 
+# Environment optimization variables for PyTorch / TensorFlow backends
+export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
+export MKL_NUM_THREADS=$SLURM_CPUS_PER_TASK
+
 # Extract the specific line matching this Slurm task index
 # $SLURM_ARRAY_TASK_ID will be 1, 2, 3... up to your max lines
 UUID_PATH=$(sed -n "${SLURM_ARRAY_TASK_ID}p" "$TASKS_FILE")
@@ -29,7 +34,7 @@ if [ -z "$UUID_PATH" ]; then
     exit 0
 fi
 
-echo "Processing Task ID $SLURM_ARRAY_TASK_ID"
+echo "Task ${SLURM_ARRAY_TASK_ID} running on node ${SLURM_NODENAME} with GPU ${CUDA_VISIBLE_DEVICES}"
 echo "PROCESSING: $MAKEFILE_TARGET with UUID_PATH: $UUID_PATH"
 echo "DATADIR: $DATADIR"
 
