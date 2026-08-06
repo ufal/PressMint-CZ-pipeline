@@ -485,7 +485,7 @@ slurm-img2tei:
 	@# Submit the array to Slurm, passing the file and sample variables
 	sbatch --array=1-$(TOTAL_TASKS)%$(SLURM_MAX_CONCURRENT) \
 	       --export=ALL,TASKS_FILE=$(TASKS_ISSUES),SAMPLE=$(SAMPLE),MAKEFILE_TARGET=download-imgs-process-data-delete-imgs \
-	       slurm_submit_process.sh
+	       Scripts/slurm_submit_process.sh
 
 ##process-data-all## process data for all issues (img->text-->TEI) based on task list prepared by prepare-tasks
 process-data-all: $(TASKS_ISSUES)
