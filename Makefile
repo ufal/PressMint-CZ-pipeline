@@ -21,7 +21,7 @@ PERO_OCR_MODEL_CONFIG := Models/$(PERO_OCR_MODEL_NAME)/config_cpu.ini
 
 
 # https://nextcloud.fit.vutbr.cz/s/6jNgze6fLYXQBgq?dir=/textbite/models
-# https://nextcloud.fit.vutbr.cz/public.php/dav/files/6jNgze6fLYXQBgq/textbite/models/yolo-m-1200.pt
+YOLO_MODEL_URL := https://nextcloud.fit.vutbr.cz/public.php/dav/files/6jNgze6fLYXQBgq/textbite/models/yolo-m-1200.pt
 YOLO_MODEL := Models/textbite/yolo-m-1200.pt
 
 
@@ -702,6 +702,9 @@ $(PERO_OCR_MODEL_CONFIG):
 	wget $(PERO_OCR_MODEL_URL) -O $(PERO_OCR_MODEL_NAME).$(PERO_OCR_MODEL_ARCHEXT);\
 	unzip $(PERO_OCR_MODEL_NAME).$(PERO_OCR_MODEL_ARCHEXT)
 
+$(YOLO_MODEL):
+	mkdir -p Models/textbite;\
+	wget $(YOLO_MODEL_URL) -O $@
 
 ###### Help
 
