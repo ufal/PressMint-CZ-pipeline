@@ -21,6 +21,10 @@ if [ -z "$MAKEFILE_TARGET" ]; then
     exit 1
 fi
 
+export PERLBREW_ROOT=$HOME/perl5/perlbrew
+source ${PERLBREW_ROOT}/etc/bashrc
+perlbrew use pressmint
+
 # Environment optimization variables for PyTorch / TensorFlow backends
 export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
 export MKL_NUM_THREADS=$SLURM_CPUS_PER_TASK
