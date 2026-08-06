@@ -484,7 +484,7 @@ slurm-img2tei:
 	$(eval TOTAL_TASKS := $(shell wc -l < $(TASKS_ISSUES) | tr -d ' '))
 	@# Submit the array to Slurm, passing the file and sample variables
 	sbatch --array=1-$(TOTAL_TASKS)%$(SLURM_MAX_CONCURRENT) \
-	       --export=ALL,TASKS_FILE=$(TASKS_ISSUES),SAMPLE=$(SAMPLE),MAKEFILE_TARGET=download-imgs-process-data-delete-imgs \
+	       --export=ALL,DEVICE=gpu,PERO_OCR_MODEL_CONFIG=Models/$(PERO_OCR_MODEL_NAME)/config.ini,TASKS_FILE=$(TASKS_ISSUES),SAMPLE=$(SAMPLE),MAKEFILE_TARGET=download-imgs-process-data-delete-imgs \
 	       Scripts/slurm_submit_process.sh
 
 ##process-data-all## process data for all issues (img->text-->TEI) based on task list prepared by prepare-tasks
@@ -697,6 +697,7 @@ $(PERO_OCR_STAMP):
 
 
 $(PERO_OCR_MODEL_CONFIG):
+	mkdir -p Models;\
 	cd Models;\
 	wget $(PERO_OCR_MODEL_URL) -O $(PERO_OCR_MODEL_NAME).$(PERO_OCR_MODEL_ARCHEXT);\
 	unzip $(PERO_OCR_MODEL_NAME).$(PERO_OCR_MODEL_ARCHEXT)
