@@ -1,5 +1,6 @@
 #!/bin/bash
 #SBATCH --job-name=PressMint
+#SBATCH --partition=gpu-troja,gpu-ms
 #SBATCH --output=logs/process_%A_%a.out
 #SBATCH --error=logs/process_%A_%a.err
 #SBATCH --nodes=1
@@ -7,6 +8,7 @@
 #SBATCH --gres=gpu:1                  # Requests exactly 1 GPU
 #SBATCH --cpus-per-task=4          # Adjust if your process uses multi-threading
 #SBATCH --mem=16G                   # Adjust memory per line/task
+#SBATCH --constraint=gpuram16
 
 # Ensure the tasks file path is provided via environment variable
 if [ -z "$TASKS_FILE" ]; then
