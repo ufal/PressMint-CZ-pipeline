@@ -49,6 +49,7 @@ CMD="make $MAKEFILE_TARGET UUID_PATH=$UUID_PATH DEVICE=$DEVICE PERO_OCR_MODEL_CO
 RES=$(/usr/bin/time --output=logs/PressMint-CZ.slurm.$SLURM_JOB_ID.${SLURM_ARRAY_TASK_ID}.tmp -f "%x            %E real, %U user, %S sys, %M kB" $CMD)
 TIME=$(cut -f 2 logs/PressMint-CZ.slurm.$SLURM_JOB_ID.${SLURM_ARRAY_TASK_ID}.tmp)
 CODE=$(cut -f 1 logs/PressMint-CZ.slurm.$SLURM_JOB_ID.${SLURM_ARRAY_TASK_ID}.tmp)
+if [ $((10#$CODE)) -gt 0 ]; then STATUS="FAILED-$CODE"; else STATUS="FINISHED"; fi
 rm logs/PressMint-CZ.slurm.$SLURM_JOB_ID.${SLURM_ARRAY_TASK_ID}.tmp
-echo -e "$(date +"%Y-%m-%dT%T") DONE: $UUID_PATH   $( [ "$CODE" -gt "0" ] && echo "FAILED-$CODE" || echo "FINISHED" )    $SLURM_JOB_ID/${SLURM_ARRAY_TASK_ID}   $(hostname)     $TIME         $CMD" >> logs/PressMint-CZ.slurm.log
+echo -e "$(date +"%Y-%m-%dT%T") DONE: $UUID_PATH   $STATUS    $SLURM_JOB_ID/${SLURM_ARRAY_TASK_ID}   $(hostname)     $TIME         $CMD" >> logs/PressMint-CZ.slurm.log
 
