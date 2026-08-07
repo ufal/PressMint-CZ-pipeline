@@ -43,13 +43,13 @@ echo "Task ${SLURM_ARRAY_TASK_ID} running on node ${SLURM_NODENAME} with GPU ${C
 echo "PROCESSING: $MAKEFILE_TARGET with UUID_PATH: $UUID_PATH"
 echo "DATADIR: $DATADIR"
 
-echo -e "$(date +"%Y-%m-%dT%T") START: $UUID_PATH" >> logs/PressMint-CZ.slurm.log
+echo -e "$(date +"%Y-%m-%dT%T") START (${SLURM_ARRAY_TASK_ID}): $UUID_PATH" >> logs/PressMint-CZ.slurm.log
 # 4. Execute your existing Make command for this specific line
 CMD="make $MAKEFILE_TARGET UUID_PATH=$UUID_PATH DEVICE=$DEVICE PERO_OCR_MODEL_CONFIG=$PERO_OCR_MODEL_CONFIG PERO_OCR_MODEL_NAME=$PERO_OCR_MODEL_NAME"
 RES=$(/usr/bin/time --output=logs/PressMint-CZ.slurm.$SLURM_JOB_ID.${SLURM_ARRAY_TASK_ID}.tmp -f "%x#%E real, %U user, %S sys, %M kB" $CMD)
-TIME=$(cut -d'#' '-f 2 logs/PressMint-CZ.slurm.$SLURM_JOB_ID.${SLURM_ARRAY_TASK_ID}.tmp)
+TIME=$(cut -d'#'-f 2 logs/PressMint-CZ.slurm.$SLURM_JOB_ID.${SLURM_ARRAY_TASK_ID}.tmp)
 CODE=$(cut -d'#' -f 1 logs/PressMint-CZ.slurm.$SLURM_JOB_ID.${SLURM_ARRAY_TASK_ID}.tmp)
 if [ $((10#$CODE)) -gt 0 ]; then STATUS="FAILED-$CODE"; else STATUS="FINISHED"; fi
 rm logs/PressMint-CZ.slurm.$SLURM_JOB_ID.${SLURM_ARRAY_TASK_ID}.tmp
-echo -e "$(date +"%Y-%m-%dT%T") DONE: $UUID_PATH   $STATUS    $SLURM_JOB_ID/${SLURM_ARRAY_TASK_ID}   $(hostname)     $TIME         $CMD" >> logs/PressMint-CZ.slurm.log
+echo -e "$(date +"%Y-%m-%dT%T") DONE (${SLURM_ARRAY_TASK_ID}): $UUID_PATH   $STATUS    $SLURM_JOB_ID/${SLURM_ARRAY_TASK_ID}   $(hostname)     $TIME         $CMD" >> logs/PressMint-CZ.slurm.log
 
