@@ -501,7 +501,7 @@ textRegions2teiFacsText-all: $(TASKS_ISSUES)
 	cat $(TASKS_ISSUES) | xargs -I {} make textRegions2teiFacsText UUID_PATH={} SAMPLE=$(SAMPLE)
 
 ##inputImg2pageXML## OCR original images to pageXML
-inputImg2pageXML: $(INjson)/$(UUID_PATH).json $(xmlOCR) setup-pero-ocr $(PERO_OCR_MODEL_CONFIG)
+inputImg2pageXML: $(JSONissues)/$(UUID_PATH).json $(xmlOCR) setup-pero-ocr $(PERO_OCR_MODEL_CONFIG)
 	$(PERL) -I Scripts/lib Scripts/runOCR.pl \
 										 --input-file-suffix ".jpg" \
 										 --input-img-dir $(INimg) \
@@ -514,7 +514,7 @@ inputImg2pageXML: $(INjson)/$(UUID_PATH).json $(xmlOCR) setup-pero-ocr $(PERO_OC
 
 
 ##inputImg2imageRegions## detect and classify regions in original images using YOLO model
-inputImg2imageRegions: $(INjson)/$(UUID_PATH).json $(imageRegions) $(YOLO_MODEL)
+inputImg2imageRegions: $(JSONissues)/$(UUID_PATH).json $(imageRegions) $(YOLO_MODEL)
 	$(PERL) -I Scripts/lib Scripts/runImageRegionsDetection.pl \
 										 --input-img-dir $(INimg) \
 										 --input-base-dir $(JSONissues) \
