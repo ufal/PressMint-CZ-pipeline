@@ -95,7 +95,8 @@ JAVA-MEMORY-GB = $(shell java $(JM) -XX:+PrintFlagsFinal -version 2>&1| grep " M
 SAXON := java $(JM) -jar Scripts/bin/saxon.jar
 
 SLURM_MAX_CONCURRENT ?= 30
-
+SLURM_ARRAY_SIZE ?= 10000
+SLURM_ARRAY_START ?= 1
 
 ifdef UUID_PATH
 
@@ -479,11 +480,12 @@ download-imgs-process-data-delete-imgs: $(INjson)/$(UUID_PATH).json download-img
 # Variables assuming they are passed or defined earlier
 
 slurm-img2tei:
-	@mkdir -p logs
+	@mkdir -p logs/slurm
 	@# Count total lines in the file
 	$(eval TOTAL_TASKS := $(shell wc -l < $(TASKS_ISSUES) | tr -d ' '))
+  $(eval LAST_TASK := $(shell python3 -c "print(min($(TOTAL_TASKS), $(SLURM_ARRAY_START) + $(SLURM_ARRAY_SIZE) - 1))"))
 	@# Submit the array to Slurm, passing the file and sample variables
-	sbatch --array=1-$(TOTAL_TASKS)%$(SLURM_MAX_CONCURRENT) \
+	sbatch --array=$(SLURM_ARRAY_START)-$(LAST_TASK)%$(SLURM_MAX_CONCURRENT) \
 	       --export=ALL,DEVICE=gpu,PERO_OCR_MODEL_CONFIG=Models/$(PERO_OCR_MODEL_NAME)/config.ini,TASKS_FILE=$(TASKS_ISSUES),SAMPLE=$(SAMPLE),MAKEFILE_TARGET=download-imgs-process-data-delete-imgs \
 	       Scripts/slurm_submit_process.sh
 

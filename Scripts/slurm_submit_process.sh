@@ -1,8 +1,8 @@
 #!/bin/bash
 #SBATCH --job-name=PressMint
 #SBATCH --partition=gpu-troja,gpu-ms
-#SBATCH --output=logs/process_%A_%a.out
-#SBATCH --error=logs/process_%A_%a.err
+#SBATCH --output=logs/slurm/process_%A_%a.out
+#SBATCH --error=logs/slurm/process_%A_%a.err
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --gres=gpu:1                  # Requests exactly 1 GPU
@@ -43,5 +43,12 @@ echo "Task ${SLURM_ARRAY_TASK_ID} running on node ${SLURM_NODENAME} with GPU ${C
 echo "PROCESSING: $MAKEFILE_TARGET with UUID_PATH: $UUID_PATH"
 echo "DATADIR: $DATADIR"
 
+echo -e "$(date +"%Y-%m-%dT%T") START: $UUID_PATH" >> logs/PressMint-CZ.slurm.log
 # 4. Execute your existing Make command for this specific line
-make $MAKEFILE_TARGET UUID_PATH="$UUID_PATH" DATADIR="$DATADIR" DEVICE="$DEVICE" PERO_OCR_MODEL_CONFIG="$PERO_OCR_MODEL_CONFIG" PERO_OCR_MODEL_NAME="$PERO_OCR_MODEL_NAME"
+CMD="make $MAKEFILE_TARGET UUID_PATH=\"$UUID_PATH\" DEVICE=\"$DEVICE\" PERO_OCR_MODEL_CONFIG=\"$PERO_OCR_MODEL_CONFIG\" PERO_OCR_MODEL_NAME=\"$PERO_OCR_MODEL_NAME\""
+RES=$(/usr/bin/time --output=logs/PressMint-CZ.slurm.$SLURM_JOB_ID.${SLURM_ARRAY_TASK_ID}.tmp -f "%x            %E real, %U user, %S sys, %M kB" $CMD)
+TIME=$(cut -f 2 logs/PressMint-CZ.slurm.$SLURM_JOB_ID.${SLURM_ARRAY_TASK_ID}.tmp)
+CODE=$(cut -f 1 logs/PressMint-CZ.slurm.$SLURM_JOB_ID.${SLURM_ARRAY_TASK_ID}.tmp)
+rm logs/PressMint-CZ.slurm.$SLURM_JOB_ID.${SLURM_ARRAY_TASK_ID}.tmp
+echo -e "$(date +"%Y-%m-%dT%T") DONE: $UUID_PATH   $( [ "$CODE" -gt "0" ] && echo "FAILED-$CODE" || echo "FINISHED" )    $SLURM_JOB_ID/${SLURM_ARRAY_TASK_ID}   $(hostname)     $TIME         $CMD" >> logs/PressMint-CZ.slurm.log
+
