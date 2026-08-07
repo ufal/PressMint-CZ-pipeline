@@ -45,7 +45,7 @@ echo "DATADIR: $DATADIR"
 
 echo -e "$(date +"%Y-%m-%dT%T") START: $UUID_PATH" >> logs/PressMint-CZ.slurm.log
 # 4. Execute your existing Make command for this specific line
-CMD="make $MAKEFILE_TARGET UUID_PATH=\"$UUID_PATH\" DEVICE=\"$DEVICE\" PERO_OCR_MODEL_CONFIG=\"$PERO_OCR_MODEL_CONFIG\" PERO_OCR_MODEL_NAME=\"$PERO_OCR_MODEL_NAME\""
+CMD="make $MAKEFILE_TARGET UUID_PATH=$UUID_PATH DEVICE=$DEVICE PERO_OCR_MODEL_CONFIG=$PERO_OCR_MODEL_CONFIG PERO_OCR_MODEL_NAME=$PERO_OCR_MODEL_NAME"
 RES=$(/usr/bin/time --output=logs/PressMint-CZ.slurm.$SLURM_JOB_ID.${SLURM_ARRAY_TASK_ID}.tmp -f "%x            %E real, %U user, %S sys, %M kB" $CMD)
 TIME=$(cut -f 2 logs/PressMint-CZ.slurm.$SLURM_JOB_ID.${SLURM_ARRAY_TASK_ID}.tmp)
 CODE=$(cut -f 1 logs/PressMint-CZ.slurm.$SLURM_JOB_ID.${SLURM_ARRAY_TASK_ID}.tmp)
