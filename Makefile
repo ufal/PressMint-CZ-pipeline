@@ -482,10 +482,9 @@ download-imgs-process-data-delete-imgs: $(INjson)/$(UUID_PATH).json download-img
 slurm-img2tei:
 	@mkdir -p logs/slurm
 	@# Count total lines in the file
-	$(eval TOTAL_TASKS := $(shell wc -l < $(TASKS_ISSUES) | tr -d ' '))
-  $(eval LAST_TASK := $(shell python3 -c "print(min($(TOTAL_TASKS), $(SLURM_ARRAY_START) + $(SLURM_ARRAY_SIZE) - 1))"))
-	@# Submit the array to Slurm, passing the file and sample variables
-	sbatch --array=$(SLURM_ARRAY_START)-$(LAST_TASK)%$(SLURM_MAX_CONCURRENT) \
+	@TOTAL_TASKS=$$(wc -l < $(TASKS_ISSUES) | tr -d ' '); \
+	LAST_TASK=$$(python3 -c "print(min($$TOTAL_TASKS, $(SLURM_ARRAY_START) + $(SLURM_ARRAY_SIZE) - 1))"); \
+	sbatch --array=$(SLURM_ARRAY_START)-$$LAST_TASK%$(SLURM_MAX_CONCURRENT) \
 	       --export=ALL,DEVICE=gpu,PERO_OCR_MODEL_CONFIG=Models/$(PERO_OCR_MODEL_NAME)/config.ini,TASKS_FILE=$(TASKS_ISSUES),SAMPLE=$(SAMPLE),MAKEFILE_TARGET=download-imgs-process-data-delete-imgs \
 	       Scripts/slurm_submit_process.sh
 
