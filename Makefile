@@ -410,7 +410,7 @@ visualize-tei: $(vizTEI)
 ##process-metadata-all## process metadata for all volumes based on task list prepared by prepare-tasks
 process-metadata-all: $(TASKS_VOLUMES)
 	cat $(TASKS_VOLUMES) | xargs -I {} make process-metadata UUID_PATH={} SAMPLE=$(SAMPLE)
-process-metadata: $(INjson)/$(UUID_PATH).json input2outputMapping inputJsonMerge inputJson2teiHeader 
+process-metadata: $(INjson)/$(UUID_PATH).json inputJsonMerge input2outputMapping inputJson2teiHeader 
 
 
 ##inputJsonMerge## merge issues and page json files
@@ -483,9 +483,9 @@ slurm-img2tei:
 	@mkdir -p logs/slurm
 	@# Count total lines in the file
 	@TOTAL_TASKS=$$(wc -l < $(TASKS_ISSUES) | tr -d ' '); \
-	LAST_TASK=$$(python3 -c "print(min($$TOTAL_TASKS, $(SLURM_ARRAY_START) + $(SLURM_ARRAY_SIZE) - 1))"); \
-	sbatch --array=$(SLURM_ARRAY_START)-$$LAST_TASK%$(SLURM_MAX_CONCURRENT) \
-	       --export=ALL,DEVICE=gpu,PERO_OCR_MODEL_CONFIG=Models/$(PERO_OCR_MODEL_NAME)/config.ini,TASKS_FILE=$(TASKS_ISSUES),SAMPLE=$(SAMPLE),MAKEFILE_TARGET=download-imgs-process-data-delete-imgs \
+	LAST_TASK=$$(python3 -c "print(min($$TOTAL_TASKS, $(SLURM_ARRAY_START) + $(SLURM_ARRAY_SIZE) - 1)-$(SLURM_ARRAY_START))"); \
+	sbatch --array=1-$$LAST_TASK%$(SLURM_MAX_CONCURRENT) \
+	       --export=DEVICE=gpu,PERO_OCR_MODEL_CONFIG=Models/$(PERO_OCR_MODEL_NAME)/config.ini,TASKS_FILE=$(TASKS_ISSUES),SLURM_START=$(SLURM_ARRAY_START),SAMPLE=$(SAMPLE),MAKEFILE_TARGET=download-imgs-process-data-delete-imgs \
 	       Scripts/slurm_submit_process.sh
 
 ##process-data-all## process data for all issues (img->text-->TEI) based on task list prepared by prepare-tasks
