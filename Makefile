@@ -31,6 +31,8 @@ PERL := $(shell test -n "$(USE_PERL)" && echo -n "$(PERLBREW_ROOT)/perls/$(USE_P
 ##$SAMPLE## Set to 1 to use sample data instead of full data
 SAMPLE ?= 0
 
+PATCHDIR := $(shell pwd)/NOTEXISTINGDIR
+
 ##$DATA## Base directory for data processing (default: ./Data, when SAMPLE=1 then ./Sample)
 DATA ?= $(shell pwd)/Data/
 SAMPLE_SOURCE_SOURCE = $(shell pwd)/Data/source
@@ -706,6 +708,26 @@ $(PERO_OCR_MODEL_CONFIG):
 $(YOLO_MODEL):
 	mkdir -p Models/textbite;\
 	wget $(YOLO_MODEL_URL) -O $@
+
+
+###### Patches
+
+patch-ids-filenames: $(PATCHDIR) 
+	make patch-ids-names PATCHDIR=$(PATCHDIR) PATCHFILETYPE=f 
+
+patch-ids-dirnames: $(PATCHDIR) 
+	make patch-ids-names PATCHDIR=$(PATCHDIR) PATCHFILETYPE=d 
+
+patch-ids-names: $(PATCHDIR)
+	find $(PATCHDIR) -type $(PATCHFILETYPE) -name "PressMint-CZ_*" | \
+	while read -r dir; do \
+	  newdir=$$(echo "$$dir" | sed -E 's/^(.*PressMint-CZ_[0-9]{4}-[0-9]{2}-[0-9]{2}-[0-9a-f]+)[^\.]*/\1/') ;\
+	  if [ "$$dir" != "$$newdir" ]; then \
+	      mv -- "$$dir" "$$newdir" ; \
+	  fi ; \
+	done
+
+
 
 ###### Help
 
