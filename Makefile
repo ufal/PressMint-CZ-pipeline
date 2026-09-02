@@ -21,7 +21,7 @@ PERO_OCR_MODEL_CONFIG := Models/$(PERO_OCR_MODEL_NAME)/config_cpu.ini
 
 
 # https://nextcloud.fit.vutbr.cz/s/6jNgze6fLYXQBgq?dir=/textbite/models
-# https://nextcloud.fit.vutbr.cz/public.php/dav/files/6jNgze6fLYXQBgq/textbite/models/yolo-m-1200.pt
+YOLO_MODEL_URL := https://nextcloud.fit.vutbr.cz/public.php/dav/files/6jNgze6fLYXQBgq/textbite/models/yolo-m-1200.pt
 YOLO_MODEL := Models/textbite/yolo-m-1200.pt
 
 
@@ -94,6 +94,9 @@ JM := $(shell test -n "$(JAVA-MEMORY)" && echo -n "-Xmx$(JAVA-MEMORY)g")
 JAVA-MEMORY-GB = $(shell java $(JM) -XX:+PrintFlagsFinal -version 2>&1| grep " MaxHeapSize"|sed "s/^.*= *//;s/ .*$$//"|awk '{print "\t" $$1/1024/1024/1024}')
 SAXON := java $(JM) -jar Scripts/bin/saxon.jar
 
+SLURM_MAX_CONCURRENT ?= 30
+SLURM_ARRAY_SIZE ?= 10000
+SLURM_ARRAY_START ?= 1
 
 ifdef UUID_PATH
 
@@ -407,7 +410,7 @@ visualize-tei: $(vizTEI)
 ##process-metadata-all## process metadata for all volumes based on task list prepared by prepare-tasks
 process-metadata-all: $(TASKS_VOLUMES)
 	cat $(TASKS_VOLUMES) | xargs -I {} make process-metadata UUID_PATH={} SAMPLE=$(SAMPLE)
-process-metadata: $(INjson)/$(UUID_PATH).json input2outputMapping inputJsonMerge inputJson2teiHeader 
+process-metadata: $(INjson)/$(UUID_PATH).json inputJsonMerge input2outputMapping inputJson2teiHeader 
 
 
 ##inputJsonMerge## merge issues and page json files
@@ -473,6 +476,18 @@ endif
 download-imgs-process-data-delete-imgs: $(INjson)/$(UUID_PATH).json download-imgs process-data  delete-imgs
 
 
+
+# Variables assuming they are passed or defined earlier
+
+slurm-img2tei:
+	@mkdir -p logs/slurm
+	@# Count total lines in the file
+	@TOTAL_TASKS=$$(wc -l < $(TASKS_ISSUES) | tr -d ' '); \
+	LAST_TASK=$$(python3 -c "print(min($$TOTAL_TASKS, $(SLURM_ARRAY_START) + $(SLURM_ARRAY_SIZE) - 1)-$(SLURM_ARRAY_START))"); \
+	sbatch --array=1-$$LAST_TASK%$(SLURM_MAX_CONCURRENT) \
+	       --export=DEVICE=gpu,PERO_OCR_MODEL_CONFIG=Models/$(PERO_OCR_MODEL_NAME)/config.ini,TASKS_FILE=$(TASKS_ISSUES),SLURM_START=$(SLURM_ARRAY_START),SAMPLE=$(SAMPLE),MAKEFILE_TARGET=download-imgs-process-data-delete-imgs \
+	       Scripts/slurm_submit_process.sh
+
 ##process-data-all## process data for all issues (img->text-->TEI) based on task list prepared by prepare-tasks
 process-data-all: $(TASKS_ISSUES)
 	cat $(TASKS_ISSUES) | xargs -I {} make process-data UUID_PATH={} SAMPLE=$(SAMPLE)
@@ -487,7 +502,7 @@ textRegions2teiFacsText-all: $(TASKS_ISSUES)
 	cat $(TASKS_ISSUES) | xargs -I {} make textRegions2teiFacsText UUID_PATH={} SAMPLE=$(SAMPLE)
 
 ##inputImg2pageXML## OCR original images to pageXML
-inputImg2pageXML: $(INjson)/$(UUID_PATH).json $(xmlOCR) setup-pero-ocr $(PERO_OCR_MODEL_CONFIG)
+inputImg2pageXML: $(JSONissues)/$(UUID_PATH).json $(xmlOCR) setup-pero-ocr $(PERO_OCR_MODEL_CONFIG)
 	$(PERL) -I Scripts/lib Scripts/runOCR.pl \
 										 --input-file-suffix ".jpg" \
 										 --input-img-dir $(INimg) \
@@ -500,7 +515,7 @@ inputImg2pageXML: $(INjson)/$(UUID_PATH).json $(xmlOCR) setup-pero-ocr $(PERO_OC
 
 
 ##inputImg2imageRegions## detect and classify regions in original images using YOLO model
-inputImg2imageRegions: $(INjson)/$(UUID_PATH).json $(imageRegions) $(YOLO_MODEL)
+inputImg2imageRegions: $(JSONissues)/$(UUID_PATH).json $(imageRegions) $(YOLO_MODEL)
 	$(PERL) -I Scripts/lib Scripts/runImageRegionsDetection.pl \
 										 --input-img-dir $(INimg) \
 										 --input-base-dir $(JSONissues) \
@@ -683,10 +698,14 @@ $(PERO_OCR_STAMP):
 
 
 $(PERO_OCR_MODEL_CONFIG):
+	mkdir -p Models;\
 	cd Models;\
 	wget $(PERO_OCR_MODEL_URL) -O $(PERO_OCR_MODEL_NAME).$(PERO_OCR_MODEL_ARCHEXT);\
 	unzip $(PERO_OCR_MODEL_NAME).$(PERO_OCR_MODEL_ARCHEXT)
 
+$(YOLO_MODEL):
+	mkdir -p Models/textbite;\
+	wget $(YOLO_MODEL_URL) -O $@
 
 ###### Help
 
