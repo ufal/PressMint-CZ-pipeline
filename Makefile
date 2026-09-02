@@ -720,14 +720,18 @@ patch-ids-dirnames: $(PATCHDIR)
 
 patch-ids-names: $(PATCHDIR)
 	find $(PATCHDIR) -type $(PATCHFILETYPE) -name "PressMint-CZ_*" | \
-	while read -r dir; do \
-	  newdir=$$(echo "$$dir" | sed -E 's/^(.*PressMint-CZ_[0-9]{4}-[0-9]{2}-[0-9]{2}-[0-9a-f]+)[^\.]*/\1/') ;\
-	  if [ "$$dir" != "$$newdir" ]; then \
-	      mv -- "$$dir" "$$newdir" ; \
+	while read -r path; do \
+	  newpath=$$(echo "$$path" | sed -E 's/^(.*PressMint-CZ_[0-9]{4}-[0-9]{2}-[0-9]{2}-[0-9a-f]+)[^\.]*/\1/') ;\
+	  if [ "$$path" != "$$newpath" ]; then \
+	      mv -- "$$path" "$$newpath" ; \
 	  fi ; \
 	done
 
-
+patch-ids-content: $(PATCHDIR)
+	find $(PATCHDIR) -type f -name "PressMint-CZ_*" | \
+	while read -r path; do \
+	  sed -Ei 's/(PressMint-CZ_[0-9]{4}-[0-9]{2}-[0-9]{2}-[0-9a-f]+)[^\." ]*/\1/g' "$$path" ; \
+	done
 
 ###### Help
 
