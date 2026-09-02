@@ -263,6 +263,7 @@ sub create_comp_id {
   my $date = get_comp_date($metadata);
   my $uuid = $metadata->{pid} // $metadata->{response}->{docs}->[0]->{'own_parent.pid'};
   $uuid =~ s/^uuid://;
+  $uuid =~ s/-.*$//; # remove suffix after first dash (shortening id)
 
   return "PressMint-CZ_$date-$uuid";
 }

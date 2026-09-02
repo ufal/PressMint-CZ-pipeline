@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cs" xml:id="PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="cs" xml:id="PressMint-CZ_1861-01-01-b8cf84b6">
   <teiHeader>
     <fileDesc>
       <titleStmt/>
       <sourceDesc>
         <bibl>
           <title level="j">
-            Moravská orlice
+            Národní listy
           </title>
-          <date when="1914-12-30"/>
+          <date when="1861-01-01"/>
         </bibl>
       </sourceDesc>
     </fileDesc>
