@@ -75,13 +75,13 @@
       </profileDesc>
    </teiHeader>
    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-               href="1848/PressMint-CZ_1848-04-05-f2413420-c8eb-11e9-bfd1-5ef3fc9bb22f.xml"/>
+               href="1848/PressMint-CZ_1848-04-05-f2413420.xml"/>
    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-               href="1861/PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.xml"/>
+               href="1861/PressMint-CZ_1861-01-01-b8cf84b6.xml"/>
    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-               href="1886/PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.xml"/>
+               href="1886/PressMint-CZ_1886-07-20-0a3623ed.xml"/>
    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-               href="1914/PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.xml"/>
+               href="1914/PressMint-CZ_1914-12-30-944bce70.xml"/>
    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-               href="1914/PressMint-CZ_1914-12-31-dda72f90-c894-11de-b208-000d606f5dc6.xml"/>
+               href="1914/PressMint-CZ_1914-12-31-dda72f90.xml"/>
 </teiCorpus>
