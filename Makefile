@@ -1,4 +1,5 @@
 .DEFAULT_GOAL := help
+MAKEFLAGS += --no-print-directory
 
 VENV_DIR=.venv
 export PATH := $(abspath $(VENV_DIR)/bin):$(PATH)
@@ -733,6 +734,45 @@ patch-ids-content: $(PATCHDIR)
 	  sed -Ei 's/(PressMint-CZ_[0-9]{4}-[0-9]{2}-[0-9]{2}-[0-9a-f]+)[^\." ]*/\1/g' "$$path" ; \
 	done
 
+###### Analyze failures
+
+
+cnt-issues--issue-per-file = $(addprefix cnt-issues-, $(JSONissues) $(idMapping) $(TEIheader) $(imageRegions) $(TEItext) $(TEIfacs) $(TEItextTT) $(TEItextANA))
+cnt-issues--issue-per-folder = $(addprefix cnt-issues-, $(xmlOCR) $(altoOCR))
+cnt-issues: $(cnt-issues--issue-per-file) $(cnt-issues--issue-per-folder)
+
+$(cnt-issues--issue-per-file): cnt-issues-%:
+	@basename $* | tr '\n' '\t'
+	@find $*/ -type f -not -empty|wc -l
+
+$(cnt-issues--issue-per-folder): cnt-issues-%:
+	@basename $* | tr '\n' '\t'
+	@find $*/ -mindepth 2 -type d -not -empty|wc -l
+
+cnt-year-issues--issue-per-file = $(addprefix cnt-year-issues-, $(idMapping) $(TEIheader) $(imageRegions) $(TEItext) $(TEIfacs) $(TEItextTT) $(TEItextANA))
+cnt-year-issues--issue-per-folder = $(addprefix cnt-year-issues-, $(xmlOCR) $(altoOCR))
+cnt-year-issues: 
+	@FILE=cnt-year-issues.$(shell date +%Y-%m-%d).stat; \
+	test -f $$FILE && mv $$FILE $$FILE.$(shell date +%s); \
+	make -e $(cnt-year-issues--issue-per-file) $(cnt-year-issues--issue-per-folder) FILE=$$FILE | $(PIVOT)
+
+$(cnt-year-issues--issue-per-file): cnt-year-issues-%:
+	@for YEAR in `ls $*`; do \
+	  basename $* | tr '\n' '\t' | tee -a $(FILE); \
+	  echo $$YEAR | tr '\n' '\t' | tee -a $(FILE); \
+	  find $*/$$YEAR -type f -not -empty|wc -l | tee -a $(FILE); \
+	done
+
+$(cnt-year-issues--issue-per-folder): cnt-year-issues-%:
+	@for YEAR in `ls $*`; do \
+	  basename $* | tr '\n' '\t' | tee -a $(FILE); \
+	  echo $$YEAR | tr '\n' '\t' | tee -a $(FILE); \
+	  find $*/$$YEAR -mindepth 1 -type d -not -empty|wc -l | tee -a $(FILE); \
+	done
+
+
+
+
 ###### Help
 
 help-intro:
@@ -775,3 +815,19 @@ _test-level-%:
 		echo "FATAL ERROR: expected level $$X but got $$Y ($(UUID_PATH))"; \
 		exit 1; \
 	fi
+
+
+PIVOT = awk -F'\t' 'BEGIN { OFS=FS } \
+	{ a[$$2,$$1]=$$3; years[$$2]=1; labels[$$1]=1 } \
+	END { \
+		nl=asorti(labels,l); \
+		ny=asorti(years,y,"@ind_num_asc"); \
+		printf "year"; \
+		for(i=1;i<=nl;i++) printf "%s%s",FS,l[i]; \
+		print ""; \
+		for(j=1;j<=ny;j++) { \
+			printf "%s",y[j]; \
+			for(i=1;i<=nl;i++) printf "%s%s",FS,((y[j],l[i]) in a ? a[y[j],l[i]] : "-"); \
+			print "" \
+		} \
+	}'
