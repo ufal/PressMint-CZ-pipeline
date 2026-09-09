@@ -537,6 +537,7 @@ ifdef COMPONENT_PATH
 UUID_PATH := 	$(shell jq -r 'select(.uuid_path != null) | .uuid_path' $(idMapping)/$(COMPONENT_PATH).jsonl | head -n 1|cut -d '/' -f 1-3)
 endif
 
+ifeq ($(wildcard $(xmlOCR)/$(COMPONENT_PATH)),)
 $(xmlOCR)/$(COMPONENT_PATH): $(INimg)/$(UUID_PATH) $(JSONissues)/$(UUID_PATH).json $(PERO_OCR_MODEL_CONFIG)
 	@echo "INFO: running OCR for $(COMPONENT_PATH) ($(UUID_PATH))"
 	$(PERL) -I Scripts/lib Scripts/runOCR.pl \
@@ -548,6 +549,10 @@ $(xmlOCR)/$(COMPONENT_PATH): $(INimg)/$(UUID_PATH) $(JSONissues)/$(UUID_PATH).js
 										 --device $(PERO_OCR_DEVICE) \
 										 --output-xml-dir $(xmlOCR) \
 										 --output-alto-dir $(altoOCR)
+else
+$(xmlOCR)/$(COMPONENT_PATH): 
+	@echo "INFO: skipping OCR for $(COMPONENT_PATH) ($(UUID_PATH)) because output already exists"
+endif
 
 ##inputImg2imageRegions## detect and classify regions in original images using YOLO model
 inputImg2imageRegions: $(JSONissues)/$(UUID_PATH).json $(imageRegions) $(YOLO_MODEL)
@@ -559,6 +564,7 @@ inputImg2imageRegions: $(JSONissues)/$(UUID_PATH).json $(imageRegions) $(YOLO_MO
 										 --device $(DEVICE) \
 										 --output-dir $(imageRegions)
 
+ifeq ($(wildcard $(imageRegions)/$(COMPONENT_PATH).jsonl),)
 $(imageRegions)/$(COMPONENT_PATH).jsonl: $(INimg)/$(UUID_PATH) $(JSONissues)/$(UUID_PATH).json $(YOLO_MODEL)
 	@echo "INFO: running region detection for $(COMPONENT_PATH) ($(UUID_PATH))"
 	$(PERL) -I Scripts/lib Scripts/runImageRegionsDetection.pl \
@@ -568,6 +574,10 @@ $(imageRegions)/$(COMPONENT_PATH).jsonl: $(INimg)/$(UUID_PATH) $(JSONissues)/$(U
 										 --model $(YOLO_MODEL) \
 										 --device $(DEVICE) \
 										 --output-dir $(imageRegions)
+else
+$(imageRegions)/$(COMPONENT_PATH).jsonl:
+	@echo "INFO: skipping region detection for $(COMPONENT_PATH) ($(UUID_PATH)) because output already exists"
+endif
 
 ##textRegions2teiFacsText## merge region detection and ocr output to TEI documents
 #### this also attempts to determine correct reading order of text regions based on pageXML reading order and detected regions, but this is not perfect and can be improved in the future
@@ -583,6 +593,8 @@ textRegions2teiFacsText:
 				--output-facs-dir "$(TEIfacs)" \
 				--output-text-dir "$(TEItext)"
 
+
+ifeq ($(wildcard $(TEItext)/$(COMPONENT_PATH).xml),)
 $(TEItext)/$(COMPONENT_PATH).xml: $(xmlOCR)/$(COMPONENT_PATH) $(imageRegions)/$(COMPONENT_PATH).jsonl $(idMapping)/$(COMPONENT_PATH).jsonl
 	@echo "INFO: creating TEI text for $(COMPONENT_PATH)"
 	echo "$(COMPONENT_PATH)" \
@@ -592,6 +604,10 @@ $(TEItext)/$(COMPONENT_PATH).xml: $(xmlOCR)/$(COMPONENT_PATH) $(imageRegions)/$(
 				--page-order-dir "$(idMapping)" \
 				--output-facs-dir "$(TEIfacs)" \
 				--output-text-dir "$(TEItext)"
+else
+$(TEItext)/$(COMPONENT_PATH).xml:
+	@echo "INFO: skipping TEI text creation for $(COMPONENT_PATH) because output already exists"
+endif
 
 ###### [DEPRECATED] targets
 
