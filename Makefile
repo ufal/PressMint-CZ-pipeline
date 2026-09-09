@@ -491,10 +491,27 @@ slurm-img2tei:
 	       --export=DEVICE=gpu,PERO_OCR_MODEL_CONFIG=Models/$(PERO_OCR_MODEL_NAME)/config.ini,TASKS_FILE=$(TASKS_ISSUES),SLURM_START=$(SLURM_ARRAY_START),SAMPLE=$(SAMPLE),MAKEFILE_TARGET=download-imgs-process-data-delete-imgs \
 	       Scripts/slurm_submit_process.sh
 
+# this currently does not downloiad images, because we assume they are already downloaded, but it can be modified to do so if needed
+slurm-img2tei-byPath:
+	@mkdir -p logs/slurm
+	@# Count total lines in the file
+	@TOTAL_TASKS=$$(wc -l < $(TASKS_TEI_COMPONENTS) | tr -d ' '); \
+	LAST_TASK=$$(python3 -c "print(min($$TOTAL_TASKS, $(SLURM_ARRAY_START) + $(SLURM_ARRAY_SIZE) - 1)-$(SLURM_ARRAY_START))"); \
+	sbatch --array=1-$$LAST_TASK%$(SLURM_MAX_CONCURRENT) \
+	       --export=DEVICE=gpu,PERO_OCR_MODEL_CONFIG=Models/$(PERO_OCR_MODEL_NAME)/config.ini,VAR_NAME=COMPONENT_PATH,TASKS_FILE=$(TASKS_TEI_COMPONENTS),SLURM_START=$(SLURM_ARRAY_START),SAMPLE=$(SAMPLE),MAKEFILE_TARGET=process-data-byPath \
+	       Scripts/slurm_submit_process.sh
+
 ##process-data-all## process data for all issues (img->text-->TEI) based on task list prepared by prepare-tasks
 process-data-all: $(TASKS_ISSUES)
 	cat $(TASKS_ISSUES) | xargs -I {} make process-data UUID_PATH={} SAMPLE=$(SAMPLE)
 process-data: $(INjson)/$(UUID_PATH).json inputImg2pageXML inputImg2imageRegions textRegions2teiFacsText
+
+ifdef COMPONENT_PATH
+process-data-byPath: $(TEItext)/$(COMPONENT_PATH).xml
+else
+process-data-byPath:
+	@echo "ERROR: COMPONENT_PATH is not defined, cannot process data by path"
+endif
 
 DEVprocess-data-all: $(TASKS_ISSUES)
 	cat $(TASKS_ISSUES) | xargs -I {} make DEVprocess-data UUID_PATH={} SAMPLE=$(SAMPLE)
@@ -516,6 +533,21 @@ inputImg2pageXML: $(JSONissues)/$(UUID_PATH).json $(xmlOCR) setup-pero-ocr $(PER
 										 --output-xml-dir $(xmlOCR) \
 										 --output-alto-dir $(altoOCR)
 
+ifdef COMPONENT_PATH
+UUID_PATH := 	$(shell jq -r 'select(.uuid_path != null) | .uuid_path' $(idMapping)/$(COMPONENT_PATH).jsonl | head -n 1|cut -d '/' -f 1-3)
+endif
+
+$(xmlOCR)/$(COMPONENT_PATH): $(INimg)/$(UUID_PATH) $(JSONissues)/$(UUID_PATH).json $(PERO_OCR_MODEL_CONFIG)
+	@echo "INFO: running OCR for $(COMPONENT_PATH) ($(UUID_PATH))"
+	$(PERL) -I Scripts/lib Scripts/runOCR.pl \
+										 --input-file-suffix ".jpg" \
+										 --input-img-dir $(INimg) \
+										 --input-base-dir $(JSONissues) \
+										 --input-uuid-path "$$UUID_PATH" \
+										 --model $(PERO_OCR_MODEL_CONFIG) \
+										 --device $(PERO_OCR_DEVICE) \
+										 --output-xml-dir $(xmlOCR) \
+										 --output-alto-dir $(altoOCR)
 
 ##inputImg2imageRegions## detect and classify regions in original images using YOLO model
 inputImg2imageRegions: $(JSONissues)/$(UUID_PATH).json $(imageRegions) $(YOLO_MODEL)
@@ -527,6 +559,15 @@ inputImg2imageRegions: $(JSONissues)/$(UUID_PATH).json $(imageRegions) $(YOLO_MO
 										 --device $(DEVICE) \
 										 --output-dir $(imageRegions)
 
+$(imageRegions)/$(COMPONENT_PATH).jsonl: $(INimg)/$(UUID_PATH) $(JSONissues)/$(UUID_PATH).json $(YOLO_MODEL)
+	@echo "INFO: running region detection for $(COMPONENT_PATH) ($(UUID_PATH))"
+	$(PERL) -I Scripts/lib Scripts/runImageRegionsDetection.pl \
+										 --input-img-dir $(INimg) \
+										 --input-base-dir $(JSONissues) \
+										 --input-uuid-path "$$UUID_PATH" \
+										 --model $(YOLO_MODEL) \
+										 --device $(DEVICE) \
+										 --output-dir $(imageRegions)
 
 ##textRegions2teiFacsText## merge region detection and ocr output to TEI documents
 #### this also attempts to determine correct reading order of text regions based on pageXML reading order and detected regions, but this is not perfect and can be improved in the future
@@ -535,6 +576,16 @@ textRegions2teiFacsText:
 	 $(PERL) -I Scripts/lib Scripts/uuid2componentPath.pl \
 										 --input-base-dir $(JSONissues) \
 										 --input-uuid-path "$(UUID_PATH)" \
+	  | PYTHONPATH=Scripts python -m textRegions2teiFacsText.main \
+		    --ocr-xml-dir "$(xmlOCR)" \
+				--regions-dir "$(imageRegions)" \
+				--page-order-dir "$(idMapping)" \
+				--output-facs-dir "$(TEIfacs)" \
+				--output-text-dir "$(TEItext)"
+
+$(TEItext)/$(COMPONENT_PATH).xml: $(xmlOCR)/$(COMPONENT_PATH) $(imageRegions)/$(COMPONENT_PATH).jsonl $(idMapping)/$(COMPONENT_PATH).jsonl
+	@echo "INFO: creating TEI text for $(COMPONENT_PATH)"
+	echo "$(COMPONENT_PATH)" \
 	  | PYTHONPATH=Scripts python -m textRegions2teiFacsText.main \
 		    --ocr-xml-dir "$(xmlOCR)" \
 				--regions-dir "$(imageRegions)" \

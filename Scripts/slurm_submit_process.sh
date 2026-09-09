@@ -21,6 +21,11 @@ if [ -z "$MAKEFILE_TARGET" ]; then
     exit 1
 fi
 
+if [ -z "$VAR_NAME" ]; then
+    echo "Warning: VAR_NAME variable is not set. using default value 'UUID_PATH'."
+    VAR_NAME="UUID_PATH"
+fi
+
 export PERLBREW_ROOT=$HOME/perl5/perlbrew
 source ${PERLBREW_ROOT}/etc/bashrc
 perlbrew use pressmint
@@ -32,25 +37,25 @@ export TASK_ID=$(python3 -c "print(${SLURM_ARRAY_TASK_ID}+${SLURM_START}-1)")
 
 # Extract the specific line matching this Slurm task index
 # $SLURM_ARRAY_TASK_ID will be 1, 2, 3... up to your max lines
-UUID_PATH=$(sed -n "${TASK_ID}p" "$TASKS_FILE")
+TASK=$(sed -n "${TASK_ID}p" "$TASKS_FILE")
 
 # 3. Prevent running empty tasks if file has trailing empty lines
-if [ -z "$UUID_PATH" ]; then
+if [ -z "$TASK" ]; then
     echo "Task ID $SLURM_ARRAY_TASK_ID matched an empty line. Exiting."
     exit 0
 fi
 
 echo "Task ${TASK_ID} (slurm task id=${SLURM_ARRAY_TASK_ID}) running on node ${SLURM_NODENAME} with GPU ${CUDA_VISIBLE_DEVICES}"
-echo "PROCESSING: $MAKEFILE_TARGET with UUID_PATH: $UUID_PATH"
+echo "PROCESSING: $MAKEFILE_TARGET with $VAR_NAME: $TASK"
 echo "DATADIR: $DATADIR"
 
-echo -e "$(date +"%Y-%m-%dT%T") START (${TASK_ID}): $UUID_PATH" >> logs/PressMint-CZ.slurm.log
+echo -e "$(date +"%Y-%m-%dT%T") START (${TASK_ID}): $TASK" >> logs/PressMint-CZ.slurm.log
 # 4. Execute your existing Make command for this specific line
-CMD="make $MAKEFILE_TARGET UUID_PATH=$UUID_PATH DEVICE=$DEVICE PERO_OCR_MODEL_CONFIG=$PERO_OCR_MODEL_CONFIG PERO_OCR_MODEL_NAME=$PERO_OCR_MODEL_NAME"
+CMD="make $MAKEFILE_TARGET $VAR_NAME=$TASK DEVICE=$DEVICE PERO_OCR_MODEL_CONFIG=$PERO_OCR_MODEL_CONFIG PERO_OCR_MODEL_NAME=$PERO_OCR_MODEL_NAME"
 RES=$(/usr/bin/time --output=logs/PressMint-CZ.slurm.$SLURM_JOB_ID.${TASK_ID}.tmp -f "%x#%E real, %U user, %S sys, %M kB" $CMD)
 TIME=$(cut -d'#' -f 2 logs/PressMint-CZ.slurm.$SLURM_JOB_ID.${TASK_ID}.tmp)
 CODE=$(cut -d'#' -f 1 logs/PressMint-CZ.slurm.$SLURM_JOB_ID.${TASK_ID}.tmp)
 if [ $((10#$CODE)) -gt 0 ]; then STATUS="FAILED-$CODE"; else STATUS="FINISHED"; fi
 rm logs/PressMint-CZ.slurm.$SLURM_JOB_ID.${TASK_ID}.tmp
-echo -e "$(date +"%Y-%m-%dT%T") DONE (${TASK_ID}): $UUID_PATH   $STATUS    $SLURM_JOB_ID/${TASK_ID}   $(hostname)     $TIME         $CMD" >> logs/PressMint-CZ.slurm.log
+echo -e "$(date +"%Y-%m-%dT%T") DONE (${TASK_ID}): $TASK   $STATUS    $SLURM_JOB_ID/${TASK_ID}   $(hostname)     $TIME         $CMD" >> logs/PressMint-CZ.slurm.log
 
