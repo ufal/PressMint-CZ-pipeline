@@ -101,6 +101,10 @@ SLURM_MAX_CONCURRENT ?= 30
 SLURM_ARRAY_SIZE ?= 10000
 SLURM_ARRAY_START ?= 1
 
+ifdef COMPONENT_PATH
+UUID_PATH := 	$(shell jq -r 'select(.uuid_path != null) | .uuid_path' $(idMapping)/$(COMPONENT_PATH).jsonl | head -n 1|cut -d '/' -f 1-3)
+endif
+
 ifdef UUID_PATH
 
 periodical := $(shell echo "$(UUID_PATH)"| cut -d '/' -f 1)
@@ -258,6 +262,18 @@ $(get-page-image-UUID): get-page-image-%: $(INimg)/$(periodical)/$(periodicalvol
 	test -f $(INimg)/$(periodical)/$(periodicalvolume)/$(periodicalitem)/$*.jpg \
 	|| curl 'https://api.kramerius.mzk.cz/search/iiif/uuid:$*/full/max/0/default.jpg' \
 	> $(INimg)/$(periodical)/$(periodicalvolume)/$(periodicalitem)/$*.jpg
+
+
+ifeq ($(wildcard $(INimg)/$(UUID_PATH)),)
+$(INimg)/$(UUID_PATH):
+	mkdir -p $@
+	ls $(INtxt)/$(UUID_PATH)/*.txt \
+	  | sed "s/.txt$$//;s/^.*\///" \
+		| xargs -I {} make get-page-image UUID_PATH=$(UUID_PATH)/{} || echo "INFO: no images to download for $(UUID_PATH)"
+else
+$(INimg)/$(UUID_PATH):
+	@echo "INFO: images already downloaded for $(UUID_PATH)"
+endif
 
 #
 uuid2url:
@@ -533,9 +549,6 @@ inputImg2pageXML: $(JSONissues)/$(UUID_PATH).json $(xmlOCR) setup-pero-ocr $(PER
 										 --output-xml-dir $(xmlOCR) \
 										 --output-alto-dir $(altoOCR)
 
-ifdef COMPONENT_PATH
-UUID_PATH := 	$(shell jq -r 'select(.uuid_path != null) | .uuid_path' $(idMapping)/$(COMPONENT_PATH).jsonl | head -n 1|cut -d '/' -f 1-3)
-endif
 
 ifeq ($(wildcard $(xmlOCR)/$(COMPONENT_PATH)),)
 $(xmlOCR)/$(COMPONENT_PATH): $(INimg)/$(UUID_PATH) $(JSONissues)/$(UUID_PATH).json $(PERO_OCR_MODEL_CONFIG)
