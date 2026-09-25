@@ -201,7 +201,7 @@ sub get_journal_name {
 
 
 my %id2type = (
-  id_ccnb => 'čČNB',
+  id_ccnb => 'local>čČNB',
   id_urnnbn => 'URN',
   id_uuid => 'UUID',
 );
@@ -209,7 +209,7 @@ my %id2type = (
 sub get_all_ids {
   my $metadata = shift;
   return (
-    (map {my $type = $id2type{$_}; map { {type => $type,value => $_}} @{$metadata->{$_}}} sort keys %id2type),
+    (map {my ($type,$subtype) = split />/, $id2type{$_}; map { {type => $type, $subtype ? (subtype => $subtype):(), value => $_}} @{$metadata->{$_}}} sort keys %id2type),
     (map { {
             type => 'URI',
             subtype => 'URL',
