@@ -71,6 +71,18 @@ profiles:
         position:
           - [0,0]
           - [1,0]
+  poster:
+    tasks:
+      - name : text
+        position:
+          - [2,0]
+      - name : image
+        max_resolution: 3000
+        position:
+          - [0,0]        
+      - name : zone
+        position:
+          - [1,0]
   dev:
     tasks:
       - name : text

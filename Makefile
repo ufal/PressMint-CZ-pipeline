@@ -415,13 +415,26 @@ visualize-layout-merge: $(vizLAYOUTmerge)
 ##visualize-tei## visualize TEI files as pdf files with original image and detected regions overlayed
 visualize-tei: $(vizTEI)
 	echo "TODO $@"	
-	for COMP in `find $(TEI) -type f -name "*.xml" -printf "%P\n" | sed 's/.xml$$//'| sort`;\
+	for COMP in `find $(TEI) -mindepth 2 -type f -name "*.xml" -printf "%P\n" | sed 's/.xml$$//'| sort`;\
 	do \
 		echo "creating pdf: $(vizTEI)/$$COMP";\
 		PYTHONPATH=Scripts python -m tei2pdf.main \
 		  --tei $(TEI)/$${COMP}.xml \
 			--output $(vizTEI)/$${COMP}.pdf\
 			--cache $(CACHE)/tei2pdf/$${COMP};\
+	done
+
+visualize-tei4poster:
+	@echo "INFO: creating poster visualization of TEI files"
+	@mkdir -p $(VIZ)/poster
+	@for COMP in `find $(TEI) -mindepth 2 -type f -name "*.xml" -printf "%P\n" | sed 's/.xml$$//'| sort`;\
+	do \
+		echo "creating poster pdf: $(VIZ)/poster/$$COMP";\
+		PYTHONPATH=Scripts python -m tei2pdf.main \
+		  --tei $(TEI)/$${COMP}.xml \
+			--output $(VIZ)/poster/$${COMP}.pdf\
+			--cache $(CACHE)/tei2pdf/$${COMP} \
+			--profile poster;\
 	done
 
 ###### process metadata
@@ -677,15 +690,20 @@ teiText2teiTextAnaNER: $(NAMETAG)
 process-annotation-all: teiText2tt TT2teiANA
 
 
-
-##teiText2tt## annotate TEItext with flexipipe TEItextTT
-teiText2tt: $(TEItextTT)
+$(TEItextTT).fl: $(TEItextTT)
 	find $(TEItext) -type f -name "*.xml"  -printf "%P\n"| sort > $(TEItextTT).fl
 	cat $(TEItextTT).fl | sed 's@/.*@@'|sort|uniq | xargs -I {} mkdir -p $(TEItextTT)/{}
 	cat $(TEItextTT).fl | xargs -I {} cp $(TEItext)/{} $(TEItextTT)/{}
+##teiText2tt## annotate TEItext with flexipipe TEItextTT
+teiText2tt: $(TEItextTT).fl
 	cat $(TEItextTT).fl | xargs -I {} \
-	  $(FLEXIPIPE) \
-	    process $(TEItextTT)/{} \
+	  make -e teiText2tt-single FILE=$(TEItextTT)/{}
+
+teiText2tt-single: $(FILE)
+	grep -q '</w>' $(FILE) \
+	&& echo "INFO: skipping $(FILE) because it is already annotated with TEItextTT" \
+	||  $(FLEXIPIPE) \
+	    process $(FILE) \
 		  --tokenize \
 			--backend udpipe --model czech-pdtc-ud-2.17-251125 \
 			--ner-backend nametag --nametag-model nametag3-multilingual-conll-250203 \
@@ -693,7 +711,7 @@ teiText2tt: $(TEItextTT)
 		  --tasks segment,tokenize,lemmatize,tag,ner \
 			--writeback --writeback-engine xmltokenizer \
 	    -O punctuation-split:hard
-		
+
 ##TT2teiANA## convert TEItextTT to TEItextANA
 TT2teiANA: $(TEItextANA)
 	find $(TEItextTT) -type f -name "*.xml" -printf "%P\n" |sort > $(TEItextANA).fl
