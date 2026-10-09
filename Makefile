@@ -700,7 +700,7 @@ teiText2tt: $(TEItextTT).fl
 	  make -e teiText2tt-single FILE=$(TEItextTT)/{}
 
 teiText2tt-single: $(FILE)
-	grep -q '</w>' $(FILE) \
+	grep -q '</tok>' $(FILE) \
 	&& echo "INFO: skipping $(FILE) because it is already annotated with TEItextTT" \
 	||  $(FLEXIPIPE) \
 	    process $(FILE) \
