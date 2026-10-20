@@ -732,7 +732,7 @@ slurm-TT2teiANA:
 				 --partition=cpu-troja,cpu-ms \
 				 --gres=none \
 				 --cpus-per-task=2 \
-				 --mem=8G
+				 --mem=8G \
 	       Scripts/slurm_submit_process.sh
 
 TT2teiANA-single-task: $(TEItextTT)/$(RELPATH)
