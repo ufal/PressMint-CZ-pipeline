@@ -714,7 +714,7 @@ teiText2tt-single: $(FILE)
 
 
 $(TEItextANA).fl: $(TEItextANA)
-	find $(TEItextANA) -type f -name "*.xml"  -printf "%P\n"| sort > $(TEItextANA).fl
+	find $(TEItextTT) -type f -name "*.xml"  -printf "%P\n"| sort > $(TEItextANA).fl
 	cat $(TEItextANA).fl | sed 's@/.*@@'|sort|uniq | xargs -I {} mkdir -p $(TEItextANA)/{}
 ##TT2teiANA## convert TEItextTT to TEItextANA
 TT2teiANA: $(TEItextANA).fl
