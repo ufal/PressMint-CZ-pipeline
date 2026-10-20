@@ -740,19 +740,20 @@ TT2teiANA-single: $(FILE)
 	&& python Scripts/teitok2tei.py \
 			--input $(FILE) \
 			--output $(OUTPUT) \
-	|| echo "INFO: skipping $(FILE) because it is not annotated with TEItextTT or has no content"
+	|| echo "WARN: skipping $(FILE) because it is not annotated with TEItextTT or has no content"
 
 ###### Build TEI documents and corpus
 
 process-build: corpus-template dist-tei-ana dist-tei
 
-##corpus-template## create TEI corpus template with xi:include for all TEI headers and text components, this is used as input for distribution XSLT stylesheet to create final TEI documents with included headers and text
+##corpus-template## create TEI corpus template with xi:include for all TEI.ana components, this is used as input for distribution XSLT stylesheet to create final TEI documents with included headers and text
+#### include only TEI.ana components, because they are the most complete and contain all the information from TEI.text and TEI.facs
 corpus-template:
 	echo '<?xml version="1.0" encoding="UTF-8"?>' > $(CORPUS_TEMPLATE)
 	echo '<teiCorpus xmlns="http://www.tei-c.org/ns/1.0"' >> $(CORPUS_TEMPLATE)
 	echo '     xml:id="PressMint-CZ"' >> $(CORPUS_TEMPLATE)
 	echo '     xml:lang="cs">' >> $(CORPUS_TEMPLATE)
-	find $(TEIheader) -type f -name "*.xml" -printf "%P\n"| xargs -I {} echo '  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="'{}'"/>' >> $(CORPUS_TEMPLATE)
+	find $(TEItextANA) -type f -name "*.xml" -printf "%P\n"| xargs -I {} echo '  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="'{}'"/>' >> $(CORPUS_TEMPLATE)
 	echo '</teiCorpus>' >> $(CORPUS_TEMPLATE)
 
 ##dist-tei## create final TEI documents with included headers and text
