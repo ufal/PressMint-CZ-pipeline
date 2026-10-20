@@ -731,7 +731,7 @@ slurm-TT2teiANA:
 	       --export=TASKS_FILE=$(TEItextANA).fl,SLURM_START=$(SLURM_ARRAY_START),VAR_NAME=RELPATH,MAKEFILE_TARGET=TT2teiANA-single-task \
 	       Scripts/slurm_submit_process.sh
 
-TT2teiANA-single: $(TEItextTT)/$(RELPATH)
+TT2teiANA-single-task: $(TEItextTT)/$(RELPATH)
 	@echo "INFO: processing TEItextTT to TEItextANA for $(TEItextTT)/$(RELPATH) to $(TEItextANA)/$(RELPATH)"
 	make -e TT2teiANA-single FILE=$(TEItextTT)/$(RELPATH) OUTPUT=$(TEItextANA)/$(RELPATH)
 
