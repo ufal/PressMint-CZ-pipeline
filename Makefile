@@ -712,15 +712,35 @@ teiText2tt-single: $(FILE)
 			--writeback --writeback-engine xmltokenizer \
 	    -O punctuation-split:hard
 
-##TT2teiANA## convert TEItextTT to TEItextANA
-TT2teiANA: $(TEItextANA)
-	find $(TEItextTT) -type f -name "*.xml" -printf "%P\n" |sort > $(TEItextANA).fl
-	cat $(TEItextTT).fl | sed 's@/.*@@'|sort|uniq | xargs -I {} mkdir -p $(TEItextANA)/{}
-	cat $(TEItextTT).fl | xargs -I {} \
-	  python Scripts/teitok2tei.py \
-			--input $(TEItextTT)/{} \
-			--output $(TEItextANA)/{} 
 
+$(TEItextANA).fl: $(TEItextANA)
+	find $(TEItextANA) -type f -name "*.xml"  -printf "%P\n"| sort > $(TEItextANA).fl
+	cat $(TEItextANA).fl | sed 's@/.*@@'|sort|uniq | xargs -I {} mkdir -p $(TEItextANA)/{}
+##TT2teiANA## convert TEItextTT to TEItextANA
+TT2teiANA: $(TEItextANA).fl
+	cat $(TEItextANA).fl | xargs -I {} \
+	  make -e TT2teiANA-single FILE=$(TEItextTT)/{} OUTPUT=$(TEItextANA)/{}
+
+
+slurm-TT2teiANA:
+	@mkdir -p logs/slurm
+	@# Count total lines in the file
+	@TOTAL_TASKS=$$(wc -l < $(TEItextANA).fl | tr -d ' '); \
+	LAST_TASK=$$(python3 -c "print(min($$TOTAL_TASKS, $(SLURM_ARRAY_START) + $(SLURM_ARRAY_SIZE) - 1)-$(SLURM_ARRAY_START))"); \
+	sbatch --array=1-$$LAST_TASK%$(SLURM_MAX_CONCURRENT) \
+	       --export=TASKS_FILE=$(TEItextANA).fl,SLURM_START=$(SLURM_ARRAY_START),VAR_NAME=RELPATH,MAKEFILE_TARGET=TT2teiANA-single-task \
+	       Scripts/slurm_submit_process.sh
+
+TT2teiANA-single: $(TEItextTT)/$(RELPATH)
+	@echo "INFO: processing TEItextTT to TEItextANA for $(TEItextTT)/$(RELPATH) to $(TEItextANA)/$(RELPATH)"
+	make -e TT2teiANA-single FILE=$(TEItextTT)/$(RELPATH) OUTPUT=$(TEItextANA)/$(RELPATH)
+
+TT2teiANA-single: $(FILE)
+	grep -q '</tok>' $(FILE) \
+	&& python Scripts/teitok2tei.py \
+			--input $(FILE) \
+			--output $(OUTPUT) \
+	|| echo "INFO: skipping $(FILE) because it is not annotated with TEItextTT or has no content"
 
 ###### Build TEI documents and corpus
 
