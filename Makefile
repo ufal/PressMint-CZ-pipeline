@@ -729,6 +729,10 @@ slurm-TT2teiANA:
 	LAST_TASK=$$(python3 -c "print(min($$TOTAL_TASKS, $(SLURM_ARRAY_START) + $(SLURM_ARRAY_SIZE) - 1)-$(SLURM_ARRAY_START))"); \
 	sbatch --array=1-$$LAST_TASK%$(SLURM_MAX_CONCURRENT) \
 	       --export=TASKS_FILE=$(TEItextANA).fl,SLURM_START=$(SLURM_ARRAY_START),VAR_NAME=RELPATH,MAKEFILE_TARGET=TT2teiANA-single-task \
+				 --partition=cpu-troja,cpu-ms \
+				 --gres=none \
+				 --cpus-per-task=2 \
+				 --mem=8G
 	       Scripts/slurm_submit_process.sh
 
 TT2teiANA-single-task: $(TEItextTT)/$(RELPATH)
