@@ -256,5 +256,196 @@
       "own_pid_path": "uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:0bc23eb0-b8be-11de-83d1-000d606f5dc6/uuid:944bce70-c892-11de-8718-000d606f5dc6/uuid:f7aa3280-b8a3-11de-b353-000d606f5dc6",
       "own_parent.pid": "uuid:944bce70-c892-11de-8718-000d606f5dc6"
     }
-  ]
+  ],
+  "volume": {
+    "root.pid": "uuid:02203ad6-32f0-11de-992b-00145e5790ea",
+    "accessibility": "private",
+    "date_range_start.year": 1914,
+    "own_parent.title": "Moravská orlice",
+    "in_collections": [
+      "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc",
+      "uuid:9df7d62c-b572-4338-a0d1-b9c63e07a26e",
+      "uuid:0be90938-b8af-4b93-b11a-b131de360017",
+      "uuid:71174c16-98ca-4d39-8893-543b6fd2af74"
+    ],
+    "pid": "uuid:0bc23eb0-b8be-11de-83d1-000d606f5dc6",
+    "licenses.facet": [
+      "public",
+      "public"
+    ],
+    "rels_ext_index.sort": 51,
+    "id_other": [
+      "urn:0bc23eb0-b8be-11de-83d1-000d606f5dc6"
+    ],
+    "pid_paths": [
+      "uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:0bc23eb0-b8be-11de-83d1-000d606f5dc6",
+      "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:0bc23eb0-b8be-11de-83d1-000d606f5dc6",
+      "uuid:9df7d62c-b572-4338-a0d1-b9c63e07a26e/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:0bc23eb0-b8be-11de-83d1-000d606f5dc6",
+      "uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:0bc23eb0-b8be-11de-83d1-000d606f5dc6",
+      "uuid:71174c16-98ca-4d39-8893-543b6fd2af74/uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:0bc23eb0-b8be-11de-83d1-000d606f5dc6"
+    ],
+    "root.model": "periodical",
+    "count_issue": 276,
+    "modified": "2025-01-14T16:15:02.569Z",
+    "model": "periodicalvolume",
+    "date.min": "1914-01-01T00:00:00.001Z",
+    "has_tiles": false,
+    "root.title.sort": "MORAVSKA| ORLICE",
+    "part.number.str": "52",
+    "part.number.sort": 52,
+    "indexer_version": 22,
+    "root.title": "Moravská orlice",
+    "indexed": "2026-01-07T00:22:12.623Z",
+    "level": 1,
+    "created": "2014-08-21T11:32:58.387Z",
+    "id_all": [
+      "urn:0bc23eb0-b8be-11de-83d1-000d606f5dc6"
+    ],
+    "own_model_path": "periodical/periodicalvolume",
+    "languages.facet": [
+      "cze"
+    ],
+    "date.max": "1914-12-31T23:59:59.999Z",
+    "date_range_end.year": 1914,
+    "licenses": [
+      "public"
+    ],
+    "contains_licenses": [
+      "public"
+    ],
+    "_version_": 1853615344526033000,
+    "own_parent.model": "periodical",
+    "date.str": "1914",
+    "compositeId": "uuid:02203ad6-32f0-11de-992b-00145e5790ea!uuid:0bc23eb0-b8be-11de-83d1-000d606f5dc6",
+    "own_pid_path": "uuid:02203ad6-32f0-11de-992b-00145e5790ea/uuid:0bc23eb0-b8be-11de-83d1-000d606f5dc6",
+    "own_parent.pid": "uuid:02203ad6-32f0-11de-992b-00145e5790ea"
+  },
+  "periodical": {
+    "physical_locations.search": [
+      "OLA001",
+      "OLA001"
+    ],
+    "root.pid": "uuid:02203ad6-32f0-11de-992b-00145e5790ea",
+    "titles.search": [
+      "Moravská orlice"
+    ],
+    "accessibility": "public",
+    "date_range_start.year": 1863,
+    "date_range_start.month": 3,
+    "in_collections": [
+      "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc",
+      "uuid:9df7d62c-b572-4338-a0d1-b9c63e07a26e",
+      "uuid:0be90938-b8af-4b93-b11a-b131de360017",
+      "uuid:71174c16-98ca-4d39-8893-543b6fd2af74"
+    ],
+    "pid": "uuid:02203ad6-32f0-11de-992b-00145e5790ea",
+    "publishers.search": [
+      "František Uman",
+      "Jindřich Dvořák",
+      "Josef Šnajdr",
+      "Karel Flemich",
+      "František E. Slovák",
+      "Družstvo Moravské orlice",
+      "Jan Ehrenberger",
+      "Otakar Lebloch",
+      "Adolf Galgonek",
+      "Josef Mathon",
+      "Rudolf Obrovský",
+      "Karel Červinka",
+      "Marian Sedmík",
+      "Antonín Jarušek",
+      "Rudolf Jarušek",
+      "Robert Jarušek",
+      "Josef Pištělák",
+      "Bohumil Pištělák"
+    ],
+    "licenses.facet": [
+      "dnnto",
+      "public",
+      "onsite"
+    ],
+    "physical_locations.facet": [
+      "OLA001"
+    ],
+    "foster_parents.pids": [
+      "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc",
+      "uuid:9df7d62c-b572-4338-a0d1-b9c63e07a26e",
+      "uuid:0be90938-b8af-4b93-b11a-b131de360017"
+    ],
+    "id_other": [
+      "urn:02203ad6-32f0-11de-992b-00145e5790ea"
+    ],
+    "pid_paths": [
+      "uuid:02203ad6-32f0-11de-992b-00145e5790ea",
+      "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc/uuid:02203ad6-32f0-11de-992b-00145e5790ea",
+      "uuid:9df7d62c-b572-4338-a0d1-b9c63e07a26e/uuid:02203ad6-32f0-11de-992b-00145e5790ea",
+      "uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:02203ad6-32f0-11de-992b-00145e5790ea",
+      "uuid:71174c16-98ca-4d39-8893-543b6fd2af74/uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:02203ad6-32f0-11de-992b-00145e5790ea"
+    ],
+    "root.model": "periodical",
+    "id_issn": [
+      "1803-117x"
+    ],
+    "modified": "2023-03-06T21:23:15.603Z",
+    "model": "periodical",
+    "date.min": "1863-03-01T00:00:00.001Z",
+    "has_tiles": false,
+    "title.search": "Moravská orlice",
+    "root.title.sort": "MORAVSKA| ORLICE",
+    "indexer_version": 22,
+    "root.title": "Moravská orlice",
+    "indexed": "2026-06-08T11:24:32.570Z",
+    "level": 0,
+    "created": "2014-08-07T08:20:42.060Z",
+    "id_all": [
+      "1803-117x",
+      "urn:02203ad6-32f0-11de-992b-00145e5790ea"
+    ],
+    "own_model_path": "periodical",
+    "languages.facet": [
+      "cze"
+    ],
+    "date.max": "1864-03-31T23:59:59.999Z",
+    "title.sort": "MORAVSKA| ORLICE",
+    "date_range_end.month": 3,
+    "in_collections.direct": [
+      "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc",
+      "uuid:9df7d62c-b572-4338-a0d1-b9c63e07a26e",
+      "uuid:0be90938-b8af-4b93-b11a-b131de360017"
+    ],
+    "publishers.facet": [
+      "František Uman",
+      "Jindřich Dvořák",
+      "Josef Šnajdr",
+      "Karel Flemich",
+      "František E. Slovák",
+      "Družstvo Moravské orlice",
+      "Jan Ehrenberger",
+      "Otakar Lebloch",
+      "Adolf Galgonek",
+      "Josef Mathon",
+      "Rudolf Obrovský",
+      "Karel Červinka",
+      "Marian Sedmík",
+      "Antonín Jarušek",
+      "Rudolf Jarušek",
+      "Robert Jarušek",
+      "Josef Pištělák",
+      "Bohumil Pištělák"
+    ],
+    "count_volume": 81,
+    "date_range_end.year": 1864,
+    "contains_licenses": [
+      "public",
+      "dnnto",
+      "onsite"
+    ],
+    "_version_": 1867427739150057500,
+    "shelf_locators": [
+      "III 54.346"
+    ],
+    "date.str": "3.1863 - 3.1864",
+    "compositeId": "uuid:02203ad6-32f0-11de-992b-00145e5790ea!uuid:02203ad6-32f0-11de-992b-00145e5790ea",
+    "own_pid_path": "uuid:02203ad6-32f0-11de-992b-00145e5790ea"
+  }
 }

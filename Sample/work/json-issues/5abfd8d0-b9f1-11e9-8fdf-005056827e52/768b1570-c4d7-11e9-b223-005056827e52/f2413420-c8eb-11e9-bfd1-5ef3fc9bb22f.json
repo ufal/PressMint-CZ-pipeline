@@ -367,5 +367,213 @@
       ],
       "own_parent.pid": "uuid:f2413420-c8eb-11e9-bfd1-5ef3fc9bb22f"
     }
-  ]
+  ],
+  "volume": {
+    "root.pid": "uuid:5abfd8d0-b9f1-11e9-8fdf-005056827e52",
+    "titles.search": [
+      "1"
+    ],
+    "accessibility": "public",
+    "date_range_start.year": 1848,
+    "own_parent.title": "Národní nowiny",
+    "in_collections": [
+      "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc"
+    ],
+    "pid": "uuid:768b1570-c4d7-11e9-b223-005056827e52",
+    "licenses.facet": [
+      "public"
+    ],
+    "rels_ext_index.sort": 0,
+    "pid_paths": [
+      "uuid:5abfd8d0-b9f1-11e9-8fdf-005056827e52/uuid:768b1570-c4d7-11e9-b223-005056827e52",
+      "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc/uuid:5abfd8d0-b9f1-11e9-8fdf-005056827e52/uuid:768b1570-c4d7-11e9-b223-005056827e52"
+    ],
+    "root.model": "periodical",
+    "count_issue": 221,
+    "modified": "2023-03-06T19:56:29.579Z",
+    "model": "periodicalvolume",
+    "date.min": "1848-01-01T00:00:00.001Z",
+    "id_uuid": [
+      "768b1570-c4d7-11e9-b223-005056827e52"
+    ],
+    "keywords.facet": [
+      "Události",
+      "Zpravodajství",
+      "Politika"
+    ],
+    "has_tiles": false,
+    "title.search": "1",
+    "root.title.sort": "NA|RODNI| NOWINY",
+    "part.number.str": "1",
+    "part.number.sort": 1,
+    "indexer_version": 22,
+    "authors.facet": [
+      "Havlíček Borovský, Karel"
+    ],
+    "root.title": "Národní nowiny",
+    "indexed": "2025-12-30T03:15:29.350Z",
+    "level": 1,
+    "created": "2019-08-30T00:24:04.121Z",
+    "id_all": [
+      "768b1570-c4d7-11e9-b223-005056827e52"
+    ],
+    "own_model_path": "periodical/periodicalvolume",
+    "authors.search": [
+      "Havlíček Borovský, Karel",
+      "jk01040361"
+    ],
+    "languages.facet": [
+      "cze"
+    ],
+    "date.max": "1848-12-31T23:59:59.999Z",
+    "title.sort": "1",
+    "date_range_end.year": 1848,
+    "licenses": [
+      "public"
+    ],
+    "_version_": 1852901470875156500,
+    "authors.aut.facet": [
+      "jk01040361_Havlíček Borovský, Karel_1821-1856"
+    ],
+    "own_parent.model": "periodical",
+    "date.str": "1848",
+    "compositeId": "uuid:5abfd8d0-b9f1-11e9-8fdf-005056827e52!uuid:768b1570-c4d7-11e9-b223-005056827e52",
+    "authors.aut.identifiers": [
+      "jk01040361"
+    ],
+    "keywords.search": [
+      "události",
+      "zpravodajství",
+      "politika"
+    ],
+    "own_pid_path": "uuid:5abfd8d0-b9f1-11e9-8fdf-005056827e52/uuid:768b1570-c4d7-11e9-b223-005056827e52",
+    "authors": [
+      "Havlíček Borovský, Karel, 1821-1856"
+    ],
+    "own_parent.pid": "uuid:5abfd8d0-b9f1-11e9-8fdf-005056827e52"
+  },
+  "periodical": {
+    "root.pid": "uuid:5abfd8d0-b9f1-11e9-8fdf-005056827e52",
+    "titles.search": [
+      "Národní nowiny",
+      "Národní noviny"
+    ],
+    "accessibility": "public",
+    "date_range_start.year": 1848,
+    "pid": "uuid:5abfd8d0-b9f1-11e9-8fdf-005056827e52",
+    "publishers.search": [
+      "Wojtěch Deym"
+    ],
+    "licenses.facet": [
+      "public"
+    ],
+    "physical_locations.facet": [
+      "ABA001"
+    ],
+    "foster_parents.pids": [
+      "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc"
+    ],
+    "pid_paths": [
+      "uuid:5abfd8d0-b9f1-11e9-8fdf-005056827e52",
+      "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc/uuid:5abfd8d0-b9f1-11e9-8fdf-005056827e52"
+    ],
+    "root.model": "periodical",
+    "modified": "2023-03-06T19:56:11.822Z",
+    "model": "periodical",
+    "has_tiles": false,
+    "indexer_version": 22,
+    "root.title": "Národní nowiny",
+    "indexed": "2025-12-30T03:15:28.733Z",
+    "level": 0,
+    "created": "2019-08-11T15:30:58.019Z",
+    "id_all": [
+      "1001220202",
+      "cnb001287980",
+      "5abfd8d0-b9f1-11e9-8fdf-005056827e52"
+    ],
+    "authors.search": [
+      "Havlíček Borovský, Karel",
+      "jk01040361"
+    ],
+    "in_collections.direct": [
+      "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc"
+    ],
+    "publishers.facet": [
+      "Wojtěch Deym"
+    ],
+    "count_volume": 3,
+    "authors.aut.facet": [
+      "jk01040361_Havlíček Borovský, Karel_1821-1856"
+    ],
+    "publication_places.search": [
+      "Praha"
+    ],
+    "date.str": "1848-1850",
+    "mdt": [
+      "070"
+    ],
+    "authors.aut.identifiers": [
+      "jk01040361"
+    ],
+    "keywords.search": [
+      "události",
+      "zpravodajství",
+      "politika"
+    ],
+    "own_pid_path": "uuid:5abfd8d0-b9f1-11e9-8fdf-005056827e52",
+    "authors": [
+      "Havlíček Borovský, Karel, 1821-1856"
+    ],
+    "physical_locations.search": [
+      "ABA001",
+      "ABA001"
+    ],
+    "id_ccnb": [
+      "cnb001287980"
+    ],
+    "geographic_names.facet": [
+      "Česko"
+    ],
+    "in_collections": [
+      "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc"
+    ],
+    "publication_places.facet": [
+      "Praha"
+    ],
+    "geographic_names.search": [
+      "Česko"
+    ],
+    "id_barcode": [
+      "1001220202"
+    ],
+    "date.min": "1848-01-01T00:00:00.001Z",
+    "id_uuid": [
+      "5abfd8d0-b9f1-11e9-8fdf-005056827e52"
+    ],
+    "keywords.facet": [
+      "Události",
+      "Zpravodajství",
+      "Politika"
+    ],
+    "title.search": "Národní nowiny",
+    "root.title.sort": "NA|RODNI| NOWINY",
+    "authors.facet": [
+      "Havlíček Borovský, Karel"
+    ],
+    "own_model_path": "periodical",
+    "languages.facet": [
+      "cze"
+    ],
+    "date.max": "1850-12-31T23:59:59.999Z",
+    "title.sort": "NA|RODNI| NOWINY",
+    "date_range_end.year": 1850,
+    "contains_licenses": [
+      "public"
+    ],
+    "_version_": 1852901585692131300,
+    "shelf_locators": [
+      "54 A 114"
+    ],
+    "compositeId": "uuid:5abfd8d0-b9f1-11e9-8fdf-005056827e52!uuid:5abfd8d0-b9f1-11e9-8fdf-005056827e52"
+  }
 }

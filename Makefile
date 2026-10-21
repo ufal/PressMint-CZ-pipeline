@@ -53,6 +53,7 @@ DIST := ${DATA}dist
 TASKS := ${DATA}/tasks
 
 INjson := ${IN}/json
+INjsonPeriodicals := ${IN}/json-periodicals
 INuuid := ${IN}/work-uuid
 INtxt := ${IN}/txt
 INimg := ${IN}/img
@@ -161,10 +162,10 @@ get-PressMint-CZ-periodicals: $(IN)/PressMint-CZ-issues.uuid
 ifeq ($(SAMPLE),1)
 	@echo "Skipping data downloading: SAMPLE mode active."
 	make get-PressMint-CZ-sample-periodicals
-	make -k -j$(MODS_JOBS) get-mods
+	# make -k -j$(MODS_JOBS) get-mods ## nothing more useful
 else	
 	make get-periodicals collection_uuid=$<
-	make -k -j$(MODS_JOBS) get-mods
+	# make -k -j$(MODS_JOBS) get-mods ## nothing more useful
 endif
 
 get-PressMint-CZ-sample-periodicals:
@@ -206,6 +207,7 @@ else
 	&& cat $(INjson)/$*.json|jq -r '.response.docs[]|.pid| sub("^uuid:"; "")' \
 	> $(INuuid)/$*.uuid \
 	&& make get-periodicalvolumes periodical_uuid=$(INuuid)/$*.uuid
+	make $(INjsonPeriodicals)/$*.json
 endif
 
 
@@ -291,6 +293,12 @@ get-mods: $(addprefix $(INmods)/, $(addsuffix .mods.xml, $(MODS_PATHS)))
 $(INmods)/%.mods.xml:
 	mkdir -p $(dir $@)
 	curl -sSf 'https://api.kramerius.mzk.cz/search/api/client/v7.0/items/uuid:$(notdir $*)/metadata/mods' -H 'accept: application/xml' \
+	> $@.tmp && mv $@.tmp $@ || { rm -f $@.tmp; exit 1; }
+
+##get-periodical-record## search record of the periodical itself (ISSN, ČNB, publishers, place, shelf mark, ...): make $(INjsonPeriodicals)/<periodical-uuid>.json
+$(INjsonPeriodicals)/%.json:
+	mkdir -p $(INjsonPeriodicals)
+	curl -sSf 'https://api.kramerius.mzk.cz/search/api/client/v7.0/search?q=pid:uuid%5C:$*&fl=*&wt=json' -H 'accept: application/json, text/plain, */*' \
 	> $@.tmp && mv $@.tmp $@ || { rm -f $@.tmp; exit 1; }
 
 #
@@ -463,8 +471,8 @@ process-metadata-all: $(TASKS_VOLUMES)
 process-metadata: $(INjson)/$(UUID_PATH).json inputJsonMerge input2outputMapping inputJson2teiHeader 
 
 
-##inputJsonMerge## merge issues and page json files
-inputJsonMerge: $(INjson)/$(UUID_PATH).json $(JSONissues)
+##inputJsonMerge## merge issues and page json files, add volume (.volume) and periodical (.periodical) records
+inputJsonMerge: $(INjson)/$(UUID_PATH).json $(INjson)/$(periodical).json $(INjsonPeriodicals)/$(periodical).json $(JSONissues)
 ifeq ($(UUID_PATH_LEVEL),1)
 	@echo "INFO: processing volume $(UUID_PATH)"
 	mkdir -p $(JSONissues)/$(UUID_PATH)
@@ -474,7 +482,11 @@ ifeq ($(UUID_PATH_LEVEL),1)
 	  pages_file="$(INjson)/$(UUID_PATH)/$${pid}.json" ;\
 	  if [ -f "$$pages_file" ]; \
 		then \
-	    obj=$$(echo "$$obj" | jq --slurpfile pages "$$pages_file" '.pages = $$pages[0].response.docs') ;\
+	    obj=$$(echo "$$obj" | jq --slurpfile pages "$$pages_file" \
+	      --slurpfile volumes "$(INjson)/$(periodical).json" \
+	      --slurpfile periodical "$(INjsonPeriodicals)/$(periodical).json" \
+	      --arg volume_pid "uuid:$(periodicalvolume)" \
+	      '.pages = $$pages[0].response.docs | .volume = ($$volumes[0].response.docs[] | select(.pid == $$volume_pid)) | .periodical = $$periodical[0].response.docs[0]') ;\
 	    echo "$$obj" | jq '.' > "$(JSONissues)/$(UUID_PATH)/$${pid}.json" ;\
 		  echo "INFO: saving $(JSONissues)/$(UUID_PATH)/$${pid}.json" ;\
 	  fi ;\

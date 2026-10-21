@@ -119,8 +119,6 @@ sub save_xml {
     or die "ERROR: Cannot open $file_path for writing: $!";
   $pp->pretty_print($dom);
   my $raw = $dom->toString(1);
-  $raw =~ s/( *<msIdentifier)/<!-- NOT SUPPORTED ELEMENT\n\1/;
-  $raw =~ s/(<\/msIdentifier>)/\1\nNOT SUPPORTED ELEMENT -->/;
   print $fh $raw;
   close $fh;
 
@@ -203,41 +201,93 @@ sub get_journal_name {
 my %id2type = (
   id_ccnb => 'local>čČNB',
   id_urnnbn => 'URN',
-  id_uuid => 'UUID',
+  # id_uuid is only in Národní nowiny and is equal to pid
+  pid => 'local>UUID-mzk', 
+  own_pid_path => 'local>UUID-path-mzk',
 );
+
+sub as_list {
+  my $val = shift;
+  return () unless defined $val;
+  return ref $val eq 'ARRAY' ? @$val : ($val);
+}
 
 sub get_all_ids {
   my $metadata = shift;
+  my $periodical = get_periodical($metadata);
   return (
-    (map {my ($type,$subtype) = split />/, $id2type{$_}; map { {type => $type, $subtype ? (subtype => $subtype):(), value => $_}} @{$metadata->{$_}}} sort keys %id2type),
+    # ISSN is only in periodical record (lowercase check digit x in Kramerius index)
+    (map { {type => 'ISSN', value => uc $_} } as_list($periodical->{id_issn})),
+    (map {
+      my $key = $_;
+      my ($type,$subtype) = split />/, $id2type{$key};
+      # ČNB is periodical level identifier, issues mostly do not have it
+      my @values = as_list($metadata->{$key});
+      @values = as_list($periodical->{$key}) if !@values && $key eq 'id_ccnb';
+      map { {type => $type, $subtype ? (subtype => $subtype):(), value => $_}} @values
+    } sort keys %id2type),
     (map { {
             type => 'URI',
             subtype => 'URL',
-            value => "https://www.digitalniknihovna.cz/mzk/view/uuid:$_"
-          } } @{$metadata->{id_uuid}}),
+            value => "https://www.digitalniknihovna.cz/mzk/view/$_"
+          } } as_list($metadata->{pid})),
+    (map { {type => 'local', subtype => 'shelfmark', value => $_} } get_issue_or_periodical_values($metadata, 'shelf_locators')),
 
   );
 }
 
-my %location = (
-  ABA001 => {
-    settlement => 'Praha',
-    repository => 'Národní knihovna České republiky - Knihovní fondy a služby',
-  },
-  BOA001 => {
-    settlement => 'Brno',
-    repository => 'Moravská zemská knihovna v Brně',
-  },
-);
-sub get_physical_location {
+# search records of the periodical and volume added by inputJsonMerge
+sub get_periodical {
   my $metadata = shift;
-  my ($loc) = grep {$_} map {$location{$_}} @{$metadata->{'physical_locations.facet'}};
-  return unless $loc;
-  return {
-    %$loc,
-    shelfmark => $metadata->{"shelf_locators"}//[],
-  };
+  return $metadata->{periodical} // {};
 }
+
+sub get_volume {
+  my $metadata = shift;
+  return $metadata->{volume} // {};
+}
+
+sub get_volume_number {
+  my $metadata = shift;
+  return get_volume($metadata)->{'part.number.str'};
+}
+
+sub get_issue_number {
+  my $metadata = shift;
+  return $metadata->{'part.number.str'};
+}
+
+# issue level value, fallback to periodical level value
+sub get_issue_or_periodical_values {
+  my ($metadata, $key) = @_;
+  my @values = as_list($metadata->{$key});
+  @values = as_list(get_periodical($metadata)->{$key}) unless @values;
+  return @values;
+}
+
+sub get_pub_places {
+  my $metadata = shift;
+  return get_issue_or_periodical_values($metadata, 'publication_places.facet');
+}
+
+sub get_publishers {
+  my $metadata = shift;
+  my @publishers = get_issue_or_periodical_values($metadata, 'publishers.facet');
+  # periodical record lists all publishers over whole publication span without dates (e.g. 18 in Moravská orlice)
+  # so it is not possible to decide which one published the issue
+  if (@publishers > 1 && !as_list($metadata->{'publishers.facet'})) {
+    print STDERR "WARN: skipping ambiguous publishers (",scalar(@publishers),") from periodical record\n";
+    return;
+  }
+  return @publishers;
+}
+
+# periodical "authors" are editors (MODS role edt), name without life dates
+sub get_editors {
+  my $metadata = shift;
+  return get_issue_or_periodical_values($metadata, 'authors.facet');
+}
+
 
 sub get_comp_date {
   my $metadata = shift;

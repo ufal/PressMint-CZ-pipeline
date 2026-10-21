@@ -426,5 +426,157 @@
       "own_pid_path": "uuid:ae876087-435d-11dd-b505-00145e5790ea/uuid:b2b5c7a7-435d-11dd-b505-00145e5790ea/uuid:0a3623ed-435e-11dd-b505-00145e5790ea/uuid:994653f2-435f-11dd-b505-00145e5790ea",
       "own_parent.pid": "uuid:0a3623ed-435e-11dd-b505-00145e5790ea"
     }
-  ]
+  ],
+  "volume": {
+    "root.pid": "uuid:ae876087-435d-11dd-b505-00145e5790ea",
+    "accessibility": "public",
+    "date_range_start.year": 1886,
+    "own_parent.title": "Národní listy",
+    "in_collections": [
+      "uuid:0be90938-b8af-4b93-b11a-b131de360017",
+      "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc",
+      "uuid:71174c16-98ca-4d39-8893-543b6fd2af74"
+    ],
+    "pid": "uuid:b2b5c7a7-435d-11dd-b505-00145e5790ea",
+    "licenses.facet": [
+      "public"
+    ],
+    "rels_ext_index.sort": 25,
+    "id_other": [
+      "urn:b2b5c7a7-435d-11dd-b505-00145e5790ea"
+    ],
+    "pid_paths": [
+      "uuid:ae876087-435d-11dd-b505-00145e5790ea/uuid:b2b5c7a7-435d-11dd-b505-00145e5790ea",
+      "uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:ae876087-435d-11dd-b505-00145e5790ea/uuid:b2b5c7a7-435d-11dd-b505-00145e5790ea",
+      "uuid:71174c16-98ca-4d39-8893-543b6fd2af74/uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:ae876087-435d-11dd-b505-00145e5790ea/uuid:b2b5c7a7-435d-11dd-b505-00145e5790ea",
+      "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc/uuid:ae876087-435d-11dd-b505-00145e5790ea/uuid:b2b5c7a7-435d-11dd-b505-00145e5790ea"
+    ],
+    "root.model": "periodical",
+    "count_issue": 610,
+    "modified": "2023-03-17T12:47:03.108Z",
+    "model": "periodicalvolume",
+    "date.min": "1886-01-01T00:00:00.001Z",
+    "has_tiles": false,
+    "root.title.sort": "NA|RODNI| LISTY",
+    "part.number.str": "26",
+    "part.number.sort": 26,
+    "indexer_version": 22,
+    "root.title": "Národní listy",
+    "indexed": "2025-12-30T21:56:41.106Z",
+    "level": 1,
+    "created": "2017-05-05T16:53:27.161Z",
+    "id_all": [
+      "urn:b2b5c7a7-435d-11dd-b505-00145e5790ea"
+    ],
+    "own_model_path": "periodical/periodicalvolume",
+    "languages.facet": [
+      "cze"
+    ],
+    "date.max": "1886-12-31T23:59:59.999Z",
+    "date_range_end.year": 1886,
+    "licenses": [
+      "public"
+    ],
+    "_version_": 1852972006472941600,
+    "own_parent.model": "periodical",
+    "date.str": "1886",
+    "compositeId": "uuid:ae876087-435d-11dd-b505-00145e5790ea!uuid:b2b5c7a7-435d-11dd-b505-00145e5790ea",
+    "own_pid_path": "uuid:ae876087-435d-11dd-b505-00145e5790ea/uuid:b2b5c7a7-435d-11dd-b505-00145e5790ea",
+    "own_parent.pid": "uuid:ae876087-435d-11dd-b505-00145e5790ea"
+  },
+  "periodical": {
+    "physical_locations.search": [
+      "ABA000",
+      "ABA000"
+    ],
+    "root.pid": "uuid:ae876087-435d-11dd-b505-00145e5790ea",
+    "titles.search": [
+      "Národní listy"
+    ],
+    "accessibility": "public",
+    "date_range_start.year": 1861,
+    "in_collections": [
+      "uuid:0be90938-b8af-4b93-b11a-b131de360017",
+      "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc",
+      "uuid:71174c16-98ca-4d39-8893-543b6fd2af74"
+    ],
+    "pid": "uuid:ae876087-435d-11dd-b505-00145e5790ea",
+    "publication_places.facet": [
+      "Praha"
+    ],
+    "publishers.search": [
+      "Julius Grégr"
+    ],
+    "licenses.facet": [
+      "dnnto",
+      "public",
+      "onsite"
+    ],
+    "physical_locations.facet": [
+      "ABA000"
+    ],
+    "foster_parents.pids": [
+      "uuid:0be90938-b8af-4b93-b11a-b131de360017",
+      "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc"
+    ],
+    "id_other": [
+      "urn:ae876087-435d-11dd-b505-00145e5790ea"
+    ],
+    "pid_paths": [
+      "uuid:ae876087-435d-11dd-b505-00145e5790ea",
+      "uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:ae876087-435d-11dd-b505-00145e5790ea",
+      "uuid:71174c16-98ca-4d39-8893-543b6fd2af74/uuid:0be90938-b8af-4b93-b11a-b131de360017/uuid:ae876087-435d-11dd-b505-00145e5790ea",
+      "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc/uuid:ae876087-435d-11dd-b505-00145e5790ea"
+    ],
+    "root.model": "periodical",
+    "id_issn": [
+      "1214-1240"
+    ],
+    "modified": "2024-04-25T17:59:35.748Z",
+    "model": "periodical",
+    "date.min": "1861-01-01T00:00:00.001Z",
+    "has_tiles": false,
+    "title.search": "Národní listy",
+    "root.title.sort": "NA|RODNI| LISTY",
+    "indexer_version": 22,
+    "root.title": "Národní listy",
+    "indexed": "2026-06-04T23:33:22.029Z",
+    "level": 0,
+    "created": "2017-05-04T11:19:27.248Z",
+    "id_all": [
+      "1214-1240",
+      "urn:ae876087-435d-11dd-b505-00145e5790ea"
+    ],
+    "own_model_path": "periodical",
+    "languages.facet": [
+      "cze"
+    ],
+    "date.max": "1941-12-31T23:59:59.999Z",
+    "title.sort": "NA|RODNI| LISTY",
+    "in_collections.direct": [
+      "uuid:0be90938-b8af-4b93-b11a-b131de360017",
+      "uuid:e8f61172-5e38-43bc-88ed-8737fc210bfc"
+    ],
+    "publishers.facet": [
+      "Julius Grégr"
+    ],
+    "count_volume": 82,
+    "date_range_end.year": 1941,
+    "contains_licenses": [
+      "public",
+      "dnnto",
+      "onsite"
+    ],
+    "_version_": 1867111204949852200,
+    "shelf_locators": [
+      "54 A 150",
+      "54 A 2277"
+    ],
+    "publication_places.search": [
+      "Praha"
+    ],
+    "date.str": "1861 - 1941",
+    "compositeId": "uuid:ae876087-435d-11dd-b505-00145e5790ea!uuid:ae876087-435d-11dd-b505-00145e5790ea",
+    "own_pid_path": "uuid:ae876087-435d-11dd-b505-00145e5790ea"
+  }
 }

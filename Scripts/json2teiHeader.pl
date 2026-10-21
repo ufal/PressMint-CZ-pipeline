@@ -37,7 +37,29 @@ sub convert2header{
   my $jtitle = $bibl->addNewChild(undef,'title');
   $jtitle->setAttribute('level', 'j');
   $jtitle->appendText(PressMintCZ::get_journal_name($json));
+  # editor element is not in PressMint schema
+  for my $editor (PressMintCZ::get_editors($json)){
+    my $respStmt = $bibl->addNewChild(undef,'respStmt');
+    $respStmt->addNewChild(undef,'persName')->appendText($editor);
+    $respStmt->addNewChild(undef,'resp')->appendText('redaktor');
+    my $resp_en = $respStmt->addNewChild(undef,'resp');
+    $resp_en->setAttribute('xml:lang','en');
+    $resp_en->appendText('editor');
+  }
+  for my $place (PressMintCZ::get_pub_places($json)){
+    $bibl->addNewChild(undef,'pubPlace')->appendText($place);
+  }
+  for my $publisher (PressMintCZ::get_publishers($json)){
+    $bibl->addNewChild(undef,'publisher')->appendText($publisher);
+  }
   $bibl->addNewChild(undef,'date')->setAttribute('when', $opts{date});
+  for my $unit (qw/volume issue/){
+    my $number = $unit eq 'volume' ? PressMintCZ::get_volume_number($json) : PressMintCZ::get_issue_number($json);
+    next unless defined $number && $number ne '';
+    my $biblScope = $bibl->addNewChild(undef,'biblScope');
+    $biblScope->setAttribute('unit', $unit);
+    $biblScope->appendText($number);
+  }
 
   for my $idno (PressMintCZ::get_all_ids($json)){
     print STDERR "IDNO:\t",join(' ',%$idno),"\n";
@@ -45,18 +67,6 @@ sub convert2header{
     $node_idno->setAttribute('type',$idno->{type});
     $node_idno->setAttribute('subtype',$idno->{subtype}) if exists $idno->{subtype};
     $node_idno->appendText($idno->{value})
-  }
-
-  my $physicalLocation = PressMintCZ::get_physical_location($json);
-  if($physicalLocation) {
-    my $msIdentifier = $bibl->addNewChild(undef,'msIdentifier');
-    $msIdentifier->addNewChild(undef, 'settlement')->appendText($physicalLocation->{settlement});
-    $msIdentifier->addNewChild(undef, 'repository')->appendText($physicalLocation->{repository});
-    for my $shelf (@{$physicalLocation->{shelfmark}}) {
-      my $idno = $msIdentifier->addNewChild(undef, 'idno');
-      $idno->setAttribute('type','shelfmark');
-      $idno->appendText($shelf);
-    }
   }
 
   PressMintCZ::save_xml($dom,%opts);
