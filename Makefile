@@ -161,10 +161,10 @@ get-PressMint-CZ-periodicals: $(IN)/PressMint-CZ-issues.uuid
 ifeq ($(SAMPLE),1)
 	@echo "Skipping data downloading: SAMPLE mode active."
 	make get-PressMint-CZ-sample-periodicals
-	make get-mods
+	make -k -j$(MODS_JOBS) get-mods
 else	
 	make get-periodicals collection_uuid=$<
-	make get-mods
+	make -k -j$(MODS_JOBS) get-mods
 endif
 
 get-PressMint-CZ-sample-periodicals:
@@ -280,10 +280,13 @@ endif
 
 ##get-mods## download MODS (BIBLIO_MODS) records of periodicals, volumes and issues downloaded in $(INjson) (override with MODS_PATHS=periodical[/volume[/issue]])
 #### MODS files mirror the json structure: $(INmods)/periodical[/volume[/issue]].mods.xml
+MODS_JOBS ?= 4
 # scan only when get-mods is requested: prerequisites are expanded while parsing, so it would slow down every (recursive) make call
 ifneq ($(filter get-mods,$(MAKECMDGOALS)),)
 MODS_PATHS ?= $(shell test -d $(INjson) && cd $(INjson) && find . -mindepth 1 -maxdepth 3 -name '*.json' | sed 's@^\./@@;s@\.json$$@@')
 endif
+# do not pass the (possibly huge) list to the environment of recipes (global "export" above), it exceeds the env variable size limit
+unexport MODS_PATHS
 get-mods: $(addprefix $(INmods)/, $(addsuffix .mods.xml, $(MODS_PATHS)))
 $(INmods)/%.mods.xml:
 	mkdir -p $(dir $@)
