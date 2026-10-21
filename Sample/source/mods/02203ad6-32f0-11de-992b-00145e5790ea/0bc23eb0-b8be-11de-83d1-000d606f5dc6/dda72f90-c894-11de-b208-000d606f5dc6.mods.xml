@@ -1,0 +1,19 @@
+<mods:modsCollection xmlns:mods="http://www.loc.gov/mods/v3" xmlns:foxml="info:fedora/fedora-system:def/foxml#">
+                    
+                <mods:mods version="3.4">
+                        
+                        
+                        
+                        
+                        
+                        
+                    <mods:identifier type="urn">dda72f90-c894-11de-b208-000d606f5dc6</mods:identifier><mods:titleInfo>
+                            
+                        <mods:title>Moravská orlice</mods:title></mods:titleInfo><mods:typeOfResource>text</mods:typeOfResource><mods:originInfo>
+                            
+                        <mods:issuance>continuing</mods:issuance></mods:originInfo><mods:note>nekonzistence číslování stran;</mods:note><mods:part type="PeriodicalIssue">
+                            
+                            
+                        <mods:detail type="issue">
+                                
+                            <mods:number>276</mods:number></mods:detail><mods:date>31.12.1914</mods:date></mods:part></mods:mods></mods:modsCollection>

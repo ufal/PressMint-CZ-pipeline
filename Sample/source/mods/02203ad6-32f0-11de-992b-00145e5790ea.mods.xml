@@ -1,0 +1,44 @@
+<mods:modsCollection xmlns:mods="http://www.loc.gov/mods/v3" xmlns:foxml="info:fedora/fedora-system:def/foxml#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <mods:mods version="3.4">
+                    <mods:identifier type="urn">02203ad6-32f0-11de-992b-00145e5790ea</mods:identifier><mods:identifier type="issn">1803-117X</mods:identifier><mods:location>
+                        <mods:physicalLocation>OLA001</mods:physicalLocation><mods:shelfLocator>III 54.346</mods:shelfLocator></mods:location><mods:titleInfo>
+                        <mods:title>Moravská orlice</mods:title></mods:titleInfo><mods:typeOfResource>text</mods:typeOfResource><mods:originInfo transliteration="publisher">
+                        <mods:place>
+                            <mods:placeTerm type="text"/></mods:place><mods:publisher>František Uman</mods:publisher><mods:dateIssued>3.1863 - 3.1864</mods:dateIssued></mods:originInfo><mods:originInfo transliteration="publisher">
+                        <mods:place>
+                            <mods:placeTerm type="text"/></mods:place><mods:publisher>Jindřich Dvořák</mods:publisher><mods:dateIssued>3.1864 - 7.1869</mods:dateIssued></mods:originInfo><mods:originInfo transliteration="publisher">
+                        <mods:place>
+                            <mods:placeTerm type="text"/></mods:place><mods:publisher>Josef Šnajdr</mods:publisher><mods:dateIssued>8.1869 - 12.1870</mods:dateIssued></mods:originInfo><mods:originInfo transliteration="publisher">
+                        <mods:place>
+                            <mods:placeTerm type="text"/></mods:place><mods:publisher>Karel Flemich</mods:publisher><mods:dateIssued>1.1871 - 12.1882</mods:dateIssued></mods:originInfo><mods:originInfo transliteration="publisher">
+                        <mods:place>
+                            <mods:placeTerm type="text"/></mods:place><mods:publisher>František E. Slovák</mods:publisher><mods:dateIssued>1.1883 - 12.1899</mods:dateIssued></mods:originInfo><mods:originInfo transliteration="publisher">
+                        <mods:place>
+                            <mods:placeTerm type="text"/></mods:place><mods:publisher>Družstvo Moravské orlice</mods:publisher><mods:dateIssued>1.1900 - 11.1910</mods:dateIssued></mods:originInfo><mods:originInfo transliteration="publisher">
+                        <mods:place>
+                            <mods:placeTerm type="text"/></mods:place><mods:publisher>Jan Ehrenberger</mods:publisher><mods:dateIssued>12.1910 - 11.1926</mods:dateIssued></mods:originInfo><mods:originInfo transliteration="publisher">
+                        <mods:place>
+                            <mods:placeTerm type="text"/></mods:place><mods:publisher>Otakar Lebloch</mods:publisher><mods:dateIssued>12.1926 - 1.1927</mods:dateIssued></mods:originInfo><mods:originInfo transliteration="publisher">
+                        <mods:place>
+                            <mods:placeTerm type="text"/></mods:place><mods:publisher>Adolf Galgonek</mods:publisher><mods:dateIssued>1927</mods:dateIssued></mods:originInfo><mods:originInfo transliteration="publisher">
+                        <mods:place>
+                            <mods:placeTerm type="text"/></mods:place><mods:publisher>Josef Mathon</mods:publisher><mods:dateIssued>1927</mods:dateIssued></mods:originInfo><mods:originInfo transliteration="publisher">
+                        <mods:place>
+                            <mods:placeTerm type="text"/></mods:place><mods:publisher>Rudolf Obrovský</mods:publisher><mods:dateIssued>1927 - 1929</mods:dateIssued></mods:originInfo><mods:originInfo transliteration="publisher">
+                        <mods:place>
+                            <mods:placeTerm type="text"/></mods:place><mods:publisher>Karel Červinka</mods:publisher><mods:dateIssued>1929 - 1930</mods:dateIssued></mods:originInfo><mods:originInfo transliteration="publisher">
+                        <mods:place>
+                            <mods:placeTerm type="text"/></mods:place><mods:publisher>Marian Sedmík</mods:publisher><mods:dateIssued>1930</mods:dateIssued></mods:originInfo><mods:originInfo transliteration="publisher">
+                        <mods:place>
+                            <mods:placeTerm type="text"/></mods:place><mods:publisher>Antonín Jarušek</mods:publisher><mods:dateIssued>1930 - 1931</mods:dateIssued></mods:originInfo><mods:originInfo transliteration="publisher">
+                        <mods:place>
+                            <mods:placeTerm type="text"/></mods:place><mods:publisher>Rudolf Jarušek</mods:publisher><mods:dateIssued>1931</mods:dateIssued></mods:originInfo><mods:originInfo transliteration="publisher">
+                        <mods:place>
+                            <mods:placeTerm type="text"/></mods:place><mods:publisher>Robert Jarušek</mods:publisher><mods:dateIssued>1931 - 1932</mods:dateIssued></mods:originInfo><mods:originInfo transliteration="publisher">
+                        <mods:place>
+                            <mods:placeTerm type="text"/></mods:place><mods:publisher>Josef Pištělák</mods:publisher><mods:dateIssued>1932 - 1933</mods:dateIssued></mods:originInfo><mods:originInfo transliteration="publisher">
+                        <mods:place>
+                            <mods:placeTerm type="text"/></mods:place><mods:publisher>Bohumil Pištělák</mods:publisher><mods:dateIssued>1933 - 1943</mods:dateIssued></mods:originInfo><mods:originInfo>
+                        <mods:issuance>continuing</mods:issuance><mods:frequency>denně 3.1863 - 7.1927</mods:frequency></mods:originInfo><mods:language>
+                        <mods:languageTerm authority="iso639-2b" type="code">cze</mods:languageTerm></mods:language><mods:note>samostatné přílohy Nedělní list 1889 - 1891, Večerní
+            Moravská orlice 1934 - 1941</mods:note></mods:mods></mods:modsCollection>

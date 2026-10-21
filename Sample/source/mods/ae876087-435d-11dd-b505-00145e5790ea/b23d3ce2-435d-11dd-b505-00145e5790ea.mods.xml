@@ -1,0 +1,7 @@
+<mods:modsCollection xmlns:mods="http://www.loc.gov/mods/v3" xmlns:foxml="info:fedora/fedora-system:def/foxml#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <mods:mods version="3.4">
+                    <mods:identifier type="urn">b23d3ce2-435d-11dd-b505-00145e5790ea</mods:identifier><mods:titleInfo/><mods:typeOfResource>text</mods:typeOfResource><mods:originInfo>
+                        <mods:issuance>continuing</mods:issuance></mods:originInfo><mods:part>
+                        <mods:detail type="volume">
+                            <mods:number>1</mods:number></mods:detail><mods:date>1861</mods:date><mods:text>nekvalitní a poškozená předloha; č. 183, 252, 266,
+                288, 289 není k dispozici; č. 353 příloha s. (2) není k dispozici;</mods:text></mods:part></mods:mods></mods:modsCollection>

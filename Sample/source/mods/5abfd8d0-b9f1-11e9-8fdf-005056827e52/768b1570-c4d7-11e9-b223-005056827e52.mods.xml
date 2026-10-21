@@ -1,0 +1,7 @@
+<mods:modsCollection xmlns:mods="http://www.loc.gov/mods/v3" xmlns:foxml="info:fedora/fedora-system:def/foxml#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> 
+        <mods:mods xmlns:ns4="info:fedora/fedora-system:def/foxml#" ID="MODS_VOLUME_0001"> 
+          <mods:genre>volume</mods:genre><mods:titleInfo> 
+            <mods:partNumber>1</mods:partNumber></mods:titleInfo><mods:originInfo> 
+            <mods:dateIssued>1848</mods:dateIssued></mods:originInfo><mods:physicalDescription> 
+            <mods:note>nekvalitní a poškozená předloha</mods:note></mods:physicalDescription><mods:identifier type="uuid">768b1570-c4d7-11e9-b223-005056827e52</mods:identifier><mods:part> 
+            <mods:date>1848</mods:date></mods:part></mods:mods></mods:modsCollection>

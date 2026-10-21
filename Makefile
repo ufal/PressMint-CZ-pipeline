@@ -56,6 +56,7 @@ INjson := ${IN}/json
 INuuid := ${IN}/work-uuid
 INtxt := ${IN}/txt
 INimg := ${IN}/img
+INmods := ${IN}/mods
 
 TASKS_PERIODICALS := ${TASKS}/periodicals.tasks
 TASKS_VOLUMES := ${TASKS}/volumes.tasks
@@ -160,8 +161,10 @@ get-PressMint-CZ-periodicals: $(IN)/PressMint-CZ-issues.uuid
 ifeq ($(SAMPLE),1)
 	@echo "Skipping data downloading: SAMPLE mode active."
 	make get-PressMint-CZ-sample-periodicals
+	make get-mods
 else	
 	make get-periodicals collection_uuid=$<
+	make get-mods
 endif
 
 get-PressMint-CZ-sample-periodicals:
@@ -274,6 +277,18 @@ else
 $(INimg)/$(UUID_PATH):
 	@echo "INFO: images already downloaded for $(UUID_PATH)"
 endif
+
+##get-mods## download MODS (BIBLIO_MODS) records of periodicals, volumes and issues downloaded in $(INjson) (override with MODS_PATHS=periodical[/volume[/issue]])
+#### MODS files mirror the json structure: $(INmods)/periodical[/volume[/issue]].mods.xml
+# scan only when get-mods is requested: prerequisites are expanded while parsing, so it would slow down every (recursive) make call
+ifneq ($(filter get-mods,$(MAKECMDGOALS)),)
+MODS_PATHS ?= $(shell test -d $(INjson) && cd $(INjson) && find . -mindepth 1 -maxdepth 3 -name '*.json' | sed 's@^\./@@;s@\.json$$@@')
+endif
+get-mods: $(addprefix $(INmods)/, $(addsuffix .mods.xml, $(MODS_PATHS)))
+$(INmods)/%.mods.xml:
+	mkdir -p $(dir $@)
+	curl -sSf 'https://api.kramerius.mzk.cz/search/api/client/v7.0/items/uuid:$(notdir $*)/metadata/mods' -H 'accept: application/xml' \
+	> $@.tmp && mv $@.tmp $@ || { rm -f $@.tmp; exit 1; }
 
 #
 uuid2url:

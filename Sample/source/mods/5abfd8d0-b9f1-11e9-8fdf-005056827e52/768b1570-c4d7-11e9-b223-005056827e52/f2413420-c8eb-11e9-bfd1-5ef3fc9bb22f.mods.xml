@@ -1,0 +1,28 @@
+<mods:modsCollection xmlns:mods="http://www.loc.gov/mods/v3" xmlns:foxml="info:fedora/fedora-system:def/foxml#">  
+           
+        <mods:mods xmlns:ns4="info:fedora/fedora-system:def/foxml#" ID="MODS_ISSUE_0001">  
+              
+              
+              
+              
+              
+              
+              
+              
+             
+          <mods:genre type="normal">issue</mods:genre><mods:titleInfo> 
+               
+            <mods:partNumber>1</mods:partNumber></mods:titleInfo><mods:originInfo> 
+                
+                
+               
+            <mods:place> 
+                 
+              <mods:placeTerm>Praha</mods:placeTerm></mods:place><mods:publisher>Wojtěch Deym</mods:publisher><mods:dateIssued>05.04.1848</mods:dateIssued></mods:originInfo><mods:language> 
+               
+            <mods:languageTerm authority="iso639-2b" type="code">cze</mods:languageTerm></mods:language><mods:subject> 
+               
+            <mods:topic>politika</mods:topic></mods:subject><mods:identifier type="urnnbn">urn:nbn:cz:nk-00559d</mods:identifier><mods:identifier type="uuid">f2413420-c8eb-11e9-bfd1-5ef3fc9bb22f</mods:identifier><mods:identifier type="ccnb">cnb001287980</mods:identifier><mods:location> 
+                
+               
+            <mods:physicalLocation>ABA001</mods:physicalLocation><mods:shelfLocator>54 A 114</mods:shelfLocator></mods:location></mods:mods></mods:modsCollection>
