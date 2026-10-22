@@ -4,10 +4,11 @@
   xmlns:xi="http://www.w3.org/2001/XInclude"
   xmlns:xs="http://www.w3.org/2001/XMLSchema"
   xmlns:map="http://www.w3.org/2005/xpath-functions/map"
+  xmlns:err="http://www.w3.org/2005/xqt-errors"
   xmlns:tei="http://www.tei-c.org/ns/1.0"
   xmlns="http://www.tei-c.org/ns/1.0"
   xmlns:mk="http://ufal.mff.cuni.cz/matyas-kopp"
-  exclude-result-prefixes="xs map tei xi mk">
+  exclude-result-prefixes="xs map err tei xi mk">
 
   <!-- Components are processed one at a time (xsl:iterate) and read with xsl:source-document,
        which (unlike document()) does not keep the documents in Saxon's document pool.
@@ -59,9 +60,14 @@
     <xsl:iterate select="/tei:teiCorpus/xi:include">
       <xsl:param name="wordsTotal" as="xs:integer" select="0" />
       <xsl:param name="tagTotals" as="map(xs:string, xs:integer)" select="map{}" />
+      <xsl:param name="okHrefs" as="map(xs:string, xs:boolean)" select="map{}" />
 
       <!-- Output Root file -->
       <xsl:on-completion>
+        <xsl:variable name="skipped" select="count($corpusDoc/tei:teiCorpus/xi:include) - map:size($okHrefs)" />
+        <xsl:if test="$skipped > 0">
+          <xsl:message select="concat('ERROR: ', $skipped, ' component(s) skipped because of missing or broken input files')" />
+        </xsl:if>
         <xsl:message>INFO: processing root </xsl:message>
         <xsl:result-document href="{$outRoot}">
           <xsl:variable name="corpus">
@@ -71,6 +77,7 @@
           </xsl:variable>
           <xsl:apply-templates mode="root" select="$corpus">
             <xsl:with-param name="wordsTotal" select="$wordsTotal" tunnel="yes" />
+            <xsl:with-param name="okHrefs" select="$okHrefs" tunnel="yes" />
             <xsl:with-param name="tagUsages" tunnel="yes">
               <xsl:for-each select="map:keys($tagTotals)">
                 <xsl:sort select="." />
@@ -86,79 +93,133 @@
       <xsl:message select="concat('INFO: Processing ', $this)" />
       <xsl:variable name="xi-new" select="if ($type = 'TEI.ana') then mk:ana-href($this) else $this" />
 
+      <!-- Load input files; a missing, empty or unparsable file is reported and the component is skipped -->
+      <xsl:variable name="url-header" select="concat($inHeaderDir, '/', $this)" />
       <xsl:variable name="teiHeader" as="element()?">
-        <xsl:source-document href="{concat($inHeaderDir, '/', $this)}" streamable="no">
-          <xsl:copy-of select="tei:TEI/tei:teiHeader" />
-        </xsl:source-document>
+        <xsl:try>
+          <xsl:source-document href="{$url-header}" streamable="no">
+            <xsl:copy-of select="tei:TEI/tei:teiHeader" />
+            <xsl:if test="not(tei:TEI/tei:teiHeader)">
+              <xsl:message select="concat('ERROR ', $this, ': missing TEI/teiHeader in header file ', $url-header)" />
+            </xsl:if>
+          </xsl:source-document>
+          <xsl:catch>
+            <xsl:message select="concat('ERROR ', $this, ': cannot read header file ', $url-header, ': ', $err:description)" />
+          </xsl:catch>
+        </xsl:try>
       </xsl:variable>
+      <xsl:variable name="url-facs" select="concat($inFacsDir, '/', $this)" />
       <xsl:variable name="facsimile" as="element()?">
-        <xsl:source-document href="{concat($inFacsDir, '/', $this)}" streamable="no">
-          <xsl:copy-of select="tei:TEI/tei:facsimile" />
-        </xsl:source-document>
+        <xsl:try>
+          <xsl:source-document href="{$url-facs}" streamable="no">
+            <xsl:copy-of select="tei:TEI/tei:facsimile" />
+            <xsl:if test="not(tei:TEI/tei:facsimile)">
+              <xsl:message select="concat('ERROR ', $this, ': missing TEI/facsimile in facs file ', $url-facs)" />
+            </xsl:if>
+          </xsl:source-document>
+          <xsl:catch>
+            <xsl:message select="concat('ERROR ', $this, ': cannot read facs file ', $url-facs, ': ', $err:description)" />
+          </xsl:catch>
+        </xsl:try>
       </xsl:variable>
-      <xsl:variable name="doc">
-        <xsl:source-document href="{concat($inComponentDir, '/', $this)}" streamable="no">
-          <xsl:variable name="docWithHeader">
-            <xsl:apply-templates select="." mode="insertHeader">
-              <xsl:with-param name="teiHeader" select="$teiHeader" />
-              <xsl:with-param name="facsimile" select="$facsimile" />
-              <xsl:with-param name="fileType">comp</xsl:with-param>
-            </xsl:apply-templates>
+      <!-- For plain files, number of words is taken from the .ana file, which is required -->
+      <xsl:variable name="url-ana" select="concat($anaDir, '/', mk:ana-href($this))" />
+      <xsl:variable name="anaWords" as="xs:integer?">
+        <xsl:if test="$type = 'TEI' and $teiHeader and $facsimile">
+          <xsl:try>
+            <xsl:source-document href="{$url-ana}" streamable="no">
+              <xsl:variable name="quantity"
+                select="(tei:TEI/tei:teiHeader//tei:extent/tei:measure[@unit='words'])[1]/@quantity" />
+              <xsl:choose>
+                <xsl:when test="$quantity castable as xs:integer">
+                  <xsl:sequence select="xs:integer($quantity)" />
+                </xsl:when>
+                <xsl:otherwise>
+                  <xsl:message select="concat('ERROR ', $this, ': missing number of words in .ana file ', $url-ana)" />
+                </xsl:otherwise>
+              </xsl:choose>
+            </xsl:source-document>
+            <xsl:catch>
+              <xsl:message select="concat('ERROR ', $this, ': cannot read .ana file ', $url-ana, ': ', $err:description)" />
+            </xsl:catch>
+          </xsl:try>
+        </xsl:if>
+      </xsl:variable>
+      <xsl:variable name="url-text" select="concat($inComponentDir, '/', $this)" />
+      <xsl:variable name="doc" as="document-node()?">
+        <xsl:if test="$teiHeader and $facsimile and ($type = 'TEI.ana' or exists($anaWords))">
+          <xsl:try>
+            <xsl:source-document href="{$url-text}" streamable="no">
+              <xsl:choose>
+                <xsl:when test="tei:TEI">
+                  <xsl:variable name="docWithHeader">
+                    <xsl:apply-templates select="." mode="insertHeader">
+                      <xsl:with-param name="teiHeader" select="$teiHeader" />
+                      <xsl:with-param name="facsimile" select="$facsimile" />
+                      <xsl:with-param name="fileType">comp</xsl:with-param>
+                    </xsl:apply-templates>
+                  </xsl:variable>
+                  <xsl:document>
+                    <xsl:apply-templates mode="compCleanup" select="$docWithHeader" />
+                  </xsl:document>
+                </xsl:when>
+                <xsl:otherwise>
+                  <xsl:message select="concat('ERROR ', $this, ': missing TEI in text file ', $url-text)" />
+                </xsl:otherwise>
+              </xsl:choose>
+            </xsl:source-document>
+            <xsl:catch>
+              <xsl:message select="concat('ERROR ', $this, ': cannot read text file ', $url-text, ': ', $err:description)" />
+            </xsl:catch>
+          </xsl:try>
+        </xsl:if>
+      </xsl:variable>
+
+      <xsl:choose>
+        <xsl:when test="empty($doc)">
+          <xsl:message select="concat('ERROR ', $this, ': skipping component')" />
+          <xsl:next-iteration>
+            <xsl:with-param name="wordsTotal" select="$wordsTotal" />
+            <xsl:with-param name="tagTotals" select="$tagTotals" />
+            <xsl:with-param name="okHrefs" select="$okHrefs" />
+          </xsl:next-iteration>
+        </xsl:when>
+        <xsl:otherwise>
+          <!-- Number of words: computed for .ana files, taken from .ana files for plain files -->
+          <xsl:variable name="words" as="xs:integer"
+            select="if ($type = 'TEI.ana') then count($doc//tei:w[not(parent::tei:w)]) else $anaWords" />
+
+          <!-- tagUsages in component file -->
+          <xsl:variable name="tagUsages">
+            <item>
+              <xsl:for-each-group select="$doc/tei:TEI/tei:text/descendant-or-self::tei:*" group-by="name()">
+                <xsl:sort select="current-grouping-key()" />
+                <tagUsage gi="{current-grouping-key()}" occurs="{count(current-group())}" />
+              </xsl:for-each-group>
+            </item>
           </xsl:variable>
-          <xsl:apply-templates mode="compCleanup" select="$docWithHeader" />
-        </xsl:source-document>
-      </xsl:variable>
 
-      <!-- Number of words: computed for .ana files, taken from .ana files for plain files -->
-      <xsl:variable name="words" as="xs:integer">
-        <xsl:choose>
-          <xsl:when test="$type = 'TEI.ana'">
-            <xsl:sequence select="count($doc//tei:w[not(parent::tei:w)])" />
-          </xsl:when>
-          <xsl:otherwise>
-            <xsl:variable name="url-ana" select="concat($anaDir, '/', mk:ana-href($this))" />
-            <xsl:try>
-              <xsl:source-document href="{$url-ana}" streamable="no">
-                <xsl:sequence select="xs:integer((tei:TEI/tei:teiHeader//
-                                        tei:extent/tei:measure[@unit='words'])[1]/@quantity)" />
-              </xsl:source-document>
-              <xsl:catch>
-                <xsl:message select="concat('ERROR ', $this, ': cannot locate .ana file ', $url-ana)" />
-                <xsl:sequence select="0" />
-              </xsl:catch>
-            </xsl:try>
-          </xsl:otherwise>
-        </xsl:choose>
-      </xsl:variable>
+          <xsl:result-document href="{concat($outDir, '/', $xi-new)}">
+            <xsl:apply-templates mode="comp" select="$doc/tei:TEI">
+              <xsl:with-param name="words" select="$words" />
+              <xsl:with-param name="tagUsages" select="$tagUsages/tei:item" />
+              <xsl:with-param name="date" select="$doc/tei:TEI/tei:teiHeader//tei:sourceDesc/tei:bibl/tei:date/@when/string()" />
+              <xsl:with-param name="title" select="normalize-space($doc/tei:TEI/tei:teiHeader//tei:sourceDesc/tei:bibl/tei:title/text())" />
+            </xsl:apply-templates>
+          </xsl:result-document>
+          <xsl:message select="concat('INFO: Saving to ', $xi-new)" />
 
-      <!-- tagUsages in component file -->
-      <xsl:variable name="tagUsages">
-        <item>
-          <xsl:for-each-group select="$doc/tei:TEI/tei:text/descendant-or-self::tei:*" group-by="name()">
-            <xsl:sort select="current-grouping-key()" />
-            <tagUsage gi="{current-grouping-key()}" occurs="{count(current-group())}" />
-          </xsl:for-each-group>
-        </item>
-      </xsl:variable>
-
-      <xsl:result-document href="{concat($outDir, '/', $xi-new)}">
-        <xsl:apply-templates mode="comp" select="$doc/tei:TEI">
-          <xsl:with-param name="words" select="$words" />
-          <xsl:with-param name="tagUsages" select="$tagUsages/tei:item" />
-          <xsl:with-param name="date" select="$doc/tei:TEI/tei:teiHeader//tei:sourceDesc/tei:bibl/tei:date/@when/string()" />
-          <xsl:with-param name="title" select="normalize-space($doc/tei:TEI/tei:teiHeader//tei:sourceDesc/tei:bibl/tei:title/text())" />
-        </xsl:apply-templates>
-      </xsl:result-document>
-      <xsl:message select="concat('INFO: Saving to ', $xi-new)" />
-
-      <xsl:next-iteration>
-        <xsl:with-param name="wordsTotal" select="$wordsTotal + $words" />
-        <xsl:with-param name="tagTotals"
-          select="fold-left($tagUsages/tei:item/tei:tagUsage, $tagTotals,
-                    function($m, $t) {
-                      map:put($m, string($t/@gi), ($m(string($t/@gi)), 0)[1] + xs:integer($t/@occurs))
-                    })" />
-      </xsl:next-iteration>
+          <xsl:next-iteration>
+            <xsl:with-param name="wordsTotal" select="$wordsTotal + $words" />
+            <xsl:with-param name="tagTotals"
+              select="fold-left($tagUsages/tei:item/tei:tagUsage, $tagTotals,
+                        function($m, $t) {
+                          map:put($m, string($t/@gi), ($m(string($t/@gi)), 0)[1] + xs:integer($t/@occurs))
+                        })" />
+            <xsl:with-param name="okHrefs" select="map:put($okHrefs, $this, true())" />
+          </xsl:next-iteration>
+        </xsl:otherwise>
+      </xsl:choose>
     </xsl:iterate>
   </xsl:template>
 
@@ -203,10 +264,12 @@
   </xsl:template>
 
   <xsl:template mode="root" match="tei:teiCorpus">
+    <xsl:param name="okHrefs" tunnel="yes" />
     <xsl:copy>
       <xsl:apply-templates select="@*" mode="root"/>
       <xsl:apply-templates select="tei:*" mode="root"/>
-      <xsl:for-each select="xi:include">
+      <!-- include only successfully processed components -->
+      <xsl:for-each select="xi:include[map:contains($okHrefs, string(@href))]">
         <xsl:sort select="@href"/>
         <xsl:variable name="href" select="@href"/>
         <xsl:variable name="new-href" select="if ($type = 'TEI.ana') then mk:ana-href($href) else string($href)"/>
