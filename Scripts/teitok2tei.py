@@ -38,6 +38,120 @@ def make_xml_id(parent_id, token_id, kind):
     return f"{parent_id}.{kind}{num}"
 
 
+def is_tokenish(el):
+    """token or inline element (name) containing tokens"""
+    if not isinstance(el.tag, str):
+        return False
+    ln = localname(el.tag)
+    return ln == "tok" or (ln == "name" and bool(el.xpath(".//*[local-name()='tok']")))
+
+
+def detach_keep_tail(el):
+    """remove element from tree, its tail text stays in place"""
+    parent = el.getparent()
+    if el.tail:
+        prev = el.getprevious()
+        if prev is not None:
+            prev.tail = (prev.tail or "") + el.tail
+        else:
+            parent.text = (parent.text or "") + el.tail
+    parent.remove(el)
+
+
+def has_space_after(el):
+    """
+    Is token followed by whitespace? Looks at the following text in document order,
+    lb/cb/pb without break="no" counts as whitespace.
+    """
+    node = el
+    while True:
+        if node.tail:
+            return node.tail[:1].isspace()
+        nxt = node.getnext()
+        while nxt is None:
+            node = node.getparent()
+            if node is None or localname(node.tag) == "p":
+                return True
+            if node.tail:
+                return node.tail[:1].isspace()
+            nxt = node.getnext()
+        if localname(nxt.tag) in ("lb", "cb", "pb"):
+            if nxt.get("break") != "no":
+                return True
+            node = nxt
+            continue
+        if nxt.text:
+            return nxt.text[:1].isspace()
+        return False
+
+
+def wrap_orphan_tokens(root):
+    """
+    Sentences crossing <p> boundary are encoded by TEITOK/flexipipe as an empty <s/>
+    milestone followed by bare tokens (and the rest of the sentence at the beginning
+    of the next paragraph without any <s>).
+    Wrap every run of tokens that is not inside <s> into <s> (reusing the milestone if present).
+    Returns list of (s, s_next) pairs - parts of the same sentence split by paragraph boundary.
+    """
+    links = []
+    pending = None  # sentence part that continues in the next paragraph
+
+    def flush(group, milestone, leading, last):
+        nonlocal pending
+        idx = [i for i, n in enumerate(group) if is_tokenish(n)]
+        if not idx:
+            if milestone is not None:
+                print(f"  [PATCH] Removing empty sentence {milestone.get('id')}", flush=True)
+                detach_keep_tail(milestone)
+            if last:
+                pending = None
+            return
+        first, last_tok = group[idx[0]], group[idx[-1]]
+        if milestone is not None:
+            detach_keep_tail(milestone)
+            wrapper = milestone
+        else:
+            wrapper = etree.Element(q("s"))
+        print(f"  [PATCH] Wrapping {len(idx)} orphan tokens into sentence {wrapper.get('id')}", flush=True)
+        first.addprevious(wrapper)
+        tail = last_tok.tail
+        last_tok.tail = None
+        for n in group[idx[0]:idx[-1] + 1]:
+            wrapper.append(n)
+        wrapper.tail = tail
+        if leading and pending is not None:
+            links.append((pending, wrapper))
+        elif leading:
+            print(f"WARN: orphan tokens at the beginning of paragraph {wrapper.getparent().get(f'{{{XML_NS}}}id')} without preceding sentence", flush=True)
+        if last:
+            pending = wrapper if (milestone is not None or leading) else None
+        else:
+            pending = None
+
+    for p in list(root.iter()):
+        if not isinstance(p.tag, str):
+            continue
+        if localname(p.tag) in ("s", "tok") or p.xpath("ancestor::*[local-name()='s' or local-name()='tok']"):
+            continue
+        children = [c for c in p if isinstance(c.tag, str)]
+        if not any(localname(c.tag) == "s" or is_tokenish(c) for c in children):
+            continue
+        group = []
+        milestone = None
+        leading = True
+        for c in list(p):
+            if isinstance(c.tag, str) and localname(c.tag) == "s":
+                flush(group, milestone, leading, False)
+                group = []
+                leading = False
+                is_empty = len(c) == 0 and not (c.text or "").strip()
+                milestone = c if is_empty else None
+                continue
+            group.append(c)
+        flush(group, milestone, leading, True)
+    return links
+
+
 # --------------------
 # TRANSFORM
 # --------------------
@@ -56,6 +170,8 @@ def transform_text(tree):
 
     root = new_root
     tree._setroot(root)
+
+    s_links = wrap_orphan_tokens(root)
 
     # convert id -> xml:id
     for el in root.iter():
@@ -81,6 +197,14 @@ def transform_text(tree):
 
         sentence_idx += 1
 
+    # link parts of sentences split by paragraph boundary
+    for s_prev, s_next in s_links:
+        prev_id = s_prev.get(f"{{{XML_NS}}}id")
+        next_id = s_next.get(f"{{{XML_NS}}}id")
+        print(f"WARN: sentence {prev_id} overlaps paragraph boundary, continues as {next_id}", flush=True)
+        s_prev.set("next", f"#{next_id}")
+        s_next.set("prev", f"#{prev_id}")
+
     for s in list(root.iter()):
       if localname(s.tag) != "s":
         continue
@@ -90,7 +214,7 @@ def transform_text(tree):
       # if (pc or lb or ...) is first or last in the token, then put outside the token
             # 1. Move to the left (First child check)
       while True:
-        elem = s.xpath("(.//tok/*[not(preceding-sibling::node())])[1][local-name()!='dtok']")
+        elem = s.xpath("(.//*[local-name()='tok']/*[local-name()!='dtok'][not(preceding-sibling::node())])[1]")
         if not elem:
           break
         target = elem[0]
@@ -108,7 +232,7 @@ def transform_text(tree):
 
       # 2. Move to the right (Last child check)
       while True:
-        elem = s.xpath("(.//tok/*[not(following-sibling::node())])[last()][local-name()!='dtok']")
+        elem = s.xpath("(.//*[local-name()='tok']/*[local-name()!='dtok'][not(following-sibling::node())])[last()]")
         if not elem:
           break
         target = elem[0]
@@ -134,7 +258,7 @@ def transform_text(tree):
       # should be converted to:
       # <tok ord="1" lemma="10" upos="NUM" xpos="C=-------------" feats="NumForm=Digit|NumType=Card">10</tok><tok ord="2" lemma="—" upos="PUNCT" xpos="Z:-------------">—</tok><tok ord="3" lemma="1" upos="NUM" xpos="C=-------------" feats="NumForm=Digit|NumType=Card">1</tok>
       # if tok contains dtok children, that is PUNCT
-      while token := s.xpath(".//tok[dtok[@upos='PUNCT' or @upos='SYM']]"):
+      while token := s.xpath(".//*[local-name()='tok'][*[local-name()='dtok'][@upos='PUNCT' or @upos='SYM']]"):
         tokens = list(token[0].iter())
         print(f"  [PATCH] Splitting token {token[0].get(f'{{{XML_NS}}}id')} into {len(tokens)} tokens", flush=True)
         for tok in tokens:
@@ -155,7 +279,7 @@ def transform_text(tree):
       # convert tok -> w / pc
       tokens = list(s.iter())
       for tok in tokens:
-        token_idx = process_token(tok, s_id, token_idx, (tok == tokens[-1]))
+        token_idx = process_token(tok, s_id, token_idx)
       
       # postprocess patching - move space tailing last token in name element to the name tail element itself
       for name in s.xpath(".//*[local-name()='name']"):
@@ -176,11 +300,13 @@ def transform_text(tree):
         for attr in ["form", "text"]:
             if attr in el.attrib:
                 del el.attrib[attr]
+        if localname(el.tag) == "p":
+            el.attrib.pop("cont", None)
     root.attrib.pop('xmlnsoff', None)
     etree.cleanup_namespaces(tree)
     return tree
 
-def process_token(tok, s_id, token_idx, is_last=False):
+def process_token(tok, s_id, token_idx):
     if localname(tok.tag) != "tok" and localname(tok.tag) != "dtok":
         return token_idx
     upos = tok.get("upos", "")
@@ -217,10 +343,13 @@ def process_token(tok, s_id, token_idx, is_last=False):
          if k == "lemma":
               attrs["lemma"] = v
               continue
-         print (f"Warning: Unhandled attribute {k}={v} in token {token_idx} of sentence {s_id}", flush=True)
+         print (f"WARN: Unhandled attribute {k}={v} in token {token_idx} of sentence {s_id}", flush=True)
     tok.attrib.clear()
-    if not(tok.tail and tok.tail.strip() == "" and len(tok.tail) > 0) and not(is_last):
+    # dtok (part of contraction) has no own surface form -> no join
+    if old_tag == "tok" and not has_space_after(tok):
       attrs["join"] = "right"
+    elif old_tag == "dtok":
+      attrs.pop("join", None)
     for k, v in attrs.items():
         tok.set(k, v)
     tok.set(f"{{{XML_NS}}}id", f"{s_id}.w{token_idx}")
