@@ -320,6 +320,42 @@ $(TASKS_TEI_COMPONENTS): $(idMapping) $(TASKS)
 	echo "TODO: add a kind of filtering to allow processing only some components (e.g. only some volumes or issues) based on task lists, currently we just process all components for all issues"
 	find $(idMapping) -type f -name "*.jsonl" -printf "%P\n" | sed 's/.jsonl$$//'|sort > $@
 
+##$DATAPATCH## Output directory of create-patch-data (default: ./Data-patch-<DATETIME>)
+DATAPATCH ?=
+##create-patch-data## read component paths (YEAR/ID, as in $(TASKS_TEI_COMPONENTS)) from STDIN and copy their source data from $(DATA) to a new Data-patch-<DATETIME> directory
+#### components are resolved to issues via $(DATA)/work/idMapping, the patch directory is processed from prepare-tasks on:
+#### cat failed.tasks | make create-patch-data && make DATA=$(CURDIR)/Data-patch-<DATETIME>/ prepare-tasks process-metadata-all ...
+create-patch-data:
+	@SRC=$(patsubst %/,%,$(DATA))/source; \
+	MAP=$(patsubst %/,%,$(DATA))/work/idMapping; \
+	PATCH=$${DATAPATCH:-$(CURDIR)/Data-patch-$$(date +%Y%m%d-%H%M%S)}; \
+	test -d "$$SRC" || { echo "ERROR: $$SRC does not exist" >&2; exit 1; }; \
+	test -e "$$PATCH" && { echo "ERROR: $$PATCH already exists" >&2; exit 1; }; \
+	mkdir -p "$$PATCH/source"; \
+	sed 's/\.\(xml\|jsonl\)$$//;/^[[:space:]]*$$/d' > "$$PATCH/patch-components.tasks"; \
+	while read -r COMP; do \
+	  if [ -f "$$MAP/$$COMP.jsonl" ]; then \
+	    jq -r 'select(.uuid_path != null) | .uuid_path' "$$MAP/$$COMP.jsonl" | cut -d '/' -f 1-3; \
+	  else \
+	    echo "WARN: no id mapping for $$COMP ($$MAP/$$COMP.jsonl)" >&2; \
+	  fi; \
+	done < "$$PATCH/patch-components.tasks" | sort -u > "$$PATCH/patch-issues.uuid"; \
+	while IFS=/ read -r P V I; do \
+	  for f in json/$$P.json json/$$P/$$V.json json/$$P/$$V/$$I.json json-periodicals/$$P.json txt/$$P/$$V/$$I; do \
+	    test -e "$$SRC/$$f" || echo "WARN: missing required $$SRC/$$f" >&2; \
+	  done; \
+	  for f in json/$$P.json json/$$P/$$V.json json/$$P/$$V/$$I.json json-periodicals/$$P.json \
+	           work-uuid/$$P.uuid work-uuid/$$P/$$V.uuid work-uuid/$$P/$$V/$$I.uuid \
+	           txt/$$P/$$V/$$I img/$$P/$$V/$$I \
+	           mods/$$P.mods.xml mods/$$P/$$V.mods.xml mods/$$P/$$V/$$I.mods.xml; do \
+	    if [ -e "$$SRC/$$f" ] && [ ! -e "$$PATCH/source/$$f" ]; then \
+	      (cd "$$SRC" && cp -r --parents "$$f" "$$PATCH/source/"); \
+	    fi; \
+	  done; \
+	done < "$$PATCH/patch-issues.uuid"; \
+	echo "INFO: $$(wc -l < "$$PATCH/patch-components.tasks") components -> $$(wc -l < "$$PATCH/patch-issues.uuid") issues copied to $$PATCH"; \
+	echo "INFO: continue with: make DATA=$$PATCH/ prepare-tasks process-metadata-all ..."
+
 
 ######input data statistics and visualization
 
@@ -838,8 +874,7 @@ Scripts/resources:
 	mkdir $@
 
 setup-python: $(VENV_DIR)
-	. $(VENV_DIR)/bin/activate;\
-	pip install -r Scripts/requirements.txt
+	$(VENV_DIR)/bin/python -m pip install -r Scripts/requirements.txt
 
 $(VENV_DIR):
 	python3 -m venv $(VENV_DIR)
@@ -848,8 +883,7 @@ $(VENV_DIR):
 setup-pero-ocr: setup-python $(PERO_OCR_STAMP)
 
 $(PERO_OCR_STAMP):
-	. $(VENV_DIR)/bin/activate;\
-	pip install git+https://github.com/DCGM/pero-ocr.git@$(PERO_OCR_COMMIT)
+	$(VENV_DIR)/bin/python -m pip install git+https://github.com/DCGM/pero-ocr.git@$(PERO_OCR_COMMIT)
 	touch $@
 
 
