@@ -269,12 +269,18 @@ $(get-page-image-UUID): get-page-image-%: $(INimg)/$(periodical)/$(periodicalvol
 	> $(INimg)/$(periodical)/$(periodicalvolume)/$(periodicalitem)/$*.jpg
 
 
+# download images of all pages listed in the issue json (source/json/P/V/I.json), fail when there is nothing to download
+define download-issue-images
+	@PAGES=$$(jq -r '.response.docs[] | select(.model == "page") | .pid | sub("^uuid:"; "")' $(INjson)/$(UUID_PATH).json); \
+	test -n "$$PAGES" || { echo "ERROR: no pages to download for $(UUID_PATH) ($(INjson)/$(UUID_PATH).json)" >&2; exit 1; }; \
+	for PAGE in $$PAGES; do \
+	  make get-page-image UUID_PATH=$(UUID_PATH)/$$PAGE || exit 1; \
+	done
+endef
+
 ifeq ($(wildcard $(INimg)/$(UUID_PATH)),)
-$(INimg)/$(UUID_PATH):
-	mkdir -p $@
-	ls $(INtxt)/$(UUID_PATH)/*.txt \
-	  | sed "s/.txt$$//;s/^.*\///" \
-		| xargs -I {} make get-page-image UUID_PATH=$(UUID_PATH)/{} || echo "INFO: no images to download for $(UUID_PATH)"
+$(INimg)/$(UUID_PATH): $(INjson)/$(UUID_PATH).json
+	$(download-issue-images)
 else
 $(INimg)/$(UUID_PATH):
 	@echo "INFO: images already downloaded for $(UUID_PATH)"
@@ -557,10 +563,8 @@ $(TASKS) $(JSONissues) $(idMapping) $(xmlOCR) $(altoOCR) $(vizOCRxml) $(vizLAYOU
 ##
 
 
-download-imgs: _test-level-2-$(UUID_PATH_LEVEL)
-	ls $(INtxt)/$(UUID_PATH)/*.txt \
-	  | sed "s/.txt$$//;s/^.*\///" \
-		| xargs -I {} make get-page-image UUID_PATH=$(UUID_PATH)/{} || echo "INFO: no images to download for $(UUID_PATH)"
+download-imgs: _test-level-2-$(UUID_PATH_LEVEL) $(INjson)/$(UUID_PATH).json
+	$(download-issue-images)
 
 delete-imgs: _test-level-2-$(UUID_PATH_LEVEL)
 ifeq ($(SAMPLE),1)
