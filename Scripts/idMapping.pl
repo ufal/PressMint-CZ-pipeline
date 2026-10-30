@@ -6,10 +6,13 @@ use feature 'unicode_strings';
 use open qw(:std :utf8);
 use File::Spec;
 use XML::LibXML;
-use JSON qw(encode_json);
+use JSON;
 
 
 use PressMintCZ;
+
+# canonical: sorted keys, so the output is stable between runs
+my $json_encoder = JSON->new->utf8->canonical(1);
 
 
 my $args = PressMintCZ::parse_args(\@ARGV, [
@@ -47,7 +50,7 @@ sub idMapping {
       teiid     => $pid,
       url       => $purl,
     );
-    print $outFH encode_json(\%row), "\n";
+    print $outFH $json_encoder->encode(\%row), "\n";
   }
   close $outFH or die $!;
 }
