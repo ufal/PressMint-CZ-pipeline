@@ -34,7 +34,7 @@ sub idMapping {
   my $outJSONL = File::Spec->catfile($outDir,$opts{id}.".jsonl");
   my $pb_n = 0;
   `mkdir -p $outDir`;
-  open my $outFH, '>>', $outJSONL or die $!;
+  open my $outFH, '>', $outJSONL or die $!;
   for my $page (@pages) {
     $pb_n++;
     my $page_uuid = PressMintCZ::get_page_uuid($page);
