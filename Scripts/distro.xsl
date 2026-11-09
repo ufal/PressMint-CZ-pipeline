@@ -349,7 +349,8 @@
 
   <xsl:template mode="comp" match="tei:TEI/@xml:id">
     <xsl:attribute name="xml:id">
-      <xsl:value-of select="concat(.,$suff)" />
+      <!-- annotated components already have .ana suffix (teitok2tei.py) -->
+      <xsl:value-of select="if (ends-with(., $suff)) then string(.) else concat(.,$suff)" />
     </xsl:attribute>
   </xsl:template>
 
