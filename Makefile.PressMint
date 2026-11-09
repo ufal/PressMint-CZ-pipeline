@@ -1,0 +1,129 @@
+###### Linguistic annotation of a PressMint-XX.TEI corpus (any PressMint corpus in distribution format)
+#### make PressMint-tei2ana PM_TEI=path/to/PressMint-XX.TEI-orig
+#### input:  path/to/PressMint-XX.TEI-orig (not modified)
+#### output: path/to/PressMint-XX.TEI (fixed TEI: missing xml:id added), path/to/PressMint-XX.TEI.ana (annotated)
+####         temporary path/to/PressMint-XX.TEI.TT and PressMint-XX.TEI.TT.ana
+#### annotation tools are the same as in PressMint-CZ: flexipipe (UDPipe 2 + NameTag 3) and Scripts/teitok2tei.py
+
+##$PM_TEI## path to input PressMint-XX.TEI-orig directory (path/to/PressMint-XX.TEI is accepted too, -orig is added)
+PM_TEI ?=
+##$PM_NER_MODEL## NameTag model
+PM_NER_MODEL ?= nametag3-multilingual-conll-250203
+##$PM_RESP_NAME## person responsible for linguistic annotation (respStmt in root file)
+PM_RESP_NAME ?= Matyáš Kopp
+##$PM_RESP_REF## reference (e.g. ORCID) of PM_RESP_NAME, can be empty
+PM_RESP_REF ?= https://orcid.org/0000-0001-7953-8783
+##$PM_ID_ELEMENTS## text elements that get missing xml:id in PressMint-fix-ids (comma separated)
+PM_ID_ELEMENTS ?= p,head
+##$PM_JOBS## number of parallel flexipipe/teitok2tei jobs
+PM_JOBS ?= 1
+
+PM_UD_MODEL_cs := czech-pdtc-ud-2.17-251125
+PM_NER_TAXONOMY := $(TAXONOMIES)PressMint-taxonomy-NER.ana.xml
+
+ifneq ($(strip $(PM_TEI)),)
+PM_DIR := $(patsubst %-orig,%,$(abspath $(patsubst %/,%,$(PM_TEI))))
+PM_ORIG := $(PM_DIR)-orig
+PM_CORPUS := $(patsubst %.TEI,%,$(notdir $(PM_DIR)))
+PM_ORIG_ROOT := $(PM_ORIG)/$(PM_CORPUS).xml
+PM_ROOT := $(PM_DIR)/$(PM_CORPUS).xml
+PM_ANA := $(PM_DIR).ana
+PM_TT := $(PM_DIR).TT
+PM_TT_ANA := $(PM_DIR).TT.ana
+##$PM_LANG## language of PM_TEI corpus (default: xml:lang of root file)
+PM_LANG ?= $(shell xmlstarlet sel -N tei=http://www.tei-c.org/ns/1.0 -t -v '/tei:teiCorpus/@xml:lang' $(PM_ORIG_ROOT) 2>/dev/null)
+##$PM_UD_MODEL## UDPipe model (default: czech-pdtc-ud-2.17-251125 for cs, must be set for other languages)
+PM_UD_MODEL ?= $(PM_UD_MODEL_$(PM_LANG))
+endif
+
+##PressMint-tei2ana## fix PM_TEI=PressMint-XX.TEI-orig to PressMint-XX.TEI and annotate it to PressMint-XX.TEI.ana
+PressMint-tei2ana: PressMint-fix-ids PressMint-tei2tt PressMint-tt2ana PressMint-ana-build
+
+_PressMint-check-dir:
+	@test -n "$(PM_TEI)" || { echo "ERROR: PM_TEI is not set"; exit 1; }
+
+_PressMint-check: _PressMint-check-dir
+	@test -f "$(PM_ROOT)" || { echo "ERROR: missing root file $(PM_ROOT)"; exit 1; }
+	@test -n "$(PM_LANG)" || { echo "ERROR: PM_LANG is not set and cannot be read from $(PM_ORIG_ROOT)"; exit 1; }
+	@test -n "$(PM_UD_MODEL)" || { echo "ERROR: PM_UD_MODEL is not set (no default for language '$(PM_LANG)')"; exit 1; }
+	@echo "INFO: $(PM_ORIG) -> $(PM_DIR) -> $(PM_ANA) (lang=$(PM_LANG), UD=$(PM_UD_MODEL), NER=$(PM_NER_MODEL))"
+
+##PressMint-fix-ids## copy PressMint-XX.TEI-orig to PressMint-XX.TEI and add missing xml:id to PM_ID_ELEMENTS (p, head) in components
+PressMint-fix-ids: _PressMint-check-dir
+	@test -f "$(PM_ORIG_ROOT)" || { echo "ERROR: missing root file $(PM_ORIG_ROOT)"; exit 1; }
+	mkdir -p $(PM_DIR)
+	cp -r --preserve=timestamps $(PM_ORIG)/. $(PM_DIR)/
+	xmlstarlet sel -N tei=http://www.tei-c.org/ns/1.0 -N xi=http://www.w3.org/2001/XInclude \
+	  -t -v '/tei:teiCorpus/xi:include/@href' -n $(PM_ROOT) | grep . | sed 's@^@$(PM_DIR)/@' \
+	| xargs python Scripts/addMissingIds.py --elements $(PM_ID_ELEMENTS)
+
+# list of components (xi:include in root file)
+$(PM_TT).fl: _PressMint-check
+	mkdir -p $(PM_TT)
+	xmlstarlet sel -N tei=http://www.tei-c.org/ns/1.0 -N xi=http://www.w3.org/2001/XInclude \
+	  -t -v '/tei:teiCorpus/xi:include/@href' -n $(PM_ROOT) | grep . | sort > $@
+
+##PressMint-tei2tt## annotate PM_TEI components with flexipipe (PM_TEI.TT)
+PressMint-tei2tt: $(PM_TT).fl
+	cat $< | xargs -P $(PM_JOBS) -I {} \
+	  make -e PressMint-tei2tt-single PM_FILE={}
+
+PressMint-tei2tt-single:
+	mkdir -p $(dir $(PM_TT)/$(PM_FILE))
+	test -f $(PM_TT)/$(PM_FILE) || cp $(PM_DIR)/$(PM_FILE) $(PM_TT)/$(PM_FILE)
+	grep -q '</tok>' $(PM_TT)/$(PM_FILE) \
+	&& echo "INFO: skipping $(PM_TT)/$(PM_FILE) because it is already annotated" \
+	||  $(FLEXIPIPE) \
+	    process $(PM_TT)/$(PM_FILE) \
+	    --tokenize \
+	    --backend udpipe --model $(PM_UD_MODEL) \
+	    --ner-backend nametag --nametag-model $(PM_NER_MODEL) \
+	    --language $(PM_LANG) \
+	    --tasks segment,tokenize,lemmatize,tag,ner \
+	    --writeback --writeback-engine xmltokenizer \
+	    -O punctuation-split:hard
+
+##PressMint-tt2ana## convert flexipipe output (PM_TEI.TT) to TEI (PM_TEI.TT.ana)
+PressMint-tt2ana: $(PM_TT).fl
+	cat $< | xargs -P $(PM_JOBS) -I {} \
+	  make -e PressMint-tt2ana-single PM_FILE={}
+
+PressMint-tt2ana-single:
+	mkdir -p $(dir $(PM_TT_ANA)/$(PM_FILE))
+	grep -q '</tok>' $(PM_TT)/$(PM_FILE) \
+	&& python Scripts/teitok2tei.py \
+	    --input $(PM_TT)/$(PM_FILE) \
+	    --output $(PM_TT_ANA)/$(PM_FILE) \
+	|| echo "WARN: skipping $(PM_TT)/$(PM_FILE) because it is not annotated or has no content"
+
+##PressMint-ana-build## create PM_TEI.ana: copy annotated components (.ana.xml) and taxonomies, patch root file
+PressMint-ana-build: $(PM_TT).fl
+	mkdir -p $(PM_ANA)
+	# annotated components
+	cat $< | while read -r f; do \
+	  if [ -f "$(PM_TT_ANA)/$$f" ]; then \
+	    mkdir -p "$$(dirname "$(PM_ANA)/$$f")"; \
+	    cp "$(PM_TT_ANA)/$$f" "$(PM_ANA)/$${f%.xml}.ana.xml"; \
+	  else echo "WARN: missing annotated component $(PM_TT_ANA)/$$f"; fi; \
+	done
+	# taxonomies included in root teiHeader + NER taxonomy
+	xmlstarlet sel -N tei=http://www.tei-c.org/ns/1.0 -N xi=http://www.w3.org/2001/XInclude \
+	  -t -v '/tei:teiCorpus/tei:teiHeader//xi:include/@href' -n $(PM_ROOT) | grep . \
+	| xargs -r -I {} cp $(PM_DIR)/{} $(PM_ANA)/{}
+	cp $(PM_NER_TAXONOMY) $(PM_ANA)/
+	# root file
+	$(SAXON) -xsl:Scripts/pressmint-tei2ana.xsl \
+	    -s:$(PM_ROOT) \
+	    -o:$(PM_ANA)/$(PM_CORPUS).ana.xml \
+	    anaDir=$(PM_ANA) \
+	    nerTaxonomyHref=$(notdir $(PM_NER_TAXONOMY)) \
+	    udModel=$(PM_UD_MODEL) \
+	    nerModel=$(PM_NER_MODEL) \
+	    respName="$(PM_RESP_NAME)" \
+	    respRef="$(PM_RESP_REF)"
+
+##PressMint-clean-tmp## remove temporary PressMint-XX.TEI.TT and PressMint-XX.TEI.TT.ana
+PressMint-clean-tmp: _PressMint-check-dir
+	rm -rf $(PM_TT) $(PM_TT).fl $(PM_TT_ANA)
+
+.PHONY: PressMint-tei2ana PressMint-fix-ids _PressMint-check-dir _PressMint-check PressMint-tei2tt PressMint-tei2tt-single PressMint-tt2ana PressMint-tt2ana-single PressMint-ana-build PressMint-clean-tmp
