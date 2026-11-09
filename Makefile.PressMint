@@ -32,7 +32,7 @@ PM_ANA := $(PM_DIR).ana
 PM_TT := $(PM_DIR).TT
 PM_TT_ANA := $(PM_DIR).TT.ana
 ##$PM_LANG## language of PM_TEI corpus (default: xml:lang of root file)
-PM_LANG ?= $(shell xmlstarlet sel -N tei=http://www.tei-c.org/ns/1.0 -t -v '/tei:teiCorpus/@xml:lang' $(PM_ORIG_ROOT) 2>/dev/null)
+PM_LANG ?= $(shell python Scripts/teiCorpusInfo.py lang $(PM_ORIG_ROOT) 2>/dev/null)
 ##$PM_UD_MODEL## UDPipe model (default: PM_UD_MODEL_<PM_LANG> - defined for cs, de; must be set for other languages)
 PM_UD_MODEL ?= $(PM_UD_MODEL_$(PM_LANG))
 endif
@@ -54,15 +54,15 @@ PressMint-fix-ids: _PressMint-check-dir
 	@test -f "$(PM_ORIG_ROOT)" || { echo "ERROR: missing root file $(PM_ORIG_ROOT)"; exit 1; }
 	mkdir -p $(PM_DIR)
 	cp -r --preserve=timestamps $(PM_ORIG)/. $(PM_DIR)/
-	xmlstarlet sel -N tei=http://www.tei-c.org/ns/1.0 -N xi=http://www.w3.org/2001/XInclude \
-	  -t -v '/tei:teiCorpus/xi:include/@href' -n $(PM_ROOT) | grep . | sed 's@^@$(PM_DIR)/@' \
-	| xargs python Scripts/addMissingIds.py --elements $(PM_ID_ELEMENTS)
+	FILES=$$(python Scripts/teiCorpusInfo.py components $(PM_ROOT)) || exit 1; \
+	test -n "$$FILES" || { echo "ERROR: no components in $(PM_ROOT)"; exit 1; }; \
+	cd $(PM_DIR) && python $(CURDIR)/Scripts/addMissingIds.py --elements $(PM_ID_ELEMENTS) $$FILES
 
 # list of components (xi:include in root file)
 $(PM_TT).fl: _PressMint-check
 	mkdir -p $(PM_TT)
-	xmlstarlet sel -N tei=http://www.tei-c.org/ns/1.0 -N xi=http://www.w3.org/2001/XInclude \
-	  -t -v '/tei:teiCorpus/xi:include/@href' -n $(PM_ROOT) | grep . | sort > $@
+	python Scripts/teiCorpusInfo.py components $(PM_ROOT) > $@.tmp
+	sort $@.tmp > $@ && rm $@.tmp
 
 ##PressMint-tei2tt## annotate PM_TEI components with flexipipe (PM_TEI.TT)
 PressMint-tei2tt: $(PM_TT).fl
@@ -108,9 +108,9 @@ PressMint-ana-build: $(PM_TT).fl
 	  else echo "WARN: missing annotated component $(PM_TT_ANA)/$$f"; fi; \
 	done
 	# taxonomies included in root teiHeader + NER taxonomy
-	xmlstarlet sel -N tei=http://www.tei-c.org/ns/1.0 -N xi=http://www.w3.org/2001/XInclude \
-	  -t -v '/tei:teiCorpus/tei:teiHeader//xi:include/@href' -n $(PM_ROOT) | grep . \
-	| xargs -r -I {} cp $(PM_DIR)/{} $(PM_ANA)/{}
+	python Scripts/teiCorpusInfo.py includes $(PM_ROOT) > $(PM_ANA).includes
+	cat $(PM_ANA).includes | xargs -r -I {} cp $(PM_DIR)/{} $(PM_ANA)/{}
+	rm $(PM_ANA).includes
 	cp $(PM_NER_TAXONOMY) $(PM_ANA)/
 	# root file
 	$(SAXON) -xsl:Scripts/pressmint-tei2ana.xsl \
