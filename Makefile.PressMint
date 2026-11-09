@@ -19,6 +19,7 @@ PM_ID_ELEMENTS ?= p,head
 PM_JOBS ?= 1
 
 PM_UD_MODEL_cs := czech-pdtc-ud-2.17-251125
+PM_UD_MODEL_de := german-hdt-ud-2.17-251125
 PM_NER_TAXONOMY := $(TAXONOMIES)PressMint-taxonomy-NER.ana.xml
 
 ifneq ($(strip $(PM_TEI)),)
@@ -32,7 +33,7 @@ PM_TT := $(PM_DIR).TT
 PM_TT_ANA := $(PM_DIR).TT.ana
 ##$PM_LANG## language of PM_TEI corpus (default: xml:lang of root file)
 PM_LANG ?= $(shell xmlstarlet sel -N tei=http://www.tei-c.org/ns/1.0 -t -v '/tei:teiCorpus/@xml:lang' $(PM_ORIG_ROOT) 2>/dev/null)
-##$PM_UD_MODEL## UDPipe model (default: czech-pdtc-ud-2.17-251125 for cs, must be set for other languages)
+##$PM_UD_MODEL## UDPipe model (default: PM_UD_MODEL_<PM_LANG> - defined for cs, de; must be set for other languages)
 PM_UD_MODEL ?= $(PM_UD_MODEL_$(PM_LANG))
 endif
 
@@ -122,8 +123,21 @@ PressMint-ana-build: $(PM_TT).fl
 	    respName="$(PM_RESP_NAME)" \
 	    respRef="$(PM_RESP_REF)"
 
+##slurm-PressMint-tei2ana## run whole PressMint-tei2ana as one slurm job (no parallelization)
+slurm-PressMint-tei2ana: _PressMint-check-dir
+	@mkdir -p logs/slurm
+	sbatch --job-name=$(PM_CORPUS).ana \
+	       --export=ALL \
+	       --partition=cpu-troja,cpu-ms \
+	       --gres=none \
+	       --cpus-per-task=1 \
+	       --mem=32G \
+	       --output=logs/slurm/$(PM_CORPUS).ana_%j.out \
+	       --error=logs/slurm/$(PM_CORPUS).ana_%j.err \
+	       --wrap="make PressMint-tei2ana"
+
 ##PressMint-clean-tmp## remove temporary PressMint-XX.TEI.TT and PressMint-XX.TEI.TT.ana
 PressMint-clean-tmp: _PressMint-check-dir
 	rm -rf $(PM_TT) $(PM_TT).fl $(PM_TT_ANA)
 
-.PHONY: PressMint-tei2ana PressMint-fix-ids _PressMint-check-dir _PressMint-check PressMint-tei2tt PressMint-tei2tt-single PressMint-tt2ana PressMint-tt2ana-single PressMint-ana-build PressMint-clean-tmp
+.PHONY: PressMint-tei2ana slurm-PressMint-tei2ana PressMint-fix-ids _PressMint-check-dir _PressMint-check PressMint-tei2tt PressMint-tei2tt-single PressMint-tt2ana PressMint-tt2ana-single PressMint-ana-build PressMint-clean-tmp
