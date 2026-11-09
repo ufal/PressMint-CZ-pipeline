@@ -11,6 +11,10 @@ XML_NS = "http://www.w3.org/XML/1998/namespace"
 
 NSMAP = {None: TEI_NS}
 
+# elements excluded from NLP (xmltokenizer tei profile: exclude_elements),
+# flexipipe writeback still wraps their content into <s>/<tok> without annotation
+NOT_ANNOTATED = ("gap", "note")
+
 PUNCT_UPOS = {
     "PUNCT",
     "SYM",
@@ -83,6 +87,31 @@ def has_space_after(el):
         if nxt.text:
             return nxt.text[:1].isspace()
         return False
+
+
+def unwrap(el):
+    """replace element by its content (text, children, tail stay in place)"""
+    parent = el.getparent()
+    idx = parent.index(el)
+    if el.text:
+        prev = el.getprevious()
+        if prev is not None:
+            prev.tail = (prev.tail or "") + el.text
+        else:
+            parent.text = (parent.text or "") + el.text
+    for i, child in enumerate(list(el)):
+        parent.insert(idx + i, child)
+    detach_keep_tail(el)
+
+
+def remove_tokens_in_not_annotated(root):
+    """remove <s>/<tok>/<dtok> inside elements that are not annotated (e.g. gap/desc, note)"""
+    cond = " or ".join(f"local-name()='{n}'" for n in NOT_ANNOTATED)
+    for el in root.xpath(f"//*[{cond}]//*[local-name()='dtok']"):
+        el.getparent().remove(el)
+    for el in root.xpath(f"//*[{cond}]//*[local-name()='s' or local-name()='tok']"):
+        print(f"  [PATCH] Removing {localname(el.tag)} {el.get('id')} from not annotated element {localname(el.xpath(f'ancestor::*[{cond}][1]')[0].tag)}", flush=True)
+        unwrap(el)
 
 
 def wrap_orphan_tokens(root):
@@ -165,12 +194,18 @@ def transform_text(tree):
     for k, v in root.attrib.items():
         new_root.attrib[k] = v
 
+    # annotated document id: add .ana suffix
+    root_id = new_root.get(f"{{{XML_NS}}}id")
+    if root_id and not root_id.endswith(".ana"):
+        new_root.set(f"{{{XML_NS}}}id", f"{root_id}.ana")
+
     for child in root:
         new_root.append(child)
 
     root = new_root
     tree._setroot(root)
 
+    remove_tokens_in_not_annotated(root)
     s_links = wrap_orphan_tokens(root)
 
     # convert id -> xml:id
@@ -179,8 +214,28 @@ def transform_text(tree):
             value = el.attrib.pop("id")
             el.set(f"{{{XML_NS}}}id", value)
 
+    # elements containing sentences (p, head, desc, ...) without xml:id get one: {doc_id}.{name}{position in text}
+    doc_id = re.sub(r"\.ana$", "", root_id or "")
+    existing_ids = {el.get(f"{{{XML_NS}}}id") for el in root.iter() if el.get(f"{{{XML_NS}}}id")}
+    name_idx = {}
+    for el in root.xpath("//*[local-name()='text']//*"):
+      name = localname(el.tag)
+      if name in ("s", "tok", "dtok") or el.xpath("ancestor::*[local-name()='s']"):
+        continue
+      name_idx[name] = name_idx.get(name, 0) + 1
+      if el.get(f"{{{XML_NS}}}id") or not el.xpath("./*[local-name()='s']"):
+        continue
+      new_id = f"{doc_id}.{name}{name_idx[name]}"
+      while new_id in existing_ids:
+        new_id += "_"
+      print(f"  [PATCH] Adding missing id {new_id} to {name}", flush=True)
+      el.set(f"{{{XML_NS}}}id", new_id)
+      existing_ids.add(new_id)
+
     for p in root.iter():
-      if localname(p.tag) != "p":
+      if not isinstance(p.tag, str) or localname(p.tag) in ("s", "tok", "dtok"):
+        continue
+      if not p.xpath("./*[local-name()='s']"):
         continue
       p_id = p.get(f"{{{XML_NS}}}id")
       print(f"\n[PARAGRAPH] {p_id}",flush=True)
@@ -382,6 +437,15 @@ def patch_text(tree):
   # move child pc outside token if it is at the first position
   for pc in root.xpath("//*[local-name()='pc']/*[1][local-name()='pc']"):
     pc.getparent().addprevious(pc)
+  # remove whitespace-only text inside token (indentation of input, e.g. <pc force="weak">-</pc>\n  <lb break="no"/>)
+  for tok in root.xpath("//*[local-name()='w' or local-name()='pc'][*]"):
+    if tok.text is not None and not tok.text.strip():
+      print(f"  [PATCH] Removing whitespace inside token {tok.get(f'{{{XML_NS}}}id')}", flush=True)
+      tok.text = None
+    for child in tok:
+      if child.tail is not None and not child.tail.strip():
+        print(f"  [PATCH] Removing whitespace inside token {tok.get(f'{{{XML_NS}}}id')}", flush=True)
+        child.tail = None
   changed = 1
   while(changed):
     changed = 0
