@@ -1,4 +1,5 @@
 import json
+import re
 import xml.etree.ElementTree as ET
 from decimal import Decimal
 from scipy.spatial import ConvexHull
@@ -218,6 +219,15 @@ def merge_lines_and_regions(pageLines,pageRegions):
       
   return pageRegions, no_match
 
+# characters from pero OCR charset that are not real text:
+# U+FFFD (charset index 0) and private use U+101010-U+10102F
+OCR_ARTIFACTS_RE = re.compile("[\uFFFD\U00101010-\U0010102F]")
+
+def clean_ocr_text(text):
+  if not OCR_ARTIFACTS_RE.search(text):
+    return text
+  return re.sub(" {2,}", " ", OCR_ARTIFACTS_RE.sub("", text)).strip()
+
 def convert_to_region_like_format(line):
   result = {}
   result['baseline'] = parse_points_page(line.get('Baseline', {}).get('points',""))
@@ -225,7 +235,7 @@ def convert_to_region_like_format(line):
   if polygon:
     result['bounding_polygon_points'] = polygon
     result['bbox_xyxy'] = bbox_xyxy_from_points(result['bounding_polygon_points'])
-  result['text'] = line.get('TextEquiv', {}).get('Unicode',"")
+  result['text'] = clean_ocr_text(line.get('TextEquiv', {}).get('Unicode',"") or "")
   result['confidence'] = Decimal(line.get('TextEquiv',{}).get('conf',0))
   return result
 
