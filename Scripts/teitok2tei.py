@@ -453,6 +453,10 @@ def patch_text(tree):
       for el in root.xpath(f"//*[local-name()='pc']/*[1][local-name()='{xb}']"):
         el.getparent().addprevious(el)
         changed = 1
+  # name without any word (e.g. only punctuation) is not a named entity - keep its content only
+  for name in root.xpath("//*[local-name()='name'][not(.//*[local-name()='w'])]"):
+    print(f"  [PATCH] Removing name without words {xml_to_string_no_attr(name)}", flush=True)
+    unwrap(name)
   return tree
 # --------------------
 # IO
