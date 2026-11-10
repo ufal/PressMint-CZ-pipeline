@@ -1,0 +1,90 @@
+###### Patch selected TEI components
+
+##$PATCH_IDS## File with component ids to reprocess, one per line (e.g. PressMint-CZ_1848-04-06-392f65d0)
+PATCH_IDS ?=
+##$PATCH_DATA## Output data directory of patch-components (default: $(DATA) with suffix .patch.<DATETIME>)
+PATCH_DATA ?=
+##$ERROR_DATA## Directory for the original (erroneous) outputs of patched components (default: $(DATA) with suffix .error.<DATETIME>)
+ERROR_DATA ?=
+
+##patch-components## reprocess components listed in $(PATCH_IDS), ends just before process-build
+#### 1. original outputs are copied from $(DATA) to $(ERROR_DATA): work/tei-text, work/tei-facs, work/tei-text.TT, work/tei-text.ana, dist/tei, dist/tei-ana
+#### 2. inputs are copied from $(DATA) to $(PATCH_DATA): work/idMapping, work/ocrXML, work/imageRegions, work/tei-header
+#### 3. outputs are recreated in $(PATCH_DATA): work/tei-text, work/tei-facs, work/tei-text.TT, work/tei-text.ana
+#### both directories keep the same structure as $(DATA)
+#### make patch-components PATCH_IDS=ids.txt
+patch-components:
+	@test -n "$(PATCH_IDS)" && test -f "$(PATCH_IDS)" || { echo "ERROR: PATCH_IDS file is not defined or does not exist" >&2; exit 1; }
+	@DATETIME=$$(date +%Y%m%d-%H%M%S); \
+	PATCH=$${PATCH_DATA:-$(patsubst %/,%,$(DATA)).patch.$$DATETIME}; \
+	PATCH=$${PATCH%/}; \
+	ERR=$${ERROR_DATA:-$(patsubst %/,%,$(DATA)).error.$$DATETIME}; \
+	ERR=$${ERR%/}; \
+	mkdir -p "$$PATCH" "$$ERR"; \
+	sed 's/\.\(xml\|jsonl\)$$//;s@^.*/@@;/^[[:space:]]*$$/d' "$(PATCH_IDS)" | sort -u \
+	  | sed -E 's@^(PressMint-CZ_([0-9]{4})-.*)$$@\2/\1@' > "$$PATCH/patch-components.tasks"; \
+	cp "$$PATCH/patch-components.tasks" "$$ERR/patch-components.tasks"; \
+	copy_files() { \
+	  SRCDIR=$$1; DSTDIR=$$2; shift 2; \
+	  for f in "$$@"; do \
+	    if [ ! -e "$$SRCDIR/$$f" ]; then \
+	      echo "WARN: missing $$SRCDIR/$$f" >&2; \
+	    elif [ ! -e "$$DSTDIR/$$f" ]; then \
+	      (cd "$$SRCDIR" && cp -r --parents "$$f" "$$DSTDIR/"); \
+	    fi; \
+	  done; \
+	}; \
+	while read -r COMP; do \
+	  copy_files "$(patsubst %/,%,$(DATA))" "$$ERR" \
+	    work/tei-text/$$COMP.xml work/tei-facs/$$COMP.xml work/tei-text.TT/$$COMP.xml work/tei-text.ana/$$COMP.xml \
+	    dist/tei/$$COMP.xml dist/tei-ana/$$COMP.ana.xml; \
+	  copy_files "$(patsubst %/,%,$(DATA))" "$$PATCH" \
+	    work/idMapping/$$COMP.jsonl work/ocrXML/$$COMP work/imageRegions/$$COMP.jsonl work/tei-header/$$COMP.xml; \
+	done < "$$PATCH/patch-components.tasks"; \
+	echo "INFO: $$(wc -l < "$$PATCH/patch-components.tasks") components: original outputs copied to $$ERR, inputs copied to $$PATCH"; \
+	while read -r COMP; do \
+	  make patch-component DATA="$$PATCH/" COMPONENT_PATH="$$COMP" </dev/null \
+	    || echo "ERROR: patching $$COMP failed" >&2; \
+	done < "$$PATCH/patch-components.tasks"; \
+	echo "INFO: original data in $$ERR"; \
+	echo "INFO: patched data in $$PATCH"
+
+patch-component:
+	@test -f "$(idMapping)/$(COMPONENT_PATH).jsonl" || { echo "ERROR: no id mapping for $(COMPONENT_PATH)" >&2; exit 1; }
+	@test -d "$(xmlOCR)/$(COMPONENT_PATH)" || { echo "ERROR: no OCR output for $(COMPONENT_PATH)" >&2; exit 1; }
+	@test -f "$(imageRegions)/$(COMPONENT_PATH).jsonl" || { echo "ERROR: no image regions for $(COMPONENT_PATH)" >&2; exit 1; }
+	@echo "INFO: patching $(COMPONENT_PATH) in $(DATA)"
+	rm -f $(TEItext)/$(COMPONENT_PATH).xml \
+	      $(TEIfacs)/$(COMPONENT_PATH).xml \
+	      $(TEItextTT)/$(COMPONENT_PATH).xml \
+	      $(TEItextANA)/$(COMPONENT_PATH).xml
+	make process-data-byPath COMPONENT_PATH=$(COMPONENT_PATH)
+	test -f $(TEItext)/$(COMPONENT_PATH).xml
+	mkdir -p $(dir $(TEItextTT)/$(COMPONENT_PATH)) $(dir $(TEItextANA)/$(COMPONENT_PATH))
+	cp $(TEItext)/$(COMPONENT_PATH).xml $(TEItextTT)/$(COMPONENT_PATH).xml
+	make teiText2tt-single FILE=$(TEItextTT)/$(COMPONENT_PATH).xml
+	make TT2teiANA-single FILE=$(TEItextTT)/$(COMPONENT_PATH).xml OUTPUT=$(TEItextANA)/$(COMPONENT_PATH).xml
+	test -f $(TEItextANA)/$(COMPONENT_PATH).xml
+
+##patch-apply## copy patched outputs from $(PATCH_DATA) back to $(DATA) (components listed in $(PATCH_DATA)/patch-components.tasks)
+#### only complete components (all of tei-text, tei-facs, tei-text.TT, tei-text.ana) are applied, then run: make process-build
+#### make patch-apply PATCH_DATA=Data.patch.<DATETIME>
+patch-apply:
+	@test -n "$(PATCH_DATA)" && test -f "$(PATCH_DATA)/patch-components.tasks" || { echo "ERROR: PATCH_DATA is not defined or has no patch-components.tasks" >&2; exit 1; }
+	@PATCH=$(patsubst %/,%,$(PATCH_DATA)); \
+	DST=$(patsubst %/,%,$(DATA)); \
+	test "$$(realpath "$$PATCH")" != "$$(realpath "$$DST")" || { echo "ERROR: PATCH_DATA and DATA are the same directory" >&2; exit 1; }; \
+	APPLIED=0; \
+	while read -r COMP; do \
+	  FILES="work/tei-text/$$COMP.xml work/tei-facs/$$COMP.xml work/tei-text.TT/$$COMP.xml work/tei-text.ana/$$COMP.xml"; \
+	  MISSING=""; \
+	  for f in $$FILES; do test -f "$$PATCH/$$f" || MISSING="$$MISSING $$f"; done; \
+	  if [ -n "$$MISSING" ]; then \
+	    echo "WARN: skipping $$COMP, missing in $$PATCH:$$MISSING" >&2; \
+	    continue; \
+	  fi; \
+	  (cd "$$PATCH" && cp --parents $$FILES "$$DST/"); \
+	  APPLIED=$$((APPLIED+1)); \
+	done < "$$PATCH/patch-components.tasks"; \
+	echo "INFO: $$APPLIED of $$(wc -l < "$$PATCH/patch-components.tasks") components applied to $$DST"; \
+	echo "INFO: continue with: make DATA=$$DST/ process-build"

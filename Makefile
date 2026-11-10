@@ -143,6 +143,7 @@ endif
 -include Makefile.dev
 -include Makefile.deprecated
 -include Makefile.PressMint
+-include Makefile.patch
 
 ifneq ($(SAMPLE),1)
 $(IN)/PressMint-CZ-issues.json: $(IN)
