@@ -61,6 +61,8 @@
       <xsl:param name="wordsTotal" as="xs:integer" select="0" />
       <xsl:param name="tagTotals" as="map(xs:string, xs:integer)" select="map{}" />
       <xsl:param name="okHrefs" as="map(xs:string, xs:boolean)" select="map{}" />
+      <!-- one small element per processed component: newspaper title, newspaper UUID, issue date, pubPlaces and ISSNs -->
+      <xsl:param name="issues" as="element(tei:issue)*" select="()" />
 
       <!-- Output Root file -->
       <xsl:on-completion>
@@ -78,6 +80,11 @@
           <xsl:apply-templates mode="root" select="$corpus">
             <xsl:with-param name="wordsTotal" select="$wordsTotal" tunnel="yes" />
             <xsl:with-param name="okHrefs" select="$okHrefs" tunnel="yes" />
+            <xsl:with-param name="newspapers" tunnel="yes">
+              <xsl:call-template name="newspaper-bibls">
+                <xsl:with-param name="issues" select="$issues" />
+              </xsl:call-template>
+            </xsl:with-param>
             <xsl:with-param name="tagUsages" tunnel="yes">
               <xsl:for-each select="map:keys($tagTotals)">
                 <xsl:sort select="." />
@@ -182,6 +189,7 @@
             <xsl:with-param name="wordsTotal" select="$wordsTotal" />
             <xsl:with-param name="tagTotals" select="$tagTotals" />
             <xsl:with-param name="okHrefs" select="$okHrefs" />
+            <xsl:with-param name="issues" select="$issues" />
           </xsl:next-iteration>
         </xsl:when>
         <xsl:otherwise>
@@ -217,6 +225,20 @@
                           map:put($m, string($t/@gi), ($m(string($t/@gi)), 0)[1] + xs:integer($t/@occurs))
                         })" />
             <xsl:with-param name="okHrefs" select="map:put($okHrefs, $this, true())" />
+            <xsl:with-param name="issues" as="element(tei:issue)*">
+              <xsl:sequence select="$issues" />
+              <xsl:variable name="bibl" select="$teiHeader/tei:fileDesc/tei:sourceDesc/tei:bibl[1]" />
+              <issue title="{normalize-space($bibl/tei:title[@level='j'][1])}"
+                     uuid="{tokenize(normalize-space($bibl/tei:idno[@type='local'][@subtype='UUID-path-mzk'][1]), '/')[1]}"
+                     when="{normalize-space($bibl/tei:date/@when)}">
+                <xsl:for-each select="$bibl/tei:pubPlace">
+                  <pubPlace><xsl:value-of select="normalize-space(.)" /></pubPlace>
+                </xsl:for-each>
+                <xsl:for-each select="$bibl/tei:idno[@type='ISSN']">
+                  <issn><xsl:value-of select="normalize-space(.)" /></issn>
+                </xsl:for-each>
+              </issue>
+            </xsl:with-param>
           </xsl:next-iteration>
         </xsl:otherwise>
       </xsl:choose>
@@ -281,6 +303,16 @@
     </xsl:copy>
   </xsl:template>
 
+
+  <!-- add one bibl per newspaper after the bibls from config -->
+  <xsl:template mode="root" match="tei:sourceDesc">
+    <xsl:param name="newspapers" tunnel="yes" />
+    <xsl:copy>
+      <xsl:apply-templates mode="root" select="@*" />
+      <xsl:apply-templates mode="root" />
+      <xsl:copy-of select="$newspapers" />
+    </xsl:copy>
+  </xsl:template>
 
   <xsl:template mode="root" match="tei:tagsDecl">
     <xsl:param name="tagUsages" tunnel="yes" />
@@ -496,6 +528,39 @@
         </xsl:for-each>
       </xsl:element>
     </xsl:element>
+  </xsl:template>
+
+  <!-- group issues by newspaper title; date range is the minimum and maximum issue date -->
+  <xsl:template name="newspaper-bibls">
+    <xsl:param name="issues" />
+    <xsl:for-each-group select="$issues" group-by="@title">
+      <xsl:sort select="current-grouping-key()" />
+      <xsl:variable name="title" select="current-grouping-key()" />
+      <xsl:variable name="dates" select="current-group()/@when[normalize-space()]/string()" />
+      <xsl:variable name="uuids" select="distinct-values(current-group()/@uuid[normalize-space()])" />
+      <xsl:if test="$title = ''">
+        <xsl:message select="concat('ERROR: ', count(current-group()), ' component(s) without newspaper title (title[@level=''j''])')" />
+      </xsl:if>
+      <xsl:if test="count($uuids) != 1">
+        <xsl:message select="concat('WARN: newspaper ''', $title, ''' has ', count($uuids), ' UUID(s): ', string-join($uuids, ' '))" />
+      </xsl:if>
+      <bibl>
+        <title level="j"><xsl:value-of select="$title" /></title>
+        <xsl:if test="exists($dates)">
+          <date from="{min($dates)}" to="{max($dates)}" />
+        </xsl:if>
+        <xsl:for-each select="distinct-values(current-group()/tei:pubPlace[normalize-space()])">
+          <pubPlace><xsl:value-of select="." /></pubPlace>
+        </xsl:for-each>
+        <xsl:for-each select="distinct-values(current-group()/tei:issn[normalize-space()])">
+          <idno type="ISSN"><xsl:value-of select="." /></idno>
+        </xsl:for-each>
+        <xsl:for-each select="$uuids">
+          <idno type="local" subtype="UUID-mzk"><xsl:value-of select="." /></idno>
+          <idno type="URI" subtype="URL"><xsl:value-of select="concat('https://www.digitalniknihovna.cz/mzk/periodical/', .)" /></idno>
+        </xsl:for-each>
+      </bibl>
+    </xsl:for-each-group>
   </xsl:template>
 
   <xsl:template name="add-measure-words">
