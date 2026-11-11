@@ -1,53 +1,79 @@
 ###### Patch selected TEI components
 
-##$PATCH_IDS## File with component ids to reprocess, one per line (e.g. PressMint-CZ_1848-04-06-392f65d0)
+##$PATCH_IDS## File with component ids to reprocess, one per line (e.g. PressMint-CZ_1848-04-06-392f65d0), needed only by patch-prepare
 PATCH_IDS ?=
-##$PATCH_DATA## Output data directory of patch-components (default: $(DATA) with suffix .patch.<DATETIME>)
-PATCH_DATA ?=
+# one timestamp per make invocation (exported to sub-makes, so they share it)
+ifndef PATCH_DATETIME
+PATCH_DATETIME := $(shell date +%Y%m%d-%H%M%S)
+endif
+##$PATCH_DATA## Data directory of the patch (default: $(DATA) with suffix .patch.<DATETIME>), pass an existing one to continue
+PATCH_DATA ?= $(patsubst %/,%,$(DATA)).patch.$(PATCH_DATETIME)
 ##$ERROR_DATA## Directory for the original (erroneous) outputs of patched components (default: $(DATA) with suffix .error.<DATETIME>)
-ERROR_DATA ?=
+ERROR_DATA ?= $(patsubst %/,%,$(DATA)).error.$(PATCH_DATETIME)
 
-##patch-components## reprocess components listed in $(PATCH_IDS), ends just before process-build
+PATCH_TASKS = $(patsubst %/,%,$(PATCH_DATA))/patch-components.tasks
+
+##patch-prepare## copy all files needed for patching components listed in $(PATCH_IDS), skipped when $(PATCH_DATA) is already prepared
 #### 1. original outputs are copied from $(DATA) to $(ERROR_DATA): work/tei-text, work/tei-facs, work/tei-text.TT, work/tei-text.ana, dist/tei, dist/tei-ana
 #### 2. inputs are copied from $(DATA) to $(PATCH_DATA): work/idMapping, work/ocrXML, work/imageRegions, work/tei-header
-#### 3. outputs are recreated in $(PATCH_DATA): work/tei-text, work/tei-facs, work/tei-text.TT, work/tei-text.ana
 #### both directories keep the same structure as $(DATA)
-#### make patch-components PATCH_IDS=ids.txt
-patch-components:
-	@test -n "$(PATCH_IDS)" && test -f "$(PATCH_IDS)" || { echo "ERROR: PATCH_IDS file is not defined or does not exist" >&2; exit 1; }
-	@DATETIME=$$(date +%Y%m%d-%H%M%S); \
-	PATCH=$${PATCH_DATA:-$(patsubst %/,%,$(DATA)).patch.$$DATETIME}; \
-	PATCH=$${PATCH%/}; \
-	ERR=$${ERROR_DATA:-$(patsubst %/,%,$(DATA)).error.$$DATETIME}; \
-	ERR=$${ERR%/}; \
+#### make patch-prepare PATCH_IDS=ids.txt
+patch-prepare: $(PATCH_TASKS)
+
+$(PATCH_TASKS):
+	@test -n "$(PATCH_IDS)" && test -f "$(PATCH_IDS)" || { echo "ERROR: $(PATCH_DATA) is not prepared and PATCH_IDS file is not defined or does not exist" >&2; exit 1; }
+	@PATCH=$(patsubst %/,%,$(PATCH_DATA)); \
+	ERR=$(patsubst %/,%,$(ERROR_DATA)); \
+	SRC=$(patsubst %/,%,$(DATA)); \
 	mkdir -p "$$PATCH" "$$ERR"; \
 	sed 's/\.\(xml\|jsonl\)$$//;s@^.*/@@;/^[[:space:]]*$$/d' "$(PATCH_IDS)" | sort -u \
-	  | sed -E 's@^(PressMint-CZ_([0-9]{4})-.*)$$@\2/\1@' > "$$PATCH/patch-components.tasks"; \
-	cp "$$PATCH/patch-components.tasks" "$$ERR/patch-components.tasks"; \
+	  | sed -E 's@^(PressMint-CZ_([0-9]{4})-.*)$$@\2/\1@' > "$@.tmp"; \
 	copy_files() { \
-	  SRCDIR=$$1; DSTDIR=$$2; shift 2; \
+	  DSTDIR=$$1; shift; \
 	  for f in "$$@"; do \
-	    if [ ! -e "$$SRCDIR/$$f" ]; then \
-	      echo "WARN: missing $$SRCDIR/$$f" >&2; \
+	    if [ ! -e "$$SRC/$$f" ]; then \
+	      echo "WARN: missing $$SRC/$$f" >&2; \
 	    elif [ ! -e "$$DSTDIR/$$f" ]; then \
-	      (cd "$$SRCDIR" && cp -r --parents "$$f" "$$DSTDIR/"); \
+	      (cd "$$SRC" && cp -r --parents "$$f" "$$DSTDIR/"); \
 	    fi; \
 	  done; \
 	}; \
 	while read -r COMP; do \
-	  copy_files "$(patsubst %/,%,$(DATA))" "$$ERR" \
+	  copy_files "$$ERR" \
 	    work/tei-text/$$COMP.xml work/tei-facs/$$COMP.xml work/tei-text.TT/$$COMP.xml work/tei-text.ana/$$COMP.xml \
 	    dist/tei/$$COMP.xml dist/tei-ana/$$COMP.ana.xml; \
-	  copy_files "$(patsubst %/,%,$(DATA))" "$$PATCH" \
+	  copy_files "$$PATCH" \
 	    work/idMapping/$$COMP.jsonl work/ocrXML/$$COMP work/imageRegions/$$COMP.jsonl work/tei-header/$$COMP.xml; \
-	done < "$$PATCH/patch-components.tasks"; \
-	echo "INFO: $$(wc -l < "$$PATCH/patch-components.tasks") components: original outputs copied to $$ERR, inputs copied to $$PATCH"; \
+	done < "$@.tmp"; \
+	cp "$@.tmp" "$$ERR/patch-components.tasks"; \
+	printf 'SOURCE_DATA=%s\nERROR_DATA=%s\n' "$$SRC" "$$ERR" > "$$PATCH/patch.info"; \
+	mv "$@.tmp" "$@"; \
+	echo "INFO: $$(wc -l < "$@") components: original outputs copied to $$ERR, inputs copied to $$PATCH"
+
+##patch-components## reprocess components listed in $(PATCH_DATA)/patch-components.tasks, ends just before process-build
+#### outputs are recreated in $(PATCH_DATA): work/tei-text, work/tei-facs, work/tei-text.TT, work/tei-text.ana
+#### finished components are listed in patch-components.done and skipped when continuing, failed ones in patch-components.failed
+#### start:    make patch-components PATCH_IDS=ids.txt
+#### continue: make patch-components PATCH_DATA=Data.patch.<DATETIME>
+patch-components: patch-prepare
+	@PATCH=$(patsubst %/,%,$(PATCH_DATA)); \
+	touch "$$PATCH/patch-components.done"; \
+	rm -f "$$PATCH/patch-components.failed"; \
 	while read -r COMP; do \
-	  make patch-component DATA="$$PATCH/" COMPONENT_PATH="$$COMP" </dev/null \
-	    || echo "ERROR: patching $$COMP failed" >&2; \
-	done < "$$PATCH/patch-components.tasks"; \
-	echo "INFO: original data in $$ERR"; \
-	echo "INFO: patched data in $$PATCH"
+	  if grep -qxF "$$COMP" "$$PATCH/patch-components.done"; then \
+	    echo "INFO: skipping $$COMP, already patched"; \
+	    continue; \
+	  fi; \
+	  if make patch-component DATA="$$PATCH/" COMPONENT_PATH="$$COMP" </dev/null; then \
+	    echo "$$COMP" >> "$$PATCH/patch-components.done"; \
+	  else \
+	    echo "$$COMP" >> "$$PATCH/patch-components.failed"; \
+	    echo "ERROR: patching $$COMP failed" >&2; \
+	  fi; \
+	done < "$(PATCH_TASKS)"; \
+	echo "INFO: $$(wc -l < "$$PATCH/patch-components.done") of $$(wc -l < "$(PATCH_TASKS)") components patched in $$PATCH"; \
+	test ! -s "$$PATCH/patch-components.failed" || echo "WARN: $$(wc -l < "$$PATCH/patch-components.failed") components failed, see $$PATCH/patch-components.failed" >&2; \
+	echo "INFO: continue with: make patch-components PATCH_DATA=$$PATCH"
 
 patch-component:
 	@test -f "$(idMapping)/$(COMPONENT_PATH).jsonl" || { echo "ERROR: no id mapping for $(COMPONENT_PATH)" >&2; exit 1; }
