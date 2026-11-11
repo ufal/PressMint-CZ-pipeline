@@ -15,6 +15,12 @@ PM_RESP_NAME ?= Matyáš Kopp
 PM_RESP_REF ?= https://orcid.org/0000-0001-7953-8783
 ##$PM_ID_ELEMENTS## text elements that get missing xml:id in PressMint-fix-ids (comma separated)
 PM_ID_ELEMENTS ?= p,head
+##$PM_RETRIES## number of flexipipe attempts per component (UDPipe/NameTag LINDAT services can fail temporarily)
+PM_RETRIES ?= 3
+##$PM_RETRY_WAIT## seconds to wait before next attempt, multiplied by number of failed attempts (60, 120, 180, ...)
+PM_RETRY_WAIT ?= 60
+##$PM_TIMEOUT## timeout of UDPipe/NameTag REST requests in seconds (flexipipe default: 30)
+PM_TIMEOUT ?= 120
 ##$PM_JOBS## number of parallel flexipipe/teitok2tei jobs
 PM_JOBS ?= 1
 
@@ -50,13 +56,17 @@ _PressMint-check: _PressMint-check-dir
 	@echo "INFO: $(PM_ORIG) -> $(PM_DIR) -> $(PM_ANA) (lang=$(PM_LANG), UD=$(PM_UD_MODEL), NER=$(PM_NER_MODEL))"
 
 ##PressMint-fix-ids## copy PressMint-XX.TEI-orig to PressMint-XX.TEI and add missing xml:id to PM_ID_ELEMENTS (p, head) in components
+#### only missing/changed files are processed: fixed component is touched, so it is newer than its -orig source
 PressMint-fix-ids: _PressMint-check-dir
 	@test -f "$(PM_ORIG_ROOT)" || { echo "ERROR: missing root file $(PM_ORIG_ROOT)"; exit 1; }
 	mkdir -p $(PM_DIR)
-	cp -r --preserve=timestamps $(PM_ORIG)/. $(PM_DIR)/
-	FILES=$$(python Scripts/teiCorpusInfo.py components $(PM_ROOT)) || exit 1; \
+	cp -r --update --preserve=timestamps $(PM_ORIG)/. $(PM_DIR)/
+	@FILES=$$(python Scripts/teiCorpusInfo.py components $(PM_ROOT)) || exit 1; \
 	test -n "$$FILES" || { echo "ERROR: no components in $(PM_ROOT)"; exit 1; }; \
-	cd $(PM_DIR) && python $(CURDIR)/Scripts/addMissingIds.py --elements $(PM_ID_ELEMENTS) $$FILES
+	cd $(PM_DIR) || exit 1; \
+	TODO=$$(for f in $$FILES; do [ "$$f" -nt "$(PM_ORIG)/$$f" ] || echo "$$f"; done); \
+	echo "INFO: fix-ids: $$(echo "$$TODO" | grep -c .) of $$(echo "$$FILES" | wc -w) components to process"; \
+	[ -z "$$TODO" ] || { python $(CURDIR)/Scripts/addMissingIds.py --elements $(PM_ID_ELEMENTS) $$TODO && touch $$TODO; }
 
 # list of components (xi:include in root file)
 $(PM_TT).fl: _PressMint-check
@@ -71,18 +81,33 @@ PressMint-tei2tt: $(PM_TT).fl
 
 PressMint-tei2tt-single:
 	mkdir -p $(dir $(PM_TT)/$(PM_FILE))
-	test -f $(PM_TT)/$(PM_FILE) || cp $(PM_DIR)/$(PM_FILE) $(PM_TT)/$(PM_FILE)
-	grep -q '</tok>' $(PM_TT)/$(PM_FILE) \
-	&& echo "INFO: skipping $(PM_TT)/$(PM_FILE) because it is already annotated" \
-	||  $(FLEXIPIPE) \
+	@# compared with -orig source (fixed TEI is touched by PressMint-fix-ids)
+	@if [ $(PM_TT)/$(PM_FILE) -nt $(PM_ORIG)/$(PM_FILE) ] && grep -q '</tok>' $(PM_TT)/$(PM_FILE); then \
+	  echo "INFO: skipping $(PM_TT)/$(PM_FILE) because it is already annotated"; exit 0; \
+	fi; \
+	for TRY in $$(seq 1 $(PM_RETRIES)); do \
+	  cp $(PM_DIR)/$(PM_FILE) $(PM_TT)/$(PM_FILE); \
+	  echo "INFO: annotating $(PM_FILE) (attempt $$TRY/$(PM_RETRIES))"; \
+	  $(FLEXIPIPE) \
 	    process $(PM_TT)/$(PM_FILE) \
 	    --tokenize \
 	    --backend udpipe --model $(PM_UD_MODEL) \
 	    --ner-backend nametag --nametag-model $(PM_NER_MODEL) \
 	    --language $(PM_LANG) \
 	    --tasks segment,tokenize,lemmatize,tag,ner \
+	    --timeout $(PM_TIMEOUT) \
 	    --writeback --writeback-engine xmltokenizer \
-	    -O punctuation-split:hard
+	    -O punctuation-split:hard \
+	  && grep -q '</tok>' $(PM_TT)/$(PM_FILE) && exit 0; \
+	  echo "WARN: annotation of $(PM_FILE) failed (attempt $$TRY/$(PM_RETRIES))"; \
+	  if [ $$TRY -lt $(PM_RETRIES) ]; then \
+	    WAIT=$$(( $(PM_RETRY_WAIT) * TRY )); \
+	    echo "INFO: waiting $$WAIT s before next attempt"; \
+	    sleep $$WAIT; \
+	  fi; \
+	done; \
+	cp $(PM_DIR)/$(PM_FILE) $(PM_TT)/$(PM_FILE); \
+	echo "ERROR: annotation of $(PM_FILE) failed $(PM_RETRIES) times"; exit 1
 
 ##PressMint-tt2ana## convert flexipipe output (PM_TEI.TT) to TEI (PM_TEI.TT.ana)
 PressMint-tt2ana: $(PM_TT).fl
@@ -91,6 +116,8 @@ PressMint-tt2ana: $(PM_TT).fl
 
 PressMint-tt2ana-single:
 	mkdir -p $(dir $(PM_TT_ANA)/$(PM_FILE))
+	@[ ! $(PM_TT_ANA)/$(PM_FILE) -nt $(PM_TT)/$(PM_FILE) ] \
+	|| { echo "INFO: skipping $(PM_TT_ANA)/$(PM_FILE) because it is already converted"; exit 0; }; \
 	grep -q '</tok>' $(PM_TT)/$(PM_FILE) \
 	&& python Scripts/teitok2tei.py \
 	    --input $(PM_TT)/$(PM_FILE) \
@@ -104,7 +131,7 @@ PressMint-ana-build: $(PM_TT).fl
 	cat $< | while read -r f; do \
 	  if [ -f "$(PM_TT_ANA)/$$f" ]; then \
 	    mkdir -p "$$(dirname "$(PM_ANA)/$$f")"; \
-	    cp "$(PM_TT_ANA)/$$f" "$(PM_ANA)/$${f%.xml}.ana.xml"; \
+	    cp --update "$(PM_TT_ANA)/$$f" "$(PM_ANA)/$${f%.xml}.ana.xml"; \
 	  else echo "WARN: missing annotated component $(PM_TT_ANA)/$$f"; fi; \
 	done
 	# taxonomies included in root teiHeader + NER taxonomy
