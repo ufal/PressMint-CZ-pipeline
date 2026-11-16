@@ -153,7 +153,7 @@ PressMint-ana-build: $(PM_TT).fl
 ##slurm-PressMint-tei2ana## run whole PressMint-tei2ana as one slurm job (no parallelization)
 slurm-PressMint-tei2ana: _PressMint-check-dir
 	@mkdir -p logs/slurm
-	sbatch --job-name=$(PM_CORPUS).ana \
+	sbatch $(SBATCH_EXCLUDE) --job-name=$(PM_CORPUS).ana \
 	       --export=ALL \
 	       --partition=cpu-troja,cpu-ms \
 	       --gres=none \

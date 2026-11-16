@@ -81,7 +81,7 @@ patch-components: patch-prepare
 slurm-patch-components:
 	@test -f "$(PATCH_TASKS)" || { test -n "$(PATCH_IDS)" && test -f "$(PATCH_IDS)"; } || { echo "ERROR: $(PATCH_DATA) is not prepared and PATCH_IDS file is not defined or does not exist" >&2; exit 1; }
 	@mkdir -p logs/slurm
-	sbatch --job-name=PressMint-patch \
+	sbatch $(SBATCH_EXCLUDE) --job-name=PressMint-patch \
 	       --partition=cpu-troja,cpu-ms \
 	       --gres=none \
 	       --cpus-per-task=8 \

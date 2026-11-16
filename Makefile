@@ -102,6 +102,10 @@ SAXON := java $(JM) -jar Scripts/bin/saxon.jar
 SLURM_MAX_CONCURRENT ?= 30
 SLURM_ARRAY_SIZE ?= 10000
 SLURM_ARRAY_START ?= 1
+##$SLURM_EXCLUDE## cluster nodes that should not be used by slurm-* targets (space or comma separated, e.g. SLURM_EXCLUDE="node1 node2")
+SLURM_EXCLUDE ?=
+comma := ,
+SBATCH_EXCLUDE = $(if $(strip $(SLURM_EXCLUDE)),--exclude=$(subst $(eval) ,$(comma),$(strip $(subst $(comma), ,$(SLURM_EXCLUDE)))))
 
 ifdef COMPONENT_PATH
 UUID_PATH := 	$(shell jq -r 'select(.uuid_path != null) | .uuid_path' $(idMapping)/$(COMPONENT_PATH).jsonl | head -n 1|cut -d '/' -f 1-3)
@@ -588,7 +592,7 @@ slurm-img2tei:
 	@# Count total lines in the file
 	@TOTAL_TASKS=$$(wc -l < $(TASKS_ISSUES) | tr -d ' '); \
 	LAST_TASK=$$(python3 -c "print(min($$TOTAL_TASKS, $(SLURM_ARRAY_START) + $(SLURM_ARRAY_SIZE) - 1)-$(SLURM_ARRAY_START))"); \
-	sbatch --array=1-$$LAST_TASK%$(SLURM_MAX_CONCURRENT) \
+	sbatch $(SBATCH_EXCLUDE) --array=1-$$LAST_TASK%$(SLURM_MAX_CONCURRENT) \
 	       --export=DEVICE=gpu,PERO_OCR_MODEL_CONFIG=Models/$(PERO_OCR_MODEL_NAME)/config.ini,TASKS_FILE=$(TASKS_ISSUES),SLURM_START=$(SLURM_ARRAY_START),SAMPLE=$(SAMPLE),MAKEFILE_TARGET=download-imgs-process-data-delete-imgs \
 	       Scripts/slurm_submit_process.sh
 
@@ -598,7 +602,7 @@ slurm-img2tei-byPath:
 	@# Count total lines in the file
 	@TOTAL_TASKS=$$(wc -l < $(TASKS_TEI_COMPONENTS) | tr -d ' '); \
 	LAST_TASK=$$(python3 -c "print(min($$TOTAL_TASKS, $(SLURM_ARRAY_START) + $(SLURM_ARRAY_SIZE) - 1)-$(SLURM_ARRAY_START))"); \
-	sbatch --array=1-$$LAST_TASK%$(SLURM_MAX_CONCURRENT) \
+	sbatch $(SBATCH_EXCLUDE) --array=1-$$LAST_TASK%$(SLURM_MAX_CONCURRENT) \
 	       --export=DEVICE=gpu,PERO_OCR_MODEL_CONFIG=Models/$(PERO_OCR_MODEL_NAME)/config.ini,VAR_NAME=COMPONENT_PATH,TASKS_FILE=$(TASKS_TEI_COMPONENTS),SLURM_START=$(SLURM_ARRAY_START),SAMPLE=$(SAMPLE),MAKEFILE_TARGET=process-data-byPath \
 	       Scripts/slurm_submit_process.sh
 
@@ -799,7 +803,7 @@ slurm-TT2teiANA:
 	@# Count total lines in the file
 	@TOTAL_TASKS=$$(wc -l < $(TEItextANA).fl | tr -d ' '); \
 	LAST_TASK=$$(python3 -c "print(min($$TOTAL_TASKS, $(SLURM_ARRAY_START) + $(SLURM_ARRAY_SIZE) - 1)-$(SLURM_ARRAY_START))"); \
-	sbatch --array=1-$$LAST_TASK%$(SLURM_MAX_CONCURRENT) \
+	sbatch $(SBATCH_EXCLUDE) --array=1-$$LAST_TASK%$(SLURM_MAX_CONCURRENT) \
 	       --export=TASKS_FILE=$(TEItextANA).fl,SLURM_START=$(SLURM_ARRAY_START),VAR_NAME=RELPATH,MAKEFILE_TARGET=TT2teiANA-single-task \
 				 --partition=cpu-troja,cpu-ms \
 				 --gres=none \
