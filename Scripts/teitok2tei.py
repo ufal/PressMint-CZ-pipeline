@@ -352,11 +352,9 @@ def transform_text(tree):
     # remove helper attrs
     for el in root.iter():
 
-        for attr in ["form", "text"]:
+        for attr in ["form", "text", "cont", "rpt"]:
             if attr in el.attrib:
                 del el.attrib[attr]
-        if localname(el.tag) == "p":
-            el.attrib.pop("cont", None)
     root.attrib.pop('xmlnsoff', None)
     etree.cleanup_namespaces(tree)
     return tree
