@@ -161,10 +161,11 @@ slurm-PressMint-tei2ana: _PressMint-check-dir
 	       --mem=32G \
 	       --output=logs/slurm/$(PM_CORPUS).ana_%j.out \
 	       --error=logs/slurm/$(PM_CORPUS).ana_%j.err \
-	       --wrap="make PressMint-tei2ana"
+	       --wrap="make check-prereq && make PressMint-tei2ana"
 
 ##PressMint-clean-tmp## remove temporary PressMint-XX.TEI.TT and PressMint-XX.TEI.TT.ana
 PressMint-clean-tmp: _PressMint-check-dir
 	rm -rf $(PM_TT) $(PM_TT).fl $(PM_TT_ANA)
 
 .PHONY: PressMint-tei2ana slurm-PressMint-tei2ana PressMint-fix-ids _PressMint-check-dir _PressMint-check PressMint-tei2tt PressMint-tei2tt-single PressMint-tt2ana PressMint-tt2ana-single PressMint-ana-build PressMint-clean-tmp
+

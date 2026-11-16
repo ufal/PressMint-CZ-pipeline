@@ -49,6 +49,12 @@ echo "Task ${TASK_ID} (slurm task id=${SLURM_ARRAY_TASK_ID}) running on node ${S
 echo "PROCESSING: $MAKEFILE_TARGET with $VAR_NAME: $TASK"
 echo "DATADIR: $DATADIR"
 
+# Check prerequisites on this node before processing
+if ! make check-prereq; then
+    echo -e "$(date +"%Y-%m-%dT%T") DONE (${TASK_ID}): $TASK   FAILED-PREREQ    $SLURM_JOB_ID/${TASK_ID}   $(hostname)     make check-prereq" >> logs/PressMint-CZ.slurm.log
+    exit 1
+fi
+
 echo -e "$(date +"%Y-%m-%dT%T") START (${TASK_ID}): $TASK" >> logs/PressMint-CZ.slurm.log
 # 4. Execute your existing Make command for this specific line
 CMD="make $MAKEFILE_TARGET $VAR_NAME=$TASK DEVICE=$DEVICE PERO_OCR_MODEL_CONFIG=$PERO_OCR_MODEL_CONFIG PERO_OCR_MODEL_NAME=$PERO_OCR_MODEL_NAME"

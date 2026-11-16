@@ -863,6 +863,40 @@ dist-tei-ana: $(TEIANA)
 ####
 prereq: parczech
 
+##$PREREQ_CMDS## commands checked by check-prereq
+PREREQ_CMDS = make jq python python3 perl java curl sed awk find xargs /usr/bin/time
+##$PREREQ_FILES## files checked by check-prereq
+PREREQ_FILES = Models/$(PERO_OCR_MODEL_NAME)/config.ini $(YOLO_MODEL) Scripts/bin/saxon.jar $(firstword $(FLEXIPIPE))
+##$PREREQ_PYMODULES## python modules checked by check-prereq
+PREREQ_PYMODULES = pero_ocr ultralytics numpy scipy shapely lxml
+##$PREREQ_PERLMODULES## perl modules checked by check-prereq, only when perlbrew is initialized (perlbrew use, as in Scripts/slurm_submit_process.sh)
+PREREQ_PERLMODULES = JSON XML::LibXML XML::LibXML::PrettyPrint PressMintCZ
+
+##check-prereq## check that all commands, files and modules of the pipeline are available (incl. flexipipe with xmltokenizer)
+#### all slurm-* jobs run it on the compute node before processing
+check-prereq:
+	@MISSING=0; \
+	for c in $(PREREQ_CMDS); do \
+	  command -v $$c >/dev/null 2>&1 || { echo "ERROR: missing command: $$c" >&2; MISSING=1; }; \
+	done; \
+	for f in $(PREREQ_FILES); do \
+	  test -e $$f || { echo "ERROR: missing file: $$f" >&2; MISSING=1; }; \
+	done; \
+	for m in $(PREREQ_PYMODULES); do \
+	  python -c "import $$m" >/dev/null 2>&1 || { echo "ERROR: missing python module: $$m ($$(command -v python))" >&2; MISSING=1; }; \
+	done; \
+	if [ -n "$$PERLBREW_PERL" ]; then \
+	  echo "INFO: checking perl modules with perlbrew $$PERLBREW_PERL$${PERLBREW_LIB:+@$$PERLBREW_LIB} ($$(command -v perl))"; \
+	  for m in $(PREREQ_PERLMODULES); do \
+	    perl -I Scripts/lib -M$$m -e1 >/dev/null 2>&1 || { echo "ERROR: missing perl module: $$m" >&2; MISSING=1; }; \
+	  done; \
+	else \
+	  echo "WARN: perlbrew is not initialized, skipping perl modules check"; \
+	fi; \
+	$(firstword $(FLEXIPIPE)) -c "import flexipipe, xmltokenizer" >/dev/null 2>&1 || { echo "ERROR: flexipipe or xmltokenizer is not available ($(FLEXIPIPE))" >&2; MISSING=1; }; \
+	if [ $$MISSING -ne 0 ]; then echo "ERROR: prerequisites are missing" >&2; exit 1; fi; \
+	echo "INFO: all prerequisites found"
+
 parczech: Scripts/resources
 	git clone https://github.com/ufal/ParCzech.git --no-checkout $</ParCzech --depth 10 -b master ;\
 	cd $</ParCzech ;\
