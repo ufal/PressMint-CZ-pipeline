@@ -5,7 +5,7 @@
 #SBATCH --error=logs/slurm/process_%A_%a.err
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
-#SBATCH --gres=gpu:1                  # Requests exactly 1 GPU
+#SBATCH --gres=gpu:nvidia_a40:1                  # Requests exactly 1 GPU
 #SBATCH --cpus-per-task=4          # Adjust if your process uses multi-threading
 #SBATCH --mem=16G                   # Adjust memory per line/task
 
