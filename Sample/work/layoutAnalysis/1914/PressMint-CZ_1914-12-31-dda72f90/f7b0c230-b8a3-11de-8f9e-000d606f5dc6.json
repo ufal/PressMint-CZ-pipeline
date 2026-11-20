@@ -686,7 +686,7 @@
       }
      ],
      "flow": {
-      "id": "L200",
+      "id": "L163",
       "prev": null,
       "next": null
      }
@@ -870,7 +870,7 @@
       }
      ],
      "flow": {
-      "id": "L201",
+      "id": "L164",
       "prev": null,
       "next": null
      }
@@ -1610,7 +1610,7 @@
       }
      ],
      "flow": {
-      "id": "L202",
+      "id": "L165",
       "prev": null,
       "next": null
      }
@@ -2485,7 +2485,7 @@
       }
      ],
      "flow": {
-      "id": "L203",
+      "id": "L166",
       "prev": null,
       "next": null
      }
@@ -4933,7 +4933,7 @@
       }
      ],
      "flow": {
-      "id": "L204",
+      "id": "L167",
       "prev": null,
       "next": null
      }
@@ -5113,7 +5113,7 @@
       }
      ],
      "flow": {
-      "id": "L205",
+      "id": "L168",
       "prev": null,
       "next": null
      }
@@ -8657,7 +8657,7 @@
       }
      ],
      "flow": {
-      "id": "L206",
+      "id": "L169",
       "prev": null,
       "next": null
      }
@@ -11037,7 +11037,7 @@
       }
      ],
      "flow": {
-      "id": "L207",
+      "id": "L170",
       "prev": null,
       "next": null
      }
@@ -11550,7 +11550,7 @@
       }
      ],
      "flow": {
-      "id": "L208",
+      "id": "L171",
       "prev": null,
       "next": null
      }
@@ -12560,7 +12560,7 @@
       }
      ],
      "flow": {
-      "id": "L209",
+      "id": "L172",
       "prev": null,
       "next": null
      }
@@ -13135,7 +13135,7 @@
       }
      ],
      "flow": {
-      "id": "L210",
+      "id": "L173",
       "prev": null,
       "next": null
      }
@@ -13436,7 +13436,7 @@
       }
      ],
      "flow": {
-      "id": "L211",
+      "id": "L174",
       "prev": null,
       "next": null
      }
@@ -13864,9 +13864,9 @@
       }
      ],
      "flow": {
-      "id": "L212",
+      "id": "L175",
       "prev": null,
-      "next": null
+      "next": "p4-b15-p1"
      }
     }
    ]
@@ -13875,7 +13875,7 @@
    "id": "p4-b14",
    "order": 14,
    "type": "text",
-   "role": "body",
+   "role": "advertisement",
    "stream": "main",
    "source": "cluster",
    "yolo_conf": null,
@@ -13960,7 +13960,7 @@
       }
      ],
      "flow": {
-      "id": "L213",
+      "id": null,
       "prev": null,
       "next": null
      }
@@ -14245,7 +14245,7 @@
       }
      ],
      "flow": {
-      "id": "L214",
+      "id": null,
       "prev": null,
       "next": null
      }
@@ -14391,7 +14391,7 @@
       }
      ],
      "flow": {
-      "id": "L215",
+      "id": null,
       "prev": null,
       "next": null
      }
@@ -14966,7 +14966,7 @@
       }
      ],
      "flow": {
-      "id": "L216",
+      "id": null,
       "prev": null,
       "next": null
      }
@@ -15124,7 +15124,7 @@
       }
      ],
      "flow": {
-      "id": "L217",
+      "id": null,
       "prev": null,
       "next": null
      }
@@ -15282,7 +15282,7 @@
       }
      ],
      "flow": {
-      "id": "L218",
+      "id": null,
       "prev": null,
       "next": null
      }
@@ -15440,7 +15440,7 @@
       }
      ],
      "flow": {
-      "id": "L219",
+      "id": null,
       "prev": null,
       "next": null
      }
@@ -15598,7 +15598,7 @@
       }
      ],
      "flow": {
-      "id": "L220",
+      "id": null,
       "prev": null,
       "next": null
      }
@@ -15883,9 +15883,9 @@
       }
      ],
      "flow": {
-      "id": "L221",
+      "id": null,
       "prev": null,
-      "next": "p4-b15-p1"
+      "next": null
      }
     }
    ]
@@ -18005,8 +18005,8 @@
       }
      ],
      "flow": {
-      "id": "L221",
-      "prev": "p4-b14-p9",
+      "id": "L175",
+      "prev": "p4-b13-p4",
       "next": null
      }
     }
@@ -18177,7 +18177,7 @@
       }
      ],
      "flow": {
-      "id": "L222",
+      "id": "L176",
       "prev": null,
       "next": null
      }
@@ -22249,7 +22249,7 @@
       }
      ],
      "flow": {
-      "id": "L223",
+      "id": "L177",
       "prev": null,
       "next": null
      }
@@ -22560,7 +22560,7 @@
       }
      ],
      "flow": {
-      "id": "L224",
+      "id": "L178",
       "prev": null,
       "next": null
      }
@@ -25087,7 +25087,7 @@
       }
      ],
      "flow": {
-      "id": "L225",
+      "id": "L179",
       "prev": null,
       "next": null
      }
@@ -25406,7 +25406,7 @@
       }
      ],
      "flow": {
-      "id": "L226",
+      "id": "L180",
       "prev": null,
       "next": null
      }
@@ -28346,7 +28346,7 @@
       }
      ],
      "flow": {
-      "id": "L227",
+      "id": "L181",
       "prev": null,
       "next": null
      }
@@ -28526,7 +28526,7 @@
       }
      ],
      "flow": {
-      "id": "L228",
+      "id": "L182",
       "prev": null,
       "next": null
      }
@@ -30795,7 +30795,7 @@
       }
      ],
      "flow": {
-      "id": "L229",
+      "id": "L183",
       "prev": null,
       "next": "p4-b24-p1"
      }
@@ -31880,7 +31880,7 @@
       }
      ],
      "flow": {
-      "id": "L229",
+      "id": "L183",
       "prev": "p4-b23-p1",
       "next": null
      }
@@ -32060,7 +32060,7 @@
       }
      ],
      "flow": {
-      "id": "L230",
+      "id": "L184",
       "prev": null,
       "next": null
      }
@@ -32361,7 +32361,7 @@
       }
      ],
      "flow": {
-      "id": "L231",
+      "id": "L185",
       "prev": null,
       "next": null
      }
@@ -32519,7 +32519,7 @@
       }
      ],
      "flow": {
-      "id": "L232",
+      "id": "L186",
       "prev": null,
       "next": null
      }
@@ -32784,7 +32784,7 @@
       }
      ],
      "flow": {
-      "id": "L233",
+      "id": "L187",
       "prev": null,
       "next": null
      }
@@ -32942,7 +32942,7 @@
       }
      ],
      "flow": {
-      "id": "L234",
+      "id": "L188",
       "prev": null,
       "next": null
      }
@@ -33070,7 +33070,7 @@
       }
      ],
      "flow": {
-      "id": "L235",
+      "id": "L189",
       "prev": null,
       "next": null
      }
@@ -35633,7 +35633,7 @@
       }
      ],
      "flow": {
-      "id": "L236",
+      "id": "L190",
       "prev": null,
       "next": null
      }
@@ -35805,7 +35805,7 @@
       }
      ],
      "flow": {
-      "id": "L237",
+      "id": "L191",
       "prev": null,
       "next": null
      }
@@ -36088,7 +36088,7 @@
       }
      ],
      "flow": {
-      "id": "L238",
+      "id": "L192",
       "prev": null,
       "next": null
      }
@@ -36891,7 +36891,7 @@
       }
      ],
      "flow": {
-      "id": "L239",
+      "id": "L193",
       "prev": null,
       "next": null
      }
@@ -37063,7 +37063,7 @@
       }
      ],
      "flow": {
-      "id": "L240",
+      "id": "L194",
       "prev": null,
       "next": null
      }
@@ -37564,7 +37564,7 @@
       }
      ],
      "flow": {
-      "id": "L241",
+      "id": "L195",
       "prev": null,
       "next": null
      }
@@ -37724,7 +37724,7 @@
       }
      ],
      "flow": {
-      "id": "L242",
+      "id": "L196",
       "prev": null,
       "next": null
      }
@@ -41955,7 +41955,7 @@
       }
      ],
      "flow": {
-      "id": "L243",
+      "id": "L197",
       "prev": null,
       "next": null
      }
@@ -42063,7 +42063,7 @@
       }
      ],
      "flow": {
-      "id": "L244",
+      "id": "L198",
       "prev": null,
       "next": null
      }
@@ -42517,7 +42517,7 @@
       }
      ],
      "flow": {
-      "id": "L245",
+      "id": "L199",
       "prev": null,
       "next": null
      }
@@ -43374,7 +43374,7 @@
       }
      ],
      "flow": {
-      "id": "L246",
+      "id": "L200",
       "prev": null,
       "next": null
      }
@@ -43538,7 +43538,7 @@
       }
      ],
      "flow": {
-      "id": "L247",
+      "id": "L201",
       "prev": null,
       "next": null
      }
@@ -44548,7 +44548,7 @@
       }
      ],
      "flow": {
-      "id": "L248",
+      "id": "L202",
       "prev": null,
       "next": null
      }
@@ -44720,7 +44720,7 @@
       }
      ],
      "flow": {
-      "id": "L249",
+      "id": "L203",
       "prev": null,
       "next": null
      }
@@ -45555,7 +45555,7 @@
       }
      ],
      "flow": {
-      "id": "L250",
+      "id": "L204",
       "prev": null,
       "next": null
      }
@@ -47679,7 +47679,7 @@
       }
      ],
      "flow": {
-      "id": "L251",
+      "id": "L205",
       "prev": null,
       "next": null
      }
@@ -47859,7 +47859,7 @@
       }
      ],
      "flow": {
-      "id": "L252",
+      "id": "L206",
       "prev": null,
       "next": null
      }
@@ -50398,7 +50398,7 @@
       }
      ],
      "flow": {
-      "id": "L253",
+      "id": "L207",
       "prev": null,
       "next": null
      }
@@ -50409,7 +50409,7 @@
    "id": "p4-b43",
    "order": 43,
    "type": "text",
-   "role": "body",
+   "role": "advertisement",
    "stream": "main",
    "source": "cluster",
    "yolo_conf": null,
@@ -50554,7 +50554,7 @@
       }
      ],
      "flow": {
-      "id": "L254",
+      "id": null,
       "prev": null,
       "next": null
      }
@@ -50839,7 +50839,7 @@
       }
      ],
      "flow": {
-      "id": "L255",
+      "id": null,
       "prev": null,
       "next": null
      }
@@ -50993,7 +50993,7 @@
       }
      ],
      "flow": {
-      "id": "L256",
+      "id": null,
       "prev": null,
       "next": null
      }
@@ -51143,7 +51143,7 @@
       }
      ],
      "flow": {
-      "id": "L257",
+      "id": null,
       "prev": null,
       "next": null
      }
@@ -51301,9 +51301,9 @@
       }
      ],
      "flow": {
-      "id": "L258",
+      "id": null,
       "prev": null,
-      "next": "p4-b44-p1"
+      "next": null
      }
     }
    ]
@@ -51421,8 +51421,8 @@
       }
      ],
      "flow": {
-      "id": "L258",
-      "prev": "p4-b43-p5",
+      "id": "L208",
+      "prev": null,
       "next": null
      }
     },
@@ -51531,7 +51531,7 @@
       }
      ],
      "flow": {
-      "id": "L259",
+      "id": "L209",
       "prev": null,
       "next": null
      }
@@ -51689,7 +51689,7 @@
       }
      ],
      "flow": {
-      "id": "L260",
+      "id": "L210",
       "prev": null,
       "next": null
      }
@@ -51847,7 +51847,7 @@
       }
      ],
      "flow": {
-      "id": "L261",
+      "id": "L211",
       "prev": null,
       "next": null
      }
@@ -52144,7 +52144,7 @@
       }
      ],
      "flow": {
-      "id": "L262",
+      "id": "L212",
       "prev": null,
       "next": null
      }
@@ -52441,7 +52441,7 @@
       }
      ],
      "flow": {
-      "id": "L263",
+      "id": "L213",
       "prev": null,
       "next": null
      }
@@ -52885,7 +52885,7 @@
       }
      ],
      "flow": {
-      "id": "L264",
+      "id": "L214",
       "prev": null,
       "next": null
      }
@@ -53043,7 +53043,7 @@
       }
      ],
      "flow": {
-      "id": "L265",
+      "id": "L215",
       "prev": null,
       "next": null
      }
@@ -53197,7 +53197,7 @@
       }
      ],
      "flow": {
-      "id": "L266",
+      "id": "L216",
       "prev": null,
       "next": null
      }
@@ -53353,7 +53353,7 @@
       }
      ],
      "flow": {
-      "id": "L267",
+      "id": "L217",
       "prev": null,
       "next": null
      }
@@ -53783,7 +53783,7 @@
       }
      ],
      "flow": {
-      "id": "L268",
+      "id": "L218",
       "prev": null,
       "next": null
      }
@@ -53963,7 +53963,7 @@
       }
      ],
      "flow": {
-      "id": "L269",
+      "id": "L219",
       "prev": null,
       "next": null
      }
@@ -55676,7 +55676,7 @@
       }
      ],
      "flow": {
-      "id": "L270",
+      "id": "L220",
       "prev": null,
       "next": null
      }
@@ -56330,7 +56330,7 @@
       }
      ],
      "flow": {
-      "id": "L271",
+      "id": "L221",
       "prev": null,
       "next": null
      }
@@ -56637,7 +56637,7 @@
       }
      ],
      "flow": {
-      "id": "L272",
+      "id": "L222",
       "prev": null,
       "next": null
      }
@@ -56689,7 +56689,8 @@
   "noise_lines": 3,
   "rules": 1,
   "hyphen_ok": 0,
-  "hyphen_broken": 2
+  "hyphen_broken": 2,
+  "advertisement_blocks": 2
  },
  "url": "https://api.kramerius.mzk.cz/search/iiif/uuid:f7b0c230-b8a3-11de-8f9e-000d606f5dc6/full/max/0/default.jpg"
 }

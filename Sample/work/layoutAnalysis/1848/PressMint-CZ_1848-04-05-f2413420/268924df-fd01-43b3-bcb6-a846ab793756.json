@@ -33920,7 +33920,8 @@
   "noise_lines": 1,
   "rules": 3,
   "hyphen_ok": 2,
-  "hyphen_broken": 0
+  "hyphen_broken": 0,
+  "advertisement_blocks": 0
  },
  "url": "https://api.kramerius.mzk.cz/search/iiif/uuid:268924df-fd01-43b3-bcb6-a846ab793756/full/max/0/default.jpg"
 }

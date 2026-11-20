@@ -10,6 +10,8 @@ tei-text   TEI/text/front/div[@type=banner] (only if a banner was detected), the
              div[@type=article] - main text: title(s) (head) + paragraphs up to the next title
              div[@type=banner] - masthead of the first page (title, date, prices, editor), in front
              div[@type=feuilleton] - the same for text below a section rule (after main text)
+             div[@type=advertisement] - one advertisement (blocks adjacent in reading order,
+                   a title after text starts the next one), after articles and feuilleton
              pb  - page (one per page and text stream; feuilleton has its own pb)
              cb  - change of column (in reading order)
              head - title;  p - paragraph. A paragraph flowing to the next column/page
@@ -43,7 +45,8 @@ HYPHEN = re.compile(r"[-¬⸗=]$")
 # pero charset artifacts (same as textRegions2teiFacsText.clean_ocr_text)
 OCR_ARTIFACTS = re.compile("[\ufffd\U00101010-\U0010102F]")
 # div/@type of the articles of a text stream
-STREAM_DIV = {"banner": "banner", "main": "article", "below_rule": "feuilleton"}
+STREAM_DIV = {"banner": "banner", "main": "article", "below_rule": "feuilleton", "ads": "advertisement"}
+AREA_TYPE = {"ads": "advertisement"}                              # zone/@type of the page area
 AREA_SUBTYPE = {"banner": "banner", "below_rule": "belowRule"}   # zone[@type=pageBody]/@subtype
 
 
@@ -152,11 +155,14 @@ class Builder:
             s["areas"] += 1
             self.n_pb += 1
             pb_id = f"{self.id}.pb{self.n_pb}"
-            self.area = Zone(s["el"], f"{s['id']}.a{s['areas']}", "pageBody", pb_id,
-                             subtype=AREA_SUBTYPE.get(name))
+            self.area = Zone(s["el"], f"{s['id']}.a{s['areas']}", AREA_TYPE.get(name, "pageBody"),
+                             pb_id, subtype=AREA_SUBTYPE.get(name))
             self.milestone("pb", pb_id, n=str(page["page_no"]), facs=f"#{self.area.id}")
             self.pb_id, self.n_cb, self.n_seg, self.col_key = pb_id, 0, 0, None
             for b in blocks:
+                if b.get("_newdiv"):          # start of another advertisement
+                    self.close_p()
+                    self.article = None
                 key = tuple(b.get("columns") or [b["id"]])
                 if key != self.col_key:
                     self.column(key)
@@ -364,12 +370,18 @@ def main():
                     flow_next[para["id"]] = nxt
 
     tei = Builder(tei_id)
-    # banner (masthead of the first page) first, then main text, then feuilleton
-    for stream in ("banner", "main", "below_rule"):
+    # banner (masthead of the first page) first, then main text, feuilleton, advertisements
+    for stream in ("banner", "main", "below_rule", "ads"):
         seq = []
         for page in pages:
             if stream == "banner":
                 body = [b for b in page["blocks"] if b.get("role") == "banner"]
+            elif stream == "ads":
+                body = sorted((b for b in page["blocks"] if b.get("role") == "advertisement"),
+                              key=lambda b: b["order"])
+                # blocks not adjacent in reading order belong to different advertisements
+                for i, b in enumerate(body):
+                    b["_newdiv"] = i == 0 or b["order"] != body[i - 1]["order"] + 1
             else:
                 # running heads (page header) are not part of the text
                 body = [b for b in page["blocks"]

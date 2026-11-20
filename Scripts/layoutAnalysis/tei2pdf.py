@@ -32,6 +32,8 @@ TEI_NS = "http://www.tei-c.org/ns/1.0"
 XID = "{http://www.w3.org/XML/1998/namespace}id"
 PAGE_W = 842
 TOP = 36           # header strip (pt)
+ART_LABEL = {"banner": "banner", "advertisement": "inzerát"}
+AD_COLOR = "#2e8b57"
 PALETTE = ["#1f77b4", "#ff7f0e", "#2ca02c", "#d62728", "#9467bd", "#8c564b", "#e377c2",
            "#17becf", "#bcbd22", "#7f7f7f"]
 
@@ -81,10 +83,11 @@ def read_text(path, zones):
         tag = local(el)
         saved = dict(ctx)
         if tag == "div":
-            if el.get("type") in ("article", "feuilleton", "banner"):
+            if el.get("type") in ("article", "feuilleton", "banner", "advertisement"):
                 # flat structure: body/div[@type=article|feuilleton]
                 ctx["article"] = el.get(XID)
-                ctx["stream"] = {"feuilleton": "feuilleton", "banner": "banner"}.get(el.get("type"), "main")
+                ctx["stream"] = {"feuilleton": "feuilleton", "banner": "banner",
+                                 "advertisement": "ads"}.get(el.get("type"), "main")
                 articles[el.get(XID)] = {"id": el.get(XID), "stream": ctx["stream"],
                                          "n": len(articles) + 1, "heads": [], "type": el.get("type")}
             else:
@@ -169,7 +172,9 @@ def fit_text(c, text, x0, y0, x1, y1, font):
 def render(text_path, facs_path, out, title):
     surfaces, zones = read_facs(facs_path)
     lines, articles = read_text(text_path, zones)
-    color_of = {a: colors.HexColor(PALETTE[(art["n"] - 1) % len(PALETTE)])
+    # advertisements in one fixed colour, articles (and banner) by palette
+    color_of = {a: colors.HexColor(AD_COLOR if art["type"] == "advertisement"
+                                   else PALETTE[(art["n"] - 1) % len(PALETTE)])
                 for a, art in articles.items()}
 
     # reading-order units = (stream, article, segment) in document order
@@ -218,7 +223,7 @@ def render(text_path, facs_path, out, title):
         c.drawString(10, ph - 17, f"{title} – strana {s['n']}")
         c.setFont("DV", 7)
         c.drawString(10, ph - 29,
-                          "rámečky: článek (barva), odstavec/nadpis, záhlaví (šedě) · "
+                          "rámečky: článek (barva), inzerát (zeleně), odstavec/nadpis · "
                           "kroužky a šipky: pořadí čtení (fejeton čárkovaně)")
 
         page_units = [u for u in units if u["surface"] == s["id"]]
@@ -272,7 +277,7 @@ def render(text_path, facs_path, out, title):
             c.setFillColor(colors.black)
 
         # reading order: arrows between consecutive units of a stream, numbered circles
-        for stream in ("banner", "main", "feuilleton"):
+        for stream in ("banner", "main", "feuilleton", "ads"):
             seq = [u for u in page_units if u["stream"] == stream]
             c.setDash([4, 3] if stream == "feuilleton" else [])
             for a, b in zip(seq, seq[1:]):
@@ -300,10 +305,10 @@ def render(text_path, facs_path, out, title):
             if art and units.index(u) == next(j for j, v in enumerate(units) if v["article"] == u["article"]):
                 c.setFillColor(col)
                 c.setFont("DVB", 7)
-                c.drawString(cx + 10, cy - 2.5, ("banner" if art["type"] == "banner" else f"čl. {art['n']}"))
+                c.drawString(cx + 10, cy - 2.5, ART_LABEL.get(art["type"], f"čl. {art['n']}"))
                 head = art["heads"][0][1] if art["heads"] else f"(článek {art['n']} bez nadpisu)"
                 c.bookmarkHorizontal(f"{u['article']}", 0, cy + 10)
-                c.addOutlineEntry(("banner" if art["type"] == "banner" else f"čl. {art['n']}") + f": {head[:70]}", f"{u['article']}", level=1)
+                c.addOutlineEntry(ART_LABEL.get(art["type"], f"čl. {art['n']}") + f": {head[:70]}", f"{u['article']}", level=1)
 
         # cross-page continuation labels
         c.setFont("DVB", 8)

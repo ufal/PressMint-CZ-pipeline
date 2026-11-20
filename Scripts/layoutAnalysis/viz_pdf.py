@@ -35,12 +35,15 @@ registerFontFamily("DV", normal="DV", bold="DVB", italic="DV", boldItalic="DVB")
 COL_COLORS = ["#1f77b4", "#ff7f0e", "#2ca02c", "#d62728", "#9467bd", "#8c564b", "#e377c2", "#17becf"]
 TYPE_COLOR = {"title": colors.HexColor("#d62728"), "text": colors.HexColor("#1f4e9c")}
 BANNER_COLOR = colors.HexColor("#b8860b")
+AD_COLOR = colors.HexColor("#2e8b57")
 
 
 def role_color(b):
     """block colour: banner / running head / by type (title, text)"""
     if b.get("role") == "banner":
         return BANNER_COLOR
+    if b.get("role") == "advertisement":
+        return AD_COLOR
     if b.get("role") == "header":
         return colors.HexColor("#777777")
     return TYPE_COLOR[b["type"]]
@@ -203,7 +206,7 @@ def layout_page(c, page, img):
 
     text_layer(c, m, page)
     ro = page.get("reading_order", {})
-    header(c, m, f"Strana {page['page_no']} – sloupce, bloky, pořadí čtení (červeně nadpis, modře text, šedě záhlaví, "
+    header(c, m, f"Strana {page['page_no']} – sloupce, bloky, pořadí čtení (červeně nadpis, modře text, šedě záhlaví, zeleně inzerce, zlatě banner, "
                  f"čárkovaně mimo YOLO; oranžově čáry)   dělená slova na spojích: "
                  f"{ro.get('hyphen_links_ok', 0)} ✓ / {ro.get('hyphen_links_broken', 0)} ✗")
     c.bookmarkPage(f"layout{page['page_no']}")
@@ -299,7 +302,7 @@ def text_pages(c, page, logical, pindex):
     story = [Paragraph(f"Strana {page['page_no']} – rozpoznaný text v pořadí čtení", STY["h1"])]
     for b in page["blocks"]:
         cols = ",".join(x.lstrip("c") for x in b["columns"]) or "–"
-        kind = {"header": "záhlaví", "banner": "banner"}.get(b.get("role")) or ("nadpis" if b["type"] == "title" else "text")
+        kind = {"header": "záhlaví", "banner": "banner", "advertisement": "inzerát"}.get(b.get("role")) or ("nadpis" if b["type"] == "title" else "text")
         for p in b["paragraphs"]:
             fl = p.get("flow") or {}
             confs = [l["conf"] for l in p["lines"] if l["conf"] is not None]

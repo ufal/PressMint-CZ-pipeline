@@ -730,7 +730,7 @@ pageXML2layoutAnalysis: $(JSONissues)/$(UUID_PATH).json $(layoutAnalysis)
 	  --rules $(separators)/$$CP -o $(layoutAnalysis)/$$CP)
 
 ##layoutAnalysis2teiFacsText## layout analysis to TEI/text (div/head/p, pb/cb/lb) and TEI/facs (surface/zone)
-#### front/div[@type=banner] (masthead of the first page, if detected), flat body/div: article, feuilleton (text below a rule); no fw, paragraphs flow over cb/pb, unique ids checked
+#### front/div[@type=banner] (masthead of the first page, if detected), flat body/div: article, feuilleton (text below a rule), advertisement; no fw, paragraphs flow over cb/pb, unique ids checked
 layoutAnalysis2teiFacsText: $(JSONissues)/$(UUID_PATH).json $(TEItext) $(TEIfacs)
 	$(call for-each-component,python $(LAYOUT_ANALYSIS_SCRIPTS)/analysis2tei.py \
 	  --results $(layoutAnalysis)/$$CP --tei-id $$ID \

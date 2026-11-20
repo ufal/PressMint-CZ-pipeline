@@ -57613,7 +57613,8 @@
   "noise_lines": 5,
   "rules": 2,
   "hyphen_ok": 3,
-  "hyphen_broken": 1
+  "hyphen_broken": 1,
+  "advertisement_blocks": 0
  },
  "url": "https://api.kramerius.mzk.cz/search/iiif/uuid:f7ad3fc0-b8a3-11de-9638-000d606f5dc6/full/max/0/default.jpg"
 }

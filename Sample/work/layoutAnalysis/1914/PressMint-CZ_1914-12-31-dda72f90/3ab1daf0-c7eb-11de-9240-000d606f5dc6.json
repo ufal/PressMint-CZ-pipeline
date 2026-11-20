@@ -23633,7 +23633,7 @@
    "id": "p3-b11",
    "order": 11,
    "type": "title",
-   "role": "body",
+   "role": "advertisement",
    "stream": "below_rule",
    "source": "cluster",
    "yolo_conf": null,
@@ -23706,7 +23706,7 @@
       }
      ],
      "flow": {
-      "id": "L163",
+      "id": null,
       "prev": null,
       "next": null
      }
@@ -23717,7 +23717,7 @@
    "id": "p3-b12",
    "order": 12,
    "type": "title",
-   "role": "body",
+   "role": "advertisement",
    "stream": "below_rule",
    "source": "cluster",
    "yolo_conf": null,
@@ -23868,7 +23868,7 @@
       }
      ],
      "flow": {
-      "id": "L164",
+      "id": null,
       "prev": null,
       "next": null
      }
@@ -23879,7 +23879,7 @@
    "id": "p3-b13",
    "order": 13,
    "type": "title",
-   "role": "body",
+   "role": "advertisement",
    "stream": "below_rule",
    "source": "cluster",
    "yolo_conf": null,
@@ -24046,7 +24046,7 @@
       }
      ],
      "flow": {
-      "id": "L165",
+      "id": null,
       "prev": null,
       "next": null
      }
@@ -24057,7 +24057,7 @@
    "id": "p3-b14",
    "order": 14,
    "type": "title",
-   "role": "body",
+   "role": "advertisement",
    "stream": "below_rule",
    "source": "cluster",
    "yolo_conf": null,
@@ -24218,7 +24218,7 @@
       }
      ],
      "flow": {
-      "id": "L166",
+      "id": null,
       "prev": null,
       "next": null
      }
@@ -24229,7 +24229,7 @@
    "id": "p3-b15",
    "order": 15,
    "type": "title",
-   "role": "body",
+   "role": "advertisement",
    "stream": "below_rule",
    "source": "cluster",
    "yolo_conf": null,
@@ -24394,7 +24394,7 @@
       }
      ],
      "flow": {
-      "id": "L167",
+      "id": null,
       "prev": null,
       "next": null
      }
@@ -24405,7 +24405,7 @@
    "id": "p3-b16",
    "order": 16,
    "type": "title",
-   "role": "body",
+   "role": "advertisement",
    "stream": "below_rule",
    "source": "cluster",
    "yolo_conf": null,
@@ -24620,7 +24620,7 @@
       }
      ],
      "flow": {
-      "id": "L168",
+      "id": null,
       "prev": null,
       "next": null
      }
@@ -24631,7 +24631,7 @@
    "id": "p3-b17",
    "order": 17,
    "type": "title",
-   "role": "body",
+   "role": "advertisement",
    "stream": "below_rule",
    "source": "cluster",
    "yolo_conf": null,
@@ -24928,7 +24928,7 @@
       }
      ],
      "flow": {
-      "id": "L169",
+      "id": null,
       "prev": null,
       "next": null
      }
@@ -24939,7 +24939,7 @@
    "id": "p3-b18",
    "order": 18,
    "type": "title",
-   "role": "body",
+   "role": "advertisement",
    "stream": "below_rule",
    "source": "cluster",
    "yolo_conf": null,
@@ -25105,7 +25105,7 @@
       }
      ],
      "flow": {
-      "id": "L170",
+      "id": null,
       "prev": null,
       "next": null
      }
@@ -25116,7 +25116,7 @@
    "id": "p3-b19",
    "order": 19,
    "type": "title",
-   "role": "body",
+   "role": "advertisement",
    "stream": "below_rule",
    "source": "cluster",
    "yolo_conf": null,
@@ -25278,7 +25278,7 @@
       }
      ],
      "flow": {
-      "id": "L171",
+      "id": null,
       "prev": null,
       "next": null
      }
@@ -25289,7 +25289,7 @@
    "id": "p3-b20",
    "order": 20,
    "type": "title",
-   "role": "body",
+   "role": "advertisement",
    "stream": "below_rule",
    "source": "cluster",
    "yolo_conf": null,
@@ -25740,7 +25740,7 @@
       }
      ],
      "flow": {
-      "id": "L172",
+      "id": null,
       "prev": null,
       "next": null
      }
@@ -25751,7 +25751,7 @@
    "id": "p3-b21",
    "order": 21,
    "type": "title",
-   "role": "body",
+   "role": "advertisement",
    "stream": "below_rule",
    "source": "cluster",
    "yolo_conf": null,
@@ -25921,7 +25921,7 @@
       }
      ],
      "flow": {
-      "id": "L173",
+      "id": null,
       "prev": null,
       "next": null
      }
@@ -25932,7 +25932,7 @@
    "id": "p3-b22",
    "order": 22,
    "type": "text",
-   "role": "body",
+   "role": "advertisement",
    "stream": "below_rule",
    "source": "cluster",
    "yolo_conf": null,
@@ -26092,7 +26092,7 @@
       }
      ],
      "flow": {
-      "id": "L174",
+      "id": null,
       "prev": null,
       "next": null
      }
@@ -26103,7 +26103,7 @@
    "id": "p3-b23",
    "order": 23,
    "type": "text",
-   "role": "body",
+   "role": "advertisement",
    "stream": "below_rule",
    "source": "cluster",
    "yolo_conf": null,
@@ -26184,7 +26184,7 @@
       }
      ],
      "flow": {
-      "id": "L175",
+      "id": null,
       "prev": null,
       "next": null
      }
@@ -26195,7 +26195,7 @@
    "id": "p3-b24",
    "order": 24,
    "type": "title",
-   "role": "body",
+   "role": "advertisement",
    "stream": "below_rule",
    "source": "cluster",
    "yolo_conf": null,
@@ -26312,7 +26312,7 @@
       }
      ],
      "flow": {
-      "id": "L176",
+      "id": null,
       "prev": null,
       "next": null
      }
@@ -26323,7 +26323,7 @@
    "id": "p3-b25",
    "order": 25,
    "type": "title",
-   "role": "body",
+   "role": "advertisement",
    "stream": "below_rule",
    "source": "yolo",
    "yolo_conf": 0.298,
@@ -26493,7 +26493,7 @@
       }
      ],
      "flow": {
-      "id": "L177",
+      "id": null,
       "prev": null,
       "next": null
      }
@@ -26504,7 +26504,7 @@
    "id": "p3-b26",
    "order": 26,
    "type": "text",
-   "role": "body",
+   "role": "advertisement",
    "stream": "below_rule",
    "source": "cluster",
    "yolo_conf": null,
@@ -26614,7 +26614,7 @@
       }
      ],
      "flow": {
-      "id": "L178",
+      "id": null,
       "prev": null,
       "next": null
      }
@@ -26688,7 +26688,7 @@
       }
      ],
      "flow": {
-      "id": "L179",
+      "id": null,
       "prev": null,
       "next": null
      }
@@ -26846,7 +26846,7 @@
       }
      ],
      "flow": {
-      "id": "L180",
+      "id": null,
       "prev": null,
       "next": null
      }
@@ -27004,7 +27004,7 @@
       }
      ],
      "flow": {
-      "id": "L181",
+      "id": null,
       "prev": null,
       "next": null
      }
@@ -27162,7 +27162,7 @@
       }
      ],
      "flow": {
-      "id": "L182",
+      "id": null,
       "prev": null,
       "next": null
      }
@@ -27308,7 +27308,7 @@
       }
      ],
      "flow": {
-      "id": "L183",
+      "id": null,
       "prev": null,
       "next": null
      }
@@ -27319,7 +27319,7 @@
    "id": "p3-b27",
    "order": 27,
    "type": "title",
-   "role": "body",
+   "role": "advertisement",
    "stream": "below_rule",
    "source": "cluster",
    "yolo_conf": null,
@@ -27596,7 +27596,7 @@
       }
      ],
      "flow": {
-      "id": "L184",
+      "id": null,
       "prev": null,
       "next": null
      }
@@ -27607,7 +27607,7 @@
    "id": "p3-b28",
    "order": 28,
    "type": "text",
-   "role": "body",
+   "role": "advertisement",
    "stream": "below_rule",
    "source": "cluster",
    "yolo_conf": null,
@@ -28435,7 +28435,7 @@
       }
      ],
      "flow": {
-      "id": "L185",
+      "id": null,
       "prev": null,
       "next": null
      }
@@ -28446,7 +28446,7 @@
    "id": "p3-b29",
    "order": 29,
    "type": "text",
-   "role": "body",
+   "role": "advertisement",
    "stream": "below_rule",
    "source": "cluster",
    "yolo_conf": null,
@@ -29226,7 +29226,7 @@
       }
      ],
      "flow": {
-      "id": "L186",
+      "id": null,
       "prev": null,
       "next": null
      }
@@ -29324,7 +29324,7 @@
       }
      ],
      "flow": {
-      "id": "L187",
+      "id": null,
       "prev": null,
       "next": null
      }
@@ -29398,9 +29398,9 @@
       }
      ],
      "flow": {
-      "id": "L188",
+      "id": null,
       "prev": null,
-      "next": "p3-b30-p1"
+      "next": null
      }
     }
    ]
@@ -29409,7 +29409,7 @@
    "id": "p3-b30",
    "order": 30,
    "type": "text",
-   "role": "body",
+   "role": "advertisement",
    "stream": "below_rule",
    "source": "cluster",
    "yolo_conf": null,
@@ -29563,8 +29563,8 @@
       }
      ],
      "flow": {
-      "id": "L188",
-      "prev": "p3-b29-p3",
+      "id": null,
+      "prev": null,
       "next": null
      }
     },
@@ -29661,7 +29661,7 @@
       }
      ],
      "flow": {
-      "id": "L189",
+      "id": null,
       "prev": null,
       "next": null
      }
@@ -29819,7 +29819,7 @@
       }
      ],
      "flow": {
-      "id": "L190",
+      "id": null,
       "prev": null,
       "next": null
      }
@@ -29981,7 +29981,7 @@
       }
      ],
      "flow": {
-      "id": "L191",
+      "id": null,
       "prev": null,
       "next": null
      }
@@ -30278,7 +30278,7 @@
       }
      ],
      "flow": {
-      "id": "L192",
+      "id": null,
       "prev": null,
       "next": null
      }
@@ -30575,7 +30575,7 @@
       }
      ],
      "flow": {
-      "id": "L193",
+      "id": null,
       "prev": null,
       "next": null
      }
@@ -30872,7 +30872,7 @@
       }
      ],
      "flow": {
-      "id": "L194",
+      "id": null,
       "prev": null,
       "next": null
      }
@@ -31169,7 +31169,7 @@
       }
      ],
      "flow": {
-      "id": "L195",
+      "id": null,
       "prev": null,
       "next": null
      }
@@ -31279,7 +31279,7 @@
       }
      ],
      "flow": {
-      "id": "L196",
+      "id": null,
       "prev": null,
       "next": null
      }
@@ -31568,9 +31568,9 @@
       }
      ],
      "flow": {
-      "id": "L197",
+      "id": null,
       "prev": null,
-      "next": "p3-b31-p1"
+      "next": null
      }
     }
    ]
@@ -31579,7 +31579,7 @@
    "id": "p3-b31",
    "order": 31,
    "type": "text",
-   "role": "body",
+   "role": "advertisement",
    "stream": "below_rule",
    "source": "cluster",
    "yolo_conf": null,
@@ -31652,8 +31652,8 @@
       }
      ],
      "flow": {
-      "id": "L197",
-      "prev": "p3-b30-p10",
+      "id": null,
+      "prev": null,
       "next": null
      }
     }
@@ -31663,7 +31663,7 @@
    "id": "p3-b32",
    "order": 32,
    "type": "text",
-   "role": "body",
+   "role": "advertisement",
    "stream": "below_rule",
    "source": "cluster",
    "yolo_conf": null,
@@ -31793,7 +31793,7 @@
       }
      ],
      "flow": {
-      "id": "L198",
+      "id": null,
       "prev": null,
       "next": null
      }
@@ -31804,7 +31804,7 @@
    "id": "p3-b33",
    "order": 33,
    "type": "title",
-   "role": "body",
+   "role": "advertisement",
    "stream": "below_rule",
    "source": "yolo",
    "yolo_conf": 0.606,
@@ -32228,7 +32228,7 @@
       }
      ],
      "flow": {
-      "id": "L199",
+      "id": null,
       "prev": null,
       "next": null
      }
@@ -32720,7 +32720,8 @@
   "noise_lines": 43,
   "rules": 8,
   "hyphen_ok": 1,
-  "hyphen_broken": 0
+  "hyphen_broken": 0,
+  "advertisement_blocks": 23
  },
  "url": "https://api.kramerius.mzk.cz/search/iiif/uuid:3ab1daf0-c7eb-11de-9240-000d606f5dc6/full/max/0/default.jpg"
 }

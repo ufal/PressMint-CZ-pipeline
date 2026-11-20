@@ -14,6 +14,9 @@ either open a section read after the rest (e.g. feuilleton), act as local
 separators, or are ignored -- chosen per rule by a word-division (hyphenation)
 score of the resulting order.  Paragraphs are finally linked across blocks,
 columns and pages (hyphen + lowercase, or full last line + unindented start).
+
+Block roles: body, header (running head), banner (masthead of the first page),
+advertisement (varied typography / price lists, see mark_advertisements).
 """
 import argparse
 import json
@@ -543,6 +546,7 @@ def analyze(page_no, uuid, xml_path, yolo, rules_path, first_page=False):
             "columns": b["columns"], "text_left": left, "text_right": right,
             "paragraphs": paras,
         })
+    n_ads = mark_advertisements(out_blocks, pitch)
 
     return {
         "page_no": page_no, "uuid": uuid, "image": f"{uuid}.jpg", "width": W, "height": H,
@@ -556,8 +560,102 @@ def analyze(page_no, uuid, xml_path, yolo, rules_path, first_page=False):
         "stats": {"columns": len(cols), "blocks": len(out_blocks), "paragraphs": p_counter,
                   "lines": len(lines), "chars": sum(len(l["text"]) for l in lines),
                   "noise_lines": len(noise), "rules": len(rules),
-                  "hyphen_ok": h_ok, "hyphen_broken": h_bad},
+                  "hyphen_ok": h_ok, "hyphen_broken": h_bad, "advertisement_blocks": n_ads},
     }
+
+
+# ---------------------------------------------------------------- advertisements
+def ad_features(b, pitch):
+    """typographic and lexical features of a block (all ratios per line / per 1000 chars)"""
+    lines = [l for p in b["paragraphs"] for l in p["lines"]]
+    n = len(lines)
+    txt = " ".join(l["text"] for l in lines)
+    hs = [(l["bbox"][3] - l["bbox"][1]) / pitch for l in lines]
+    L, R = b["text_left"], b["text_right"]
+    w = max(1, R - L)
+    centered = sum(1 for l in lines if l["bbox"][2] - l["bbox"][0] < 0.75 * w
+                   and abs((l["bbox"][0] + l["bbox"][2]) / 2 - (L + R) / 2) < 0.08 * w)
+    return {
+        "n": n,
+        "short": sum(1 for l in lines if len(l["text"]) < 20) / n,   # short lines
+        "cen": centered / n,                                          # centred lines
+        "big": sum(1 for h in hs if h > 1.9) / n,                     # large type
+        "hvar": max(hs) / max(0.5, min(hs)),                          # type size range
+        "ppl": len(b["paragraphs"]) / n,                              # paragraphs per line
+    }
+
+
+def ad_label(b, f):
+    """ad: varied typography (large + small type, centred / short lines) or a price list;
+    article: uniform justified prose; neutral: titles and 1-2 line blocks; else unsure"""
+    if b["type"] == "title" or f["n"] <= 2:
+        return "neutral"
+    varied = f["hvar"] >= 1.8 and (f["cen"] >= 0.1 or f["big"] >= 0.1 or f["short"] >= 0.25)
+    if varied or (f["short"] >= 0.5 and f["n"] >= 4):
+        return "ad"
+    if f["ppl"] < 0.3 and f["short"] < 0.15 and f["hvar"] < 1.6:
+        return "article"
+    return "unsure"
+
+
+def mark_advertisements(blocks, pitch):
+    """Set role "advertisement" on body blocks of advertisements (in place), return their count.
+
+    1. per block label (ad_label);  2. small prose-like blocks (< 25 lines) between ads are
+    ads, titles / 1-2 line blocks take the label of the following block;  3. a run of ads in
+    reading order counts only if it has >= 3 blocks and >= 12 lines, or contains a strongly
+    ad-like block (>= 5 lines, type size range >= 2.5, >= 0.5 paragraphs per line);
+    4. if >= 20 % of the page lines are ads, every unsure / neutral block after the first ad
+    is an ad too (advertisement section at the end of the page)."""
+    idx = [i for i, b in enumerate(blocks) if b["role"] == "body"]
+    if not idx:
+        return 0
+    body = [blocks[i] for i in idx]
+    F = [ad_features(b, pitch) for b in body]
+    lab = [ad_label(b, f) for b, f in zip(body, F)]
+
+    def neighbour(i, step):
+        j = i + step
+        while 0 <= j < len(lab) and lab[j] == "neutral":
+            j += step
+        return lab[j] if 0 <= j < len(lab) else None
+
+    lab2 = list(lab)
+    for i, l in enumerate(lab):
+        if l in ("article", "unsure") and F[i]["n"] < 25 \
+                and neighbour(i, -1) == "ad" and neighbour(i, 1) in ("ad", None):
+            lab2[i] = "ad"
+        elif l == "unsure":
+            lab2[i] = "article"
+    for i in range(len(lab2) - 1, -1, -1):
+        if lab2[i] == "neutral":
+            lab2[i] = lab2[i + 1] if i + 1 < len(lab2) else (lab2[i - 1] if i else "article")
+
+    out = [False] * len(body)
+    i = 0
+    while i < len(body):
+        if lab2[i] != "ad":
+            i += 1
+            continue
+        j = i
+        while j < len(body) and lab2[j] == "ad":
+            j += 1
+        strong = any(F[k]["n"] >= 5 and F[k]["hvar"] >= 2.5 and F[k]["ppl"] >= 0.5 for k in range(i, j))
+        if (j - i >= 3 and sum(F[k]["n"] for k in range(i, j)) >= 12) or strong:
+            for k in range(i, j):
+                out[k] = True
+        i = j
+
+    total = sum(f["n"] for f in F) or 1
+    if any(out) and sum(f["n"] for f, o in zip(F, out) if o) / total >= 0.2:
+        for k in range(out.index(True), len(body)):
+            if lab[k] in ("unsure", "neutral"):
+                out[k] = True
+
+    for b, o in zip(body, out):
+        if o:
+            b["role"] = "advertisement"
+    return sum(out)
 
 
 # ---------------------------------------------------------------- paragraph flow
@@ -636,8 +734,8 @@ def issue_text(pages, logical):
     for pg in pages:
         out.append(f"=== Strana {pg['page_no']} ===")
         for b in pg["blocks"]:
-            if b["role"] in ("header", "banner"):
-                label = "záhlaví" if b["role"] == "header" else "banner"
+            if b["role"] in ("header", "banner", "advertisement"):
+                label = {"header": "záhlaví", "banner": "banner", "advertisement": "inzerát"}[b["role"]]
                 out.append(f"[{label}] " + " ".join(p["text"] for p in b["paragraphs"]))
         for L in by_page.get(pg["page_no"], []):
             more = f"  [pokračuje na str. {', '.join(map(str, L['pages'][1:]))}]" if len(L["pages"]) > 1 else ""
