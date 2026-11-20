@@ -59,8 +59,9 @@ echo -e "$(date +"%Y-%m-%dT%T") START (${TASK_ID}): $TASK" >> logs/PressMint-CZ.
 # 4. Execute your existing Make command for this specific line
 CMD="make $MAKEFILE_TARGET $VAR_NAME=$TASK DEVICE=$DEVICE PERO_OCR_MODEL_CONFIG=$PERO_OCR_MODEL_CONFIG PERO_OCR_MODEL_NAME=$PERO_OCR_MODEL_NAME"
 RES=$(/usr/bin/time --output=logs/PressMint-CZ.slurm.$SLURM_JOB_ID.${TASK_ID}.tmp -f "%x#%E real, %U user, %S sys, %M kB" $CMD)
-TIME=$(cut -d'#' -f 2 logs/PressMint-CZ.slurm.$SLURM_JOB_ID.${TASK_ID}.tmp)
-CODE=$(cut -d'#' -f 1 logs/PressMint-CZ.slurm.$SLURM_JOB_ID.${TASK_ID}.tmp)
+# GNU time prepends "Command exited with non-zero status N" on failure: use the last (format) line
+TIME=$(tail -n 1 logs/PressMint-CZ.slurm.$SLURM_JOB_ID.${TASK_ID}.tmp | cut -d'#' -f 2)
+CODE=$(tail -n 1 logs/PressMint-CZ.slurm.$SLURM_JOB_ID.${TASK_ID}.tmp | cut -d'#' -f 1)
 if [ $((10#$CODE)) -gt 0 ]; then STATUS="FAILED-$CODE"; else STATUS="FINISHED"; fi
 rm logs/PressMint-CZ.slurm.$SLURM_JOB_ID.${TASK_ID}.tmp
 echo -e "$(date +"%Y-%m-%dT%T") DONE (${TASK_ID}): $TASK   $STATUS    $SLURM_JOB_ID/${TASK_ID}   $(hostname)     $TIME         $CMD" >> logs/PressMint-CZ.slurm.log
