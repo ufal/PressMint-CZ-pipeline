@@ -72,6 +72,15 @@
    "mode": "section"
   }
  ],
+ "banner": {
+  "bbox": [
+   54,
+   0,
+   3214,
+   975
+  ],
+  "bottom": 1050
+ },
  "reading_order": {
   "hyphen_score": 2.0,
   "hyphen_links_ok": 2,
@@ -82,7 +91,7 @@
    "id": "p1-b1",
    "order": 1,
    "type": "title",
-   "role": "body",
+   "role": "banner",
    "stream": "main",
    "source": "cluster",
    "yolo_conf": null,
@@ -227,7 +236,7 @@
       }
      ],
      "flow": {
-      "id": "L1",
+      "id": null,
       "prev": null,
       "next": null
      }
@@ -238,7 +247,7 @@
    "id": "p1-b2",
    "order": 2,
    "type": "title",
-   "role": "body",
+   "role": "banner",
    "stream": "main",
    "source": "cluster",
    "yolo_conf": null,
@@ -594,7 +603,7 @@
       }
      ],
      "flow": {
-      "id": "L2",
+      "id": null,
       "prev": null,
       "next": null
      }
@@ -605,7 +614,7 @@
    "id": "p1-b3",
    "order": 3,
    "type": "text",
-   "role": "body",
+   "role": "banner",
    "stream": "main",
    "source": "cluster",
    "yolo_conf": null,
@@ -734,7 +743,7 @@
       }
      ],
      "flow": {
-      "id": "L3",
+      "id": null,
       "prev": null,
       "next": null
      }
@@ -745,7 +754,7 @@
    "id": "p1-b4",
    "order": 4,
    "type": "text",
-   "role": "body",
+   "role": "banner",
    "stream": "main",
    "source": "cluster",
    "yolo_conf": null,
@@ -866,7 +875,7 @@
       }
      ],
      "flow": {
-      "id": "L4",
+      "id": null,
       "prev": null,
       "next": null
      }
@@ -877,7 +886,7 @@
    "id": "p1-b5",
    "order": 5,
    "type": "text",
-   "role": "body",
+   "role": "banner",
    "stream": "main",
    "source": "cluster",
    "yolo_conf": null,
@@ -1014,7 +1023,7 @@
       }
      ],
      "flow": {
-      "id": "L5",
+      "id": null,
       "prev": null,
       "next": null
      }
@@ -1025,7 +1034,7 @@
    "id": "p1-b6",
    "order": 6,
    "type": "text",
-   "role": "body",
+   "role": "banner",
    "stream": "main",
    "source": "cluster",
    "yolo_conf": null,
@@ -2301,9 +2310,9 @@
       }
      ],
      "flow": {
-      "id": "L6",
+      "id": null,
       "prev": null,
-      "next": "p1-b7-p1"
+      "next": null
      }
     }
    ]
@@ -2312,7 +2321,7 @@
    "id": "p1-b7",
    "order": 7,
    "type": "text",
-   "role": "body",
+   "role": "banner",
    "stream": "main",
    "source": "yolo",
    "yolo_conf": 0.259,
@@ -3533,8 +3542,8 @@
       }
      ],
      "flow": {
-      "id": "L6",
-      "prev": "p1-b6-p1",
+      "id": null,
+      "prev": null,
       "next": null
      }
     },
@@ -3619,7 +3628,7 @@
       }
      ],
      "flow": {
-      "id": "L7",
+      "id": null,
       "prev": null,
       "next": null
      }
@@ -3630,7 +3639,7 @@
    "id": "p1-b8",
    "order": 8,
    "type": "title",
-   "role": "body",
+   "role": "banner",
    "stream": "main",
    "source": "cluster",
    "yolo_conf": null,
@@ -3890,7 +3899,7 @@
       }
      ],
      "flow": {
-      "id": "L8",
+      "id": null,
       "prev": null,
       "next": null
      }
@@ -3901,7 +3910,7 @@
    "id": "p1-b9",
    "order": 9,
    "type": "text",
-   "role": "body",
+   "role": "banner",
    "stream": "main",
    "source": "cluster",
    "yolo_conf": null,
@@ -4487,7 +4496,7 @@
       }
      ],
      "flow": {
-      "id": "L9",
+      "id": null,
       "prev": null,
       "next": null
      }
@@ -4645,7 +4654,7 @@
       }
      ],
      "flow": {
-      "id": "L10",
+      "id": null,
       "prev": null,
       "next": null
      }
@@ -4656,7 +4665,7 @@
    "id": "p1-b10",
    "order": 10,
    "type": "text",
-   "role": "body",
+   "role": "banner",
    "stream": "main",
    "source": "cluster",
    "yolo_conf": null,
@@ -4809,7 +4818,7 @@
       }
      ],
      "flow": {
-      "id": "L11",
+      "id": null,
       "prev": null,
       "next": null
      }
@@ -4943,7 +4952,7 @@
       }
      ],
      "flow": {
-      "id": "L12",
+      "id": null,
       "prev": null,
       "next": null
      }
@@ -5683,7 +5692,7 @@
       }
      ],
      "flow": {
-      "id": "L13",
+      "id": "L1",
       "prev": null,
       "next": null
      }
@@ -6838,7 +6847,7 @@
       }
      ],
      "flow": {
-      "id": "L14",
+      "id": "L2",
       "prev": null,
       "next": null
      }
@@ -8827,7 +8836,7 @@
       }
      ],
      "flow": {
-      "id": "L15",
+      "id": "L3",
       "prev": null,
       "next": null
      }
@@ -10947,7 +10956,7 @@
       }
      ],
      "flow": {
-      "id": "L16",
+      "id": "L4",
       "prev": null,
       "next": null
      }
@@ -11780,7 +11789,7 @@
       }
      ],
      "flow": {
-      "id": "L17",
+      "id": "L5",
       "prev": null,
       "next": null
      }
@@ -12077,7 +12086,7 @@
       }
      ],
      "flow": {
-      "id": "L18",
+      "id": "L6",
       "prev": null,
       "next": null
      }
@@ -12310,7 +12319,7 @@
       }
      ],
      "flow": {
-      "id": "L19",
+      "id": "L7",
       "prev": null,
       "next": null
      }
@@ -14674,7 +14683,7 @@
       }
      ],
      "flow": {
-      "id": "L20",
+      "id": "L8",
       "prev": null,
       "next": "p1-b13-p1"
      }
@@ -17384,7 +17393,7 @@
       }
      ],
      "flow": {
-      "id": "L20",
+      "id": "L8",
       "prev": "p1-b12-p1",
       "next": null
      }
@@ -19524,7 +19533,7 @@
       }
      ],
      "flow": {
-      "id": "L21",
+      "id": "L9",
       "prev": null,
       "next": null
      }
@@ -21088,7 +21097,7 @@
       }
      ],
      "flow": {
-      "id": "L22",
+      "id": "L10",
       "prev": null,
       "next": null
      }
@@ -23073,7 +23082,7 @@
       }
      ],
      "flow": {
-      "id": "L23",
+      "id": "L11",
       "prev": null,
       "next": null
      }
@@ -23195,7 +23204,7 @@
       }
      ],
      "flow": {
-      "id": "L24",
+      "id": "L12",
       "prev": null,
       "next": null
      }
@@ -23371,7 +23380,7 @@
       }
      ],
      "flow": {
-      "id": "L25",
+      "id": "L13",
       "prev": null,
       "next": null
      }
@@ -24389,7 +24398,7 @@
       }
      ],
      "flow": {
-      "id": "L26",
+      "id": "L14",
       "prev": null,
       "next": "p1-b16-p1"
      }
@@ -25796,7 +25805,7 @@
       }
      ],
      "flow": {
-      "id": "L26",
+      "id": "L14",
       "prev": "p1-b15-p1",
       "next": null
      }
@@ -27197,7 +27206,7 @@
       }
      ],
      "flow": {
-      "id": "L27",
+      "id": "L15",
       "prev": null,
       "next": null
      }
@@ -31205,7 +31214,7 @@
       }
      ],
      "flow": {
-      "id": "L28",
+      "id": "L16",
       "prev": null,
       "next": null
      }
@@ -33881,7 +33890,7 @@
       }
      ],
      "flow": {
-      "id": "L29",
+      "id": "L17",
       "prev": null,
       "next": "p2-b3-p1"
      }

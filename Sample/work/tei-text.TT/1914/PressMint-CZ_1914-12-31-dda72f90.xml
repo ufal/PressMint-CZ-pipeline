@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <TEI xmlnsoff="http://www.tei-c.org/ns/1.0" xml:lang="cs" xml:id="PressMint-CZ_1914-12-31-dda72f90">
-  <teiHeader><revisionDesc><change when="2026-11-20T09:03:39Z" who="flexipipe" tasks="lemmatize,ner,normalize,tag">Tagged via NAMETAG, UDPIPE (tasks=lemmatize,ner,normalize,tag)</change></revisionDesc></teiHeader><text>
+  <teiHeader><revisionDesc><change when="2026-11-20T09:54:34Z" who="flexipipe" tasks="lemmatize,ner,normalize,tag">Tagged via NAMETAG, UDPIPE (tasks=lemmatize,ner,normalize,tag)</change></revisionDesc></teiHeader><text>
     <body><div xml:id="PressMint-CZ_1914-12-31-dda72f90.div1" type="article">
 <pb xml:id="PressMint-CZ_1914-12-31-dda72f90.pb1" n="1" facs="#PressMint-CZ_1914-12-31-dda72f90.f.pg1.a1" />
 <cb xml:id="PressMint-CZ_1914-12-31-dda72f90.pb1.cb1" facs="#PressMint-CZ_1914-12-31-dda72f90.f.pg1.a1.c1" />

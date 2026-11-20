@@ -456,7 +456,40 @@ def text_extent(b, cols):
     return b["bbox"][0], b["bbox"][2]
 
 
-def analyze(page_no, uuid, xml_path, yolo, rules_path):
+def detect_banner(lines, blocks, rules, W, H, pitch):
+    """Banner (masthead) of the first page: the top area with the newspaper title in very
+    large letters, closed by a full-width rule (or a few rules close below each other:
+    volume / number / date / editor lines).  Returns the banner bottom y or None.
+
+    title lines: height >= 3.5 x pitch, top in the upper 30 % of the page and at most
+    8 x pitch below the topmost such line;
+    rules: >= 60 % of page width, the first one below the title, chained while the next
+    one is closer than 12 x pitch (all within the upper 40 % of the page);
+    without such a rule the banner ends with the blocks overlapping the title band."""
+    big = [l for l in lines
+           if l["bbox"][3] - l["bbox"][1] >= 3.5 * pitch and l["bbox"][1] < 0.3 * H]
+    if not big:
+        return None
+    # the title = big lines starting close below the topmost one (a large article
+    # headline further down, e.g. "Světová válka.", is not part of the banner)
+    top_big = min(l["bbox"][1] for l in big)
+    title_bottom = max(l["bbox"][3] for l in big if l["bbox"][1] < top_big + 8 * pitch)
+    full = sorted((r for r in rules if r["bbox"][2] - r["bbox"][0] >= 0.6 * W
+                   and r["bbox"][1] < 0.4 * H), key=lambda r: r["bbox"][1])
+    below = [r for r in full if r["bbox"][1] >= title_bottom - pitch]
+    if below:
+        bottom = below[0]["bbox"][3]
+        for r in below[1:]:
+            if r["bbox"][1] - bottom < 12 * pitch:
+                bottom = r["bbox"][3]
+            else:
+                break
+        return bottom
+    band = [b for b in blocks if b["bbox"][1] < title_bottom]
+    return max(b["bbox"][3] for b in band) if band else title_bottom
+
+
+def analyze(page_no, uuid, xml_path, yolo, rules_path, first_page=False):
     W, H, lines = read_page_xml(xml_path)
 
     # typical line pitch from pero line heights (bbox height ~ 1.2 x pitch)
@@ -475,6 +508,18 @@ def analyze(page_no, uuid, xml_path, yolo, rules_path):
     head = [b for b in order if b["bbox"][3] <= top + 2.5 * pitch]
     head_ids = {id(b) for b in head} if len(head) >= 2 else set()
 
+    # first page: banner (masthead) blocks are read first and kept apart from the articles
+    banner_bottom = detect_banner(lines, order, rules, W, H, pitch) if first_page else None
+    banner_ids = set()
+    if banner_bottom is not None:
+        banner_ids = {id(b) for b in order if (b["bbox"][1] + b["bbox"][3]) / 2 < banner_bottom}
+        order = [b for b in order if id(b) in banner_ids] + [b for b in order if id(b) not in banner_ids]
+
+    def role(b):
+        if id(b) in banner_ids:
+            return "banner"
+        return "header" if id(b) in head_ids else "body"
+
     out_blocks = []
     p_counter = 0
     for bi, b in enumerate(order, 1):
@@ -492,8 +537,8 @@ def analyze(page_no, uuid, xml_path, yolo, rules_path):
             })
         out_blocks.append({
             "id": f"p{page_no}-b{bi}", "order": bi,
-            "type": b["type"], "role": "header" if id(b) in head_ids else "body",
-            "stream": streams.get(id(b), "main"),
+            "type": b["type"], "role": role(b),
+            "stream": "main" if id(b) in banner_ids else streams.get(id(b), "main"),
             "source": b["source"], "yolo_conf": b.get("yolo_conf"), "bbox": b["bbox"],
             "columns": b["columns"], "text_left": left, "text_right": right,
             "paragraphs": paras,
@@ -503,6 +548,8 @@ def analyze(page_no, uuid, xml_path, yolo, rules_path):
         "page_no": page_no, "uuid": uuid, "image": f"{uuid}.jpg", "width": W, "height": H,
         "line_pitch": round(pitch, 1), "columns": cols,
         "rules": [{"bbox": r["bbox"], "mode": m} for r, m in zip(rules, modes)],
+        "banner": ({"bbox": union([b["bbox"] for b in out_blocks if b["role"] == "banner"]),
+                    "bottom": banner_bottom} if banner_ids else None),
         "reading_order": {"hyphen_score": score, "hyphen_links_ok": h_ok, "hyphen_links_broken": h_bad},
         "blocks": out_blocks,
         "noise_lines": [{k: l[k] for k in ("id", "bbox", "text", "conf")} for l in noise],
@@ -537,7 +584,7 @@ def link_flow(pages):
     for stream in ("main", "below_rule"):
         seq = [(pg, b, p, i == 0, i == len(b["paragraphs"]) - 1)
                for pg in pages for b in pg["blocks"]
-               if b["role"] != "header" and b["stream"] == stream
+               if b["role"] == "body" and b["stream"] == stream
                for i, p in enumerate(b["paragraphs"])]
         for (ppg, pb, pp, _, plast), (pg, b, p, first, _) in zip(seq, seq[1:]):
             if (plast and first and pb["type"] == "text" and b["type"] == "text"
@@ -548,7 +595,7 @@ def link_flow(pages):
     for pg in pages:
         for b in pg["blocks"]:
             for p in b["paragraphs"]:
-                if b["role"] == "header":
+                if b["role"] != "body":      # running head, banner: not part of the text flow
                     p["flow"] = {"id": None, "prev": None, "next": None}
                     continue
                 part = {"page": pg["page_no"], "paragraph": p["id"], "block": b["order"]}
@@ -589,8 +636,9 @@ def issue_text(pages, logical):
     for pg in pages:
         out.append(f"=== Strana {pg['page_no']} ===")
         for b in pg["blocks"]:
-            if b["role"] == "header":
-                out.append("[záhlaví] " + " ".join(p["text"] for p in b["paragraphs"]))
+            if b["role"] in ("header", "banner"):
+                label = "záhlaví" if b["role"] == "header" else "banner"
+                out.append(f"[{label}] " + " ".join(p["text"] for p in b["paragraphs"]))
         for L in by_page.get(pg["page_no"], []):
             more = f"  [pokračuje na str. {', '.join(map(str, L['pages'][1:]))}]" if len(L["pages"]) > 1 else ""
             out.append(("## " if L["type"] == "title" else "") + L["text"] + more)
@@ -645,8 +693,9 @@ def main():
 
     regions = read_regions(args.yolo)
     pages = []
-    for no, uuid, url in read_order(args.order):
-        page = analyze(no, uuid, args.xml / f"{uuid}.xml", regions(uuid), args.rules / f"{uuid}.json")
+    for i, (no, uuid, url) in enumerate(read_order(args.order)):
+        page = analyze(no, uuid, args.xml / f"{uuid}.xml", regions(uuid), args.rules / f"{uuid}.json",
+                       first_page=(i == 0))
         if url:
             page["url"] = url
         pages.append(page)

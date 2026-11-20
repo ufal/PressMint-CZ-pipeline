@@ -34,6 +34,18 @@ registerFontFamily("DV", normal="DV", bold="DVB", italic="DV", boldItalic="DVB")
 
 COL_COLORS = ["#1f77b4", "#ff7f0e", "#2ca02c", "#d62728", "#9467bd", "#8c564b", "#e377c2", "#17becf"]
 TYPE_COLOR = {"title": colors.HexColor("#d62728"), "text": colors.HexColor("#1f4e9c")}
+BANNER_COLOR = colors.HexColor("#b8860b")
+
+
+def role_color(b):
+    """block colour: banner / running head / by type (title, text)"""
+    if b.get("role") == "banner":
+        return BANNER_COLOR
+    if b.get("role") == "header":
+        return colors.HexColor("#777777")
+    return TYPE_COLOR[b["type"]]
+
+
 PARA_COLORS = ["#e41a1c", "#377eb8", "#4daf4a", "#984ea3", "#ff7f00", "#a65628"]
 PAGE_W = 842.0  # points; height follows image aspect ratio
 IMG_MAX_W = 2000  # downscale embedded raster
@@ -147,9 +159,21 @@ def layout_page(c, page, img):
         c.setFillColor(colors.Color(0.8, 0.3, 0) if r["mode"] != "ignore" else colors.grey)
         c.drawString(m.x(x0) + 2, y + 2.5, lab)
 
+    # banner (masthead of the first page)
+    if page.get("banner"):
+        x0, _, x1, _ = page["banner"]["bbox"]
+        bb = [min(x0, 0.01 * page["width"]), 0, max(x1, 0.99 * page["width"]), page["banner"]["bottom"]]
+        c.setStrokeColor(BANNER_COLOR)
+        c.setFillColor(colors.Color(BANNER_COLOR.red, BANNER_COLOR.green, BANNER_COLOR.blue, alpha=0.08))
+        c.setLineWidth(2.5)
+        c.rect(*m.rect(bb), stroke=1, fill=1)
+        c.setFont("DVB", 9)
+        c.setFillColor(BANNER_COLOR)
+        c.drawString(m.x(bb[0]) + 4, m.y(bb[3]) + 4, "banner (hlavička titulní strany)")
+
     # blocks
     for b in page["blocks"]:
-        col = TYPE_COLOR[b["type"]] if b.get("role") != "header" else colors.HexColor("#777777")
+        col = role_color(b)
         c.setStrokeColor(col)
         c.setLineWidth(1.4 if b["source"] == "yolo" else 1.0)
         if b["source"] != "yolo":
@@ -172,7 +196,7 @@ def layout_page(c, page, img):
         lab = str(b["order"])
         c.setFont("DVB", 7)
         w = pdfmetrics.stringWidth(lab, "DVB", 7) + 4
-        c.setFillColor(TYPE_COLOR[b["type"]] if b.get("role") != "header" else colors.HexColor("#777777"))
+        c.setFillColor(role_color(b))
         c.roundRect(x, y - 9, w, 9, 2, stroke=0, fill=1)
         c.setFillColor(colors.white)
         c.drawString(x + 2, y - 7, lab)
@@ -275,7 +299,7 @@ def text_pages(c, page, logical, pindex):
     story = [Paragraph(f"Strana {page['page_no']} – rozpoznaný text v pořadí čtení", STY["h1"])]
     for b in page["blocks"]:
         cols = ",".join(x.lstrip("c") for x in b["columns"]) or "–"
-        kind = "záhlaví" if b.get("role") == "header" else ("nadpis" if b["type"] == "title" else "text")
+        kind = {"header": "záhlaví", "banner": "banner"}.get(b.get("role")) or ("nadpis" if b["type"] == "title" else "text")
         for p in b["paragraphs"]:
             fl = p.get("flow") or {}
             confs = [l["conf"] for l in p["lines"] if l["conf"] is not None]

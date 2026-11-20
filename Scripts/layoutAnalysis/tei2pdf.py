@@ -81,12 +81,12 @@ def read_text(path, zones):
         tag = local(el)
         saved = dict(ctx)
         if tag == "div":
-            if el.get("type") in ("article", "feuilleton"):
+            if el.get("type") in ("article", "feuilleton", "banner"):
                 # flat structure: body/div[@type=article|feuilleton]
                 ctx["article"] = el.get(XID)
-                ctx["stream"] = "feuilleton" if el.get("type") == "feuilleton" else "main"
+                ctx["stream"] = {"feuilleton": "feuilleton", "banner": "banner"}.get(el.get("type"), "main")
                 articles[el.get(XID)] = {"id": el.get(XID), "stream": ctx["stream"],
-                                         "n": len(articles) + 1, "heads": []}
+                                         "n": len(articles) + 1, "heads": [], "type": el.get("type")}
             else:
                 ctx["stream"] = el.get("type")
         elif tag in ("p", "head", "fw"):
@@ -272,7 +272,7 @@ def render(text_path, facs_path, out, title):
             c.setFillColor(colors.black)
 
         # reading order: arrows between consecutive units of a stream, numbered circles
-        for stream in ("main", "feuilleton"):
+        for stream in ("banner", "main", "feuilleton"):
             seq = [u for u in page_units if u["stream"] == stream]
             c.setDash([4, 3] if stream == "feuilleton" else [])
             for a, b in zip(seq, seq[1:]):
@@ -300,10 +300,10 @@ def render(text_path, facs_path, out, title):
             if art and units.index(u) == next(j for j, v in enumerate(units) if v["article"] == u["article"]):
                 c.setFillColor(col)
                 c.setFont("DVB", 7)
-                c.drawString(cx + 10, cy - 2.5, f"čl. {art['n']}")
+                c.drawString(cx + 10, cy - 2.5, ("banner" if art["type"] == "banner" else f"čl. {art['n']}"))
                 head = art["heads"][0][1] if art["heads"] else f"(článek {art['n']} bez nadpisu)"
                 c.bookmarkHorizontal(f"{u['article']}", 0, cy + 10)
-                c.addOutlineEntry(f"čl. {art['n']}: {head[:70]}", f"{u['article']}", level=1)
+                c.addOutlineEntry(("banner" if art["type"] == "banner" else f"čl. {art['n']}") + f": {head[:70]}", f"{u['article']}", level=1)
 
         # cross-page continuation labels
         c.setFont("DVB", 8)

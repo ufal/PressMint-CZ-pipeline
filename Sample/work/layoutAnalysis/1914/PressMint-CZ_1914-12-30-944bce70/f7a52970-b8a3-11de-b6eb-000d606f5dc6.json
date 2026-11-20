@@ -75,6 +75,15 @@
    "mode": "section"
   }
  ],
+ "banner": {
+  "bbox": [
+   153,
+   319,
+   3822,
+   1195
+  ],
+  "bottom": 1236
+ },
  "reading_order": {
   "hyphen_score": 2.0,
   "hyphen_links_ok": 2,
@@ -85,7 +94,7 @@
    "id": "p1-b1",
    "order": 1,
    "type": "title",
-   "role": "header",
+   "role": "banner",
    "stream": "main",
    "source": "cluster",
    "yolo_conf": null,
@@ -253,7 +262,7 @@
    "id": "p1-b2",
    "order": 2,
    "type": "text",
-   "role": "header",
+   "role": "banner",
    "stream": "main",
    "source": "cluster",
    "yolo_conf": null,
@@ -433,7 +442,7 @@
    "id": "p1-b3",
    "order": 3,
    "type": "text",
-   "role": "body",
+   "role": "banner",
    "stream": "main",
    "source": "yolo",
    "yolo_conf": 0.435,
@@ -602,7 +611,7 @@
       }
      ],
      "flow": {
-      "id": "L1",
+      "id": null,
       "prev": null,
       "next": null
      }
@@ -760,7 +769,7 @@
       }
      ],
      "flow": {
-      "id": "L2",
+      "id": null,
       "prev": null,
       "next": null
      }
@@ -918,7 +927,7 @@
       }
      ],
      "flow": {
-      "id": "L3",
+      "id": null,
       "prev": null,
       "next": null
      }
@@ -1095,7 +1104,7 @@
       }
      ],
      "flow": {
-      "id": "L4",
+      "id": null,
       "prev": null,
       "next": null
      }
@@ -1241,7 +1250,7 @@
       }
      ],
      "flow": {
-      "id": "L5",
+      "id": null,
       "prev": null,
       "next": null
      }
@@ -1399,7 +1408,7 @@
       }
      ],
      "flow": {
-      "id": "L6",
+      "id": null,
       "prev": null,
       "next": null
      }
@@ -1521,7 +1530,7 @@
       }
      ],
      "flow": {
-      "id": "L7",
+      "id": null,
       "prev": null,
       "next": null
      }
@@ -1679,7 +1688,7 @@
       }
      ],
      "flow": {
-      "id": "L8",
+      "id": null,
       "prev": null,
       "next": null
      }
@@ -1813,7 +1822,7 @@
       }
      ],
      "flow": {
-      "id": "L9",
+      "id": null,
       "prev": null,
       "next": null
      }
@@ -1971,7 +1980,7 @@
       }
      ],
      "flow": {
-      "id": "L10",
+      "id": null,
       "prev": null,
       "next": null
      }
@@ -2129,7 +2138,7 @@
       }
      ],
      "flow": {
-      "id": "L11",
+      "id": null,
       "prev": null,
       "next": null
      }
@@ -2287,7 +2296,7 @@
       }
      ],
      "flow": {
-      "id": "L12",
+      "id": null,
       "prev": null,
       "next": null
      }
@@ -2584,7 +2593,7 @@
       }
      ],
      "flow": {
-      "id": "L13",
+      "id": null,
       "prev": null,
       "next": null
      }
@@ -2706,7 +2715,7 @@
       }
      ],
      "flow": {
-      "id": "L14",
+      "id": null,
       "prev": null,
       "next": null
      }
@@ -2864,7 +2873,7 @@
       }
      ],
      "flow": {
-      "id": "L15",
+      "id": null,
       "prev": null,
       "next": null
      }
@@ -2998,7 +3007,7 @@
       }
      ],
      "flow": {
-      "id": "L16",
+      "id": null,
       "prev": null,
       "next": null
      }
@@ -3009,7 +3018,7 @@
    "id": "p1-b4",
    "order": 4,
    "type": "title",
-   "role": "body",
+   "role": "banner",
    "stream": "main",
    "source": "cluster",
    "yolo_conf": null,
@@ -3178,7 +3187,7 @@
       }
      ],
      "flow": {
-      "id": "L17",
+      "id": null,
       "prev": null,
       "next": null
      }
@@ -3189,7 +3198,7 @@
    "id": "p1-b5",
    "order": 5,
    "type": "title",
-   "role": "body",
+   "role": "banner",
    "stream": "main",
    "source": "yolo",
    "yolo_conf": 0.444,
@@ -3351,7 +3360,7 @@
       }
      ],
      "flow": {
-      "id": "L18",
+      "id": null,
       "prev": null,
       "next": null
      }
@@ -3362,7 +3371,7 @@
    "id": "p1-b6",
    "order": 6,
    "type": "text",
-   "role": "body",
+   "role": "banner",
    "stream": "main",
    "source": "cluster",
    "yolo_conf": null,
@@ -3436,7 +3445,7 @@
       }
      ],
      "flow": {
-      "id": "L19",
+      "id": null,
       "prev": null,
       "next": null
      }
@@ -3586,9 +3595,9 @@
       }
      ],
      "flow": {
-      "id": "L20",
+      "id": null,
       "prev": null,
-      "next": "p1-b7-p1"
+      "next": null
      }
     }
    ]
@@ -3597,7 +3606,7 @@
    "id": "p1-b7",
    "order": 7,
    "type": "text",
-   "role": "body",
+   "role": "banner",
    "stream": "main",
    "source": "yolo",
    "yolo_conf": 0.426,
@@ -3766,8 +3775,8 @@
       }
      ],
      "flow": {
-      "id": "L20",
-      "prev": "p1-b6-p2",
+      "id": null,
+      "prev": null,
       "next": null
      }
     },
@@ -3888,7 +3897,7 @@
       }
      ],
      "flow": {
-      "id": "L21",
+      "id": null,
       "prev": null,
       "next": null
      }
@@ -4046,7 +4055,7 @@
       }
      ],
      "flow": {
-      "id": "L22",
+      "id": null,
       "prev": null,
       "next": null
      }
@@ -4343,7 +4352,7 @@
       }
      ],
      "flow": {
-      "id": "L23",
+      "id": null,
       "prev": null,
       "next": null
      }
@@ -4501,7 +4510,7 @@
       }
      ],
      "flow": {
-      "id": "L24",
+      "id": null,
       "prev": null,
       "next": null
      }
@@ -4599,7 +4608,7 @@
       }
      ],
      "flow": {
-      "id": "L25",
+      "id": null,
       "prev": null,
       "next": null
      }
@@ -5027,7 +5036,7 @@
       }
      ],
      "flow": {
-      "id": "L26",
+      "id": null,
       "prev": null,
       "next": null
      }
@@ -5125,7 +5134,7 @@
       }
      ],
      "flow": {
-      "id": "L27",
+      "id": null,
       "prev": null,
       "next": null
      }
@@ -5283,7 +5292,7 @@
       }
      ],
      "flow": {
-      "id": "L28",
+      "id": null,
       "prev": null,
       "next": null
      }
@@ -5369,7 +5378,7 @@
       }
      ],
      "flow": {
-      "id": "L29",
+      "id": null,
       "prev": null,
       "next": null
      }
@@ -5769,7 +5778,7 @@
       }
      ],
      "flow": {
-      "id": "L30",
+      "id": null,
       "prev": null,
       "next": null
      }
@@ -5780,7 +5789,7 @@
    "id": "p1-b8",
    "order": 8,
    "type": "text",
-   "role": "body",
+   "role": "banner",
    "stream": "main",
    "source": "cluster",
    "yolo_conf": null,
@@ -5925,7 +5934,7 @@
       }
      ],
      "flow": {
-      "id": "L31",
+      "id": null,
       "prev": null,
       "next": null
      }
@@ -5936,7 +5945,7 @@
    "id": "p1-b9",
    "order": 9,
    "type": "text",
-   "role": "body",
+   "role": "banner",
    "stream": "main",
    "source": "cluster",
    "yolo_conf": null,
@@ -6081,7 +6090,7 @@
       }
      ],
      "flow": {
-      "id": "L32",
+      "id": null,
       "prev": null,
       "next": null
      }
@@ -6258,7 +6267,7 @@
       }
      ],
      "flow": {
-      "id": "L33",
+      "id": "L1",
       "prev": null,
       "next": null
      }
@@ -6421,7 +6430,7 @@
       }
      ],
      "flow": {
-      "id": "L34",
+      "id": "L2",
       "prev": null,
       "next": null
      }
@@ -6559,7 +6568,7 @@
       }
      ],
      "flow": {
-      "id": "L35",
+      "id": "L3",
       "prev": null,
       "next": null
      }
@@ -6995,7 +7004,7 @@
       }
      ],
      "flow": {
-      "id": "L36",
+      "id": "L4",
       "prev": null,
       "next": null
      }
@@ -7558,7 +7567,7 @@
       }
      ],
      "flow": {
-      "id": "L37",
+      "id": "L5",
       "prev": null,
       "next": null
      }
@@ -7734,7 +7743,7 @@
       }
      ],
      "flow": {
-      "id": "L38",
+      "id": "L6",
       "prev": null,
       "next": null
      }
@@ -7914,7 +7923,7 @@
       }
      ],
      "flow": {
-      "id": "L39",
+      "id": "L7",
       "prev": null,
       "next": null
      }
@@ -8348,7 +8357,7 @@
       }
      ],
      "flow": {
-      "id": "L40",
+      "id": "L8",
       "prev": null,
       "next": null
      }
@@ -9213,7 +9222,7 @@
       }
      ],
      "flow": {
-      "id": "L41",
+      "id": "L9",
       "prev": null,
       "next": null
      }
@@ -9641,7 +9650,7 @@
       }
      ],
      "flow": {
-      "id": "L42",
+      "id": "L10",
       "prev": null,
       "next": null
      }
@@ -9789,7 +9798,7 @@
       }
      ],
      "flow": {
-      "id": "L43",
+      "id": "L11",
       "prev": null,
       "next": null
      }
@@ -10505,7 +10514,7 @@
       }
      ],
      "flow": {
-      "id": "L44",
+      "id": "L12",
       "prev": null,
       "next": null
      }
@@ -10681,7 +10690,7 @@
       }
      ],
      "flow": {
-      "id": "L45",
+      "id": "L13",
       "prev": null,
       "next": null
      }
@@ -10861,7 +10870,7 @@
       }
      ],
      "flow": {
-      "id": "L46",
+      "id": "L14",
       "prev": null,
       "next": null
      }
@@ -11019,7 +11028,7 @@
       }
      ],
      "flow": {
-      "id": "L47",
+      "id": "L15",
       "prev": null,
       "next": null
      }
@@ -12265,7 +12274,7 @@
       }
      ],
      "flow": {
-      "id": "L48",
+      "id": "L16",
       "prev": null,
       "next": null
      }
@@ -12445,7 +12454,7 @@
       }
      ],
      "flow": {
-      "id": "L49",
+      "id": "L17",
       "prev": null,
       "next": null
      }
@@ -13574,7 +13583,7 @@
       }
      ],
      "flow": {
-      "id": "L50",
+      "id": "L18",
       "prev": null,
       "next": null
      }
@@ -14014,7 +14023,7 @@
       }
      ],
      "flow": {
-      "id": "L51",
+      "id": "L19",
       "prev": null,
       "next": null
      }
@@ -14194,7 +14203,7 @@
       }
      ],
      "flow": {
-      "id": "L52",
+      "id": "L20",
       "prev": null,
       "next": null
      }
@@ -14338,7 +14347,7 @@
       }
      ],
      "flow": {
-      "id": "L53",
+      "id": "L21",
       "prev": null,
       "next": null
      }
@@ -14518,7 +14527,7 @@
       }
      ],
      "flow": {
-      "id": "L54",
+      "id": "L22",
       "prev": null,
       "next": null
      }
@@ -14972,7 +14981,7 @@
       }
      ],
      "flow": {
-      "id": "L55",
+      "id": "L23",
       "prev": null,
       "next": null
      }
@@ -15189,7 +15198,7 @@
       }
      ],
      "flow": {
-      "id": "L56",
+      "id": "L24",
       "prev": null,
       "next": null
      }
@@ -16189,7 +16198,7 @@
       }
      ],
      "flow": {
-      "id": "L57",
+      "id": "L25",
       "prev": null,
       "next": null
      }
@@ -16879,7 +16888,7 @@
       }
      ],
      "flow": {
-      "id": "L58",
+      "id": "L26",
       "prev": null,
       "next": "p1-b25-p1"
      }
@@ -17166,7 +17175,7 @@
       }
      ],
      "flow": {
-      "id": "L58",
+      "id": "L26",
       "prev": "p1-b24-p4",
       "next": null
      }
@@ -18146,7 +18155,7 @@
       }
      ],
      "flow": {
-      "id": "L59",
+      "id": "L27",
       "prev": null,
       "next": null
      }
@@ -18306,7 +18315,7 @@
       }
      ],
      "flow": {
-      "id": "L60",
+      "id": "L28",
       "prev": null,
       "next": null
      }
@@ -20305,7 +20314,7 @@
       }
      ],
      "flow": {
-      "id": "L61",
+      "id": "L29",
       "prev": null,
       "next": null
      }
@@ -22131,7 +22140,7 @@
       }
      ],
      "flow": {
-      "id": "L62",
+      "id": "L30",
       "prev": null,
       "next": null
      }
@@ -22315,7 +22324,7 @@
       }
      ],
      "flow": {
-      "id": "L63",
+      "id": "L31",
       "prev": null,
       "next": null
      }
@@ -25299,7 +25308,7 @@
       }
      ],
      "flow": {
-      "id": "L64",
+      "id": "L32",
       "prev": null,
       "next": null
      }
@@ -26835,7 +26844,7 @@
       }
      ],
      "flow": {
-      "id": "L65",
+      "id": "L33",
       "prev": null,
       "next": "p1-b30-p1"
      }
@@ -27289,7 +27298,7 @@
       }
      ],
      "flow": {
-      "id": "L65",
+      "id": "L33",
       "prev": "p1-b29-p2",
       "next": null
      }
@@ -27596,7 +27605,7 @@
       }
      ],
      "flow": {
-      "id": "L66",
+      "id": "L34",
       "prev": null,
       "next": null
      }
@@ -28022,7 +28031,7 @@
       }
      ],
      "flow": {
-      "id": "L67",
+      "id": "L35",
       "prev": null,
       "next": null
      }
@@ -28198,7 +28207,7 @@
       }
      ],
      "flow": {
-      "id": "L68",
+      "id": "L36",
       "prev": null,
       "next": null
      }
@@ -31583,7 +31592,7 @@
       }
      ],
      "flow": {
-      "id": "L69",
+      "id": "L37",
       "prev": null,
       "next": null
      }
@@ -31747,7 +31756,7 @@
       }
      ],
      "flow": {
-      "id": "L70",
+      "id": "L38",
       "prev": null,
       "next": null
      }
@@ -31931,7 +31940,7 @@
       }
      ],
      "flow": {
-      "id": "L71",
+      "id": "L39",
       "prev": null,
       "next": null
      }
@@ -32369,7 +32378,7 @@
       }
      ],
      "flow": {
-      "id": "L72",
+      "id": "L40",
       "prev": null,
       "next": null
      }
@@ -32749,7 +32758,7 @@
       }
      ],
      "flow": {
-      "id": "L73",
+      "id": "L41",
       "prev": null,
       "next": null
      }
@@ -33046,7 +33055,7 @@
       }
      ],
      "flow": {
-      "id": "L74",
+      "id": "L42",
       "prev": null,
       "next": null
      }
@@ -33339,7 +33348,7 @@
       }
      ],
      "flow": {
-      "id": "L75",
+      "id": "L43",
       "prev": null,
       "next": null
      }
@@ -33594,7 +33603,7 @@
       }
      ],
      "flow": {
-      "id": "L76",
+      "id": "L44",
       "prev": null,
       "next": null
      }
@@ -35601,7 +35610,7 @@
       }
      ],
      "flow": {
-      "id": "L77",
+      "id": "L45",
       "prev": null,
       "next": null
      }
@@ -36315,7 +36324,7 @@
       }
      ],
      "flow": {
-      "id": "L78",
+      "id": "L46",
       "prev": null,
       "next": null
      }
@@ -36487,7 +36496,7 @@
       }
      ],
      "flow": {
-      "id": "L79",
+      "id": "L47",
       "prev": null,
       "next": null
      }
@@ -36635,7 +36644,7 @@
       }
      ],
      "flow": {
-      "id": "L80",
+      "id": "L48",
       "prev": null,
       "next": null
      }
@@ -36815,7 +36824,7 @@
       }
      ],
      "flow": {
-      "id": "L81",
+      "id": "L49",
       "prev": null,
       "next": null
      }
@@ -37362,7 +37371,7 @@
       }
      ],
      "flow": {
-      "id": "L82",
+      "id": "L50",
       "prev": null,
       "next": null
      }
@@ -38560,7 +38569,7 @@
       }
      ],
      "flow": {
-      "id": "L83",
+      "id": "L51",
       "prev": null,
       "next": null
      }
@@ -38720,7 +38729,7 @@
       }
      ],
      "flow": {
-      "id": "L84",
+      "id": "L52",
       "prev": null,
       "next": null
      }
@@ -41191,7 +41200,7 @@
       }
      ],
      "flow": {
-      "id": "L85",
+      "id": "L53",
       "prev": null,
       "next": null
      }
@@ -41315,7 +41324,7 @@
       }
      ],
      "flow": {
-      "id": "L86",
+      "id": "L54",
       "prev": null,
       "next": null
      }
@@ -44005,7 +44014,7 @@
       }
      ],
      "flow": {
-      "id": "L87",
+      "id": "L55",
       "prev": null,
       "next": null
      }
@@ -44153,7 +44162,7 @@
       }
      ],
      "flow": {
-      "id": "L88",
+      "id": "L56",
       "prev": null,
       "next": null
      }
@@ -44650,7 +44659,7 @@
       }
      ],
      "flow": {
-      "id": "L89",
+      "id": "L57",
       "prev": null,
       "next": null
      }
@@ -44822,7 +44831,7 @@
       }
      ],
      "flow": {
-      "id": "L90",
+      "id": "L58",
       "prev": null,
       "next": null
      }
@@ -45002,7 +45011,7 @@
       }
      ],
      "flow": {
-      "id": "L91",
+      "id": "L59",
       "prev": null,
       "next": null
      }
@@ -45420,7 +45429,7 @@
       }
      ],
      "flow": {
-      "id": "L92",
+      "id": "L60",
       "prev": null,
       "next": null
      }

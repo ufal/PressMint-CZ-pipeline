@@ -730,7 +730,7 @@ pageXML2layoutAnalysis: $(JSONissues)/$(UUID_PATH).json $(layoutAnalysis)
 	  --rules $(separators)/$$CP -o $(layoutAnalysis)/$$CP)
 
 ##layoutAnalysis2teiFacsText## layout analysis to TEI/text (div/head/p, pb/cb/lb) and TEI/facs (surface/zone)
-#### flat body/div per article (type article, feuilleton for text below a rule), no fw, paragraphs flow over cb/pb, unique ids checked
+#### front/div[@type=banner] (masthead of the first page, if detected), flat body/div: article, feuilleton (text below a rule); no fw, paragraphs flow over cb/pb, unique ids checked
 layoutAnalysis2teiFacsText: $(JSONissues)/$(UUID_PATH).json $(TEItext) $(TEIfacs)
 	$(call for-each-component,python $(LAYOUT_ANALYSIS_SCRIPTS)/analysis2tei.py \
 	  --results $(layoutAnalysis)/$$CP --tei-id $$ID \
@@ -849,6 +849,14 @@ teiText2teiTextAnaNER: $(NAMETAG)
 
 ##process-annotation-all## process annotation for all issues based on task list prepared by prepare-tasks
 process-annotation-all: teiText2tt TT2teiANA
+
+##clean-annotation-all## remove annotation results (work/tei-text.TT, work/tei-text.ana and their .fl file lists), e.g. before re-annotating regenerated TEItext
+#### teiText2tt skips files that are already annotated and tei-text.TT.fl is not rebuilt while it exists, so a new TEItext needs this first
+clean-annotation-all:
+	@test -n "$(strip $(WORK))" -a -d "$(WORK)" || { echo "ERROR: WORK directory '$(WORK)' does not exist" >&2; exit 1; }
+	@echo "INFO: removing annotation results in $(WORK)"
+	rm -rf "$(TEItextTT)" "$(TEItextANA)"
+	rm -f "$(TEItextTT).fl" "$(TEItextANA).fl"
 
 
 $(TEItextTT).fl: $(TEItextTT)

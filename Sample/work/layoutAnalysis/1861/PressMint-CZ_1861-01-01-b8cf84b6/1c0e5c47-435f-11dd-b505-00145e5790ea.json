@@ -66,6 +66,7 @@
    "mode": "section"
   }
  ],
+ "banner": null,
  "reading_order": {
   "hyphen_score": 4.0,
   "hyphen_links_ok": 2,
@@ -1766,7 +1767,7 @@
       }
      ],
      "flow": {
-      "id": "L31",
+      "id": "L18",
       "prev": "p1-b15-p4",
       "next": null
      }
@@ -7818,7 +7819,7 @@
       }
      ],
      "flow": {
-      "id": "L47",
+      "id": "L34",
       "prev": null,
       "next": null
      }
@@ -8953,7 +8954,7 @@
       }
      ],
      "flow": {
-      "id": "L48",
+      "id": "L35",
       "prev": null,
       "next": "p2-b2-p1"
      }
@@ -11214,7 +11215,7 @@
       }
      ],
      "flow": {
-      "id": "L48",
+      "id": "L35",
       "prev": "p2-b1-p3",
       "next": null
      }
@@ -14716,7 +14717,7 @@
       }
      ],
      "flow": {
-      "id": "L49",
+      "id": "L36",
       "prev": null,
       "next": null
      }
@@ -17074,7 +17075,7 @@
       }
      ],
      "flow": {
-      "id": "L50",
+      "id": "L37",
       "prev": null,
       "next": null
      }
@@ -17653,7 +17654,7 @@
       }
      ],
      "flow": {
-      "id": "L51",
+      "id": "L38",
       "prev": null,
       "next": "p2-b3-p1"
      }
@@ -17825,7 +17826,7 @@
       }
      ],
      "flow": {
-      "id": "L51",
+      "id": "L38",
       "prev": "p2-b2-p4",
       "next": "p2-b4-p1"
      }
@@ -19379,7 +19380,7 @@
       }
      ],
      "flow": {
-      "id": "L51",
+      "id": "L38",
       "prev": "p2-b3-p1",
       "next": null
      }
@@ -20085,7 +20086,7 @@
       }
      ],
      "flow": {
-      "id": "L52",
+      "id": "L39",
       "prev": null,
       "next": null
      }
@@ -21633,7 +21634,7 @@
       }
      ],
      "flow": {
-      "id": "L53",
+      "id": "L40",
       "prev": null,
       "next": null
      }
@@ -21771,7 +21772,7 @@
       }
      ],
      "flow": {
-      "id": "L54",
+      "id": "L41",
       "prev": null,
       "next": null
      }
@@ -21893,7 +21894,7 @@
       }
      ],
      "flow": {
-      "id": "L55",
+      "id": "L42",
       "prev": null,
       "next": null
      }
@@ -22073,7 +22074,7 @@
       }
      ],
      "flow": {
-      "id": "L56",
+      "id": "L43",
       "prev": null,
       "next": null
      }
@@ -31463,7 +31464,7 @@
       }
      ],
      "flow": {
-      "id": "L57",
+      "id": "L44",
       "prev": null,
       "next": "p2-b7-p1"
      }
@@ -31754,7 +31755,7 @@
       }
      ],
      "flow": {
-      "id": "L57",
+      "id": "L44",
       "prev": "p2-b6-p1",
       "next": "p2-b8-p1"
      }
@@ -32911,7 +32912,7 @@
       }
      ],
      "flow": {
-      "id": "L57",
+      "id": "L44",
       "prev": "p2-b7-p1",
       "next": null
      }
@@ -36016,7 +36017,7 @@
       }
      ],
      "flow": {
-      "id": "L58",
+      "id": "L45",
       "prev": null,
       "next": null
      }
@@ -36583,7 +36584,7 @@
       }
      ],
      "flow": {
-      "id": "L59",
+      "id": "L46",
       "prev": null,
       "next": null
      }
@@ -39394,7 +39395,7 @@
       }
      ],
      "flow": {
-      "id": "L60",
+      "id": "L47",
       "prev": null,
       "next": null
      }
@@ -44028,7 +44029,7 @@
       }
      ],
      "flow": {
-      "id": "L61",
+      "id": "L48",
       "prev": null,
       "next": "p2-b9-p1"
      }
@@ -44208,7 +44209,7 @@
       }
      ],
      "flow": {
-      "id": "L61",
+      "id": "L48",
       "prev": "p2-b8-p5",
       "next": null
      }
@@ -45307,7 +45308,7 @@
       }
      ],
      "flow": {
-      "id": "L62",
+      "id": "L49",
       "prev": null,
       "next": "p3-b1-p1"
      }
@@ -48156,7 +48157,7 @@
       }
      ],
      "flow": {
-      "id": "L46",
+      "id": "L33",
       "prev": "p1-b22-p2",
       "next": null
      }
@@ -50959,7 +50960,7 @@
       }
      ],
      "flow": {
-      "id": "L63",
+      "id": "L50",
       "prev": null,
       "next": "p2-b11-p1"
      }
@@ -52668,7 +52669,7 @@
       }
      ],
      "flow": {
-      "id": "L63",
+      "id": "L50",
       "prev": "p2-b10-p2",
       "next": null
      }
@@ -56452,7 +56453,7 @@
       }
      ],
      "flow": {
-      "id": "L64",
+      "id": "L51",
       "prev": null,
       "next": null
      }

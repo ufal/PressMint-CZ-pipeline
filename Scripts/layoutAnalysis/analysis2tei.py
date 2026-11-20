@@ -5,8 +5,10 @@ Same conventions as Scripts/textRegions2teiFacsText (Sample/work/tei-text, tei-f
 TEI/@xml:id = PressMint-CZ_<date>-<issue uuid prefix>, milestones pb/cb/lb in the text
 point by @facs to zones of the facsimile and every zone points back by @start.
 
-tei-text   TEI/text/body/div  (flat: one div per article, direct children of body)
+tei-text   TEI/text/front/div[@type=banner] (only if a banner was detected), then
+           TEI/text/body/div  (flat: one div per article, direct children of body)
              div[@type=article] - main text: title(s) (head) + paragraphs up to the next title
+             div[@type=banner] - masthead of the first page (title, date, prices, editor), in front
              div[@type=feuilleton] - the same for text below a section rule (after main text)
              pb  - page (one per page and text stream; feuilleton has its own pb)
              cb  - change of column (in reading order)
@@ -41,7 +43,8 @@ HYPHEN = re.compile(r"[-¬⸗=]$")
 # pero charset artifacts (same as textRegions2teiFacsText.clean_ocr_text)
 OCR_ARTIFACTS = re.compile("[\ufffd\U00101010-\U0010102F]")
 # div/@type of the articles of a text stream
-STREAM_DIV = {"main": "article", "below_rule": "feuilleton"}
+STREAM_DIV = {"banner": "banner", "main": "article", "below_rule": "feuilleton"}
+AREA_SUBTYPE = {"banner": "banner", "below_rule": "belowRule"}   # zone[@type=pageBody]/@subtype
 
 
 def T(tag):
@@ -128,8 +131,14 @@ class Builder:
     def stream(self, name, pages):
         """pages: [(page, body_blocks)] in issue order, blocks in reading order.
         Articles are direct children of body (PressMint sampling copies whole body children);
-        the stream gives the article type: article (main text) / feuilleton (below a rule)."""
-        self.div = self.body
+        the stream gives the article type: article (main text) / feuilleton (below a rule).
+        The banner (masthead of the first page) goes to text/front, before body."""
+        if name == "banner":
+            front = etree.Element(T("front"))
+            self.body.addprevious(front)
+            self.div = front
+        else:
+            self.div = self.body
         self.div_type = STREAM_DIV.get(name, name)
         self.article = None           # open div (article)
         self.article_has_body = False # article already has a p (next title starts a new one)
@@ -144,7 +153,7 @@ class Builder:
             self.n_pb += 1
             pb_id = f"{self.id}.pb{self.n_pb}"
             self.area = Zone(s["el"], f"{s['id']}.a{s['areas']}", "pageBody", pb_id,
-                             subtype=None if name == "main" else "belowRule")
+                             subtype=AREA_SUBTYPE.get(name))
             self.milestone("pb", pb_id, n=str(page["page_no"]), facs=f"#{self.area.id}")
             self.pb_id, self.n_cb, self.n_seg, self.col_key = pb_id, 0, 0, None
             for b in blocks:
@@ -235,9 +244,12 @@ class Builder:
         if not flow.get("prev") or self.p is None:
             self.close_p()
             title = block["type"] == "title"
-            # article = title(s) + following paragraphs up to the next title
-            if self.article is None or (title and self.article_has_body):
+            # article = title(s) + following paragraphs up to the next title;
+            # the banner is one div: titles after its first text block are plain p
+            if self.article is None or (title and self.article_has_body and self.div_type != "banner"):
                 self.new_article()
+            if title and self.article_has_body:
+                title = False
             if title:
                 self.n_head += 1
                 tag, pid = "head", f"{self.id}.head{self.n_head}"
@@ -352,13 +364,17 @@ def main():
                     flow_next[para["id"]] = nxt
 
     tei = Builder(tei_id)
-    for stream in ("main", "below_rule"):
+    # banner (masthead of the first page) first, then main text, then feuilleton
+    for stream in ("banner", "main", "below_rule"):
         seq = []
         for page in pages:
-            blocks = sorted((b for b in page["blocks"] if b.get("stream", "main") == stream),
-                            key=lambda b: b["order"])
-            # running heads (page header) are not part of the text
-            body = [b for b in blocks if b.get("role") != "header"]
+            if stream == "banner":
+                body = [b for b in page["blocks"] if b.get("role") == "banner"]
+            else:
+                # running heads (page header) are not part of the text
+                body = [b for b in page["blocks"]
+                        if b.get("role", "body") == "body" and b.get("stream", "main") == stream]
+            body.sort(key=lambda b: b["order"])
             if stream == "main" or body:
                 seq.append((page, body))
         if any(body for _, body in seq):
