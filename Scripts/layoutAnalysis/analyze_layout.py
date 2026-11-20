@@ -687,7 +687,7 @@ def link_flow(pages):
         for (ppg, pb, pp, _, plast), (pg, b, p, first, _) in zip(seq, seq[1:]):
             if (plast and first and pb["type"] == "text" and b["type"] == "text"
                     and continues(pp, pb, ppg["line_pitch"], p, b, pg["line_pitch"])):
-                prev_of[p["id"]] = pp
+                prev_of[id(p)] = pp      # by object: ids repeat if page numbers do
 
     logical, of = [], {}
     for pg in pages:
@@ -697,9 +697,9 @@ def link_flow(pages):
                     p["flow"] = {"id": None, "prev": None, "next": None}
                     continue
                 part = {"page": pg["page_no"], "paragraph": p["id"], "block": b["order"]}
-                pp = prev_of.get(p["id"])
+                pp = prev_of.get(id(p))
                 if pp is not None:
-                    L = of[pp["id"]]
+                    L = of[id(pp)]
                     pp["flow"]["next"] = p["id"]
                     p["flow"] = {"id": L["id"], "prev": pp["id"], "next": None}
                     L["parts"].append(part)
@@ -709,7 +709,7 @@ def link_flow(pages):
                          "parts": [part], "texts": [p["text"]]}
                     logical.append(L)
                     p["flow"] = {"id": L["id"], "prev": None, "next": None}
-                of[p["id"]] = L
+                of[id(p)] = L
     for L in logical:
         L["text"] = join_lines(L.pop("texts"))
         L["pages"] = sorted({x["page"] for x in L["parts"]})
@@ -756,7 +756,7 @@ def read_order(path):
         else:
             no, uuid = line.split("\t")[:2]
             rows.append((int(no), uuid, None))
-    return sorted(rows)
+    return sorted(rows, key=lambda r: r[0])   # stable: file order for equal page numbers
 
 
 def read_regions(path):
@@ -792,8 +792,11 @@ def main():
     regions = read_regions(args.yolo)
     pages = []
     for i, (no, uuid, url) in enumerate(read_order(args.order)):
-        page = analyze(no, uuid, args.xml / f"{uuid}.xml", regions(uuid), args.rules / f"{uuid}.json",
+        # pages are numbered by their position in the issue (page_no is used in ids of
+        # paragraphs, TEI surfaces and pb); the page number from the input is kept as page_n
+        page = analyze(i + 1, uuid, args.xml / f"{uuid}.xml", regions(uuid), args.rules / f"{uuid}.json",
                        first_page=(i == 0))
+        page["page_n"] = no
         if url:
             page["url"] = url
         pages.append(page)
