@@ -60,8 +60,13 @@ def main():
     ap.add_argument("-i", "--images", required=True, type=Path)
     ap.add_argument("-o", "--output", required=True, type=Path)
     args = ap.parse_args()
+    images = sorted(args.images.glob("*.jpg"))
+    if not images:
+        # without images the layout analysis would silently run without rules;
+        # fail before creating the output dir (make would skip an existing one next time)
+        raise SystemExit(f"ERROR: no page images (*.jpg) in {args.images}")
     args.output.mkdir(parents=True, exist_ok=True)
-    for img in sorted(args.images.glob("*.jpg")):
+    for img in images:
         W, H, rules = detect(img)
         (args.output / f"{img.stem}.json").write_text(json.dumps(
             {"image": img.name, "width": W, "height": H, "rules": rules}, indent=1))

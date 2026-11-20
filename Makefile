@@ -718,9 +718,10 @@ endif
 
 ##inputImg2separators## detect horizontal separator lines (rules) in original images
 #### rules spanning more than one column split the page into sections (e.g. feuilleton below a rule)
+#### missing page images are downloaded first (the old pipeline deleted them after OCR, keeping the directory)
 inputImg2separators: $(JSONissues)/$(UUID_PATH).json $(separators)
-	$(call for-each-component,python $(LAYOUT_ANALYSIS_SCRIPTS)/detect_rules.py \
-	  -i $(INimg)/$$IUP -o $(separators)/$$CP)
+	$(call for-each-component,$(MAKE) download-imgs UUID_PATH=$$IUP \
+	  && python $(LAYOUT_ANALYSIS_SCRIPTS)/detect_rules.py -i $(INimg)/$$IUP -o $(separators)/$$CP)
 
 ##pageXML2layoutAnalysis## combine OCR lines (pageXML), YOLO regions and separators: columns, blocks, paragraphs, reading order, paragraph flow across columns/pages
 #### reading order is verified by word division (hyphenated words) at block boundaries, see Scripts/layoutAnalysis/POZNAMKY.md
@@ -737,8 +738,11 @@ layoutAnalysis2teiFacsText: $(JSONissues)/$(UUID_PATH).json $(TEItext) $(TEIfacs
 	  --text $(TEItext)/$$CP.xml --facs $(TEIfacs)/$$CP.xml)
 
 ifeq ($(wildcard $(separators)/$(COMPONENT_PATH)),)
-$(separators)/$(COMPONENT_PATH): $(INimg)/$(UUID_PATH)
+# not $(INimg)/$(UUID_PATH) as prerequisite: the directory may exist without images (deleted after OCR);
+# download-issue-images fetches only the missing pages
+$(separators)/$(COMPONENT_PATH): $(INjson)/$(UUID_PATH).json
 	@echo "INFO: detecting separators for $(COMPONENT_PATH) ($(UUID_PATH))"
+	$(download-issue-images)
 	python $(LAYOUT_ANALYSIS_SCRIPTS)/detect_rules.py -i $(INimg)/$(UUID_PATH) -o $@
 else
 $(separators)/$(COMPONENT_PATH):
