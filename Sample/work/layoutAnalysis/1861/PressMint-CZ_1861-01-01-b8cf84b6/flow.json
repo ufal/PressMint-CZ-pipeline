@@ -1,0 +1,3885 @@
+[
+ {
+  "id": "L1",
+  "type": "title",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 1,
+    "paragraph": "p1-b1-p1",
+    "block": 1
+   }
+  ],
+  "text": "Číslo 1.",
+  "pages": [
+   1
+  ]
+ },
+ {
+  "id": "L2",
+  "type": "title",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 1,
+    "paragraph": "p1-b2-p1",
+    "block": 2
+   }
+  ],
+  "text": "VAROD",
+  "pages": [
+   1
+  ]
+ },
+ {
+  "id": "L3",
+  "type": "title",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 1,
+    "paragraph": "p1-b3-p1",
+    "block": 3
+   }
+  ],
+  "text": "LIST",
+  "pages": [
+   1
+  ]
+ },
+ {
+  "id": "L4",
+  "type": "title",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 1,
+    "paragraph": "p1-b4-p1",
+    "block": 4
+   }
+  ],
+  "text": "1. ledna 1861.",
+  "pages": [
+   1
+  ]
+ },
+ {
+  "id": "L5",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 1,
+    "paragraph": "p1-b5-p1",
+    "block": 5
+   }
+  ],
+  "text": "Cena se zásilkou po poště: měsíčně 1 zl. 44 kr.",
+  "pages": [
+   1
+  ]
+ },
+ {
+  "id": "L6",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 1,
+    "paragraph": "p1-b5-p2",
+    "block": 5
+   }
+  ],
+  "text": "čtvrtletně 4 zl. 32 kr. Pro Prahu: měsíčně 1 zl. čtvrtletně 3 zl. — kr.",
+  "pages": [
+   1
+  ]
+ },
+ {
+  "id": "L7",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 1,
+    "paragraph": "p1-b5-p3",
+    "block": 5
+   }
+  ],
+  "text": "Za donášku do domu platí se měsíčně 10 kr.",
+  "pages": [
+   1
+  ]
+ },
+ {
+  "id": "L8",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 1,
+    "paragraph": "p1-b5-p4",
+    "block": 5
+   }
+  ],
+  "text": "Jednotlivá čísla prodávají se po 6 kr.",
+  "pages": [
+   1
+  ]
+ },
+ {
+  "id": "L9",
+  "type": "title",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 1,
+    "paragraph": "p1-b6-p1",
+    "block": 6
+   }
+  ],
+  "text": "Odpovědný redaktor: JUD Julius Gréger.",
+  "pages": [
+   1
+  ]
+ },
+ {
+  "id": "L10",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 1,
+    "paragraph": "p1-b7-p1",
+    "block": 7
+   }
+  ],
+  "text": "Vychází denně vyjma dny po velkých svátcích.",
+  "pages": [
+   1
+  ]
+ },
+ {
+  "id": "L11",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 1,
+    "paragraph": "p1-b8-p1",
+    "block": 8
+   }
+  ],
+  "text": "Za inserty platí se od řádků drobného tisku za první vytisknutí 6 kr., po druhé 5 kr. a za každé následující 4 kr.",
+  "pages": [
+   1
+  ]
+ },
+ {
+  "id": "L12",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 1,
+    "paragraph": "p1-b8-p2",
+    "block": 8
+   }
+  ],
+  "text": "Dopisy nefránkované se nepřijímaji.",
+  "pages": [
+   1
+  ]
+ },
+ {
+  "id": "L13",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 1,
+    "paragraph": "p1-b8-p3",
+    "block": 8
+   }
+  ],
+  "text": "Redakce nachází se v Kolovratské třídě č. 862—II.",
+  "pages": [
+   1
+  ]
+ },
+ {
+  "id": "L14",
+  "type": "title",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 1,
+    "paragraph": "p1-b9-p1",
+    "block": 9
+   }
+  ],
+  "text": "Telegramy Národních Listů.",
+  "pages": [
+   1
+  ]
+ },
+ {
+  "id": "L15",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 1,
+    "paragraph": "p1-b10-p1",
+    "block": 10
+   }
+  ],
+  "text": "Vídeň 31. prosince v 9 hodin 30 min. večer. Uvěrní ústav platí za akcii 5% úroků. Na večerní burse: Úvěrní akcie 157, státní železnice 275.50 národní půjčka 73.",
+  "pages": [
+   1
+  ]
+ },
+ {
+  "id": "L16",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 1,
+    "paragraph": "p1-b10-p2",
+    "block": 10
+   }
+  ],
+  "text": "Londýn, 31. prosince. Anglický bank zvýšil diskonto na 6%",
+  "pages": [
+   1
+  ]
+ },
+ {
+  "id": "L17",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 1,
+    "paragraph": "p1-b10-p3",
+    "block": 10
+   }
+  ],
+  "text": "Paříž, 31. prosince. Oddělení francouzského loďstva neopustilo ještě přístav Gaetský. 3% duchod 67.55.",
+  "pages": [
+   1
+  ]
+ },
+ {
+  "id": "L18",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 1,
+    "paragraph": "p1-b10-p4",
+    "block": 10
+   }
+  ],
+  "text": "Turin, 31. prosince. Peněžník Genero se odebéře do Pařiže, aby uzavřel půjčku 300 milionů.",
+  "pages": [
+   1
+  ]
+ },
+ {
+  "id": "L19",
+  "type": "title",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 1,
+    "paragraph": "p1-b11-p1",
+    "block": 11
+   }
+  ],
+  "text": "Program Národních Listů,",
+  "pages": [
+   1
+  ]
+ },
+ {
+  "id": "L20",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 1,
+    "paragraph": "p1-b12-p1",
+    "block": 12
+   }
+  ],
+  "text": "kterýž jsme rozeslali, jest základním kamenem, na němž dále, trvale a důsledne stavěti budeme,",
+  "pages": [
+   1
+  ]
+ },
+ {
+  "id": "L21",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 1,
+    "paragraph": "p1-b12-p2",
+    "block": 12
+   }
+  ],
+  "text": "a protož jím počínáme vážné dílo své.",
+  "pages": [
+   1
+  ]
+ },
+ {
+  "id": "L22",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 1,
+    "paragraph": "p1-b12-p3",
+    "block": 12
+   }
+  ],
+  "text": "Učel těchto novin jest napomáhati politickému a obecnému vzdělání národu našeho, aby vlastní silou dospěl ve spolku národův Rakouských k oné ústavní samostatnosti, kteráž jedině můž býti pevným základem jeho všeobecného blahobytu, bezpečnou hradbou naší národnosti, důstojným ohlasem veliké naší minulosti.",
+  "pages": [
+   1
+  ]
+ },
+ {
+  "id": "L23",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 1,
+    "paragraph": "p1-b12-p4",
+    "block": 12
+   }
+  ],
+  "text": "Z ohledu poměrů státních a ústavních žádáme důsledného provedení nejvyššího diplomu od 20. října 1860. Máme za to, že trvání ústředních ministerií zahraničných věcí, financí, války obchodu je nutnou potřebou pro udržení jednoty a síly spojeného státu Rakouského, ješto pak autonomie čili svézákonnost ve všech vnitřních věcech zaručena jest sněmům zemským. Přejeme si, aby diplom Císaře — Krále našeho — stal se co nejdříve skutkem, i aby zakonodárná moc sněmův byla opatřena odpovědnými ústroji vykonávacími, kteréž by jí teprva daly pravý život, význam a neocenitelnou úrodnost pro blahobyt zemský.",
+  "pages": [
+   1
+  ]
+ },
+ {
+  "id": "L24",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 1,
+    "paragraph": "p1-b12-p5",
+    "block": 12
+   },
+   {
+    "page": 1,
+    "paragraph": "p1-b13-p1",
+    "block": 13
+   }
+  ],
+  "text": "Diplom od 20. října 1860 zaručuje nám právo historické. Historickou oprávněnou osobnost českého národa představuje nám svatá koruna Česká. Jakých-koli práv a ctí nabyl starý stát Český, všecky byly společny veškerému obyvatelstvu koruny České bez rozdílu, ačkoli se v něm měnily během věkův poměry stavův a poměry společenské, tak že jednou páni, jednou rytířstvo, jednou zase měšťanstvo vedlo přední hlas za ni. Historická tato osobnost žije posud, jakkoli se v rozličném věku měnila povaha její, jakkoli v rozličných dobách krev její tu rychleji tu zase volněji proudila, jakkoli mysl její tu neslýchanou smělostí vzhůru se pnula, tu krotce si vedla, tu zase znova se vzpružila ke skutkům šlechetným. Měníc se takto ve případnostech, zůstala vždy tatáž ve své podstatě, a po dnešní den cítí se i žádá práva svého, pro jehož hájení má zajisté i srdce i vůli. Protož hlásí se, aby práva jejího bylo šetřeno jak ve spolku Rakouském, tak i v poměrech zahraničných. Právní poměrý koruny České k starému státu německému a nověji ke spolku svrchovaných knížat německých zakládají se na starých smlouvách mezinárodních a na základních právech koruny České, stvrzených mnohými přísahami králů našich a nemohou tudy změněny, aniž tedy koruna naše zbavena býti svrchovanosti své bez dobrovolného přivolení všeho národa této koruny na sněmě valném, všem zemím kornny společném.",
+  "pages": [
+   1
+  ]
+ },
+ {
+  "id": "L25",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 1,
+    "paragraph": "p1-b13-p2",
+    "block": 13
+   },
+   {
+    "page": 1,
+    "paragraph": "p1-b14-p1",
+    "block": 14
+   }
+  ],
+  "text": "Privilegií politických mezi občany nechceme, majíce za to, že staré zřízení stavovské historickým vývinem národa našeho za posledních 200 let politické mdloby bylo zrušeno a přerozeno, a že všickni stavové více méně splývají, ano podstatných rozdílů mezi nimi již rozeznati aneb aspoň bez velikého ukřivdění mnohých určiti nelze. Stejná břemena, stejná práva. — to i naše heslo, aneb jiným slovem: Politická práva buďtež přiměřena břemenům občanův, a tudy i zastupitelství země rozděleno dle daní a počtn obyvatelstva se slušným ohledem na intelligenci. Necheeme šlechtě odnímati titulův i práv čestných, ale privilegií politických na základě pouhého rodu přiznati jí nikdy nemůžeme. Sradostí uvítáme šlechtu, když nedbajíc pouze na interessy své materiální, použije nejvznešenějšího práva svého k tomu, aby činnost svou, nestíženou materiálními nedostatky a výdělkovou prací, věnovala zcela a právě po šlechticku ke zvelebení národa svého a k opatrování politických jeho interessův. Pak zajisté s potěšením poznáme v pánech našich přední syny národa a s ochotnou radostí svěříme se jejich vedení, kdekoliv budou v čele kráčeti politickým věhlasem a obětavým vlastenectvím. My ovšem, ať se šlechtou, nebo bez ní, budeme pokračovati neodvratně na cestě ke zvelebení duševnímu i hmotnému národu svého.",
+  "pages": [
+   1
+  ]
+ },
+ {
+  "id": "L26",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 1,
+    "paragraph": "p1-b14-p2",
+    "block": 14
+   }
+  ],
+  "text": "Samosprávě rozumíme tak, aby všickni dle zákonův přirozených vyvinutí údové státního tělesa mohli samostatně pohybovati se v mezích potřeby a přirozenosti své, a aby pohybování jejich řídilo se jedním svorným duchem, ale též volným ruchem člověka, nikoli pak železnými obratly stroje nějakého na způsob automatův. Rodina, obec, župa neb kraj, země a historická korunanaše měj tedy svůj obor samosprávy. Rakousko jen pod ton výmínkon může býti národům svým milé a žádoucí, když na štítě s dvouhlavým orlem, jenž je spojuje, ponese neolověný neruchomý, všecky stejně hnětoucí balvan vojáckého absolutismu, ale okřídleného genia společné svobody; bratrské spolučinnosti a vzájemné ochrany, kterýžto bude strážným jeho angelem. Na základě této zásady žádáme reformy vnitřní správy zemské, její zjedno-dušeni a zlacinění. Na místo všudybylé úřadovlády vstoupiž nyní v míře rozumné samočinnost občanů. Máme za to, a zkušenost Auglie, Švýcar i jiných zemí potvrzuje to, že plody její, byť i nebyly tak stejné chuti a tak stejně rozdělené jako sazba kancelářův, budou zase tím hojnější a šťavnatější. Neboť účastenství občanů ve správě věcí obecných probudí tisíceré síly prvé neznané, probudí i cnost občanskou, kteráž nedbajíc vlastní zisk, pro dobro obecné s důstojnou mužností vystupuje, ano i sebe obětuje a takto též pravé divy činí. Tuto občanskou cnost, bez níž nelze občanské svobody probuzovati, budeme pokládati za neposlední ulohu svou, majíce na očích zvěčnělého Havlíčka našeho, kterýž klesna pod korouhví svou, sám nejkrásnější příklad cnosti té nám zůstavil.",
+  "pages": [
+   1
+  ]
+ },
+ {
+  "id": "L27",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 1,
+    "paragraph": "p1-b14-p3",
+    "block": 14
+   }
+  ],
+  "text": "Spolučinění občanů žádáme i v soudství, kteréž si přejeme zřízené dle zásady veřejnosti a ústního jednání, oddělené od správy politické.",
+  "pages": [
+   1
+  ]
+ },
+ {
+  "id": "L28",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 1,
+    "paragraph": "p1-b14-p4",
+    "block": 14
+   },
+   {
+    "page": 1,
+    "paragraph": "p1-b15-p1",
+    "block": 15
+   }
+  ],
+  "text": "Jako ve všem, žádáme svobody občanův též vzhledem vyznání náboženského. Žádáme svobody církve a neodvislosti její vnitřní správy od státu. Otázky náboženské, zvláště dogmatické, nejsou naším oborem, i hodláme se jich vystříhati, chovajíce se jinak vždy s povinnou úctou k ústavům, kteřížto jsou tak úzce spojeni se samým citem náboženským, velikým tímto činitelem v životě společenstva lidského. Vzhledem světské zřízenosti církve a společenského stavu vlastenského kněžstva budeme přáti, aby souhlasilo s řečenou zásadou svobody, s politickými ústavami, kteréž očekáváme; a aby církev naše dle obrazu prvotního křesťanstva a v duchu staré národní církve naší oživila zakonní své zřízení synodální, jemuž bohdá policejní zákon nebude více překážet.",
+  "pages": [
+   1
+  ]
+ },
+ {
+  "id": "L29",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 1,
+    "paragraph": "p1-b15-p2",
+    "block": 15
+   }
+  ],
+  "text": "I Židé jsou spoluobčané naši; my jsouce důslední zastavatelé svobody občanské, chceme též úplné občanské rovnoprávnosti Židů. Přejeme si však též, aby, jsouce spoluobčany našimi též sami vystoupili z výlučného postavení svého a přestali se považovati za cizince mezi námi, aby splynuli s národem, v jehož lůně žijí, aby jeho snahy kulturní, jeho názory mravní a společenské přijali za své a zastupovali jich stejně s námi. Pak zajisté budeme jim netoliko právo občanské přáti, ale budeme si jich vážiti, jakož se v skutku děje, kdekoli jednotlivci věnují účastenství své upřímně blahobytu společenstva a snahám národu našeho. Abychom však vážnost chovali i k těm mezi nimi, kteří k národu našemu nejmenšího soucitu nejeví, aneb dokonce i k těm, kteří jizlivěji než kterýkoli cizinec vyjíždějí na nejsvětější zájmy naše — toho nám ani zákon Kristův nekáže.",
+  "pages": [
+   1
+  ]
+ },
+ {
+  "id": "L30",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 1,
+    "paragraph": "p1-b15-p3",
+    "block": 15
+   }
+  ],
+  "text": "Vzhledem literatury a vší činnosti duševní žádáme všem stejné svobody; chceme svobodu tisku celou a pravou, neporušenou ordonancemi, libovolnými koncessemi a policejním dobrým zdáním — svobodu tisku chráněnou a obmezenou jedině zákonem, při níž odpovídá muž před soudem a před porotou spoluobčanů sobě rovných za slovo své.",
+  "pages": [
+   1
+  ]
+ },
+ {
+  "id": "L31",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 1,
+    "paragraph": "p1-b15-p4",
+    "block": 15
+   },
+   {
+    "page": 2,
+    "paragraph": "p2-b1-p1",
+    "block": 1
+   }
+  ],
+  "text": "Jako ruchu duševnímu, žádáme svobody i ruchu hmotnému — hospodářství národnímu. Přejeme si, aby vláda vystříhajíc se ovšem náhlých přechodů, doprála všemožné volnosti výrobě statků a výměně jich, jsouc přesvědčena, že jednotlivci lépe se postarají o hmotný prospěch svůj, než jakékoli celní a jiné tak řecené ochranné zákony, vynucující často poměry nepřirozené a leda jednotlivcům, nikoli pak všeobecenstvu prospěšné. Nejlepší ochranný zakon výroby národní jsou spořádané ústavy berničné, finančni a úvěrní, pak ubezpečení míru a řádu i samočinnosti občanův. Všecko to pak zakládá se na ústavách sebevládných, přiměřených společenským požadavkům a historickým potřebám lidu našeho, kteréž jediné mohou uvésti a trvale založiti spokojenost a blahobyt obecný, lásku k státu, v němž žijeme, vždy živou ochotu občanův k ochraně státu proti útokům ciziny, veliké zmenšení vojska a následkem toho též ulehčení břemen, obnovení úvěru státního na základě rozsáhlé úspory v oboru vojenském i správním.",
+  "pages": [
+   1,
+   2
+  ]
+ },
+ {
+  "id": "L32",
+  "type": "title",
+  "stream": "below_rule",
+  "parts": [
+   {
+    "page": 1,
+    "paragraph": "p1-b16-p1",
+    "block": 16
+   }
+  ],
+  "text": "FEUILLETON.",
+  "pages": [
+   1
+  ]
+ },
+ {
+  "id": "L33",
+  "type": "title",
+  "stream": "below_rule",
+  "parts": [
+   {
+    "page": 1,
+    "paragraph": "p1-b17-p1",
+    "block": 17
+   }
+  ],
+  "text": "Divadlo a my.",
+  "pages": [
+   1
+  ]
+ },
+ {
+  "id": "L34",
+  "type": "text",
+  "stream": "below_rule",
+  "parts": [
+   {
+    "page": 1,
+    "paragraph": "p1-b18-p1",
+    "block": 18
+   }
+  ],
+  "text": "H. — Zásada rovnoprávnosti národní vyslovena a zaručena nám před nedávnem, musí proniknouti všechen život náš, nemá-li se státi holou frází. Frázemi nám není pomoženo, ať se již vysloví, anebo nic. Celá nedávná doba stonala na fráze, a my jsme byli věru při té nemoci nesilni. A protož má-li se rovnoprávnosti zjednati průchod v úřadě i ve škole, musí se jí zjednati uskutečnění též v divadle. Buďto není rovnoprávnost opravdová, aneb — je-li opravdová: proč ji vylučovat z divadla?",
+  "pages": [
+   1
+  ]
+ },
+ {
+  "id": "L35",
+  "type": "text",
+  "stream": "below_rule",
+  "parts": [
+   {
+    "page": 1,
+    "paragraph": "p1-b18-p2",
+    "block": 18
+   }
+  ],
+  "text": "Před třemi roky, než nastoupil nynější divadelní ředitel v úřadování své, kolovala v Praze adresa k zemskému výboru, aby se českým představením mimo nedělní odpůldne přidal čtvrtek, a sice večer. Žádosť to zajisté přeskromná a mírná, tak jako náš politický život; zemský výbor tu žádosť odepřel, ana prý již přišla „o hodině dvanácté,“ čili dle našeho rozumu — pozdě.",
+  "pages": [
+   1
+  ]
+ },
+ {
+  "id": "L36",
+  "type": "text",
+  "stream": "below_rule",
+  "parts": [
+   {
+    "page": 1,
+    "paragraph": "p1-b18-p3",
+    "block": 18
+   }
+  ],
+  "text": "Zde nám budiž dovoleno, abysme se poněkud pozdrželi. Nechceme zde opakovat, mnoho-li Čechů žije v Praze, ani se nebudeme tázat přátel liberalních, je-li tato většina Čechů uspůsobilá, míti divadlo, aneb oprávněna — chtíti divadlo tak, jak je mají Němci. Že jedno představení v neděli po obědě nedostačí, toho zřejmým tuším důkazem jest ona žádosť, že jsme chtěli mít ještě jedno všedního dne. Zemský výbor nám to odepřel. Jest nyní otázka, zdaž smíme nyní ihned chtíti více, nežli před třemi léty.",
+  "pages": [
+   1
+  ]
+ },
+ {
+  "id": "L37",
+  "type": "text",
+  "stream": "below_rule",
+  "parts": [
+   {
+    "page": 1,
+    "paragraph": "p1-b18-p4",
+    "block": 18
+   },
+   {
+    "page": 1,
+    "paragraph": "p1-b19-p1",
+    "block": 19
+   }
+  ],
+  "text": "Stavovské divadlo pražské je vydržováno ze zemských důchodů. Roční příspěvky tyto obnášejí deset tisíc zlatých a když se v loni divadlo přestavovalo, stálo okolo půl druhého sta tisíců zlatých — a ty se zapravily ze zemských důchodů.",
+  "pages": [
+   1
+  ]
+ },
+ {
+  "id": "L38",
+  "type": "text",
+  "stream": "below_rule",
+  "parts": [
+   {
+    "page": 1,
+    "paragraph": "p1-b19-p2",
+    "block": 19
+   }
+  ],
+  "text": "Peníze zemských důchodů jsou zrovna tak české jako německé, a je-li v Čechách Čechů více, nežli Němců, nejsou peníze ty zajisté německé více, nežli české. My víme, že záležitosť tato patří již před zemský sněm a tam že se jistě vyjedná. Neníť více na čase, abysme žádali, co jest naše, co nám patří právem neporušeným. Avšak každého dne jest škoda. A protož chceme rovné právo své míti uskutečněné již hned, výslovně to pravíme: hned, než se sejde sněm.",
+  "pages": [
+   1
+  ]
+ },
+ {
+  "id": "L39",
+  "type": "text",
+  "stream": "below_rule",
+  "parts": [
+   {
+    "page": 1,
+    "paragraph": "p1-b19-p3",
+    "block": 19
+   }
+  ],
+  "text": "A protož se tážeme nyní zemského výboru v Čechách: Chtějí-li jednat co výbor zemský? Chtějí ze zemských důchodů (tak dobře českých jako německých) vydržovat divadlo německé, anižby vzali ohledu na ty, z jejichž potu a mozolů zemské důchody plynou? Chce zemský výbor český sebe a obecenstvo německé bavit a vzdělávat, věda že zde volá a křičí většina národa, aby jí se také poskytlo zábavy a vzdělání, že zde volá a křičí většina národa oprávněná svými penězi neméně, nežli národ německý? Chce zemský výbor český, aby na úkor a na škodu většiny českého národa ve vzdělání pokračoval zde národ německý, anižby se na veleslušnou, oprávněnou, spravedlivou žádosť naši nevzalo ohledu nižádného? Chce zemský výbor český, aby budoucnosť, bude-li spravedlivá, musila říci: byl zde národ český tak jako jest zde dnes, platil do důchodů zemských, tak jako platí dnes, a zemský výbor český obrátil tenkrát jeho práci na to, aby se zábavou vzdělávala německá část země České, aniž se vzalo ohledu, když Čechové o jeden večer k představením žádali? Chce zemský výbor český se zapsat u potomstva, že slušnou žádost přeslechl? Chce zemský výbor český zodpovídat to tím, že pověděv: „pozdě přicházíte“ — tou odpovědí již nasytil volající vůli tří millionů obyvatelů českých.",
+  "pages": [
+   1
+  ]
+ },
+ {
+  "id": "L40",
+  "type": "text",
+  "stream": "below_rule",
+  "parts": [
+   {
+    "page": 1,
+    "paragraph": "p1-b20-p1",
+    "block": 20
+   }
+  ],
+  "text": "Logika jest na bíledni. Kdo chce zde jednat nelogicky, jedná neprávě. To však od zemského výboru českého zvláště očekávati chceme a musíme: že budou ihned jednat spravedlivě. Že stejného práva dostane se těm, kteří jsou stejně oprávněni, a že český výbor zemský rovné této oprávněnosti šetřit počne bez odkladu.",
+  "pages": [
+   1
+  ]
+ },
+ {
+  "id": "L41",
+  "type": "text",
+  "stream": "below_rule",
+  "parts": [
+   {
+    "page": 1,
+    "paragraph": "p1-b20-p2",
+    "block": 20
+   }
+  ],
+  "text": "Před třemi léty jsme žádali pouze jedno představení všedního dne. Žádosť ta odepřena. Čas vše mění, i časy. Myslím, že se teď neuspokojíme pouze jedním dnem. Máme-li rovné právo, musí být úplné. Vydržuje-li se stavovské divadlo stejně z důchodů českých jako německých, má k představením stejné právo národ český jako německý. Privilegovaných národů neznáme. I myslíme, že ani zemský výbor před námi neudělí zvláštní privilegium Němcům, aby směli do divadla před námi.",
+  "pages": [
+   1
+  ]
+ },
+ {
+  "id": "L42",
+  "type": "text",
+  "stream": "below_rule",
+  "parts": [
+   {
+    "page": 1,
+    "paragraph": "p1-b20-p3",
+    "block": 20
+   }
+  ],
+  "text": "A protož závěrek náš tento: My chceme, a to hned, pokud vlastního svého divadla míti nebudeme, polovici večerů v stavovském divadle k představením českým, druhou polovici at si mají Němci. To je slušné, to je spravedlivé, a slušnosti a spravedlnosti, tuším, zemský výbor český víckrát dvéře nezavře. I opáčíme svatosvatě: kde je národ oprávněný a práva se mu nedostává — to dobrou krev nedělá.",
+  "pages": [
+   1
+  ]
+ },
+ {
+  "id": "L43",
+  "type": "text",
+  "stream": "below_rule",
+  "parts": [
+   {
+    "page": 1,
+    "paragraph": "p1-b20-p4",
+    "block": 20
+   }
+  ],
+  "text": "Déle to tak trvat nemůže. Stížnost ta se ozývá od hranice k hranici, od města k městu. Stížnosť ta je všeobecná. A na zemském výboru českém jest nyní, aby bez odkladu učinil kroky, kterak by stížnosť tuto odstranil.",
+  "pages": [
+   1
+  ]
+ },
+ {
+  "id": "L44",
+  "type": "text",
+  "stream": "below_rule",
+  "parts": [
+   {
+    "page": 1,
+    "paragraph": "p1-b21-p1",
+    "block": 21
+   }
+  ],
+  "text": "Národní život naš a naše literatura.",
+  "pages": [
+   1
+  ]
+ },
+ {
+  "id": "L45",
+  "type": "text",
+  "stream": "below_rule",
+  "parts": [
+   {
+    "page": 1,
+    "paragraph": "p1-b21-p2",
+    "block": 21
+   },
+   {
+    "page": 1,
+    "paragraph": "p1-b22-p1",
+    "block": 22
+   }
+  ],
+  "text": "V.— Četl jsi milý čtenáři spisy Daniela Adama Veleslavínského? — Nečetl; ano Veleslavínský jest jeden z těch spisovatelů, které skoro každý chválí, ale málo kdo čte. Vezmi tedy aspoň na chvíli do ruky jeho překlad kroniky české od Eneáše Sylvia a čti předmluvu, kterou poctivý Daniel Adam k dílu tomu napsal. Ve předmluvě této velmi zanímavé vykládá Veleslavínský učení tehdy obecně za pravdu brané, že prý v životě národův vždy po pěti stech letech neb i po polovici pěti set, po dvou stech padesáti letech veliké proměny nastávají, čehož mnohými příklady z dějin rozličných národův dotvrditi se snaží. Praví pak mezi jiným: „Nyní také tohoto a nastávajícího roku (1585 a 1586) dokonává se a vychází termín aneb periodus království českého, totižto pět set let zouplna od toho času, jakž král Vratislav nejprvé důstojenství královské od císaře Jindřicha přijal a z knížete králem českým učiněn ... A protož očekávati jest nějaké proměny, kterážto, dejž milý Bůh, aby nám i vlasti naší k lepšímu byla.“ Obávání šlechetného vlastence se bohužel brzo vyplnilo; za téhož krále, za něhož ony řádky psány jsou, vypukly rozbroje náboženskopolitické, které došly konečného rozřešení — na Bílé Hoře. Byl to největší převrat, o kterém dějiny naše vypravují, převrat, kterým celý život posavadní národu českého vyhlazen, všeliká jeho samostatnost přetržena a násilím mu cesta naznačena, kterou by dále kráčel. A od této osudné proměny r. 1620 minulo do tohoto roku téměř dvě stě padesát let, a nastala nám zase doba rozhodná: co tehdy pohřbeno, křísí se nyní, národ tehdy podrobený nabývá staré své svobody! Zákon Veleslavínského vyplňuje se opět! — „Jakže, ty nám tu vštěpuješ povery středověké?“ ozve se nevrle mnohý hlas; „mýliš se velice, máš-li čtenářstvo za tak zpozdilé!“ Upokoj se čtenáři milý; známť bystrou mysl českou a nehodlám jí otupovati, ukázal jsem toliko na podivnou tuto shodu! Ostatně však toto vzkříšení národu již pochovaného není věcí náhodnou, jest to účinek práce úsilné, osmdesátileté . . .",
+  "pages": [
+   1
+  ]
+ },
+ {
+  "id": "L46",
+  "type": "text",
+  "stream": "below_rule",
+  "parts": [
+   {
+    "page": 1,
+    "paragraph": "p1-b22-p2",
+    "block": 22
+   },
+   {
+    "page": 2,
+    "paragraph": "p2-b10-p1",
+    "block": 10
+   }
+  ],
+  "text": "Před osmdesáti roky, když Josef II. dosedl na stolici císařskou byl národ náš nejhlouběji klesl. Činnost jeho duševní, které po bitvě Bělohorské pořád ubývalo, vytratila se tehdy již v národě našem téměř zouplna; mimo modlitební knihy nevydávalo se ničeho v jazyku našem, celé osmnácté století nemá po Beckovském až do časů Josefových ani jednoho patrnějšího spisovatele. Národ český byl té doby velikým tělem bez ducha. I není divu, že Josef II. chtě veškerým národům vdechnouti život čilejší, měl za věc prospěšnou, aby se národ český proměnil v jiný, aby jeho řeč ustoupila jiné, která by se lépe hodila k šíření vzdělanosti. Vždyť pak si v Čechách ani v Moravě nikdo nevážil jazyka svého, vždyť se všecko hrnulo k jazyku cizímu, jakožto ku prameni všelikého blaha. Nechať tedy zahyne jazyk český, který překáží vzdělání lidu, nechať zmizí národ, který nemá síly, aby žil. Tak myslili, tak jednali. A jazyk náš vypovězen ze škol a z úřadů a nepřáno mu ani těch bídných chatrčí, posledního jeho útočiště.",
+  "pages": [
+   1,
+   2
+  ]
+ },
+ {
+  "id": "L47",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 2,
+    "paragraph": "p2-b1-p2",
+    "block": 1
+   }
+  ],
+  "text": "Vzhledem k národnosti, kteráž je na ten čas nejmocnějším činitelem v životě státním, žádáme národnosti své ve všem veřejném životě oné cti a šetrnosti, kteráž jí přísluší co národnosti historické, co národnosti většiny ve vlasti naší. Naše zásada je zásada rovnoprávnosti národní, kterouž jsme r. 1848 vyslovili první a posud neodvratně zastávali až do konečného jejího vítězství. A však holým, jalovým uznáním principu se nespokojíme; my žádáme důsledného provedení jeho ve všem životě veřejném, ve školách a úřadech bez rozdílu, a nepřipustíme, aby se nám z něho pod jakoukoli záminkou utrhovalo. Úřady a školy naše buďtež v krajinách českých právě tak české, jako v německých německé. Přitom přejeme si, aby školy naše vůbec byly tak zřízeny, aby každý vzdělanec u nás znal druhý jazyk zemský, neboť toho žádá udržení svornosti a vzájemné účinné podpory obyvatelův krásné vlasti naší, a srozumění se naše netoliko materialní, t. j. mluvou, ale i mravní, to jest soucitem a společným vlastenectvím. Přechody dosavádních poměrů budou obtížné. Přejeme si upřímně, aby se vykonaly bez urážky jedné i druhé národnosti zemské; k tomu třeba, abychom byli vedeni duchem lásky a smířlivosti, aby Slované, kde toho zdar obecného dobra žádá, dělali krajanům německým slušné koncesse, pokud se to může státi bez újmy principu, a aby Němci zas nekřičeli všude o přechvatech, kdekoli se Čechové dovolávají práva svého i prakticky, kdekoli žádají reformy ústavů všelikých, jež germanisující absolutismus zřídil byl na škodu jejich národnosti. Tak, a jen tak zachová se svornost ve vlasti, kteráž je nám i německým krajanům společná: neb od dvou ano i více století žijí s námi pospolú, jejich zásluhy a utrpení jejich splynuly s našimi ve společném jméně českém, a bohdá, že i k utěšenější budoucnosti dobývati se budeme, nerušíce svornosti krajanské v této zemi české, již Bůh utvořil tak krásným ukončeným celkem, ajíž bohdá žádná strana roztrhnouti nedovede.",
+  "pages": [
+   2
+  ]
+ },
+ {
+  "id": "L48",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 2,
+    "paragraph": "p2-b1-p3",
+    "block": 1
+   },
+   {
+    "page": 2,
+    "paragraph": "p2-b2-p1",
+    "block": 2
+   }
+  ],
+  "text": "My jsme Slované a milujeme Slovanské kmenovce své. Nebudeť zajisté nám Slovanům počteno za zločin, co se Němcům vespolek pokládá za cnost. Ježto pak Němci na mnoze touží po spojení svém svazkem jednoho a téhož státu, nehledáme my takového politického splynutí s rodáky svými. Nechcemeť se na prosto zbaviti historické národnosti své, aniž opustiti jazyka od otců našich tolikerou láskou a ducha silou vychovaného, ani literatury a zvláštní vzdělanosti své, první mezi Slovanskými. Netajíme si toho, že poměry naše historické, kulturní a náboženské a tudy i politické, sociální a kulturní potřeby naše jsou mnohonásobně rozdílné od poměrův našich kmenovců. To však nemá nám brániti, abychom nehověli vzájemnosti literární a kulturní s nimi, neboť víme, že jakož my jich milujeme, nalezáme i my mezi nimi, zvláště pak mezi nejmilejšími sousedy svými Jihoslovany, upřímné sympathie, a že v tomto soucitu velikého Slovanstva zakládá se pevná důvěra konečného vítězství našeho, kdyby chtěla prozřetelnost národ náš navštíviti zápasem, o němž nevíme, nečeká-li nás v budoucnosti.",
+  "pages": [
+   2
+  ]
+ },
+ {
+  "id": "L49",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 2,
+    "paragraph": "p2-b2-p2",
+    "block": 2
+   }
+  ],
+  "text": "Vzhledem bratrův Slovákův přejeme vroucně, aby i jim se dostalo rovnoprávnosti a důstojného postavení v mezích království uherského, o jehož minulost, válečnou obranu i kulturní vyvinutí mají zajisté neméně zásluh nežli Maďaři, pročež by též neměli míti menších práv než tito. Přejeme si, aby zachováno bylo i budoucně spojení naše se Slováky, zakládající se ve společnémliterárním a vědeckém jazyku, jehož zákony předkové jejich ve spolku s Moravany a Čechy položili, jejž oni po tolik století spolu s námi chovali a obohacovali, jejž konečně nejslavnější duchové jejich až podnes mnohým drahokamem ozdobili a zdobí. A však za první heslo své pokládáme každého kmene svobodné o sobě ustanovování se a jsme přílíš hrdí a spravedliví, abychom se kde vtírali; máme však pevnou důvěru, že i bez našich domluv, sám postup osvěty a potřeb jejich a soud mužů vlastenských, majících další rozhled politický, v té věci získá jednotě valnou většinu Slovákův a zastaví nejsnáze další drobení Slovanstva. Než buď jak buď, jestli že se kdy Slovákům zle povede, nenajdou zajisté nikdež upřímnějšího a obětavějšího soucitu než mezi Čechy.",
+  "pages": [
+   2
+  ]
+ },
+ {
+  "id": "L50",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 2,
+    "paragraph": "p2-b2-p3",
+    "block": 2
+   }
+  ],
+  "text": "Jakož pak Čech pokládá Slovana za bratra, Slováka za blížence svého, je nám Moravan takořka alter ego — sám druhý Čech, Moravan rodem a krajinou, Čech národem! Jejich sláva je naše sláva, jejich utrpení naše neštěstí. Jakož jsme s velebného Velehradu přijali křesťanství pospolu, jakož jsme od věků žili a bojovali pospolu, jakož na Bílé hoře klesla samostatnost naše pospolu: tak povzneseme čest a blahobyt svůj zajisté, jen když opět pevně státi budeme pospolu. Neznajíce dosah událostí budoucích, přejeme si, aby spojení naše, založené na právě historickém a národním stávalo se vždy bližší a jako vniternější. Ale počátek ve směru tom přísluší Moravanům samým, aby nemohl na Čecha padnouti ani stín, jakoby Čech přednosti nějaké vyhledával.",
+  "pages": [
+   2
+  ]
+ },
+ {
+  "id": "L51",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 2,
+    "paragraph": "p2-b2-p4",
+    "block": 2
+   },
+   {
+    "page": 2,
+    "paragraph": "p2-b3-p1",
+    "block": 3
+   },
+   {
+    "page": 2,
+    "paragraph": "p2-b4-p1",
+    "block": 4
+   }
+  ],
+  "text": "To jsou naše zásady, jež v „Listech Národních“ zastupovati hodláme. Co žádáme, je spravedlivé a Bůh sám je ochranou spravedlivých. Jinak důvěřujeme hlavně vlastním silám — a kdo se sám neopouští, toho Bůh neopouští! Krom toho slíbili nám nejčelnější mužové národa našeho, výteční politickým věhlasem i literárními zásluhami stálou podporu, jako: Historiograf Fr. Palacký, JUD. Fr. Brauner, Dr. Fr. Čupr, bibliothékář Hanka, redaktor Dr. Kodym, direktor J. Krejčí, Jak. Malý, JUDr. J. Palacký, JUDr. Pinkas, Dr. prof. J. Purkyně, redaktor Fr. Rezáč, JUDr. Fr. Lad. Rieger, rada K. Štorch, JUDr. Rudolf kníže z Turnů a Taxisů, JUDr. Pravoslav Trojan, rada J. Wenzig, prof. V. Zelený a j.",
+  "pages": [
+   2
+  ]
+ },
+ {
+  "id": "L52",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 2,
+    "paragraph": "p2-b4-p2",
+    "block": 4
+   }
+  ],
+  "text": "Stálí spolupracovníci naši budou: Vojtěch Bělák, Vítězslav Hálek, Jiljí Jahn, JUD. Jeřábek, Fr. Jeřábek, JUD. V. Svatek, dir. Leop. Zvonař, ve věcech uherských prof. M. Hattala a j.",
+  "pages": [
+   2
+  ]
+ },
+ {
+  "id": "L53",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 2,
+    "paragraph": "p2-b4-p3",
+    "block": 4
+   }
+  ],
+  "text": "Ostatně nehledáme v provádění úkolu svého žádného monopolu. Každá hlava, každá ruka bojující za tuto věc naši bude nám vítána a pozdravíme ji bratrsky. Každou zásluhu o věc naši rádi uznáme a vzdáme čest komu čest. Vždy a ve všem chceme sami zachovávati a jiným schvalovati půdu zákona, žádajíce, aby ji nikdá neopouštěl lid, ale též aby jí svědomitě šetřili úřadové. Z práva svého vytisknouti se nedáme bez obrany. Ve všem a všady budeme přátelé svých přátel a nepřátelé svých nepřátel.",
+  "pages": [
+   2
+  ]
+ },
+ {
+  "id": "L54",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 2,
+    "paragraph": "p2-b4-p4",
+    "block": 4
+   }
+  ],
+  "text": "V Praze dne 20. prosince 1860.",
+  "pages": [
+   2
+  ]
+ },
+ {
+  "id": "L55",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 2,
+    "paragraph": "p2-b4-p5",
+    "block": 4
+   }
+  ],
+  "text": "Redakce.",
+  "pages": [
+   2
+  ]
+ },
+ {
+  "id": "L56",
+  "type": "title",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 2,
+    "paragraph": "p2-b5-p1",
+    "block": 5
+   }
+  ],
+  "text": "Program p. ministra Schmerlinga.",
+  "pages": [
+   2
+  ]
+ },
+ {
+  "id": "L57",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 2,
+    "paragraph": "p2-b6-p1",
+    "block": 6
+   },
+   {
+    "page": 2,
+    "paragraph": "p2-b7-p1",
+    "block": 7
+   },
+   {
+    "page": 2,
+    "paragraph": "p2-b8-p1",
+    "block": 8
+   }
+  ],
+  "text": "Za posledních dnů neudálo se v politice Rakouska nic tak důležitého jako okružné psaní čili cirkulář statního ministra rytíře Schmerlinga. Účel jeho jest netoliko, aby nařídil místodržícím, kterak se chovati mají, ale spíše aby oznámil světu, jakým způsobem hodlá sám prováděti úkol svůj a jaký směr chce dáti vnitřní politice rakouské říše, jakou formu jejímu zřízení. Program ten je ovšem z mnohých příčin důležitý, neboť p. rytíř Schmerling je statním ministrem, t. j. on má býti dle vůle císařské, vyslovené 20. října 1860 zaroveň ministrem vnitra, spravedlnosti, kultu a vyučování pro všecky země neuherské. On má být prostředníkem mezi zákonodárnou mocí sněmů zemských, pojištěnou článkem I. nejvyššího diplomu od 20. října a mezi osobou krále našeho, kterýž udělením sankce své dovršuje zákonou platnost všech usnesení, vyšlých ze sněmův zemských; on tedy může za nynější doby, kdež se míra a forma samosprávy zemské trprva ustanoviti má, mnoho učiniti ve prospěch její, jakož i na zoužení její. Když nám přišel císařský diplom od 20. října, nebyla radost naše z něho příliš živá; našinec pravil: Rámec bychom tedy měli a to pěkný, dobře pozlacený samosprávou a svézákonností zemskou i právem historickým našeho království, ale jaký přijde obraz do něho!? Když začal dělat ministr Gołuchovský první rysy Štýřanům a Korutancům, měli jsme z toho žalost; nyní povolán zas pan Schmerling a dává nám poněkud na srozuměnou, kterak on hodlá malovat. Když rozložil v programu svém plán svého obrazu, zdálo se na první pohled mnohým, že to bude cosi kloudného. Tu pak začínali jsme probírati věc tu podrobněji a našli jsme všeliké kdyby i chyby. I ptali jsme se v duchu při mezerách těch: nechtěl nebo nesměl? Především nelíbilo se nám to, co tam nebylo; praví se tam sice, že se mezi hlavní rysy pravidel, dle nichž se sněmové zemští sestavovati mají, přijímá zastoupení interessův, ale má se volit pouze dle interessů, anebo též dle stavů vedlé interessů? A nebudou interessy jen jiný název pro stavy? Co jsou interessy čili po česku zájmy? To, na čem občanům záleží, co jich zvláště zajímá; tedy všecky části a zlomky občanstva, kterýmž na něčem zvláště záleží, které mají ve spolek a pro sebe nějaký společný zájem, mají býti zastoupeni na sněmě. Ale kde je na to míra a váha — kde toho rozumná hranice? podle jakého pravidla mají se zájmy takové dělit? Rolnictví zajisté je předůležitý zájem zemský. Bude tento interes míti zvláštní zastoupení, a v jakém poměru k jiným zájmům? A budou všickni rolníci zastoupeni stejně, anebo bude se i tu dělat rozdíl! Budou se snad dělit velcí rolníci (to jest páni, bývalé vrchnosti) a malí rolníci (bývalí poddaní)? A nemají při rolnictví rozličné zájmy též vlastníci gruntův a jich pachtýři; sedláci a chalupníci a snad dokonce též baračníci a nádenníci rolní? Dle čeho usoudí se, který zájem je zastoupení na sněmě hoden a který nic; a není-liž nepřehledná rozmanitost interessů dle pohlaví, věku, národnosti, zaměstnání, vzdělanosti a mnoha jiných ohledů? Nám se zdá že jediný interes, dle něhož se zastoupení občanů ve státě určiti má, jsou daně, břemena, jež oni ve prospěch statu nesou. V též míře, v jakéž přispívají ke společnému hospodářství je zajisté slušné a spravedlivé, aby v něm i moc a právo provozovali, aniž můžeme připustiti, aby komukoli mezi občany byla dána přednost bez důvodu, a aby platil ve státě poměrně více než platí k němu cestou jakoukoli. O tomto zastupování interessů, na něž dle našeho zdání nelze užiti žádného spravedlivého a spolehlivého základu kromě daně, promluvíme ještě později.",
+  "pages": [
+   2
+  ]
+ },
+ {
+  "id": "L58",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 2,
+    "paragraph": "p2-b8-p2",
+    "block": 8
+   }
+  ],
+  "text": "Program Schmerlingův zamlčel ještě ledacos jiného. On praví: že předcházející zasahování policie do záležitostí tiskových odpadá. Avšak nepovídá nám, bude-li vydán zákon o tisku a bude-li spisovatel státi zcela na půdě zákona; a to věru pro nás novináře není věc malé váhy — nebo tu jde o naši kůži, a máme-li čtenářům svým pověděti bez obalu, jak věcem rozumíme a co o nich víme, musíme být jisti, že nebudeme trestáni jinak, leč když urazíme zákon nebo čest a právo osobní. A není to zasahování předchodní, když smí psáti o politice jen kdo složí 10000 zl. stř. (což dělá die nynějších kursů asi 15000 zl. ve státních papírech.) A není to preventivní zasahování když minister policie odepře povolení k vydávání časopisu politického komu libo, byť by i všecky výminky zákona vyplnil? U nás ku př. p. Dr. Rieger žádal o povolení na časopis „Národ“ a ač se vykázal zajisté vší zákonnou k tomu schopností byl předce odmrštěn a to sice již od té chvíle, co je p. Schmerling ministrem!",
+  "pages": [
+   2
+  ]
+ },
+ {
+  "id": "L59",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 2,
+    "paragraph": "p2-b8-p3",
+    "block": 8
+   }
+  ],
+  "text": "Jeho program přislibuje dále veřejné a ústní jednání v soudství a však mlčí o zavedení poroty, bez níž je ústné, trestní jednání jako kabát bez šosú.",
+  "pages": [
+   2
+  ]
+ },
+ {
+  "id": "L60",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 2,
+    "paragraph": "p2-b8-p4",
+    "block": 8
+   }
+  ],
+  "text": "Jeho program mluví dále o státech, mezi něž se prý Rakousko postaví, a jež my obyčejně konštitučními nazýváme. Pan minister vyhnul se pečlivě slovu konštituce a opatrně též pomlčel o odpovědnosti ministrů, bez níž je každému ministru volno, nešetřiti ani základních zákonův říše ani vlastních zásad, a pak předce vystoupiti z úřadu svého s uznáním zásluh svých. Pan rytíř Schmerling platí za muže poctivého a stálého ve svých zásadách; on zachová zajisté program svůj jinak liberální. Ale co nám ručí za to, že i jeho nástupce bude též tak poctivý a liberální; pokudž nebude dán zákon by jej vázal program ministerský, nedává nám žádného ubezpečení, žádné pevné zákonné a ústavní půdy. Jak pěkné věci o rovnoprávnosti napsal nám hr. Thun, jakým jasáním přijali poslanci naši v Kroměříži program Schwarzenbergův a Stadionův, a nebyl cirkulář Bachův k místodržícím snad ještě liberálnější než Schmerlingův?",
+  "pages": [
+   2
+  ]
+ },
+ {
+  "id": "L61",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 2,
+    "paragraph": "p2-b8-p5",
+    "block": 8
+   },
+   {
+    "page": 2,
+    "paragraph": "p2-b9-p1",
+    "block": 9
+   }
+  ],
+  "text": "Také poměrův říše a zemí neuherských k uherským podotknuto jen s obalem, že nevíme na jisto, kterak si pan ministr tyto věci myslí a přeje. To jsou vesměs otázky, o nichž bychom byli rádi uslyšeli z úst p. ministra státního vyjádření jasné, pevné, určité, neb od toho visí upokojení duchů v celé říši a od uspokojivého věcí těch upravení zachování říše. Slušně praví teda o tom časopis „Independance,: „Stav říše rakouské“ je příliš povážlivý než aby bylo dovoleno mluviti polovičnými slovy. Třebať měřiti přímo k cíli, nemá-li se probuditi nedůvěra! To jsou úvahy, jež našinec dělal co člověk liberální. Na to vzal jsem staročeské brejle, jež mám po svém pradědu a prohlížel jsem jimi psaní ministrovo. Tuť mi padlo do oka, že pan ministr začíná a končí „vědou,“ slibuje nás podporovati všecky stejně ve snaze po vzdělanosti, „ale vždy a ve všem pokládati vědu za cíl nejvyšší.“ Ale předešlá vláda zajisté měla také na očích především vzdělanost; ovšem že pokládala jazyk německý za nejlepší prostředek vzdělanosti — a tak nás němčili, hovíce přepiaté domněnce, že je živel německý povolán, „aby nesl vzdělanost na východ.“ A jak kdyby se nyní uznalo, že věda, kteráž je nejvyšším cílem nemůže býti jiná než německá? Jiný konečně silně němčinou podšitý článek je ten, kde se mluví o autonomii sněmův. Z toho vidno, že tato, budeli se říditi dle úmyslův p. Schmerlingových, bude nehrubě veliká, ač budeli vůbec obsahovati mnohem více než pořádání přípřeží a ubytování vojska anebo postrky tulákův a věci podobné! Otevřený list p. školnímu radovi Marešovi.",
+  "pages": [
+   2
+  ]
+ },
+ {
+  "id": "L62",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 2,
+    "paragraph": "p2-b9-p2",
+    "block": 9
+   },
+   {
+    "page": 3,
+    "paragraph": "p3-b1-p1",
+    "block": 1
+   },
+   {
+    "page": 3,
+    "paragraph": "p3-b2-p1",
+    "block": 2
+   }
+  ],
+  "text": "Chceli národ bez starosti a bez obavání do budoucnosti hleděti, nevyhnutelno mu, aby mládež národně a k svobodě odchovával. — Jinak octne se dříve nebo později na rozhraní, kde přestává, býti národem svým, kde se stává národem zvrhlým — bastardem. Tu se ctný, přirozený jeho ráz ničí a mezi potomkem a předkem přetrženo navždy pásmo stejnorodého ducha a srdce. Myšlenky, snahy, úmysly, činy předka svého znesvěcuje potomek nohou rouhavou; srdce jeho nezná zbožných spomínek na život, na svět otcovský, oko bez slzí pohlíží na hroby, v nichž práchnivěji kosti zašlých předků. Bez nadšení mravního a bez obětavé cnosti občanské jest jen prodaj-, ným nástrojem proti rodákům svým i proti cizím doma i za hranicemi.",
+  "pages": [
+   2,
+   3
+  ]
+ },
+ {
+  "id": "L63",
+  "type": "text",
+  "stream": "below_rule",
+  "parts": [
+   {
+    "page": 2,
+    "paragraph": "p2-b10-p2",
+    "block": 10
+   },
+   {
+    "page": 2,
+    "paragraph": "p2-b11-p1",
+    "block": 11
+   }
+  ],
+  "text": "Jazyku Svatováclavskému zvonili umíráčkem a zdálo se, jakoby si při tom sotva kdo zpomínal, jak slavný býval ten, kterému se odzvonilo. Ale ty žalostné zvuky pohřební dojaly některých jemnějších srdcí a připomenuly jim, že se tu pochovává jazyk jejich mateřský. Těchto srdcí bylo však málo, tak málo, že si jejich bolesti nikdo nevšiml. Byla to však srdce pevná, srdce staročeská, a smutný osud jazyka mateřského nevedl jich k pláči, nýbrž k pilné, neunavné práci, k šlechetnému úsilí, aby, možná-li zachovali život jazyku na smrť odsouzenému. Dílo to arci nesnadné, mozolovité a nevděčné. Vždyť pak národ sám o tom ani slyšeti nechtěl, vždyť si díla toho nepovšiml, leč potupným pohledem, posmívaje se té pošetilosti, která prý chce křísiti mrtvé. Ale pevná, ušlechtilá vůle nelekala se tisícerých překážek; stateční mužové dali se bez meškání do práce — a za čtyrycet let odstraněny jsou rumy, kterými půda byla pokryta, a nyní jali se stavěti stavitelé vyššího ducha. Dílo přípravné vykonal s jinými Jungmann, stavbu vlastní vedli Kollár, Čelakovský, Klicpera, Langer, Mácha, Koubek, Tyl, Havlíček a mnozí jiní, kterých jen proto nepřipomínáme, že jich nechceme klásti do minulosti . . . Nu a co vyvedli všickni ti mistři? Stavení ne sice nádherné, skvělé, ale úpravné, pevné, ježto každého člověka zdravého citu libě dojímá a jmenu českému vážnosti dobývá po veškerém světě vzdělaném ... mistři ti stvořili novou naši literaturu.",
+  "pages": [
+   2
+  ]
+ },
+ {
+  "id": "L64",
+  "type": "text",
+  "stream": "below_rule",
+  "parts": [
+   {
+    "page": 2,
+    "paragraph": "p2-b11-p2",
+    "block": 11
+   }
+  ],
+  "text": "Literatura naše novější vykvetla v okolnostech nejtěžších. Jen malá část národu všímala si počínání mužů, jichžto usilování se všem chlebojedům pošetilým býti zdálo. Sama vláda pohlížela s nedůvěrou ano s podezřením na snažení, které se oblíbenému poněmčení národu našeho stavělo příkře na odpor. Že v okolnostech takových spisovatelé čeští neochábli, že přese všeliké překážky pevně kráčeli cestou svou, jest zajisté neméně skvělým důkazem statné mysli české než úžasná vítězství nadšených zástupů u Domažlic aneb u Tachova — a účinek zajisté ještě znamenitější! Šlechetným tímto úsilím vzkříšen národ dvě století již pochovaný k životu duševnímu a mocným příkladem svým zbudil i jiné bratry své, posud v tuhém spaní pohřížené. Národ českoslovanský byl i bratřím jihoslovanským i lužickým, ano i rusínským v mnohém důležitém kroku pobídkou i příkladem ve vzdělání národu! — V celých dějinách našich není udalosti, na kterou bychom s tak upřímnou, hrdou radostí hleděti mohli, jako na rozkvět novější naší literatury a na ní se zakládající novuzrození národu našeho! A jakož jest literatura naší chloubou, jakož jest nejpevnějším základem našich nadějí, tak bude vždy milým, vroucně pěstovaným předmětem našich listů.",
+  "pages": [
+   2
+  ]
+ },
+ {
+  "id": "L65",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 3,
+    "paragraph": "p3-b2-p2",
+    "block": 2
+   }
+  ],
+  "text": "Svobodné, národní vychování mládeže to jest čím národ stojí, čim postupuje a znamenitosti, proslulosti se domáhá. Kde jeho není, tam přestává i život národní.",
+  "pages": [
+   3
+  ]
+ },
+ {
+  "id": "L66",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 3,
+    "paragraph": "p3-b2-p3",
+    "block": 2
+   }
+  ],
+  "text": "Tak zajisté smýšleli nejosvícenější učitelé národů uvědomělých a vzdělaných; tak i smýšlejí přední naši pedagogové a s nimi všickni vřelí národovci, kteří v posledním čase u velkém počtu proti Vám, pane školní rado, veřejně vystoupili.",
+  "pages": [
+   3
+  ]
+ },
+ {
+  "id": "L67",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 3,
+    "paragraph": "p3-b2-p4",
+    "block": 2
+   }
+  ],
+  "text": "Vládní system, panující po celé desítiletí právě minulé nepřičinil se o vychování mládeže naší v směru svrchu podotčeném, v směru národním a svobodném. Všegermanisující centralisace usilovala o to, by jazyk náš a uvědomování národní ze škol vytlačila. — Vyhlazení národnosti české, zdá se nám, bylo konečným jejím účelem. A vy, pane, jsa povolán oným systemem za radu školního u nás v Čechách, sloužil jste mu věrně a horlivě. — Ano horlivěji ještě, než ordonance tehdejšího ministerstva toho na Vás požadovaly.",
+  "pages": [
+   3
+  ]
+ },
+ {
+  "id": "L68",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 3,
+    "paragraph": "p3-b2-p5",
+    "block": 2
+   }
+  ],
+  "text": "Mohli bychom o této germanisující horlivosti Vaší četných příkladův uvesti, než dostačí, když jich zde podáme jen několik obecenstvu našemu známějších.",
+  "pages": [
+   3
+  ]
+ },
+ {
+  "id": "L69",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 3,
+    "paragraph": "p3-b2-p6",
+    "block": 2
+   }
+  ],
+  "text": "Za Vašeho úřadováni zaváděli se německé učitelé na hlavní školy české;",
+  "pages": [
+   3
+  ]
+ },
+ {
+  "id": "L70",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 3,
+    "paragraph": "p3-b2-p7",
+    "block": 2
+   }
+  ],
+  "text": "zaváděli se němečtí učitelé na reálky v městech českých a učitelé čeští strkáni do krajů německých;",
+  "pages": [
+   3
+  ]
+ },
+ {
+  "id": "L71",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 3,
+    "paragraph": "p3-b2-p8",
+    "block": 2
+   }
+  ],
+  "text": "zavedeny německé školské sestry do Čech, které výhradně německy vyučují;",
+  "pages": [
+   3
+  ]
+ },
+ {
+  "id": "L72",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 3,
+    "paragraph": "p3-b2-p9",
+    "block": 2
+   }
+  ],
+  "text": "reálky obsazeny nejvíce lidmi jazyka českého ani gramatikálně, ani orthograficky neznajícími, k snahám národním buď lhostejnými, buď nepřátelskými;",
+  "pages": [
+   3
+  ]
+ },
+ {
+  "id": "L73",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 3,
+    "paragraph": "p3-b2-p10",
+    "block": 2
+   }
+  ],
+  "text": "obsazena místa direktorská kaplany, kteří realního vzdělání nemají, ba podřízení jim učitelé státní examen pro vyšši ústavy mající, ba i ředitelství vyšší reálky Kutnohorské svěřeno můži skoušenému pouze pro bývalé čtvrté třídy.",
+  "pages": [
+   3
+  ]
+ },
+ {
+  "id": "L74",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 3,
+    "paragraph": "p3-b2-p11",
+    "block": 2
+   }
+  ],
+  "text": "Za vašeho úřadování vyučováno až do roku 1859 skoro ve směsna reálkách německy, ba i přikázané české přednášky o náboženství zanedbávány;",
+  "pages": [
+   3
+  ]
+ },
+ {
+  "id": "L75",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 3,
+    "paragraph": "p3-b2-p12",
+    "block": 2
+   }
+  ],
+  "text": "zaveden místo řádných českých skolních kněh německý surogát s českou terminologií;",
+  "pages": [
+   3
+  ]
+ },
+ {
+  "id": "L76",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 3,
+    "paragraph": "p3-b2-p13",
+    "block": 2
+   }
+  ],
+  "text": "nenaučily se dítky ze čtvrté třidy vystupující češtině, což direktoři středních ústavů dosvědčiti mohou, ačkoli předce zákon o hlavních školách od r. 1855, češtině dosti nepříznivý, nařizuje, že nemá čeština němčinou nikdy újmy trpěti;",
+  "pages": [
+   3
+  ]
+ },
+ {
+  "id": "L77",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 3,
+    "paragraph": "p3-b2-p14",
+    "block": 2
+   }
+  ],
+  "text": "byla němčina úřední řečí při úřadování školním, katalalogy, Stundeneintheilungy atd., všechno bylo německé;",
+  "pages": [
+   3
+  ]
+ },
+ {
+  "id": "L78",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 3,
+    "paragraph": "p3-b2-p15",
+    "block": 2
+   }
+  ],
+  "text": "potlačeny jsou r. 1857 sbírky na české pedagogium Mladoboleslavské, ač jste Vy sám tehdá sbíral na pedagogium Pražské, Litoměřické a Budějovické, což se vůbec za zjevný útok na národnost českou považovalo, a posud považuje;",
+  "pages": [
+   3
+  ]
+ },
+ {
+  "id": "L79",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 3,
+    "paragraph": "p3-b2-p16",
+    "block": 2
+   }
+  ],
+  "text": "nestala se řeč česká na německé reálce Pražské navzdor veliké většině žákův českých předmětem obligátním, taktéž ani na reálce Liberecké;",
+  "pages": [
+   3
+  ]
+ },
+ {
+  "id": "L80",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 3,
+    "paragraph": "p3-b2-p17",
+    "block": 2
+   }
+  ],
+  "text": "zůstala malostranská Musterhauptschule cele německou, s německými učiteli, bez vyučování náboženství v řeči české, bez vyučováni českému jazyku, taktéž jest reálka Týnská zcelá německá, z větší části s německými učiteli;",
+  "pages": [
+   3
+  ]
+ },
+ {
+  "id": "L81",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 3,
+    "paragraph": "p3-b2-p18",
+    "block": 2
+   }
+  ],
+  "text": "nežádala se a nežádá kvalifikace česká; dosazováni jsou na mnoze učitelé bez zákonitě předepsaného konkursu — pouze na jednoduché Vaše odporuční lístky a t. d. a t. d.",
+  "pages": [
+   3
+  ]
+ },
+ {
+  "id": "L82",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 3,
+    "paragraph": "p3-b2-p19",
+    "block": 2
+   },
+   {
+    "page": 3,
+    "paragraph": "p3-b3-p1",
+    "block": 3
+   },
+   {
+    "page": 3,
+    "paragraph": "p3-b4-p1",
+    "block": 4
+   }
+  ],
+  "text": "Protož není snad osobnosti, o které by se bylo v době novější v české žurnalistice tolik psalo jako o Vás, pane rado školní. — Že my hned na začátku našich listů národních též slovo k Vám obracíme, budiž důkazem, jak velikou cenu přikládáme našemu národnímu školství, této štěpnici příštích pokolení, tomuto zárodku naší budoucnosti. — Vám svěřena od vlády veliká, ba snad nejdůležitější část této štěpnice, rukoum Vašim odevzdán byl nejdražší klenot našeho národa — mládež česká. — A jak jste spravoval tento svěřený Vám poklad náš? Spravoval jste jej tak, že se ozval v prsou každého národovce jediný výkřik bolesti a hněvu! — My již těžce neseme, že v přílišném množství našich gymnasií mládež česká se vychovává skoro výhradně za úředníky a že se takto nejlepší síla národa exortuje do všech kancelářů rozsáhlé říše rakauské. — A že tím nevzrůstá ani blahobyt národa, ani čest jmena českého, o tom se každý přesvědčil, kdo po Uhrách neb po Polsce cestoval. Ještě méně však připouštětí můžeme, aby dle intence Vaší, reální školy naše vychovávali kaprály a osoby úřední. — Školy tyto mají k tomu hleděti, aby nám odchovali řádných řemeslníků a schopných průmyslníků, neboť jsme přesvědčeni, že jen z tohoto zárodku vykvétati nám může blahobyt národní!",
+  "pages": [
+   3
+  ]
+ },
+ {
+  "id": "L83",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 3,
+    "paragraph": "p3-b4-p2",
+    "block": 4
+   }
+  ],
+  "text": "Že vychování toto však státi musí na půdě národnosti, že musí díti jazykem máterským, jest pravda všestranně mnohonásobně osvětlená a dokázaná, že dalších řeči o ní šířiti zbytečno.",
+  "pages": [
+   3
+  ]
+ },
+ {
+  "id": "L84",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 3,
+    "paragraph": "p3-b4-p3",
+    "block": 4
+   }
+  ],
+  "text": "A že ste Vy, pane rado, nešetřil jazyka našeho ve školách Vám svěřených, a nepodporoval národnost naši při zařizování a spravování realních ústavů našich o tom svědčí facta, svrchu uvedená.",
+  "pages": [
+   3
+  ]
+ },
+ {
+  "id": "L85",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 3,
+    "paragraph": "p3-b4-p4",
+    "block": 4
+   }
+  ],
+  "text": "My upřimně vyznati se musíme, že v dosavádním úřadování Vašem nespatřujeme šetření naší národnosti, ale naopak viděli jsme v něm podrývání, skracování a utlačování národnosti české.",
+  "pages": [
+   3
+  ]
+ },
+ {
+  "id": "L86",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 3,
+    "paragraph": "p3-b4-p5",
+    "block": 4
+   }
+  ],
+  "text": "Rány národnosti naší ve školách středních Vámi zasazené, nedají se lehce zaceliti, krvácejit podnes, a budou ještě dlouho krváceti, i kdyby jste je zakrývati chtěl obvazkem výmluv a slov nejskvělejších.",
+  "pages": [
+   3
+  ]
+ },
+ {
+  "id": "L87",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 3,
+    "paragraph": "p3-b4-p6",
+    "block": 4
+   }
+  ],
+  "text": "Vy, pane rado, povstana s systemem germanisující centralisace, nyní již ztroskotaným, jste snad skoro jediný, co nás ještě nyní za doby svobodnějšího ruchu strašíte co neblahý stín, co nemilá upomínka padlého onoho systému; a musíme se vyznati, že pokuď Vy trváte v důležitém úřadě svém co rada školní, nespatřujeme nižádné garancie, že se uskuteční rovnoprávnost národní. —",
+  "pages": [
+   3
+  ]
+ },
+ {
+  "id": "L88",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 3,
+    "paragraph": "p3-b4-p7",
+    "block": 4
+   }
+  ],
+  "text": "Každý vládní system má své přívržence. — Nejspůsobilejším a nejčelnějším dostávají se obyčejně i nejdůležitější úřady v zemi, — jsouť hlavní podporou, a takřka výkonnou mocí jeho.",
+  "pages": [
+   3
+  ]
+ },
+ {
+  "id": "L89",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 3,
+    "paragraph": "p3-b4-p8",
+    "block": 4
+   }
+  ],
+  "text": "Padne-li ale system, padají s ním též jednou dobou čelní jeho podporovatelé, ovšem jsou-li mužové důslední, jímž jde čest a přesvědčení nad ctižádost a zisk osobní. —",
+  "pages": [
+   3
+  ]
+ },
+ {
+  "id": "L90",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 3,
+    "paragraph": "p3-b4-p9",
+    "block": 4
+   }
+  ],
+  "text": "Očekávali jsme tudiž všickni, že diplom od 20. října 1860, nímž stará centralisace a germanisace odstraněná byla, i Vás co nepatrného agenta této k odstoupení přiměje. — Vy však posud trvátev úřadě svém, vzdor všeobecné indignací která v národu našem proti Vám povstala.",
+  "pages": [
+   3
+  ]
+ },
+ {
+  "id": "L91",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 3,
+    "paragraph": "p3-b4-p10",
+    "block": 4
+   }
+  ],
+  "text": "Nadějeme se však, že poznáv nemožnost dalšího trvání v úřadě svém, v době nejblíže příští, konečně složíte úřad dosavádní činností své — nečekaje, až by vláda sama, seznavši spravedlivé stížnosti národa, úřadu školního rady Vás sprostila. —",
+  "pages": [
+   3
+  ]
+ },
+ {
+  "id": "L92",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 3,
+    "paragraph": "p3-b4-p11",
+    "block": 4
+   }
+  ],
+  "text": "V Praze dne 1. ledna 1861.",
+  "pages": [
+   3
+  ]
+ },
+ {
+  "id": "L93",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 3,
+    "paragraph": "p3-b4-p12",
+    "block": 4
+   }
+  ],
+  "text": "Gr.",
+  "pages": [
+   3
+  ]
+ },
+ {
+  "id": "L94",
+  "type": "title",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 3,
+    "paragraph": "p3-b5-p1",
+    "block": 5
+   }
+  ],
+  "text": "Politické zprávy.",
+  "pages": [
+   3
+  ]
+ },
+ {
+  "id": "L95",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 3,
+    "paragraph": "p3-b6-p1",
+    "block": 6
+   }
+  ],
+  "text": "Videň, 29. prosince. Přivtělení Vojvodiny ku koruně Uherské jest úředně prohlášeno. — Jak dalece tento krok vládní, který ostatně bez slyšení zastupitelstva, ze svobodných voleb veškerého obyvatelstva Vojvodoviny pošlého, jen k naléhání několika pomadařených velmožův učiněn byl, na mysle srbského národu, většinu ve Vojvodině tvořící působiti bude, ukáže nám nejblíže příští budoucnost. — Obchodní a plavební smlouva mezi Rakouskem a Ruskem uzavřená nalehčuje obchodu velice. Smlouva tato podává korábům i podaným obou smlouvajících mocností obapolné plavební i obchodní svobody; občané obojího státu požívají plné svobody, že s rodinami svými do kterékoliv části druhého státu cestovati, tam se zdržovati mohou i jsou oprávněni, buď osobně neb prostřednictvím svých jednatelův dle vůle a potřeby své obchoditi. — Praví se, že dosavádní předseda ministerstva hrabě Rechberg císaři pánu žádost za své propuštění podal, která však dosud přijata nebyla. — Propuštění jeho jakožto dosavádního členu pohrobeného systemu absolutního, by snad příznivě oučinkovalo na veřejné mínění! — „Oest. Ztg.“ přináší pověst, že na místo Rechbergovo má nastoupiti hrabě Mensdorf, dosavádní náměstník ve Vojvodině Srbské! — Hrabě Mensdorf jest příbuzný královny Anglické, i myslí se, žeby jmenování jeho za ministra zevních záležitostí v Anglicku dobře přijato bylo. Representanté liberální strany v Uhrách, pánové Deak a Eötvös, kteří o úplné provedení konštituce z roku 1849, na zemském sněmu Uherském vypracované, usilují, měli dlouhou audienci u císaře pána, z čehož souditi lze, že vláda Maďarům i pres diplom od 20. října v požadavcích jejich povoliti chce. — Maďarskému časopisu telegrafováno v záležitosti této, že sněm Uherský v prvních duech ledna budoucího roku na základě konštituce z r. 1848 svolán bude. O zavedení porotních soudův, těchto mocných faktorův občanské svobody, jedná se v ministerstvě spravedlnosti velmi živě. Nám se zdá, žeby jednoduché, rychlé obnovení trestního řádu z r. 1850 nejjistějším důkazem bylo, že se na cestě liberálního pokroku upřimně kráčeti zamýšlí. —",
+  "pages": [
+   3
+  ]
+ },
+ {
+  "id": "L96",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 3,
+    "paragraph": "p3-b7-p1",
+    "block": 7
+   }
+  ],
+  "text": "— „Wiener Zeitung“ uveřejňuje následující oznámení: Jelikož dle Nejvyššího císařského nařízení od 27. t. m. (ř. z. č. 279) doplatek, jenž dávati se má při úrocích národní výpůjčky, rozličný jest dle rozličných lhůt, kdy k placení dospějí, jest pro uvarování se omylu při počítání doplatku zapotřebí, aby ti, kdož deset aneb více kuponů z rozličných platebních lhůt k placení přinesou, kupony tyto sepisovali nejen dle jich jmenovaných částek, nebrž i dle jich lhůt platebních. Bavorským pokladnicím bylo přísně zakázano, aby nebraly při placení rakouské stříbrné šestáky.",
+  "pages": [
+   3
+  ]
+ },
+ {
+  "id": "L97",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 3,
+    "paragraph": "p3-b7-p2",
+    "block": 7
+   }
+  ],
+  "text": "— Hlasy naše o rovnoprávnost národní nezůstávají bez ohlasu. Vídeňský aristokratický časopis „Vaterland“ háji právo naší řeči národní odvolávaje se na starý řád zemský, kterýž nikdy nebyl zrušen jakož i řeč česká ještě na posledním sněmu zemském byla užívána. Nejen že každý Čech má právo hlásiti se věrně k svému jazyku, ale i každý Němec má národnímu jazyku se pilně učiti.",
+  "pages": [
+   3
+  ]
+ },
+ {
+  "id": "L98",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 3,
+    "paragraph": "p3-b7-p3",
+    "block": 7
+   },
+   {
+    "page": 3,
+    "paragraph": "p3-b8-p1",
+    "block": 8
+   }
+  ],
+  "text": "— Vrchní státní zástupce a rada u banského stolu Jan Mazuranič byl jmenován za presidenta prozatimního dvorního dikasterium pro trojjediné království horvatsko-slovansko-dalmatinské.",
+  "pages": [
+   3
+  ]
+ },
+ {
+  "id": "L99",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 3,
+    "paragraph": "p3-b9-p1",
+    "block": 9
+   }
+  ],
+  "text": "A Pešť-Budín, dne 28. prosince. „Tantae molis erat —“ musíme i my zvolati s Virgilem, a však ne „romanam condere gentem,“ nýbrž pořádné, čest a poctivé smýšlení národa českého důstojně zastávající noviny politické založiti, do života uvesti! Věru, kdykolvěk jsme si v neblahé nedávné minulosti pomyslili, že vy stateční Čechové ani jediného samostatného orgánu politického sobě vymoci nemůžete: každá kapka krve se v žilách rozbouřila, i volali jsme k nebesům proti křivdě té za odplatu! — Orgán svobodně a opravdu slovansky smýšlející stránky národní jest konečně tu — a na vás bude teď záležeti, pánové, jak úloze své v důvěře ve vás složené dostojíte. — Když už teda máme časopis, v němž ku zvelebení jmena slovanského hlasu pozdvihnouti možno: míním i já časem — o důležitějších událostech v hlavním městě Uherska a pohybech i vyvinování se živlu slavianského v zemích těchto vůbec stručné zprávy podávati. Zeptáte se snad, co dělají, jaké přípravy hotují k nejbližší budoucnosti zdejší národovci slovanští? Na otázku tuto vám jen radostnou odpověd sděliti mohu, ant se právě v těchto dnech hluboce do života našeho sahající otázka v přátelském shromáždění u důstojného p. kanovníka Dr. Josefa Kozáčka rozhodla, záležející v tom, že se samostatné politické noviny slovenské tu v Pešť-Budíně zaraziti mají. Hlavní překážkou v uskutečnění této naší dávné tužby bylo zaopatření předepsané kauce. Tato ale překážka ješt nyní „spojenými silami“ odstraněna a potřebná kauce pohotově. Druhá neméně velká starost vztahovala se k redaktoru týchž novin. I v tomto ohledu jsme už v pořádku; redakci převezme pan Jan Francisci (Rimavsky) místodržitelský rada, národovec horlivý, jenž při nejnovější koordinací zdejšího místodržitelství do disponibility dán jest. Jak náhle teda dovolení, za které se v těchto dnech prosba zadá, od vlády dorazí, hned se na uskutečnění tohoto pro náš kmen slovenský důležtého podniknutí odhodlaně pracovati bude. Že po založení novin i jiné ku rozkvětu živlu slovanského nevyhnutně potřebné ústavy tu v Pešt-Budíně zaraziti hodláme, jako jsou: Spolek literární, kasino slovanské atd. i o tom vás ubezpečiti mohu. Arci že všechno nezávisí jen od nás, nýbrž i od jiných příznivých i nepříznivých okolností, a jmenovitě od rozsáhlosti svobody občanské, kteráž je Slovanovi tak jako rybě voda potřebná, bez níž jen bídně živořiti, politicky ale a národně se vyvinovati dokonco nemůže. — Na ten čas žijeme v úplném přátelství a bratrské svornosti s našimi spolukrajany Maďary, kteří se aspoň tu u nás k živlu slovanskému velmi chvalitebně a poctivě chovají. Že není žádná „regula sine exceptione,“ to jest stará historie; ale nám teď nejde o výmínky, nýbrž o pravidlo. Žurnalistika maďarská v tomto ohledu moudře a prozřetedlně působí. Zastávání zásad, kteréž my Slované odjakživa jsme hlásali, jest tam na denním pořádku; a jestli z toho, co teď Maďaři 11tiletou zkušeností poučení hlásají, jen polovice uskutečněna bude: my Slované uherští žádných žalob proti nim míti nebudeme. Ostatně moudře to vyslovili už předkové naši, když mluvívali: pomahej si člověče sám, i pán Bůh ti bude nápomoc! Nemáme-li my Slované a jmenovitě Slováci tolik životné síly do sebe, abychom se vlastním nadšením a zápalem za věc národní z nynější nicoty sebrati mohli: tehdá bychom neomylně propadnouti museli, a žádná od jinud pocházející moc a podpora by nás od konečné záhuby národní zachrániti nemohla. — Avšak my se „těšíme blahou nadějí“ a slibujeme si skvělejší budoucnost, následujíce a zachovávajíce moudré napomenutí našeho výtečného pěvce „Labyrintu Slávy:“",
+  "pages": [
+   3
+  ]
+ },
+ {
+  "id": "L100",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 3,
+    "paragraph": "p3-b10-p1",
+    "block": 10
+   }
+  ],
+  "text": "Berlin, 30. prosince. Zemský sněm svolán na 14. ledna 1861. (Tel. Presse.)",
+  "pages": [
+   3
+  ]
+ },
+ {
+  "id": "L101",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 3,
+    "paragraph": "p3-b11-p1",
+    "block": 11
+   }
+  ],
+  "text": "Milán, 30. prosince. Jak se úředně „Perseveranze“ sděluje, přečten včera senátu a komoře deputovaných královský dekret, jímž se parlament za rok 1860 uzavírá. Má se za to, že se Ricasoli svého místa jakožto guvernér Toskany vzdá. (Tel. Presse.)",
+  "pages": [
+   3
+  ]
+ },
+ {
+  "id": "L102",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 3,
+    "paragraph": "p3-b12-p1",
+    "block": 12
+   }
+  ],
+  "text": "Bologna, 28. prosince. Král sem 30. dorazí. „Moniteur“ stýská si na obecně panující nejistotu. (Tel. Presse.)",
+  "pages": [
+   3
+  ]
+ },
+ {
+  "id": "L103",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 3,
+    "paragraph": "p3-b13-p1",
+    "block": 13
+   },
+   {
+    "page": 3,
+    "paragraph": "p3-b14-p1",
+    "block": 14
+   }
+  ],
+  "text": "Z Londýna, 29. prosince. Zdejší listy oznamují z New Yorku od 15., že státní sekretář Cass zadal o své propuštění; Dichenson považuje se za nástupce jeho. Více údů kongresu z jižních států podepsalo manifest, jímž se prohlašuje srovnání za nemožné a tvrdí, že nic nezadrží odtržení jihu. Týdenní výkaz angl. banku. Banknot za 19,644.500, hotovost 12,798.119 liber sterlinků.",
+  "pages": [
+   3
+  ]
+ },
+ {
+  "id": "L104",
+  "type": "title",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 3,
+    "paragraph": "p3-b15-p1",
+    "block": 15
+   }
+  ],
+  "text": "Domácí zprávy.",
+  "pages": [
+   3
+  ]
+ },
+ {
+  "id": "L105",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 3,
+    "paragraph": "p3-b16-p1",
+    "block": 16
+   },
+   {
+    "page": 3,
+    "paragraph": "p3-b17-p1",
+    "block": 17
+   }
+  ],
+  "text": "Vídeň 31. prosince v 11 hodin 50 m. v noci. Měšťanské besedě v Praze. Čechoslované ve Vídni v hostinei u Ruského dvora u velikém počtu shromáždění posylají Dr. Riegrovi nejsdečnější přání k novému roku. Sláva!",
+  "pages": [
+   3
+  ]
+ },
+ {
+  "id": "L106",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 3,
+    "paragraph": "p3-b17-p2",
+    "block": 17
+   }
+  ],
+  "text": "— Pan Antonín Augusta zasloužilý nakladatel českých kněh sděluje nám, že hodlá pány předplatitele Národních Listů zvláštní výhody účastny učiniti, podávaje jim celý lonský ročník Obrazů Života jehož předplatní cena 6 zl. obnášela za 2 zl. Kdo by tedy výhody této účastní státi se chtěli, nechť peníze a adresu svou franko do redakce Národních Listů zašlou: za krátký čas budou jim pak Obrazy poštou franko odeslány.",
+  "pages": [
+   3
+  ]
+ },
+ {
+  "id": "L107",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 3,
+    "paragraph": "p3-b17-p3",
+    "block": 17
+   }
+  ],
+  "text": "— Jeho Jasnosť p. Dr. Rudolf kníže z Turnů a Taxisů, náš ctěný spolupracovník, začne v krátkém čase vydávati český právnický časopis, jehož snad nebylo nikdy tak třeba, jako právě nyní. Hlasy za něj ozývaly se nž před několika roky v Pražských Novinách a v Poslu z Prahy, a každý to zajisté citil, máli se úřadovati česky, že nutná potřeba nejprvé časopisu, jenž by se o vyhledání a ustálení ryze českého názvosloví vynasnažil; avšak sklíčené poměry naše nedovolovaly tehdá ve vydávání jeho se uvázati. Nyní, když se jedná o české učení na vysokých školách Pražských, když jediný hlas panuje o potřebě úřadování českého v národě českém, nyní možno očekávati velikého účastenství materielního i literárního a předpověděti mu znamenité působení. Nebudeť zajisté kanceláře advokátské a notárské aniž jakého úřadu a soudu, kdeby se ho odříci mohli. Ve starých pak spisech právnických, jenž tolik skrytých pokladů v sobě chovají, jest tolik látky i k utvoření názvosloví i k dějinám českého práva, že ještě po dvaceti letech vyčerpána nebude.— Proto voláme z celé duše: Zdař Bůh!",
+  "pages": [
+   3
+  ]
+ },
+ {
+  "id": "L108",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 3,
+    "paragraph": "p3-b17-p4",
+    "block": 17
+   }
+  ],
+  "text": "— Ve vesnici Syrákově v okresu Polenském stala se pověra opět příčinou hrozného neštěstí. Dítko vyraženinou obsypané dali do pece, kterouž dobře zadělali a v kteréž se také upeklo.",
+  "pages": [
+   3
+  ]
+ },
+ {
+  "id": "L109",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 3,
+    "paragraph": "p3-b17-p5",
+    "block": 17
+   }
+  ],
+  "text": "— Dnes v 5 hodin odpůldne hudební beseda na střeleckém ostrově v níž se provozovafi budou na zkoušku kusy k tanečním zábavám a k plesu ostrostřelců měštanských určené. Program jest tento: 1. „Slavná ouvertura“ od K. M. z Webru. — 2. „Rakouská quadrila“ (odměnou poctěná) od Ješko. — 3. „Viřivý kvapík“ (odměnou poctěný) od Morávka. — 4. „Koncert pro lesní roh,“ přednešen od pana Mužika. — 5. „Valčik Amalin“ (odměnou poctěný) od Komsáka. — 6. „Koncert pro klarinet“, přednešen od pana Pfeiffra. — 7. „Amors-Reigen,“ Polka francaise (odměnou poctěná) od Preisse. — 8. „Zvuky české“. Směš z českých národních písní od Komsáka (ponejprv). — 9. „Pomněnka,“ polka mazur (odměnou poctěná) od Schrolla. — 10. „Polka Amazonek“ (odměnou poctěná) od Mahra. — 11. „Pražské pamětné listy.“ Směš od Komsáka.",
+  "pages": [
+   3
+  ]
+ },
+ {
+  "id": "L110",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 3,
+    "paragraph": "p3-b17-p6",
+    "block": 17
+   }
+  ],
+  "text": "— Ve prospěch pana Šimanovského provozuje dnes se poprve slavná tragedie Viktora Hugo: „Ruy Blas.“ Nepochybujeme že divadlo za přičinou tou se ve všech místnostech naplní.",
+  "pages": [
+   3
+  ]
+ },
+ {
+  "id": "L111",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 3,
+    "paragraph": "p3-b17-p7",
+    "block": 17
+   }
+  ],
+  "text": "— Staré na konvenční minci znějící bankovky, přestanou se v korunních zemich dne 31. prosince 1860 bráti. U bankovnich pokladníc ve Vídni budou se však přijímati až do 31. prosince 1861. — Kupony (znějící na placcní střibrem) prioritních ob ligací západní železnice císařovny Alžběty počnou se na začátku ledna při pokladníci ve Vídeňském nádraží též železnice raženou mincí vypláceti.",
+  "pages": [
+   3
+  ]
+ },
+ {
+  "id": "L112",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 3,
+    "paragraph": "p3-b18-p1",
+    "block": 18
+   }
+  ],
+  "text": "Král. stav. divadlo v Praze.",
+  "pages": [
+   3
+  ]
+ },
+ {
+  "id": "L113",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 3,
+    "paragraph": "p3-b18-p2",
+    "block": 18
+   }
+  ],
+  "text": "Dnes v úterý dne 1. ledna 1861 — Začátek o půl 4. hodině. Ve prospěch pana Karla Šimanovského. (Ponejprv)",
+  "pages": [
+   3
+  ]
+ },
+ {
+  "id": "L114",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 3,
+    "paragraph": "p3-b18-p3",
+    "block": 18
+   }
+  ],
+  "text": "RUY BLAS.",
+  "pages": [
+   3
+  ]
+ },
+ {
+  "id": "L115",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 3,
+    "paragraph": "p3-b18-p4",
+    "block": 18
+   }
+  ],
+  "text": "Drama v 5 odděleních od V. Hugo Překlad od Fr. D. První oddělení: Pán a sluha. Druhé oddělení: Královna španělská a její dvůr. Třetí oddělení: Vláda a Národ. Čtvrté oddělení: Z mrtvých vstalý. Páte oddělení: Tygr a lev. Královna pí. Kautská. Don Sallust de Bazan, hrabě z Garofy a Velalkazaru, president dvorní alkadů a tajné rady královké p Kolár st. Don Cezar de Bazan, jeho strýc a dobrodruh p. Šimanovský. Marqnes del Basto, Marqnes de Santa Crnz, Hrabě Alba, grandové špánělští p. Zechtil, p. Nikolai, p. Valter ml. Gudiel, Sallustny komorník p. Veraer Ruy Blas, Sallastův sluha p. Šamberg. Stráže u královských kemnat p. Kopecký. Pánové a dámy, dneňy, paaošové gardy. Děj v Madridn na konci 17. stoleti. Donna Maria z Nebnrku, královna španělská chot Karla II. pí. Kautská. Donna Jnana de la Cueva, nejvyší dozorkyné dvoru královnina pl. Vidermannová. Don Guritsn hrabě z Oňate, mayor-domo a nejvyšší komorník královnín p. Chramosta. Casida, hraběnka z Fuentes, dvorní dáma sleč. Bollardová. Ruy Blas p. Šamberg. Stráže n král. komnat Don Manuel Arias, president p. Musil. Don Pedro Guevara, Don Ferdando Cordova, ministrové p. Sekyra. Lapil. Antonio Ubilla stání pokladník p. Köhíer. Montatzgo, státní radda p. Šmidt. Covadenga, sekretář pomořských ostrovů p. Pokorný. Antonio, lokaj p. Křtín. Sestra Oliva pí. Hynková. Panoš sleč. Hynková. Alkád p. Slavský. Tajní raddové.",
+  "pages": [
+   3
+  ]
+ },
+ {
+  "id": "L116",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 3,
+    "paragraph": "p3-b18-p5",
+    "block": 18
+   }
+  ],
+  "text": "Dva němí černochové.",
+  "pages": [
+   3
+  ]
+ },
+ {
+  "id": "L117",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 3,
+    "paragraph": "p3-b19-p1",
+    "block": 19
+   }
+  ],
+  "text": "Videnská bursa. Telegrafická zpráva o kursech od 31. prosince. Národní půjčka 5 za 100 zl. 73.80. — Metaliky %fo za 100 zl. 61.50. — Akcie národního banku 720. — Akcie úvěrního ústavu 156.60. — Augsburg za 100 zl. jihoněm. čisla 123.25. — Londýn za 10 liber ster. 144. — C. kr. dukáty 6.83.",
+  "pages": [
+   3
+  ]
+ },
+ {
+  "id": "L118",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 3,
+    "paragraph": "p3-b20-p1",
+    "block": 20
+   }
+  ],
+  "text": "Kupecká beseda, od 31. prosince. Akcie úvěrního ústavu 157,70 až 157. Národní půjčka 73,80. Nová půjčka 82—82,70, Londýn 144.",
+  "pages": [
+   3
+  ]
+ },
+ {
+  "id": "L119",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b1-p1",
+    "block": 1
+   }
+  ],
+  "text": "Ferdinand Fingerhut,",
+  "pages": [
+   4
+  ]
+ },
+ {
+  "id": "L120",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b1-p2",
+    "block": 1
+   }
+  ],
+  "text": "sládek a rosolník v Praze,",
+  "pages": [
+   4
+  ]
+ },
+ {
+  "id": "L121",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b1-p3",
+    "block": 1
+   }
+  ],
+  "text": "odporoučí k nastávajícímu masopustu následující zboží u Halánku a v Černém pivováru.",
+  "pages": [
+   4
+  ]
+ },
+ {
+  "id": "L122",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b2-p1",
+    "block": 2
+   }
+  ],
+  "text": "Cena v novém rakouském čísle.",
+  "pages": [
+   4
+  ]
+ },
+ {
+  "id": "L123",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b3-p1",
+    "block": 3
+   }
+  ],
+  "text": "Celá láhev",
+  "pages": [
+   4
+  ]
+ },
+ {
+  "id": "L124",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b4-p1",
+    "block": 4
+   }
+  ],
+  "text": "1/2 láhve",
+  "pages": [
+   4
+  ]
+ },
+ {
+  "id": "L125",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b5-p1",
+    "block": 5
+   }
+  ],
+  "text": "14 láhve",
+  "pages": [
+   4
+  ]
+ },
+ {
+  "id": "L126",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b6-p1",
+    "block": 6
+   }
+  ],
+  "text": "Při malém prodeji",
+  "pages": [
+   4
+  ]
+ },
+ {
+  "id": "L127",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b6-p2",
+    "block": 6
+   },
+   {
+    "page": 4,
+    "paragraph": "p4-b7-p1",
+    "block": 7
+   }
+  ],
+  "text": "stojí 1 žejdlík zl.",
+  "pages": [
+   4
+  ]
+ },
+ {
+  "id": "L128",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b8-p1",
+    "block": 8
+   }
+  ],
+  "text": "kr.",
+  "pages": [
+   4
+  ]
+ },
+ {
+  "id": "L129",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b9-p1",
+    "block": 9
+   }
+  ],
+  "text": "zl.",
+  "pages": [
+   4
+  ]
+ },
+ {
+  "id": "L130",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b10-p1",
+    "block": 10
+   }
+  ],
+  "text": "kr.",
+  "pages": [
+   4
+  ]
+ },
+ {
+  "id": "L131",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b11-p1",
+    "block": 11
+   }
+  ],
+  "text": "kr.",
+  "pages": [
+   4
+  ]
+ },
+ {
+  "id": "L132",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b12-p1",
+    "block": 12
+   }
+  ],
+  "text": "kr.",
+  "pages": [
+   4
+  ]
+ },
+ {
+  "id": "L133",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b13-p1",
+    "block": 13
+   }
+  ],
+  "text": "40",
+  "pages": [
+   4
+  ]
+ },
+ {
+  "id": "L134",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b13-p2",
+    "block": 13
+   }
+  ],
+  "text": "70",
+  "pages": [
+   4
+  ]
+ },
+ {
+  "id": "L135",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b13-p3",
+    "block": 13
+   }
+  ],
+  "text": "Nejlepší Ruská punčovina s ananasem a s pomeranči",
+  "pages": [
+   4
+  ]
+ },
+ {
+  "id": "L136",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b13-p4",
+    "block": 13
+   }
+  ],
+  "text": "Pařížská punčovina pro dámy s ananasem a vanilkou,",
+  "pages": [
+   4
+  ]
+ },
+ {
+  "id": "L137",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b13-p5",
+    "block": 13
+   }
+  ],
+  "text": "26",
+  "pages": [
+   4
+  ]
+ },
+ {
+  "id": "L138",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b13-p6",
+    "block": 13
+   }
+  ],
+  "text": "velmi jemná",
+  "pages": [
+   4
+  ]
+ },
+ {
+  "id": "L139",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b13-p7",
+    "block": 13
+   }
+  ],
+  "text": "63",
+  "pages": [
+   4
+  ]
+ },
+ {
+  "id": "L140",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b13-p8",
+    "block": 13
+   }
+  ],
+  "text": ". . . . .",
+  "pages": [
+   4
+  ]
+ },
+ {
+  "id": "L141",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b13-p9",
+    "block": 13
+   }
+  ],
+  "text": ". . . . . . . .",
+  "pages": [
+   4
+  ]
+ },
+ {
+  "id": "L142",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b13-p10",
+    "block": 13
+   }
+  ],
+  "text": "6",
+  "pages": [
+   4
+  ]
+ },
+ {
+  "id": "L143",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b13-p11",
+    "block": 13
+   }
+  ],
+  "text": "Bílá punčovina s vínem . . . . . . . . . . .",
+  "pages": [
+   4
+  ]
+ },
+ {
+  "id": "L144",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b13-p12",
+    "block": 13
+   }
+  ],
+  "text": "54 Libušina punčovina s pomeranči . . . . . . . .",
+  "pages": [
+   4
+  ]
+ },
+ {
+  "id": "L145",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b13-p13",
+    "block": 13
+   }
+  ],
+  "text": "Londonská punčovina .",
+  "pages": [
+   4
+  ]
+ },
+ {
+  "id": "L146",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b13-p14",
+    "block": 13
+   }
+  ],
+  "text": ". . . . . . . . . . .",
+  "pages": [
+   4
+  ]
+ },
+ {
+  "id": "L147",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b13-p15",
+    "block": 13
+   }
+  ],
+  "text": "1",
+  "pages": [
+   4
+  ]
+ },
+ {
+  "id": "L148",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b13-p16",
+    "block": 13
+   }
+  ],
+  "text": "53",
+  "pages": [
+   4
+  ]
+ },
+ {
+  "id": "L149",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b13-p17",
+    "block": 13
+   }
+  ],
+  "text": "Stará slivovice ze Srijemu . . . . . . . . . .",
+  "pages": [
+   4
+  ]
+ },
+ {
+  "id": "L150",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b13-p18",
+    "block": 13
+   }
+  ],
+  "text": "Slivovice Slavonská číslo 2 . . . . . . . . . .",
+  "pages": [
+   4
+  ]
+ },
+ {
+  "id": "L151",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b13-p19",
+    "block": 13
+   }
+  ],
+  "text": "18 Slovenská slivovice číslo 1 . . . . . . . . . .",
+  "pages": [
+   4
+  ]
+ },
+ {
+  "id": "L152",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b13-p20",
+    "block": 13
+   }
+  ],
+  "text": "63",
+  "pages": [
+   4
+  ]
+ },
+ {
+  "id": "L153",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b13-p21",
+    "block": 13
+   }
+  ],
+  "text": "26",
+  "pages": [
+   4
+  ]
+ },
+ {
+  "id": "L154",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b13-p22",
+    "block": 13
+   }
+  ],
+  "text": "34",
+  "pages": [
+   4
+  ]
+ },
+ {
+  "id": "L155",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b13-p23",
+    "block": 13
+   }
+  ],
+  "text": "64",
+  "pages": [
+   4
+  ]
+ },
+ {
+  "id": "L156",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b13-p24",
+    "block": 13
+   }
+  ],
+  "text": "1",
+  "pages": [
+   4
+  ]
+ },
+ {
+  "id": "L157",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b13-p25",
+    "block": 13
+   }
+  ],
+  "text": "Rum z Jamaiky dobrý k čáji . . . . . . . .",
+  "pages": [
+   4
+  ]
+ },
+ {
+  "id": "L158",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b13-p26",
+    "block": 13
+   }
+  ],
+  "text": "56",
+  "pages": [
+   4
+  ]
+ },
+ {
+  "id": "L159",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b13-p27",
+    "block": 13
+   }
+  ],
+  "text": "28",
+  "pages": [
+   4
+  ]
+ },
+ {
+  "id": "L160",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b13-p28",
+    "block": 13
+   }
+  ],
+  "text": "15",
+  "pages": [
+   4
+  ]
+ },
+ {
+  "id": "L161",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b13-p29",
+    "block": 13
+   }
+  ],
+  "text": "27 Rum antilský domácí číslo 1 . . . . .",
+  "pages": [
+   4
+  ]
+ },
+ {
+  "id": "L162",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b13-p30",
+    "block": 13
+   }
+  ],
+  "text": "Na vědra a soudky se uvedené zboží v levnější ceně toliko „u Halánků“ vydává.",
+  "pages": [
+   4
+  ]
+ },
+ {
+  "id": "L163",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b13-p31",
+    "block": 13
+   }
+  ],
+  "text": "Halánkovský ležák",
+  "pages": [
+   4
+  ]
+ },
+ {
+  "id": "L164",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b13-p32",
+    "block": 13
+   }
+  ],
+  "text": "prodává se máz za 22 kr., půlmáz za 11 kr. r. č. u Halánků, v Černém pívováru a",
+  "pages": [
+   4
+  ]
+ },
+ {
+  "id": "L165",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b13-p33",
+    "block": 13
+   }
+  ],
+  "text": "u Černého orla na Pořiči.",
+  "pages": [
+   4
+  ]
+ },
+ {
+  "id": "L166",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b13-p34",
+    "block": 13
+   }
+  ],
+  "text": "Na vědra prodává se ležák jen „u Halánků“ a stojí 1 vědro ležáku v Praze 8 zl. r. č., 1 vědro ležáku na venek 7 zl. 60 kr. r. č. Šrůtky platí se od 1 vědra 4 kr., od půl sudu 8 kr. č., vklad za nádobu od",
+  "pages": [
+   4
+  ]
+ },
+ {
+  "id": "L167",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b13-p35",
+    "block": 13
+   }
+  ],
+  "text": "1—1",
+  "pages": [
+   4
+  ]
+ },
+ {
+  "id": "L168",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b13-p36",
+    "block": 13
+   }
+  ],
+  "text": "vědra 2 zl. 50 kr., od půl sudu 5 zl. Bez vkladu za nádobu se ležák nevydává.",
+  "pages": [
+   4
+  ]
+ },
+ {
+  "id": "L169",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b14-p1",
+    "block": 14
+   }
+  ],
+  "text": "V Budině vyšly a v kněhkupectvích — jmenovitě v Praze u Fr. Rivnáče, ve Vídni u O. Wenedikta k dostání jsou:",
+  "pages": [
+   4
+  ]
+ },
+ {
+  "id": "L170",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b15-p1",
+    "block": 15
+   }
+  ],
+  "text": "I",
+  "pages": [
+   4
+  ]
+ },
+ {
+  "id": "L171",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b15-p2",
+    "block": 15
+   }
+  ],
+  "text": "I",
+  "pages": [
+   4
+  ]
+ },
+ {
+  "id": "L172",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b15-p3",
+    "block": 15
+   }
+  ],
+  "text": "Národní zábavník.",
+  "pages": [
+   4
+  ]
+ },
+ {
+  "id": "L173",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b15-p4",
+    "block": 15
+   }
+  ],
+  "text": "Redaktor a vydavatel: Josef K. Vyktorin. Ročník prvý. 1860. Str. II. a 406. Cena 2 zl.",
+  "pages": [
+   4
+  ]
+ },
+ {
+  "id": "L174",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b15-p5",
+    "block": 15
+   }
+  ],
+  "text": "Grammatik",
+  "pages": [
+   4
+  ]
+ },
+ {
+  "id": "L175",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b15-p6",
+    "block": 15
+   }
+  ],
+  "text": "4—1",
+  "pages": [
+   4
+  ]
+ },
+ {
+  "id": "L176",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b15-p7",
+    "block": 15
+   }
+  ],
+  "text": "der",
+  "pages": [
+   4
+  ]
+ },
+ {
+  "id": "L177",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b15-p8",
+    "block": 15
+   }
+  ],
+  "text": "slova kischen Sprache.",
+  "pages": [
+   4
+  ]
+ },
+ {
+  "id": "L178",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b15-p9",
+    "block": 15
+   }
+  ],
+  "text": "Zum praktischen Gebrauche bearbeitet, mit einem ausführlichen Wörterverzeichnisse und einer populären Chrestomathie versehen von Josef K. Vyktorin. Pest, in Commission bei Lauffer et",
+  "pages": [
+   4
+  ]
+ },
+ {
+  "id": "L179",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b15-p10",
+    "block": 15
+   }
+  ],
+  "text": "Stolp. 1860. Seit. VIII. und 248. Preis 1 fl. 50 kr.",
+  "pages": [
+   4
+  ]
+ },
+ {
+  "id": "L180",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b16-p1",
+    "block": 16
+   }
+  ],
+  "text": "6—1",
+  "pages": [
+   4
+  ]
+ },
+ {
+  "id": "L181",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b16-p2",
+    "block": 16
+   }
+  ],
+  "text": "Losy",
+  "pages": [
+   4
+  ]
+ },
+ {
+  "id": "L182",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b16-p3",
+    "block": 16
+   }
+  ],
+  "text": "knížete Salm-Reifršeida,",
+  "pages": [
+   4
+  ]
+ },
+ {
+  "id": "L183",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b16-p4",
+    "block": 16
+   }
+  ],
+  "text": "jejichžto tah na den",
+  "pages": [
+   4
+  ]
+ },
+ {
+  "id": "L184",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b16-p5",
+    "block": 16
+   }
+  ],
+  "text": "15. ledna 1861",
+  "pages": [
+   4
+  ]
+ },
+ {
+  "id": "L185",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b16-p6",
+    "block": 16
+   }
+  ],
+  "text": "dopadá kupujou a prodávají dle denního kursu",
+  "pages": [
+   4
+  ]
+ },
+ {
+  "id": "L186",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b16-p7",
+    "block": 16
+   }
+  ],
+  "text": "Vilím Nedvěd a syn v Slaném.",
+  "pages": [
+   4
+  ]
+ },
+ {
+  "id": "L187",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b17-p1",
+    "block": 17
+   }
+  ],
+  "text": "Úřadování v Lánnově domě č. 1830-31-II bliže nádraží.",
+  "pages": [
+   4
+  ]
+ },
+ {
+  "id": "L188",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b18-p1",
+    "block": 18
+   }
+  ],
+  "text": "U nás není tureckého bubnu zapotřebí!",
+  "pages": [
+   4
+  ]
+ },
+ {
+  "id": "L189",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b18-p2",
+    "block": 18
+   },
+   {
+    "page": 4,
+    "paragraph": "p4-b19-p1",
+    "block": 19
+   }
+  ],
+  "text": "Tak byl jednou jeden lev, a ten lev měl mnoho nepřátel. Jeho nejouhlavnějšími odpůrci ale byli trpaslící, duchové zlí, náčelníci to země nepřátelské, kteří nezameškali ni dne, ni hodiny, aby milému lvu tak neb onak neublížili. Jednoho času přemluvili jsou chytrým způsobem na nic zlého nemyslícího krále zvířat, by sobě pro okrasu těla pazoury ustříhati, zuby vytrhati, ohon přetnouti a na hlavu kastor nasaditi dal, čemuž se í lev skutečně podvolil, nemysle na to, že se tím všech svých zbraní dobrovolně zbavuje a nepřátelům v posměch vydává.",
+  "pages": [
+   4
+  ]
+ },
+ {
+  "id": "L190",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b20-p1",
+    "block": 20
+   }
+  ],
+  "text": "Po účinku zlá rada! Lev, oloupen o vše, co lvem jej činilo, byl konečně rád, že alespoň tak s tím životem vyváznul, i bloudil světem jako zmoklá slepice, nikde ni rady ni pomoci nenalezaje. Nehoda konečně zavedla jej v den sv. Sylvestra; pravě když starý rok novému roku tajuplně ruku podává, do redakce „Humoristických listův“, i byl chuděra! nad míru potěšen, že má komu se svěřiti a si postěžovati. Měli jste ho ale vidět, co dělal, když po úplném vyslechnutí jeho žalob a nářku vydavatel „Hum, listů« jemu mezi čtvrma očima, aby to donášeči neslyšeli, sdělil, že umí připravovati masť, jížto když se někdo natře, jemu i hned vše chybící opět naroste. Lev div že se radostí nezbláznil a redaktora „Hum. L.« samou vděčností neumačkal, i chtěl stante pede divotvornou masť tu míti. Inu jo! jemu se to snadno křáplo! Divotvorná mast není jen tak leda co a nenajde se všude za plotem. K divotvorné masti je přede vším třeba vzácného, a tudiž drahého koření; k zakoupení drahého koření ale jest opět přede vším jiným peněz zapotřebí. Poněvadž ale čeští redaktoři do posud — jak vůbec známo — spíše hojnost v nedůstatku mají, byl by milý lev náš nepochybně nucen býval, poznovu bez pazourů, tesáků a ohonu s kokrhelem na hlavě světem se potloukati, kdyby vydávatel „H. L.“, veden jsa známou spanilomysluostí svou, 1000 výtisků letošního ročníku „Listův hum.“ nebyl na zakoupení drahého koření toho obětoval. Kdožkol. edy na venkově III. ročník „Listův humoristických“ odebere, resp. celoročné 5 zlatými 70 kr., půll. 3 zl. 85 kr. a čtvrtletné 1 zl. 45. kr. r. č. se předplatí a předplatné vydavatelstvu „H. I4 do Prahy do Uršulinské ulice čís. 140—II franco zašle, nezavděčí se pouze našemu milému lvu, nobrž í sobě, neboť obdrží mimo 52 archová, nápady a výpady nabitá čísla ještě i dvě præmie zcela zdarma: obraz totiž a kalendář na stěnu na r. 1861, oboje v ceně 2 zl. 75 kr. r. č. A že nápotom, jak mile potřebné k zakoupení drahého koření peníze pohromadě budou, i léčení lva řádně a rozšafně díti se bude, ručí důstatečně konsilium doktorův humoru a vřipu, jejichžto pomoci jsme si k cíli tomu schvalně byli vyprosili, a mezi nimiž jsou mužové v ohledu tom svělové pověsti požívající, jako na př. P. T. pánové: Bělák, Benál, Burgerstein, Drahňovský, Gabriel, Gollat, Grov, Hajniš, Hálek, Košín z Radostova, Kouble, Kulda, Mirohorský, Neruda, Peška, Pfleger, Přerhof, Starý, Svátek, Štrauch, Tonner, Trubelka a. j. v., kteří co",
+  "pages": [
+   4
+  ]
+ },
+ {
+  "id": "L191",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b20-p2",
+    "block": 20
+   }
+  ],
+  "text": "2—1",
+  "pages": [
+   4
+  ]
+ },
+ {
+  "id": "L192",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b20-p3",
+    "block": 20
+   }
+  ],
+  "text": "lékařští assistenti operaci též přítomni jsou.",
+  "pages": [
+   4
+  ]
+ },
+ {
+  "id": "L193",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b20-p4",
+    "block": 20
+   },
+   {
+    "page": 4,
+    "paragraph": "p4-b21-p1",
+    "block": 21
+   }
+  ],
+  "text": "Komu tedy na tom záleží, aby lev náš přestal býti terčem vtipu trpaslíků zlých a aby v krátkosti předešlého opět zdraví a brnění nabyl, předplat se na III. ročník „Listův humoristických“, neboť tak jenom umožní se připravování divotvorné masti vydavatelstvu „humoristických listů“.",
+  "pages": [
+   4
+  ]
+ },
+ {
+  "id": "L194",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b21-p2",
+    "block": 21
+   }
+  ],
+  "text": "v Praze, v Uršulinské ulici, čís. 140—II.",
+  "pages": [
+   4
+  ]
+ },
+ {
+  "id": "L195",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b21-p3",
+    "block": 21
+   }
+  ],
+  "text": "Douška. Do 20. ledna 1861 bere vydavatelstvo „H. 1.“ i staré jednušky, tak zvané „zlatky stříbra v celé jejich hodnotě, t. j. za 1 zl. 5 kr, r. č., a však jen co předplatné na „L. h.“ zároveň takě oznamnjeme, že",
+  "pages": [
+   4
+  ]
+ },
+ {
+  "id": "L196",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b21-p4",
+    "block": 21
+   }
+  ],
+  "text": "dojde-li nás povolení — ještě během tohoto čtvrtletí „H. 1.“ dvakrát týdně co list politicko-humoristický bez zvýšení předplatného vydávati počneme.",
+  "pages": [
+   4
+  ]
+ },
+ {
+  "id": "L197",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b21-p5",
+    "block": 21
+   }
+  ],
+  "text": "Josef Richard Vilímek,",
+  "pages": [
+   4
+  ]
+ },
+ {
+  "id": "L198",
+  "type": "text",
+  "stream": "main",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b21-p6",
+    "block": 21
+   }
+  ],
+  "text": "redaktor a nakladatel.",
+  "pages": [
+   4
+  ]
+ },
+ {
+  "id": "L199",
+  "type": "text",
+  "stream": "below_rule",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b22-p1",
+    "block": 22
+   }
+  ],
+  "text": "K všeobecnému povšimnutí.",
+  "pages": [
+   4
+  ]
+ },
+ {
+  "id": "L200",
+  "type": "text",
+  "stream": "below_rule",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b22-p2",
+    "block": 22
+   }
+  ],
+  "text": "Vzdávaje díky všem posud mým pánům hostům za uctivou návštěvu, oznamuju též veleslavnému obecenstvu, že dobré a laciné pokrmy v každý čas u mně dostati lze, kde? V pivováře „U Sladkých“ na Peršteině čís. 352, a sice obědy s měsíčním předplacení za 6 zl. rak. čís.; jednotlivé obědy za 22 kr. rak. čísla.",
+  "pages": [
+   4
+  ]
+ },
+ {
+  "id": "L201",
+  "type": "text",
+  "stream": "below_rule",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b22-p3",
+    "block": 22
+   }
+  ],
+  "text": "Prosím veleslavné obecenstvo o hojnou návštěvu",
+  "pages": [
+   4
+  ]
+ },
+ {
+  "id": "L202",
+  "type": "text",
+  "stream": "below_rule",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b22-p4",
+    "block": 22
+   }
+  ],
+  "text": "3—1",
+  "pages": [
+   4
+  ]
+ },
+ {
+  "id": "L203",
+  "type": "text",
+  "stream": "below_rule",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b22-p5",
+    "block": 22
+   }
+  ],
+  "text": "Jesef Sebek.",
+  "pages": [
+   4
+  ]
+ },
+ {
+  "id": "L204",
+  "type": "text",
+  "stream": "below_rule",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b23-p1",
+    "block": 23
+   }
+  ],
+  "text": "F. DURST,",
+  "pages": [
+   4
+  ]
+ },
+ {
+  "id": "L205",
+  "type": "text",
+  "stream": "below_rule",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b23-p2",
+    "block": 23
+   }
+  ],
+  "text": "mechanikus a optikus",
+  "pages": [
+   4
+  ]
+ },
+ {
+  "id": "L206",
+  "type": "text",
+  "stream": "below_rule",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b23-p3",
+    "block": 23
+   }
+  ],
+  "text": "v Praze v ovocné ulici č. 953 vedle kavárny Böhmovy",
+  "pages": [
+   4
+  ]
+ },
+ {
+  "id": "L207",
+  "type": "text",
+  "stream": "below_rule",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b23-p4",
+    "block": 23
+   }
+  ],
+  "text": "8—1",
+  "pages": [
+   4
+  ]
+ },
+ {
+  "id": "L208",
+  "type": "text",
+  "stream": "below_rule",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b23-p5",
+    "block": 23
+   }
+  ],
+  "text": "odporučuje svůj sklad",
+  "pages": [
+   4
+  ]
+ },
+ {
+  "id": "L209",
+  "type": "text",
+  "stream": "below_rule",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b23-p6",
+    "block": 23
+   }
+  ],
+  "text": "brejlí, lorňetů, dalekohledů, tlakoměrů, teploměrů, a jiného podobného zboží všeho druhu, též správky i",
+  "pages": [
+   4
+  ]
+ },
+ {
+  "id": "L210",
+  "type": "text",
+  "stream": "below_rule",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b23-p7",
+    "block": 23
+   }
+  ],
+  "text": "zhotovování optických a mechánických nástrojů.",
+  "pages": [
+   4
+  ]
+ },
+ {
+  "id": "L211",
+  "type": "text",
+  "stream": "below_rule",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b24-p1",
+    "block": 24
+   }
+  ],
+  "text": "LITOGRAFIE",
+  "pages": [
+   4
+  ]
+ },
+ {
+  "id": "L212",
+  "type": "text",
+  "stream": "below_rule",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b24-p2",
+    "block": 24
+   }
+  ],
+  "text": "FARSKÉHO",
+  "pages": [
+   4
+  ]
+ },
+ {
+  "id": "L213",
+  "type": "text",
+  "stream": "below_rule",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b24-p3",
+    "block": 24
+   }
+  ],
+  "text": "ЛИТОГРАФIЯ",
+  "pages": [
+   4
+  ]
+ },
+ {
+  "id": "L214",
+  "type": "text",
+  "stream": "below_rule",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b24-p4",
+    "block": 24
+   }
+  ],
+  "text": "v Praze n Dominikánů číslo 445—I bude od 15. ledna přenešena do čísla 365—I, roh nových alejí a sirkové ulice",
+  "pages": [
+   4
+  ]
+ },
+ {
+  "id": "L215",
+  "type": "text",
+  "stream": "below_rule",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b24-p5",
+    "block": 24
+   }
+  ],
+  "text": "u Lémonů",
+  "pages": [
+   4
+  ]
+ },
+ {
+  "id": "L216",
+  "type": "text",
+  "stream": "below_rule",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b24-p6",
+    "block": 24
+   }
+  ],
+  "text": "9 — 1",
+  "pages": [
+   4
+  ]
+ },
+ {
+  "id": "L217",
+  "type": "text",
+  "stream": "below_rule",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b24-p7",
+    "block": 24
+   }
+  ],
+  "text": "a odporučuje se k dálší přízni.",
+  "pages": [
+   4
+  ]
+ },
+ {
+  "id": "L218",
+  "type": "text",
+  "stream": "below_rule",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b25-p1",
+    "block": 25
+   }
+  ],
+  "text": "Cís. král.",
+  "pages": [
+   4
+  ]
+ },
+ {
+  "id": "L219",
+  "type": "text",
+  "stream": "below_rule",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b25-p2",
+    "block": 25
+   }
+  ],
+  "text": "výhr.",
+  "pages": [
+   4
+  ]
+ },
+ {
+  "id": "L220",
+  "type": "text",
+  "stream": "below_rule",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b25-p3",
+    "block": 25
+   }
+  ],
+  "text": "Nuova Società Commerciale di Assicuracioni",
+  "pages": [
+   4
+  ]
+ },
+ {
+  "id": "L221",
+  "type": "text",
+  "stream": "below_rule",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b25-p4",
+    "block": 25
+   }
+  ],
+  "text": "Terstu",
+  "pages": [
+   4
+  ]
+ },
+ {
+  "id": "L222",
+  "type": "text",
+  "stream": "below_rule",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b25-p5",
+    "block": 25
+   }
+  ],
+  "text": "(zaručující fond záložní asi osm milionů zl. r. č.)",
+  "pages": [
+   4
+  ]
+ },
+ {
+  "id": "L223",
+  "type": "text",
+  "stream": "below_rule",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b25-p6",
+    "block": 25
+   }
+  ],
+  "text": "pojištuje skrze své splnomocněné ústřední jednatelstvo proti",
+  "pages": [
+   4
+  ]
+ },
+ {
+  "id": "L224",
+  "type": "text",
+  "stream": "below_rule",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b25-p7",
+    "block": 25
+   }
+  ],
+  "text": "Skodám požárem způsobeným",
+  "pages": [
+   4
+  ]
+ },
+ {
+  "id": "L225",
+  "type": "text",
+  "stream": "below_rule",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b25-p8",
+    "block": 25
+   }
+  ],
+  "text": "všecky movité i nemovité předměty, jako stavení, tovární nářadí, nábytek, zásoby zboží, movítosti, zásoby ze žní jak v stodolách a hospodářských staveních, tak i ve stozích na šírém poli; proti všem",
+  "pages": [
+   4
+  ]
+ },
+ {
+  "id": "L226",
+  "type": "text",
+  "stream": "below_rule",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b25-p9",
+    "block": 25
+   }
+  ],
+  "text": "Skodám živelním na zboží na cestě se nacházejícím i proti Skodám z krupobití pocházejícím na polních požitcích, na ovoci, na víně, chmeli a oknách",
+  "pages": [
+   4
+  ]
+ },
+ {
+  "id": "L227",
+  "type": "text",
+  "stream": "below_rule",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b25-p10",
+    "block": 25
+   }
+  ],
+  "text": "a za doby nejnovější vykonává též",
+  "pages": [
+   4
+  ]
+ },
+ {
+  "id": "L228",
+  "type": "text",
+  "stream": "below_rule",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b25-p11",
+    "block": 25
+   }
+  ],
+  "text": "pojištění na život, důchody a penze a výbytek a. t. d.",
+  "pages": [
+   4
+  ]
+ },
+ {
+  "id": "L229",
+  "type": "text",
+  "stream": "below_rule",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b25-p12",
+    "block": 25
+   }
+  ],
+  "text": "dle všech možných kombinací.",
+  "pages": [
+   4
+  ]
+ },
+ {
+  "id": "L230",
+  "type": "text",
+  "stream": "below_rule",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b25-p13",
+    "block": 25
+   }
+  ],
+  "text": "Přijímá pojištění na vybyté pro dětí pod tou výmínkou, že když dítě pojištěné rok k vyzdvížení peněz určený nedosáhne, prémie až v tu dobu vyplacené bez nejmenší ztráty se navrátí. Dotčená společnost zařídila též spolky výbitku a vzájemné kassy pro dědictví pro děti (i Tontiny čili vzájemné pojištění v pádu přežití:) Ke všem bližším zprávám, podaním a doručení potřebných formulářů, se vždy",
+  "pages": [
+   4
+  ]
+ },
+ {
+  "id": "L231",
+  "type": "text",
+  "stream": "below_rule",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b25-p14",
+    "block": 25
+   }
+  ],
+  "text": "10—1 s největší ochotností propůjčuje",
+  "pages": [
+   4
+  ]
+ },
+ {
+  "id": "L232",
+  "type": "text",
+  "stream": "below_rule",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b25-p15",
+    "block": 25
+   }
+  ],
+  "text": "Ústřední Jednatelstvo pro Čechy",
+  "pages": [
+   4
+  ]
+ },
+ {
+  "id": "L233",
+  "type": "text",
+  "stream": "below_rule",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b25-p16",
+    "block": 25
+   }
+  ],
+  "text": "Jindřich Fügner,",
+  "pages": [
+   4
+  ]
+ },
+ {
+  "id": "L234",
+  "type": "text",
+  "stream": "below_rule",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b25-p17",
+    "block": 25
+   }
+  ],
+  "text": "Ústřední Jednatel.",
+  "pages": [
+   4
+  ]
+ },
+ {
+  "id": "L235",
+  "type": "text",
+  "stream": "below_rule",
+  "parts": [
+   {
+    "page": 4,
+    "paragraph": "p4-b26-p1",
+    "block": 26
+   }
+  ],
+  "text": "Tiskem a nákladem Antonína Renna u „tři lip\" v Praze.",
+  "pages": [
+   4
+  ]
+ }
+]

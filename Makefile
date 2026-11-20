@@ -77,10 +77,15 @@ vizLAYOUTalto := $(vizLAYOUT)-alto
 vizLAYOUTregions := $(vizLAYOUT)-regions
 vizLAYOUTmerge := $(vizLAYOUT)-all
 vizTEI := ${VIZ}/tei
+vizLAYOUTanalysis := $(vizLAYOUT)-analysis
+vizTEIlayout := ${VIZ}/tei-layout
 
 CACHE := ${WORK}/cache
 
 imageRegions := ${WORK}/imageRegions
+separators := ${WORK}/separators
+layoutAnalysis := ${WORK}/layoutAnalysis
+LAYOUT_ANALYSIS_SCRIPTS := Scripts/layoutAnalysis
 TEItext := ${WORK}/tei-text
 TEIfacs := ${WORK}/tei-facs
 TEItextTT := ${WORK}/tei-text.TT
@@ -511,6 +516,24 @@ visualize-tei4poster:
 			--profile poster;\
 	done
 
+##visualize-layoutAnalysis## visualize layout analysis (columns, separators, blocks, reading order, paragraphs and their flow, text) as pdf with the original images (expecting UUID_PATH)
+visualize-layoutAnalysis: $(JSONissues)/$(UUID_PATH).json $(vizLAYOUTanalysis)
+	$(call for-each-component,mkdir -p $(vizLAYOUTanalysis)/$$(dirname $$CP) && python $(LAYOUT_ANALYSIS_SCRIPTS)/viz_pdf.py \
+	  --results $(layoutAnalysis)/$$CP --images $(INimg)/$$IUP --title "$$ID – layout analysis" \
+	  -o $(vizLAYOUTanalysis)/$$CP.pdf)
+
+##visualize-tei-layout## render TEI/text + TEI/facs as pdf preserving the page layout, with article/paragraph frames and reading order arrows (no images needed)
+visualize-tei-layout: $(vizTEIlayout)
+	for COMP in `find $(TEItext) -mindepth 2 -type f -name "*.xml" -printf "%P\n" | sed 's/.xml$$//'| sort`;\
+	do \
+		echo "creating pdf: $(vizTEIlayout)/$$COMP.pdf";\
+		mkdir -p $(vizTEIlayout)/$$(dirname $$COMP);\
+		python $(LAYOUT_ANALYSIS_SCRIPTS)/tei2pdf.py \
+		  --text $(TEItext)/$${COMP}.xml \
+		  --facs $(TEIfacs)/$${COMP}.xml \
+		  -o $(vizTEIlayout)/$${COMP}.pdf || exit 1;\
+	done
+
 ###### process metadata
 
 ##process-metadata-all## process metadata for all volumes based on task list prepared by prepare-tasks
@@ -562,7 +585,7 @@ inputJson2teiHeader: $(INjson)/$(UUID_PATH).json $(TEIheader)
 
 ###### process data (img --> text --> TEI with facs and text)
 
-$(TASKS) $(JSONissues) $(idMapping) $(xmlOCR) $(altoOCR) $(vizOCRxml) $(vizLAYOUTxml) $(vizLAYOUTalto) $(vizLAYOUTregions) $(vizLAYOUTmerge) $(vizTEI) $(imageRegions) $(TEI) $(TEIANA) $(TEItext) $(TEItext_cleaned) $(TEIheader) $(TEItextANA) $(UDPIPE) $(NAMETAG) $(LOGDIR) $(TEItextTT):
+$(TASKS) $(JSONissues) $(idMapping) $(xmlOCR) $(altoOCR) $(vizOCRxml) $(vizLAYOUTxml) $(vizLAYOUTalto) $(vizLAYOUTregions) $(vizLAYOUTmerge) $(vizTEI) $(imageRegions) $(TEI) $(TEIANA) $(TEItext) $(TEItext_cleaned) $(TEIheader) $(TEItextANA) $(UDPIPE) $(NAMETAG) $(LOGDIR) $(TEItextTT) $(separators) $(layoutAnalysis) $(vizLAYOUTanalysis) $(vizTEIlayout) $(TEIfacs):
 	mkdir -p $@
 
 
@@ -609,7 +632,8 @@ slurm-img2tei-byPath:
 ##process-data-all## process data for all issues (img->text-->TEI) based on task list prepared by prepare-tasks
 process-data-all: $(TASKS_ISSUES)
 	cat $(TASKS_ISSUES) | xargs -I {} make process-data UUID_PATH={} SAMPLE=$(SAMPLE)
-process-data: $(INjson)/$(UUID_PATH).json inputImg2pageXML inputImg2imageRegions textRegions2teiFacsText
+##process-data## img -> pageXML (OCR) + imageRegions (YOLO) + separators -> layoutAnalysis -> TEI/text + TEI/facs
+process-data: $(INjson)/$(UUID_PATH).json inputImg2pageXML inputImg2imageRegions inputImg2separators pageXML2layoutAnalysis layoutAnalysis2teiFacsText
 
 ifdef COMPONENT_PATH
 process-data-byPath: $(TEItext)/$(COMPONENT_PATH).xml
@@ -618,13 +642,24 @@ process-data-byPath:
 	@echo "ERROR: COMPONENT_PATH is not defined, cannot process data by path"
 endif
 
-DEVprocess-data-all: $(TASKS_ISSUES)
-	cat $(TASKS_ISSUES) | xargs -I {} make DEVprocess-data UUID_PATH={} SAMPLE=$(SAMPLE)
-DEVprocess-data: $(INjson)/$(UUID_PATH).json inputImg2imageRegions textRegions2teiFacsText
+##layoutAnalysis2teiFacsText-all## (re)create separators, layout analysis and TEI for all issues from existing OCR and imageRegions
+layoutAnalysis2teiFacsText-all: $(TASKS_ISSUES)
+	cat $(TASKS_ISSUES) | xargs -I {} make inputImg2separators pageXML2layoutAnalysis layoutAnalysis2teiFacsText UUID_PATH={} SAMPLE=$(SAMPLE)
 
-
-textRegions2teiFacsText-all: $(TASKS_ISSUES)
-	cat $(TASKS_ISSUES) | xargs -I {} make textRegions2teiFacsText UUID_PATH={} SAMPLE=$(SAMPLE)
+# run $(1) for every TEI component (issue) of UUID_PATH; in $(1) use $$CP (component path YEAR/ID),
+# $$ID (component id) and $$IUP (uuid path of the issue = image directory in $(INimg))
+define for-each-component
+CPS=$$($(PERL) -I Scripts/lib Scripts/uuid2componentPath.pl \
+  --input-base-dir $(JSONissues) \
+  --input-uuid-path "$(UUID_PATH)") || exit 1; \
+  test -n "$$CPS" || { echo "ERROR: no TEI component found for $(UUID_PATH)" >&2; exit 1; }; \
+  for CP in $$CPS; do \
+    ID=$$(basename "$$CP"); \
+    IUP=$$(jq -r 'select(.uuid_path != null) | .uuid_path' $(idMapping)/$$CP.jsonl | head -n 1 | cut -d '/' -f 1-3); \
+    echo "INFO: $@ $$CP ($$IUP)"; \
+    $(1) || exit 1; \
+  done
+endef
 
 ##inputImg2pageXML## OCR original images to pageXML
 inputImg2pageXML: $(JSONissues)/$(UUID_PATH).json $(xmlOCR) setup-pero-ocr $(PERO_OCR_MODEL_CONFIG)
@@ -681,7 +716,62 @@ $(imageRegions)/$(COMPONENT_PATH).jsonl:
 	@echo "INFO: skipping region detection for $(COMPONENT_PATH) ($(UUID_PATH)) because output already exists"
 endif
 
-##textRegions2teiFacsText## merge region detection and ocr output to TEI documents
+##inputImg2separators## detect horizontal separator lines (rules) in original images
+#### rules spanning more than one column split the page into sections (e.g. feuilleton below a rule)
+inputImg2separators: $(JSONissues)/$(UUID_PATH).json $(separators)
+	$(call for-each-component,python $(LAYOUT_ANALYSIS_SCRIPTS)/detect_rules.py \
+	  -i $(INimg)/$$IUP -o $(separators)/$$CP)
+
+##pageXML2layoutAnalysis## combine OCR lines (pageXML), YOLO regions and separators: columns, blocks, paragraphs, reading order, paragraph flow across columns/pages
+#### reading order is verified by word division (hyphenated words) at block boundaries, see Scripts/layoutAnalysis/POZNAMKY.md
+pageXML2layoutAnalysis: $(JSONissues)/$(UUID_PATH).json $(layoutAnalysis)
+	$(call for-each-component,python $(LAYOUT_ANALYSIS_SCRIPTS)/analyze_layout.py \
+	  --order $(idMapping)/$$CP.jsonl --xml $(xmlOCR)/$$CP --yolo $(imageRegions)/$$CP.jsonl \
+	  --rules $(separators)/$$CP -o $(layoutAnalysis)/$$CP)
+
+##layoutAnalysis2teiFacsText## layout analysis to TEI/text (div/head/p, pb/cb/lb) and TEI/facs (surface/zone)
+#### flat body/div per article (type article, feuilleton for text below a rule), no fw, paragraphs flow over cb/pb, unique ids checked
+layoutAnalysis2teiFacsText: $(JSONissues)/$(UUID_PATH).json $(TEItext) $(TEIfacs)
+	$(call for-each-component,python $(LAYOUT_ANALYSIS_SCRIPTS)/analysis2tei.py \
+	  --results $(layoutAnalysis)/$$CP --tei-id $$ID \
+	  --text $(TEItext)/$$CP.xml --facs $(TEIfacs)/$$CP.xml)
+
+ifeq ($(wildcard $(separators)/$(COMPONENT_PATH)),)
+$(separators)/$(COMPONENT_PATH): $(INimg)/$(UUID_PATH)
+	@echo "INFO: detecting separators for $(COMPONENT_PATH) ($(UUID_PATH))"
+	python $(LAYOUT_ANALYSIS_SCRIPTS)/detect_rules.py -i $(INimg)/$(UUID_PATH) -o $@
+else
+$(separators)/$(COMPONENT_PATH):
+	@echo "INFO: skipping separator detection for $(COMPONENT_PATH) because output already exists"
+endif
+
+ifeq ($(wildcard $(layoutAnalysis)/$(COMPONENT_PATH)/flow.json),)
+$(layoutAnalysis)/$(COMPONENT_PATH)/flow.json: $(xmlOCR)/$(COMPONENT_PATH) $(imageRegions)/$(COMPONENT_PATH).jsonl $(separators)/$(COMPONENT_PATH) $(idMapping)/$(COMPONENT_PATH).jsonl
+	@echo "INFO: layout analysis for $(COMPONENT_PATH)"
+	python $(LAYOUT_ANALYSIS_SCRIPTS)/analyze_layout.py \
+	  --order $(idMapping)/$(COMPONENT_PATH).jsonl --xml $(xmlOCR)/$(COMPONENT_PATH) \
+	  --yolo $(imageRegions)/$(COMPONENT_PATH).jsonl --rules $(separators)/$(COMPONENT_PATH) \
+	  -o $(layoutAnalysis)/$(COMPONENT_PATH)
+else
+$(layoutAnalysis)/$(COMPONENT_PATH)/flow.json:
+	@echo "INFO: skipping layout analysis for $(COMPONENT_PATH) because output already exists"
+endif
+
+ifeq ($(wildcard $(TEItext)/$(COMPONENT_PATH).xml),)
+$(TEItext)/$(COMPONENT_PATH).xml: $(layoutAnalysis)/$(COMPONENT_PATH)/flow.json
+	@echo "INFO: creating TEI text and facs for $(COMPONENT_PATH)"
+	python $(LAYOUT_ANALYSIS_SCRIPTS)/analysis2tei.py \
+	  --results $(layoutAnalysis)/$(COMPONENT_PATH) --tei-id $(notdir $(COMPONENT_PATH)) \
+	  --text $(TEItext)/$(COMPONENT_PATH).xml --facs $(TEIfacs)/$(COMPONENT_PATH).xml
+else
+$(TEItext)/$(COMPONENT_PATH).xml:
+	@echo "INFO: skipping TEI text creation for $(COMPONENT_PATH) because output already exists"
+endif
+
+###### [DEPRECATED] targets
+
+##textRegions2teiFacsText## [DEPRECATED] replaced by inputImg2separators + pageXML2layoutAnalysis + layoutAnalysis2teiFacsText
+#### merge region detection and ocr output to TEI documents (Scripts/textRegions2teiFacsText)
 #### this also attempts to determine correct reading order of text regions based on pageXML reading order and detected regions, but this is not perfect and can be improved in the future
 #### TODO: add some article segmentation based on detected regions and reading order, currently we just put all text regions in one big text body
 textRegions2teiFacsText:
@@ -696,22 +786,17 @@ textRegions2teiFacsText:
 				--output-text-dir "$(TEItext)"
 
 
-ifeq ($(wildcard $(TEItext)/$(COMPONENT_PATH).xml),)
-$(TEItext)/$(COMPONENT_PATH).xml: $(xmlOCR)/$(COMPONENT_PATH) $(imageRegions)/$(COMPONENT_PATH).jsonl $(idMapping)/$(COMPONENT_PATH).jsonl
-	@echo "INFO: creating TEI text for $(COMPONENT_PATH)"
-	echo "$(COMPONENT_PATH)" \
-	  | PYTHONPATH=Scripts python -m textRegions2teiFacsText.main \
-		    --ocr-xml-dir "$(xmlOCR)" \
-				--regions-dir "$(imageRegions)" \
-				--page-order-dir "$(idMapping)" \
-				--output-facs-dir "$(TEIfacs)" \
-				--output-text-dir "$(TEItext)"
-else
-$(TEItext)/$(COMPONENT_PATH).xml:
-	@echo "INFO: skipping TEI text creation for $(COMPONENT_PATH) because output already exists"
-endif
+#### [DEPRECATED] the COMPONENT_PATH rule $(TEItext)/$(COMPONENT_PATH).xml (process-data-byPath) now uses layoutAnalysis instead of textRegions2teiFacsText
 
-###### [DEPRECATED] targets
+##textRegions2teiFacsText-all## [DEPRECATED] replaced by layoutAnalysis2teiFacsText-all
+textRegions2teiFacsText-all: $(TASKS_ISSUES)
+	cat $(TASKS_ISSUES) | xargs -I {} make textRegions2teiFacsText UUID_PATH={} SAMPLE=$(SAMPLE)
+
+##DEVprocess-data-all## [DEPRECATED] development variant of process-data-all without OCR, replaced by layoutAnalysis2teiFacsText-all
+DEVprocess-data-all: $(TASKS_ISSUES)
+	cat $(TASKS_ISSUES) | xargs -I {} make DEVprocess-data UUID_PATH={} SAMPLE=$(SAMPLE)
+##DEVprocess-data## [DEPRECATED] uses textRegions2teiFacsText
+DEVprocess-data: $(INjson)/$(UUID_PATH).json inputImg2imageRegions textRegions2teiFacsText
 
 ##inputTxt2teiText## [DEPRECATED] original text to TEI/text (expecting UUID_PATH_LEVEL>0)
 inputTxt2teiText: $(INjson)/$(UUID_PATH).json $(TEItext)
@@ -872,7 +957,7 @@ PREREQ_CMDS = make jq python python3 perl java curl sed awk find xargs /usr/bin/
 ##$PREREQ_FILES## files checked by check-prereq
 PREREQ_FILES = Models/$(PERO_OCR_MODEL_NAME)/config.ini $(YOLO_MODEL) Scripts/bin/saxon.jar $(firstword $(FLEXIPIPE))
 ##$PREREQ_PYMODULES## python modules checked by check-prereq
-PREREQ_PYMODULES = pero_ocr ultralytics numpy scipy shapely lxml
+PREREQ_PYMODULES = pero_ocr ultralytics numpy scipy shapely lxml cv2 reportlab
 ##$PREREQ_PERLMODULES## perl modules checked by check-prereq, only when perlbrew is initialized (perlbrew use, as in Scripts/slurm_submit_process.sh)
 PREREQ_PERLMODULES = JSON XML::LibXML XML::LibXML::PrettyPrint PressMintCZ
 
