@@ -862,6 +862,22 @@ clean-annotation-all:
 	rm -rf "$(TEItextTT)" "$(TEItextANA)"
 	rm -f "$(TEItextTT).fl" "$(TEItextANA).fl"
 
+##slurm-process-annotation-all## submit process-annotation-all as ONE slurm job (sequential, no job array) on a cpu node
+#### logs: logs/slurm/annotation_<jobid>.out/.err, start/end in logs/PressMint-CZ.slurm.log
+slurm-process-annotation-all:
+	@mkdir -p logs/slurm
+	sbatch $(SBATCH_EXCLUDE) --job-name=PressMint-annotation \
+	       --partition=cpu-troja,cpu-ms \
+	       --gres=none \
+	       --cpus-per-task=4 \
+	       --mem=16G \
+	       --output=logs/slurm/annotation_%j.out \
+	       --error=logs/slurm/annotation_%j.err \
+	       --wrap='echo "$$(date +%Y-%m-%dT%T) START annotation $$SLURM_JOB_ID $$(hostname)" >> logs/PressMint-CZ.slurm.log; \
+	               make check-prereq && make process-annotation-all SAMPLE=$(SAMPLE) DATA=$(DATA); RC=$$?; \
+	               echo "$$(date +%Y-%m-%dT%T) DONE annotation $$SLURM_JOB_ID $$(hostname) exit=$$RC" >> logs/PressMint-CZ.slurm.log; \
+	               exit $$RC'
+
 
 $(TEItextTT).fl: $(TEItextTT)
 	find $(TEItext) -type f -name "*.xml"  -printf "%P\n"| sort > $(TEItextTT).fl
