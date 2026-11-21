@@ -674,9 +674,19 @@ inputImg2pageXML: $(JSONissues)/$(UUID_PATH).json $(xmlOCR) setup-pero-ocr $(PER
 										 --output-alto-dir $(altoOCR)
 
 
-ifeq ($(wildcard $(xmlOCR)/$(COMPONENT_PATH)),)
-$(xmlOCR)/$(COMPONENT_PATH): $(INimg)/$(UUID_PATH) $(JSONissues)/$(UUID_PATH).json $(PERO_OCR_MODEL_CONFIG)
-	@echo "INFO: running OCR for $(COMPONENT_PATH) ($(UUID_PATH))"
+# pages of the component (idMapping) without OCR output: OCR is (re)run when the directory
+# is missing or incomplete (e.g. an interrupted job of the old pipeline)
+ifdef COMPONENT_PATH
+OCR_MISSING_PAGES := $(shell test -f $(idMapping)/$(COMPONENT_PATH).jsonl \
+  && jq -r 'select(.uuid != null) | .uuid' $(idMapping)/$(COMPONENT_PATH).jsonl \
+  | while read -r u; do test -f $(xmlOCR)/$(COMPONENT_PATH)/$$u.xml || echo $$u; done)
+endif
+ifneq ($(wildcard $(xmlOCR)/$(COMPONENT_PATH))$(if $(strip $(OCR_MISSING_PAGES)),,ok),$(xmlOCR)/$(COMPONENT_PATH)ok)
+# not $(INimg)/$(UUID_PATH) as prerequisite: the directory may exist without images (deleted after OCR);
+# FORCE: an existing but incomplete directory is not up to date
+$(xmlOCR)/$(COMPONENT_PATH): $(JSONissues)/$(UUID_PATH).json $(PERO_OCR_MODEL_CONFIG) FORCE
+	@echo "INFO: running OCR for $(COMPONENT_PATH) ($(UUID_PATH)), pages without pageXML: $(or $(strip $(OCR_MISSING_PAGES)),all)"
+	$(download-issue-images)
 	$(PERL) -I Scripts/lib Scripts/runOCR.pl \
 										 --input-file-suffix ".jpg" \
 										 --input-img-dir $(INimg) \
@@ -1146,7 +1156,10 @@ help-targets:
 
 
 
-.PHONY: help test-level-%
+.PHONY: help test-level-% FORCE
+
+# always out of date (prerequisite of rules that decide themselves whether to run)
+FORCE:
 ## help ## print this help
 help: help-intro help-variables help-targets
 
