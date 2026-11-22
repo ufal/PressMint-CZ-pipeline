@@ -351,18 +351,50 @@ def join_lines(texts):
     return out
 
 
+MARGIN_WINDOW = 6      # lines above/below used for the local text margin
+ENUM_START = re.compile(r"^\W*[a-z]\)")     # "a) ..." enumerations may start lowercase
+# news items opened by a correspondent's sigil: "a. Ze Štyrského Hradce", "er. Z Paříže"
+SIGIL_START = re.compile(r"^([a-zá-ž]{1,3})\.\s+[A-ZÁ-ŽŠ„]")
+NOT_SIGIL = {"dr", "pf", "p", "pp", "sv", "kr", "zl", "č", "st", "mr", "ing"}
+
+
+def local_margins(lines):
+    """Left/right text margin at every line, estimated from its neighbourhood.
+
+    A block-wide margin fails on skewed or warped scans: the column edge drifts
+    by several pitches over the page height and every line on one side looks
+    indented.  Percentiles over a sliding window of lines follow the drift."""
+    n = len(lines)
+    out = []
+    for i in range(n):
+        win = lines[max(0, i - MARGIN_WINDOW): i + MARGIN_WINDOW + 1]
+        xs0 = sorted(l["bbox"][0] for l in win)
+        xs1 = sorted(l["bbox"][2] for l in win)
+        m = len(win)
+        out.append((xs0[m // 5], xs1[(4 * m) // 5]))
+    return out
+
+
+def starts_lowercase(text):
+    if not first_alpha(text).islower() or ENUM_START.match(text):
+        return False
+    m = SIGIL_START.match(text)
+    return not (m and m.group(1) not in NOT_SIGIL)
+
+
 def split_paragraphs(block, pitch):
     lines = block["lines"]
     if block["type"] == "title" or len(lines) == 1:
         return [lines]
-    left = sorted(l["bbox"][0] for l in lines)[len(lines) // 5]
-    right = sorted(l["bbox"][2] for l in lines)[(4 * len(lines)) // 5]
+    margins = local_margins(lines)
     paras, cur = [], [lines[0]]
-    for prev, ln in zip(lines, lines[1:]):
-        indent = ln["bbox"][0] - left > 0.7 * pitch
-        short_prev = prev["bbox"][2] < right - 1.5 * pitch
+    for i in range(1, len(lines)):
+        prev, ln = lines[i - 1], lines[i]
+        indent = ln["bbox"][0] - margins[i][0] > 0.7 * pitch
+        short_prev = prev["bbox"][2] < margins[i - 1][1] - 1.5 * pitch
         gap = ln["baseline_y"] - prev["baseline_y"] > 1.7 * pitch
-        if (indent or short_prev or gap) and not hyphen_link(prev["text"], ln["text"]):
+        # a paragraph does not start in lowercase (covers word division as well)
+        if (indent or short_prev or gap) and not starts_lowercase(ln["text"]):
             paras.append(cur)
             cur = []
         cur.append(ln)
@@ -528,6 +560,10 @@ def analyze(page_no, uuid, xml_path, yolo, rules_path, first_page=False):
     for bi, b in enumerate(order, 1):
         b["columns"] = block_columns(b, cols)
         left, right = text_extent(b, cols)
+        first_left, last_right = left, right
+        if len(b["lines"]) >= 3:               # local margins follow skewed columns
+            m = local_margins(b["lines"])
+            first_left, last_right = m[0][0], m[-1][1]
         paras = []
         for pi, pl in enumerate(split_paragraphs(b, pitch), 1):
             p_counter += 1
@@ -544,6 +580,7 @@ def analyze(page_no, uuid, xml_path, yolo, rules_path, first_page=False):
             "stream": "main" if id(b) in banner_ids else streams.get(id(b), "main"),
             "source": b["source"], "yolo_conf": b.get("yolo_conf"), "bbox": b["bbox"],
             "columns": b["columns"], "text_left": left, "text_right": right,
+            "first_left": first_left, "last_right": last_right,
             "paragraphs": paras,
         })
     n_ads = mark_advertisements(out_blocks, pitch)
@@ -666,8 +703,8 @@ def continues(a, ablk, apitch, b, bblk, bpitch):
         return first_alpha(lb["text"]).islower()
     if first_alpha(lb["text"]).islower() and not TERMINAL.search(la["text"].rstrip()):
         return True
-    full = la["bbox"][2] >= ablk["text_right"] - 1.5 * apitch
-    no_indent = lb["bbox"][0] <= bblk["text_left"] + 0.7 * bpitch
+    full = la["bbox"][2] >= ablk.get("last_right", ablk["text_right"]) - 1.5 * apitch
+    no_indent = lb["bbox"][0] <= bblk.get("first_left", bblk["text_left"]) + 0.7 * bpitch
     return full and no_indent
 
 
