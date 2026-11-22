@@ -584,13 +584,20 @@ def analyze(page_no, uuid, xml_path, yolo, rules_path, first_page=False):
             "paragraphs": paras,
         })
     n_ads = mark_advertisements(out_blocks, pitch)
+    if first_page:
+        n_top = ads_to_banner(out_blocks, pitch)
+        n_ads -= n_top
+        if n_top:
+            banner_bottom = max([banner_bottom or 0] + [b["bbox"][3] for b in out_blocks
+                                                         if b["role"] == "banner"])
+    has_banner = any(b["role"] == "banner" for b in out_blocks)
 
     return {
         "page_no": page_no, "uuid": uuid, "image": f"{uuid}.jpg", "width": W, "height": H,
         "line_pitch": round(pitch, 1), "columns": cols,
         "rules": [{"bbox": r["bbox"], "mode": m} for r, m in zip(rules, modes)],
         "banner": ({"bbox": union([b["bbox"] for b in out_blocks if b["role"] == "banner"]),
-                    "bottom": banner_bottom} if banner_ids else None),
+                    "bottom": banner_bottom} if has_banner else None),
         "reading_order": {"hyphen_score": score, "hyphen_links_ok": h_ok, "hyphen_links_broken": h_bad},
         "blocks": out_blocks,
         "noise_lines": [{k: l[k] for k in ("id", "bbox", "text", "conf")} for l in noise],
@@ -602,6 +609,21 @@ def analyze(page_no, uuid, xml_path, yolo, rules_path, first_page=False):
 
 
 # ---------------------------------------------------------------- advertisements
+def ads_to_banner(blocks, pitch):
+    """First page: advertisements at the very top (above the topmost body text block,
+    i.e. inside the masthead area, e.g. ads beside or below the title) are part of the
+    banner.  Sets role "banner" (in place), returns their count."""
+    body_top = min((b["bbox"][1] for b in blocks if b["role"] == "body"), default=None)
+    if body_top is None:
+        return 0
+    n = 0
+    for b in blocks:
+        if b["role"] == "advertisement" and b["bbox"][3] <= body_top + pitch:
+            b["role"], b["stream"] = "banner", "main"
+            n += 1
+    return n
+
+
 def ad_features(b, pitch):
     """typographic and lexical features of a block (all ratios per line / per 1000 chars)"""
     lines = [l for p in b["paragraphs"] for l in p["lines"]]
