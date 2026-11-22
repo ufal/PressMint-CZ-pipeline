@@ -614,7 +614,7 @@ slurm-img2tei:
 	@mkdir -p logs/slurm
 	@# Count total lines in the file
 	@TOTAL_TASKS=$$(wc -l < $(TASKS_ISSUES) | tr -d ' '); \
-	LAST_TASK=$$(python3 -c "print(min($$TOTAL_TASKS, $(SLURM_ARRAY_START) + $(SLURM_ARRAY_SIZE) - 1)-$(SLURM_ARRAY_START))"); \
+	LAST_TASK=$$(python3 -c "print(min($$TOTAL_TASKS, $(SLURM_ARRAY_START) + $(SLURM_ARRAY_SIZE) - 1) - $(SLURM_ARRAY_START) + 1)"); \
 	sbatch $(SBATCH_EXCLUDE) --array=1-$$LAST_TASK%$(SLURM_MAX_CONCURRENT) \
 	       --export=DEVICE=gpu,PERO_OCR_MODEL_CONFIG=Models/$(PERO_OCR_MODEL_NAME)/config.ini,TASKS_FILE=$(TASKS_ISSUES),SLURM_START=$(SLURM_ARRAY_START),SAMPLE=$(SAMPLE),MAKEFILE_TARGET=download-imgs-process-data-delete-imgs \
 	       Scripts/slurm_submit_process.sh
@@ -624,9 +624,23 @@ slurm-img2tei-byPath:
 	@mkdir -p logs/slurm
 	@# Count total lines in the file
 	@TOTAL_TASKS=$$(wc -l < $(TASKS_TEI_COMPONENTS) | tr -d ' '); \
-	LAST_TASK=$$(python3 -c "print(min($$TOTAL_TASKS, $(SLURM_ARRAY_START) + $(SLURM_ARRAY_SIZE) - 1)-$(SLURM_ARRAY_START))"); \
+	LAST_TASK=$$(python3 -c "print(min($$TOTAL_TASKS, $(SLURM_ARRAY_START) + $(SLURM_ARRAY_SIZE) - 1) - $(SLURM_ARRAY_START) + 1)"); \
 	sbatch $(SBATCH_EXCLUDE) --array=1-$$LAST_TASK%$(SLURM_MAX_CONCURRENT) \
 	       --export=DEVICE=gpu,PERO_OCR_MODEL_CONFIG=Models/$(PERO_OCR_MODEL_NAME)/config.ini,VAR_NAME=COMPONENT_PATH,TASKS_FILE=$(TASKS_TEI_COMPONENTS),SLURM_START=$(SLURM_ARRAY_START),SAMPLE=$(SAMPLE),MAKEFILE_TARGET=process-data-byPath \
+	       Scripts/slurm_submit_process.sh
+
+##slurm-layout2tei-byPath## like slurm-img2tei-byPath but on CPU nodes: only layout analysis + TEI (+ separators if missing), no OCR
+#### components with incomplete OCR or missing imageRegions FAIL (see logs/PressMint-CZ.slurm.log): process them with slurm-img2tei-byPath
+#### SLURM_CPU_MEM (default 4G) memory per task
+SLURM_CPU_MEM ?= 4G
+slurm-layout2tei-byPath:
+	@mkdir -p logs/slurm
+	@TOTAL_TASKS=$$(wc -l < $(TASKS_TEI_COMPONENTS) | tr -d ' '); \
+	LAST_TASK=$$(python3 -c "print(min($$TOTAL_TASKS, $(SLURM_ARRAY_START) + $(SLURM_ARRAY_SIZE) - 1) - $(SLURM_ARRAY_START) + 1)"); \
+	sbatch $(SBATCH_EXCLUDE) --array=1-$$LAST_TASK%$(SLURM_MAX_CONCURRENT) \
+	       --partition=cpu-troja,cpu-ms --gres=none --cpus-per-task=1 --mem=$(SLURM_CPU_MEM) \
+	       --job-name=PressMint-layout \
+	       --export=DEVICE=cpu,VAR_NAME=COMPONENT_PATH,TASKS_FILE=$(TASKS_TEI_COMPONENTS),SLURM_START=$(SLURM_ARRAY_START),SAMPLE=$(SAMPLE),MAKEFILE_TARGET=layout2tei-byPath \
 	       Scripts/slurm_submit_process.sh
 
 ##process-data-all## process data for all issues (img->text-->TEI) based on task list prepared by prepare-tasks
@@ -640,6 +654,20 @@ process-data-byPath: $(TEItext)/$(COMPONENT_PATH).xml
 else
 process-data-byPath:
 	@echo "ERROR: COMPONENT_PATH is not defined, cannot process data by path"
+endif
+
+##layout2tei-byPath## COMPONENT_PATH: layout analysis + TEI/text + TEI/facs from existing OCR and imageRegions (no OCR, no GPU)
+#### separators are detected if missing; skipped if TEI/text already exists
+ifdef COMPONENT_PATH
+layout2tei-byPath:
+	@test -f $(TEItext)/$(COMPONENT_PATH).xml && { echo "INFO: skipping $(COMPONENT_PATH), TEI text exists"; exit 0; }; \
+	test -d $(xmlOCR)/$(COMPONENT_PATH) || { echo "ERROR: no OCR for $(COMPONENT_PATH), use process-data-byPath" >&2; exit 1; }; \
+	test -z "$(strip $(OCR_MISSING_PAGES))" || { echo "ERROR: incomplete OCR for $(COMPONENT_PATH) (pages: $(strip $(OCR_MISSING_PAGES))), use process-data-byPath" >&2; exit 1; }; \
+	test -f $(imageRegions)/$(COMPONENT_PATH).jsonl || { echo "ERROR: no imageRegions for $(COMPONENT_PATH), use process-data-byPath" >&2; exit 1; }; \
+	$(MAKE) --no-print-directory $(TEItext)/$(COMPONENT_PATH).xml COMPONENT_PATH=$(COMPONENT_PATH) SAMPLE=$(SAMPLE)
+else
+layout2tei-byPath:
+	@echo "ERROR: COMPONENT_PATH is not defined" >&2; exit 1
 endif
 
 ##layoutAnalysis2teiFacsText-all## (re)create separators, layout analysis and TEI for all issues from existing OCR and imageRegions
@@ -925,7 +953,7 @@ slurm-TT2teiANA:
 	@mkdir -p logs/slurm
 	@# Count total lines in the file
 	@TOTAL_TASKS=$$(wc -l < $(TEItextANA).fl | tr -d ' '); \
-	LAST_TASK=$$(python3 -c "print(min($$TOTAL_TASKS, $(SLURM_ARRAY_START) + $(SLURM_ARRAY_SIZE) - 1)-$(SLURM_ARRAY_START))"); \
+	LAST_TASK=$$(python3 -c "print(min($$TOTAL_TASKS, $(SLURM_ARRAY_START) + $(SLURM_ARRAY_SIZE) - 1) - $(SLURM_ARRAY_START) + 1)"); \
 	sbatch $(SBATCH_EXCLUDE) --array=1-$$LAST_TASK%$(SLURM_MAX_CONCURRENT) \
 	       --export=TASKS_FILE=$(TEItextANA).fl,SLURM_START=$(SLURM_ARRAY_START),VAR_NAME=RELPATH,MAKEFILE_TARGET=TT2teiANA-single-task \
 				 --partition=cpu-troja,cpu-ms \
