@@ -105,8 +105,13 @@ JAVA-MEMORY-GB = $(shell java $(JM) -XX:+PrintFlagsFinal -version 2>&1| grep " M
 SAXON := java $(JM) -jar Scripts/bin/saxon.jar
 
 SLURM_MAX_CONCURRENT ?= 30
+##$SLURM_ARRAY_SIZE## max number of tasks in one slurm array submission (capped by the cluster's MaxArraySize-1)
 SLURM_ARRAY_SIZE ?= 10000
+##$SLURM_ARRAY_START## first line of the task list to process (next submission: START + number of submitted tasks)
 SLURM_ARRAY_START ?= 1
+# array indices must be < MaxArraySize (evaluated lazily, only by slurm-* targets)
+SLURM_MAX_ARRAY_INDEX = $(or $(shell scontrol show config 2>/dev/null | awk '$$1=="MaxArraySize"{print $$3-1}'),9999)
+SLURM_ARRAY_N = $(shell python3 -c "print(min($(SLURM_ARRAY_SIZE), $(SLURM_MAX_ARRAY_INDEX)))")
 ##$SLURM_EXCLUDE## cluster nodes that should not be used by slurm-* targets (space or comma separated, e.g. SLURM_EXCLUDE="node1 node2")
 SLURM_EXCLUDE ?=
 comma := ,
@@ -614,7 +619,8 @@ slurm-img2tei:
 	@mkdir -p logs/slurm
 	@# Count total lines in the file
 	@TOTAL_TASKS=$$(wc -l < $(TASKS_ISSUES) | tr -d ' '); \
-	LAST_TASK=$$(python3 -c "print(min($$TOTAL_TASKS, $(SLURM_ARRAY_START) + $(SLURM_ARRAY_SIZE) - 1) - $(SLURM_ARRAY_START) + 1)"); \
+	LAST_TASK=$$(python3 -c "print(min($$TOTAL_TASKS, $(SLURM_ARRAY_START) + $(SLURM_ARRAY_N) - 1) - $(SLURM_ARRAY_START) + 1)"); \
+	echo "INFO: submitting task lines $(SLURM_ARRAY_START)..$$(( $(SLURM_ARRAY_START) + LAST_TASK - 1 )) of $$TOTAL_TASKS (next: SLURM_ARRAY_START=$$(( $(SLURM_ARRAY_START) + LAST_TASK )))"; \
 	sbatch $(SBATCH_EXCLUDE) --array=1-$$LAST_TASK%$(SLURM_MAX_CONCURRENT) \
 	       --export=DEVICE=gpu,PERO_OCR_MODEL_CONFIG=Models/$(PERO_OCR_MODEL_NAME)/config.ini,TASKS_FILE=$(TASKS_ISSUES),SLURM_START=$(SLURM_ARRAY_START),SAMPLE=$(SAMPLE),MAKEFILE_TARGET=download-imgs-process-data-delete-imgs \
 	       Scripts/slurm_submit_process.sh
@@ -624,7 +630,8 @@ slurm-img2tei-byPath:
 	@mkdir -p logs/slurm
 	@# Count total lines in the file
 	@TOTAL_TASKS=$$(wc -l < $(TASKS_TEI_COMPONENTS) | tr -d ' '); \
-	LAST_TASK=$$(python3 -c "print(min($$TOTAL_TASKS, $(SLURM_ARRAY_START) + $(SLURM_ARRAY_SIZE) - 1) - $(SLURM_ARRAY_START) + 1)"); \
+	LAST_TASK=$$(python3 -c "print(min($$TOTAL_TASKS, $(SLURM_ARRAY_START) + $(SLURM_ARRAY_N) - 1) - $(SLURM_ARRAY_START) + 1)"); \
+	echo "INFO: submitting task lines $(SLURM_ARRAY_START)..$$(( $(SLURM_ARRAY_START) + LAST_TASK - 1 )) of $$TOTAL_TASKS (next: SLURM_ARRAY_START=$$(( $(SLURM_ARRAY_START) + LAST_TASK )))"; \
 	sbatch $(SBATCH_EXCLUDE) --array=1-$$LAST_TASK%$(SLURM_MAX_CONCURRENT) \
 	       --export=DEVICE=gpu,PERO_OCR_MODEL_CONFIG=Models/$(PERO_OCR_MODEL_NAME)/config.ini,VAR_NAME=COMPONENT_PATH,TASKS_FILE=$(TASKS_TEI_COMPONENTS),SLURM_START=$(SLURM_ARRAY_START),SAMPLE=$(SAMPLE),MAKEFILE_TARGET=process-data-byPath \
 	       Scripts/slurm_submit_process.sh
@@ -636,7 +643,8 @@ SLURM_CPU_MEM ?= 4G
 slurm-layout2tei-byPath:
 	@mkdir -p logs/slurm
 	@TOTAL_TASKS=$$(wc -l < $(TASKS_TEI_COMPONENTS) | tr -d ' '); \
-	LAST_TASK=$$(python3 -c "print(min($$TOTAL_TASKS, $(SLURM_ARRAY_START) + $(SLURM_ARRAY_SIZE) - 1) - $(SLURM_ARRAY_START) + 1)"); \
+	LAST_TASK=$$(python3 -c "print(min($$TOTAL_TASKS, $(SLURM_ARRAY_START) + $(SLURM_ARRAY_N) - 1) - $(SLURM_ARRAY_START) + 1)"); \
+	echo "INFO: submitting task lines $(SLURM_ARRAY_START)..$$(( $(SLURM_ARRAY_START) + LAST_TASK - 1 )) of $$TOTAL_TASKS (next: SLURM_ARRAY_START=$$(( $(SLURM_ARRAY_START) + LAST_TASK )))"; \
 	sbatch $(SBATCH_EXCLUDE) --array=1-$$LAST_TASK%$(SLURM_MAX_CONCURRENT) \
 	       --partition=cpu-troja,cpu-ms --gres=none --cpus-per-task=1 --mem=$(SLURM_CPU_MEM) \
 	       --job-name=PressMint-layout \
@@ -953,7 +961,8 @@ slurm-TT2teiANA:
 	@mkdir -p logs/slurm
 	@# Count total lines in the file
 	@TOTAL_TASKS=$$(wc -l < $(TEItextANA).fl | tr -d ' '); \
-	LAST_TASK=$$(python3 -c "print(min($$TOTAL_TASKS, $(SLURM_ARRAY_START) + $(SLURM_ARRAY_SIZE) - 1) - $(SLURM_ARRAY_START) + 1)"); \
+	LAST_TASK=$$(python3 -c "print(min($$TOTAL_TASKS, $(SLURM_ARRAY_START) + $(SLURM_ARRAY_N) - 1) - $(SLURM_ARRAY_START) + 1)"); \
+	echo "INFO: submitting task lines $(SLURM_ARRAY_START)..$$(( $(SLURM_ARRAY_START) + LAST_TASK - 1 )) of $$TOTAL_TASKS (next: SLURM_ARRAY_START=$$(( $(SLURM_ARRAY_START) + LAST_TASK )))"; \
 	sbatch $(SBATCH_EXCLUDE) --array=1-$$LAST_TASK%$(SLURM_MAX_CONCURRENT) \
 	       --export=TASKS_FILE=$(TEItextANA).fl,SLURM_START=$(SLURM_ARRAY_START),VAR_NAME=RELPATH,MAKEFILE_TARGET=TT2teiANA-single-task \
 				 --partition=cpu-troja,cpu-ms \
