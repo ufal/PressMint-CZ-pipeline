@@ -919,18 +919,40 @@ clean-annotation-all:
 
 ##$PATCH_ADS_DIRS## directories patched by patch-advertisment-location (missing ones are skipped)
 PATCH_ADS_DIRS ?= $(TEItext) $(TEItextTT) $(TEItextANA)
+##$PATCH_JOBS## number of parallel worker processes of patch-advertisment-location (0 = all CPUs; the slurm wrapper uses the allocated CPUs)
+PATCH_JOBS ?= 4
 ##patch-advertisment-location## move div[@type=advertisement] from text/body to text/back (<front><body><back>) in existing TEI files of $(PATCH_ADS_DIRS)
 #### in place, only changed files are rewritten, safe to run repeatedly (new analysis2tei.py output has ads in back already)
+#### files are processed by $(PATCH_JOBS) parallel processes
 #### do not run while annotation is running (a file being written by flexipipe could be overwritten), afterwards rebuild dist: make process-build
 patch-advertisment-location:
 	@for d in $(PATCH_ADS_DIRS); do \
 	  if [ -d "$$d" ]; then \
 	    echo "INFO: patching advertisement location in $$d"; \
-	    python3 Scripts/layoutAnalysis/ads2back.py "$$d" || exit 1; \
+	    python3 Scripts/layoutAnalysis/ads2back.py -j $(PATCH_JOBS) "$$d" || exit 1; \
 	  else \
 	    echo "INFO: skipping missing $$d"; \
 	  fi; \
 	done
+
+##$SLURM_PATCH_CPUS## CPUs (= parallel processes) of slurm-patch-advertisment-location
+SLURM_PATCH_CPUS ?= 16
+##slurm-patch-advertisment-location## submit patch-advertisment-location as ONE slurm job on a cpu node with $(SLURM_PATCH_CPUS) parallel processes
+#### the work is I/O bound (parse + rewrite of files on shared disk), more CPUs than ~16-32 rarely help
+#### logs: logs/slurm/patch-ads_<jobid>.out/.err, start/end in logs/PressMint-CZ.slurm.log
+slurm-patch-advertisment-location:
+	@mkdir -p logs/slurm
+	sbatch $(SBATCH_EXCLUDE) --job-name=PressMint-patch-ads \
+	       --partition=cpu-troja,cpu-ms \
+	       --gres=none \
+	       --cpus-per-task=$(SLURM_PATCH_CPUS) \
+	       --mem=$$(( $(SLURM_PATCH_CPUS) / 2 + 4 ))G \
+	       --output=logs/slurm/patch-ads_%j.out \
+	       --error=logs/slurm/patch-ads_%j.err \
+	       --wrap='echo "$$(date +%Y-%m-%dT%T) START patch-ads $$SLURM_JOB_ID $$(hostname)" >> logs/PressMint-CZ.slurm.log; \
+	               make patch-advertisment-location SAMPLE=$(SAMPLE) DATA=$(DATA) PATCH_JOBS=$${SLURM_CPUS_PER_TASK:-$(SLURM_PATCH_CPUS)} $(if $(filter command line,$(origin PATCH_ADS_DIRS)),PATCH_ADS_DIRS="$(PATCH_ADS_DIRS)"); RC=$$?; \
+	               echo "$$(date +%Y-%m-%dT%T) DONE patch-ads $$SLURM_JOB_ID $$(hostname) exit=$$RC" >> logs/PressMint-CZ.slurm.log; \
+	               exit $$RC'
 
 ##slurm-process-annotation-all## submit process-annotation-all as ONE slurm job (sequential, no job array) on a cpu node
 #### logs: logs/slurm/annotation_<jobid>.out/.err, start/end in logs/PressMint-CZ.slurm.log
