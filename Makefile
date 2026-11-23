@@ -786,7 +786,7 @@ pageXML2layoutAnalysis: $(JSONissues)/$(UUID_PATH).json $(layoutAnalysis)
 	  --rules $(separators)/$$CP -o $(layoutAnalysis)/$$CP)
 
 ##layoutAnalysis2teiFacsText## layout analysis to TEI/text (div/head/p, pb/cb/lb) and TEI/facs (surface/zone)
-#### front/div[@type=banner] (masthead of the first page, if detected), flat body/div: article, feuilleton (text below a rule), advertisement; no fw, paragraphs flow over cb/pb, unique ids checked
+#### front/div[@type=banner] (masthead of the first page, if detected), flat body/div: article, feuilleton (text below a rule), back/div: advertisement; no fw, paragraphs flow over cb/pb, unique ids checked
 layoutAnalysis2teiFacsText: $(JSONissues)/$(UUID_PATH).json $(TEItext) $(TEIfacs)
 	$(call for-each-component,python $(LAYOUT_ANALYSIS_SCRIPTS)/analysis2tei.py \
 	  --results $(layoutAnalysis)/$$CP --tei-id $$ID \
@@ -916,6 +916,21 @@ clean-annotation-all:
 	@echo "INFO: removing annotation results in $(WORK)"
 	rm -rf "$(TEItextTT)" "$(TEItextANA)"
 	rm -f "$(TEItextTT).fl" "$(TEItextANA).fl"
+
+##$PATCH_ADS_DIRS## directories patched by patch-advertisment-location (missing ones are skipped)
+PATCH_ADS_DIRS ?= $(TEItext) $(TEItextTT) $(TEItextANA)
+##patch-advertisment-location## move div[@type=advertisement] from text/body to text/back (<front><body><back>) in existing TEI files of $(PATCH_ADS_DIRS)
+#### in place, only changed files are rewritten, safe to run repeatedly (new analysis2tei.py output has ads in back already)
+#### do not run while annotation is running (a file being written by flexipipe could be overwritten), afterwards rebuild dist: make process-build
+patch-advertisment-location:
+	@for d in $(PATCH_ADS_DIRS); do \
+	  if [ -d "$$d" ]; then \
+	    echo "INFO: patching advertisement location in $$d"; \
+	    python3 Scripts/layoutAnalysis/ads2back.py "$$d" || exit 1; \
+	  else \
+	    echo "INFO: skipping missing $$d"; \
+	  fi; \
+	done
 
 ##slurm-process-annotation-all## submit process-annotation-all as ONE slurm job (sequential, no job array) on a cpu node
 #### logs: logs/slurm/annotation_<jobid>.out/.err, start/end in logs/PressMint-CZ.slurm.log

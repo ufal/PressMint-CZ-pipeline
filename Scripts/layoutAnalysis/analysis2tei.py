@@ -6,12 +6,13 @@ TEI/@xml:id = PressMint-CZ_<date>-<issue uuid prefix>, milestones pb/cb/lb in th
 point by @facs to zones of the facsimile and every zone points back by @start.
 
 tei-text   TEI/text/front/div[@type=banner] (only if a banner was detected), then
-           TEI/text/body/div  (flat: one div per article, direct children of body)
+           TEI/text/body/div  (flat: one div per article, direct children of body), then
+           TEI/text/back/div[@type=advertisement] (only if advertisements were detected)
              div[@type=article] - main text: title(s) (head) + paragraphs up to the next title
              div[@type=banner] - masthead of the first page (title, date, prices, editor), in front
              div[@type=feuilleton] - the same for text below a section rule (after main text)
              div[@type=advertisement] - one advertisement (blocks adjacent in reading order,
-                   a title after text starts the next one), after articles and feuilleton
+                   a title after text starts the next one), in TEI/text/back (after body)
              pb  - page (one per page and text stream; feuilleton has its own pb)
              cb  - change of column (in reading order)
              head - title;  p - paragraph. A paragraph flowing to the next column/page
@@ -135,11 +136,16 @@ class Builder:
         """pages: [(page, body_blocks)] in issue order, blocks in reading order.
         Articles are direct children of body (PressMint sampling copies whole body children);
         the stream gives the article type: article (main text) / feuilleton (below a rule).
-        The banner (masthead of the first page) goes to text/front, before body."""
+        The banner (masthead of the first page) goes to text/front, before body,
+        advertisements to text/back, after body."""
         if name == "banner":
             front = etree.Element(T("front"))
             self.body.addprevious(front)
             self.div = front
+        elif name == "ads":
+            back = etree.Element(T("back"))
+            self.body.addnext(back)
+            self.div = back
         else:
             self.div = self.body
         self.div_type = STREAM_DIV.get(name, name)
