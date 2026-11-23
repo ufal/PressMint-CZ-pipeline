@@ -1036,6 +1036,30 @@ TT2teiANA-single: $(FILE)
 
 process-build: corpus-template dist-tei-ana dist-tei
 
+##$SLURM_BUILD_MEM_GB## memory (GB) of the slurm-process-build job; java heap (JAVA-MEMORY) gets this minus $(SLURM_BUILD_MEM_RESERVE_GB)
+SLURM_BUILD_MEM_GB ?= 600
+SLURM_BUILD_MEM_RESERVE_GB ?= 8
+##$SLURM_BUILD_PARTITION## partition(s) of the slurm-process-build job (needs nodes with enough memory)
+SLURM_BUILD_PARTITION ?= cpu-troja,cpu-ms
+##slurm-process-build## submit process-build (corpus-template, dist-tei-ana, dist-tei) as ONE slurm job on a cpu node with $(SLURM_BUILD_MEM_GB)G memory
+#### the distro XSLT (saxon) keeps the corpus in memory, java gets -Xmx$(SLURM_BUILD_MEM_GB)-$(SLURM_BUILD_MEM_RESERVE_GB) GB
+#### logs: logs/slurm/build_<jobid>.out/.err, start/end in logs/PressMint-CZ.slurm.log
+#### make slurm-process-build SLURM_BUILD_MEM_GB=256
+slurm-process-build:
+	@mkdir -p logs/slurm
+	@test $(SLURM_BUILD_MEM_GB) -gt $(SLURM_BUILD_MEM_RESERVE_GB) || { echo "ERROR: SLURM_BUILD_MEM_GB must be greater than SLURM_BUILD_MEM_RESERVE_GB" >&2; exit 1; }
+	sbatch $(SBATCH_EXCLUDE) --job-name=PressMint-build \
+	       --partition=$(SLURM_BUILD_PARTITION) \
+	       --gres=none \
+	       --cpus-per-task=2 \
+	       --mem=$(SLURM_BUILD_MEM_GB)G \
+	       --output=logs/slurm/build_%j.out \
+	       --error=logs/slurm/build_%j.err \
+	       --wrap='echo "$$(date +%Y-%m-%dT%T) START build $$SLURM_JOB_ID $$(hostname)" >> logs/PressMint-CZ.slurm.log; \
+	               /usr/bin/time -v make process-build SAMPLE=$(SAMPLE) DATA=$(DATA) JAVA-MEMORY=$$(( $(SLURM_BUILD_MEM_GB) - $(SLURM_BUILD_MEM_RESERVE_GB) )); RC=$$?; \
+	               echo "$$(date +%Y-%m-%dT%T) DONE build $$SLURM_JOB_ID $$(hostname) exit=$$RC" >> logs/PressMint-CZ.slurm.log; \
+	               exit $$RC'
+
 ##corpus-template## create TEI corpus template with xi:include for all TEI.ana components, this is used as input for distribution XSLT stylesheet to create final TEI documents with included headers and text
 #### include only TEI.ana components, because they are the most complete and contain all the information from TEI.text and TEI.facs
 corpus-template:
