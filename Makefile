@@ -529,6 +529,10 @@ visualize-layoutAnalysis: $(JSONissues)/$(UUID_PATH).json $(vizLAYOUTanalysis)
 	  --results $(layoutAnalysis)/$$CP --images $(INimg)/$$IUP --title "$$ID – layout analysis" \
 	  -o $(vizLAYOUTanalysis)/$$CP.pdf)
 
+##visualize-layoutAnalysis-all## visualize-layoutAnalysis for all issues from the task list (prepare-tasks)
+visualize-layoutAnalysis-all: $(TASKS_ISSUES)
+	cat $(TASKS_ISSUES) | xargs -I {} $(MAKE) visualize-layoutAnalysis UUID_PATH={} SAMPLE=$(SAMPLE)
+
 ##visualize-tei-layout## render TEI/text + TEI/facs as pdf preserving the page layout, with article/paragraph frames and reading order arrows (no images needed)
 visualize-tei-layout: $(vizTEIlayout)
 	for COMP in `find $(TEItext) -mindepth 2 -type f -name "*.xml" -printf "%P\n" | sed 's/.xml$$//'| sort`;\
@@ -925,7 +929,7 @@ slurm-process-annotation-all:
 	       --output=logs/slurm/annotation_%j.out \
 	       --error=logs/slurm/annotation_%j.err \
 	       --wrap='echo "$$(date +%Y-%m-%dT%T) START annotation $$SLURM_JOB_ID $$(hostname)" >> logs/PressMint-CZ.slurm.log; \
-	               make check-prereq && make process-annotation-all SAMPLE=$(SAMPLE) DATA=$(DATA); RC=$$?; \
+	               make check-prereq && make process-annotation-all SAMPLE=$(SAMPLE) DATA=$(DATA) ANNOT_JOBS=$(ANNOT_JOBS); RC=$$?; \
 	               echo "$$(date +%Y-%m-%dT%T) DONE annotation $$SLURM_JOB_ID $$(hostname) exit=$$RC" >> logs/PressMint-CZ.slurm.log; \
 	               exit $$RC'
 
@@ -934,9 +938,12 @@ $(TEItextTT).fl: $(TEItextTT)
 	find $(TEItext) -type f -name "*.xml"  -printf "%P\n"| sort > $(TEItextTT).fl
 	cat $(TEItextTT).fl | sed 's@/.*@@'|sort|uniq | xargs -I {} mkdir -p $(TEItextTT)/{}
 	cat $(TEItextTT).fl | xargs -I {} cp $(TEItext)/{} $(TEItextTT)/{}
+##$ANNOT_JOBS## number of files annotated in parallel by teiText2tt / TT2teiANA (default 1)
+#### flexipipe uses the UDPipe and NameTag REST services (LINDAT): keep it moderate (e.g. 4-8)
+ANNOT_JOBS ?= 1
 ##teiText2tt## annotate TEItext with flexipipe TEItextTT
 teiText2tt: $(TEItextTT).fl
-	cat $(TEItextTT).fl | xargs -I {} \
+	cat $(TEItextTT).fl | xargs -P $(ANNOT_JOBS) -I {} \
 	  make -e teiText2tt-single FILE=$(TEItextTT)/{}
 
 teiText2tt-single: $(FILE)
@@ -958,7 +965,7 @@ $(TEItextANA).fl: $(TEItextANA)
 	cat $(TEItextANA).fl | sed 's@/.*@@'|sort|uniq | xargs -I {} mkdir -p $(TEItextANA)/{}
 ##TT2teiANA## convert TEItextTT to TEItextANA
 TT2teiANA: $(TEItextANA).fl
-	cat $(TEItextANA).fl | xargs -I {} \
+	cat $(TEItextANA).fl | xargs -P $(ANNOT_JOBS) -I {} \
 	  make -e TT2teiANA-single FILE=$(TEItextTT)/{} OUTPUT=$(TEItextANA)/{}
 
 
