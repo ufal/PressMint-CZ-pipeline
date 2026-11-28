@@ -11,9 +11,11 @@ position based ids are kept.
 Files are rewritten in place (atomically) only when something was moved, so it is safe
 to run repeatedly.
 
-usage: ads2back.py [-v] FILE_OR_DIR...   (directories are searched for *.xml recursively,
-       -v lists every patched file)
+usage: ads2back.py [-j N] [-v] FILE_OR_DIR...   (directories are searched for *.xml recursively,
+       -j N parallel worker processes, -v lists every patched file)
 """
+import argparse
+import multiprocessing
 import os
 import sys
 import tempfile
@@ -70,31 +72,58 @@ def patch(path):
     return moved
 
 
-def main():
-    args = sys.argv[1:]
-    verbose = "-v" in args
-    args = [a for a in args if a != "-v"]
-    if not args:
-        sys.exit(__doc__)
-    n_files = n_patched = n_ads = n_err = 0
-    for arg in args:
+def patch_safe(path):
+    """for the worker pool: (path, moved, error message)"""
+    try:
+        return path, patch(path), None
+    except (etree.XMLSyntaxError, OSError) as e:
+        return path, 0, str(e)
+
+
+def iter_files(paths):
+    for arg in paths:
         p = Path(arg)
-        files = sorted(p.rglob("*.xml")) if p.is_dir() else [p]
-        for f in files:
-            n_files += 1
-            try:
-                m = patch(f)
-            except etree.XMLSyntaxError as e:
-                print(f"ERROR: {f}: {e}", file=sys.stderr)
+        if p.is_dir():
+            yield from sorted(p.rglob("*.xml"))
+        else:
+            yield p
+
+
+def main():
+    ap = argparse.ArgumentParser(description="Move advertisements from text/body to text/back.")
+    ap.add_argument("paths", nargs="+", metavar="FILE_OR_DIR",
+                    help="TEI files or directories (searched for *.xml recursively)")
+    ap.add_argument("-j", "--jobs", type=int, default=1,
+                    help="number of parallel worker processes (default 1, 0 = all CPUs)")
+    ap.add_argument("-v", "--verbose", action="store_true", help="list every patched file")
+    args = ap.parse_args()
+    jobs = args.jobs or os.cpu_count() or 1
+    files = list(iter_files(args.paths))
+    n_patched = n_ads = n_err = 0
+    if jobs > 1 and len(files) > 1:
+        pool = multiprocessing.Pool(min(jobs, len(files)))
+        results = pool.imap_unordered(patch_safe, files, chunksize=8)
+    else:
+        pool = None
+        results = map(patch_safe, files)
+    try:
+        for i, (f, m, err) in enumerate(results, 1):
+            if err:
+                print(f"ERROR: {f}: {err}", file=sys.stderr)
                 n_err += 1
-                continue
-            if m:
+            elif m:
                 n_patched += 1
                 n_ads += m
-                if verbose:
+                if args.verbose:
                     print(f"INFO: {f}: {m} advertisement(s) moved to back")
-    print(f"INFO: {n_files} files, {n_patched} patched, {n_ads} advertisements moved, {n_err} errors",
-          file=sys.stderr)
+            if i % 10000 == 0:
+                print(f"INFO: {i}/{len(files)} files done", file=sys.stderr)
+    finally:
+        if pool:
+            pool.close()
+            pool.join()
+    print(f"INFO: {len(files)} files, {n_patched} patched, {n_ads} advertisements moved, "
+          f"{n_err} errors ({jobs} jobs)", file=sys.stderr)
     sys.exit(1 if n_err else 0)
 
 
